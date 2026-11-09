@@ -50,3 +50,9 @@ polling_units:
   official_total: 176846          # INEC's published figure; the crawl count is reconciled against it (OI-7)
   official_wards: 8809
   official_lgas: 774
+  # D-020 (owner sign-off pending): the crawl must reproduce exactly these counts. A truncated response or any INEC
+  # change to the locator fails verification until a person reviews the difference and updates this baseline.
+  locator_baseline:
+    wards: 8838        # after dropping the empty duplicate of Gwer East ward 09
+    pus: 177299
+    crawled: 2026-11-09

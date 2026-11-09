@@ -18,9 +18,11 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - name: Check INEC
         id: watch
+        working-directory: pipeline
+        # Call the CLI directly: through make, exit status 3 ("changed") would arrive as make's own 2.
         run: |
           set +e
-          make watch
+          uv run ballot-pipeline watch
           echo "code=$?" >> "$GITHUB_OUTPUT"
       - name: Open issue on change
         if: steps.watch.outputs.code == '3'

@@ -51,12 +51,23 @@ def test_name_and_composition_disagreeing_is_an_error():
         resolve_composition(u, LGAS, {}, {})
 
 
+def ov(lgas, text="anything", row=1):
+    return {"FC/001/AB": {"lgas": lgas, "workbook_text": text, "row": row}}
+
+
 def test_override_wins_and_must_name_real_lgas():
     u = unit("anything")
-    resolve_composition(u, LGAS, {"FC/001/AB": ["UKWA EAST", "UKWA WEST"]}, {})
+    resolve_composition(u, LGAS, ov(["UKWA EAST", "UKWA WEST"]), {})
     assert u.lgas == ["UKWA EAST", "UKWA WEST"] and u.resolved_by == "override"
     with pytest.raises(GeoError):
-        resolve_composition(unit("x"), LGAS, {"FC/001/AB": ["ATLANTIS"]}, {})
+        resolve_composition(unit("anything"), LGAS, ov(["ATLANTIS"]), {})
+
+
+def test_override_is_rejected_when_workbook_text_or_row_changes():
+    with pytest.raises(GeoError, match="review it again"):
+        resolve_composition(unit("Ukwa East and Ukwa West"), LGAS, ov(["UKWA EAST", "UKWA WEST"], text="Ukwa East and East"), {})
+    with pytest.raises(GeoError, match="review it again"):
+        resolve_composition(unit("anything"), LGAS, ov(["UKWA EAST"], row=99), {})
 
 
 @pytest.mark.parametrize("text,code", [

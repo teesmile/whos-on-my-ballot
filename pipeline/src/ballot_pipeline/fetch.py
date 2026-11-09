@@ -89,9 +89,13 @@ def fetch_all(log=print) -> list[dict]:
     pu = reg["polling_units"]
     crawl_meta = PU_RAW_DIR / "crawl.json"
     if crawl_meta.exists():
+        from .manifest import write_pu_manifest
+
         meta = json.loads(crawl_meta.read_text())
+        manifest = write_pu_manifest()
         records.append({"source_id": pu["id"], "title": pu["title"], "file_url": pu["url"],
-                        "retrieved_at": meta.get("finished_at"), "crawl": meta})
+                        "retrieved_at": meta.get("finished_at"), "crawl": meta,
+                        "manifest": "pu-manifest.json", "files": manifest["files"], "sha256": manifest["digest"]})
 
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
     (GENERATED_DIR / "sources.json").write_text(json.dumps(records, indent=2, ensure_ascii=False) + "\n")

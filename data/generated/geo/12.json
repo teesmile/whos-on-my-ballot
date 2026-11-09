@@ -16,6 +16,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/01/001",
@@ -96,6 +98,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/02/001",
@@ -220,6 +224,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/03/001",
@@ -312,6 +318,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/04/001",
@@ -448,6 +456,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/05/001",
@@ -544,6 +554,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/06/001",
@@ -628,6 +640,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/07/001",
@@ -736,6 +750,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/08/001",
@@ -860,6 +876,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/09/001",
@@ -1016,6 +1034,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/01/10/001",
@@ -1106,6 +1126,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/01/001",
@@ -1286,6 +1308,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/02/001",
@@ -1422,6 +1446,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/03/001",
@@ -1634,6 +1660,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/04/001",
@@ -1738,6 +1766,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/05/001",
@@ -1890,6 +1920,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/06/001",
@@ -2070,6 +2102,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/07/001",
@@ -2246,6 +2280,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/08/001",
@@ -2470,6 +2506,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/09/001",
@@ -2658,6 +2696,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/02/10/001",
@@ -2976,6 +3016,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/01/001",
@@ -3036,6 +3078,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/02/001",
@@ -3088,6 +3132,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/03/001",
@@ -3128,6 +3174,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/04/001",
@@ -3184,6 +3232,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/05/001",
@@ -3256,6 +3306,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/06/001",
@@ -3320,6 +3372,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/07/001",
@@ -3376,6 +3430,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/08/001",
@@ -3432,6 +3488,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/09/001",
@@ -3488,6 +3546,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/03/10/001",
@@ -3570,6 +3630,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/01/001",
@@ -3638,6 +3700,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/02/001",
@@ -3690,6 +3754,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/03/001",
@@ -3754,6 +3820,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/04/001",
@@ -3886,6 +3954,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/05/001",
@@ -3954,6 +4024,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/06/001",
@@ -4026,6 +4098,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/07/001",
@@ -4122,6 +4196,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/08/001",
@@ -4198,6 +4274,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/09/001",
@@ -4254,6 +4332,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/10/001",
@@ -4338,6 +4418,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/04/11/001",
@@ -4396,6 +4478,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/01/001",
@@ -4484,6 +4568,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/02/001",
@@ -4560,6 +4646,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/03/001",
@@ -4620,6 +4708,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/04/001",
@@ -4680,6 +4770,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/05/001",
@@ -4784,6 +4876,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/06/001",
@@ -4880,6 +4974,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/07/001",
@@ -4956,6 +5052,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/08/001",
@@ -5016,6 +5114,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/09/001",
@@ -5080,6 +5180,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/05/10/001",
@@ -5162,6 +5264,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/01/001",
@@ -5222,6 +5326,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/02/001",
@@ -5278,6 +5384,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/03/001",
@@ -5342,6 +5450,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/04/001",
@@ -5538,6 +5648,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/05/001",
@@ -5642,6 +5754,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/06/001",
@@ -5734,6 +5848,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/07/001",
@@ -5870,6 +5986,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/08/001",
@@ -5926,6 +6044,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/09/001",
@@ -6026,6 +6146,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/06/10/001",
@@ -6088,6 +6210,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/01/001",
@@ -6136,6 +6260,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/02/001",
@@ -6192,6 +6318,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/03/001",
@@ -6232,6 +6360,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/04/001",
@@ -6300,6 +6430,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/05/001",
@@ -6344,6 +6476,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/06/001",
@@ -6408,6 +6542,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/07/001",
@@ -6460,6 +6596,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/08/001",
@@ -6540,6 +6678,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/09/001",
@@ -6580,6 +6720,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/07/10/001",
@@ -6630,6 +6772,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/01/001",
@@ -6726,6 +6870,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/02/001",
@@ -6782,6 +6928,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/03/001",
@@ -6866,6 +7014,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/04/001",
@@ -6926,6 +7076,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/05/001",
@@ -7014,6 +7166,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/06/001",
@@ -7094,6 +7248,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/07/001",
@@ -7178,6 +7334,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/08/001",
@@ -7270,6 +7428,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/09/001",
@@ -7350,6 +7510,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/08/10/001",
@@ -7420,6 +7582,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/01/001",
@@ -7548,6 +7712,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/02/001",
@@ -7648,6 +7814,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/03/001",
@@ -7780,6 +7948,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/04/001",
@@ -7916,6 +8086,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/05/001",
@@ -8104,6 +8276,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/06/001",
@@ -8148,6 +8322,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/07/001",
@@ -8312,6 +8488,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/08/001",
@@ -8376,6 +8554,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/09/001",
@@ -8472,6 +8652,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/10/001",
@@ -8588,6 +8770,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/11/001",
@@ -8748,6 +8932,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/09/12/001",
@@ -8858,6 +9044,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/01/001",
@@ -8918,6 +9106,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/02/001",
@@ -8974,6 +9164,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/03/001",
@@ -9022,6 +9214,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/04/001",
@@ -9066,6 +9260,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/05/001",
@@ -9098,6 +9294,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/06/001",
@@ -9158,6 +9356,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/07/001",
@@ -9202,6 +9402,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/08/001",
@@ -9258,6 +9460,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/09/001",
@@ -9298,6 +9502,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-central"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/10/10/001",
@@ -9364,6 +9570,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/01/001",
@@ -9628,6 +9836,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/02/001",
@@ -9948,6 +10158,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/03/001",
@@ -10172,6 +10384,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/04/001",
@@ -10464,6 +10678,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/05/001",
@@ -10756,6 +10972,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/06/001",
@@ -11148,6 +11366,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/07/001",
@@ -11456,6 +11676,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/08/001",
@@ -11720,6 +11942,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/09/001",
@@ -11872,6 +12096,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/11/10/001",
@@ -12054,6 +12280,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/01/001",
@@ -12358,6 +12586,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/02/001",
@@ -12722,6 +12952,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/03/001",
@@ -12970,6 +13202,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/04/001",
@@ -13154,6 +13388,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/05/001",
@@ -13346,6 +13582,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/06/001",
@@ -13494,6 +13732,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/07/001",
@@ -13774,6 +14014,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/08/001",
@@ -13966,6 +14208,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/09/001",
@@ -14098,6 +14342,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/10/001",
@@ -14294,6 +14540,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/11/001",
@@ -14482,6 +14730,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/12/12/001",
@@ -14680,6 +14930,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/01/001",
@@ -14792,6 +15044,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/02/001",
@@ -14892,6 +15146,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/03/001",
@@ -14992,6 +15248,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/04/001",
@@ -15076,6 +15334,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/05/001",
@@ -15220,6 +15480,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/06/001",
@@ -15340,6 +15602,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/07/001",
@@ -15428,6 +15692,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/08/001",
@@ -15512,6 +15778,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/09/001",
@@ -15632,6 +15900,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/10/001",
@@ -15716,6 +15986,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/11/001",
@@ -15800,6 +16072,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/13/12/001",
@@ -15890,6 +16164,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/01/001",
@@ -16022,6 +16298,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/02/001",
@@ -16094,6 +16372,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/03/001",
@@ -16194,6 +16474,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/04/001",
@@ -16338,6 +16620,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/05/001",
@@ -16410,6 +16694,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/06/001",
@@ -16606,6 +16892,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/07/001",
@@ -16706,6 +16994,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/08/001",
@@ -16786,6 +17076,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/09/001",
@@ -16870,6 +17162,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/10/001",
@@ -16982,6 +17276,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/11/001",
@@ -17062,6 +17358,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/12/001",
@@ -17154,6 +17452,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/14/13/001",
@@ -17220,6 +17520,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/01/001",
@@ -17312,6 +17614,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/02/001",
@@ -17408,6 +17712,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/03/001",
@@ -17484,6 +17790,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/04/001",
@@ -17564,6 +17872,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/05/001",
@@ -17680,6 +17990,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/06/001",
@@ -17740,6 +18052,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/07/001",
@@ -17832,6 +18146,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/08/001",
@@ -17980,6 +18296,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/09/001",
@@ -18056,6 +18374,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/15/10/001",
@@ -18126,6 +18446,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/01/001",
@@ -18222,6 +18544,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/02/001",
@@ -18314,6 +18638,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/03/001",
@@ -18394,6 +18720,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/04/001",
@@ -18458,6 +18786,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/05/001",
@@ -18530,6 +18860,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/06/001",
@@ -18606,6 +18938,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/07/001",
@@ -18698,6 +19032,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/08/001",
@@ -18786,6 +19122,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/09/001",
@@ -18870,6 +19208,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/10/001",
@@ -18950,6 +19290,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/16/11/001",
@@ -19020,6 +19362,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/01/001",
@@ -19068,6 +19412,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/02/001",
@@ -19132,6 +19478,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/03/001",
@@ -19216,6 +19564,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/04/001",
@@ -19308,6 +19658,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/05/001",
@@ -19372,6 +19724,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/06/001",
@@ -19424,6 +19778,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/07/001",
@@ -19472,6 +19828,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/08/001",
@@ -19556,6 +19914,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/09/001",
@@ -19616,6 +19976,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/10/001",
@@ -19668,6 +20030,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-north"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/17/11/001",
@@ -19762,6 +20126,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/01/001",
@@ -19846,6 +20212,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/02/001",
@@ -19898,6 +20266,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/03/001",
@@ -19950,6 +20320,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/04/001",
@@ -20002,6 +20374,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/05/001",
@@ -20102,6 +20476,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/06/001",
@@ -20242,6 +20618,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/07/001",
@@ -20298,6 +20676,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/08/001",
@@ -20350,6 +20730,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/09/001",
@@ -20426,6 +20808,8 @@
      "senatorial_district": [
       "jan-2027-senate-edo-edo-south"
      ],
+     "mapping": "exact",
+     "open_item": null,
      "polling_units": [
       {
        "code": "12/18/10/001",

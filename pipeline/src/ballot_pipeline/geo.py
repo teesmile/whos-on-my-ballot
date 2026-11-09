@@ -171,7 +171,7 @@ def match_fragments(frags: list[str], lga_names: list[str], spellings: dict[str,
     return list(dict.fromkeys(found)), unmatched
 
 
-def resolve_composition(unit: WorkbookUnit, lga_names: list[str], overrides: dict[str, list[str]],
+def resolve_composition(unit: WorkbookUnit, lga_names: list[str], overrides: dict[str, dict],
                         spellings: dict[str, str]) -> None:
     """Fill ``unit.lgas`` from the workbook. Order of preference, all INEC text:
     1. a reviewed override (aliases.yaml composition_overrides), for prose the rules can't read;
@@ -181,7 +181,11 @@ def resolve_composition(unit: WorkbookUnit, lga_names: list[str], overrides: dic
     Raises GeoError naming the unmatched text when none of these reads cleanly.
     """
     if unit.code in overrides:
-        names = overrides[unit.code]
+        ov = overrides[unit.code]
+        if re.sub(r"\s+", " ", ov["workbook_text"]).strip() != unit.composition or ov["row"] != unit.row:
+            raise GeoError(f"{unit.code}: override was reviewed against row {ov['row']} text {ov['workbook_text']!r}, "
+                           f"but the workbook now has row {unit.row} text {unit.composition!r}; review it again")
+        names = ov["lgas"]
         missing = [n for n in names if n not in lga_names]
         if missing:
             raise GeoError(f"{unit.code}: override names unknown LGAs {missing}")

@@ -59,89 +59,124 @@ lga_spellings:
   YOBE: {BUSARI: BURSARI, KARASUWA: KARASAWA}
   ZAMFARA: {TALATA MARAFA: TALATA MAFARA}
 
-# Workbook composition text the rules can't read. Each entry quotes INEC's text and says how it was read.
+# Workbook composition text the rules can't read. Each entry names the source file and row, quotes INEC's text exactly
+# (the build rejects the entry if the current workbook text differs) and says how it was read.
 # The global check (every LGA in exactly one senatorial district and one federal constituency) backs every entry.
 composition_overrides:
   FC/008/AB:
+    source_id: inec-constituencies-workbook
+    row: 13
     workbook_text: "The entire Geographical Areas of Ukwa East and East L.G.As"
     reading: "'East and East' is a typo; the constituency name is Ukwa East/Ukwa West"
     lgas: [UKWA EAST, UKWA WEST]
   SD/050/JG:
+    source_id: inec-constituencies-workbook
+    row: 118
     workbook_text: "AUYO, BIRNIWA, GURI, HADEJIA, KAUGAMA, K/HAUSA, K/KASAMMA, M/MADORI"
     reading: "abbreviations K/ = Kafin, Kirika; M/ = Malam"
     lgas: [AUYO, BIRNIWA, GURI, HADEJIA, KAUGAMA, KAFIN HAUSA, KIRIKA SAMMA, MALAM MADORI]
   SD/051/JG:
+    source_id: inec-constituencies-workbook
+    row: 119
     workbook_text: "BABURA, GAGARA, GARKI, GWIWA, KAZAURE, MAIGATAR, RONI, RINGIN, S/TANKAR, TAURA, YANKWASHI, GUME"
     reading: "S/TANKAR = Sule-Tankarkar; truncated spellings"
     lgas: [BABURA, GAGARAWA, GARKI, GWIWA, KAZAURE, MAIGATARI, RONI, RINGIM, SULE-TANKARKAR, TAURA, YANKWASHI, GUMEL]
   SD/054/KD:
+    source_id: inec-constituencies-workbook
+    row: 129
     workbook_text: "JEMA’A, JABA, KAURA, ZANGON, KAURA, KACHIA, KAGARKO, SANGA"
     reading: >-
       ZANGON = Zangon Kataf. KAURA appears twice; the second is read as Kauru, which is otherwise in no
       senatorial district (its own federal constituency FC/164/KD 'Kauru' names no neighbour).
     lgas: ["JEMA'A", JABA, KAURA, ZANGON KATAF, KAURU, KACHIA, KAGARKO, SANGA]
   SD/055/KN:
+    source_id: inec-constituencies-workbook
+    row: 135
     workbook_text: "DALA, GWALE, DAWAKIN, GEZAWA, TARAUNI, FAGGE, GARUM MALLAM, KANO MUNICIPAL, KUMBOTSO, KURA, MADOBI, MINJIBIR, NASSARAWA, UNGOGO, WARAWA"
     reading: "DAWAKIN = Dawakin Kudu (Dawakin Tofa is listed under Kano North's federal constituency Dawakin Tofa/Tofa/Rimin Gado)"
     lgas: [DALA, GWALE, DAWAKI KUDU, GEZAWA, TARAUNI, FAGGE, GARUN MALAM, KANO MUNICIPAL, KUMBOTSO, KURA, MADOBI, MINJIBIR, NASARAWA, UNGOGO, WARAWA]
   SD/056/KN:
+    source_id: inec-constituencies-workbook
+    row: 136
     workbook_text: "BICHI, SHANONO, BAGWAI, DANBATTA, MAKODA, DAWAKIN, GABASAWA, GWARZO, KABO, RIMI GADO, TOFA, TSANYAWA, KUNCHI, KARAYE"
     reading: "DAWAKIN = Dawakin Tofa; KUNCHI = Ghari"
     lgas: [BICHI, SHANONO, BAGWAI, DANBATA, MAKODA, DAWAKI TOFA, GABASAWA, GWARZO, KABO, RIMIN GADO, TOFA, TSANYAWA, GHARI, KARAYE]
   SD/066/KG:
+    source_id: inec-constituencies-workbook
+    row: 161
     workbook_text: "IJUMU, KABBA, KOGI, LOKOJA, MOPAMURO, YAGBA EAST, YAGBA WEST"
     reading: "KABBA = Kabba/Bunu; KOGI = Kogi (Koton Karfe)"
     lgas: [IJUMU, KABBA/BUNU, KOGI . K. K., LOKOJA, MOPA MORO, YAGBA EAST, YAGBA WEST]
   SD/077/NG:
+    source_id: inec-constituencies-workbook
+    row: 187
     workbook_text: "AGWARA, BORGU, KONTOGORA, MARIGA, RIJAU, WUSHISHI, MASHEGU MAGAMA"
     reading: "missing comma between Mashegu and Magama"
     lgas: [AGWARA, BORGU, KONTAGORA, MARIGA, RIJAU, WUSHISHI, MASHEGU, MAGAMA]
   SD/078/NG:
+    source_id: inec-constituencies-workbook
+    row: 188
     workbook_text: "AGAIE, BIDA, KATCHA, BATAGI, LAPAI, LAVUN, EDATI-IDATI, MOKWA"
     reading: >-
       Eight names for eight LGAs. BATAGI is not an LGA, and Gbako is the one Niger LGA in no senatorial district's list,
       so BATAGI is read as Gbako. EDATI-IDATI = Edati.
     lgas: [AGAIE, BIDA, KATCHA, GBAKO, LAPAI, LAVUN, EDATTI, MOKWA]
   SD/106/ZF:
+    source_id: inec-constituencies-workbook
+    row: 249
     workbook_text: "K/NAMODA, SHINKAFI, ZURMI, BIRNIN MAGAJI, T/MAFARA"
     reading: "K/ = Kaura, T/ = Talata"
     lgas: [KAURA NAMODA, SHINKAFI, ZURMI, BIRNIN MAGAJI, TALATA MAFARA]
   FC/098/EB:
+    source_id: inec-constituencies-workbook
+    row: 334
     workbook_text: "The entire Geographical Area of Ivo-Ohaozara/Onicha L.G.As"
     reading: "Ivo and Ohaozara are separate LGAs"
     lgas: [IVO, OHAOZARA, ONICHA]
   FC/101/ED:
+    source_id: inec-constituencies-workbook
+    row: 368
     workbook_text: "The entire Geographical Area of Esan Central/Esan South/Igueben L.G.As"
     reading: >-
       There is no 'Esan South' LGA. INEC's 2027 House list uses the same name. Esan West is the only Edo LGA in no other
       federal constituency (Esan North East and Esan South East form FC/102). Shown on the site under INEC's name.
     lgas: [ESAN CENTRAL, ESAN WEST, IGUEBEN]
   FC/141/JG:
+    source_id: inec-constituencies-workbook
+    row: 545
     workbook_text: "The entire Geographical Area of Birniwa Guri/Kirikasamma L.G.As"
     reading: "Birniwa and Guri are separate LGAs"
     lgas: [BIRNIWA, GURI, KIRIKA SAMMA]
   FC/145/JG:
+    source_id: inec-constituencies-workbook
+    row: 549
     workbook_text: "The entire Geographical Area of Hadejia/Kafin Hausa L.G.As"
     reading: >-
       Auyo is in no federal constituency in the 2011 workbook. INEC's 31 Oct 2026 House list names this
       constituency 'Hadejia/Kafin Hausa/Auyo', so Auyo is placed here on INEC's 2027 authority.
     lgas: [HADEJIA, KAFIN HAUSA, AUYO]
   FC/173/KN:
+    source_id: inec-constituencies-workbook
+    row: 620
     workbook_text: "The entire Geographical Area of Damatta/Makoda L.G.As"
     reading: "Damatta = Dambatta (the constituency name)"
     lgas: [DANBATA, MAKODA]
   FC/219/KG:
+    source_id: inec-constituencies-workbook
+    row: 722
     workbook_text: "The entire Geographical Area of Kogi (Lokoja)/Kogi (K.K.) L.G.As"
     reading: "Lokoja LGA and Kogi (Koton Karfe) LGA"
     lgas: [LOKOJA, KOGI . K. K.]
   FC/317/RV:
+    source_id: inec-constituencies-workbook
+    row: 1058
     workbook_text: "The entire Geographical Area of Ahoada West/Ogba Egbema LGAs"
     reading: "Ogba Egbema = Ogba/Egbema/Ndoni"
     lgas: [AHOADA WEST, OGBA/EGBEMA/NDONI]
 
 # LGAs that INEC's workbook splits into "I"/"II" federal constituencies without naming wards (OI-9).
 # "<STATE>|<locator LGA name>": [workbook FC codes]
-pending_ward_splits:
+pending_ward_splits:   # open item OI-9
   "LAGOS|LAGOS ISLAND": [FC/238/LA, FC/239/LA]
   "LAGOS|MUSHIN": [FC/241/LA, FC/242/LA]
   "LAGOS|OSHODI/ISOLO": [FC/246/LA, FC/247/LA]
@@ -150,5 +185,5 @@ pending_ward_splits:
 
 # LGAs whose senatorial district INEC's text does not settle (OI-10). Wards here list every candidate district,
 # and the site shows them as "one of these is on your ballot" until an INEC source places the LGA.
-pending_sd_placements:
+pending_sd_placements:   # open item OI-10
   "ADAMAWA|GOMBI": [SD/004/AD, SD/005/AD, SD/006/AD]

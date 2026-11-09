@@ -115,9 +115,19 @@ def build(log=print) -> BuildResult:
 
     # ---- workbook + locator
     workbook = read_workbook(str(RAW_DIR / by_id["inec-constituencies-workbook"]["local_file"]))
+    from .manifest import verify_pu_manifest
+
+    errors.extend(verify_pu_manifest())
     locator = read_locator()
     lga_names_by_state = {st: [l.name for l in lgas] for st, (_, lgas) in locator.items()}
-    comp_overrides = {k: v["lgas"] for k, v in (aliases.get("composition_overrides") or {}).items()}
+    comp_overrides = aliases.get("composition_overrides") or {}
+    for code, ov in comp_overrides.items():
+        src = by_id.get(ov.get("source_id", ""))
+        if not src or "sha256" not in src:
+            errors.append(f"override {code}: source_id {ov.get('source_id')!r} is not a hashed source")
+        for f in ("row", "workbook_text", "reading", "lgas"):
+            if f not in ov:
+                errors.append(f"override {code}: missing {f}")
     spellings = {st: {key(k): v for k, v in d.items()} for st, d in (aliases.get("lga_spellings") or {}).items()}
     for u in workbook:
         try:
@@ -278,14 +288,18 @@ def build(log=print) -> BuildResult:
                         continue
                     errors.append(f"duplicate ward code {code} with polling units")
                 seen_codes[code] = len(pus)
-                pending = f"{state}|{l.name}" in pending_splits or f"{state}|{l.name}" in pending_sd
+                open_item = ("OI-9" if f"{state}|{l.name}" in pending_splits else
+                             "OI-10" if f"{state}|{l.name}" in pending_sd else None)
+                pending = open_item is not None
                 if len(fc_races) != 1 or len(sd_races) != 1:
                     unresolved_wards.append({"state": state, "lga": l.name, "ward": code, "federal_constituencies": fc_races,
                                              "senatorial_districts": sd_races, "pending_split": pending})
                     if not fc_races or not sd_races:
                         continue
+                exact = len(fc_races) == 1 and len(sd_races) == 1
                 wards.append(Ward(
                     code=code, name=w_name, federal_constituency=fc_races, senatorial_district=sd_races,
+                    mapping="exact" if exact else "unresolved", open_item=None if exact else open_item,
                     polling_units=[PollingUnit(code=f"{code}/{p_code}", name=p_name) for p_code, p_name in pus],
                 ))
             out_lgas.append(Lga(code=f"{s_code}/{l.code}", name=l.name, wards=wards))

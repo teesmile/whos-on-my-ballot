@@ -43,12 +43,15 @@ INEC's own row order matches acronym order in 74 of 75 source files; differs in:
 - [x] **PASS** 37 states in the locator: 37
 - [x] **PASS** 774 LGAs: 774
 - [x] **PASS** every ward code SS/LL/WW is unique: []
+- [x] **PASS** crawl reproduces the reviewed locator baseline of 2026-11-09 (8,838 wards, 177,299 polling units; D-020): 8,838 wards, 177,299 polling units
 Wards in INEC's locator: **8,839** (8,838 after dropping empty duplicates); INEC's published figure 8,809 (difference +29; OI-7). INEC publishes no per-state ward figure to attribute the difference to.
 - [x] **PASS** every polling-unit code SS/LL/WW/PPP is unique: []
 Polling units in INEC's locator: **177,299**; INEC's published total 176,846 (difference +453; OI-7).
 Per state: ABIA 4,062, ADAMAWA 4,104, AKWA IBOM 4,353, ANAMBRA 5,720, BAUCHI 5,423, BAYELSA 2,244, BENUE 5,102, BORNO 5,071, CROSS RIVER 3,281, DELTA 6,316, EBONYI 2,946, EDO 4,519, EKITI 2,445, ENUGU 4,145, GOMBE 2,988, IMO 4,758, JIGAWA 4,522, KADUNA 8,012, KANO 11,222, KATSINA 6,652, KEBBI 3,743, KOGI 3,508, KWARA 2,887, LAGOS 13,325, NASARAWA 3,256, NIGER 4,950, OGUN 5,042, ONDO 3,933, OSUN 3,763, OYO 6,390, PLATEAU 4,989, RIVERS 6,866, SOKOTO 3,991, TARABA 3,597, YOBE 2,823, ZAMFARA 3,529, FCT 2,822
 
 ## Ward → race mapping
+- [x] **PASS** every ward with more than one possible race is marked unresolved and tied to a registered open item: []
+Unresolved wards: 86, holding 4,042 polling units (2.28%). Their voters will see every listed race, labelled.
 - [x] **PASS** every ward maps to exactly one federal constituency and one senatorial district, except listed open items: 0 unresolved, e.g. []
 **Known open item OI-10 (district not placed by INEC's text):** ADAMAWA/GOMBI: 10 wards list 1 House race(s) and 3 Senate race(s).
 **Known open item OI-9 (split LGA):** LAGOS/LAGOS ISLAND: 19 wards list 2 House race(s) and 1 Senate race(s).
@@ -83,3 +86,4 @@ Read from the composition text: 436; from the constituency name: 6; split LGAs (
 
 ## Provenance
 - [x] **PASS** every candidate and race cites a recorded source with a SHA-256
+- [x] **PASS** the polling-unit crawl is recorded with a manifest digest covering every cached response: 9651 files
