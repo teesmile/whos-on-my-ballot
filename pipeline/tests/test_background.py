@@ -168,9 +168,9 @@ def test_election_day_quotes_are_checked(tmp_path, monkeypatch):
     from ballot_pipeline import election_day
 
     page = tmp_path / "edu.html"
-    page.write_text("<p>Polling units open nationwide at 8:30 AM.</p>")
+    page.write_text("<p>Polling units open nationwide at 8:30 AM. Voting concludes at 2:30 PM.</p>")
     data = {"elections": [], "hours": {"open": "08:30", "close": "14:30", "source_id": "edu",
-                                      "quotes": ["Polling units open nationwide at 8:30 AM"]},
+                                      "quotes": ["Polling units open nationwide at 8:30 AM", "Voting concludes at 2:30 PM"]},
             "steps": [{"text": "Polls open at 9", "quotes": ["Polling units open nationwide at 9:00 AM"]}], "steps_source_id": "edu"}
     f = tmp_path / "ed.yaml"
     f.write_text(yaml.safe_dump(data))
@@ -190,3 +190,41 @@ def test_archive_citations_are_checked_against_the_archived_file():
     assert raw_url("https://web.archive.org/web/20220923224421id_/https://inecnigeria.org/a.pdf") == \
         "https://web.archive.org/web/20220923224421id_/https://inecnigeria.org/a.pdf"
     assert raw_url("https://www.vanguardngr.com/x/") == "https://www.vanguardngr.com/x/"
+
+
+@pytest.fixture
+def ed(tmp_path, monkeypatch):
+    from ballot_pipeline import election_day
+
+    page = tmp_path / "inec.html"
+    page.write_text("<p>Presidential / National Assembly Election January 16, 2027. Polling units open nationwide at 8:30 AM. "
+                    "Accreditation and voting commence simultaneously and conclude at 2:30 PM.</p>")
+    monkeypatch.setattr(election_day, "RAW_DIR", tmp_path)
+    monkeypatch.setattr(election_day, "GENERATED_DIR", tmp_path)
+
+    def run(date="2027-01-16", open_="08:30", close="14:30"):
+        data = {"elections": [{"id": "jan", "date": date, "races": "R", "source_id": "inec",
+                               "quotes": ["Presidential / National Assembly Election January 16, 2027"]}],
+                "hours": {"open": open_, "close": close, "source_id": "inec",
+                          "quotes": ["Polling units open nationwide at 8:30 AM", "conclude at 2:30 PM"]},
+                "steps": [], "steps_source_id": "inec"}
+        f = tmp_path / "ed.yaml"
+        f.write_text(yaml.safe_dump(data))
+        monkeypatch.setattr(election_day, "FILE", f)
+        return election_day.build({"inec": {"local_file": "inec.html", "file_url": "https://www.inecnigeria.org/x"}})
+    return run
+
+
+def test_schedule_matching_its_quotes_passes(ed):
+    assert ed() == []
+
+
+@pytest.mark.parametrize("kwargs,expected", [
+    ({"date": "2027-02-30"}, "is not a real date"),
+    ({"date": "2027-01-17"}, "does not match its INEC quote"),
+    ({"open_": "09:30"}, "open 09:30 does not match its INEC quote"),
+    ({"close": "25:00"}, "is not a valid time"),
+    ({"open_": "14:30", "close": "08:30"}, "must open before they close"),
+])
+def test_schedule_errors_are_rejected(ed, kwargs, expected):
+    assert any(expected in e for e in ed(**kwargs))

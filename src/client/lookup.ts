@@ -181,15 +181,23 @@ for (const button of document.querySelectorAll<HTMLButtonElement>('button[data-c
 const IREV = 'https://inecelectionresults.ng/'
 for (const box of document.querySelectorAll<HTMLElement>('[data-countdown]')) {
   const schedule = JSON.parse(box.dataset.countdown!) as Schedule
+  // Build the parts once and only change text that changed, so nothing focused is ever removed (review 4).
+  const headline = el('p', '', { class: 'headline' })
+  const details = el('div')
+  const results = el('p')
+  results.append(el('a', 'INEC Result Viewing Portal (IReV)', { href: IREV }))
+  box.replaceChildren(headline, details, results)
+  let last = ''
   const render = () => {
     const text = describePhase(phaseAt(new Date(), schedule), schedule)
-    const nodes: Node[] = [el('p', text.headline, { class: 'headline' }), ...text.details.map(d => el('p', d))]
-    if (text.showResultsLink) {
-      const p = el('p')
-      p.append(el('a', 'INEC Result Viewing Portal (IReV)', { href: IREV }))
-      nodes.push(p)
-    }
-    box.replaceChildren(...nodes)
+    const key = JSON.stringify(text)
+    if (key === last) return
+    last = key
+    headline.textContent = text.headline
+    const ps = text.details.map(d => el('p', d))
+    if (details.childElementCount !== ps.length || ps.some((p, i) => details.children[i].textContent !== p.textContent))
+      details.replaceChildren(...ps)
+    results.hidden = !text.showResultsLink
   }
   render()
   setInterval(render, 30_000)

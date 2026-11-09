@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+from datetime import date, time
 
 import yaml
 
@@ -32,9 +33,31 @@ def build(sources: dict[str, dict]) -> list[str]:
 
     for e in data["elections"]:
         check(e["source_id"], e["quotes"], e["id"])
-        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", e["date"]):
-            errors.append(f"election-day {e['id']}: bad date {e['date']!r}")
+        try:
+            day = date.fromisoformat(e["date"])
+        except ValueError:
+            errors.append(f"election-day {e['id']}: {e['date']!r} is not a real date")
+            continue
+        # INEC's calendar writes "January 16, 2027": the date we use must be the date INEC's quoted text gives.
+        inec_form = f"{day:%B} {day.day}, {day.year}"
+        if not any(inec_form in q for q in e["quotes"]):
+            errors.append(f"election-day {e['id']}: date {e['date']} does not match its INEC quote (expected {inec_form!r})")
     check(data["hours"]["source_id"], data["hours"]["quotes"], "hours")
+    times = {}
+    for name in ("open", "close"):
+        try:
+            times[name] = time.fromisoformat(data["hours"][name])
+        except ValueError:
+            errors.append(f"election-day hours: {name} {data['hours'][name]!r} is not a valid time")
+            continue
+        t = times[name]
+        spoken = f"{(t.hour + 11) % 12 + 1}:{t.minute:02d} {'AM' if t.hour < 12 else 'PM'}"
+        if not any(spoken in q for q in data["hours"]["quotes"]):
+            errors.append(f"election-day hours: {name} {data['hours'][name]} does not match its INEC quote (expected {spoken!r})")
+    if len(times) == 2 and not times["open"] < times["close"]:
+        errors.append("election-day hours: polls must open before they close")
+    if len({e["date"] for e in data["elections"]}) != len(data["elections"]):
+        errors.append("election-day: two elections share a date")
     for i, s in enumerate(data["steps"], start=1):
         if not s.get("quotes"):
             errors.append(f"election-day step {i}: no INEC quote")

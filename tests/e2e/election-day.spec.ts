@@ -56,3 +56,14 @@ test('axe finds no violations on the election-day page', async ({ page }) => {
   const { violations } = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze()
   expect(violations.map(v => `${v.id}: ${v.nodes.length} nodes`)).toEqual([])
 })
+
+test('the IReV link keeps keyboard focus while the countdown updates (review 4)', async ({ page }) => {
+  await page.clock.install({ time: new Date('2027-01-16T15:00:00Z') })
+  await page.goto('/election-day/')
+  const link = page.locator('.countdown').getByRole('link', { name: /IReV/ })
+  await link.focus()
+  await expect(link).toBeFocused()
+  await page.clock.runFor(120_000) // four updates; the "next election" countdown text changes in between
+  await expect(link).toBeFocused()
+  await expect(page.locator('.countdown')).toContainText('Polls open in')
+})
