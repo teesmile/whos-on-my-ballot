@@ -1,7 +1,7 @@
 # Data pipeline. All steps except fetch/crawl/watch run offline from pipeline/raw/.
 PIPE = cd pipeline && uv run
 
-.PHONY: fetch crawl-pu build test verify-data verify watch
+.PHONY: fetch crawl-pu build test verify-data verify watch site verify-site
 
 fetch:        ## download INEC sources, record hashes (network)
 	$(PIPE) ballot-pipeline fetch
@@ -18,7 +18,13 @@ test:         ## unit tests (PDF tests skip if raw files are absent)
 verify-data:  ## build + every Phase 1 check; non-zero on any failure (offline)
 	$(PIPE) ballot-pipeline verify
 
-verify: test verify-data
+site:         ## data/generated -> static site in out/ (offline)
+	pnpm build
+
+verify-site:  ## every Phase 2 check on the built site (offline; needs `make site` and Playwright's Chromium)
+	pnpm lint && pnpm typecheck && pnpm test && pnpm test:site && pnpm test:e2e && pnpm size && pnpm lighthouse
+
+verify: test verify-data site verify-site
 
 watch:        ## exit 3 if INEC published or changed anything we depend on (network)
 	$(PIPE) ballot-pipeline watch

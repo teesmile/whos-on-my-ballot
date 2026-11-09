@@ -27,6 +27,25 @@ class Person(Strict):
     position: str = ""  # verbatim, ticket races only
 
 
+class PrintingNote(Strict):
+    """A value INEC printed that is clearly an error. Shown as printed with a neutral note (D-021)."""
+
+    person: Literal["candidate", "running_mate"]
+    field: Literal["age", "remarks", "name", "qualifications", "gender", "pwd"]
+    as_printed: str
+
+
+class PlacementNote(Strict):
+    """Why an LGA's polling units are in this race when INEC's text doesn't say so plainly (D-018, D-021)."""
+
+    lga: str
+    kind: Literal["inferred", "unconfirmed"]
+    reason: str
+    inec_text: str
+    source_id: str
+    row: int
+
+
 class Candidate(Strict):
     id: str
     race_id: str
@@ -36,6 +55,7 @@ class Candidate(Strict):
     remarks: str  # verbatim
     candidate: Person
     running_mate: Person | None = None
+    printing_notes: list[PrintingNote] = []
     provenance: Provenance
 
 
@@ -48,6 +68,7 @@ class Race(Strict):
     workbook_code: str | None  # SD/... or FC/... code from INEC's constituency workbook
     order_rule: str
     sources: list[str]
+    placement_notes: list[PlacementNote] = []
     candidates: list[Candidate]
 
 

@@ -187,3 +187,50 @@ pending_ward_splits:   # open item OI-9
 # and the site shows them as "one of these is on your ballot" until an INEC source places the LGA.
 pending_sd_placements:   # open item OI-10
   "ADAMAWA|GOMBI": [SD/004/AD, SD/005/AD, SD/006/AD]
+
+# Shown on the race wherever it appears (owner ruling D-021). `inec_text` must equal the workbook row's text.
+placement_notes:
+  - unit: FC/101/ED
+    lga: ESAN WEST
+    kind: inferred
+    source_id: inec-constituencies-workbook
+    row: 368
+    inec_text: "The entire Geographical Area of Esan Central/Esan South/Igueben L.G.As"
+    reason: >-
+      INEC's text names an "Esan South" LGA, which does not exist. Esan West is the only Edo LGA that INEC places in no other
+      federal constituency, so its polling units are placed here.
+  - unit: SD/078/NG
+    lga: GBAKO
+    kind: inferred
+    source_id: inec-constituencies-workbook
+    row: 188
+    inec_text: "AGAIE, BIDA, KATCHA, BATAGI, LAPAI, LAVUN, EDATI-IDATI, MOKWA"
+    reason: >-
+      INEC's list of LGAs for this district includes "BATAGI", which is not an LGA. Gbako is the only Niger LGA that INEC places in
+      no senatorial district, so its polling units are placed here.
+  - unit: SD/054/KD
+    lga: KAURU
+    kind: inferred
+    source_id: inec-constituencies-workbook
+    row: 129
+    inec_text: "JEMA’A, JABA, KAURA, ZANGON, KAURA, KACHIA, KAGARKO, SANGA"
+    reason: >-
+      INEC's list names Kaura twice. Kauru is the only Kaduna LGA that INEC places in no senatorial district, so the second "Kaura"
+      is read as Kauru and its polling units are placed here.
+  - unit: FC/145/JG
+    lga: AUYO
+    kind: inferred
+    source_id: inec-constituencies-workbook
+    row: 549
+    inec_text: "The entire Geographical Area of Hadejia/Kafin Hausa L.G.As"
+    reason: >-
+      INEC's constituency workbook places Auyo in no federal constituency. INEC's 31 October 2026 House list names this constituency
+      "Hadejia/Kafin Hausa/Auyo", so Auyo's polling units are placed here.
+  - unit: SD/006/AD
+    lga: HONG
+    kind: unconfirmed
+    source_id: inec-constituencies-workbook
+    row: 19
+    inec_text: "HONG, FUFORE, SONG, YOLA NORTH, YOLA SOUTH, GERFI"
+    reason: >-
+      INEC's workbook places Hong in this district. This is INEC's own placement and has not been confirmed against another INEC source.

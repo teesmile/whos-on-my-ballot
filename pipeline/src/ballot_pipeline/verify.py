@@ -112,6 +112,11 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
 
     c.note(f"Printed values kept verbatim but not usable ({len(res.anomalies)}; for the owner to raise with INEC): "
            + "; ".join(f"{where(a)}: {', '.join(a['anomalies'])}" for a in res.anomalies))
+    noted = {(cd.provenance.source_id, cd.provenance.sn) for cd in cands if cd.printing_notes}
+    uncovered = [a for a in res.anomalies if "sn" in a and (a["source_id"], a["sn"]) not in noted]
+    c.check(not uncovered, "every implausible printed value carries a printing note (D-021)", str(uncovered[:3]))
+    notes = [(r.id, n.lga, n.kind) for r in races for n in r.placement_notes]
+    c.check(len(notes) == 5, "the five reviewed placement notes are attached to their races", str(notes))
     remarks = Counter(cd.remarks for cd in cands if cd.remarks)
     c.note("INEC remarks, verbatim (count): " + (", ".join(f"`{k}` ({n})" for k, n in remarks.most_common()) or "none") + ".")
 

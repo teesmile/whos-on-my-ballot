@@ -1,0 +1,60 @@
+{
+  "name": "whos-on-my-ballot",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.9.0",
+  "engines": {
+    "node": "^22.13.0 || ^24.0.0 || >=26.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/postbuild.mjs",
+    "start": "node scripts/serve-out.mjs",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --project unit",
+    "test:site": "vitest run --project site",
+    "test:e2e": "playwright test",
+    "size": "node scripts/size-check.mjs",
+    "lighthouse": "node scripts/lighthouse.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.5",
+    "react": "19.2.9",
+    "react-dom": "19.2.9",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@next/eslint-plugin-next": "16.4.5",
+    "@playwright/test": "1.65.0",
+    "@types/node": "^22.20.5",
+    "@types/react": "~19.2.18",
+    "@types/react-dom": "~19.2.7",
+    "chrome-launcher": "1.2.3",
+    "esbuild": "0.28.2",
+    "eslint": "9.35.0",
+    "eslint-config-next": "16.4.5",
+    "lighthouse": "13.6.0",
+    "typescript": "5.9.2",
+    "vitest": "^5.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@typescript-eslint/parser": "8.72.1",
+      "@typescript-eslint/eslint-plugin": "8.72.1",
+      "@typescript-eslint/typescript-estree": "8.72.1",
+      "@typescript-eslint/utils": "8.72.1",
+      "@typescript-eslint/type-utils": "8.72.1",
+      "@typescript-eslint/scope-manager": "8.72.1",
+      "@typescript-eslint/types": "8.72.1",
+      "@typescript-eslint/visitor-keys": "8.72.1",
+      "@typescript-eslint/project-service": "8.72.1",
+      "@typescript-eslint/tsconfig-utils": "8.72.1",
+      "typescript-eslint": "8.72.1"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

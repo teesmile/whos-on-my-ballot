@@ -1,0 +1,93 @@
+/* Neutral greys only. No colour carries party meaning anywhere (the working rules §1). */
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #545454;
+  --line: #c8c8c8;
+  --panel: #f3f3f3;
+  --link: #1a1a1a;
+  --focus: #000000;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --fg: #ececec;
+    --muted: #b4b4b4;
+    --line: #4a4a4a;
+    --panel: #1e1e1e;
+    --link: #ececec;
+    --focus: #ffffff;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 1rem/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+main, .site-header, .site-footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+main { padding-bottom: 2rem; }
+a { color: var(--link); text-underline-offset: 0.15em; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid var(--focus); outline-offset: 2px;
+}
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 1rem; top: 0.5rem; background: var(--bg); padding: 0.5rem; z-index: 1; }
+.site-header { border-bottom: 1px solid var(--line); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.site-name { font-weight: 700; text-decoration: none; display: inline-block; min-height: 44px; line-height: 44px; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; padding-top: 1rem; padding-bottom: 2rem; }
+.site-footer a { color: var(--muted); }
+.affiliation { font-weight: 600; color: var(--fg); }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 1.25rem 0 0.75rem; }
+h2 { font-size: 1.3rem; margin: 1.75rem 0 0.5rem; }
+h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
+.sub { font-weight: 400; color: var(--muted); font-size: 0.8em; }
+.lead { font-size: 1.05rem; }
+.hint { display: block; font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+.crumbs { margin-top: 1rem; font-size: 0.95rem; }
+.crumbs a { display: inline-block; min-height: 44px; line-height: 44px; }
+
+.link-list { list-style: none; padding: 0; margin: 0; }
+.link-list li { border-bottom: 1px solid var(--line); }
+.link-list a { display: block; padding: 0.7rem 0.25rem; min-height: 44px; }
+@media (min-width: 40rem) { .columns { columns: 2; column-gap: 2rem; } .columns li { break-inside: avoid; } }
+.code { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+form.lookup { display: grid; gap: 0.5rem; max-width: 28rem; }
+form.lookup label { font-weight: 600; margin-top: 0.5rem; }
+input, select, button { font: inherit; min-height: 44px; padding: 0.5rem 0.75rem; border: 1px solid var(--muted); border-radius: 4px; background: var(--bg); color: var(--fg); }
+button { background: var(--fg); color: var(--bg); border-color: var(--fg); font-weight: 600; cursor: pointer; }
+.result:empty { display: none; }
+.result, .pu-confirmed, .note { background: var(--panel); border-left: 4px solid var(--muted); padding: 0.75rem 1rem; margin: 0.75rem 0; }
+.result ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+.result li + li { border-top: 1px solid var(--line); }
+.result a { display: block; padding: 0.6rem 0; min-height: 44px; }
+
+.toc ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+.toc li { border-bottom: 1px solid var(--line); }
+.toc a { display: block; padding: 0.6rem 0.25rem; min-height: 44px; }
+.race { border-top: 2px solid var(--fg); margin-top: 2rem; }
+.race-meta, .cite { color: var(--muted); font-size: 0.9rem; }
+.race-meta p { margin: 0.4rem 0; }
+.cite a { color: var(--muted); }
+.candidates { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.75rem; }
+@media (min-width: 40rem) { .candidates { grid-template-columns: 1fr 1fr; } }
+.candidate { border: 1px solid var(--line); border-radius: 6px; padding: 0.75rem 1rem; }
+.party { margin: 0; color: var(--muted); }
+.acronym { font-weight: 700; color: var(--fg); }
+.name { font-size: 1.1rem; margin: 0.25rem 0 0.5rem; overflow-wrap: anywhere; }
+.position { margin: 0 0 0.25rem; color: var(--muted); font-size: 0.9rem; }
+.running-mate { border-top: 1px dashed var(--line); margin-top: 0.75rem; padding-top: 0.5rem; }
+.running-mate .mate-name { font-size: 1rem; margin: 0 0 0.25rem; }
+.fields { display: grid; grid-template-columns: max-content 1fr; gap: 0.15rem 0.75rem; margin: 0; font-size: 0.95rem; }
+.fields dt { color: var(--muted); }
+.fields dd { margin: 0; overflow-wrap: anywhere; }
+.printing-note { color: var(--muted); font-style: italic; }
+.unresolved > h2 { margin-top: 2rem; }
+
+/* Room for the code form, which the script reveals; without JavaScript the same space holds the note. */
+.by-code { min-height: 15rem; }

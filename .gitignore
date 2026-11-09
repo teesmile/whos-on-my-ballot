@@ -10,3 +10,7 @@ out/
 .vercel/
 .env*
 watch-summary.md
+shots/
+test-results/
+playwright-report/
+tsconfig.tsbuildinfo

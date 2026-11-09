@@ -5,6 +5,7 @@ from __future__ import annotations
 import dataclasses
 import hashlib
 import json
+import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 
@@ -12,10 +13,10 @@ import yaml
 
 from . import extract as ex
 from .geo import GeoError, WorkbookUnit, key, read_locator, read_workbook, resolve_composition
-from .models import Candidate, Lga, Person, PollingUnit, Provenance, Race, StateGeo, Ward
+from .models import Candidate, Lga, Person, PlacementNote, PollingUnit, PrintingNote, Provenance, Race, StateGeo, Ward
 from .ordering import ORDER_RULE, order_candidates
 from .parties import parse_parties
-from .paths import ALIASES_YAML, GENERATED_DIR, RAW_DIR, SOURCES_YAML
+from .paths import ALIASES_YAML, GENERATED_DIR, PIPELINE_DIR, RAW_DIR, SOURCES_YAML
 from .states import slug
 
 ELECTION = "jan-2027"
@@ -173,6 +174,13 @@ def build(log=print) -> BuildResult:
         hits = [u for u in workbook if u.kind == kind and u.state == state and key(u.name) == key(target)]
         return hits[0] if len(hits) == 1 else None
 
+    # ---- printing errors (pinned to the printed value)
+    printing = yaml.safe_load((PIPELINE_DIR / "printing_errors.yaml").read_text()) or []
+    printing_by_row: dict[tuple[str, int], list[dict]] = defaultdict(list)
+    for e in printing:
+        printing_by_row[(e["source_id"], e["sn"])].append(e)
+    printing_used: set[int] = set()
+
     # ---- races
     quarantine: list[dict] = []
     anomalies: list[dict] = []
@@ -230,6 +238,19 @@ def build(log=print) -> BuildResult:
             if problems:
                 quarantine.append({"source_id": r.source_id, "page": r.page, "sn": r.sn, "problems": problems})
             cands.append((r, cand, mate))
+        cand_notes = {}
+        for r, _, _ in cands:
+            notes = []
+            for e in printing_by_row.get((r.source_id, r.sn), []):
+                person = r.candidate if e["person"] == "candidate" else r.running_mate
+                actual = r.remarks if e["field"] == "remarks" else getattr(person, e["field"], None)
+                if actual != e["as_printed"]:
+                    errors.append(f"printing_errors.yaml {e['source_id']} SN {e['sn']}: INEC now prints {actual!r}, "
+                                  f"not {e['as_printed']!r}; review the entry")
+                    continue
+                printing_used.add(id(e))
+                notes.append(PrintingNote(person=e["person"], field=e["field"], as_printed=e["as_printed"]))
+            cand_notes[(r.source_id, r.sn)] = notes
         races.append(
             Race(
                 id=race_id, election=ELECTION, office=office, state=state, name=cname,
@@ -239,13 +260,34 @@ def build(log=print) -> BuildResult:
                     Candidate(
                         id=f"{race_id}-{r.party.lower()}", race_id=race_id, party=r.party,
                         party_name=party_names.get(r.party), ballot_position=i, remarks=r.remarks,
-                        candidate=cand, running_mate=mate,
+                        candidate=cand, running_mate=mate, printing_notes=cand_notes[(r.source_id, r.sn)],
                         provenance=Provenance(source_id=r.source_id, page=r.page, sn=r.sn),
                     )
                     for i, (r, cand, mate) in enumerate(cands, start=1)
                 ],
             )
         )
+
+    for e in printing:
+        if id(e) not in printing_used and not any(f"{e['source_id']} SN {e['sn']}" in x for x in errors):
+            errors.append(f"printing_errors.yaml entry {e['source_id']} SN {e['sn']} matched no candidate row")
+
+    # ---- placement notes, shown on the race (D-021)
+    unit_by_code = {u.code: u for u in workbook}
+    race_by_code = {r.workbook_code: r for r in races if r.workbook_code}
+    notes_by_race: dict[str, list[PlacementNote]] = defaultdict(list)
+    for n in aliases.get("placement_notes") or []:
+        u = unit_by_code.get(n["unit"])
+        if not u or u.row != n["row"] or u.composition != re.sub(r"\s+", " ", n["inec_text"]).strip():
+            errors.append(f"placement note {n['unit']}: row/text no longer match INEC's workbook; review it again")
+            continue
+        if n["lga"] not in u.lgas:
+            errors.append(f"placement note {n['unit']}: {n['lga']} is not among the unit's LGAs {u.lgas}")
+            continue
+        notes_by_race[race_by_code[n["unit"]].id].append(PlacementNote(
+            lga=n["lga"], kind=n["kind"], reason=re.sub(r"\s+", " ", n["reason"]).strip(), inec_text=n["inec_text"],
+            source_id=n["source_id"], row=n["row"]))
+    races = [r.model_copy(update={"placement_notes": notes_by_race.get(r.id, [])}) for r in races]
 
     for unused in set(name_aliases) - used_aliases:
         errors.append(f"constituency alias {unused} matched no candidate-list constituency (stale entry)")

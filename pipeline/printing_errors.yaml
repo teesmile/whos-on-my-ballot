@@ -1,0 +1,13 @@
+# Values INEC printed that are clearly errors. They are shown exactly as printed, with the neutral note
+# "As printed in INEC's list; this appears to be an error." Each entry is pinned to the printed value:
+# the build fails if INEC's text changes, so the note never outlives the error.
+- source_id: house-oyo
+  sn: 140
+  person: candidate
+  field: age
+  as_printed: "947"
+- source_id: president
+  sn: 16
+  person: running_mate
+  field: remarks
+  as_printed: "C"

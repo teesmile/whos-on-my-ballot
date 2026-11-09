@@ -32,6 +32,8 @@ Candidates parsed: president 19 tickets, senate 1303, house 3569.
 - [x] **PASS** every row without a name carries an INEC remark: [('jan-2027-president-a', 'COURT ORDER')]
 Rows with no candidate name (shown verbatim with INEC's remark): [('jan-2027-president-a', 'COURT ORDER')]
 Printed values kept verbatim but not usable (2; for the owner to raise with INEC): house-oyo p13 SN 140 PDP ADEBAYO MOBOLUJI ADEDOTUN: age printed as '947'; ward 07/07/09 MBAIKYAAN: duplicate ward code with no polling units; dropped
+- [x] **PASS** every implausible printed value carries a printing note (D-021): []
+- [x] **PASS** the five reviewed placement notes are attached to their races: [('jan-2027-house-edo-esan-central-esan-south-igueben', 'ESAN WEST', 'inferred'), ('jan-2027-house-jigawa-hadejia-kafin-hausa-auyo', 'AUYO', 'inferred'), ('jan-2027-senate-adamawa-adamawa-central', 'HONG', 'unconfirmed'), ('jan-2027-senate-kaduna-kaduna-south', 'KAURU', 'inferred'), ('jan-2027-senate-niger-niger-south', 'GBAKO', 'inferred')]
 INEC remarks, verbatim (count): `COURT ORDER` (10), `CONSTITUTENCY SWAP` (1), `C` (1).
 
 ## Ballot order (D-011)
