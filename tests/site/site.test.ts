@@ -94,7 +94,7 @@ describe('ballot pages', () => {
     for (const b of all.slice(0, 60)) {
       const blocks = html(b.path.slice(1)).match(/<li class="candidate"[\s\S]*?<\/li>/g)!
       for (const block of blocks) {
-        expect(block).toMatch(/<p class="cite">Source:\s*<a href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+">/)
+        expect(block).toMatch(/<p class="cite" data-source="[^"]+"><a href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+">Source, page \d+, row \d+: INEC: [^<]+, retrieved <time/)
         expect(block).toMatch(/<time dateTime="\d{4}-\d{2}-\d{2}">/)
       }
     }
@@ -139,6 +139,42 @@ describe('ballot pages', () => {
       const page = html(b.path.slice(1))
       expect(page.includes('Latest INEC list for this state: 12 September 2026'), b.path).toBe(b.state.name === 'NIGER')
     }
+  })
+})
+
+describe('citations beyond candidate blocks', () => {
+  const dated = (s: string, id: string) => new RegExp(`<p class="cite" data-source="${id}"><a href="https://[^"]+">[^<]+, retrieved <time dateTime="\\d{4}-\\d{2}-\\d{2}">`).test(s)
+
+  it('every state, LGA and ward page cites INEC’s polling-unit locator with a date', () => {
+    for (const s of states()) {
+      expect(dated(html(`state/${s.code}`), 'inec-pu-locator'), s.name).toBe(true)
+      for (const l of stateGeo(s.code).lgas) {
+        expect(dated(html(`lga/${l.code.replace('/', '-')}`), 'inec-pu-locator'), l.code).toBe(true)
+        for (const w of l.wards) expect(dated(html(`ward/${w.code.replaceAll('/', '-')}`), 'inec-pu-locator'), w.code).toBe(true)
+      }
+    }
+  })
+
+  it('every race cites INEC’s party register for the full party names, and every ballot cites how it was matched', () => {
+    for (const b of ballots()) {
+      const page = html(b.path.slice(1))
+      const sections = page.split('<section class="race"').slice(1)
+      for (const sec of sections) expect(dated(sec, 'inec-parties'), b.path).toBe(true)
+      expect(dated(page, 'inec-pu-locator') && dated(page, 'inec-constituencies-workbook'), b.path).toBe(true)
+    }
+  })
+
+  it('the footer dates every source on every page', () => {
+    for (const f of [...walk(OUT)].filter(x => x.endsWith('.html'))) {
+      const footer = fs.readFileSync(f, 'utf8').split('<footer')[1] ?? ''
+      for (const id of ['president', 'inec-pu-locator', 'inec-constituencies-workbook', 'inec-parties']) expect(dated(footer, id), `${f} ${id}`).toBe(true)
+    }
+  })
+
+  it('real data: an exact polling-unit name is found first (OHAFOR OHAFIA, review 2)', async () => {
+    const { searchLga } = await import('@/lib/core')
+    const data = JSON.parse(fs.readFileSync(path.join(OUT, 'data/pu/01.json'), 'utf8')) as StateSearchData
+    expect(searchLga(data, '10', 'OHAFOR OHAFIA')[0].code).toBe('01/10/08/008')
   })
 })
 

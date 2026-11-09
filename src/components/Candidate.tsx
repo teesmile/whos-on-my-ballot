@@ -1,5 +1,7 @@
 import type { Candidate as C, Person, PrintingNote, Source } from '@/lib/data'
 
+import { SourceLine } from './SourceLine'
+
 export const NOT_PROVIDED = 'Not provided in INEC’s list'
 export const PRINTING_NOTE = 'As printed in INEC’s list; this appears to be an error.'
 
@@ -73,21 +75,11 @@ export function Candidate({ c, src, ticket, level }: { c: C, src: Source, ticket
           <PersonFields p={c.running_mate} who="running_mate" notes={c.printing_notes} />
         </div>
       )}
-      <p className="cite">
-        Source:
-        {' '}
-        <a href={`${src.file_url}#page=${c.provenance.page}`}>
-          INEC final list, page
-          {' '}
-          {c.provenance.page}
-          , row
-          {' '}
-          {c.provenance.sn}
-        </a>
-        , retrieved
-        {' '}
-        <time dateTime={src.retrieved_at.slice(0, 10)}>{formatDate(src.retrieved_at)}</time>
-      </p>
+      <SourceLine
+        id={c.provenance.source_id}
+        what={`Source, page ${c.provenance.page}, row ${c.provenance.sn}`}
+        href={`${src.file_url}#page=${c.provenance.page}`}
+      />
     </li>
   )
 }

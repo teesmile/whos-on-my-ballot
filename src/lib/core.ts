@@ -133,21 +133,37 @@ export interface SearchHit extends FoundPollingUnit {
 }
 
 /**
- * Closest polling units in one LGA to a name or landmark. Every query word must match something
- * (exactly, as a prefix, inside a word, or within one or two typos), and the average match decides the rank.
+ * Closest polling units in one LGA to a name or landmark. Every query word must match something (exactly, as a
+ * prefix, inside a word, as an INEC abbreviation, or within one or two typos). Ranking, highest first:
+ *   1. the polling unit's whole name equals the query;
+ *   2. matches found in the polling unit's own name;
+ *   3. matches that need the ward name, worth half, since every unit in a ward shares it.
  */
 export function searchLga(data: StateSearchData, lgaCode: string, query: string, limit = 5): SearchHit[] {
   const q = normalise(query)
   if (!q.length) return []
+  const exact = q.join(' ')
   const hits: SearchHit[] = []
   for (const [lc, ln, wards] of data.lgas) {
     if (lc !== lgaCode) continue
     for (const [wc, wn, path, pus] of wards) {
+      const wardWords = normalise(wn)
       for (const [pc, pn] of pus) {
-        const words = normalise(`${pn} ${wn}`)
-        const scores = q.map(t => tokenScore(t, words))
-        if (scores.some(s => s === 0)) continue
-        const score = scores.reduce((a, b) => a + b, 0) / q.length
+        const words = normalise(pn)
+        let total = 0
+        let matchedAll = true
+        for (const t of q) {
+          const own = tokenScore(t, words)
+          const viaWard = tokenScore(t, wardWords) * 0.5
+          const s = Math.max(own, viaWard)
+          if (s === 0) {
+            matchedAll = false
+            break
+          }
+          total += s
+        }
+        if (!matchedAll) continue
+        const score = (words.join(' ') === exact ? 2 : 0) + total / q.length
         hits.push({ code: `${data.code}/${lc}/${wc}/${pc}`, name: pn, ward: wn, lga: ln, state: data.name, ballotPath: path, score })
       }
     }

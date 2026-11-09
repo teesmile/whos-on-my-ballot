@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+import { SourceLine } from '@/components/SourceLine'
+
 import { stateGeo, states } from '@/lib/data'
 
 export const dynamicParams = false
@@ -17,7 +19,7 @@ export default async function StatePage({ params }: { params: Promise<{ code: st
     <>
       <nav aria-label="Breadcrumb" className="crumbs"><a href="/">All states</a></nav>
       <h1>{st.name}</h1>
-      <section aria-labelledby="search">
+      <section aria-labelledby="search" className="by-search">
         <h2 id="search">Search for your polling unit</h2>
         <form className="lookup" data-lookup="search" data-state={st.code} hidden>
           <label htmlFor="lga">Your LGA</label>
@@ -35,6 +37,7 @@ export default async function StatePage({ params }: { params: Promise<{ code: st
         </form>
         <noscript><p>Search needs JavaScript. Choose your LGA below instead.</p></noscript>
       </section>
+      <SourceLine id="inec-pu-locator" what="LGAs, wards and polling units" />
       <section aria-labelledby="browse">
         <h2 id="browse">Or choose your LGA</h2>
         <ul className="link-list columns">

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+import { SourceLine } from '@/components/SourceLine'
+
 import { puHash } from '@/lib/core'
 import { findWard, stateGeo, states, wardBallotPath } from '@/lib/data'
 
@@ -32,6 +34,7 @@ export default async function WardPage({ params }: { params: Promise<{ code: str
         {' '}
         <span className="sub">ward</span>
       </h1>
+      <SourceLine id="inec-pu-locator" what="LGAs, wards and polling units" />
       <h2>Is this your polling unit?</h2>
       <p>Choose your polling unit to see your ballot. The code after each name is the delimitation code printed on voter cards.</p>
       <ul className="link-list pu-list" data-ballot={path}>

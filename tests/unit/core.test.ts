@@ -82,5 +82,13 @@ describe('searchLga', () => {
   it('abbreviation needs the same first letter', () => expect(top('ary sch')).toEqual([]))
   it('every word must match something', () => expect(top('poly zzzz')).toEqual([]))
   it('empty query returns nothing', () => expect(top('   ')).toEqual([]))
+  it('an exact unit name beats units that only share the ward name', () => {
+    const ward: StateSearchData = { code: '01', name: 'ABIA', lgas: [['10', 'OHAFIA', [['08', 'OHAFOR OHAFIA', '/b/', [
+      ['001', 'ATAN ASAGA - ATAN HALL'], ['002', 'UMA UKPAI PRI. SCH. I'], ['003', 'NDI MBA'], ['004', 'NDI AJI'],
+      ['005', 'NDI AGWU'], ['006', 'NDI AWAM'], ['008', 'OHAFOR OHAFIA'],
+    ]]]]] }
+    expect(searchLga(ward, '10', 'Ohafor Ohafia')[0].code).toBe('01/10/08/008')
+  })
+  it('own-name matches outrank ward-name matches', () => expect(top('ariaria square')[0]).toBe('01/01/09/001'))
   it('returns at most five', () => expect(searchLga(DATA, '01', 'a').length).toBeLessThanOrEqual(5))
 })

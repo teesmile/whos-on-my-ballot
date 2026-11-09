@@ -91,3 +91,13 @@ button { background: var(--fg); color: var(--bg); border-color: var(--fg); font-
 
 /* Room for the code form, which the script reveals; without JavaScript the same space holds the note. */
 .by-code { min-height: 15rem; }
+
+/* Every tap target is at least 44px (the working rules §4). Citations are one full-width link each. */
+.cite { margin: 0.25rem 0; }
+.cite a { display: block; min-height: 44px; padding: 0.6rem 0; }
+main p > a { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
+.site-footer .cite a { padding: 0.5rem 0; }
+.crumbs a { min-width: 44px; }
+.note .link-list a { padding: 0.6rem 0; }
+/* Room for the search form, which the script reveals (no layout shift). */
+.by-search { min-height: 22rem; }

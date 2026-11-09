@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 
-import { INEC_2027, INEC_LOCATOR } from '@/components/RaceSection'
+import { SourceLine } from '@/components/SourceLine'
 
 import './globals.css'
 
@@ -25,15 +25,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <p className="affiliation">
             Independent project. Not affiliated with or endorsed by INEC (Independent National Electoral Commission).
           </p>
-          <p>
-            Candidates: INEC final lists of candidates (updated 31 October 2026). Polling units: INEC Polling Unit Locator.
-            Shown exactly as INEC printed them.
-          </p>
-          <p>
-            <a href={INEC_LOCATOR}>INEC Polling Unit Locator</a>
-            {' · '}
-            <a href={INEC_2027}>INEC 2027 general elections</a>
-          </p>
+          <SourceLine id="president" what="Candidates (INEC final lists, updated 31 October 2026)" />
+          <SourceLine id="inec-pu-locator" what="Polling units" />
+          <SourceLine id="inec-constituencies-workbook" what="Constituencies" />
+          <SourceLine id="inec-parties" what="Parties" />
+          <p>Shown exactly as INEC printed them.</p>
           <p>No tracking, no ads, no accounts. What you type stays in your browser.</p>
         </footer>
       </body>

@@ -48,12 +48,23 @@ function show(result: Element, ...nodes: Node[]) {
   result.replaceChildren(...nodes)
 }
 
+/** Each submission takes a number; only the latest may write its result, so a slow earlier answer can't overwrite a newer one. */
+function latestOnly() {
+  let seq = 0
+  return () => {
+    const mine = ++seq
+    return () => mine === seq
+  }
+}
+
 function setupCode(form: HTMLFormElement) {
   const input = form.querySelector('input')!
   const result = form.querySelector('.result')!
+  const begin = latestOnly()
   form.hidden = false
   form.addEventListener('submit', async (ev) => {
     ev.preventDefault()
+    const current = begin()
     const code = parseDelimitationCode(input.value)
     if (!code) {
       show(result, el('p', 'That isn’t a delimitation code. It has four numbers, like 24/15/03/012.'))
@@ -62,10 +73,12 @@ function setupCode(form: HTMLFormElement) {
     show(result, el('p', 'Looking up…'))
     let pu: FoundPollingUnit | null = null
     try {
-      pu = findByCode(await stateData(code.slice(0, 2)), code)
+      const data = await stateData(code.slice(0, 2))
+      if (!current()) return
+      pu = findByCode(data, code)
     }
     catch {
-      show(result, el('p', 'We couldn’t load the polling-unit list. Check your connection and try again.'))
+      if (current()) show(result, el('p', 'We couldn’t load the polling-unit list. Check your connection and try again.'))
       return
     }
     if (!pu) {
@@ -84,12 +97,14 @@ function setupSearch(form: HTMLFormElement) {
   const lga = form.querySelector('select')!
   const input = form.querySelector('input')!
   const result = form.querySelector('.result')!
+  const begin = latestOnly()
   form.hidden = false
   const prefetch = () => void stateData(state).catch(() => {})
   lga.addEventListener('change', prefetch, { once: true })
   input.addEventListener('focus', prefetch, { once: true })
   form.addEventListener('submit', async (ev) => {
     ev.preventDefault()
+    const current = begin()
     if (!lga.value) {
       show(result, el('p', 'Choose your LGA first.'))
       lga.focus()
@@ -101,10 +116,12 @@ function setupSearch(form: HTMLFormElement) {
     }
     let hits
     try {
-      hits = searchLga(await stateData(state), lga.value, input.value)
+      const data = await stateData(state)
+      if (!current()) return
+      hits = searchLga(data, lga.value, input.value)
     }
     catch {
-      show(result, el('p', 'We couldn’t load the polling-unit list. Check your connection and try again.'))
+      if (current()) show(result, el('p', 'We couldn’t load the polling-unit list. Check your connection and try again.'))
       return
     }
     if (!hits.length) {

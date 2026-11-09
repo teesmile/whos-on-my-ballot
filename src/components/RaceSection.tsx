@@ -1,6 +1,7 @@
 import { type Race, source } from '@/lib/data'
 
-import { Candidate, formatDate } from './Candidate'
+import { Candidate } from './Candidate'
+import { SourceLine } from './SourceLine'
 
 const WORKBOOK = 'inec-constituencies-workbook'
 export const INEC_LOCATOR = 'https://cvr.inecnigeria.org/pu'
@@ -23,19 +24,8 @@ function SourcesNote({ r }: { r: Race }) {
           Latest INEC list for this state: 12 September 2026. INEC’s 31 October 2026 update did not include a House of Representatives list for Niger.
         </p>
       )}
-      {r.sources.map((id) => {
-        const s = source(id)
-        return (
-          <p className="cite" key={id}>
-            Source:
-            {' '}
-            <a href={s.page_url ?? s.file_url}>{s.title}</a>
-            , retrieved
-            {' '}
-            <time dateTime={s.retrieved_at.slice(0, 10)}>{formatDate(s.retrieved_at)}</time>
-          </p>
-        )
-      })}
+      <SourceLine id="inec-parties" what="Full party names" />
+      {r.sources.map(id => <SourceLine key={id} id={id} what="Candidates" />)}
     </div>
   )
 }
@@ -60,14 +50,7 @@ function PlacementNotes({ r }: { r: Race }) {
             {' '}
             <q>{n.inec_text}</q>
           </p>
-          <p className="cite">
-            Source:
-            {' '}
-            <a href={wb.archive_url ?? wb.file_url}>{wb.title}</a>
-            , retrieved
-            {' '}
-            <time dateTime={wb.retrieved_at.slice(0, 10)}>{formatDate(wb.retrieved_at)}</time>
-          </p>
+          <SourceLine id={WORKBOOK} what={`INEC’s text, row ${n.row}`} />
         </div>
       ))}
     </div>
@@ -107,13 +90,11 @@ export function UnresolvedGroup({ office, list }: { office: 'Senate' | 'House of
           {' '}
           races applies to each polling unit in your area, so all of them are shown. Only one will be on your ballot paper.
         </p>
-        <p>
-          INEC’s own tools:
-          {' '}
-          <a href={INEC_LOCATOR}>INEC Polling Unit Locator</a>
-          {' · '}
-          <a href={INEC_2027}>INEC 2027 general elections page</a>
-        </p>
+        <p>INEC’s own tools:</p>
+        <ul className="link-list">
+          <li><a href={INEC_LOCATOR}>INEC Polling Unit Locator</a></li>
+          <li><a href={INEC_2027}>INEC 2027 general elections page</a></li>
+        </ul>
       </div>
       {list.map(r => <RaceSection key={r.id} r={r} level={3} />)}
     </section>

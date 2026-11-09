@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { RaceSection, raceTitle, UnresolvedGroup } from '@/components/RaceSection'
+import { SourceLine } from '@/components/SourceLine'
 import { ballots, presidentialRace, race } from '@/lib/data'
 
 export const dynamicParams = false
@@ -38,6 +39,8 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
         {' · '}
         Every race on this ballot, with every candidate as INEC listed them.
       </p>
+      <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
+      <SourceLine id="inec-constituencies-workbook" what="Which Senate district and House constituency each LGA is in" />
       <nav aria-label="Races on this ballot" className="toc">
         <ul>
           <li><a href="#race-jan-2027-president">President</a></li>
