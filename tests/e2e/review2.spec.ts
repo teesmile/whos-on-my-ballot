@@ -42,7 +42,7 @@ test('a newer invalid code also wins over a slow earlier lookup', async ({ page 
   await expect(page.getByRole('status')).toContainText('isn’t a delimitation code')
 })
 
-for (const url of ['/', '/state/01/', '/ward/01-01-01/', '/ballot/adamawa/gombi-hong--adamawa-central-or-adamawa-north-or-adamawa-south/']) {
+for (const url of ['/', '/state/01/', '/ward/01-01-01/', '/ballot/adamawa/gombi-hong--adamawa-central-or-adamawa-north-or-adamawa-south/', '/c/jan-2027-president-ndc/', '/corrections/']) {
   test(`every visible link is at least 44 by 44 px at 360 px wide: ${url}`, async ({ page }) => {
     await page.setViewportSize({ width: 360, height: 760 })
     await page.goto(url)

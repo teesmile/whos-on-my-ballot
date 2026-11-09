@@ -12,6 +12,22 @@ import { ballotPath, slug, type StateSearchData } from './core'
 const DIR = path.join(process.cwd(), 'data', 'generated')
 const read = <T,>(rel: string): T => JSON.parse(fs.readFileSync(path.join(DIR, rel), 'utf8')) as T
 
+export interface BackgroundCitation {
+  url: string
+  publisher: string
+  title: string
+  published: string
+  quote: string
+  retrieved: string
+}
+
+export interface Background {
+  identity: BackgroundCitation | null
+  public_offices: { text: string, citations: BackgroundCitation[] }[]
+  party_history: { text: string, citations: BackgroundCitation[] }[]
+  researched: string
+}
+
 export interface Person {
   name: string
   age: number | null
@@ -20,6 +36,7 @@ export interface Person {
   pwd: string
   qualifications: string
   position: string
+  background: Background | null
 }
 
 export interface PrintingNote {
@@ -121,6 +138,17 @@ export const stateGeo = (code: string) => {
   if (!g) throw new Error(`unknown state ${code}`)
   return g
 }
+export const candidate = (id: string) => {
+  for (const r of races()) {
+    const c = r.candidates.find(x => x.id === id)
+    if (c) return { race: r, c }
+  }
+  throw new Error(`unknown candidate ${id}`)
+}
+export const allCandidates = () => races().flatMap(r => r.candidates.map(c => ({ race: r, c })))
+/** A ballot page that contains this race, for "see the full ballot" links: the first one in path order. */
+export const aBallotFor = (raceId: string) => ballots().filter(b => b.house.includes(raceId) || b.senate.includes(raceId) || raceId.includes('-president'))
+  .sort((a, b) => a.path.localeCompare(b.path))[0]
 export const presidentialRace = () => races().find(r => r.office === 'president')!
 
 export function wardBallotPath(state: StateGeo, ward: Ward): string {

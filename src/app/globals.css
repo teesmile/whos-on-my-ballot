@@ -101,3 +101,13 @@ main p > a { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
 .note .link-list a { padding: 0.6rem 0; }
 /* Room for the search form, which the script reveals (no layout shift). */
 .by-search { min-height: 22rem; }
+
+.share, .background { margin-top: 1.5rem; }
+.share-title { font-size: 1.15rem; }
+.share button { width: 100%; margin: 0.4rem 0; }
+.name a { text-decoration: none; display: inline-block; min-height: 44px; padding: 0.4rem 0; }
+.name a:hover, .name a:focus-visible { text-decoration: underline; }
+.entries { list-style: none; padding: 0; margin: 0.25rem 0 0.75rem; }
+.entries > li { border-left: 3px solid var(--line); padding-left: 0.75rem; margin-bottom: 0.5rem; }
+.entry { margin: 0.25rem 0 0; }
+.method { color: var(--muted); font-size: 0.9rem; }

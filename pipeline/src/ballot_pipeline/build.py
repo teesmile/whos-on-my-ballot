@@ -272,6 +272,28 @@ def build(log=print) -> BuildResult:
         if id(e) not in printing_used and not any(f"{e['source_id']} SN {e['sn']}" in x for x in errors):
             errors.append(f"printing_errors.yaml entry {e['source_id']} SN {e['sn']} matched no candidate row")
 
+    # ---- presidential background (D-013): all or none, validated in background.py
+    from .background import load as load_background
+
+    pres = next((r for r in races if r.office == "president"), None)
+    if pres:
+        people = {}
+        for c in pres.candidates:
+            if c.candidate.name:
+                people[(c.id, "candidate")] = c.candidate.name
+            if c.running_mate and c.running_mate.name:
+                people[(c.id, "running_mate")] = c.running_mate.name
+        backgrounds, bg_errors = load_background(people)
+        errors.extend(bg_errors)
+        if backgrounds and not bg_errors:
+            new_cands = []
+            for c in pres.candidates:
+                cand = c.candidate.model_copy(update={"background": backgrounds.get((c.id, "candidate"))})
+                mate = (c.running_mate.model_copy(update={"background": backgrounds.get((c.id, "running_mate"))})
+                        if c.running_mate else None)
+                new_cands.append(c.model_copy(update={"candidate": cand, "running_mate": mate}))
+            races = [r.model_copy(update={"candidates": new_cands}) if r.id == pres.id else r for r in races]
+
     # ---- placement notes, shown on the race (D-021)
     unit_by_code = {u.code: u for u in workbook}
     race_by_code = {r.workbook_code: r for r in races if r.workbook_code}

@@ -9,6 +9,10 @@ const PAGES = [
   '/ballot/abia/aba-north-aba-south--abia-south/#pu-01-01-01-001',
   '/ballot/lagos/surulere-i-or-surulere-ii--lagos-central/',
   '/ballot/adamawa/gombi-hong--adamawa-central-or-adamawa-north-or-adamawa-south/',
+  '/c/jan-2027-president-ndc/',
+  '/c/jan-2027-president-a/',
+  '/c/jan-2027-house-lagos-eti-osa-ndc/',
+  '/corrections/',
 ]
 
 for (const url of PAGES) {
@@ -52,4 +56,22 @@ test('keyboard: the code lookup works with the keyboard alone', async ({ page })
   await expect(page.getByRole('link', { name: /RAILWAY QUARTERS I/ })).toBeFocused()
   await page.keyboard.press('Enter')
   await expect(page).toHaveURL(/\/ballot\/abia\/.+#pu-01-01-01-001$/)
+})
+
+test('copy link button copies the page link, and is hidden without JavaScript', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write'])
+  await page.goto('/c/jan-2027-president-apc/')
+  await page.getByRole('button', { name: 'Copy link' }).click()
+  await expect(page.getByRole('button', { name: 'Link copied' })).toBeVisible()
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('https://ballot.anthonyugwuja.dev/c/jan-2027-president-apc/')
+})
+
+test.describe('candidate page without JavaScript', () => {
+  test.use({ javaScriptEnabled: false })
+  test('shows everything except the copy button', async ({ page }) => {
+    await page.goto('/c/jan-2027-president-apc/')
+    await expect(page.getByRole('heading', { name: 'Background' })).toBeVisible()
+    await expect(page.getByRole('link', { name: 'Email a correction' })).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Copy link' })).toBeHidden()
+  })
 })

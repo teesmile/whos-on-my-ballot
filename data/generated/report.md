@@ -86,6 +86,12 @@ Read from the composition text: 436; from the constituency name: 6; split LGAs (
 - Override FC/219/KG: INEC text "The entire Geographical Area of Kogi (Lokoja)/Kogi (K.K.) L.G.As" read as LOKOJA, KOGI . K. K.. Lokoja LGA and Kogi (Koton Karfe) LGA
 - Override FC/317/RV: INEC text "The entire Geographical Area of Ahoada West/Ogba Egbema LGAs" read as AHOADA WEST, OGBA/EGBEMA/NDONI. Ogba Egbema = Ogba/Egbema/Ndoni
 
+## Presidential background (D-013)
+- [x] **PASS** all or none: every named presidential candidate and running mate, or no one: 36 of 36
+- [x] **PASS** background appears in the presidential race only
+- [x] **PASS** no citation anywhere is Wikipedia or a wiki: 134 citations
+Researched 2026-11-09: 36 people, 26 office entries, 52 party entries, 134 citations. No independently sourced entry found for 16: RUFAI ADEKUNLE OMO-AJE, SHEHU HUSSAINI, ABBAS-BIN ALIYU, YUSUF KABIRU, OFORDILE PEACE EGOBIA, MUSTAPHA USMAN TURAKI, ADEBISI MOSES OLUSOJI, ABUBAKAR NAFISAT USAKU, OKEREKE SUNDAY CHIBUZO, KONTO HAJJA BINTU, CHUKWUEMEKA UCHENNA ANTHONY, OKEREKE NKEM ESTHER, SULAIMAN NASIR MUHAMMED, MOHAMMED SULE, KEY PATIENCE NDIDI, HASSAN KHALID.
+
 ## Provenance
 - [x] **PASS** every candidate and race cites a recorded source with a SHA-256
 - [x] **PASS** the polling-unit crawl is recorded with a manifest digest covering every cached response: 9651 files

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 from .paths import USER_AGENT
@@ -14,6 +15,8 @@ _last_request = 0.0
 
 def get(url: str, retries: int = 5, timeout: int = 120) -> bytes:
     global _last_request
+    # Percent-encode any non-ASCII characters (e.g. a typographic apostrophe in a news URL) without touching the rest.
+    url = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
     for attempt in range(retries):
         wait = MIN_INTERVAL_S - (time.monotonic() - _last_request)
         if wait > 0:

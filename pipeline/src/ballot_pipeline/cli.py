@@ -13,6 +13,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("crawl-pu", help="crawl INEC's polling-unit locator (polite, resumable)")
     sub.add_parser("build", help="extract, map, order and write data/generated/ (offline)")
     sub.add_parser("verify", help="build, then run every Phase 1 check; non-zero on any failure (offline)")
+    sub.add_parser("check-quotes", help="re-fetch every background citation and confirm its quote is on the page (network)")
     sub.add_parser("watch", help="re-read INEC index pages; exit 3 if any document list or hash changed")
     args = parser.parse_args(argv)
 
@@ -33,6 +34,24 @@ def main(argv: list[str] | None = None) -> int:
         from .verify import verify
 
         return verify(build())
+    elif args.cmd == "check-quotes":
+        import yaml
+
+        from .background import FILE
+        from .quotes import check
+
+        raw = yaml.safe_load(FILE.read_text()) if FILE.exists() else {}
+        pairs = []
+        for p in raw.get("people") or []:
+            cites = ([p["identity"]] if p.get("identity") else []) + [c for f in ("public_offices", "party_history")
+                                                                     for e in p.get(f) or [] for c in e["citations"]]
+            pairs += [(c["url"], c["quote"]) for c in cites]
+        results = check(pairs)
+        bad = {k: v for k, v in results.items() if v != "ok"}
+        for (url, quote), v in bad.items():
+            print(f"{v}: {url} :: {quote[:80]}")
+        print(f"{len(results) - len(bad)} of {len(results)} quotes found on their pages")
+        return 1 if bad else 0
     elif args.cmd == "watch":
         from .watch import watch
 

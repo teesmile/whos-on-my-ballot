@@ -200,6 +200,25 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
     for code, ov in aliases["composition_overrides"].items():
         c.note(f"- Override {code}: INEC text \"{ov['workbook_text']}\" read as {', '.join(ov['lgas'])}. {ov['reading']}")
 
+    c.note("\n## Presidential background (D-013)")
+    pres = [r for r in races if r.office == "president"][0]
+    persons = [p for cd in pres.candidates for p in (cd.candidate, cd.running_mate) if p and p.name]
+    with_bg = [p for p in persons if p.background is not None]
+    c.check(len(with_bg) in (0, len(persons)), "all or none: every named presidential candidate and running mate, or no one",
+            f"{len(with_bg)} of {len(persons)}")
+    others = [p for r in races if r.office != "president" for cd in r.candidates for p in (cd.candidate, cd.running_mate) if p]
+    c.check(all(p.background is None for p in others), "background appears in the presidential race only")
+    all_urls = [ci.url for p in with_bg for ci in ([p.background.identity] if p.background.identity else [])
+                + [ci for e in p.background.public_offices + p.background.party_history for ci in e.citations]]
+    c.check(not any("wikipedia" in u.lower() or "wiki" in u.lower().split("/")[2] for u in all_urls),
+            "no citation anywhere is Wikipedia or a wiki", f"{len(all_urls)} citations")
+    if with_bg:
+        thin = [p.name for p in with_bg if not (p.background.public_offices or p.background.party_history)]
+        c.note(f"Researched {with_bg[0].background.researched}: {len(with_bg)} people, "
+               f"{sum(len(p.background.public_offices) for p in with_bg)} office entries, "
+               f"{sum(len(p.background.party_history) for p in with_bg)} party entries, {len(all_urls)} citations. "
+               f"No independently sourced entry found for {len(thin)}: {', '.join(thin) or 'none'}.")
+
     c.note("\n## Provenance")
     ok = all(cd.provenance.source_id in by_id for cd in cands) and all(s in by_id for r in races for s in r.sources)
     c.check(ok, "every candidate and race cites a recorded source with a SHA-256")

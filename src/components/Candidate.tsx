@@ -1,15 +1,17 @@
 import type { Candidate as C, Person, PrintingNote, Source } from '@/lib/data'
 
+import { candidatePath } from '@/lib/site'
+
 import { SourceLine } from './SourceLine'
 
 export const NOT_PROVIDED = 'Not provided in INEC’s list'
 export const PRINTING_NOTE = 'As printed in INEC’s list; this appears to be an error.'
 
-function noteFor(notes: PrintingNote[], person: PrintingNote['person'], field: string) {
+export function noteFor(notes: PrintingNote[], person: PrintingNote['person'], field: string) {
   return notes.find(n => n.person === person && n.field === field)
 }
 
-function Value({ text, note }: { text: string, note?: PrintingNote }) {
+export function Value({ text, note }: { text: string, note?: PrintingNote }) {
   if (!text) return <>{NOT_PROVIDED}</>
   return (
     <>
@@ -29,7 +31,7 @@ function gender(g: Person['gender']): string {
 }
 
 /** The same fields, in the same order, for every person on every ballot (the working rules §1). */
-function PersonFields({ p, who, notes }: { p: Person, who: PrintingNote['person'], notes: PrintingNote[] }) {
+export function PersonFields({ p, who, notes }: { p: Person, who: PrintingNote['person'], notes: PrintingNote[] }) {
   return (
     <dl className="fields">
       <dt>Age</dt>
@@ -55,7 +57,7 @@ export function Candidate({ c, src, ticket, level }: { c: C, src: Source, ticket
         {' '}
         <span className="party-name">{c.party_name ?? NOT_PROVIDED}</span>
       </p>
-      <Name className="name">{c.candidate.name || NOT_PROVIDED}</Name>
+      <Name className="name"><a href={candidatePath(c.id)}>{c.candidate.name || NOT_PROVIDED}</a></Name>
       {ticket && <p className="position">{c.candidate.position}</p>}
       <PersonFields p={c.candidate} who="candidate" notes={c.printing_notes} />
       <dl className="fields">

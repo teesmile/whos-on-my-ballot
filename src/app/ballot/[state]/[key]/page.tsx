@@ -3,6 +3,9 @@ import type { Metadata } from 'next'
 import { RaceSection, raceTitle, UnresolvedGroup } from '@/components/RaceSection'
 import { SourceLine } from '@/components/SourceLine'
 import { ballots, presidentialRace, race } from '@/lib/data'
+import { cardPath, SITE_URL } from '@/lib/site'
+
+import { Share } from '@/components/Share'
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -18,7 +21,13 @@ async function ballotOf(params: Promise<{ state: string, key: string }>) {
 
 export async function generateMetadata({ params }: { params: Promise<{ state: string, key: string }> }): Promise<Metadata> {
   const b = await ballotOf(params)
-  return { title: `Ballot: ${b.house.map(id => race(id).name).join(' or ')}, ${b.state.name}` }
+  const title = `Ballot: ${b.house.map(id => race(id).name).join(' or ')}, ${b.state.name}`
+  return {
+    title,
+    description: 'Every race and every candidate on this ballot for 16 January 2027, as listed by INEC.',
+    openGraph: { title, url: `${SITE_URL}${b.path}`, images: [{ url: cardPath(b.house[0]), width: 1200, height: 630 }] },
+    twitter: { card: 'summary_large_image' },
+  }
 }
 
 export default async function BallotPage({ params }: { params: Promise<{ state: string, key: string }> }) {
@@ -50,6 +59,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
       <RaceSection r={presidentialRace()} />
       {senate.length === 1 ? <RaceSection r={senate[0]} /> : <UnresolvedGroup office="Senate" list={senate} />}
       {house.length === 1 ? <RaceSection r={house[0]} /> : <UnresolvedGroup office="House of Representatives" list={house} />}
+      <Share label="Share this ballot" text={`Every candidate on the ballot for ${house.map(r => r.name).join(' or ')}, ${b.state.name}, as listed by INEC:`} url={`${SITE_URL}${b.path}`} />
       <p><a href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
     </>
   )

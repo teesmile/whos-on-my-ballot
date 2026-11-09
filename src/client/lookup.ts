@@ -3,6 +3,7 @@
  *   [data-lookup="code"]    find a polling unit from the PVC delimitation code
  *   [data-lookup="search"]  find a polling unit by name or nearby landmark within one LGA
  *   [data-lookup="confirm"] on a ballot page, name the polling unit chosen (from the URL fragment)
+ *   [data-copy]             copy a page's link to the clipboard
  * Privacy (D-015): the only network request is GET /data/pu/<SS>.json, a fixed per-state file. What the visitor
  * types is matched in memory, never sent, never stored, and never put in a URL (fragments aren't sent to servers).
  */
@@ -161,4 +162,16 @@ for (const node of document.querySelectorAll<HTMLElement>('[data-lookup]')) {
   if (node.dataset.lookup === 'code') setupCode(node as HTMLFormElement)
   else if (node.dataset.lookup === 'search') setupSearch(node as HTMLFormElement)
   else if (node.dataset.lookup === 'confirm') void setupConfirm(node)
+}
+
+for (const button of document.querySelectorAll<HTMLButtonElement>('button[data-copy]')) {
+  if (!navigator.clipboard) continue
+  button.hidden = false
+  const label = button.textContent ?? 'Copy link'
+  button.addEventListener('click', () => {
+    navigator.clipboard.writeText(button.dataset.copy!).then(
+      () => { button.textContent = 'Link copied' },
+      () => { button.textContent = 'Couldn’t copy: copy it from the address bar' },
+    ).finally(() => setTimeout(() => { button.textContent = label }, 4000))
+  })
 }

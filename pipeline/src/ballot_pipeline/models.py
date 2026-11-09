@@ -17,6 +17,29 @@ class Provenance(Strict):
     sn: int = Field(ge=1)
 
 
+class Citation(Strict):
+    url: str = Field(pattern=r"^https://")
+    publisher: str = Field(min_length=2)
+    title: str = Field(min_length=2)
+    published: str  # YYYY-MM-DD, or "unknown" when the page gives no date
+    quote: str = Field(min_length=10, max_length=400)  # verbatim from the page, confirmed when researched
+    retrieved: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+
+
+class BackgroundEntry(Strict):
+    text: str = Field(min_length=3)
+    citations: list[Citation] = Field(min_length=1)
+
+
+class Background(Strict):
+    """Presidential race only (D-013): the same two fields for every candidate and running mate."""
+
+    identity: Citation | None  # ties this person to their 2027 ticket; None means no entries could be attributed
+    public_offices: list[BackgroundEntry]
+    party_history: list[BackgroundEntry]
+    researched: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+
+
 class Person(Strict):
     name: str  # verbatim from INEC; empty only when INEC printed none (e.g. a COURT ORDER row)
     age: int | None = Field(default=None, ge=25, le=100)  # None when INEC printed nothing or an impossible value
@@ -25,6 +48,7 @@ class Person(Strict):
     pwd: str  # verbatim ("None" means INEC recorded no disability)
     qualifications: str  # verbatim
     position: str = ""  # verbatim, ticket races only
+    background: Background | None = None  # presidential race only, all-or-none (D-013)
 
 
 class PrintingNote(Strict):
