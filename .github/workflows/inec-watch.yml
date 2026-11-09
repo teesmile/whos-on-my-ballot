@@ -1,0 +1,32 @@
+name: INEC watch
+# Daily check that INEC's published lists still match the hashes in data/generated/sources.json.
+# Opens an issue on any change. It never edits data or deploys.
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 07:00 WAT daily; raise to every 6 h from 2 Jan 2027
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Check INEC
+        id: watch
+        run: |
+          set +e
+          make watch
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+      - name: Open issue on change
+        if: steps.watch.outputs.code == '3'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "INEC sources changed ($(date -u +%F))" --body-file pipeline/watch-summary.md --label inec-watch || gh issue create --title "INEC sources changed ($(date -u +%F))" --body-file pipeline/watch-summary.md
+      - name: Fail on watcher error
+        if: steps.watch.outputs.code != '0' && steps.watch.outputs.code != '3'
+        run: exit 1

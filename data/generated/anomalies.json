@@ -1,0 +1,20 @@
+[
+ {
+  "source_id": "house-oyo",
+  "page": 13,
+  "sn": 140,
+  "party": "PDP",
+  "name": "ADEBAYO MOBOLUJI ADEDOTUN",
+  "anomalies": [
+   "age printed as '947'"
+  ]
+ },
+ {
+  "source_id": "inec-pu-locator",
+  "ward": "07/07/09",
+  "name": "MBAIKYAAN",
+  "anomalies": [
+   "duplicate ward code with no polling units; dropped"
+  ]
+ }
+]

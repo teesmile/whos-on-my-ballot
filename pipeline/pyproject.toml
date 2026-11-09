@@ -1,0 +1,27 @@
+[project]
+name = "ballot-pipeline"
+version = "0.1.0"
+description = "Turns INEC's official 2027 candidate lists and polling-unit geography into validated data with provenance."
+requires-python = ">=3.12"
+dependencies = [
+  "pdfplumber==0.11.4",
+  "pydantic==2.9.2",
+  "pyyaml==6.0.2",
+  "xlrd==2.0.1",
+]
+
+[dependency-groups]
+dev = ["pytest==8.3.3"]
+
+[project.scripts]
+ballot-pipeline = "ballot_pipeline.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ballot_pipeline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

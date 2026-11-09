@@ -1,0 +1,12 @@
+# Downloaded INEC files: untrusted, re-fetchable, hashed in data/generated/sources.json
+pipeline/raw/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+node_modules/
+.next/
+out/
+.vercel/
+.env*
+watch-summary.md

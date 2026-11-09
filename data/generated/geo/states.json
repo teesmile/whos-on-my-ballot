@@ -1,0 +1,150 @@
+[
+ {
+  "code": "01",
+  "name": "ABIA"
+ },
+ {
+  "code": "02",
+  "name": "ADAMAWA"
+ },
+ {
+  "code": "03",
+  "name": "AKWA IBOM"
+ },
+ {
+  "code": "04",
+  "name": "ANAMBRA"
+ },
+ {
+  "code": "05",
+  "name": "BAUCHI"
+ },
+ {
+  "code": "06",
+  "name": "BAYELSA"
+ },
+ {
+  "code": "07",
+  "name": "BENUE"
+ },
+ {
+  "code": "08",
+  "name": "BORNO"
+ },
+ {
+  "code": "09",
+  "name": "CROSS RIVER"
+ },
+ {
+  "code": "10",
+  "name": "DELTA"
+ },
+ {
+  "code": "11",
+  "name": "EBONYI"
+ },
+ {
+  "code": "12",
+  "name": "EDO"
+ },
+ {
+  "code": "13",
+  "name": "EKITI"
+ },
+ {
+  "code": "14",
+  "name": "ENUGU"
+ },
+ {
+  "code": "15",
+  "name": "GOMBE"
+ },
+ {
+  "code": "16",
+  "name": "IMO"
+ },
+ {
+  "code": "17",
+  "name": "JIGAWA"
+ },
+ {
+  "code": "18",
+  "name": "KADUNA"
+ },
+ {
+  "code": "19",
+  "name": "KANO"
+ },
+ {
+  "code": "20",
+  "name": "KATSINA"
+ },
+ {
+  "code": "21",
+  "name": "KEBBI"
+ },
+ {
+  "code": "22",
+  "name": "KOGI"
+ },
+ {
+  "code": "23",
+  "name": "KWARA"
+ },
+ {
+  "code": "24",
+  "name": "LAGOS"
+ },
+ {
+  "code": "25",
+  "name": "NASARAWA"
+ },
+ {
+  "code": "26",
+  "name": "NIGER"
+ },
+ {
+  "code": "27",
+  "name": "OGUN"
+ },
+ {
+  "code": "28",
+  "name": "ONDO"
+ },
+ {
+  "code": "29",
+  "name": "OSUN"
+ },
+ {
+  "code": "30",
+  "name": "OYO"
+ },
+ {
+  "code": "31",
+  "name": "PLATEAU"
+ },
+ {
+  "code": "32",
+  "name": "RIVERS"
+ },
+ {
+  "code": "33",
+  "name": "SOKOTO"
+ },
+ {
+  "code": "34",
+  "name": "TARABA"
+ },
+ {
+  "code": "35",
+  "name": "YOBE"
+ },
+ {
+  "code": "36",
+  "name": "ZAMFARA"
+ },
+ {
+  "code": "37",
+  "name": "FCT"
+ }
+]

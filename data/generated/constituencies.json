@@ -1,0 +1,8589 @@
+[
+ {
+  "code": "SD/001/AB",
+  "kind": "SD",
+  "state": "ABIA",
+  "name": "ABIA NORTH",
+  "composition": "UMUNNEOCHI, ISUKWUATO, OHAFIA, AROCHUKWU, BENDE",
+  "lgas": [
+   "UMU - NNEOCHI",
+   "ISUIKWUATO",
+   "OHAFIA",
+   "AROCHUKWU",
+   "BENDE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 5
+  }
+ },
+ {
+  "code": "SD/002/AB",
+  "kind": "SD",
+  "state": "ABIA",
+  "name": "ABIA CENTRAL",
+  "composition": "UMUAHIA NORTH, UMUAHIA SOUTH, IKWUANO, ISIALA NGWA NORTH, ISIALA NGWA SOUTH,",
+  "lgas": [
+   "UMUAHIA NORTH",
+   "UMUAHIA SOUTH",
+   "IKWUANO",
+   "ISIALA NGWA NORTH",
+   "ISIALA NGWA SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 6
+  }
+ },
+ {
+  "code": "SD/003/AB",
+  "kind": "SD",
+  "state": "ABIA",
+  "name": "ABIA SOUTH",
+  "composition": "ABA NORTH, ABA SOUTH, UGWUNAGBO, OBINGWA, UKWA EAST, UKWA WEST & OSISIOMA",
+  "lgas": [
+   "ABA NORTH",
+   "ABA SOUTH",
+   "UGWUNAGBO",
+   "OBINGWA",
+   "UKWA EAST",
+   "UKWA WEST",
+   "OSISIOMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 7
+  }
+ },
+ {
+  "code": "SD/007/AK",
+  "kind": "SD",
+  "state": "AKWA IBOM",
+  "name": "AKWA IBOM NORTH EAST",
+  "composition": "ETINAN, IBESIKPO ASUTAN, IBIONO IBOM, ITU, NSIT ATAI, NSIT IBOM, NSIT UBIUM, URUAN, UYO",
+  "lgas": [
+   "ETINAN",
+   "IBESIKPO ASUTAN",
+   "IBIONO IBOM",
+   "ITU",
+   "NSIT ATAI",
+   "NSIT IBOM",
+   "NSIT UBIUM",
+   "URUAN",
+   "UYO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 11
+  }
+ },
+ {
+  "code": "SD/008/AK",
+  "kind": "SD",
+  "state": "AKWA IBOM",
+  "name": "AKWA IBOM NORTH WEST",
+  "composition": "ABAK, ESSIEN UDIM, ETIM EKPO, IKA, IKONO, IKOT EKPENE, INI, OBOT AKARA, ORUK ANAM, UKANAFUN",
+  "lgas": [
+   "ABAK",
+   "ESSIEN UDIM",
+   "ETIM EKPO",
+   "IKA",
+   "IKONO",
+   "IKOT EKPENE",
+   "INI",
+   "OBOT AKARA",
+   "ORUK ANAM",
+   "UKANAFUN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 12
+  }
+ },
+ {
+  "code": "SD/009/AK",
+  "kind": "SD",
+  "state": "AKWA IBOM",
+  "name": "AKWA IBOM SOUTH",
+  "composition": "EASTERN OBOLO, EKET, ESIT EKET, IBENO, IKOT ABASI, MBO, MKPAT ENIN, OKOBO, ONNA, ORON, UDUNG UKO,URUE OFFONG/ORUKO",
+  "lgas": [
+   "EASTERN OBOLO",
+   "EKET",
+   "ESIT EKET (UQUO)",
+   "IBENO",
+   "IKOT ABASI",
+   "MBO",
+   "MKPAT ENIN",
+   "OKOBO",
+   "ONNA",
+   "ORON",
+   "UDUNG UKO",
+   "URUE OFFONG/ORUKO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 13
+  }
+ },
+ {
+  "code": "SD/004/AD",
+  "kind": "SD",
+  "state": "ADAMAWA",
+  "name": "ADAMAWA NORTH",
+  "composition": "MADAGALI, MAIHA, MICHIKA, MUBI NORTH, MUBI SOUTH",
+  "lgas": [
+   "MADAGALI",
+   "MAIHA",
+   "MICHIKA",
+   "MUBI NORTH",
+   "MUBI SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 17
+  }
+ },
+ {
+  "code": "SD/005/AD",
+  "kind": "SD",
+  "state": "ADAMAWA",
+  "name": "ADAMAWA SOUTH",
+  "composition": "DEMSA, GANYE, GUYUK, JADA, MAYO-BELWA, NUMAN, SHELLENG, TOUNGO, LAMURDE",
+  "lgas": [
+   "DEMSA",
+   "GANYE",
+   "GUYUK",
+   "JADA",
+   "MAYO - BELWA",
+   "NUMAN",
+   "SHELLENG",
+   "TOUNGO",
+   "LAMURDE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 18
+  }
+ },
+ {
+  "code": "SD/006/AD",
+  "kind": "SD",
+  "state": "ADAMAWA",
+  "name": "ADAMAWA CENTRAL",
+  "composition": "HONG, FUFORE, SONG, YOLA NORTH, YOLA SOUTH, GERFI",
+  "lgas": [
+   "HONG",
+   "FUFORE",
+   "SONG",
+   "YOLA NORTH",
+   "YOLA SOUTH",
+   "GIREI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 19
+  }
+ },
+ {
+  "code": "SD/010/AN",
+  "kind": "SD",
+  "state": "ANAMBRA",
+  "name": "ANAMBRA NORTH",
+  "composition": "ONITSHA NORTH, ONITSHA SOUTH, OYI, OGBARU, ANAMBRA EAST, ANAMBRA WEST, AYAMELUM",
+  "lgas": [
+   "ONITSHA-NORTH",
+   "ONITSHA -SOUTH",
+   "OYI",
+   "OGBARU",
+   "ANAMBRA EAST",
+   "ANAMBRA WEST",
+   "AYAMELUM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 25
+  }
+ },
+ {
+  "code": "SD/011/AN",
+  "kind": "SD",
+  "state": "ANAMBRA",
+  "name": "ANAMBRA CENTRAL",
+  "composition": "AWKA NORTH, AWKA SOUTH, NJIKOKA, ANAOCHA, IDEMILI NORTH, IDEMILI SOUTH, DUNUKOFIA",
+  "lgas": [
+   "AWKA NORTH",
+   "AWKA SOUTH",
+   "NJIKOKA",
+   "ANAOCHA",
+   "IDEMILI NORTH",
+   "IDEMILI-SOUTH",
+   "DUNUKOFIA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 26
+  }
+ },
+ {
+  "code": "SD/012/AN",
+  "kind": "SD",
+  "state": "ANAMBRA",
+  "name": "ANAMBRA SOUTH",
+  "composition": "IHIALA, NNEWI NORTH, NNEWI SOUTH, ORUMBA SOUTH, ORUMBA NORTH, AGUATA, EKWUSIGO",
+  "lgas": [
+   "IHIALA",
+   "NNEWI NORTH",
+   "NNEWI SOUTH",
+   "ORUMBA SOUTH",
+   "ORUMBA NORTH",
+   "AGUATA",
+   "EKWUSIGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 27
+  }
+ },
+ {
+  "code": "SD/013/BA",
+  "kind": "SD",
+  "state": "BAUCHI",
+  "name": "BAUCHI SOUTH",
+  "composition": "ALKALERI, KIRFI, BAUCHI, TAFAWA BALEWA, BOGORO, DASS, TORO",
+  "lgas": [
+   "ALKALERI",
+   "KIRFI",
+   "BAUCHI",
+   "TAFAWA BALEWA",
+   "BOGORO",
+   "DASS",
+   "TORO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 31
+  }
+ },
+ {
+  "code": "SD/014/BA",
+  "kind": "SD",
+  "state": "BAUCHI",
+  "name": "BAUCHI CENTRAL",
+  "composition": "NINGI, WARJI, DARAZO, GANJUWA, MISAU, DAMBAN",
+  "lgas": [
+   "NINGI",
+   "WARJI",
+   "DARAZO",
+   "GANJUWA",
+   "MISAU",
+   "DAMBAM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 32
+  }
+ },
+ {
+  "code": "SD/015/BA",
+  "kind": "SD",
+  "state": "BAUCHI",
+  "name": "BAUCHI NORTH",
+  "composition": "ZAKI, GAMAWA, JAMA’ARE, ITAS-GADAU, SHIRA, GIADE, KATAGUM",
+  "lgas": [
+   "ZAKI",
+   "GAMAWA",
+   "JAMA'ARE",
+   "ITAS/GADAU",
+   "SHIRA",
+   "GIADE",
+   "KATAGUM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 33
+  }
+ },
+ {
+  "code": "SD/016/BY",
+  "kind": "SD",
+  "state": "BAYELSA",
+  "name": "BAYELSA EAST",
+  "composition": "BRASS, NEMBE, OGBIA",
+  "lgas": [
+   "BRASS",
+   "NEMBE",
+   "OGBIA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 38
+  }
+ },
+ {
+  "code": "SD/017/BY",
+  "kind": "SD",
+  "state": "BAYELSA",
+  "name": "BAYELSA CENTRAL",
+  "composition": "KOLOKUMA/OPOKUMA, SOUTHERN IJAW, YENAGOA",
+  "lgas": [
+   "KOLOKUMA/OPOKUMA",
+   "SOUTHERN IJAW",
+   "YENAGOA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 39
+  }
+ },
+ {
+  "code": "SD/018/BY",
+  "kind": "SD",
+  "state": "BAYELSA",
+  "name": "BAYELSA WEST",
+  "composition": "EKEREMOR, SAGBAMA",
+  "lgas": [
+   "EKEREMOR",
+   "SAGBAMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 40
+  }
+ },
+ {
+  "code": "SD/019/BN",
+  "kind": "SD",
+  "state": "BENUE",
+  "name": "BENUE NORTH EAST",
+  "composition": "KATSINA-ALA, KONSHISHA, KWANDE, LOGO, UKUM, USHONGO, VANDEIKYA",
+  "lgas": [
+   "KATSINA-ALA",
+   "KONSHISHA",
+   "KWANDE",
+   "LOGO",
+   "UKUM",
+   "USHONGO",
+   "VANDEIKYA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 48
+  }
+ },
+ {
+  "code": "SD/020/BN",
+  "kind": "SD",
+  "state": "BENUE",
+  "name": "BENUE NORTH WEST",
+  "composition": "BURUKU, GBOKO, GUMA, GWER-EAST, GWER-WEST, MARKURDI, TARKA",
+  "lgas": [
+   "BURUKU",
+   "GBOKO",
+   "GUMA",
+   "GWER EAST",
+   "GWER WEST",
+   "MAKURDI",
+   "TARKA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 49
+  }
+ },
+ {
+  "code": "SD/021/BN",
+  "kind": "SD",
+  "state": "BENUE",
+  "name": "BENUE SOUTH",
+  "composition": "ADO, AGATU, APA, OBI, OGBADIBO, OHIMINI, OJU,OKPOKWU, OTUKPO",
+  "lgas": [
+   "ADO",
+   "AGATU",
+   "APA",
+   "OBI",
+   "OGBADIBO",
+   "OHIMINI",
+   "OJU",
+   "OKPOKWU",
+   "OTUKPO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 50
+  }
+ },
+ {
+  "code": "SD/022/BO",
+  "kind": "SD",
+  "state": "BORNO",
+  "name": "BORNO NORTH",
+  "composition": "ABADAM, GUBIO, GUZAMALA, KUKAWA, MAGUMERI, MARTE, MOBBAR, NGANZA, MOGUNO",
+  "lgas": [
+   "ABADAM",
+   "GUBIO",
+   "GUZAMALA",
+   "KUKAWA",
+   "MAGUMERI",
+   "MARTE",
+   "MOBBAR",
+   "NGANZAI",
+   "MONGUNO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 55
+  }
+ },
+ {
+  "code": "SD/023/BO",
+  "kind": "SD",
+  "state": "BORNO",
+  "name": "BORNO CENTRAL",
+  "composition": "DIKWA, JERE, KALA BALGE, MAFA, METROPOLITAN, NGALA, KONDUGA, BAMA, KAGA",
+  "lgas": [
+   "DIKWA",
+   "JERE",
+   "KALA BALGE",
+   "MAFA",
+   "MAIDUGURI M. C.",
+   "NGALA",
+   "KONDUGA",
+   "BAMA",
+   "KAGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 56
+  }
+ },
+ {
+  "code": "SD/024/BO",
+  "kind": "SD",
+  "state": "BORNO",
+  "name": "BORNO SOUTH",
+  "composition": "ASKIRA/UBA, BAYO, BIU, CHIBOK, DAMABOA, GWOZA, HAWUL, KWAYA, SHANI",
+  "lgas": [
+   "ASKIRA / UBA",
+   "BAYO",
+   "BIU",
+   "CHIBOK",
+   "DAMBOA",
+   "GWOZA",
+   "HAWUL",
+   "KWAYA / KUSAR",
+   "SHANI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 57
+  }
+ },
+ {
+  "code": "SD/025/CR",
+  "kind": "SD",
+  "state": "CROSS RIVER",
+  "name": "CROSS RIVER NORTH",
+  "composition": "BEKWARRA, OBANLIKU, OBUDU, OGOJA, YALA, BIASE",
+  "lgas": [
+   "BEKWARRA",
+   "OBANLIKU",
+   "OBUDU",
+   "OGOJA",
+   "YALA",
+   "BIASE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 61
+  }
+ },
+ {
+  "code": "SD/026/CR",
+  "kind": "SD",
+  "state": "CROSS RIVER",
+  "name": "CROSS RIVER CENTRAL",
+  "composition": "ABI, BOKI, ETUNG, IKOM, OBUBRA, YAKURR",
+  "lgas": [
+   "ABI",
+   "BOKI",
+   "ETUNG",
+   "IKOM",
+   "OBUBRA",
+   "YAKURR"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 62
+  }
+ },
+ {
+  "code": "SD/027/CR",
+  "kind": "SD",
+  "state": "CROSS RIVER",
+  "name": "CROSS RIVER SOUTH",
+  "composition": "CALABAR MUNICIPAL, CALABAR SOUTH, AKAMKPA, AKPABUYO, BAKASSI, ODUKPANI",
+  "lgas": [
+   "CALABAR MUNICIPALITY",
+   "CALABAR SOUTH",
+   "AKAMKPA",
+   "AKPABUYO",
+   "BAKASSI",
+   "ODUKPANI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 63
+  }
+ },
+ {
+  "code": "SD/028/DT",
+  "kind": "SD",
+  "state": "DELTA",
+  "name": "DELTA CENTRAL",
+  "composition": "ETHIOPE EAST, ETHIOPE WEST, OKPE, SAPELE,UDU, UGHELLI NORTH, UGHELI SOUTH, UVWIE",
+  "lgas": [
+   "ETHIOPE EAST",
+   "ETHIOPE WEST",
+   "OKPE",
+   "SAPELE",
+   "UDU",
+   "UGHELLI NORTH",
+   "UGHELLI SOUTH",
+   "UVWIE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 68
+  }
+ },
+ {
+  "code": "SD/029/DT",
+  "kind": "SD",
+  "state": "DELTA",
+  "name": "DELTA NORTH",
+  "composition": "ANIOCHA NORTH, ANIOCHA SOUTH, IKA NORTH-EAST, IKA SOUTH, NDOKWA EAST, NDOKWA WEST, OSHIMILI NORTH, OSHIMILI SOUTH, UKWUANI",
+  "lgas": [
+   "ANIOCHA NORTH",
+   "ANIOCHA - SOUTH",
+   "IKA NORTH- EAST",
+   "IKA - SOUTH",
+   "NDOKWA EAST",
+   "NDOKWA WEST",
+   "OSHIMILI - NORTH",
+   "OSHIMILI - SOUTH",
+   "UKWUANI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 69
+  }
+ },
+ {
+  "code": "SD/030/DT",
+  "kind": "SD",
+  "state": "DELTA",
+  "name": "DELTA SOUTH",
+  "composition": "BOMADI, BURUTU, ISOKO NORTH, ISOKO SOUTH, PATANI, WARRI NORTH, WARRI SOUTH, WARRI SOUTH WEST",
+  "lgas": [
+   "BOMADI",
+   "BURUTU",
+   "ISOKO NORTH",
+   "ISOKO SOUTH",
+   "PATANI",
+   "WARRI NORTH",
+   "WARRI SOUTH",
+   "WARRI SOUTH WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 70
+  }
+ },
+ {
+  "code": "SD/031/EB",
+  "kind": "SD",
+  "state": "EBONYI",
+  "name": "EBONYI NORTH",
+  "composition": "ABAKALIKI, EBONYI, IZZI, OHAUKWU",
+  "lgas": [
+   "ABAKALIKI",
+   "EBONYI",
+   "IZZI",
+   "OHAUKWU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 73
+  }
+ },
+ {
+  "code": "SD/032/EB",
+  "kind": "SD",
+  "state": "EBONYI",
+  "name": "EBONYI CENTRAL",
+  "composition": "EZZA NORTH, EZZA SOUTH, IKWO, ISHIELU",
+  "lgas": [
+   "EZZA NORTH",
+   "EZZA SOUTH",
+   "IKWO",
+   "ISHIELU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 74
+  }
+ },
+ {
+  "code": "SD/033/EB",
+  "kind": "SD",
+  "state": "EBONYI",
+  "name": "EBONYI SOUTH",
+  "composition": "AFIKPO NORTH, AFIKPO SOUTH, IVO, OHAOZARA, ONICHA",
+  "lgas": [
+   "AFIKPO",
+   "EDDA",
+   "IVO",
+   "OHAOZARA",
+   "ONICHA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 75
+  }
+ },
+ {
+  "code": "SD/034/ED",
+  "kind": "SD",
+  "state": "EDO",
+  "name": "EDO CENTRAL",
+  "composition": "ESAN CENTRAL, ESAN NORTH EAST, ESAN SOUTH EAST, ESAN WEST, IGUEBEN",
+  "lgas": [
+   "ESAN CENTRAL",
+   "ESAN NORTH EAST",
+   "ESAN SOUTH EAST",
+   "ESAN WEST",
+   "IGUEBEN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 78
+  }
+ },
+ {
+  "code": "SD/035/ED",
+  "kind": "SD",
+  "state": "EDO",
+  "name": "EDO NORTH",
+  "composition": "AKOKO EDO, ETSAKO EAST, ETSAKO CENTRAL, ETSAKO WEST, OWAN EAST, OWAN WEST",
+  "lgas": [
+   "AKOKO EDO",
+   "ETSAKO EAST",
+   "ETSAKO CENTRAL",
+   "ETSAKO WEST",
+   "OWAN EAST",
+   "OWAN WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 79
+  }
+ },
+ {
+  "code": "SD/036/ED",
+  "kind": "SD",
+  "state": "EDO",
+  "name": "EDO SOUTH",
+  "composition": "OREDO, ORHIONMWON, OVIA NORTH EAST, OVIA SOUTH WEST, EGOR, UHUNMWODE, IKPOBA OKHA",
+  "lgas": [
+   "OREDO",
+   "ORHIONMWON",
+   "OVIA NORTH EAST",
+   "OVIA SOUTH WEST",
+   "EGOR",
+   "UHUNMWODE",
+   "IKPOBA/OKHA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 80
+  }
+ },
+ {
+  "code": "SD/037/EK",
+  "kind": "SD",
+  "state": "EKITI",
+  "name": "EKITI NORTH",
+  "composition": "IKOLE, OYE, IDO/OSI, MOBA, ILEJEMEJE",
+  "lgas": [
+   "IKOLE",
+   "OYE",
+   "IDO / OSI",
+   "MOBA",
+   "ILEJEMEJE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 84
+  }
+ },
+ {
+  "code": "SD/038/EK",
+  "kind": "SD",
+  "state": "EKITI",
+  "name": "EKITI CENTRAL",
+  "composition": "ADO EKITI, IREPODUN/IFELODUN, IJERO, EFON, EKITI WEST",
+  "lgas": [
+   "ADO EKITI",
+   "IREPODUN / IFELODUN",
+   "IJERO",
+   "EFON",
+   "EKITI WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 85
+  }
+ },
+ {
+  "code": "SD/039/EK",
+  "kind": "SD",
+  "state": "EKITI",
+  "name": "EKITI SOUTH",
+  "composition": "EKITI SOUTH WEST, IKERE, EMURE, ISE/ORUN, GBONYIN, EKITI EAST",
+  "lgas": [
+   "EKITI SOUTH WEST",
+   "IKERE",
+   "EMURE",
+   "ISE / ORUN",
+   "AIYEKIRE",
+   "EKITI EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 86
+  }
+ },
+ {
+  "code": "SD/040/EN",
+  "kind": "SD",
+  "state": "ENUGU",
+  "name": "ENUGU EAST",
+  "composition": "ENUGU EAST, ENUGU NORTH, ENUGU SOUTH, ISI-UZO, NKANU EAST, NKANU WEST",
+  "lgas": [
+   "ENUGU EAST",
+   "ENUGU NORTH",
+   "ENUGU SOUTH",
+   "ISI UZO",
+   "NKANU EAST",
+   "NKANU WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 91
+  }
+ },
+ {
+  "code": "SD/041/EN",
+  "kind": "SD",
+  "state": "ENUGU",
+  "name": "ENUGU WEST",
+  "composition": "ANINIRI, AWGU, EZEAGU, OJI RIVER, UDI",
+  "lgas": [
+   "ANINRI",
+   "AWGU",
+   "EZEAGU",
+   "OJI-RIVER",
+   "UDI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 92
+  }
+ },
+ {
+  "code": "SD/042/EN",
+  "kind": "SD",
+  "state": "ENUGU",
+  "name": "ENUGU NORTH",
+  "composition": "IGBO-ETITI, IGBO-EZE NORTH, IGO-EZE SOUTH, UZO UWANI, UDENU, NSUKKA",
+  "lgas": [
+   "IGBO ETITI",
+   "IGBO EZE NORTH",
+   "IGBO EZE SOUTH",
+   "UZO-UWANI",
+   "UDENU",
+   "NSUKKA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 93
+  }
+ },
+ {
+  "code": "SD/043/GM",
+  "kind": "SD",
+  "state": "GOMBE",
+  "name": "GOMBE CENTRAL",
+  "composition": "AKKO, YAMALTU/DEBA",
+  "lgas": [
+   "AKKO",
+   "YALMALTU/ DEBA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 98
+  }
+ },
+ {
+  "code": "SD/044/GM",
+  "kind": "SD",
+  "state": "GOMBE",
+  "name": "GOMBE SOUTH",
+  "composition": "BALANGA, BILLIRI, KALTUNGO, SHONGOM",
+  "lgas": [
+   "BALANGA",
+   "BILLIRI",
+   "KALTUNGO",
+   "SHONGOM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 99
+  }
+ },
+ {
+  "code": "SD/045/GM",
+  "kind": "SD",
+  "state": "GOMBE",
+  "name": "GOMBE NORTH",
+  "composition": "FUNAKAYE, NAFADA, GOMBE, KWAMI,DUKKU",
+  "lgas": [
+   "FUNAKAYE",
+   "NAFADA",
+   "GOMBE",
+   "KWAMI",
+   "DUKKU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 100
+  }
+ },
+ {
+  "code": "SD/046/IM",
+  "kind": "SD",
+  "state": "IMO",
+  "name": "IMO EAST",
+  "composition": "ABOH MBAISE, AHIAZU MBAISE, EZINIHITTE, IKEDURU, MBAITOLI, NGOR OKPALA, OWERRI MUNICIPAL, OWERRI NORTH, OWERRI WEST",
+  "lgas": [
+   "ABOH MBAISE",
+   "AHIAZU MBAISE",
+   "EZINIHITTE MBAISE",
+   "IKEDURU",
+   "MBAITOLI",
+   "NGOR OKPALA",
+   "OWERRI MUNICIPAL",
+   "OWERRI NORTH",
+   "OWERRI WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 110
+  }
+ },
+ {
+  "code": "SD/047/IM",
+  "kind": "SD",
+  "state": "IMO",
+  "name": "IMO WEST",
+  "composition": "IDEATO NORTH, IDEATO SOUTH, ISU, NJABA, NKWERE, NWANGELE, OGUTA, OHAJI/EGBEMA, ORLU, ORSU, ORU WEST, ORU EAST",
+  "lgas": [
+   "IDEATO NORTH",
+   "IDEATO SOUTH",
+   "ISU",
+   "NJABA",
+   "NKWERRE",
+   "NWANGELE",
+   "OGUTA",
+   "OHAJI EGBEMA",
+   "ORLU",
+   "ORSU",
+   "ORU WEST",
+   "ORU EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 111
+  }
+ },
+ {
+  "code": "SD/048/IM",
+  "kind": "SD",
+  "state": "IMO",
+  "name": "IMO NORTH",
+  "composition": "EHIME MBANO, IHITE/UBOMA, ISIALA MBANO, OBOWO, OKIGWE, ONUIMO",
+  "lgas": [
+   "EHIME MBANO",
+   "IHITTE UBOMA",
+   "ISIALA MBANO",
+   "OBOWO",
+   "OKIGWE",
+   "ONUIMO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 112
+  }
+ },
+ {
+  "code": "SD/049/JG",
+  "kind": "SD",
+  "state": "JIGAWA",
+  "name": "JIGAWA SOUTH – WEST",
+  "composition": "BIRNIN KUDU, BUJI, DUTSE, GWARAM, KIYAWA, JAUN, MIGA",
+  "lgas": [
+   "BIRNIN KUDU",
+   "BUJI",
+   "DUTSE",
+   "GWARAM",
+   "KIYAWA",
+   "JAHUN",
+   "MIGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 117
+  }
+ },
+ {
+  "code": "SD/050/JG",
+  "kind": "SD",
+  "state": "JIGAWA",
+  "name": "JIGAWA NORTH – EAST",
+  "composition": "AUYO, BIRNIWA, GURI, HADEJIA, KAUGAMA, K/HAUSA, K/KASAMMA, M/MADORI",
+  "lgas": [
+   "AUYO",
+   "BIRNIWA",
+   "GURI",
+   "HADEJIA",
+   "KAUGAMA",
+   "KAFIN HAUSA",
+   "KIRIKA SAMMA",
+   "MALAM MADORI"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 118
+  }
+ },
+ {
+  "code": "SD/051/JG",
+  "kind": "SD",
+  "state": "JIGAWA",
+  "name": "JIGAWA NORTH - WEST",
+  "composition": "BABURA, GAGARA, GARKI, GWIWA, KAZAURE, MAIGATAR, RONI, RINGIN, S/TANKAR, TAURA, YANKWASHI, GUME",
+  "lgas": [
+   "BABURA",
+   "GAGARAWA",
+   "GARKI",
+   "GWIWA",
+   "KAZAURE",
+   "MAIGATARI",
+   "RONI",
+   "RINGIM",
+   "SULE-TANKARKAR",
+   "TAURA",
+   "YANKWASHI",
+   "GUMEL"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 119
+  }
+ },
+ {
+  "code": "SD/052/KD",
+  "kind": "SD",
+  "state": "KADUNA",
+  "name": "KADUNA NORTH",
+  "composition": "KUBAU, IKARA, MAKARFI, SOBA, SABON GARI, ZARIA, LERE, KUDAN",
+  "lgas": [
+   "KUBAU",
+   "IKARA",
+   "MAKARFI",
+   "SOBA",
+   "SABON GARI",
+   "ZARIA",
+   "LERE",
+   "KUDAN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 127
+  }
+ },
+ {
+  "code": "SD/053/KD",
+  "kind": "SD",
+  "state": "KADUNA",
+  "name": "KADUNA CENTRAL",
+  "composition": "BIRNIN GWARI, GIWA, IGABI, KADUNA NORTH, KADUNA SOUTH, CHIKUN, KAJURU",
+  "lgas": [
+   "BIRNIN GWARI",
+   "GIWA",
+   "IGABI",
+   "KADUNA NORTH",
+   "KADUNA SOUTH",
+   "CHIKUN",
+   "KAJURU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 128
+  }
+ },
+ {
+  "code": "SD/054/KD",
+  "kind": "SD",
+  "state": "KADUNA",
+  "name": "KADUNA SOUTH",
+  "composition": "JEMA’A, JABA, KAURA, ZANGON, KAURA, KACHIA, KAGARKO, SANGA",
+  "lgas": [
+   "JEMA'A",
+   "JABA",
+   "KAURA",
+   "ZANGON KATAF",
+   "KAURU",
+   "KACHIA",
+   "KAGARKO",
+   "SANGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 129
+  }
+ },
+ {
+  "code": "SD/055/KN",
+  "kind": "SD",
+  "state": "KANO",
+  "name": "KANO CENTRAL",
+  "composition": "DALA, GWALE, DAWAKIN, GEZAWA, TARAUNI, FAGGE, GARUM MALLAM, KANO MUNICIPAL, KUMBOTSO, KURA, MADOBI, MINJIBIR, NASSARAWA, UNGOGO, WARAWA",
+  "lgas": [
+   "DALA",
+   "GWALE",
+   "DAWAKI KUDU",
+   "GEZAWA",
+   "TARAUNI",
+   "FAGGE",
+   "GARUN MALAM",
+   "KANO MUNICIPAL",
+   "KUMBOTSO",
+   "KURA",
+   "MADOBI",
+   "MINJIBIR",
+   "NASARAWA",
+   "UNGOGO",
+   "WARAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 135
+  }
+ },
+ {
+  "code": "SD/056/KN",
+  "kind": "SD",
+  "state": "KANO",
+  "name": "KANO NORTH",
+  "composition": "BICHI, SHANONO, BAGWAI, DANBATTA, MAKODA, DAWAKIN, GABASAWA, GWARZO, KABO, RIMI GADO, TOFA, TSANYAWA, KUNCHI, KARAYE",
+  "lgas": [
+   "BICHI",
+   "SHANONO",
+   "BAGWAI",
+   "DANBATA",
+   "MAKODA",
+   "DAWAKI TOFA",
+   "GABASAWA",
+   "GWARZO",
+   "KABO",
+   "RIMIN GADO",
+   "TOFA",
+   "TSANYAWA",
+   "GHARI",
+   "KARAYE"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 136
+  }
+ },
+ {
+  "code": "SD/057/KN",
+  "kind": "SD",
+  "state": "KANO",
+  "name": "KANO SOUTH",
+  "composition": "ALBASU, BEBEJI, BUNKURE, DOGUWA, GAYA, KIRU, RANO, TAKAI, AJINGI, ROGO, KIBIYA, TUDUN WADA, GARKO, WUDIL, SUMAILA",
+  "lgas": [
+   "ALBASU",
+   "BEBEJI",
+   "BUNKURE",
+   "DOGUWA",
+   "GAYA",
+   "KIRU",
+   "RANO",
+   "TAKAI",
+   "AJINGI",
+   "ROGO",
+   "KIBIYA",
+   "TUDUN WADA",
+   "GARKO",
+   "WUDIL",
+   "SUMAILA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 137
+  }
+ },
+ {
+  "code": "SD/058/KT",
+  "kind": "SD",
+  "state": "KATSINA",
+  "name": "KATSINA NORTH",
+  "composition": "DAURA, ZANGO, MAIADUA, MASHI, MANI, INGAWA, BINDAWA, SANDAMU, DUTSI, KANKIA, KUSADA, BAURE",
+  "lgas": [
+   "DAURA",
+   "ZANGO",
+   "MAI'ADUA",
+   "MASHI",
+   "MANI",
+   "INGAWA",
+   "BINDAWA",
+   "SANDAMU",
+   "DUTSI",
+   "KANKIA",
+   "KUSADA",
+   "BAURE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 148
+  }
+ },
+ {
+  "code": "SD/059/KT",
+  "kind": "SD",
+  "state": "KATSINA",
+  "name": "KATSINA SOUTH",
+  "composition": "FUNTUA, FASKARI, DANJA, DANDUME, BAKORI, KANKARA, MALUMEFASHI, KAFUR, MUSAWA, MATAZU, SABUWA",
+  "lgas": [
+   "FUNTUA",
+   "FASKARI",
+   "DANJA",
+   "DANDUME",
+   "BAKORI",
+   "KANKARA",
+   "MALUFASHI",
+   "KAFUR",
+   "MUSAWA",
+   "MATAZU",
+   "SABUWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 149
+  }
+ },
+ {
+  "code": "SD/060/KT",
+  "kind": "SD",
+  "state": "KATSINA",
+  "name": "KATSINA CENTRAL",
+  "composition": "KATSINA, KAITA, JIBIA, BATSARI, SAFANA, DUTSIN-MA, KURFI, BATAGARAWA, RIMI, CHARANCHI, DANMUSA",
+  "lgas": [
+   "KATSINA",
+   "KAITA",
+   "JIBIA",
+   "BATSARI",
+   "SAFANA",
+   "DUTSIN-MA",
+   "KURFI",
+   "BATAGARAWA",
+   "RIMI",
+   "CHARANCHI",
+   "DAN MUSA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 150
+  }
+ },
+ {
+  "code": "SD/061/KB",
+  "kind": "SD",
+  "state": "KEBBI",
+  "name": "KEBBI NORTH",
+  "composition": "AREWA, ARGUNGU, AUGIE, BAGUDO, DANDI, SURU, JEGA",
+  "lgas": [
+   "AREWA",
+   "ARGUNGU",
+   "AUGIE",
+   "BAGUDO",
+   "DANDI",
+   "SURU",
+   "JEGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 154
+  }
+ },
+ {
+  "code": "SD/062/KB",
+  "kind": "SD",
+  "state": "KEBBI",
+  "name": "KEBBI CENTRAL",
+  "composition": "ALEIRO, BIRNIN KEBBI, BUNZA, GWANDU, KALGO, KOKO BESSE, MAIYAMA",
+  "lgas": [
+   "ALIERO",
+   "BIRNIN KEBBI",
+   "BUNZA",
+   "GWANDU",
+   "KALGO",
+   "KOKO/BESSE",
+   "MAIYAMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 155
+  }
+ },
+ {
+  "code": "SD/063/KB",
+  "kind": "SD",
+  "state": "KEBBI",
+  "name": "KEBBI SOUTH",
+  "composition": "FAKAI, NGASKI, SAKABA, SHANGA, WASAGU/DANKO, YAURI, ZURU",
+  "lgas": [
+   "FAKAI",
+   "NGASKI",
+   "SAKABA",
+   "SHANGA",
+   "WASAGU/DANKO",
+   "YAURI",
+   "ZURU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 156
+  }
+ },
+ {
+  "code": "SD/064/KG",
+  "kind": "SD",
+  "state": "KOGI",
+  "name": "KOGI CENTRAL",
+  "composition": "ADAVI, AJAOKUTA, OGORI/MAGONGO, OKEHI, OKENE",
+  "lgas": [
+   "ADAVI",
+   "AJAOKUTA",
+   "OGORI MANGOGO",
+   "OKEHI",
+   "OKENE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 159
+  }
+ },
+ {
+  "code": "SD/065/KG",
+  "kind": "SD",
+  "state": "KOGI",
+  "name": "KOGI EAST",
+  "composition": "ANKPA, BASSA, DEKINA, IBAJI, IDAH, IGALAMELA-ODOLU, OFU, OLAMABORO, OMALA",
+  "lgas": [
+   "ANKPA",
+   "BASSA",
+   "DEKINA",
+   "IBAJI",
+   "IDAH",
+   "IGALAMELA/ODOLU",
+   "OFU",
+   "OLAMABORO",
+   "OMALA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 160
+  }
+ },
+ {
+  "code": "SD/066/KG",
+  "kind": "SD",
+  "state": "KOGI",
+  "name": "KOGI WEST",
+  "composition": "IJUMU, KABBA, KOGI, LOKOJA, MOPAMURO, YAGBA EAST, YAGBA WEST",
+  "lgas": [
+   "IJUMU",
+   "KABBA/BUNU",
+   "KOGI . K. K.",
+   "LOKOJA",
+   "MOPA MORO",
+   "YAGBA EAST",
+   "YAGBA WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 161
+  }
+ },
+ {
+  "code": "SD/067/KW",
+  "kind": "SD",
+  "state": "KWARA",
+  "name": "KWARA NORTH",
+  "composition": "BARUTEN, EDU, PATIGI, KAIAMA, MORO",
+  "lgas": [
+   "BARUTEN",
+   "EDU",
+   "PATIGI",
+   "KAIAMA",
+   "MORO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 166
+  }
+ },
+ {
+  "code": "SD/068/KW",
+  "kind": "SD",
+  "state": "KWARA",
+  "name": "KWARA CENTRAL",
+  "composition": "ASA, ILORIN EAST, ILORIN SOUTH, ILORIN WEST, OFFA",
+  "lgas": [
+   "ASA",
+   "ILORIN EAST",
+   "ILORIN-SOUTH",
+   "ILORIN-WEST",
+   "OFFA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 167
+  }
+ },
+ {
+  "code": "SD/069/KW",
+  "kind": "SD",
+  "state": "KWARA",
+  "name": "KWARA SOUTH",
+  "composition": "EKITI, OKE-ERO, IFELODUN, IREPODUN, ISIN, OYUN",
+  "lgas": [
+   "EKITI",
+   "OKE - ERO",
+   "IFELODUN",
+   "IREPODUN",
+   "ISIN",
+   "OYUN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 168
+  }
+ },
+ {
+  "code": "SD/070/LA",
+  "kind": "SD",
+  "state": "LAGOS",
+  "name": "LAGOS CENTRAL",
+  "composition": "LAGOS ISLAND, LAGOS MAINLAND, SURULERE, APAPA, ETI-OSA",
+  "lgas": [
+   "LAGOS ISLAND",
+   "LAGOS MAINLAND",
+   "SURULERE",
+   "APAPA",
+   "ETI-OSA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 172
+  }
+ },
+ {
+  "code": "SD/071/LA",
+  "kind": "SD",
+  "state": "LAGOS",
+  "name": "LAGOS EAST",
+  "composition": "SHOMOLU, KOSOFE, EPE, IBEJU-LEKKI, IKORODU",
+  "lgas": [
+   "SOMOLU",
+   "KOSOFE",
+   "EPE",
+   "IBEJU/LEKKI",
+   "IKORODU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 173
+  }
+ },
+ {
+  "code": "SD/072/LA",
+  "kind": "SD",
+  "state": "LAGOS",
+  "name": "LAGOS WEST",
+  "composition": "AGEGE,IFAKO-IJAYE, ALIMOSHO, BADAGRY, OJO, AJEROMI/IFELODUN, AMUWO-ODOFIN, OSHODI/ISOLO, IKEJA, MUSHIN",
+  "lgas": [
+   "AGEGE",
+   "IFAKO-IJAYE",
+   "ALIMOSHO",
+   "BADAGRY",
+   "OJO",
+   "AJEROMI/IFELODUN",
+   "AMUWO-ODOFIN",
+   "OSHODI/ISOLO",
+   "IKEJA",
+   "MUSHIN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 174
+  }
+ },
+ {
+  "code": "SD/073/NW",
+  "kind": "SD",
+  "state": "NASARAWA",
+  "name": "NASSARAWA NORTH",
+  "composition": "AKAWANGA, NASSARAWA EGGON, WAMBA",
+  "lgas": [
+   "AKWANGA",
+   "NASARAWA EGGON",
+   "WAMBA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 178
+  }
+ },
+ {
+  "code": "SD/074/NW",
+  "kind": "SD",
+  "state": "NASARAWA",
+  "name": "NASSARAWA WEST",
+  "composition": "NASSARAWA, KEFFI, KOKONA, KARU, TOTO",
+  "lgas": [
+   "NASARAWA",
+   "KEFFI",
+   "KOKONA",
+   "KARU",
+   "TOTO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 179
+  }
+ },
+ {
+  "code": "SD/075/NW",
+  "kind": "SD",
+  "state": "NASARAWA",
+  "name": "NASSARAWA SOUTH",
+  "composition": "LAFIA, AWE, DOMA, KEANA, OBI",
+  "lgas": [
+   "LAFIA",
+   "AWE",
+   "DOMA",
+   "KEANA",
+   "OBI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 180
+  }
+ },
+ {
+  "code": "SD/076/NG",
+  "kind": "SD",
+  "state": "NIGER",
+  "name": "NIGER EAST",
+  "composition": "BOSSO, CHACHANGA, GURARA, PAIKORO, RAFI, SHIRORO, MUYA, SULEJA, TAFA",
+  "lgas": [
+   "BOSSO",
+   "CHANCHAGA",
+   "GURARA",
+   "PAIKORO",
+   "RAFI",
+   "SHIRORO",
+   "MUNYA",
+   "SULEJA",
+   "TAFA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 186
+  }
+ },
+ {
+  "code": "SD/077/NG",
+  "kind": "SD",
+  "state": "NIGER",
+  "name": "NIGER NORTH",
+  "composition": "AGWARA, BORGU, KONTOGORA, MARIGA, RIJAU, WUSHISHI, MASHEGU MAGAMA",
+  "lgas": [
+   "AGWARA",
+   "BORGU",
+   "KONTAGORA",
+   "MARIGA",
+   "RIJAU",
+   "WUSHISHI",
+   "MASHEGU",
+   "MAGAMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 187
+  }
+ },
+ {
+  "code": "SD/078/NG",
+  "kind": "SD",
+  "state": "NIGER",
+  "name": "NIGER SOUTH",
+  "composition": "AGAIE, BIDA, KATCHA, BATAGI, LAPAI, LAVUN, EDATI-IDATI, MOKWA",
+  "lgas": [
+   "AGAIE",
+   "BIDA",
+   "KATCHA",
+   "GBAKO",
+   "LAPAI",
+   "LAVUN",
+   "EDATTI",
+   "MOKWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 188
+  }
+ },
+ {
+  "code": "SD/079/OG",
+  "kind": "SD",
+  "state": "OGUN",
+  "name": "OGUN CENTRAL",
+  "composition": "IFO, EWEKORO, OBAFEMI/OWODE, ABEOKUTA NORTH, ABEOKUTA SOUTH, ODEDA",
+  "lgas": [
+   "IFO",
+   "EWEKORO",
+   "OBAFEMI/OWODE",
+   "ABEOKUTA NORTH",
+   "ABEOKUTA SOUTH",
+   "ODEDA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 192
+  }
+ },
+ {
+  "code": "SD/080/OG",
+  "kind": "SD",
+  "state": "OGUN",
+  "name": "OGUN EAST",
+  "composition": "SAGAMU, IKENNE, REMO NORTH, IJEBU-ODE, ODOGBOLU, IJEBU NORTH EAST, IJEBU NORTH, IJEBU EAST, OGUN WATERSIDE",
+  "lgas": [
+   "SAGAMU",
+   "IKENNE",
+   "REMO NORTH",
+   "IJEBU ODE",
+   "ODOGBOLU",
+   "IJEBU NORTH EAST",
+   "IJEBU NORTH",
+   "IJEBU EAST",
+   "OGUN WATER SIDE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 193
+  }
+ },
+ {
+  "code": "SD/081/OG",
+  "kind": "SD",
+  "state": "OGUN",
+  "name": "OGUN WEST",
+  "composition": "IMEKO AFON, EGBADO NORTH, EGBADO SOUTH, IPOKIA, ADO-ODO/OTA",
+  "lgas": [
+   "IMEKO/AFON",
+   "YEWA NORTH",
+   "YEWA SOUTH",
+   "IPOKIA",
+   "ADO ODO-OTA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 194
+  }
+ },
+ {
+  "code": "SD/082/OD",
+  "kind": "SD",
+  "state": "ONDO",
+  "name": "ONDO NORTH",
+  "composition": "AKOKO NORTH EAST, AKOKO NORTH WEST, AKOKO SOUTH WEST,AKOKO SOUTH EAST, OSE, OWO",
+  "lgas": [
+   "AKOKO NORTH EAST",
+   "AKOKO NORTH WEST",
+   "AKOKO SOUTH WEST",
+   "AKOKO SOUTH EAST",
+   "OSE",
+   "OWO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 197
+  }
+ },
+ {
+  "code": "SD/083/OD",
+  "kind": "SD",
+  "state": "ONDO",
+  "name": "ONDO CENTRAL",
+  "composition": "AKURE NORTH, AKURE SOUTH, IFEDORE, IDANRE, ONDO EAST, ONDO WEST",
+  "lgas": [
+   "AKURE NORTH",
+   "AKURE SOUTH",
+   "IFEDORE",
+   "IDANRE",
+   "ONDO EAST",
+   "ONDO WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 198
+  }
+ },
+ {
+  "code": "SD/084/OD",
+  "kind": "SD",
+  "state": "ONDO",
+  "name": "ONDO SOUTH",
+  "composition": "ILEOLUJI/OKEIGBO, ODIGBO, IRELE, OKITIPUPA, ESE-ODO, ILAJE",
+  "lgas": [
+   "ILEOLUJI/OKEIGBO",
+   "ODIGBO",
+   "IRELE",
+   "OKITIPUPA",
+   "ESE-ODO",
+   "ILAJE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 199
+  }
+ },
+ {
+  "code": "SD/085/OS",
+  "kind": "SD",
+  "state": "OSUN",
+  "name": "OSUN CENTRAL",
+  "composition": "BORIPE, BOLOWADURO, IFELODUN, ILA, IFEDAYO, IREPODUN, OROLU, ODO-OTIN, OLORUNDA, OSOGBO",
+  "lgas": [
+   "BORIPE",
+   "BOLUWADURO",
+   "IFELODUN",
+   "ILA",
+   "IFEDAYO",
+   "IREPODUN",
+   "OROLU",
+   "ODO-OTIN",
+   "OLORUNDA",
+   "OSOGBO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 203
+  }
+ },
+ {
+  "code": "SD/086/OS",
+  "kind": "SD",
+  "state": "OSUN",
+  "name": "OSUN EAST",
+  "composition": "ATAKUNMOSA EAST, ATAKUNMOSA WEST, IFE CENTRAL, IFE EAST, IFE NORTH, IFE SOUTH, ILESA EAST, ILESA WEST, OBOKUN, ORIADE",
+  "lgas": [
+   "ATAKUMOSA EAST",
+   "ATAKUMOSA WEST",
+   "IFE CENTRAL",
+   "IFE EAST",
+   "IFE NORTH",
+   "IFE SOUTH",
+   "ILESA EAST",
+   "ILESA WEST",
+   "OBOKUN",
+   "ORIADE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 204
+  }
+ },
+ {
+  "code": "SD/087/OS",
+  "kind": "SD",
+  "state": "OSUN",
+  "name": "OSUN WEST",
+  "composition": "AYADAADE, AYEDIRE, EDE NORTH, EDE SOUTH, EGBEDORE, EJIGBO, IREWOLE, ISOKAN, IWO, OLA-OLUWA",
+  "lgas": [
+   "AYEDAADE",
+   "AYEDIRE",
+   "EDE NORTH",
+   "EDE SOUTH",
+   "EGBEDORE",
+   "EJIGBO",
+   "IREWOLE",
+   "ISOKAN",
+   "IWO",
+   "OLA-OLUWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 205
+  }
+ },
+ {
+  "code": "SD/088/OY",
+  "kind": "SD",
+  "state": "OYO",
+  "name": "OYO CENTRAL",
+  "composition": "AFIJIO, AKINYELE, EGBEDA, OGO OLUWA, SURULERE, LAGELU, OLUYOLE, ONA-ARA, OYO EAST, OYO WEST, ATIBA",
+  "lgas": [
+   "AFIJIO",
+   "AKINYELE",
+   "EGBEDA",
+   "OGO-OLUWA",
+   "SURULERE",
+   "LAGELU",
+   "OLUYOLE",
+   "ONA-ARA",
+   "OYO EAST",
+   "OYO WEST",
+   "ATIBA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 211
+  }
+ },
+ {
+  "code": "SD/089/OY",
+  "kind": "SD",
+  "state": "OYO",
+  "name": "OYO NORTH",
+  "composition": "SAKI WEST, SAKI EAST, ATIGBO, IREPO, OLORUNSOGO, KAJOLA, IWAJOWA, OGBOMOSHO NORTH, OGBOMOSHO SOUTH, ISEYIN, OORELOPE, ORIRE, ITESIWAJU",
+  "lgas": [
+   "SAKI WEST",
+   "SAKI EAST",
+   "ATISBO",
+   "IREPO",
+   "OLORUNSOGO",
+   "KAJOLA",
+   "IWAJOWA",
+   "OGBOMOSO NORTH",
+   "OGBOMOSO SOUTH",
+   "ISEYIN",
+   "OORELOPE",
+   "ORI IRE",
+   "ITESIWAJU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 212
+  }
+ },
+ {
+  "code": "SD/090/OY",
+  "kind": "SD",
+  "state": "OYO",
+  "name": "OYO SOUTH",
+  "composition": "IBADAN NORTH, IBADAN NORTH EAST, IBADAN NORTH WEST, IBADAN SOUTH EAST, IBADAN SOUTH WEST, IBARAPA CENTRAL, IBARAPA NORTH, IBARAPA EAST, IDO",
+  "lgas": [
+   "IBADAN NORTH",
+   "IBADAN NORTH EAST",
+   "IBADAN NORTH WEST",
+   "IBADAN SOUTH-EAST",
+   "IBADAN SOUTH WEST",
+   "IBARAPA CENTRAL",
+   "IBARAPA NORTH",
+   "IBARAPA EAST",
+   "IDO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 213
+  }
+ },
+ {
+  "code": "SD/091/PL",
+  "kind": "SD",
+  "state": "PLATEAU",
+  "name": "PLATEAU SOUTH",
+  "composition": "LANTANG NORTH, LANTANG SOUTH, MIKANG, QUA’AN PAN, SHENDAM, WASE",
+  "lgas": [
+   "LANGTANG NORTH",
+   "LANGTANG SOUTH",
+   "MIKANG",
+   "QUA'AN PAN",
+   "SHENDAM",
+   "WASE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 219
+  }
+ },
+ {
+  "code": "SD/092/PL",
+  "kind": "SD",
+  "state": "PLATEAU",
+  "name": "PLATEAU CENTRAL",
+  "composition": "BOKKOS, KANKE, MANGU, PANKSHIN, KANAM",
+  "lgas": [
+   "BOKKOS",
+   "KANKE",
+   "MANGU",
+   "PANKSHIN",
+   "KANAM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 220
+  }
+ },
+ {
+  "code": "SD/093/PL",
+  "kind": "SD",
+  "state": "PLATEAU",
+  "name": "PLATEAU NORTH",
+  "composition": "BARKIN LADI, BASSA, JOS EAST, JOS NORTH, JOS SOUTH, RIYOM",
+  "lgas": [
+   "BARIKIN LADI",
+   "BASSA",
+   "JOS EAST",
+   "JOS NORTH",
+   "JOS SOUTH",
+   "RIYOM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 221
+  }
+ },
+ {
+  "code": "SD/094/RV",
+  "kind": "SD",
+  "state": "RIVERS",
+  "name": "RIVERS EAST",
+  "composition": "ETCHE, OMUMA, IKWERRE, OBIO AKPOR, PORT HARCOURT, OKIRIKA, OGU BOLO, EMOHUA",
+  "lgas": [
+   "ETCHE",
+   "OMUMA",
+   "IKWERRE",
+   "OBIO/AKPOR",
+   "PORT HARCOURT",
+   "OKRIKA",
+   "OGU/BOLO",
+   "EMOHUA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 225
+  }
+ },
+ {
+  "code": "SD/095/RV",
+  "kind": "SD",
+  "state": "RIVERS",
+  "name": "RIVERS SOUTH EAST",
+  "composition": "OPOBO/NKORO, ANDONI, OYIGBO, TAI, ELEME, GOKANA, KHANA",
+  "lgas": [
+   "OPOBO/NKORO",
+   "ANDONI",
+   "OYIGBO",
+   "TAI",
+   "ELEME",
+   "GOKANA",
+   "KHANA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 226
+  }
+ },
+ {
+  "code": "SD/096/RV",
+  "kind": "SD",
+  "state": "RIVERS",
+  "name": "RIVERS WEST",
+  "composition": "ASARI-TORU, AKUKU-TORU, DEGEMA, OGBA/EGBEMA/NDONI, ABUA-ODUAL, AHOADA EAST, AHOADA WEST, BONNY",
+  "lgas": [
+   "ASARI-TORU",
+   "AKUKU TORU",
+   "DEGEMA",
+   "OGBA/EGBEMA/NDONI",
+   "ABUA-ODUAL",
+   "AHOADA EAST",
+   "AHOADA WEST",
+   "BONNY"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 227
+  }
+ },
+ {
+  "code": "SD/097/SO",
+  "kind": "SD",
+  "state": "SOKOTO",
+  "name": "SOKOTO EAST",
+  "composition": "ISA, SABON BIRNI, WURNO, GORONYO, RABAH, GADA, ILLELA, GWADABAWA",
+  "lgas": [
+   "ISA",
+   "S/BIRNI",
+   "WURNO",
+   "GORONYO",
+   "RABAH",
+   "GADA",
+   "ILLELA",
+   "GWADABAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 230
+  }
+ },
+ {
+  "code": "SD/098/SO",
+  "kind": "SD",
+  "state": "SOKOTO",
+  "name": "SOKOTO NORTH",
+  "composition": "TANGAZA, BINJI, SILAME, GUDU, KWARE, WAMAKKO,SOKOTO NORTH, SOKOTO SOUTH",
+  "lgas": [
+   "TANGAZA",
+   "BINJI",
+   "SILAME",
+   "GUDU",
+   "KWARE",
+   "WAMAKKO",
+   "SOKOTO NORTH",
+   "SOKOTO SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 231
+  }
+ },
+ {
+  "code": "SD/099/SO",
+  "kind": "SD",
+  "state": "SOKOTO",
+  "name": "SOKOTO SOUTH",
+  "composition": "DANGE SHUNI, TURETA, BODINGA, SHAGARI, YABO, TAMBUWA, KEBBE",
+  "lgas": [
+   "DANGE/SHUNI",
+   "TURETA",
+   "BODINGA",
+   "SHAGARI",
+   "YABO",
+   "TAMBUWAL",
+   "KEBBE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 232
+  }
+ },
+ {
+  "code": "SD/100/TR",
+  "kind": "SD",
+  "state": "TARABA",
+  "name": "TARABA SOUTH",
+  "composition": "WUKARI, IBI, DONGA, USSA, TAKUM",
+  "lgas": [
+   "WUKARI",
+   "IBI",
+   "DONGA",
+   "USSA",
+   "TAKUM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 236
+  }
+ },
+ {
+  "code": "SD/101/TR",
+  "kind": "SD",
+  "state": "TARABA",
+  "name": "TARABA CENTRAL",
+  "composition": "SARDAUNA, KURMI, BALI, GASHAKA, GASSOL",
+  "lgas": [
+   "SARDAUNA",
+   "KURMI",
+   "BALI",
+   "GASHAKA",
+   "GASSOL"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 237
+  }
+ },
+ {
+  "code": "SD/102/TR",
+  "kind": "SD",
+  "state": "TARABA",
+  "name": "TARABA NORTH",
+  "composition": "JALINGO, YORRO, ZING, LAU, ARDO-KOLA, KARIM-LAMIDO",
+  "lgas": [
+   "JALINGO",
+   "YORRO",
+   "ZING",
+   "LAU",
+   "ARDO - KOLA",
+   "KARIM-LAMIDO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 238
+  }
+ },
+ {
+  "code": "SD/103/YB",
+  "kind": "SD",
+  "state": "YOBE",
+  "name": "YOBE EAST",
+  "composition": "BURSARI, GEIDAM,GUJBA, GULANI, TARMUWA, YUNUSARI",
+  "lgas": [
+   "BURSARI",
+   "GEIDAM",
+   "GUJBA",
+   "GULANI",
+   "TARMUWA",
+   "YUNUSARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 242
+  }
+ },
+ {
+  "code": "SD/104/YB",
+  "kind": "SD",
+  "state": "YOBE",
+  "name": "YOBE NORTH",
+  "composition": "BADE, JAKUSKO, MACHINA, KARASUWA, NGURU, YUSUFARI",
+  "lgas": [
+   "BADE",
+   "JAKUSKO",
+   "MACHINA",
+   "KARASAWA",
+   "NGURU",
+   "YUSUFARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 243
+  }
+ },
+ {
+  "code": "SD/105/YB",
+  "kind": "SD",
+  "state": "YOBE",
+  "name": "YOBE SOUTH",
+  "composition": "FIKA, FUNE, NANGERE, POTISKUM, DAMATURU",
+  "lgas": [
+   "FIKA",
+   "FUNE",
+   "NANGERE",
+   "POTISKUM",
+   "DAMATURU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 244
+  }
+ },
+ {
+  "code": "SD/106/ZF",
+  "kind": "SD",
+  "state": "ZAMFARA",
+  "name": "ZAMFARA NORTH",
+  "composition": "K/NAMODA, SHINKAFI, ZURMI, BIRNIN MAGAJI, T/MAFARA",
+  "lgas": [
+   "KAURA NAMODA",
+   "SHINKAFI",
+   "ZURMI",
+   "BIRNIN MAGAJI",
+   "TALATA MAFARA"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 249
+  }
+ },
+ {
+  "code": "SD/107/ZF",
+  "kind": "SD",
+  "state": "ZAMFARA",
+  "name": "ZAMFARA CENTRAL",
+  "composition": "GUSAU, TSAFE, BUNGUDU, MARU",
+  "lgas": [
+   "GUSAU",
+   "TSAFE",
+   "BUNGUDU",
+   "MARU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 250
+  }
+ },
+ {
+  "code": "SD/108/ZF",
+  "kind": "SD",
+  "state": "ZAMFARA",
+  "name": "ZAMFARA WEST",
+  "composition": "MARADUN, BAKURA, ANKA, BUKKUYUM, GUMMI",
+  "lgas": [
+   "MARADUN",
+   "BAKURA",
+   "ANKA",
+   "BUKKUYUM",
+   "GUMMI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 251
+  }
+ },
+ {
+  "code": "SD/109/FCT",
+  "kind": "SD",
+  "state": "FCT",
+  "name": "FEDERAL CAPITAL TERRITORY",
+  "composition": "ABAJI AREA COUNCIL, GWAGWA AREA COUNCIL, KUJE AREA COUNCIL, MUNICIPAL AREA COUNCIL, KWALI AREA COUNCIL, BWARI AREA COUNCIL",
+  "lgas": [
+   "ABAJI",
+   "GWAGWALADA",
+   "KUJE",
+   "MUNICIPAL",
+   "KWALI",
+   "BWARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 262
+  }
+ },
+ {
+  "code": "FC/001/AB",
+  "kind": "FC",
+  "state": "ABIA",
+  "name": "Aba North/Aba South",
+  "composition": "The entire Geographical Areas of Aba North and Aba South L.G.As",
+  "lgas": [
+   "ABA NORTH",
+   "ABA SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 6
+  }
+ },
+ {
+  "code": "FC/002/AB",
+  "kind": "FC",
+  "state": "ABIA",
+  "name": "Arochukwu/Ohafia",
+  "composition": "The entire Geographical Areas of Arochukwu and Ohafia L.A.As",
+  "lgas": [
+   "AROCHUKWU",
+   "OHAFIA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 7
+  }
+ },
+ {
+  "code": "FC/003/AB",
+  "kind": "FC",
+  "state": "ABIA",
+  "name": "Bende",
+  "composition": "The Bende Geographical Areas of Bende L.G.As",
+  "lgas": [
+   "BENDE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 8
+  }
+ },
+ {
+  "code": "FC/004/AB",
+  "kind": "FC",
+  "state": "ABIA",
+  "name": "Isiala Ngwa North /Isiala Ngwa South",
+  "composition": "The entire Geographical Areas of Isiala Ngwa North and South L.G.As",
+  "lgas": [
+   "ISIALA NGWA NORTH",
+   "ISIALA NGWA SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 9
+  }
+ },
+ {
+  "code": "FC/005/AB",
+  "kind": "FC",
+  "state": "ABIA",
+  "name": "Isuikwuato/Umu-Nneochi",
+  "composition": "The entire Geographical Areas of Isiukwuato and Umunneochi L.G.As",
+  "lgas": [
+   "ISUIKWUATO",
+   "UMU - NNEOCHI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 10
+  }
+ },
+ {
+  "code": "FC/006/AB",
+  "kind": "FC",
+  "state": "ABIA",
+  "name": "Obingwa/Ugwunagbo/Osisioma",
+  "composition": "The entire Geographical Areas of Obingwa, Ugwunagbo and Osisioma L.G.As",
+  "lgas": [
+   "OBINGWA",
+   "UGWUNAGBO",
+   "OSISIOMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 11
+  }
+ },
+ {
+  "code": "FC/007/AB",
+  "kind": "FC",
+  "state": "ABIA",
+  "name": "Umuahia North/ Umuahia South/ Ikwuano",
+  "composition": "The entire Geographical Areas of Umuahia North, Umuahia South and Ikwuano L.G.As",
+  "lgas": [
+   "UMUAHIA NORTH",
+   "UMUAHIA SOUTH",
+   "IKWUANO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 12
+  }
+ },
+ {
+  "code": "FC/008/AB",
+  "kind": "FC",
+  "state": "ABIA",
+  "name": "Ukwa East/Ukwa West",
+  "composition": "The entire Geographical Areas of Ukwa East and East L.G.As",
+  "lgas": [
+   "UKWA EAST",
+   "UKWA WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 13
+  }
+ },
+ {
+  "code": "FC/009/AD",
+  "kind": "FC",
+  "state": "ADAMAWA",
+  "name": "Demsa/Numan/Lamurde",
+  "composition": "The entire Geographical Area of Demsa, Numan and Lamurde L.G.As",
+  "lgas": [
+   "DEMSA",
+   "NUMAN",
+   "LAMURDE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 23
+  }
+ },
+ {
+  "code": "FC/010/AD",
+  "kind": "FC",
+  "state": "ADAMAWA",
+  "name": "Furore/Song",
+  "composition": "The entire Geographical Area of Furore and Song L.G.As",
+  "lgas": [
+   "FUFORE",
+   "SONG"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 24
+  }
+ },
+ {
+  "code": "FC/011/AD",
+  "kind": "FC",
+  "state": "ADAMAWA",
+  "name": "Mayo Belwa/Ganye/Jada /Toungo",
+  "composition": "The entire Geographical Area of Mayo Belwa, Ganye, Jada and Toungo L.G.As",
+  "lgas": [
+   "MAYO - BELWA",
+   "GANYE",
+   "JADA",
+   "TOUNGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 25
+  }
+ },
+ {
+  "code": "FC/012/AD",
+  "kind": "FC",
+  "state": "ADAMAWA",
+  "name": "Gombi/Hong",
+  "composition": "The entire Geographical Area of Gombi and Hong L.G.As",
+  "lgas": [
+   "GOMBI",
+   "HONG"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 26
+  }
+ },
+ {
+  "code": "FC/013/AD",
+  "kind": "FC",
+  "state": "ADAMAWA",
+  "name": "Guyuk/Shelleng",
+  "composition": "The entire Geographical Area of Guyuk and Shelleng L.G.As",
+  "lgas": [
+   "GUYUK",
+   "SHELLENG"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 27
+  }
+ },
+ {
+  "code": "FC/014/AD",
+  "kind": "FC",
+  "state": "ADAMAWA",
+  "name": "Madagali/Michika",
+  "composition": "The entire Geographical Area of Madagali and Michika L.G.As",
+  "lgas": [
+   "MADAGALI",
+   "MICHIKA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 28
+  }
+ },
+ {
+  "code": "FC/015/AD",
+  "kind": "FC",
+  "state": "ADAMAWA",
+  "name": "Maiha/Mubi North/Mubi South",
+  "composition": "The entire Geographical Area of Maiha, Mubi North and Mubi South",
+  "lgas": [
+   "MAIHA",
+   "MUBI NORTH",
+   "MUBI SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 29
+  }
+ },
+ {
+  "code": "FC/016/AD",
+  "kind": "FC",
+  "state": "ADAMAWA",
+  "name": "Yola North/Yola South/Girei",
+  "composition": "The entire Geographical Area of Yola North, Yola South and Girei",
+  "lgas": [
+   "YOLA NORTH",
+   "YOLA SOUTH",
+   "GIREI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 30
+  }
+ },
+ {
+  "code": "FC/027/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Anambra East/Anambra West",
+  "composition": "The entire Geographical Area of Anambra East and West L.G.As",
+  "lgas": [
+   "ANAMBRA EAST",
+   "ANAMBRA WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 57
+  }
+ },
+ {
+  "code": "FC/028/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Onitsha North/Onitsha South",
+  "composition": "The entire Geographical Area of Onitsha North and South L.G.As",
+  "lgas": [
+   "ONITSHA-NORTH",
+   "ONITSHA -SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 58
+  }
+ },
+ {
+  "code": "FC/029/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Ogbaru",
+  "composition": "The entire Geographical Area of Ogbaru L.G.A",
+  "lgas": [
+   "OGBARU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 59
+  }
+ },
+ {
+  "code": "FC/030/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Aguata",
+  "composition": "The entire Geographical Area of Aguata L.G.A.",
+  "lgas": [
+   "AGUATA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 60
+  }
+ },
+ {
+  "code": "FC/031/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Oyi/Ayamelum",
+  "composition": "The entire Geographical Area of Oyi and Anyamelum L.G.As",
+  "lgas": [
+   "OYI",
+   "AYAMELUM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 61
+  }
+ },
+ {
+  "code": "FC/032/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Awka North/Awka South",
+  "composition": "The entire Geographical Area of Awka North and South L.G.As",
+  "lgas": [
+   "AWKA NORTH",
+   "AWKA SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 62
+  }
+ },
+ {
+  "code": "FC/033/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Njikoka/Dunukofia/Anaocha",
+  "composition": "The entire Geographical Area ofNjikoka, Dunkofia and Anaocha L.G.As",
+  "lgas": [
+   "NJIKOKA",
+   "DUNUKOFIA",
+   "ANAOCHA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 63
+  }
+ },
+ {
+  "code": "FC/034/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Idemili North/Idemili South",
+  "composition": "The entire Geographical Area ofIdemili North and South L.G.As",
+  "lgas": [
+   "IDEMILI NORTH",
+   "IDEMILI-SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 64
+  }
+ },
+ {
+  "code": "FC/035/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Ihiala",
+  "composition": "The entire Geographical Area ofIhiala L.G.A",
+  "lgas": [
+   "IHIALA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 65
+  }
+ },
+ {
+  "code": "FC/036/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Nnewi North/Nnewi South/ Ekwusigo",
+  "composition": "The entire Geographical Area of Nnewi North, NNewi South and Ekusigo L.G.As",
+  "lgas": [
+   "NNEWI NORTH",
+   "NNEWI SOUTH",
+   "EKWUSIGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 66
+  }
+ },
+ {
+  "code": "FC/037/AN",
+  "kind": "FC",
+  "state": "ANAMBRA",
+  "name": "Orumba North/Orumba South",
+  "composition": "The entire Geographical Area of Orumba North/Orumba South L.G.A.",
+  "lgas": [
+   "ORUMBA NORTH",
+   "ORUMBA SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 67
+  }
+ },
+ {
+  "code": "FC/017/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Abak/Etim Ekpo/Ika",
+  "composition": "The entire Geographical Area of Abak, Etim Ekpo and Ika L.G.As",
+  "lgas": [
+   "ABAK",
+   "ETIM EKPO",
+   "IKA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 90
+  }
+ },
+ {
+  "code": "FC/018/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Eket/Onna/Esit Eket/Ibeno",
+  "composition": "The entire Geographical Area of Eket, Onna, Esit Eket and Ibeno L.G.As",
+  "lgas": [
+   "EKET",
+   "ONNA",
+   "ESIT EKET (UQUO)",
+   "IBENO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 91
+  }
+ },
+ {
+  "code": "FC/019/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Etinan/Nsit Ibom/Nsit ubium",
+  "composition": "The entire Geographical Area of Etinan, Nsit Ibom, and Nsit Ubium L.G.As",
+  "lgas": [
+   "ETINAN",
+   "NSIT IBOM",
+   "NSIT UBIUM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 92
+  }
+ },
+ {
+  "code": "FC/020/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Ikono/Ini",
+  "composition": "The entire Geographical Area of Ikono and Ini L.G.As",
+  "lgas": [
+   "IKONO",
+   "INI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 93
+  }
+ },
+ {
+  "code": "FC/021/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Ikot Abasi/Mkpat Enin/Eastern Obolo",
+  "composition": "The entire Geographical Area of Ikot Abasi, Mkpat Enin and Eastern Obolo L.G.As",
+  "lgas": [
+   "IKOT ABASI",
+   "MKPAT ENIN",
+   "EASTERN OBOLO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 94
+  }
+ },
+ {
+  "code": "FC/022/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Ikot Ekpene/Essien Udim/ Obot Akara",
+  "composition": "The entire Geographical Area of Ikot Ekpene, Essien Udim and Obot Akara L.G.As",
+  "lgas": [
+   "IKOT EKPENE",
+   "ESSIEN UDIM",
+   "OBOT AKARA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 95
+  }
+ },
+ {
+  "code": "FC/023/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Itu/Ibiono Ibom",
+  "composition": "The entire Geographical Area of Itu and Ibiono Ibom L.G.As",
+  "lgas": [
+   "ITU",
+   "IBIONO IBOM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 96
+  }
+ },
+ {
+  "code": "FC/024/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Oron/Mbo/Okobo/Udung Uko/Urue Offong/Oruko",
+  "composition": "The entire Geographical Area of Oron, Mbo, Okobo, Udung Uko Urue Offong and Oruko L.G.As",
+  "lgas": [
+   "ORON",
+   "MBO",
+   "OKOBO",
+   "UDUNG UKO",
+   "URUE OFFONG/ORUKO"
+  ],
+  "split_lga": null,
+  "resolved_by": "name",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 97
+  }
+ },
+ {
+  "code": "FC/025/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Ukanafun/Oruk Anam",
+  "composition": "The entire Geographical Area of Ukanafun and Oruko Anam L.G.As",
+  "lgas": [
+   "UKANAFUN",
+   "ORUK ANAM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 98
+  }
+ },
+ {
+  "code": "FC/026/AK",
+  "kind": "FC",
+  "state": "AKWA IBOM",
+  "name": "Uyo/Uruan/Nsit Atai/ Ibesikpo Asutan",
+  "composition": "The entire Geographical Area of Uyo, Uruan, Nsiti Atai and Ibesikpo Asutan L.G.As",
+  "lgas": [
+   "UYO",
+   "URUAN",
+   "NSIT ATAI",
+   "IBESIKPO ASUTAN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 99
+  }
+ },
+ {
+  "code": "FC/038/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Alkaleri/Kirfi",
+  "composition": "The entire Geographical Area of Alkaleri/ Kirfi L.G.A.",
+  "lgas": [
+   "ALKALERI",
+   "KIRFI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 124
+  }
+ },
+ {
+  "code": "FC/039/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Bauchi",
+  "composition": "The entire Geographical Area of Bauchi L.G.A.",
+  "lgas": [
+   "BAUCHI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 125
+  }
+ },
+ {
+  "code": "FC/040/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Bogoro/Dass/Tafawa Balewa",
+  "composition": "The entire Geographical Area of Bogoro/Dass/Tafawa Balewa L.G.As",
+  "lgas": [
+   "BOGORO",
+   "DASS",
+   "TAFAWA BALEWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 126
+  }
+ },
+ {
+  "code": "FC/041/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Toro",
+  "composition": "The entire Geographical Area of Toro L.G.A",
+  "lgas": [
+   "TORO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 127
+  }
+ },
+ {
+  "code": "FC/042/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Ningi/Warji",
+  "composition": "The entire Geographical Area of Ningi/Warji L.G.As",
+  "lgas": [
+   "NINGI",
+   "WARJI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 128
+  }
+ },
+ {
+  "code": "FC/043/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Darazo/Gunjuwa",
+  "composition": "The entire Geographical Area of Darazo/Gunjuwa L.G.As",
+  "lgas": [
+   "DARAZO",
+   "GANJUWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 129
+  }
+ },
+ {
+  "code": "FC/044/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Misau/Dambam",
+  "composition": "The entire Geographical Area of Misau/Dambam L.G.As",
+  "lgas": [
+   "MISAU",
+   "DAMBAM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 130
+  }
+ },
+ {
+  "code": "FC/045/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Zaki",
+  "composition": "The entire Geographical Area of Zaki L.G.A",
+  "lgas": [
+   "ZAKI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 131
+  }
+ },
+ {
+  "code": "FC/046/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Gamawa",
+  "composition": "The entire Geographical Area of Gamawa L.G.A",
+  "lgas": [
+   "GAMAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 132
+  }
+ },
+ {
+  "code": "FC/047/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Jama’are/Itas-Gadau",
+  "composition": "The entire Geographical Area of Jama’are and Itas-Gidau L.G.As",
+  "lgas": [
+   "JAMA'ARE",
+   "ITAS/GADAU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 133
+  }
+ },
+ {
+  "code": "FC/048/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Shira/Giade",
+  "composition": "The entire Geographical Area of Shira and Giade L.G.As",
+  "lgas": [
+   "SHIRA",
+   "GIADE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 134
+  }
+ },
+ {
+  "code": "FC/049/BA",
+  "kind": "FC",
+  "state": "BAUCHI",
+  "name": "Katagum",
+  "composition": "The entire Geographical Area ofKatagum L.G.As",
+  "lgas": [
+   "KATAGUM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 135
+  }
+ },
+ {
+  "code": "FC/050/BY",
+  "kind": "FC",
+  "state": "BAYELSA",
+  "name": "Brass/Nembe",
+  "composition": "The entire Geographical Area of Brass and Nember L.G.As",
+  "lgas": [
+   "BRASS",
+   "NEMBE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 161
+  }
+ },
+ {
+  "code": "FC/051/BY",
+  "kind": "FC",
+  "state": "BAYELSA",
+  "name": "Ogbia",
+  "composition": "The entire Geographical Area of Ogbia L.G.A.",
+  "lgas": [
+   "OGBIA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 162
+  }
+ },
+ {
+  "code": "FC/052/BY",
+  "kind": "FC",
+  "state": "BAYELSA",
+  "name": "Sagbama/Ekeremor",
+  "composition": "The entire Geographical Area of Sagbama Ekeremor L.G.As",
+  "lgas": [
+   "SAGBAMA",
+   "EKEREMOR"
+  ],
+  "split_lga": null,
+  "resolved_by": "name",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 163
+  }
+ },
+ {
+  "code": "FC/053/BY",
+  "kind": "FC",
+  "state": "BAYELSA",
+  "name": "Southern Ijaw",
+  "composition": "The entire Geographical Area of Southern Ijaw L.G.A.",
+  "lgas": [
+   "SOUTHERN IJAW"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 164
+  }
+ },
+ {
+  "code": "FC/054/BY",
+  "kind": "FC",
+  "state": "BAYELSA",
+  "name": "Yenagoa/Kolokuna/Opokuma",
+  "composition": "The entire Geographical Area of Yenagoa, Kolokuma and Opokuma L.G.As",
+  "lgas": [
+   "YENAGOA",
+   "KOLOKUMA/OPOKUMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 165
+  }
+ },
+ {
+  "code": "FC/055/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Ado/Obadigbo/Okpokwu",
+  "composition": "The entire Geographical Area of the present Ado, Obadigbo and Okpokwu L.G.As",
+  "lgas": [
+   "ADO",
+   "OGBADIBO",
+   "OKPOKWU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 198
+  }
+ },
+ {
+  "code": "FC/056/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Apa/Agatu",
+  "composition": "The entire Geographical Area of the Present Apa and Agatu L.G.As",
+  "lgas": [
+   "APA",
+   "AGATU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 199
+  }
+ },
+ {
+  "code": "FC/057/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Buruku",
+  "composition": "The entire Geographical Area of the present Buruku L.G.A.",
+  "lgas": [
+   "BURUKU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 200
+  }
+ },
+ {
+  "code": "FC/058/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Gboko/Tarka",
+  "composition": "The entire Geographical Area of the present Gboko and Tarka L.G.As",
+  "lgas": [
+   "GBOKO",
+   "TARKA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 201
+  }
+ },
+ {
+  "code": "FC/059/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Guma/Makurdi",
+  "composition": "The entire Geographical Area of the present Guma and Makurdi L.G.As",
+  "lgas": [
+   "GUMA",
+   "MAKURDI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 202
+  }
+ },
+ {
+  "code": "FC/060/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Gwer East/Gwer West",
+  "composition": "The entire Geographical Area of the present Gwer East and Gwer West L.G.As",
+  "lgas": [
+   "GWER EAST",
+   "GWER WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 203
+  }
+ },
+ {
+  "code": "FC/061/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Katsina-Ala/Ukum/Logo",
+  "composition": "The entire Geographical Area of the present Katsina-Ala, Ukum and Logo L.G.As",
+  "lgas": [
+   "KATSINA-ALA",
+   "UKUM",
+   "LOGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 204
+  }
+ },
+ {
+  "code": "FC/062/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Konshisha/Vandeikya",
+  "composition": "The entire Geographical Area of the present Konshisha and Vandeikya L.G.As",
+  "lgas": [
+   "KONSHISHA",
+   "VANDEIKYA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 205
+  }
+ },
+ {
+  "code": "FC/063/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Kwande/Ushongo",
+  "composition": "The entire Geographical Area of the present Kwande and Ushongo L.G.As",
+  "lgas": [
+   "KWANDE",
+   "USHONGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 206
+  }
+ },
+ {
+  "code": "FC/064/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Oju/Obi",
+  "composition": "The entire Geographical Area of the present Oju and Obi L.G.As",
+  "lgas": [
+   "OJU",
+   "OBI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 207
+  }
+ },
+ {
+  "code": "FC/065/BN",
+  "kind": "FC",
+  "state": "BENUE",
+  "name": "Otukpo/Ohimini",
+  "composition": "The entire Geographical Area of the presentOtukpo and Ohimini L.G.As",
+  "lgas": [
+   "OTUKPO",
+   "OHIMINI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 208
+  }
+ },
+ {
+  "code": "FC/066/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Askira-Uba/Hawul",
+  "composition": "The entire Geographical Area of the present Askira-Uba and Hawul L.G.As",
+  "lgas": [
+   "ASKIRA / UBA",
+   "HAWUL"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 231
+  }
+ },
+ {
+  "code": "FC/067/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Bama/Ngala/Kala-Balge",
+  "composition": "The entire Geographical Area of the present Bama, Ngala and Kala-Balge L.G.As",
+  "lgas": [
+   "BAMA",
+   "NGALA",
+   "KALA BALGE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 232
+  }
+ },
+ {
+  "code": "FC/068/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Biu/Kwaya-Kusar, Shani/Bayo",
+  "composition": "The entire Geographical Area of the present Biu, Kwaya-Kusar, Shami and Bayo L.G.As",
+  "lgas": [
+   "BIU",
+   "KWAYA / KUSAR",
+   "SHANI",
+   "BAYO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 233
+  }
+ },
+ {
+  "code": "FC/069/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Dikwa/Mafa/Konduga",
+  "composition": "The entire Geographical Area of the present Dikwa, Mafa and Konduga L.G.As",
+  "lgas": [
+   "DIKWA",
+   "MAFA",
+   "KONDUGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 234
+  }
+ },
+ {
+  "code": "FC/070/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Damboa/Gwoza/Chibok",
+  "composition": "The entire Geographical Area of the present Damboa, Gwoza and Chibok L.G.As",
+  "lgas": [
+   "DAMBOA",
+   "GWOZA",
+   "CHIBOK"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 235
+  }
+ },
+ {
+  "code": "FC/071/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Kaga/Gubio/Magumeri",
+  "composition": "The entire Geographical Area of the present Kaga, Gubio and Magumeri L.G.As",
+  "lgas": [
+   "KAGA",
+   "GUBIO",
+   "MAGUMERI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 236
+  }
+ },
+ {
+  "code": "FC/072/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Monguno/Nganzai/Marte",
+  "composition": "The entire Geographical Area of Monguno, Nganzai and Marte L.G.As",
+  "lgas": [
+   "MONGUNO",
+   "NGANZAI",
+   "MARTE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 237
+  }
+ },
+ {
+  "code": "FC/073/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Kukawa/Mobbar/Abadam/ Guzamali",
+  "composition": "The entire Geographical Area of Kukawa, Mobbar, Abadam and Guzamali L.G.As",
+  "lgas": [
+   "KUKAWA",
+   "MOBBAR",
+   "ABADAM",
+   "GUZAMALA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 238
+  }
+ },
+ {
+  "code": "FC/074/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Maiduguri (Metropolitan)",
+  "composition": "The entire Geographical Area of Maiduguri (Metropolitan) L.G.A",
+  "lgas": [
+   "MAIDUGURI M. C."
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 239
+  }
+ },
+ {
+  "code": "FC/075/BO",
+  "kind": "FC",
+  "state": "BORNO",
+  "name": "Jere",
+  "composition": "The entire Geographical Area of Jere L.G.A",
+  "lgas": [
+   "JERE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 240
+  }
+ },
+ {
+  "code": "FC/076/CR",
+  "kind": "FC",
+  "state": "CROSS RIVER",
+  "name": "Yakurr/Abi",
+  "composition": "The entire Geographical Area of Yakurr and Abi L.G.As",
+  "lgas": [
+   "YAKURR",
+   "ABI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 264
+  }
+ },
+ {
+  "code": "FC/077/CR",
+  "kind": "FC",
+  "state": "CROSS RIVER",
+  "name": "Akamkpa/Biase",
+  "composition": "The entire Geographical Area of Akamkpa and Biase L.G.As",
+  "lgas": [
+   "AKAMKPA",
+   "BIASE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 265
+  }
+ },
+ {
+  "code": "FC/078/CR",
+  "kind": "FC",
+  "state": "CROSS RIVER",
+  "name": "Boki/Ikom",
+  "composition": "The entire Geographical Area of Boki and Ikom L.G.As",
+  "lgas": [
+   "BOKI",
+   "IKOM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 266
+  }
+ },
+ {
+  "code": "FC/079/CR",
+  "kind": "FC",
+  "state": "CROSS RIVER",
+  "name": "Calabar South/Akpabuyo/ Bakassi",
+  "composition": "The entire Geographical Area of Calabar South, Akpabuyo and Bakassi L.G.As",
+  "lgas": [
+   "CALABAR SOUTH",
+   "AKPABUYO",
+   "BAKASSI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 267
+  }
+ },
+ {
+  "code": "FC/080/CR",
+  "kind": "FC",
+  "state": "CROSS RIVER",
+  "name": "Calabar Municipal/Odukpani",
+  "composition": "The entire Geographical Area of Calabar Municipal and Odukpani L.G.As",
+  "lgas": [
+   "CALABAR MUNICIPALITY",
+   "ODUKPANI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 268
+  }
+ },
+ {
+  "code": "FC/081/CR",
+  "kind": "FC",
+  "state": "CROSS RIVER",
+  "name": "Obanliku/Obudu/Bekwarra",
+  "composition": "The entire Geographical Area of Obanliku, Obudu and Bekwarra L.G.As",
+  "lgas": [
+   "OBANLIKU",
+   "OBUDU",
+   "BEKWARRA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 269
+  }
+ },
+ {
+  "code": "FC/082/CR",
+  "kind": "FC",
+  "state": "CROSS RIVER",
+  "name": "Obubra/Etung",
+  "composition": "The entire Geographical Area of Obubra and Etung L.G.As",
+  "lgas": [
+   "OBUBRA",
+   "ETUNG"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 270
+  }
+ },
+ {
+  "code": "FC/083/CR",
+  "kind": "FC",
+  "state": "CROSS RIVER",
+  "name": "Ogoja/Yala",
+  "composition": "The entire Geographical Area of Ogoja and Yala L.G.As",
+  "lgas": [
+   "OGOJA",
+   "YALA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 271
+  }
+ },
+ {
+  "code": "FC/084/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Aniocha North/Aniocha South/ Oshimili North & South",
+  "composition": "The entire Geographical Area of Aniocha North, Aniocha South and Oshimili North and South L.G.As",
+  "lgas": [
+   "ANIOCHA NORTH",
+   "ANIOCHA - SOUTH",
+   "OSHIMILI - NORTH",
+   "OSHIMILI - SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 298
+  }
+ },
+ {
+  "code": "FC/085/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Bomadi/Patani",
+  "composition": "The entire Geographical Area of Bomadi and Patani L.G.As",
+  "lgas": [
+   "BOMADI",
+   "PATANI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 299
+  }
+ },
+ {
+  "code": "FC/086/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Ethiope East/Ethiope West",
+  "composition": "The entire Geographical Area of Ethiope East and Ethiope West L.G.As",
+  "lgas": [
+   "ETHIOPE EAST",
+   "ETHIOPE WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 300
+  }
+ },
+ {
+  "code": "FC/087/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Ika North East/Ika South",
+  "composition": "The entire Geographical Area of Ika North and Ika South LGAs",
+  "lgas": [
+   "IKA NORTH- EAST",
+   "IKA - SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "name",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 301
+  }
+ },
+ {
+  "code": "FC/088/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Isoko North/Isoko South",
+  "composition": "The entire Geographical Area of Isoko North and Isoko South L.G.As",
+  "lgas": [
+   "ISOKO NORTH",
+   "ISOKO SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 302
+  }
+ },
+ {
+  "code": "FC/089/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Nkokwa East/Ndokwa West/ Ukwuani",
+  "composition": "The entire Geographical Area of Nkokwa East, Ndokwa West and Ukwuani L.G.As",
+  "lgas": [
+   "NDOKWA EAST",
+   "NDOKWA WEST",
+   "UKWUANI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 303
+  }
+ },
+ {
+  "code": "FC/090/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Okpe/Sapele/Uvwie",
+  "composition": "The entire Geographical Area of Okpe/Sapele/Uvwie L.G.As",
+  "lgas": [
+   "OKPE",
+   "SAPELE",
+   "UVWIE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 304
+  }
+ },
+ {
+  "code": "FC/091/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Burutu",
+  "composition": "The entire Geographical Area of Burutu L.G.A",
+  "lgas": [
+   "BURUTU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 305
+  }
+ },
+ {
+  "code": "FC/092/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Ughelli North, Ughelli South/Udu",
+  "composition": "The entire Geographical Area ofUghelli North/Ughelli South/Udu L.G.As",
+  "lgas": [
+   "UGHELLI NORTH",
+   "UGHELLI SOUTH",
+   "UDU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 306
+  }
+ },
+ {
+  "code": "FC/093/DT",
+  "kind": "FC",
+  "state": "DELTA",
+  "name": "Warri North/Warri South/ Warri South West",
+  "composition": "The entire Geographical Area of Warri North, Warri South and Warri South West L.G.As",
+  "lgas": [
+   "WARRI NORTH",
+   "WARRI SOUTH",
+   "WARRI SOUTH WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 307
+  }
+ },
+ {
+  "code": "FC/094/EB",
+  "kind": "FC",
+  "state": "EBONYI",
+  "name": "Ebonyi/Ohaukwu",
+  "composition": "The entire Geographical Area of Ebonyi/Ohaukwu L.G.As",
+  "lgas": [
+   "EBONYI",
+   "OHAUKWU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 330
+  }
+ },
+ {
+  "code": "FC/095/EB",
+  "kind": "FC",
+  "state": "EBONYI",
+  "name": "Abakaliki/Izzi",
+  "composition": "The entire Geographical Area of Abakaliki/ Izzi L.G.As",
+  "lgas": [
+   "ABAKALIKI",
+   "IZZI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 331
+  }
+ },
+ {
+  "code": "FC/096/EB",
+  "kind": "FC",
+  "state": "EBONYI",
+  "name": "Ezza North/Ishielu",
+  "composition": "The entire Geographical Area of Ezza North/Ishielu L.G.As",
+  "lgas": [
+   "EZZA NORTH",
+   "ISHIELU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 332
+  }
+ },
+ {
+  "code": "FC/097/EB",
+  "kind": "FC",
+  "state": "EBONYI",
+  "name": "Ezza South/Ikwo",
+  "composition": "The entire Geographical Area of Ezza South/Ikwo L.G.As",
+  "lgas": [
+   "EZZA SOUTH",
+   "IKWO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 333
+  }
+ },
+ {
+  "code": "FC/098/EB",
+  "kind": "FC",
+  "state": "EBONYI",
+  "name": "Ivo-Ohaozara/Onicha",
+  "composition": "The entire Geographical Area of Ivo-Ohaozara/Onicha L.G.As",
+  "lgas": [
+   "IVO",
+   "OHAOZARA",
+   "ONICHA"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 334
+  }
+ },
+ {
+  "code": "FC/099/EB",
+  "kind": "FC",
+  "state": "EBONYI",
+  "name": "Afikpo North/Afikpo South",
+  "composition": "The entire Geographical Area of Afikpo North/Afikpo South L.G.As",
+  "lgas": [
+   "AFIKPO",
+   "EDDA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 335
+  }
+ },
+ {
+  "code": "FC/100/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Akoko-Edo",
+  "composition": "The entire Geographical Area of Akoko-Edo L.G.A",
+  "lgas": [
+   "AKOKO EDO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 367
+  }
+ },
+ {
+  "code": "FC/101/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Esan Central/Esan South/ Igueben",
+  "composition": "The entire Geographical Area of Esan Central/Esan South/Igueben L.G.As",
+  "lgas": [
+   "ESAN CENTRAL",
+   "ESAN WEST",
+   "IGUEBEN"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 368
+  }
+ },
+ {
+  "code": "FC/102/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Esan North East/Esan South East",
+  "composition": "The entire Geographical Area of Esan North East/Esan South East L.G.As",
+  "lgas": [
+   "ESAN NORTH EAST",
+   "ESAN SOUTH EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 369
+  }
+ },
+ {
+  "code": "FC/103/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Etsako East/Etsako West/ Etsako Central",
+  "composition": "The entire Geographical Area of Etsako East/Etsako West/Etsako Central L.G.As",
+  "lgas": [
+   "ETSAKO EAST",
+   "ETSAKO WEST",
+   "ETSAKO CENTRAL"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 370
+  }
+ },
+ {
+  "code": "FC/104/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Egor/Ikpoba-Okha",
+  "composition": "The entire Geographical Area of Egor/Ikpoba-Okha L.G.As",
+  "lgas": [
+   "EGOR",
+   "IKPOBA/OKHA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 371
+  }
+ },
+ {
+  "code": "FC/105/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Oredo",
+  "composition": "The entire Geographical Area of Oredo L.G.A",
+  "lgas": [
+   "OREDO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 372
+  }
+ },
+ {
+  "code": "FC/106/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Orhionmwon/Uhunmwonde",
+  "composition": "The entire Geographical Area of Orhionmwon/Uhunmwonde L.G.As",
+  "lgas": [
+   "ORHIONMWON",
+   "UHUNMWODE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 373
+  }
+ },
+ {
+  "code": "FC/107/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Ovia North East/Ovia South West",
+  "composition": "The entire Geographical Area of Ovia North East/Ovia South West L.G.As",
+  "lgas": [
+   "OVIA NORTH EAST",
+   "OVIA SOUTH WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 374
+  }
+ },
+ {
+  "code": "FC/108/ED",
+  "kind": "FC",
+  "state": "EDO",
+  "name": "Owan East/Owan West",
+  "composition": "The entire Geographical Area of Owan East/Owan West L.G.As",
+  "lgas": [
+   "OWAN EAST",
+   "OWAN WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 375
+  }
+ },
+ {
+  "code": "FC/109/EK",
+  "kind": "FC",
+  "state": "EKITI",
+  "name": "Ado Ekiti/Irepodun/Ifelodun",
+  "composition": "The entire Geographical Area of Ado Ekiti/Irepodun/Ifelodun L.G.As",
+  "lgas": [
+   "ADO EKITI",
+   "IREPODUN / IFELODUN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 402
+  }
+ },
+ {
+  "code": "FC/110/EK",
+  "kind": "FC",
+  "state": "EKITI",
+  "name": "Ekiti South West/Ikere/Orun/ Ise",
+  "composition": "The entire Geographical Area of Ekiti South West/Ikere/Orun Ise L.G.As",
+  "lgas": [
+   "EKITI SOUTH WEST",
+   "IKERE",
+   "ISE / ORUN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 403
+  }
+ },
+ {
+  "code": "FC/111/EK",
+  "kind": "FC",
+  "state": "EKITI",
+  "name": "Emure/Gbonyin/Ekiti East",
+  "composition": "The entire Geographical Area of Emure/Gboyin/Ekiti East L.G.As",
+  "lgas": [
+   "EMURE",
+   "AIYEKIRE",
+   "EKITI EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 404
+  }
+ },
+ {
+  "code": "FC/112/EK",
+  "kind": "FC",
+  "state": "EKITI",
+  "name": "Ido/Osi, Moba/Ilejeme",
+  "composition": "The entire Geographical Area of Ido Osi/Moba/Ilejemeje L.G.As",
+  "lgas": [
+   "IDO / OSI",
+   "MOBA",
+   "ILEJEMEJE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 405
+  }
+ },
+ {
+  "code": "FC/113/EK",
+  "kind": "FC",
+  "state": "EKITI",
+  "name": "Ijero/Ekiti West/Efon",
+  "composition": "The entire Geographical Area of Ijero/Ekiti West/Efon L.G.As",
+  "lgas": [
+   "IJERO",
+   "EKITI WEST",
+   "EFON"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 406
+  }
+ },
+ {
+  "code": "FC/114/EK",
+  "kind": "FC",
+  "state": "EKITI",
+  "name": "Ikole/Oye",
+  "composition": "The entire Geographical Area of Ikole/Oye L.G.As",
+  "lgas": [
+   "IKOLE",
+   "OYE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 407
+  }
+ },
+ {
+  "code": "FC/115/EN",
+  "kind": "FC",
+  "state": "ENUGU",
+  "name": "Aninri/Awgu/Oji River",
+  "composition": "The entire Geographical Area of Aniniri/Awgu/Oji River L.G.As",
+  "lgas": [
+   "ANINRI",
+   "AWGU",
+   "OJI-RIVER"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 437
+  }
+ },
+ {
+  "code": "FC/116/EN",
+  "kind": "FC",
+  "state": "ENUGU",
+  "name": "Enugu East/Isi Uzo",
+  "composition": "The entire Geographical Area of Enugu East/Isi Uzo L.G.As",
+  "lgas": [
+   "ENUGU EAST",
+   "ISI UZO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 438
+  }
+ },
+ {
+  "code": "FC/117/EN",
+  "kind": "FC",
+  "state": "ENUGU",
+  "name": "Enugu North/Enugu South",
+  "composition": "The entire Geographical Area ofEnugu North/Enugu South L.G.As",
+  "lgas": [
+   "ENUGU NORTH",
+   "ENUGU SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 439
+  }
+ },
+ {
+  "code": "FC/118/EN",
+  "kind": "FC",
+  "state": "ENUGU",
+  "name": "Ezeagu/Udi",
+  "composition": "The entire Geographical Area of Ezeagu/Udi L.G.As",
+  "lgas": [
+   "EZEAGU",
+   "UDI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 440
+  }
+ },
+ {
+  "code": "FC/119/EN",
+  "kind": "FC",
+  "state": "ENUGU",
+  "name": "Igbo-Etiti/Uzo-Uwani",
+  "composition": "The entire Geographical Area of Igbo-Etiti/Uzo-Uwani L.G.As",
+  "lgas": [
+   "IGBO ETITI",
+   "UZO-UWANI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 441
+  }
+ },
+ {
+  "code": "FC/120/EN",
+  "kind": "FC",
+  "state": "ENUGU",
+  "name": "Igbo-Eze North/Udenu",
+  "composition": "The entire Geographical Area of Igbo-Eze North/Udenu L.G.As",
+  "lgas": [
+   "IGBO EZE NORTH",
+   "UDENU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 442
+  }
+ },
+ {
+  "code": "FC/121/EN",
+  "kind": "FC",
+  "state": "ENUGU",
+  "name": "Nkanu East/Nkanu West",
+  "composition": "The entire Geographical Area of Nkanu East/Nkanu West L.G.As",
+  "lgas": [
+   "NKANU EAST",
+   "NKANU WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 443
+  }
+ },
+ {
+  "code": "FC/122/EN",
+  "kind": "FC",
+  "state": "ENUGU",
+  "name": "Nsukka/Igbo-Eze South",
+  "composition": "The entire Geographical Area of Nsukka/Igbo-Eze South L.G.As",
+  "lgas": [
+   "NSUKKA",
+   "IGBO EZE SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 444
+  }
+ },
+ {
+  "code": "FC/123/GM",
+  "kind": "FC",
+  "state": "GOMBE",
+  "name": "Akko",
+  "composition": "The entire Geographical Area of Ako L.G.A",
+  "lgas": [
+   "AKKO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 472
+  }
+ },
+ {
+  "code": "FC/124/GM",
+  "kind": "FC",
+  "state": "GOMBE",
+  "name": "Yamaltu/Deba",
+  "composition": "The entire Geographical Area of Yamaltu Delba L.G.A",
+  "lgas": [
+   "YALMALTU/ DEBA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 473
+  }
+ },
+ {
+  "code": "FC/125/GM",
+  "kind": "FC",
+  "state": "GOMBE",
+  "name": "Balanga/Billiri",
+  "composition": "The entire Geographical Area of Balanga/Billiri L.G.As",
+  "lgas": [
+   "BALANGA",
+   "BILLIRI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 474
+  }
+ },
+ {
+  "code": "FC/126/GM",
+  "kind": "FC",
+  "state": "GOMBE",
+  "name": "Kaltungo/Shongom",
+  "composition": "The entire Geographical Area of Kaltungo/Shongom L.G.As",
+  "lgas": [
+   "KALTUNGO",
+   "SHONGOM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 475
+  }
+ },
+ {
+  "code": "FC/127/GM",
+  "kind": "FC",
+  "state": "GOMBE",
+  "name": "Gombe/Kwami/Funakaye",
+  "composition": "The entire Geographical Area of Gombe/Kwami/Funakaye L.G.As",
+  "lgas": [
+   "GOMBE",
+   "KWAMI",
+   "FUNAKAYE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 476
+  }
+ },
+ {
+  "code": "FC/128/GM",
+  "kind": "FC",
+  "state": "GOMBE",
+  "name": "Dukku/Nafada",
+  "composition": "The entire Geographical Area of Dukku/Nafada L.G.As",
+  "lgas": [
+   "DUKKU",
+   "NAFADA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 477
+  }
+ },
+ {
+  "code": "FC/129/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Ehime Mbano/Ihite-Uboma/ Obowo",
+  "composition": "The entire Geographical Area of Ehime Mbano/Ihite-Uboma/Obowo L.G.As",
+  "lgas": [
+   "EHIME MBANO",
+   "IHITTE UBOMA",
+   "OBOWO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 510
+  }
+ },
+ {
+  "code": "FC/130/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Isiala Mbano/Okigwe/Onuimo",
+  "composition": "The entire Geographical Area of Isiala Mbano/Okigwe/Onuimo L.G.As",
+  "lgas": [
+   "ISIALA MBANO",
+   "OKIGWE",
+   "ONUIMO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 511
+  }
+ },
+ {
+  "code": "FC/131/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Ideato North/Ideato South",
+  "composition": "The entire Geographical Area of Ideato North/ Ideato South L.G.As",
+  "lgas": [
+   "IDEATO NORTH",
+   "IDEATO SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 512
+  }
+ },
+ {
+  "code": "FC/132/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Isu/Njaba/Nkwerre/Nwangele",
+  "composition": "The entire Geographical Area of Isu/Njaba/Nkwerre/Nwagele L.G.As",
+  "lgas": [
+   "ISU",
+   "NJABA",
+   "NKWERRE",
+   "NWANGELE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 513
+  }
+ },
+ {
+  "code": "FC/133/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Oguta/Ohaji-Egbema/Oru West",
+  "composition": "The entire Geographical Area of Oguta/Ohajji-Egbema/Oru West L.G.s",
+  "lgas": [
+   "OGUTA",
+   "OHAJI EGBEMA",
+   "ORU WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 514
+  }
+ },
+ {
+  "code": "FC/134/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Oru East/Orsu/Orlu",
+  "composition": "The entire Geographical Area of Oru East/Orsu/Orlu L.G.As",
+  "lgas": [
+   "ORU EAST",
+   "ORSU",
+   "ORLU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 515
+  }
+ },
+ {
+  "code": "FC/135/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Aboh Mbaise/Ngor Okpala",
+  "composition": "The entire Geographical Area of Aboh Mbaise/Ngor Okpala L.G.As",
+  "lgas": [
+   "ABOH MBAISE",
+   "NGOR OKPALA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 516
+  }
+ },
+ {
+  "code": "FC/136/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Ahiazu Mbaise/Ezinihitte",
+  "composition": "The entire Geographical Area of Ahiazu Mbaise/Ezinihitte L.G.As",
+  "lgas": [
+   "AHIAZU MBAISE",
+   "EZINIHITTE MBAISE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 517
+  }
+ },
+ {
+  "code": "FC/137/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Ikeduru/Mbaitoli",
+  "composition": "The entire Geographical Area of Ikeduru/Mbaitoli L.G.As",
+  "lgas": [
+   "IKEDURU",
+   "MBAITOLI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 518
+  }
+ },
+ {
+  "code": "FC/138/IM",
+  "kind": "FC",
+  "state": "IMO",
+  "name": "Owerri Municipal/Owerri North/Owerri West",
+  "composition": "The entire Geographical Area of Owerri Municipal/Owerri North/Owerri West L.G.As",
+  "lgas": [
+   "OWERRI MUNICIPAL",
+   "OWERRI NORTH",
+   "OWERRI WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 519
+  }
+ },
+ {
+  "code": "FC/139/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Babura/Garki",
+  "composition": "The entire Geographical Area ofBabura/Garki L.G.As",
+  "lgas": [
+   "BABURA",
+   "GARKI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 543
+  }
+ },
+ {
+  "code": "FC/140/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Birnin Kudu/Buji",
+  "composition": "The entire Geographical Area of Birnin Kudu/Buji L.G.As",
+  "lgas": [
+   "BIRNIN KUDU",
+   "BUJI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 544
+  }
+ },
+ {
+  "code": "FC/141/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Birniwa Guri/Kirikasamma",
+  "composition": "The entire Geographical Area of Birniwa Guri/Kirikasamma L.G.As",
+  "lgas": [
+   "BIRNIWA",
+   "GURI",
+   "KIRIKA SAMMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 545
+  }
+ },
+ {
+  "code": "FC/142/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Dutse/Kiyawa",
+  "composition": "The entire Geographical Area of Dutse/Kiyawa L.G.As",
+  "lgas": [
+   "DUTSE",
+   "KIYAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 546
+  }
+ },
+ {
+  "code": "FC/143/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Gwaram",
+  "composition": "The entire Geographical Area of Gwaram L.G.As",
+  "lgas": [
+   "GWARAM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 547
+  }
+ },
+ {
+  "code": "FC/144/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Gumel/Maigatari/Sule Tankarkar/Gagarawa",
+  "composition": "The entire Geographical Area of Gumel/Maigatari/Sule Tankarkar/Gagarawa L.G.As",
+  "lgas": [
+   "GUMEL",
+   "MAIGATARI",
+   "SULE-TANKARKAR",
+   "GAGARAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 548
+  }
+ },
+ {
+  "code": "FC/145/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Hadejia/Kafin Hausa",
+  "composition": "The entire Geographical Area of Hadejia/Kafin Hausa L.G.As",
+  "lgas": [
+   "HADEJIA",
+   "KAFIN HAUSA",
+   "AUYO"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 549
+  }
+ },
+ {
+  "code": "FC/146/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Jahun/Miga",
+  "composition": "The entire Geographical Area of Jahun/Miga L.G.As",
+  "lgas": [
+   "JAHUN",
+   "MIGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 550
+  }
+ },
+ {
+  "code": "FC/147/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Mallam Madori/Kaugama",
+  "composition": "The entire Geographical Area of Mallam Madori/ Kaugama L.G.As",
+  "lgas": [
+   "MALAM MADORI",
+   "KAUGAMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 551
+  }
+ },
+ {
+  "code": "FC/148/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Kazaure/Roni/Gwiwa/Yankwashi",
+  "composition": "The entire Geographical Area of Kazaure/Roni/Gwiwa/Yankwashi L.G.As",
+  "lgas": [
+   "KAZAURE",
+   "RONI",
+   "GWIWA",
+   "YANKWASHI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 552
+  }
+ },
+ {
+  "code": "FC/149/JG",
+  "kind": "FC",
+  "state": "JIGAWA",
+  "name": "Ringim/Taura",
+  "composition": "The entire Geographical Area of Ringim/Taura L.G.As",
+  "lgas": [
+   "RINGIM",
+   "TAURA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 553
+  }
+ },
+ {
+  "code": "FC/150/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Kaduna North",
+  "composition": "The entire Geographical Area of Kaduna North L.G.A",
+  "lgas": [
+   "KADUNA NORTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 578
+  }
+ },
+ {
+  "code": "FC/151/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Zaria",
+  "composition": "The entire Geographical Area of Zaria L.G.A",
+  "lgas": [
+   "ZARIA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 579
+  }
+ },
+ {
+  "code": "FC/152/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Soba",
+  "composition": "The entire Geographical Area of Soba L.G.A",
+  "lgas": [
+   "SOBA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 580
+  }
+ },
+ {
+  "code": "FC/153/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Igabi",
+  "composition": "The entire Geographical Area of Igabi L.G.A",
+  "lgas": [
+   "IGABI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 581
+  }
+ },
+ {
+  "code": "FC/154/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Ikara/Kubau",
+  "composition": "The entire Geographical Area of Ikara/Kubau L.G.As",
+  "lgas": [
+   "IKARA",
+   "KUBAU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 582
+  }
+ },
+ {
+  "code": "FC/155/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Makarfi/Kudan",
+  "composition": "The entire Geographical Area of Makarfi/Kudan L.G.As",
+  "lgas": [
+   "MAKARFI",
+   "KUDAN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 583
+  }
+ },
+ {
+  "code": "FC/156/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Lere",
+  "composition": "The entire Geographical Area of Lere L.G.A",
+  "lgas": [
+   "LERE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 584
+  }
+ },
+ {
+  "code": "FC/157/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Kachia/Kagarko",
+  "composition": "The entire Geographical Area of Kachia/Kagarko L.G.As",
+  "lgas": [
+   "KACHIA",
+   "KAGARKO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 585
+  }
+ },
+ {
+  "code": "FC/158/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Chikun/Kajuru",
+  "composition": "The entire Geographical Area of Chikun/Kajuru L.G.As",
+  "lgas": [
+   "CHIKUN",
+   "KAJURU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 586
+  }
+ },
+ {
+  "code": "FC/159/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Jema’a/Sanga",
+  "composition": "The entire Geographical Area of Jema'a/Sanga LGAs",
+  "lgas": [
+   "JEMA'A",
+   "SANGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 587
+  }
+ },
+ {
+  "code": "FC/160/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Birnin Gwari/Giwa",
+  "composition": "The entire Geographical Area of Birnin Gwari/Giwa L.G.As",
+  "lgas": [
+   "BIRNIN GWARI",
+   "GIWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 588
+  }
+ },
+ {
+  "code": "FC/161/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Sabon Gari",
+  "composition": "The entire Geographical Area of Sabon Gari L.G.A",
+  "lgas": [
+   "SABON GARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 589
+  }
+ },
+ {
+  "code": "FC/162/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Kaduna South",
+  "composition": "The entire Geographical Area of Kaduna South L.G.A",
+  "lgas": [
+   "KADUNA SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 590
+  }
+ },
+ {
+  "code": "FC/163/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Kaura",
+  "composition": "The entire Geographical Area of Kaura L.G.A",
+  "lgas": [
+   "KAURA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 591
+  }
+ },
+ {
+  "code": "FC/164/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Kauru",
+  "composition": "The entire Geographical Area of Kauru L.G.A",
+  "lgas": [
+   "KAURU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 592
+  }
+ },
+ {
+  "code": "FC/165/KD",
+  "kind": "FC",
+  "state": "KADUNA",
+  "name": "Zangon Kataf/Jaba",
+  "composition": "The entire Geographical Area of Zangon Kataf/Jaba L.G.As",
+  "lgas": [
+   "ZANGON KATAF",
+   "JABA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 593
+  }
+ },
+ {
+  "code": "FC/166/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Alabasu/Gaya/Ajingi",
+  "composition": "The entire Geographical Area of Alabasu/Gaya/Ajingi L.G.As",
+  "lgas": [
+   "ALBASU",
+   "GAYA",
+   "AJINGI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 613
+  }
+ },
+ {
+  "code": "FC/167/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Shanono/Bagwai",
+  "composition": "The entire Geographical Area of Shanono/Bagwai L.G.As",
+  "lgas": [
+   "SHANONO",
+   "BAGWAI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 614
+  }
+ },
+ {
+  "code": "FC/168/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Bebeji/Kiru",
+  "composition": "The entire Geographical Area of Bebeji/Kiru L.G.As",
+  "lgas": [
+   "BEBEJI",
+   "KIRU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 615
+  }
+ },
+ {
+  "code": "FC/169/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Bichi",
+  "composition": "The entire Geographical Area of Bichi L.G.A",
+  "lgas": [
+   "BICHI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 616
+  }
+ },
+ {
+  "code": "FC/170/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Rano/Bunkure/Kibiya",
+  "composition": "The entire Geographical Area of Rano/Bunkure/Kibiya L.G.As",
+  "lgas": [
+   "RANO",
+   "BUNKURE",
+   "KIBIYA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 617
+  }
+ },
+ {
+  "code": "FC/171/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Dala",
+  "composition": "The entire Geographical Area of Dala L.G.A",
+  "lgas": [
+   "DALA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 618
+  }
+ },
+ {
+  "code": "FC/172/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Gwale",
+  "composition": "The entire Geographical Area of Gwale L.G.A",
+  "lgas": [
+   "GWALE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 619
+  }
+ },
+ {
+  "code": "FC/173/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Dambatta/Makoda",
+  "composition": "The entire Geographical Area of Damatta/Makoda L.G.As",
+  "lgas": [
+   "DANBATA",
+   "MAKODA"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 620
+  }
+ },
+ {
+  "code": "FC/174/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Dawakin Kudu/Warawa",
+  "composition": "The entire Geographical Area of Dawakin Kudu/Warawa L.G.s",
+  "lgas": [
+   "DAWAKI KUDU",
+   "WARAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 621
+  }
+ },
+ {
+  "code": "FC/175/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Dawakin Tofa/Tofa/Rimin Gado",
+  "composition": "The entire Geographical Area of Dawakin Tofa/Tofa/Rimin Gado L.G.As",
+  "lgas": [
+   "DAWAKI TOFA",
+   "TOFA",
+   "RIMIN GADO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 622
+  }
+ },
+ {
+  "code": "FC/176/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Doguwa/Tudun Wada",
+  "composition": "The entire Geographical Area of Doguwa/Tudun Wada L.G.As",
+  "lgas": [
+   "DOGUWA",
+   "TUDUN WADA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 623
+  }
+ },
+ {
+  "code": "FC/177/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Gezawa/Gabasawa",
+  "composition": "The entire Geographical Area of Gezawa/Gabasawa L.G.As",
+  "lgas": [
+   "GEZAWA",
+   "GABASAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 624
+  }
+ },
+ {
+  "code": "FC/178/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Gwarzo/Ikabo",
+  "composition": "The entire Geographical Area of Gwarzo/Ikabo L.G.As",
+  "lgas": [
+   "GWARZO",
+   "KABO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 625
+  }
+ },
+ {
+  "code": "FC/179/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Municipal",
+  "composition": "The entire Geographical Area of Municipal L.G.A",
+  "lgas": [
+   "KANO MUNICIPAL"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 626
+  }
+ },
+ {
+  "code": "FC/180/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Tarauni",
+  "composition": "The entire Geographical Area of Tarauni L.G.A",
+  "lgas": [
+   "TARAUNI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 627
+  }
+ },
+ {
+  "code": "FC/181/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Karaye/Rogo",
+  "composition": "The entire Geographical Area of Karaye/Rogo L.G.As",
+  "lgas": [
+   "KARAYE",
+   "ROGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 628
+  }
+ },
+ {
+  "code": "FC/182/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Kumbotso",
+  "composition": "The entire Geographical Area of Kumbotso L.G.A",
+  "lgas": [
+   "KUMBOTSO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 629
+  }
+ },
+ {
+  "code": "FC/183/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Kura/Madobi/Garun Mallam",
+  "composition": "The entire Geographical Area of Kura/Madobi/Garun Mallam L.G.As",
+  "lgas": [
+   "KURA",
+   "MADOBI",
+   "GARUN MALAM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 630
+  }
+ },
+ {
+  "code": "FC/184/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Nassarawa",
+  "composition": "The entire Geographical Area of Nasarawa L.G.A",
+  "lgas": [
+   "NASARAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 631
+  }
+ },
+ {
+  "code": "FC/185/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Fagge",
+  "composition": "The entire Geographical Area of Fagge L.G.A",
+  "lgas": [
+   "FAGGE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 632
+  }
+ },
+ {
+  "code": "FC/186/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Sumaila/Takai",
+  "composition": "The entire Geographical Area of Sumaila/Takai L.G.As",
+  "lgas": [
+   "SUMAILA",
+   "TAKAI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 633
+  }
+ },
+ {
+  "code": "FC/187/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Minjibir/Ungogo",
+  "composition": "The entire Geographical Area of Minjibir/Ungogo L.G.As",
+  "lgas": [
+   "MINJIBIR",
+   "UNGOGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 634
+  }
+ },
+ {
+  "code": "FC/188/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Tsanyawa/Kunchi",
+  "composition": "The entire Geographical Area of Tsanyawa/Kunchi L.G.As",
+  "lgas": [
+   "TSANYAWA",
+   "GHARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 635
+  }
+ },
+ {
+  "code": "FC/189/KN",
+  "kind": "FC",
+  "state": "KANO",
+  "name": "Wudil/Garko",
+  "composition": "The entire Geographical Area of Wudil/Garko L.G.As",
+  "lgas": [
+   "WUDIL",
+   "GARKO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 636
+  }
+ },
+ {
+  "code": "FC/190/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Bakori/Danja",
+  "composition": "The entire Geographical Area of Bakori/Danja L.G.As",
+  "lgas": [
+   "BAKORI",
+   "DANJA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 645
+  }
+ },
+ {
+  "code": "FC/191/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Batagarawa/Charanchi/Rimi",
+  "composition": "The entire Geographical Area ofBatagarawa/Charanchi/Rimi L.G.As",
+  "lgas": [
+   "BATAGARAWA",
+   "CHARANCHI",
+   "RIMI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 646
+  }
+ },
+ {
+  "code": "FC/192/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Batsari/Safana/Danmusa",
+  "composition": "The entire Geographical Area of Batsari/Safana/Danmusa L.G.As",
+  "lgas": [
+   "BATSARI",
+   "SAFANA",
+   "DAN MUSA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 647
+  }
+ },
+ {
+  "code": "FC/193/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Bindawa/Mani",
+  "composition": "The entire Geographical Area of Bindawa/Mani L.G.As",
+  "lgas": [
+   "BINDAWA",
+   "MANI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 648
+  }
+ },
+ {
+  "code": "FC/194/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Daura/Sandamu/Mai’adua",
+  "composition": "The entire Geographical Area of Daura/Sandamu/Mai'adua L.G.As",
+  "lgas": [
+   "DAURA",
+   "SANDAMU",
+   "MAI'ADUA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 649
+  }
+ },
+ {
+  "code": "FC/195/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Dutsin-ma/Kurfi",
+  "composition": "The entire Geographical Area of Dutsin-ma/Kurfi L.G.As",
+  "lgas": [
+   "DUTSIN-MA",
+   "KURFI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 650
+  }
+ },
+ {
+  "code": "FC/196/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Faskari/Kankara/Sabuwa",
+  "composition": "The entire Geographical Area of Faskari/Kankara/Sabuwa L.G.As",
+  "lgas": [
+   "FASKARI",
+   "KANKARA",
+   "SABUWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 651
+  }
+ },
+ {
+  "code": "FC/197/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Funtua/Dandume",
+  "composition": "The entire Geographical Area of Funtua/Dandume L.G.As",
+  "lgas": [
+   "FUNTUA",
+   "DANDUME"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 652
+  }
+ },
+ {
+  "code": "FC/198/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Ingawa/Kankia/Kusada",
+  "composition": "The entire Geographical Area of Ingwa/Kankia/Kusada L.G.As",
+  "lgas": [
+   "INGAWA",
+   "KANKIA",
+   "KUSADA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 653
+  }
+ },
+ {
+  "code": "FC/199/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Jibia/Kaita",
+  "composition": "The entire Geographical Area of Jibia/aita L.G.As",
+  "lgas": [
+   "JIBIA",
+   "KAITA"
+  ],
+  "split_lga": null,
+  "resolved_by": "name",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 654
+  }
+ },
+ {
+  "code": "FC/200/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Malumfashi/Kafur",
+  "composition": "The entire Geographical Area of Malumfashi/Kafur L.G.As",
+  "lgas": [
+   "MALUFASHI",
+   "KAFUR"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 655
+  }
+ },
+ {
+  "code": "FC/201/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Katsina",
+  "composition": "The entire Geographical Area of Katsina L.G.A",
+  "lgas": [
+   "KATSINA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 656
+  }
+ },
+ {
+  "code": "FC/202/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Mashi/Dutsi",
+  "composition": "The entire Geographical Area of Mashi/Dutsi L.G.As",
+  "lgas": [
+   "MASHI",
+   "DUTSI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 657
+  }
+ },
+ {
+  "code": "FC/203/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Matazu/Musawa",
+  "composition": "The entire Geographical Area of Matazu/Musawa L.G.As",
+  "lgas": [
+   "MATAZU",
+   "MUSAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 658
+  }
+ },
+ {
+  "code": "FC/204/KT",
+  "kind": "FC",
+  "state": "KATSINA",
+  "name": "Zango/Baure",
+  "composition": "The entire Geographical Area of Zango/Baure L.G.As",
+  "lgas": [
+   "ZANGO",
+   "BAURE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 659
+  }
+ },
+ {
+  "code": "FC/205/KB",
+  "kind": "FC",
+  "state": "KEBBI",
+  "name": "Arewa/Dandi",
+  "composition": "The entire Geographical Area of Arewa/Dandi L.G.As",
+  "lgas": [
+   "AREWA",
+   "DANDI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 680
+  }
+ },
+ {
+  "code": "FC/206/KB",
+  "kind": "FC",
+  "state": "KEBBI",
+  "name": "Argungu/Augie",
+  "composition": "The entire Geographical Area of Argungu/Augie L.G.As",
+  "lgas": [
+   "ARGUNGU",
+   "AUGIE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 681
+  }
+ },
+ {
+  "code": "FC/207/KB",
+  "kind": "FC",
+  "state": "KEBBI",
+  "name": "Bagudo/Suru",
+  "composition": "The entire Geographical Area of Bagudo/Suru L.G.As",
+  "lgas": [
+   "BAGUDO",
+   "SURU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 682
+  }
+ },
+ {
+  "code": "FC/208/KB",
+  "kind": "FC",
+  "state": "KEBBI",
+  "name": "Bunza/Birnin Kebbi/Kalgo",
+  "composition": "The entire Geographical Area of Bunza/Birnin Kebbi/Kalgo L.G.As",
+  "lgas": [
+   "BUNZA",
+   "BIRNIN KEBBI",
+   "KALGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 683
+  }
+ },
+ {
+  "code": "FC/209/KB",
+  "kind": "FC",
+  "state": "KEBBI",
+  "name": "Aleiro/Gwandu/Jega",
+  "composition": "The entire Geographical Area of Aleiro/Gwandu/Jega L.G.As",
+  "lgas": [
+   "ALIERO",
+   "GWANDU",
+   "JEGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 684
+  }
+ },
+ {
+  "code": "FC/210/KB",
+  "kind": "FC",
+  "state": "KEBBI",
+  "name": "Koko-Besse/Maiyama",
+  "composition": "The entire Geographical Area of Koko-Besse/Maiyama L.G.As",
+  "lgas": [
+   "KOKO/BESSE",
+   "MAIYAMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 685
+  }
+ },
+ {
+  "code": "FC/211/KB",
+  "kind": "FC",
+  "state": "KEBBI",
+  "name": "Fakai/Sakaba/Wasagu/Danko/ Zuru",
+  "composition": "The entire Geographical Area of Fakai/Sakaba/Wasagu/Danko/Zuru L.G.As",
+  "lgas": [
+   "FAKAI",
+   "SAKABA",
+   "WASAGU/DANKO",
+   "ZURU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 686
+  }
+ },
+ {
+  "code": "FC/212/KB",
+  "kind": "FC",
+  "state": "KEBBI",
+  "name": "Ngaski/Shanga/Yauri",
+  "composition": "The entire Geographical Area of Ngaski/Shanga/Yauri L.G.As",
+  "lgas": [
+   "NGASKI",
+   "SHANGA",
+   "YAURI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 687
+  }
+ },
+ {
+  "code": "FC/213/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Adavi/Okehi",
+  "composition": "The entire Geographical Area of Adavi/Okehi L.G.As",
+  "lgas": [
+   "ADAVI",
+   "OKEHI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 716
+  }
+ },
+ {
+  "code": "FC/214/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Ankpa/Omala/Olamaboro",
+  "composition": "The entire Geographical Area of Ankpa/Omala/Olamabaro L.G.As",
+  "lgas": [
+   "ANKPA",
+   "OMALA",
+   "OLAMABORO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 717
+  }
+ },
+ {
+  "code": "FC/215/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Bassa/Dekina",
+  "composition": "The entire Geographical Area of Bassa/Dekina L.G.As",
+  "lgas": [
+   "BASSA",
+   "DEKINA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 718
+  }
+ },
+ {
+  "code": "FC/216/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Idah/Igalamela Odolu/Ibaji/ Ofu",
+  "composition": "The entire Geographical Area ofIdah/Igalamela Odolu/Ibaji/Ofu L.G.As",
+  "lgas": [
+   "IDAH",
+   "IGALAMELA/ODOLU",
+   "IBAJI",
+   "OFU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 719
+  }
+ },
+ {
+  "code": "FC/217/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Ijumu/Kabba-Bunu",
+  "composition": "The entire Geographical Area of Ijumu/Kabba-Bunu L.G.As",
+  "lgas": [
+   "IJUMU",
+   "KABBA/BUNU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 720
+  }
+ },
+ {
+  "code": "FC/218/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Ajaokuta",
+  "composition": "The entire Geographical Area of Ajaokuta L.G.A",
+  "lgas": [
+   "AJAOKUTA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 721
+  }
+ },
+ {
+  "code": "FC/219/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Kogi (Lokoja)/Kogi (K.K.)",
+  "composition": "The entire Geographical Area of Kogi (Lokoja)/Kogi (K.K.) L.G.As",
+  "lgas": [
+   "LOKOJA",
+   "KOGI . K. K."
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 722
+  }
+ },
+ {
+  "code": "FC/220/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Okene/Ogori-Magogo",
+  "composition": "The entire Geographical Area of Okene/Ogori-Magongo L.G.As",
+  "lgas": [
+   "OKENE",
+   "OGORI MANGOGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 723
+  }
+ },
+ {
+  "code": "FC/221/KG",
+  "kind": "FC",
+  "state": "KOGI",
+  "name": "Yagba East/Yagba West/ Mopamuro",
+  "composition": "The entire Geographical Area of Yagba East/Yagba West/Mopamuro L.G.As",
+  "lgas": [
+   "YAGBA EAST",
+   "YAGBA WEST",
+   "MOPA MORO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 724
+  }
+ },
+ {
+  "code": "FC/222/KW",
+  "kind": "FC",
+  "state": "KWARA",
+  "name": "Baruten/Kaiama",
+  "composition": "The entire Geographical Area of Baruten/Kaima L.G.As",
+  "lgas": [
+   "BARUTEN",
+   "KAIAMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 751
+  }
+ },
+ {
+  "code": "FC/223/KW",
+  "kind": "FC",
+  "state": "KWARA",
+  "name": "Edu/Moro/Pategi",
+  "composition": "The entire Geographical Area of Edu/Moro/Pategi L.G.As",
+  "lgas": [
+   "EDU",
+   "MORO",
+   "PATIGI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 752
+  }
+ },
+ {
+  "code": "FC/224/KW",
+  "kind": "FC",
+  "state": "KWARA",
+  "name": "Ekiti/Isin/Irepodun/Oke-Ero",
+  "composition": "The entire Geographical Area of Ekiti/Isin/Irepodun/Oke-Ero L.G.As",
+  "lgas": [
+   "EKITI",
+   "ISIN",
+   "IREPODUN",
+   "OKE - ERO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 753
+  }
+ },
+ {
+  "code": "FC/225/KW",
+  "kind": "FC",
+  "state": "KWARA",
+  "name": "Ilorin East/Ilorin South",
+  "composition": "The entire Geographical Area of Ilorin East/Ilorin South L.G.As",
+  "lgas": [
+   "ILORIN EAST",
+   "ILORIN-SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 754
+  }
+ },
+ {
+  "code": "FC/226/KW",
+  "kind": "FC",
+  "state": "KWARA",
+  "name": "Ilorin West/Asa",
+  "composition": "The entire Geographical Area of Ilorin West/Asa L.G.As",
+  "lgas": [
+   "ILORIN-WEST",
+   "ASA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 755
+  }
+ },
+ {
+  "code": "FC/227/KW",
+  "kind": "FC",
+  "state": "KWARA",
+  "name": "Ifelodun/Offa/Oyun",
+  "composition": "The entire Geographical Area of Ifelodun/Offa/Oyun L.G.As",
+  "lgas": [
+   "IFELODUN",
+   "OFFA",
+   "OYUN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 756
+  }
+ },
+ {
+  "code": "FC/228/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Agege",
+  "composition": "The entire Geographical Area of Agege L.G.A",
+  "lgas": [
+   "AGEGE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 786
+  }
+ },
+ {
+  "code": "FC/229/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Ifako/Ijaiye",
+  "composition": "The entire Geographical Area of Ifako- Ijaye L.G.A",
+  "lgas": [
+   "IFAKO-IJAYE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 787
+  }
+ },
+ {
+  "code": "FC/230/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Alimosho",
+  "composition": "The entire Geographical Area of Alimosho LGA",
+  "lgas": [
+   "ALIMOSHO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 788
+  }
+ },
+ {
+  "code": "FC/231/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Badagry",
+  "composition": "The entire Geographical Area of Badagry LGA",
+  "lgas": [
+   "BADAGRY"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 789
+  }
+ },
+ {
+  "code": "FC/232/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Epe",
+  "composition": "The entire Geographical Area of Epe LGA",
+  "lgas": [
+   "EPE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 790
+  }
+ },
+ {
+  "code": "FC/233/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Ibeju Lekki",
+  "composition": "The entire Geographical Area of Ibeju Lekki LGA",
+  "lgas": [
+   "IBEJU/LEKKI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 791
+  }
+ },
+ {
+  "code": "FC/234/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Eti-Osa",
+  "composition": "The entire Geographical Area of Eti-Osa LGA",
+  "lgas": [
+   "ETI-OSA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 792
+  }
+ },
+ {
+  "code": "FC/235/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Apapa",
+  "composition": "The entire Geographical Area of Apapa LGA",
+  "lgas": [
+   "APAPA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 793
+  }
+ },
+ {
+  "code": "FC/236/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Ikeja",
+  "composition": "The entire Geographical Area of Ikeja LGA",
+  "lgas": [
+   "IKEJA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 794
+  }
+ },
+ {
+  "code": "FC/237/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Ikorodu",
+  "composition": "The entire Geographical Area of Ikorodu LGA",
+  "lgas": [
+   "IKORODU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 795
+  }
+ },
+ {
+  "code": "FC/238/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Lagos Island I",
+  "composition": "Part of Lagos Island LGA",
+  "lgas": [
+   "LAGOS ISLAND"
+  ],
+  "split_lga": "LAGOS ISLAND",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 796
+  }
+ },
+ {
+  "code": "FC/239/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Lagos Island II",
+  "composition": "Part of Lagos Island LGA",
+  "lgas": [
+   "LAGOS ISLAND"
+  ],
+  "split_lga": "LAGOS ISLAND",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 797
+  }
+ },
+ {
+  "code": "FC/240/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Lagos Mainland",
+  "composition": "The entire Geographical Area of Lagos Mainland LGA",
+  "lgas": [
+   "LAGOS MAINLAND"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 798
+  }
+ },
+ {
+  "code": "FC/241/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Mushin I",
+  "composition": "Part of Mushin LGA",
+  "lgas": [
+   "MUSHIN"
+  ],
+  "split_lga": "MUSHIN",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 799
+  }
+ },
+ {
+  "code": "FC/242/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Mushin II",
+  "composition": "Part of Mushin LGA",
+  "lgas": [
+   "MUSHIN"
+  ],
+  "split_lga": "MUSHIN",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 800
+  }
+ },
+ {
+  "code": "FC/243/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Ojo",
+  "composition": "The entire Geographical Area of Ojo LGA",
+  "lgas": [
+   "OJO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 801
+  }
+ },
+ {
+  "code": "FC/244/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Amuwo-Odofin",
+  "composition": "The entire Geographical Area of Amuwo-Odofin LGA",
+  "lgas": [
+   "AMUWO-ODOFIN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 802
+  }
+ },
+ {
+  "code": "FC/245/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Ajeromi/Ifelodun",
+  "composition": "The entire Geographical Area of Ajeromi/Ifelodun LGA",
+  "lgas": [
+   "AJEROMI/IFELODUN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 803
+  }
+ },
+ {
+  "code": "FC/246/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Oshodi/Isolo I",
+  "composition": "Part of Oshodi/Isolo LGA",
+  "lgas": [
+   "OSHODI/ISOLO"
+  ],
+  "split_lga": "OSHODI/ISOLO",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 804
+  }
+ },
+ {
+  "code": "FC/247/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Oshodi/Isolo II",
+  "composition": "Part of Oshodi/Isolo LGA",
+  "lgas": [
+   "OSHODI/ISOLO"
+  ],
+  "split_lga": "OSHODI/ISOLO",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 805
+  }
+ },
+ {
+  "code": "FC/248/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Shomolu",
+  "composition": "The entire Geographical Area of Shomolu LGA",
+  "lgas": [
+   "SOMOLU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 806
+  }
+ },
+ {
+  "code": "FC/249/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Kosofe",
+  "composition": "The entire Geographical Area of Kosofe LGA",
+  "lgas": [
+   "KOSOFE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 807
+  }
+ },
+ {
+  "code": "FC/250/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Surulere I",
+  "composition": "Part of Surulere LGA",
+  "lgas": [
+   "SURULERE"
+  ],
+  "split_lga": "SURULERE",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 808
+  }
+ },
+ {
+  "code": "FC/251/LA",
+  "kind": "FC",
+  "state": "LAGOS",
+  "name": "Surulere II",
+  "composition": "Part of Surulere LGA",
+  "lgas": [
+   "SURULERE"
+  ],
+  "split_lga": "SURULERE",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 809
+  }
+ },
+ {
+  "code": "FC/252/NW",
+  "kind": "FC",
+  "state": "NASARAWA",
+  "name": "Akwanga/Nassarawa Eggon/ Wamba",
+  "composition": "The entire Geographical Area of Akwanga/Nasarawa-Egon/Wamba LGAs",
+  "lgas": [
+   "AKWANGA",
+   "NASARAWA EGGON",
+   "WAMBA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 814
+  }
+ },
+ {
+  "code": "FC/253/NW",
+  "kind": "FC",
+  "state": "NASARAWA",
+  "name": "Awe/Doma/Keana",
+  "composition": "The entire Geographical Area of Awe/Doma/Keana LGAs",
+  "lgas": [
+   "AWE",
+   "DOMA",
+   "KEANA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 815
+  }
+ },
+ {
+  "code": "FC/254/NW",
+  "kind": "FC",
+  "state": "NASARAWA",
+  "name": "Keffi/Karu/Kokona",
+  "composition": "The entire Geographical Area of Keffi/Karu/Kokona LGAs",
+  "lgas": [
+   "KEFFI",
+   "KARU",
+   "KOKONA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 816
+  }
+ },
+ {
+  "code": "FC/255/NW",
+  "kind": "FC",
+  "state": "NASARAWA",
+  "name": "Lafia/Obi",
+  "composition": "The entire Geographical Area of Lafia/Obi LGAs",
+  "lgas": [
+   "LAFIA",
+   "OBI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 817
+  }
+ },
+ {
+  "code": "FC/256/NW",
+  "kind": "FC",
+  "state": "NASARAWA",
+  "name": "Nassarawa/Toto",
+  "composition": "The entire Geographical Area of Nasarawa/Toto LGAs",
+  "lgas": [
+   "NASARAWA",
+   "TOTO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 818
+  }
+ },
+ {
+  "code": "FC/257/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Agaie/Lapai",
+  "composition": "The entire Geographical Area of Agaie/Lapai LGAs",
+  "lgas": [
+   "AGAIE",
+   "LAPAI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 852
+  }
+ },
+ {
+  "code": "FC/258/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Agwara/Borgu",
+  "composition": "The entire Geographical Area of Agwara/Borgu LGAs",
+  "lgas": [
+   "AGWARA",
+   "BORGU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 853
+  }
+ },
+ {
+  "code": "FC/259/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Bida/Gbako/Katcha",
+  "composition": "The entire Geographical Area of Bida/Gbako/Katcha LGAs",
+  "lgas": [
+   "BIDA",
+   "GBAKO",
+   "KATCHA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 854
+  }
+ },
+ {
+  "code": "FC/260/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Booso/Paikoro",
+  "composition": "The entire Geographical Area of Booso/Paikoro LGAs",
+  "lgas": [
+   "BOSSO",
+   "PAIKORO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 855
+  }
+ },
+ {
+  "code": "FC/261/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Chanchaga",
+  "composition": "The entire Geographical Area of Chanchaga LGA",
+  "lgas": [
+   "CHANCHAGA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 856
+  }
+ },
+ {
+  "code": "FC/262/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Gurara/Suleja/Tapa",
+  "composition": "The entire Geographical Area of Gurara/Suleja/Tapa LGAs",
+  "lgas": [
+   "GURARA",
+   "SULEJA",
+   "TAFA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 857
+  }
+ },
+ {
+  "code": "FC/263/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Lavun/Mokwa/Edati",
+  "composition": "The entire Geographical Area of Lavun/Mokwa/Edati LGAs",
+  "lgas": [
+   "LAVUN",
+   "MOKWA",
+   "EDATTI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 858
+  }
+ },
+ {
+  "code": "FC/264/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Magama/Rijau",
+  "composition": "The entire Geographical Area of Magama/Rijau LGAs",
+  "lgas": [
+   "MAGAMA",
+   "RIJAU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 859
+  }
+ },
+ {
+  "code": "FC/265/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Kontagora/Wushishi/Mariga/ Mashegu",
+  "composition": "The entire Geographical Area of Kontagora/Wushishi/Mariga/Mashegu LGAs",
+  "lgas": [
+   "KONTAGORA",
+   "WUSHISHI",
+   "MARIGA",
+   "MASHEGU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 860
+  }
+ },
+ {
+  "code": "FC/266/NG",
+  "kind": "FC",
+  "state": "NIGER",
+  "name": "Shiroro/Rafi/Munya",
+  "composition": "The entire Geographical Area of Shiroro/Rafi/Munya LGAs",
+  "lgas": [
+   "SHIRORO",
+   "RAFI",
+   "MUNYA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 861
+  }
+ },
+ {
+  "code": "FC/267/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Abeokuta North/ Obafemi- Owode/Odeda",
+  "composition": "The entire Geographical Area of Abeokuta North/Obafemi-Owode/Odeda LGAs",
+  "lgas": [
+   "ABEOKUTA NORTH",
+   "OBAFEMI/OWODE",
+   "ODEDA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 886
+  }
+ },
+ {
+  "code": "FC/268/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Abeokuta South",
+  "composition": "The entire Geographical Area of Abeokuta South LGA",
+  "lgas": [
+   "ABEOKUTA SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 887
+  }
+ },
+ {
+  "code": "FC/269/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Ado-Odo/Ota",
+  "composition": "The entire Geographical Area of Ado-Odo/Ota LGAs",
+  "lgas": [
+   "ADO ODO-OTA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 888
+  }
+ },
+ {
+  "code": "FC/270/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Egbado North/Imeko-Afon",
+  "composition": "The entire Geographical Area of Egbado North/Imeko-Afon LGAs",
+  "lgas": [
+   "YEWA NORTH",
+   "IMEKO/AFON"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 889
+  }
+ },
+ {
+  "code": "FC/271/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Egbado South/Ipokia",
+  "composition": "The entire Geographical Area of Egbado South/Ipokia LGAs",
+  "lgas": [
+   "YEWA SOUTH",
+   "IPOKIA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 890
+  }
+ },
+ {
+  "code": "FC/272/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Ifo/Ewekoro",
+  "composition": "The entire Geographical Area of Ifo/Ewekoro LGAs",
+  "lgas": [
+   "IFO",
+   "EWEKORO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 891
+  }
+ },
+ {
+  "code": "FC/273/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Ijebu North/Ijebu East/Ogun Waterside",
+  "composition": "The entire Geographical Area of Ijebu North/Ijebu East/Ogun Waterside LGAs",
+  "lgas": [
+   "IJEBU NORTH",
+   "IJEBU EAST",
+   "OGUN WATER SIDE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 892
+  }
+ },
+ {
+  "code": "FC/274/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Ijebu Ode /Odogbolu /Ijebu North East",
+  "composition": "The entire Geographical Area of Ijebu-Ode/Odogbolu/Ijebu North East LGAs",
+  "lgas": [
+   "IJEBU ODE",
+   "ODOGBOLU",
+   "IJEBU NORTH EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 893
+  }
+ },
+ {
+  "code": "FC/275/OG",
+  "kind": "FC",
+  "state": "OGUN",
+  "name": "Ikenne/Shagamu/Remo North",
+  "composition": "The entire Geographical Area of Ikenne/Shagamu/Remo North LGAs",
+  "lgas": [
+   "IKENNE",
+   "SAGAMU",
+   "REMO NORTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 894
+  }
+ },
+ {
+  "code": "FC/276/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Akoko North East/Akoko North West",
+  "composition": "The entire Geographical Area of Akoko North East/Akoko North West LGAs",
+  "lgas": [
+   "AKOKO NORTH EAST",
+   "AKOKO NORTH WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 923
+  }
+ },
+ {
+  "code": "FC/277/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Akoko South East/Akoko South West",
+  "composition": "The entire Geographical Area of Akoko South East/ Akoko South West LGAs",
+  "lgas": [
+   "AKOKO SOUTH EAST",
+   "AKOKO SOUTH WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 924
+  }
+ },
+ {
+  "code": "FC/278/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Akure North/Akure South",
+  "composition": "The entire Geographical Area of Akure North/Akure South LGAs",
+  "lgas": [
+   "AKURE NORTH",
+   "AKURE SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 925
+  }
+ },
+ {
+  "code": "FC/279/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Idanre/Ifedore",
+  "composition": "The entire Geographical Area of Idanre/Ifedore LGAs",
+  "lgas": [
+   "IDANRE",
+   "IFEDORE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 926
+  }
+ },
+ {
+  "code": "FC/280/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Ileoluji/Okeigbo/Odigbo",
+  "composition": "The entire Geographical Area of Ile- Oluji/Okeigbo/Odigbo LGAs",
+  "lgas": [
+   "ILEOLUJI/OKEIGBO",
+   "ODIGBO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 927
+  }
+ },
+ {
+  "code": "FC/281/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Okitipupa/Irele",
+  "composition": "The entire Geographical Area of Okitipupa/Irele LGAs",
+  "lgas": [
+   "OKITIPUPA",
+   "IRELE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 928
+  }
+ },
+ {
+  "code": "FC/282/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Eseodo/Ilaje",
+  "composition": "The entire Geographical Area of Eseodo/Ilaje LGAs",
+  "lgas": [
+   "ESE-ODO",
+   "ILAJE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 929
+  }
+ },
+ {
+  "code": "FC/283/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Ondo East/Ondo West",
+  "composition": "The entire Geographical Area of Ondo East/Ondo West LGAs",
+  "lgas": [
+   "ONDO EAST",
+   "ONDO WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 930
+  }
+ },
+ {
+  "code": "FC/284/OD",
+  "kind": "FC",
+  "state": "ONDO",
+  "name": "Owo/Ose",
+  "composition": "The entire Geographical Area of Owo/Ose LGAs",
+  "lgas": [
+   "OWO",
+   "OSE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 931
+  }
+ },
+ {
+  "code": "FC/285/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Irepodun/Olorunda/Osogbo/Orolu",
+  "composition": "The entire Geographical Area of Irepodun/Olorunda/Osogbo/Orolu LGAs",
+  "lgas": [
+   "IREPODUN",
+   "OLORUNDA",
+   "OSOGBO",
+   "OROLU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 959
+  }
+ },
+ {
+  "code": "FC/286/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Odo-Otin/Ifelodun/Boripe",
+  "composition": "The entire Geographical Area of Odo-Otin/Ifelodun/Boripe LGAs",
+  "lgas": [
+   "ODO-OTIN",
+   "IFELODUN",
+   "BORIPE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 960
+  }
+ },
+ {
+  "code": "FC/287/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Boluwaduro/Ifedayo/Ila",
+  "composition": "The entire Geographical Area of Boluwaduro/Ifedayo/Ila LGAs",
+  "lgas": [
+   "BOLUWADURO",
+   "IFEDAYO",
+   "ILA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 961
+  }
+ },
+ {
+  "code": "FC/288/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Atakunmosa East/ Atakunmosa West/Ilesha East/Ilesha West",
+  "composition": "The entire Geographical Area of Atakumosa East/Atakumosa West/Ilesha East/Ilesha West LGAs",
+  "lgas": [
+   "ATAKUMOSA EAST",
+   "ATAKUMOSA WEST",
+   "ILESA EAST",
+   "ILESA WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 962
+  }
+ },
+ {
+  "code": "FC/289/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Obokun/Oriade",
+  "composition": "The entire Geographical Area of Obokun/Oriade LGAs",
+  "lgas": [
+   "OBOKUN",
+   "ORIADE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 963
+  }
+ },
+ {
+  "code": "FC/290/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Ife Central/Ife North/Ife South/Ife East",
+  "composition": "The entire Geographical Area of Ife Central/Ife North/Ife South/Ife East LGAs",
+  "lgas": [
+   "IFE CENTRAL",
+   "IFE NORTH",
+   "IFE SOUTH",
+   "IFE EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 964
+  }
+ },
+ {
+  "code": "FC/291/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Ayedire/Iwo/Ola-Oluwa",
+  "composition": "The entire Geographical Area of Ayedire/Iwo/Ola-Oluwa LGAs",
+  "lgas": [
+   "AYEDIRE",
+   "IWO",
+   "OLA-OLUWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 965
+  }
+ },
+ {
+  "code": "FC/292/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Ayedaade/Irewole/Isokan",
+  "composition": "The entire Geographical Area of Ayedaade/Irewole/Isokan LGAs",
+  "lgas": [
+   "AYEDAADE",
+   "IREWOLE",
+   "ISOKAN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 966
+  }
+ },
+ {
+  "code": "FC/293/OS",
+  "kind": "FC",
+  "state": "OSUN",
+  "name": "Ede North/Ede South/ Egbedore/Ejigbo",
+  "composition": "The entire Geographical Area of Ede North/Ede South/Egbedore/Ejigbo LGAs",
+  "lgas": [
+   "EDE NORTH",
+   "EDE SOUTH",
+   "EGBEDORE",
+   "EJIGBO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 967
+  }
+ },
+ {
+  "code": "FC/294/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Afijio/Oyo East/Oyo West/ Atiba",
+  "composition": "The entire Geographical Area of Afijio/Oyo East/Oyo West/Atiba LGAs",
+  "lgas": [
+   "AFIJIO",
+   "OYO EAST",
+   "OYO WEST",
+   "ATIBA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 991
+  }
+ },
+ {
+  "code": "FC/295/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Akinyele/Lagelu",
+  "composition": "The entire Geographical Area of Akinyele/Lagelu LGAs",
+  "lgas": [
+   "AKINYELE",
+   "LAGELU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 992
+  }
+ },
+ {
+  "code": "FC/296/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Egbeda/Ona-Ara",
+  "composition": "The entire Geographical Area of Egbado/Ona-Ara LGAs",
+  "lgas": [
+   "EGBEDA",
+   "ONA-ARA"
+  ],
+  "split_lga": null,
+  "resolved_by": "name",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 993
+  }
+ },
+ {
+  "code": "FC/297/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Ibarapa Central/Ibarapa North",
+  "composition": "The entire Geographical Area of Ibarapa Central/Ibarapa North LGAs",
+  "lgas": [
+   "IBARAPA CENTRAL",
+   "IBARAPA NORTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 994
+  }
+ },
+ {
+  "code": "FC/298/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Ibarapa East/Ido",
+  "composition": "The entire Geographical Area of Ibarapa East/Ido LGAs",
+  "lgas": [
+   "IBARAPA EAST",
+   "IDO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 995
+  }
+ },
+ {
+  "code": "FC/299/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Saki East/Saki West/Atisbo",
+  "composition": "The entire Geographical Area of Saki East/Saki West/Atisbo LGAs",
+  "lgas": [
+   "SAKI EAST",
+   "SAKI WEST",
+   "ATISBO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 996
+  }
+ },
+ {
+  "code": "FC/300/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Irepo/Orelope/Olorunsogo",
+  "composition": "The entire Geographical Area of Irepo/Orelope/Olorunsogo LGAs",
+  "lgas": [
+   "IREPO",
+   "OORELOPE",
+   "OLORUNSOGO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 997
+  }
+ },
+ {
+  "code": "FC/301/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Iseyin/Itesiwaju/Kajola/ Iwajowa",
+  "composition": "The entire Geographical Area of Iseyin/Itesiwaju/Kajola/Iwajowa LGAs",
+  "lgas": [
+   "ISEYIN",
+   "ITESIWAJU",
+   "KAJOLA",
+   "IWAJOWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 998
+  }
+ },
+ {
+  "code": "FC/302/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Ogbomoso North/ Ogbomoso South/Orire",
+  "composition": "The entire Geographical Area of Ogbomoso North/Ogbomoso South/Oriire LGAs",
+  "lgas": [
+   "OGBOMOSO NORTH",
+   "OGBOMOSO SOUTH",
+   "ORI IRE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 999
+  }
+ },
+ {
+  "code": "FC/303/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Ogo-Oluwa/Surulere",
+  "composition": "The entire Geographical Area of Ogo-Oluwa/Surulere LGAs",
+  "lgas": [
+   "OGO-OLUWA",
+   "SURULERE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1000
+  }
+ },
+ {
+  "code": "FC/304/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Oluyole",
+  "composition": "The entire Geographical Area of Oluyole LGA",
+  "lgas": [
+   "OLUYOLE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1001
+  }
+ },
+ {
+  "code": "FC/305/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Ibadan North East/Ibadan South East",
+  "composition": "The entire Geographical Area of Ibadan North East/ Ibadan South East LGAs",
+  "lgas": [
+   "IBADAN NORTH EAST",
+   "IBADAN SOUTH-EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1002
+  }
+ },
+ {
+  "code": "FC/306/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Ibadan South West/Ibadan North West",
+  "composition": "The entire Geographical Area of Ibadan South West/Ibadan North West LGAs",
+  "lgas": [
+   "IBADAN SOUTH WEST",
+   "IBADAN NORTH WEST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1003
+  }
+ },
+ {
+  "code": "FC/307/OY",
+  "kind": "FC",
+  "state": "OYO",
+  "name": "Ibadan North",
+  "composition": "The entire Geographical Area of Ibadan North LGA",
+  "lgas": [
+   "IBADAN NORTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1004
+  }
+ },
+ {
+  "code": "FC/308/PL",
+  "kind": "FC",
+  "state": "PLATEAU",
+  "name": "Jos North/Bassa",
+  "composition": "The entire Geographical Area of Jos North/Bassa LGAs",
+  "lgas": [
+   "JOS NORTH",
+   "BASSA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1022
+  }
+ },
+ {
+  "code": "FC/309/PL",
+  "kind": "FC",
+  "state": "PLATEAU",
+  "name": "Jos South/Jos East",
+  "composition": "The entire Geographical Area of Jos South/Jos East LGAs",
+  "lgas": [
+   "JOS SOUTH",
+   "JOS EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1023
+  }
+ },
+ {
+  "code": "FC/310/PL",
+  "kind": "FC",
+  "state": "PLATEAU",
+  "name": "Barkin Ladi/Riyom",
+  "composition": "The entire Geographical Area of Barkin Ladi/Riyom LGAs",
+  "lgas": [
+   "BARIKIN LADI",
+   "RIYOM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1024
+  }
+ },
+ {
+  "code": "FC/311/PL",
+  "kind": "FC",
+  "state": "PLATEAU",
+  "name": "Bokkos/Mangu",
+  "composition": "The entire Geographical Area of Bokkos/Mangu LGAs",
+  "lgas": [
+   "BOKKOS",
+   "MANGU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1025
+  }
+ },
+ {
+  "code": "FC/312/PL",
+  "kind": "FC",
+  "state": "PLATEAU",
+  "name": "Kanke/Pankshin/Kanam",
+  "composition": "The entire Geographical Area of Kanke/Pankshin/Kanam L.G.As",
+  "lgas": [
+   "KANKE",
+   "PANKSHIN",
+   "KANAM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1026
+  }
+ },
+ {
+  "code": "FC/313/PL",
+  "kind": "FC",
+  "state": "PLATEAU",
+  "name": "Wase",
+  "composition": "The entire Geographical Area of Wase LGA",
+  "lgas": [
+   "WASE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1027
+  }
+ },
+ {
+  "code": "FC/314/PL",
+  "kind": "FC",
+  "state": "PLATEAU",
+  "name": "Langtang North/Langtang South",
+  "composition": "The entire Geographical Area of Langtang North/Langtang South LGAs",
+  "lgas": [
+   "LANGTANG NORTH",
+   "LANGTANG SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1028
+  }
+ },
+ {
+  "code": "FC/315/PL",
+  "kind": "FC",
+  "state": "PLATEAU",
+  "name": "Mikang/Qua’an/Pan/Shedam",
+  "composition": "The entire Geographical Area of Mikang/Qua'an/Pan/Shedam LGAs",
+  "lgas": [
+   "MIKANG",
+   "QUA'AN PAN",
+   "SHENDAM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1029
+  }
+ },
+ {
+  "code": "FC/316/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Abua-Odual/Ahaoda East",
+  "composition": "The entire Geographical Area of Abua-Odual/Ahaoda East LGAs",
+  "lgas": [
+   "ABUA-ODUAL",
+   "AHOADA EAST"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1057
+  }
+ },
+ {
+  "code": "FC/317/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Ahoada West/Ogba Egbema",
+  "composition": "The entire Geographical Area of Ahoada West/Ogba Egbema LGAs",
+  "lgas": [
+   "AHOADA WEST",
+   "OGBA/EGBEMA/NDONI"
+  ],
+  "split_lga": null,
+  "resolved_by": "override",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1058
+  }
+ },
+ {
+  "code": "FC/318/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Degema/Bonny",
+  "composition": "The entire Geographical Area of Degema/Bonny LGAs",
+  "lgas": [
+   "DEGEMA",
+   "BONNY"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1059
+  }
+ },
+ {
+  "code": "FC/319/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Akuku-Toru/Asari-Toru",
+  "composition": "The entire Geographical Area of Akuku-Toru/Asari-Toru LGAs",
+  "lgas": [
+   "AKUKU TORU",
+   "ASARI-TORU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1060
+  }
+ },
+ {
+  "code": "FC/320/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Okrika/Ogu-Bolo",
+  "composition": "The entire Geographical Area of Okrika/Ogu-Bolo LGAs",
+  "lgas": [
+   "OKRIKA",
+   "OGU/BOLO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1061
+  }
+ },
+ {
+  "code": "FC/321/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Opobo/Nkoro/Andoni",
+  "composition": "The entire Geographical Area of Opobo/Nkoro/Andoni LGAs",
+  "lgas": [
+   "OPOBO/NKORO",
+   "ANDONI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1062
+  }
+ },
+ {
+  "code": "FC/322/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Eleme/Tai/Oyigbo",
+  "composition": "The entire Geographical Area of Eleme/Tai/Oyigbo LGAs",
+  "lgas": [
+   "ELEME",
+   "TAI",
+   "OYIGBO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1063
+  }
+ },
+ {
+  "code": "FC/323/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Khana/Gokana",
+  "composition": "The entire Geographical Area of Khana/Gokana LGAs",
+  "lgas": [
+   "KHANA",
+   "GOKANA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1064
+  }
+ },
+ {
+  "code": "FC/324/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Ikwerre/Umohua",
+  "composition": "The entire Geographical Area of Ikwerre/Umohua LGAs",
+  "lgas": [
+   "IKWERRE",
+   "EMOHUA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1065
+  }
+ },
+ {
+  "code": "FC/325/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Etche/Omuma",
+  "composition": "The entire Geographical Area of Etvhe/Omuma LGAs",
+  "lgas": [
+   "ETCHE",
+   "OMUMA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1066
+  }
+ },
+ {
+  "code": "FC/326/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Obio Akpor",
+  "composition": "The entire Geographical Area of Obio Akpor LGA",
+  "lgas": [
+   "OBIO/AKPOR"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1067
+  }
+ },
+ {
+  "code": "FC/327/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Port Harcourt I",
+  "composition": "Part of Port Harcourt LGA",
+  "lgas": [
+   "PORT HARCOURT"
+  ],
+  "split_lga": "PORT HARCOURT",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1068
+  }
+ },
+ {
+  "code": "FC/328/RV",
+  "kind": "FC",
+  "state": "RIVERS",
+  "name": "Port Harcourt II",
+  "composition": "Part of Port Harcourt LGA",
+  "lgas": [
+   "PORT HARCOURT"
+  ],
+  "split_lga": "PORT HARCOURT",
+  "resolved_by": "split",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1069
+  }
+ },
+ {
+  "code": "FC/329/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Isa/Sabon Birni",
+  "composition": "The entire Geographical Area of Isa/Sabon Birni L.G.As",
+  "lgas": [
+   "ISA",
+   "S/BIRNI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1092
+  }
+ },
+ {
+  "code": "FC/330/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Goronyo/Gada",
+  "composition": "The entire Geographical Area of Goronyo/Gada L.G.As",
+  "lgas": [
+   "GORONYO",
+   "GADA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1093
+  }
+ },
+ {
+  "code": "FC/331/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Wurno/Rabah",
+  "composition": "The entire Geographical Area of Wurno/Rabah L.G.As",
+  "lgas": [
+   "WURNO",
+   "RABAH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1094
+  }
+ },
+ {
+  "code": "FC/332/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Illela/Gwadabawa",
+  "composition": "The entire Geographical Area of Illela/Gwadabawa L.G.As",
+  "lgas": [
+   "ILLELA",
+   "GWADABAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1095
+  }
+ },
+ {
+  "code": "FC/333/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Tangaza/Gudu",
+  "composition": "The entire Geographical Area of Tangaza/Gudu L.Gas",
+  "lgas": [
+   "TANGAZA",
+   "GUDU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1096
+  }
+ },
+ {
+  "code": "FC/334/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Binji/Silame",
+  "composition": "The entire Geographical Area of Binji/Silame L.G.As",
+  "lgas": [
+   "BINJI",
+   "SILAME"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1097
+  }
+ },
+ {
+  "code": "FC/335/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Kware/Wamakko",
+  "composition": "The entire Geographical Area of Kware/Wamakko L.G.As",
+  "lgas": [
+   "KWARE",
+   "WAMAKKO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1098
+  }
+ },
+ {
+  "code": "FC/336/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Sokoto North/Sokoto South",
+  "composition": "The entire Geographical Area of Sokoto North/Sokoto South L.G.As",
+  "lgas": [
+   "SOKOTO NORTH",
+   "SOKOTO SOUTH"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1099
+  }
+ },
+ {
+  "code": "FC/337/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Dange-Shuni/Bodinga/Tureta",
+  "composition": "The entire Geographical Area of Dange-Shuni/Bodinga/Tureta L.G.As",
+  "lgas": [
+   "DANGE/SHUNI",
+   "BODINGA",
+   "TURETA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1100
+  }
+ },
+ {
+  "code": "FC/338/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Yabo/Shagari",
+  "composition": "The entire Geographical Area of Yabo/Shagari L.G.As",
+  "lgas": [
+   "YABO",
+   "SHAGARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1101
+  }
+ },
+ {
+  "code": "FC/339/SO",
+  "kind": "FC",
+  "state": "SOKOTO",
+  "name": "Kebbe/Tambuwal",
+  "composition": "The entire Geographical Area of Kebbe/ambuwal L.G.As",
+  "lgas": [
+   "KEBBE",
+   "TAMBUWAL"
+  ],
+  "split_lga": null,
+  "resolved_by": "name",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1102
+  }
+ },
+ {
+  "code": "FC/340/TR",
+  "kind": "FC",
+  "state": "TARABA",
+  "name": "Bali/Gassol",
+  "composition": "The entire Geographical Area of Bali/Gassol L.G.As",
+  "lgas": [
+   "BALI",
+   "GASSOL"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1127
+  }
+ },
+ {
+  "code": "FC/341/TR",
+  "kind": "FC",
+  "state": "TARABA",
+  "name": "Takum/Donga/Ussa",
+  "composition": "The entire Geographical Area of Takum/Donga/Ussa L.G.As",
+  "lgas": [
+   "TAKUM",
+   "DONGA",
+   "USSA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1128
+  }
+ },
+ {
+  "code": "FC/342/TR",
+  "kind": "FC",
+  "state": "TARABA",
+  "name": "Sardauna/Kurmi/Gashaka",
+  "composition": "The entire Geographical Area of Sardauna/Kurmi/Gashaka L.G.As",
+  "lgas": [
+   "SARDAUNA",
+   "KURMI",
+   "GASHAKA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1129
+  }
+ },
+ {
+  "code": "FC/343/TR",
+  "kind": "FC",
+  "state": "TARABA",
+  "name": "Ibi/Wukari",
+  "composition": "The entire Geographical Area of Ibi/Wukari L.G.As",
+  "lgas": [
+   "IBI",
+   "WUKARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1130
+  }
+ },
+ {
+  "code": "FC/344/TR",
+  "kind": "FC",
+  "state": "TARABA",
+  "name": "Jalingo/Yorro/Zing",
+  "composition": "The entire Geographical Area of Jalingo/Yorro/Zing L.G.As",
+  "lgas": [
+   "JALINGO",
+   "YORRO",
+   "ZING"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1131
+  }
+ },
+ {
+  "code": "FC/345/TR",
+  "kind": "FC",
+  "state": "TARABA",
+  "name": "Karim Lamido/Lau/Ardo-Kola",
+  "composition": "The entire Geographical Area of Karim Lamido/Lau/Ardo-Kola L.G.As",
+  "lgas": [
+   "KARIM-LAMIDO",
+   "LAU",
+   "ARDO - KOLA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1132
+  }
+ },
+ {
+  "code": "FC/346/YB",
+  "kind": "FC",
+  "state": "YOBE",
+  "name": "Bade/Jakusko",
+  "composition": "The entire Geographical Area of Bade/Jakusko L.G.As",
+  "lgas": [
+   "BADE",
+   "JAKUSKO"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1164
+  }
+ },
+ {
+  "code": "FC/347/YB",
+  "kind": "FC",
+  "state": "YOBE",
+  "name": "Bursari/Geidam/Yunusari",
+  "composition": "The entire Geographical Area of Busari/Geidam/Yunusari L.G.As",
+  "lgas": [
+   "BURSARI",
+   "GEIDAM",
+   "YUNUSARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1165
+  }
+ },
+ {
+  "code": "FC/348/YB",
+  "kind": "FC",
+  "state": "YOBE",
+  "name": "Damaturu/Gujba/Gulani/ Tarmuwa",
+  "composition": "The entire Geographical Area of Damaturu/Gujba/Gulani/Tarmuwa L.G.As",
+  "lgas": [
+   "DAMATURU",
+   "GUJBA",
+   "GULANI",
+   "TARMUWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1166
+  }
+ },
+ {
+  "code": "FC/349/YB",
+  "kind": "FC",
+  "state": "YOBE",
+  "name": "Fika/Fune",
+  "composition": "The entire Geographical Area of Fika/Fune L.G.As",
+  "lgas": [
+   "FIKA",
+   "FUNE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1167
+  }
+ },
+ {
+  "code": "FC/350/YB",
+  "kind": "FC",
+  "state": "YOBE",
+  "name": "Machina/Nguru/Yusufari/ Karasuwa",
+  "composition": "The entire Geographical Area of Machina/Nguru/Yusufari/Karasuwa L.G.As",
+  "lgas": [
+   "MACHINA",
+   "NGURU",
+   "YUSUFARI",
+   "KARASAWA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1168
+  }
+ },
+ {
+  "code": "FC/351/YB",
+  "kind": "FC",
+  "state": "YOBE",
+  "name": "Nangere/Potiskm",
+  "composition": "The entire Geographical Area of Nangere/Potiskum L.G.As",
+  "lgas": [
+   "NANGERE",
+   "POTISKUM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1169
+  }
+ },
+ {
+  "code": "FC/352/ZF",
+  "kind": "FC",
+  "state": "ZAMFARA",
+  "name": "Kaura-Namoda/Birnin Magaji",
+  "composition": "The entire Geographical Area of Kaura-Namoda/Birnin Magaji L.G.As",
+  "lgas": [
+   "KAURA NAMODA",
+   "BIRNIN MAGAJI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1202
+  }
+ },
+ {
+  "code": "FC/353/ZF",
+  "kind": "FC",
+  "state": "ZAMFARA",
+  "name": "Shinkafi/Zurmi",
+  "composition": "The entire Geographical Area of Shinkafi/Zurmi L.G.As",
+  "lgas": [
+   "SHINKAFI",
+   "ZURMI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1203
+  }
+ },
+ {
+  "code": "FC/354/ZF",
+  "kind": "FC",
+  "state": "ZAMFARA",
+  "name": "Gusau/Tsafe",
+  "composition": "The entire Geographical Area of Gusau/Tsafe L.G.As",
+  "lgas": [
+   "GUSAU",
+   "TSAFE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1204
+  }
+ },
+ {
+  "code": "FC/355/ZF",
+  "kind": "FC",
+  "state": "ZAMFARA",
+  "name": "Bungudu/Maru",
+  "composition": "The entire Geographical Area of Bungudu/Maru L.G.A",
+  "lgas": [
+   "BUNGUDU",
+   "MARU"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1205
+  }
+ },
+ {
+  "code": "FC/356/ZF",
+  "kind": "FC",
+  "state": "ZAMFARA",
+  "name": "Anka/Talata Mafara",
+  "composition": "The entire Geographical Area of Anka/Talata Marafa L.G.As",
+  "lgas": [
+   "ANKA",
+   "TALATA MAFARA"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1206
+  }
+ },
+ {
+  "code": "FC/357/ZF",
+  "kind": "FC",
+  "state": "ZAMFARA",
+  "name": "Bakura/Maradun",
+  "composition": "The entire Geographical Area of Bakura/Maradun L.G.As",
+  "lgas": [
+   "BAKURA",
+   "MARADUN"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1207
+  }
+ },
+ {
+  "code": "FC/358/ZF",
+  "kind": "FC",
+  "state": "ZAMFARA",
+  "name": "Gummi/Bukkuyum",
+  "composition": "The entire Geographical Area of Gummi/Bukkuyum L.G.As",
+  "lgas": [
+   "GUMMI",
+   "BUKKUYUM"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1208
+  }
+ },
+ {
+  "code": "FC/359/FCT",
+  "kind": "FC",
+  "state": "FCT",
+  "name": "Abaji/Gwagwalada/Kwali/Kuje",
+  "composition": "The entire Geographical Area of Abaji/Gwagwalada/Kwali/Kuje L.G.As",
+  "lgas": [
+   "ABAJI",
+   "GWAGWALADA",
+   "KWALI",
+   "KUJE"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1239
+  }
+ },
+ {
+  "code": "FC/360/FCT",
+  "kind": "FC",
+  "state": "FCT",
+  "name": "Municipal/Bwari",
+  "composition": "The entire Geographical Area of Municipal/Bwari L.G.As",
+  "lgas": [
+   "MUNICIPAL",
+   "BWARI"
+  ],
+  "split_lga": null,
+  "resolved_by": "composition",
+  "provenance": {
+   "source_id": "inec-constituencies-workbook",
+   "row": 1240
+  }
+ }
+]

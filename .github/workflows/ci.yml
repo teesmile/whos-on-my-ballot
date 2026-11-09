@@ -1,0 +1,20 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  pipeline-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: sudo apt-get install -y poppler-utils
+      # Fetch INEC's PDFs so extraction tests run against the real files (they are never committed, D-005).
+      # The full `make verify-data` also needs the ~2 h polling-unit crawl and is run locally before each phase closes.
+      - run: make fetch
+      - run: make test
