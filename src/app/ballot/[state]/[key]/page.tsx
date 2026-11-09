@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { RaceSection, raceTitle, UnresolvedGroup } from '@/components/RaceSection'
 import { SourceLine } from '@/components/SourceLine'
 import { ballots, presidentialRace, race } from '@/lib/data'
-import { cardPath, SITE_URL } from '@/lib/site'
+import { ballotCardRace, cardPath, SITE_URL } from '@/lib/site'
 
 import { Share } from '@/components/Share'
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ state: st
   return {
     title,
     description: 'Every race and every candidate on this ballot for 16 January 2027, as listed by INEC.',
-    openGraph: { title, url: `${SITE_URL}${b.path}`, images: [{ url: cardPath(b.house[0]), width: 1200, height: 630 }] },
+    openGraph: { title, url: `${SITE_URL}${b.path}`, images: [{ url: cardPath(ballotCardRace(b.house, presidentialRace().id)), width: 1200, height: 630 }] },
     twitter: { card: 'summary_large_image' },
   }
 }

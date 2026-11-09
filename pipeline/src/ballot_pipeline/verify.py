@@ -212,6 +212,11 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
                 + [ci for e in p.background.public_offices + p.background.party_history for ci in e.citations]]
     c.check(not any("wikipedia" in u.lower() or "wiki" in u.lower().split("/")[2] for u in all_urls),
             "no citation anywhere is Wikipedia or a wiki", f"{len(all_urls)} citations")
+    all_cites = [ci for p in with_bg for ci in ([p.background.identity] if p.background.identity else [])
+                 + [ci for e in p.background.public_offices + p.background.party_history for ci in e.citations]]
+    c.check(all(ci.source_id for ci in all_cites),
+            "every background citation resolves to a reviewed independent source, with its quote confirmed by check-quotes",
+            str([ci.url for ci in all_cites if not ci.source_id][:3]))
     if with_bg:
         thin = [p.name for p in with_bg if not (p.background.public_offices or p.background.party_history)]
         c.note(f"Researched {with_bg[0].background.researched}: {len(with_bg)} people, "

@@ -1,0 +1,25 @@
+# Reviewed sources for presidential background (D-013, review 3). A citation counts only if its host is listed here
+# and the source is not tied to that ticket. Ownership notes say why each is independent, or for whom it isn't.
+# Add a source only after checking who owns it.
+sources:
+  businessday:   {hosts: [businessday.ng], publisher: BusinessDay, kind: news, ownership: "BusinessDay Media Ltd, privately owned"}
+  dailytrust:    {hosts: [dailytrust.com], publisher: Daily Trust, kind: news, ownership: "Media Trust Ltd, privately owned"}
+  guardian-ng:   {hosts: [guardian.ng], publisher: The Guardian Nigeria, kind: news, ownership: "Guardian Newspapers Ltd, privately owned"}
+  leadership:    {hosts: [leadership.ng], publisher: Leadership, kind: news, ownership: "Leadership Group Ltd, privately owned"}
+  nairametrics:  {hosts: [nairametrics.com], publisher: Nairametrics, kind: news, ownership: "privately owned financial news site"}
+  nan:           {hosts: [nannews.ng], publisher: News Agency of Nigeria, kind: news, ownership: "federal government news agency",
+                  not_independent_for: [jan-2027-president-apc]}
+  newtelegraph:  {hosts: [newtelegraphng.com], publisher: New Telegraph, kind: news, ownership: "privately owned"}
+  pmnews:        {hosts: [pmnewsnigeria.com], publisher: P.M. News, kind: news, ownership: "Independent Communications Network Ltd, privately owned"}
+  saharareporters: {hosts: [saharareporters.com], publisher: Sahara Reporters, kind: news,
+                  ownership: "founded by Omoyele Sowore, the AAC presidential candidate", not_independent_for: [jan-2027-president-aac]}
+  thewill:       {hosts: [thewillnews.com], publisher: The Will, kind: news, ownership: "privately owned"}
+  thisday:       {hosts: [thisdaylive.com, www.thisdaylive.com], publisher: ThisDay, kind: news, ownership: "Leaders & Company Ltd, privately owned"}
+  voa:           {hosts: [voaafrica.com, www.voaafrica.com], publisher: Voice of America, kind: news, ownership: "US government international broadcaster"}
+  von:           {hosts: [von.gov.ng], publisher: Voice of Nigeria, kind: news, ownership: "federal government broadcaster",
+                  not_independent_for: [jan-2027-president-apc]}
+  arise:         {hosts: [www.arise.tv, arise.tv], publisher: Arise News, kind: news, ownership: "Arise Media Group, privately owned"}
+  channels:      {hosts: [www.channelstv.com, channelstv.com], publisher: Channels Television, kind: news, ownership: "Channels Incorporated, privately owned"}
+  icir:          {hosts: [www.icirnigeria.org, icirnigeria.org], publisher: The ICIR, kind: news, ownership: "International Centre for Investigative Reporting, non-profit"}
+  thecable:      {hosts: [www.thecable.ng, thecable.ng], publisher: TheCable, kind: news, ownership: "Cable Newspaper Ltd, privately owned"}
+  vanguard:      {hosts: [www.vanguardngr.com, vanguardngr.com], publisher: Vanguard, kind: news, ownership: "Vanguard Media Ltd, privately owned"}

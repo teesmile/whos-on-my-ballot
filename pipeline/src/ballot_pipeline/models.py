@@ -24,6 +24,7 @@ class Citation(Strict):
     published: str  # YYYY-MM-DD, or "unknown" when the page gives no date
     quote: str = Field(min_length=10, max_length=400)  # verbatim from the page, confirmed when researched
     retrieved: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+    source_id: str | None = None  # set from pipeline/independent_sources.yaml; a citation without one fails the build
 
 
 class BackgroundEntry(Strict):

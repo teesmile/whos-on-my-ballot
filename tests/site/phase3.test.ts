@@ -98,6 +98,15 @@ describe('links', () => {
   })
 })
 
+describe('ballot previews', () => {
+  it('unresolved ballots preview the presidential card; others their House race', () => {
+    const surulere = page('ballot/lagos/surulere-i-or-surulere-ii--lagos-central')
+    expect(surulere).toContain(`<meta property="og:image" content="${SITE_URL}/cards/jan-2027-president.png"/>`)
+    const aba = page('ballot/abia/aba-north-aba-south--abia-south')
+    expect(aba).toContain(`<meta property="og:image" content="${SITE_URL}/cards/jan-2027-house-abia-aba-north-aba-south.png"/>`)
+  })
+})
+
 describe('share cards', () => {
   const decode = (id: string) => PNG.sync.read(fs.readFileSync(path.join(OUT, 'cards', `${id}.png`)))
 
@@ -123,7 +132,8 @@ describe('share cards', () => {
   // Visual regression: the largest race, the longest name, the longest race name and the presidential card.
   // Update deliberately with UPDATE_CARD_SNAPSHOTS=1 after looking at the new images.
   const SNAPSHOTS = ['jan-2027-president', 'jan-2027-house-fct-municipal-bwari', 'jan-2027-house-lagos-eti-osa',
-    'jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west']
+    'jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west', 'jan-2027-house-kwara-ilorin-east-ilorin-south',
+    'jan-2027-house-niger-chanchaga']
   for (const id of SNAPSHOTS) {
     it(`card matches its reviewed snapshot: ${id}`, () => {
       const fixture = path.resolve('tests/fixtures/cards', `${id}.png`)

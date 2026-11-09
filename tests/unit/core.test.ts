@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
+import { ballotCardRace, cardSourceCaption } from '@/lib/site'
 import {
   ballotPath, codeFromHash, findByCode, parseDelimitationCode, puHash, searchLga, type StateSearchData,
 } from '@/lib/core'
@@ -91,4 +92,15 @@ describe('searchLga', () => {
   })
   it('own-name matches outrank ward-name matches', () => expect(top('ariaria square')[0]).toBe('01/01/09/001'))
   it('returns at most five', () => expect(searchLga(DATA, '01', 'a').length).toBeLessThanOrEqual(5))
+})
+
+describe('share-card choices (review 3)', () => {
+  it('Niger’s fallback races say which INEC list they come from', () => {
+    expect(cardSourceCaption(['house-2026-09-12-consolidated'])).toContain('12 Sep 2026')
+    expect(cardSourceCaption(['house-abia'])).toContain('31 Oct 2026')
+  })
+  it('an unresolved ballot never previews one of its possible House races', () => {
+    expect(ballotCardRace(['h1', 'h2'], 'p')).toBe('p')
+    expect(ballotCardRace(['h1'], 'p')).toBe('h1')
+  })
 })

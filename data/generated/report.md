@@ -90,6 +90,7 @@ Read from the composition text: 436; from the constituency name: 6; split LGAs (
 - [x] **PASS** all or none: every named presidential candidate and running mate, or no one: 36 of 36
 - [x] **PASS** background appears in the presidential race only
 - [x] **PASS** no citation anywhere is Wikipedia or a wiki: 134 citations
+- [x] **PASS** every background citation resolves to a reviewed independent source, with its quote confirmed by check-quotes: []
 Researched 2026-11-09: 36 people, 26 office entries, 52 party entries, 134 citations. No independently sourced entry found for 16: RUFAI ADEKUNLE OMO-AJE, SHEHU HUSSAINI, ABBAS-BIN ALIYU, YUSUF KABIRU, OFORDILE PEACE EGOBIA, MUSTAPHA USMAN TURAKI, ADEBISI MOSES OLUSOJI, ABUBAKAR NAFISAT USAKU, OKEREKE SUNDAY CHIBUZO, KONTO HAJJA BINTU, CHUKWUEMEKA UCHENNA ANTHONY, OKEREKE NKEM ESTHER, SULAIMAN NASIR MUHAMMED, MOHAMMED SULE, KEY PATIENCE NDIDI, HASSAN KHALID.
 
 ## Provenance

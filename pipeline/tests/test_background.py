@@ -14,11 +14,28 @@ def person(role, name, offices=(), parties=(), identity=CITE):
             "party_history": [{"text": t, "citations": [CITE]} for t in parties]}
 
 
+REG = {"www.premiumtimesng.com": ("premiumtimes", {"publisher": "Premium Times", "ownership": "private"}),
+       "founder.example": ("founder", {"publisher": "Founder News", "ownership": "founded by the X candidate",
+                                       "not_independent_for": ["jan-2027-president-x"]})}
+
+
 @pytest.fixture
 def write(tmp_path, monkeypatch):
+    import json
+
     f = tmp_path / "bg.yaml"
+    checks = tmp_path / "checks.json"
     monkeypatch.setattr(background, "FILE", f)
-    return lambda people: f.write_text(yaml.safe_dump({"researched": "2026-11-09", "people": people}))
+    monkeypatch.setattr(background, "QUOTE_CHECK", checks)
+    monkeypatch.setattr(background, "registry", lambda: REG)
+
+    def _write(people, confirmed=True):
+        f.write_text(yaml.safe_dump({"researched": "2026-11-09", "people": people}))
+        cites = [c for p in people for c in ([p["identity"]] if p["identity"] else [])
+                 + [c for k in ("public_offices", "party_history") for e in p[k] for c in e["citations"]]]
+        checks.write_text(json.dumps({"results": {f"{c['url']}\n{c['quote']}": {"result": "ok" if confirmed else "quote not found"}
+                                                  for c in cites}}))
+    return _write
 
 
 def test_absent_file_means_none(tmp_path, monkeypatch):
@@ -82,3 +99,30 @@ def test_quote_matching_ignores_typography_but_not_words():
     assert quote_on_page('He was the "Governor" of Lagos State - 1999', text)
     assert quote_on_page("He was the ... Lagos State", text)
     assert not quote_on_page("He was the Governor of Ogun State", text)
+
+
+def test_unreviewed_source_rejected(write):
+    p = person("candidate", "DOE JOHN")
+    p["public_offices"] = [{"text": "Senator (X)", "citations": [dict(CITE, url="https://candidate.example/campaign/biography")]}]
+    write([p, person("running_mate", "ROE JANE")])
+    assert any("not a reviewed independent source" in e for e in background.load(PEOPLE)[1])
+
+
+def test_source_tied_to_the_ticket_rejected(write):
+    p = person("candidate", "DOE JOHN")
+    p["party_history"] = [{"text": "Member of the X Party (XP)", "citations": [dict(CITE, url="https://founder.example/a")]}]
+    write([p, person("running_mate", "ROE JANE")])
+    assert any("not independent for this ticket" in e for e in background.load(PEOPLE)[1])
+
+
+def test_unconfirmed_quote_rejected(write):
+    write([person("candidate", "DOE JOHN", offices=["Governor of X State, 1999–2007"]), person("running_mate", "ROE JANE")],
+          confirmed=False)
+    assert any("not confirmed on the live page" in e for e in background.load(PEOPLE)[1])
+
+
+def test_valid_citations_get_their_source_id(write):
+    write([person("candidate", "DOE JOHN", offices=["Governor of X State, 1999–2007"]), person("running_mate", "ROE JANE")])
+    out, errors = background.load(PEOPLE)
+    assert errors == []
+    assert out[("jan-2027-president-x", "candidate")].public_offices[0].citations[0].source_id == "premiumtimes"

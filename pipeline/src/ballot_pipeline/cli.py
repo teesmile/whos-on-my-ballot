@@ -35,6 +35,8 @@ def main(argv: list[str] | None = None) -> int:
 
         return verify(build())
     elif args.cmd == "check-quotes":
+        import json
+
         import yaml
 
         from .background import FILE
@@ -47,6 +49,13 @@ def main(argv: list[str] | None = None) -> int:
                                                                      for e in p.get(f) or [] for c in e["citations"]]
             pairs += [(c["url"], c["quote"]) for c in cites]
         results = check(pairs)
+        from datetime import UTC, datetime
+
+        from .background import QUOTE_CHECK
+
+        QUOTE_CHECK.write_text(json.dumps({"checked_at": datetime.now(UTC).isoformat(timespec="seconds"),
+                                           "results": {f"{u}\n{q}": {"result": v} for (u, q), v in sorted(results.items())}},
+                                          indent=1, ensure_ascii=False) + "\n")
         bad = {k: v for k, v in results.items() if v != "ok"}
         for (url, quote), v in bad.items():
             print(f"{v}: {url} :: {quote[:80]}")
