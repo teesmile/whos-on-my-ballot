@@ -219,4 +219,12 @@ export function stateSearchData(code: string): StateSearchData {
   }
 }
 
+export interface ElectionDayData {
+  elections: { id: string, date: string, races: string, source_id: string, quotes: string[] }[]
+  hours: { open: string, close: string, source_id: string, quotes: string[] }
+  steps: { text: string, quotes: string[] }[]
+  steps_source_id: string
+}
+export const electionDay = () => read<ElectionDayData>('election-day.json')
+
 export { slug }

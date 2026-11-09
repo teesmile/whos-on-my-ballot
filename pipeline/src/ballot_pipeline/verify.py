@@ -224,6 +224,14 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
                f"{sum(len(p.background.party_history) for p in with_bg)} party entries, {len(all_urls)} citations. "
                f"No independently sourced entry found for {len(thin)}: {', '.join(thin) or 'none'}.")
 
+    c.note("\n## Election-day page (Phase 4)")
+    import json as _json
+
+    ed = _json.loads((GENERATED_DIR / "election-day.json").read_text())
+    c.check(len(ed["elections"]) == 2 and all(s.get("quotes") for s in ed["steps"]),
+            "every election-day statement rests on a quote found on INEC's fetched page (build fails otherwise)",
+            f"{len(ed['steps'])} steps, {len(ed['elections'])} election dates")
+
     c.note("\n## Provenance")
     ok = all(cd.provenance.source_id in by_id for cd in cands) and all(s in by_id for r in races for s in r.sources)
     c.check(ok, "every candidate and race cites a recorded source with a SHA-256")

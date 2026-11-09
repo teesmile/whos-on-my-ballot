@@ -89,9 +89,12 @@ Read from the composition text: 436; from the constituency name: 6; split LGAs (
 ## Presidential background (D-013)
 - [x] **PASS** all or none: every named presidential candidate and running mate, or no one: 36 of 36
 - [x] **PASS** background appears in the presidential race only
-- [x] **PASS** no citation anywhere is Wikipedia or a wiki: 134 citations
+- [x] **PASS** no citation anywhere is Wikipedia or a wiki: 143 citations
 - [x] **PASS** every background citation resolves to a reviewed independent source, with its quote confirmed by check-quotes: []
-Researched 2026-11-09: 36 people, 26 office entries, 52 party entries, 134 citations. No independently sourced entry found for 16: RUFAI ADEKUNLE OMO-AJE, SHEHU HUSSAINI, ABBAS-BIN ALIYU, YUSUF KABIRU, OFORDILE PEACE EGOBIA, MUSTAPHA USMAN TURAKI, ADEBISI MOSES OLUSOJI, ABUBAKAR NAFISAT USAKU, OKEREKE SUNDAY CHIBUZO, KONTO HAJJA BINTU, CHUKWUEMEKA UCHENNA ANTHONY, OKEREKE NKEM ESTHER, SULAIMAN NASIR MUHAMMED, MOHAMMED SULE, KEY PATIENCE NDIDI, HASSAN KHALID.
+Researched 2026-11-09: 36 people, 26 office entries, 62 party entries, 143 citations. No independently sourced entry found for 15: RUFAI ADEKUNLE OMO-AJE, SHEHU HUSSAINI, ABBAS-BIN ALIYU, YUSUF KABIRU, OFORDILE PEACE EGOBIA, ADEBISI MOSES OLUSOJI, ABUBAKAR NAFISAT USAKU, OKEREKE SUNDAY CHIBUZO, KONTO HAJJA BINTU, CHUKWUEMEKA UCHENNA ANTHONY, OKEREKE NKEM ESTHER, SULAIMAN NASIR MUHAMMED, MOHAMMED SULE, KEY PATIENCE NDIDI, HASSAN KHALID.
+
+## Election-day page (Phase 4)
+- [x] **PASS** every election-day statement rests on a quote found on INEC's fetched page (build fails otherwise): 8 steps, 2 election dates
 
 ## Provenance
 - [x] **PASS** every candidate and race cites a recorded source with a SHA-256

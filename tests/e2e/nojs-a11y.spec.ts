@@ -46,6 +46,7 @@ test('keyboard: the code lookup works with the keyboard alone', async ({ page })
   await page.goto('/')
   await page.keyboard.press('Tab') // skip link
   await page.keyboard.press('Tab') // site name
+  await page.keyboard.press('Tab') // "Election day" in the header
   await page.keyboard.press('Tab') // code input
   await expect(page.getByLabel(/Delimitation code/)).toBeFocused()
   await page.keyboard.type('01/01/01/001')

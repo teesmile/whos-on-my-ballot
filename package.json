@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@10.9.0",
   "engines": {
-    "node": "^22.13.0 || ^24.0.0 || >=26.0.0"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,8 @@
     "test:site": "vitest run --project site",
     "test:e2e": "playwright test",
     "size": "node scripts/size-check.mjs",
-    "lighthouse": "node scripts/lighthouse.mjs"
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "check-links": "node scripts/check-links.mjs"
   },
   "dependencies": {
     "next": "16.4.5",

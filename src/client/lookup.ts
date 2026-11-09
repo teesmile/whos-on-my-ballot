@@ -4,9 +4,11 @@
  *   [data-lookup="search"]  find a polling unit by name or nearby landmark within one LGA
  *   [data-lookup="confirm"] on a ballot page, name the polling unit chosen (from the URL fragment)
  *   [data-copy]             copy a page's link to the clipboard
+ *   [data-countdown]        election-day schedule: where we are in it, updated each minute (no live announcements)
  * Privacy (D-015): the only network request is GET /data/pu/<SS>.json, a fixed per-state file. What the visitor
  * types is matched in memory, never sent, never stored, and never put in a URL (fragments aren't sent to servers).
  */
+import { describePhase, phaseAt, type Schedule } from '../lib/election'
 import {
   codeFromHash,
   findByCode,
@@ -174,4 +176,21 @@ for (const button of document.querySelectorAll<HTMLButtonElement>('button[data-c
       () => { button.textContent = 'Couldn’t copy: copy it from the address bar' },
     ).finally(() => setTimeout(() => { button.textContent = label }, 4000))
   })
+}
+
+const IREV = 'https://inecelectionresults.ng/'
+for (const box of document.querySelectorAll<HTMLElement>('[data-countdown]')) {
+  const schedule = JSON.parse(box.dataset.countdown!) as Schedule
+  const render = () => {
+    const text = describePhase(phaseAt(new Date(), schedule), schedule)
+    const nodes: Node[] = [el('p', text.headline, { class: 'headline' }), ...text.details.map(d => el('p', d))]
+    if (text.showResultsLink) {
+      const p = el('p')
+      p.append(el('a', 'INEC Result Viewing Portal (IReV)', { href: IREV }))
+      nodes.push(p)
+    }
+    box.replaceChildren(...nodes)
+  }
+  render()
+  setInterval(render, 30_000)
 }

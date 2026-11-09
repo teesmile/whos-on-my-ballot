@@ -25,6 +25,28 @@ REGISTRY = PIPELINE_DIR / "independent_sources.yaml"
 QUOTE_CHECK = GENERATED_DIR / "background-quote-check.json"
 
 
+def ticket_party(candidate_id: str) -> str:
+    """'jan-2027-president-aac' -> 'AAC'."""
+    return candidate_id.rsplit("-", 1)[1].upper()
+
+
+def not_independent(entry: dict, candidate_id: str) -> bool:
+    """D-026: an outlet owned by, or closely tied to, a candidate or party doesn't count for that ticket."""
+    return (candidate_id in (entry.get("tied_to_people") or [])
+            or ticket_party(candidate_id) in [p.upper() for p in entry.get("tied_to_parties") or []])
+
+
+def cite_host(url: str) -> str:
+    """The host a citation stands for. An Internet Archive copy stands for the archived page's own host."""
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
+    if host == "web.archive.org":
+        m = re.match(r"^/web/\d+(?:[a-z_]+)?/(https?://.+)$", parsed.path + (f"?{parsed.query}" if parsed.query else ""))
+        if m:
+            return (urlparse(m.group(1)).hostname or "").lower()
+    return host
+
+
 def registry() -> dict[str, tuple[str, dict]]:
     """host -> (source_id, entry) for every reviewed independent source."""
     out = {}
@@ -81,7 +103,7 @@ def load(people: dict[tuple[str, str], str]) -> tuple[dict[tuple[str, str], Back
             errors.append(f"background {key}: entries without an identity citation")
         cites = ([bg.identity] if bg.identity else []) + [c for e in entries for c in e.citations]
         for c in cites:
-            host = (urlparse(c.url).hostname or "").lower()
+            host = cite_host(c.url)
             if BANNED_HOSTS.search(host):
                 errors.append(f"background {key}: {host} is not an allowed source")
                 continue
@@ -89,7 +111,7 @@ def load(people: dict[tuple[str, str], str]) -> tuple[dict[tuple[str, str], Back
                 errors.append(f"background {key}: {host} is not a reviewed independent source (independent_sources.yaml)")
                 continue
             sid, entry = reg[host]
-            if key[0] in (entry.get("not_independent_for") or []):
+            if not_independent(entry, key[0]):
                 errors.append(f"background {key}: {entry['publisher']} is not independent for this ticket ({entry['ownership']})")
             checked = quote_checks.get(f"{c.url}\n{c.quote}")
             if not checked or checked["result"] != "ok":
@@ -113,7 +135,7 @@ def load(people: dict[tuple[str, str], str]) -> tuple[dict[tuple[str, str], Back
 
 def _with_source_ids(bg: Background, reg: dict) -> Background:
     def tag(c):
-        hit = reg.get((urlparse(c.url).hostname or "").lower())
+        hit = reg.get(cite_host(c.url))
         return c.model_copy(update={"source_id": hit[0] if hit else None})
 
     def tag_entries(es):

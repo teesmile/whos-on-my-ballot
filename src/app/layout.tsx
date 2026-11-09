@@ -21,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="skip" href="#main">Skip to content</a>
         <header className="site-header">
           <a href="/" className="site-name">Who’s on my ballot?</a>
+          <a href="/election-day/" className="site-nav">Election day</a>
         </header>
         <main id="main">{children}</main>
         <footer className="site-footer">

@@ -1,0 +1,87 @@
+{
+ "elections": [
+  {
+   "id": "jan-2027",
+   "date": "2027-01-16",
+   "races": "President, Senate and House of Representatives",
+   "source_id": "inec-calendar",
+   "quotes": [
+    "Presidential / National Assembly Election Nationwide (36 States & FCT) General Election January 16, 2027"
+   ]
+  },
+  {
+   "id": "feb-2027",
+   "date": "2027-02-06",
+   "races": "Governor and State House of Assembly",
+   "source_id": "inec-calendar",
+   "quotes": [
+    "Governorship / State House Of Assembly Election Participating States & State Constituencies Governorship February 6, 2027"
+   ]
+  }
+ ],
+ "hours": {
+  "open": "08:30",
+  "close": "14:30",
+  "source_id": "inec-voter-education",
+  "quotes": [
+   "Polling units open nationwide at 8:30 AM",
+   "Accreditation and voting commence simultaneously and conclude at 2:30 PM"
+  ]
+ },
+ "steps": [
+  {
+   "text": "Polling units open at 8:30 AM. Accreditation and voting start together and end at 2:30 PM.",
+   "quotes": [
+    "Polling units open nationwide at 8:30 AM",
+    "Accreditation and voting commence simultaneously and conclude at 2:30 PM"
+   ]
+  },
+  {
+   "text": "If you are on the queue by 2:30 PM, you are entitled to vote.",
+   "quotes": [
+    "every voter on the queue on or before 2:30 PM is entitled to vote"
+   ]
+  },
+  {
+   "text": "No PVC, no voting. Bring your own Permanent Voter Card. You must be there in person and be verified on the BVAS device.",
+   "quotes": [
+    "NO PVC, NO VOTING!",
+    "Ensure you have your physical Permanent Voter Card (PVC) with you.",
+    "All voters must be physically present and verified through the BVAS device."
+   ]
+  },
+  {
+   "text": "Go to the polling unit where you are registered and join the queue.",
+   "quotes": [
+    "Arrive at your registered Polling Unit and join the orderly queue."
+   ]
+  },
+  {
+   "text": "An election official scans your PVC on the BVAS, which then checks your fingerprint. If the fingerprint check fails, it checks your face instead.",
+   "quotes": [
+    "who scans the card details on the BVAS reader",
+    "The BVAS captures and verifies your fingerprint biometrics. If fingerprint capture fails, facial recognition authentication is instantly deployed."
+   ]
+  },
+  {
+   "text": "An official checks your name on the register, marks it, then signs, stamps and hands you your ballot paper.",
+   "quotes": [
+    "verifies your name on the register, marks the register, signs and stamps the official ballot paper, and hands it to you."
+   ]
+  },
+  {
+   "text": "Mark your ballot in private in the voting cubicle, fold it, and put it in the ballot box.",
+   "quotes": [
+    "Proceed to the private voting cubicle.",
+    "Fold your ballot vertically inward and drop it into the designated ballot box."
+   ]
+  },
+  {
+   "text": "After voting you may leave, or stay at least 300 metres away to watch the count and the announcement of results.",
+   "quotes": [
+    "You may leave or remain at least 300 meters away to observe open counting and results announcement."
+   ]
+  }
+ ],
+ "steps_source_id": "inec-voter-education"
+}

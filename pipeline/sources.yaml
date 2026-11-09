@@ -38,6 +38,14 @@ documents:
     cite_url: "https://inecnigeria.org/wp-content/uploads/2019/02/Name-of-Senatorial-DistrictsFederal-and-State-Constituencies-Nationwide-1.xls"
     archive_url: "https://web.archive.org/web/20260815145133/https://inecnigeria.org/downloads-all/name-of-senatorial-districts-federal-and-state-constituencies-nationwide/"
     title: "INEC: Name of Senatorial Districts, Federal and State Constituencies Nationwide (workbook)"
+  - id: inec-voter-education
+    kind: html
+    url: https://www.inecnigeria.org/voters/education
+    title: "INEC: Voter Education & Guidelines (election-day voting procedure)"
+  - id: inec-calendar
+    kind: html
+    url: https://www.inecnigeria.org/elections/calendar
+    title: "INEC: Election Calendar & Timetable"
   - id: inec-parties
     kind: html
     url: https://www.inecnigeria.org/parties

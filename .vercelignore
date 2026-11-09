@@ -1,0 +1,16 @@
+# Uploaded to Vercel: only what the site build needs (src, data/generated, configs, scripts, lockfile).
+# Never upload INEC raw downloads, local tool output, or private working notes (top-level Markdown and docs/).
+/*.md
+/docs/
+/pipeline/
+/node_modules/
+/.next/
+/out/
+/test-results/
+/playwright-report/
+/shots/
+/tests/
+/.github/
+/Makefile
+/.env*
+/.vercel/

@@ -369,6 +369,10 @@ def build(log=print) -> BuildResult:
             out_lgas.append(Lga(code=f"{s_code}/{l.code}", name=l.name, wards=wards))
         geo[state] = StateGeo(code=s_code, name=state, source_id="inec-pu-locator", lgas=out_lgas)
 
+    from .election_day import build as build_election_day
+
+    errors.extend(build_election_day(by_id))
+
     locator_counts = {
         "states": len(locator),
         "lgas": sum(len(lgas) for _, lgas in locator.values()),

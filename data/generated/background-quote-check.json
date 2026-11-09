@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-09T21:39:31+00:00",
+ "checked_at": "2026-11-09T23:38:40+00:00",
  "results": {
   "https://businessday.ng/news/article/gbemi-saraki-now-transport-minister-as-amaechi-resigns/\nAmaechi was first appointed Transport Minister in December 2015 and served in that position till May 2019. He was reappointed in July 2019.": {
    "result": "ok"
@@ -163,9 +163,6 @@
   "https://newtelegraphng.com/apc-govts-from-buhari-disaster-for-nigeria-bugaje/\na former National Secretary of the Defunct Action Congress (AC)": {
    "result": "ok"
   },
-  "https://pmnewsnigeria.com/2019/05/29/makinde-sworn-in-as-oyo-governor-cancels-school-fees/\nthe inauguration of Engr. Oluseyi Abiodun Makinde and Engr Rauf Aderemi Olaniyan as the new governor and deputy governor of Oyo State.": {
-   "result": "ok"
-  },
   "https://saharareporters.com/2026/08/02/inec-publishes-preliminary-list-sowore-tinubu-atiku-obi-15-others-2027-presidential\nFormer Vice President Atiku Abubakar emerged on the ticket of the African Democratic Congress (ADC), paired with former Minister of Transportation, Rotimi Amaechi.": {
    "result": "ok"
   },
@@ -224,6 +221,36 @@
    "result": "ok"
   },
   "https://von.gov.ng/sowore-secures-aac-presidential-ticket-for-2027-elections/\nDelegates and party leaders unanimously endorsed Sowore during the primary, underscoring his continued dominance within the AAC, the political movement he founded in 2018.": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20210422211102/https://www.inecnigeria.org/wp-content/uploads/2019/02/FINAL-LIST-OF-GOVERNORSHIP-CANDIDATES-1.pdf\n2019 GENERAL ELECTIONS ... FINAL LIST OF GOVERNORSHIP CANDIDATES ... 69          GOVERNOR   OLUSEYI MAKINDE                  PDP ... 70 OYO      DEPUTY     RAUFU ADEREMI OLANIYAN           PDP": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20210430194040/https://www.inecnigeria.org/wp-content/uploads/2019/02/2019-GENERAL-ELECTIONS-FINAL-LIST-OF-SENATORIAL-CANDIDATE-1.pdf\n2019 GENERAL ELECTIONS ... FINAL LIST OF SENATORIAL CANDIDATES ... 12                CROSS RIVER CENTRAL   ONOR SANDY OJANG                PDP      None       52      M": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20210617120101/https://www.inecnigeria.org/wp-content/uploads/2019/02/2015-SENATORIAL-CANDIDATES-.xlsx\nCANDIDATES FOR SENATORIAL ELECTION 2015 ... CROSS RIVER CENTRAL ... DR. SAN DY OJANG ONOR ... LP": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20220923224421/https://inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf\n2023 GENERAL ELECTION ... 20       NIGERIA         BP     Vice-          MUSTAPHA USMAN ... Presidential   TURAKI": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20220923224421/https://inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf\n2023 GENERAL ELECTION ... 35       NIGERIA         ZLP    Presidential   NWANYANWU DANIEL      None 62    M        WEST AFRICAN SCHOOL ... DABERECHUKWU                              CERTIFICATE BACHELOR OF LAWS": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20230114074647/https://inecnigeria.org/wp-content/uploads/2022/10/2023-GENERAL-ELECTION-FINAL-LIST-OF-CANDIDATES-FOR-STATE-ELECTIONS-GOVERNORSHIP-HOUSES-OF-ASSEMBLY.pdf\nNigeria’s 2023 General Election is scheduled to hold in two phases ... 201   CROSS River   PDP   Governorship   ONOR SANDY OJANG": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20231118014610/https://www.inecnigeria.org/wp-content/uploads/2019/02/2019-GENERAL-ELECTIONS-FINAL-LIST-OF-SENATORIAL-CANDIDATE-1.pdf\nThursday, 17 January 2019 ... 2019 GENERAL ELECTIONS ... FINAL LIST OF SENATORIAL CANDIDATES ... POSITION: SENATE ... 1    BORNO       BORNO CENTRAL   SHETTIMA KASHIM                 APC": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20240727193329/https://inecnigeria.org/wp-content/uploads/2022/10/2023-GENERAL-ELECTION-FINAL-LIST-OF-CANDIDATES-FOR-STATE-ELECTIONS-GOVERNORSHIP-HOUSES-OF-ASSEMBLY.pdf\nNigeria’s 2023 General Election is scheduled to hold in two phases beginning ... 642   OYO        PDP    Governorship    MAKINDE OLUSEYI ABIODUN": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20260815131359id_/https://www.inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf\n2023 GENERAL ELECTION ... 21       NIGERIA         LP     Presidential   OBI PETER GREGORY      None 61   M        FSLC WASC/GCE Degree": {
+   "result": "ok"
+  },
+  "https://web.archive.org/web/20260815131359id_/https://www.inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf\n2023 GENERAL ELECTION ... 23       NIGERIA         NNPP   Presidential   MUSA MOHAMMED          None 66   M        FIRST SCHOOL LEAVING ... RABIU KWANKWASO                           CERTIFICATE TECHNICAL": {
    "result": "ok"
   },
   "https://www.arise.tv/2027-polls-inec-clears-tinubu-obi-atiku-others-as-presidential-candidates/\nOther presidential candidates listed by INEC include Omoyele Sowore of the African Action Congress (AAC), Donald Duke of the People’s Redemption Party (PRP), Sandy Onor of the Peoples Democratic Party (PDP)": {

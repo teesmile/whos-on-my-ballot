@@ -37,7 +37,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 1rem; top: 0.5rem; background: var(--bg); padding: 0.5rem; z-index: 1; }
-.site-header { border-bottom: 1px solid var(--line); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.site-header { border-bottom: 1px solid var(--line); padding-top: 0.75rem; padding-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.site-nav { display: inline-block; min-height: 44px; line-height: 44px; min-width: 44px; }
 .site-name { font-weight: 700; text-decoration: none; display: inline-block; min-height: 44px; line-height: 44px; }
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; padding-top: 1rem; padding-bottom: 2rem; }
 .site-footer a { color: var(--muted); }
@@ -111,3 +112,9 @@ main p > a { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
 .entries > li { border-left: 3px solid var(--line); padding-left: 0.75rem; margin-bottom: 0.5rem; }
 .entry { margin: 0.25rem 0 0; }
 .method { color: var(--muted); font-size: 0.9rem; }
+
+.countdown { background: var(--panel); border-left: 4px solid var(--fg); padding: 0.75rem 1rem; margin: 0.75rem 0 1.25rem; min-height: 7.5rem; }
+.countdown .headline { font-size: 1.2rem; font-weight: 600; margin: 0 0 0.4rem; }
+.countdown p { margin: 0.3rem 0; }
+.steps { padding-left: 1.4rem; }
+.steps li { margin: 0.5rem 0; }

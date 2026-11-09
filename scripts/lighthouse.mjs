@@ -16,6 +16,7 @@ const PAGES = [
   '/ballot/lagos/surulere-i-or-surulere-ii--lagos-central/',
   '/c/jan-2027-president-ndc/',
   '/c/jan-2027-house-fct-municipal-bwari-apc/',
+  '/election-day/',
 ]
 
 const server = spawn('node', ['scripts/serve-out.mjs'], { env: { ...process.env, PORT: String(PORT) }, stdio: 'ignore' })

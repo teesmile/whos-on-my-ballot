@@ -338,15 +338,6 @@ people:
       Vice President Kashim Shettima, 59, as his running mate.
     retrieved: '2026-11-09'
   public_offices:
-  - text: President of Nigeria, from 2023
-    citations:
-    - url: https://voaafrica.com/a/bola-tinubu-nigeria-s-president/7113462.html
-      publisher: Voice of America (VOA Africa, via AFP)
-      title: Bola Tinubu Nigeria's President
-      published: '2023-05-29'
-      quote: Bola Tinubu (center, in white) was sworn in on Monday, May 29, 2023 as Nigeria's president, succeeding Muhammadu
-        Buhari.
-      retrieved: '2026-11-09'
   - text: Governor of Lagos State, 1999–2007
     citations:
     - url: https://voaafrica.com/a/bola-tinubu-nigeria-s-president/7113462.html
@@ -360,6 +351,15 @@ people:
       title: 'Tinubu: The kingmaker set for the throne'
       published: '2022-06-08'
       quote: He secured a second term in 2003 and after leaving office in 2007
+      retrieved: '2026-11-09'
+  - text: President of Nigeria, from 2023
+    citations:
+    - url: https://voaafrica.com/a/bola-tinubu-nigeria-s-president/7113462.html
+      publisher: Voice of America (VOA Africa, via AFP)
+      title: Bola Tinubu Nigeria's President
+      published: '2023-05-29'
+      quote: Bola Tinubu (center, in white) was sworn in on Monday, May 29, 2023 as Nigeria's president, succeeding Muhammadu
+        Buhari.
       retrieved: '2026-11-09'
   - text: Senator (Lagos West)
     citations:
@@ -395,6 +395,15 @@ people:
       quote: In the first post-transition Lagos State governorship election in 1999, Tinubu as the candidate of the Alliance
         for Democracy
       retrieved: '2026-11-09'
+  - text: Presidential candidate of the All Progressives Congress (APC), 2023 election
+    citations:
+    - url: https://businessday.ng/politics/article/bola-tinubu-from-senator-to-president/
+      publisher: BusinessDay
+      title: 'Bola Tinubu: From Senator to president'
+      published: '2023-05-29'
+      quote: As Buhari's tenure reached its constitutional limit, the APC nominated Tinubu as their presidential candidate
+        for the 2023 election.
+      retrieved: '2026-11-09'
   - text: Member of the Action Congress of Nigeria (ACN)
     citations:
     - url: https://dailytrust.com/tinubu-the-kingmaker-set-for-the-throne
@@ -419,15 +428,6 @@ people:
       quote: President Bola Tinubu, 74, is seeking another term on the platform of the All Progressives Congress (APC), with
         Vice President Kashim Shettima, 59, as his running mate.
       retrieved: '2026-11-09'
-  - text: Presidential candidate of the All Progressives Congress (APC), 2023 election
-    citations:
-    - url: https://businessday.ng/politics/article/bola-tinubu-from-senator-to-president/
-      publisher: BusinessDay
-      title: 'Bola Tinubu: From Senator to president'
-      published: '2023-05-29'
-      quote: As Buhari's tenure reached its constitutional limit, the APC nominated Tinubu as their presidential candidate
-        for the 2023 election.
-      retrieved: '2026-11-09'
 - candidate_id: jan-2027-president-apc
   role: running_mate
   inec_name: SHETTIMA KASHIM
@@ -439,14 +439,6 @@ people:
     quote: The list shows that the APC has Tinubu, 74, as its standard-bearer, with Kashim Shettima, 59, as his running mate.
     retrieved: '2026-11-09'
   public_offices:
-  - text: Vice President of Nigeria
-    citations:
-    - url: https://thisdaylive.com/index.php/2023/05/29/shettima-sworn-in-as-vice-president-of-nigeria
-      publisher: ThisDay
-      title: Shettima Sworn in as Vice President of Nigeria
-      published: '2023-05-29'
-      quote: The vice president elect Kassim Shettima has officially been sworn in as the Vice President of Nigeria.
-      retrieved: '2026-11-09'
   - text: Governor of Borno State, 2011–2019
     citations:
     - url: https://thisdaylive.com/index.php/2022/07/11/shettima-a-pearl-from-north-east
@@ -454,6 +446,14 @@ people:
       title: 'Shettima: A Pearl from North-East'
       published: '2022-07-11'
       quote: governor of Borno State between 2011 and 2019
+      retrieved: '2026-11-09'
+  - text: Vice President of Nigeria
+    citations:
+    - url: https://thisdaylive.com/index.php/2023/05/29/shettima-sworn-in-as-vice-president-of-nigeria
+      publisher: ThisDay
+      title: Shettima Sworn in as Vice President of Nigeria
+      published: '2023-05-29'
+      quote: The vice president elect Kassim Shettima has officially been sworn in as the Vice President of Nigeria.
       retrieved: '2026-11-09'
   - text: Commissioner for Finance, Borno State
     citations:
@@ -480,6 +480,23 @@ people:
       published: '2022-07-10'
       quote: He was reelected in 2015 on the platform of the APC,
       retrieved: '2026-11-09'
+  - text: Senate (Borno Central) candidate of the All Progressives Congress (APC), 2019 election
+    citations:
+    - url: https://web.archive.org/web/20231118014610/https://www.inecnigeria.org/wp-content/uploads/2019/02/2019-GENERAL-ELECTIONS-FINAL-LIST-OF-SENATORIAL-CANDIDATE-1.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2019 General Elections: Final List of Senatorial Candidates'
+      published: '2019-01-17'
+      quote: 'Thursday, 17 January 2019 ... 2019 GENERAL ELECTIONS ... FINAL LIST OF SENATORIAL CANDIDATES ... POSITION: SENATE
+        ... 1    BORNO       BORNO CENTRAL   SHETTIMA KASHIM                 APC'
+      retrieved: '2026-11-10'
+  - text: Vice-presidential candidate of the All Progressives Congress (APC), 2023 election
+    citations:
+    - url: https://www.icirnigeria.org/kashim-shettima-profile-of-tinubus-running-mate-for-2023-elections/
+      publisher: The ICIR
+      title: 'Kashim Shettima: profile of Tinubu''s running mate for 2023 elections'
+      published: '2022-07-10'
+      quote: the choice of the Vice Presidential candidate of the All Progressives Congress (APC) in the 2023 elections
+      retrieved: '2026-11-09'
   - text: Member of the All Progressives Congress (APC)
     citations:
     - url: https://www.icirnigeria.org/kashim-shettima-profile-of-tinubus-running-mate-for-2023-elections/
@@ -495,14 +512,6 @@ people:
       quote: The list shows that the APC has Tinubu, 74, as its standard-bearer, with Kashim Shettima, 59, as his running
         mate.
       retrieved: '2026-11-09'
-  - text: Vice-presidential candidate of the All Progressives Congress (APC), 2023 election
-    citations:
-    - url: https://www.icirnigeria.org/kashim-shettima-profile-of-tinubus-running-mate-for-2023-elections/
-      publisher: The ICIR
-      title: 'Kashim Shettima: profile of Tinubu''s running mate for 2023 elections'
-      published: '2022-07-10'
-      quote: the choice of the Vice Presidential candidate of the All Progressives Congress (APC) in the 2023 elections
-      retrieved: '2026-11-09'
 - candidate_id: jan-2027-president-apm
   role: candidate
   inec_name: MAKINDE OLUSEYI ABIODUN
@@ -517,13 +526,6 @@ people:
   public_offices:
   - text: Governor of Oyo State
     citations:
-    - url: https://pmnewsnigeria.com/2019/05/29/makinde-sworn-in-as-oyo-governor-cancels-school-fees/
-      publisher: P.M. News
-      title: Makinde sworn-in as Oyo Governor, cancels school fees
-      published: '2019-05-29'
-      quote: the inauguration of Engr. Oluseyi Abiodun Makinde and Engr Rauf Aderemi Olaniyan as the new governor and deputy
-        governor of Oyo State.
-      retrieved: '2026-11-09'
     - url: https://nannews.ng/makinde-floors-folarin-others-emerges-governor-elect-in-oyo/
       publisher: News Agency of Nigeria
       title: Makinde floors Folarin, others emerges governor-elect in Oyo
@@ -541,6 +543,24 @@ people:
       quote: The Oyo State governorship candidate of the Social Democratic Party (SDP) in the 2015 general elections, Engineer
         Seyi Makinde,
       retrieved: '2026-11-09'
+  - text: Oyo State governorship candidate of the Peoples Democratic Party (PDP), 2019 election
+    citations:
+    - url: https://web.archive.org/web/20210422211102/https://www.inecnigeria.org/wp-content/uploads/2019/02/FINAL-LIST-OF-GOVERNORSHIP-CANDIDATES-1.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2019 General Elections: Final List of Governorship Candidates'
+      published: unknown
+      quote: 2019 GENERAL ELECTIONS ... FINAL LIST OF GOVERNORSHIP CANDIDATES ... 69          GOVERNOR   OLUSEYI MAKINDE                  PDP
+        ... 70 OYO      DEPUTY     RAUFU ADEREMI OLANIYAN           PDP
+      retrieved: '2026-11-10'
+  - text: Oyo State governorship candidate of the Peoples Democratic Party (PDP), 2023 election
+    citations:
+    - url: https://web.archive.org/web/20240727193329/https://inecnigeria.org/wp-content/uploads/2022/10/2023-GENERAL-ELECTION-FINAL-LIST-OF-CANDIDATES-FOR-STATE-ELECTIONS-GOVERNORSHIP-HOUSES-OF-ASSEMBLY.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2023 General Election: Final List of Candidates for State Elections (Governorship & Houses of Assembly)'
+      published: unknown
+      quote: Nigeria’s 2023 General Election is scheduled to hold in two phases beginning ... 642   OYO        PDP    Governorship    MAKINDE
+        OLUSEYI ABIODUN
+      retrieved: '2026-11-10'
   - text: Member of the Peoples Democratic Party (PDP)
     citations:
     - url: https://dailytrust.com/seyi-makinde-leaves-sdp-for-pdp
@@ -621,20 +641,6 @@ people:
     retrieved: '2026-11-09'
   public_offices: []
   party_history:
-  - text: National Chairman, Boot Party (BP)
-    citations:
-    - url: https://dailytrust.com/faces-that-will-shape-2027-presidential-election/
-      publisher: Daily Trust
-      title: Faces that will shape 2027 presidential election
-      published: '2026-08-21'
-      quote: He is the national chairman of the Boot party and has chosen Mustapha Usman Turaki to run with him.
-      retrieved: '2026-11-09'
-    - url: https://nairametrics.com/2026/09/13/meet-the-10-youngest-presidential-candidates-for-nigerias-2027-elections/
-      publisher: Nairametrics
-      title: Meet the 10 youngest presidential candidates for Nigeria's 2027 elections
-      published: '2026-09-13'
-      quote: and also the national chairman of the party, according to INEC’s record.
-      retrieved: '2026-11-09'
   - text: Presidential candidate of the Boot Party (BP), 2023 election
     citations:
     - url: https://www.icirnigeria.org/behold-candidates-for-the-2023-presidential-election-list/
@@ -649,6 +655,20 @@ people:
       published: '2022-09-20'
       quote: 10. Adenuga Sunday Oluwafemi – Boot Party (BP)
       retrieved: '2026-11-09'
+  - text: National Chairman, Boot Party (BP)
+    citations:
+    - url: https://dailytrust.com/faces-that-will-shape-2027-presidential-election/
+      publisher: Daily Trust
+      title: Faces that will shape 2027 presidential election
+      published: '2026-08-21'
+      quote: He is the national chairman of the Boot party and has chosen Mustapha Usman Turaki to run with him.
+      retrieved: '2026-11-09'
+    - url: https://nairametrics.com/2026/09/13/meet-the-10-youngest-presidential-candidates-for-nigerias-2027-elections/
+      publisher: Nairametrics
+      title: Meet the 10 youngest presidential candidates for Nigeria's 2027 elections
+      published: '2026-09-13'
+      quote: and also the national chairman of the party, according to INEC’s record.
+      retrieved: '2026-11-09'
 - candidate_id: jan-2027-president-bp
   role: running_mate
   inec_name: MUSTAPHA USMAN TURAKI
@@ -660,7 +680,16 @@ people:
     quote: He is the national chairman of the Boot party and has chosen Mustapha Usman Turaki to run with him.
     retrieved: '2026-11-09'
   public_offices: []
-  party_history: []
+  party_history:
+  - text: Vice-presidential candidate of the Boot Party (BP), 2023 election
+    citations:
+    - url: https://web.archive.org/web/20220923224421/https://inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2023 General Election: Final List of Candidates for National Elections (Presidential, Senatorial and House of
+        Representatives)'
+      published: unknown
+      quote: 2023 GENERAL ELECTION ... 20       NIGERIA         BP     Vice-          MUSTAPHA USMAN ... Presidential   TURAKI
+      retrieved: '2026-11-10'
 - candidate_id: jan-2027-president-dla
   role: candidate
   inec_name: ADEBISI MOSES OLUSOJI
@@ -729,6 +758,31 @@ people:
       quote: Governor, Anambra State of Nigeria (2006-2014)
       retrieved: '2026-11-09'
   party_history:
+  - text: Vice-presidential candidate of the Peoples Democratic Party (PDP), 2019 election
+    citations:
+    - url: https://www.vanguardngr.com/2018/10/breaking-atiku-picks-peter-obi-as-running-mate/
+      publisher: Vanguard
+      title: 'Breaking: Atiku picks Peter Obi as running mate'
+      published: '2018-10-12'
+      quote: The Presidential candidate of the Peoples Democratic Party, PDP ... Friday picked the former governor of Anambra
+        state, Mr Peter Obi as his running mate.
+      retrieved: '2026-11-09'
+    - url: https://www.vanguardngr.com/2018/10/peter-obi-a-complete-profile/
+      publisher: Vanguard
+      title: 'Peter Obi: A complete profile'
+      published: '2018-10-13'
+      quote: Here is the complete profile of Peter Obi, named Friday as Atiku Abubakar’s running mate in the 2019 elections.
+      retrieved: '2026-11-09'
+  - text: Presidential candidate of the Labour Party (LP), 2023 election
+    citations:
+    - url: https://web.archive.org/web/20260815131359id_/https://www.inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2023 General Election: Final List of Candidates for National Elections (Presidential, Senatorial and House of
+        Representatives)'
+      published: unknown
+      quote: 2023 GENERAL ELECTION ... 21       NIGERIA         LP     Presidential   OBI PETER GREGORY      None 61   M        FSLC
+        WASC/GCE Degree
+      retrieved: '2026-11-10'
   - text: Member of the All Progressives Grand Alliance (APGA)
     citations:
     - url: https://www.vanguardngr.com/2014/10/last-peter-obi-bows-pressure-defects-pdp/
@@ -744,21 +798,6 @@ people:
       title: Ex-Anambra gov, Obi decamps to PDP
       published: '2014-10-08'
       quote: Mr. Peter Obi, yesterday decamped to the Peoples Democratic Party, PDP.
-      retrieved: '2026-11-09'
-  - text: Vice-presidential candidate of the Peoples Democratic Party (PDP), 2019 election
-    citations:
-    - url: https://www.vanguardngr.com/2018/10/breaking-atiku-picks-peter-obi-as-running-mate/
-      publisher: Vanguard
-      title: 'Breaking: Atiku picks Peter Obi as running mate'
-      published: '2018-10-12'
-      quote: The Presidential candidate of the Peoples Democratic Party, PDP ... Friday picked the former governor of Anambra
-        state, Mr Peter Obi as his running mate.
-      retrieved: '2026-11-09'
-    - url: https://www.vanguardngr.com/2018/10/peter-obi-a-complete-profile/
-      publisher: Vanguard
-      title: 'Peter Obi: A complete profile'
-      published: '2018-10-13'
-      quote: Here is the complete profile of Peter Obi, named Friday as Atiku Abubakar’s running mate in the 2019 elections.
       retrieved: '2026-11-09'
   - text: Member of the African Democratic Congress (ADC)
     citations:
@@ -787,22 +826,6 @@ people:
     quote: Peter Obi has nominated former governor of Kano state, Rabiu Kwankwaso as his running mate.
     retrieved: '2026-11-09'
   public_offices:
-  - text: Member, House of Representatives
-    citations:
-    - url: https://dailytrust.com/kwankwaso-red-cap-revolutionist-changing-the-tide/
-      publisher: Daily Trust
-      title: 'Kwankwaso: Red Cap Revolutionist Changing The Tide'
-      published: '2023-02-22'
-      quote: election as a member of the House of Representatives in (1992)
-      retrieved: '2026-11-09'
-  - text: Deputy Speaker, House of Representatives
-    citations:
-    - url: https://dailytrust.com/kwankwaso-red-cap-revolutionist-changing-the-tide/
-      publisher: Daily Trust
-      title: 'Kwankwaso: Red Cap Revolutionist Changing The Tide'
-      published: '2023-02-22'
-      quote: His subsequent election as deputy speaker in the House brought him to the limelight of national politics.
-      retrieved: '2026-11-09'
   - text: Governor of Kano State, 1999–2003
     citations:
     - url: https://businessday.ng/politics/article/2027-kwankwaso-may-replace-shettima-as-tinubus-running-mate/
@@ -826,14 +849,6 @@ people:
       published: '2025-06-22'
       quote: was governor of Kano State from 1999 to 2003 and 2011 to 2015
       retrieved: '2026-11-09'
-  - text: Minister of Defence
-    citations:
-    - url: https://businessday.ng/politics/article/2027-kwankwaso-may-replace-shettima-as-tinubus-running-mate/
-      publisher: BusinessDay
-      title: '2027: Kwankwaso may replace Shettima as Tinubu''s running mate'
-      published: '2025-06-22'
-      quote: also served as Minister of Defence under the regime of former President Olusegun Obasanjo.
-      retrieved: '2026-11-09'
   - text: Senator (Kano Central), 2015–2019
     citations:
     - url: https://businessday.ng/politics/article/2027-kwankwaso-may-replace-shettima-as-tinubus-running-mate/
@@ -842,7 +857,41 @@ people:
       published: '2025-06-22'
       quote: also served as the Senator representing Kano Central Senatorial District, from 2015 to 2019
       retrieved: '2026-11-09'
+  - text: Member, House of Representatives
+    citations:
+    - url: https://dailytrust.com/kwankwaso-red-cap-revolutionist-changing-the-tide/
+      publisher: Daily Trust
+      title: 'Kwankwaso: Red Cap Revolutionist Changing The Tide'
+      published: '2023-02-22'
+      quote: election as a member of the House of Representatives in (1992)
+      retrieved: '2026-11-09'
+  - text: Deputy Speaker, House of Representatives
+    citations:
+    - url: https://dailytrust.com/kwankwaso-red-cap-revolutionist-changing-the-tide/
+      publisher: Daily Trust
+      title: 'Kwankwaso: Red Cap Revolutionist Changing The Tide'
+      published: '2023-02-22'
+      quote: His subsequent election as deputy speaker in the House brought him to the limelight of national politics.
+      retrieved: '2026-11-09'
+  - text: Minister of Defence
+    citations:
+    - url: https://businessday.ng/politics/article/2027-kwankwaso-may-replace-shettima-as-tinubus-running-mate/
+      publisher: BusinessDay
+      title: '2027: Kwankwaso may replace Shettima as Tinubu''s running mate'
+      published: '2025-06-22'
+      quote: also served as Minister of Defence under the regime of former President Olusegun Obasanjo.
+      retrieved: '2026-11-09'
   party_history:
+  - text: Presidential candidate of the New Nigeria Peoples Party (NNPP), 2023 election
+    citations:
+    - url: https://web.archive.org/web/20260815131359id_/https://www.inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2023 General Election: Final List of Candidates for National Elections (Presidential, Senatorial and House of
+        Representatives)'
+      published: unknown
+      quote: 2023 GENERAL ELECTION ... 23       NIGERIA         NNPP   Presidential   MUSA MOHAMMED          None 66   M        FIRST
+        SCHOOL LEAVING ... RABIU KWANKWASO                           CERTIFICATE TECHNICAL
+      retrieved: '2026-11-10'
   - text: Member of the All Progressives Congress (APC)
     citations:
     - url: https://dailytrust.com/kwankwaso-red-cap-revolutionist-changing-the-tide/
@@ -950,6 +999,24 @@ people:
     quote: The PDP ticket has Onor, 60, as its presidential candidate and Umaru Babangida, 61, as his running mate
     retrieved: '2026-11-09'
   public_offices:
+  - text: Executive Chairman, Etung Local Government Council, 1999–2002
+    citations:
+    - url: https://www.thisdaylive.com/2026/02/13/sandy-ojang-onor-making-his-mark-as-scholar-politician-and-orator-of-the-9th-senate
+      publisher: ThisDay
+      title: 'Sandy Ojang Onor: Making His Mark as Scholar, Politician and Orator of the 9th Senate'
+      published: '2026-02-13'
+      quote: As the Executive Chairman of Etung Local Government Council from 1999 to 2002, he also became the Deputy National
+        President
+      retrieved: '2026-11-09'
+  - text: Commissioner for Agriculture and Environment, Cross River State, 2010–2013
+    citations:
+    - url: https://www.thisdaylive.com/2026/02/13/sandy-ojang-onor-making-his-mark-as-scholar-politician-and-orator-of-the-9th-senate
+      publisher: ThisDay
+      title: 'Sandy Ojang Onor: Making His Mark as Scholar, Politician and Orator of the 9th Senate'
+      published: '2026-02-13'
+      quote: Between 2010 and 2013, Senator Professor Onor superintended over the Ministries of Agriculture and Environment
+        as Commissioner.
+      retrieved: '2026-11-09'
   - text: Senator (Cross River Central), 2019–2023
     citations:
     - url: https://leadership.ng/2027-senator-onor-buys-pdp-presidential-nomination-forms/
@@ -964,24 +1031,6 @@ people:
       published: '2021-12-15'
       quote: The sitting Senator, representing Central Senatorial District of the State in the 9th Assembly
       retrieved: '2026-11-09'
-  - text: Commissioner for Agriculture and Environment, Cross River State, 2010–2013
-    citations:
-    - url: https://www.thisdaylive.com/2026/02/13/sandy-ojang-onor-making-his-mark-as-scholar-politician-and-orator-of-the-9th-senate
-      publisher: ThisDay
-      title: 'Sandy Ojang Onor: Making His Mark as Scholar, Politician and Orator of the 9th Senate'
-      published: '2026-02-13'
-      quote: Between 2010 and 2013, Senator Professor Onor superintended over the Ministries of Agriculture and Environment
-        as Commissioner.
-      retrieved: '2026-11-09'
-  - text: Executive Chairman, Etung Local Government Council, 1999–2002
-    citations:
-    - url: https://www.thisdaylive.com/2026/02/13/sandy-ojang-onor-making-his-mark-as-scholar-politician-and-orator-of-the-9th-senate
-      publisher: ThisDay
-      title: 'Sandy Ojang Onor: Making His Mark as Scholar, Politician and Orator of the 9th Senate'
-      published: '2026-02-13'
-      quote: As the Executive Chairman of Etung Local Government Council from 1999 to 2002, he also became the Deputy National
-        President
-      retrieved: '2026-11-09'
   - text: Chairman, Cross River State Local Government Service Commission
     citations:
     - url: https://www.thisdaylive.com/2026/02/13/sandy-ojang-onor-making-his-mark-as-scholar-politician-and-orator-of-the-9th-senate
@@ -991,6 +1040,32 @@ people:
       quote: He had previously served as Chairman, Cross River State Local Government Service Commission.
       retrieved: '2026-11-09'
   party_history:
+  - text: Senate (Cross River Central) candidate of the Labour Party (LP), 2015 election
+    citations:
+    - url: https://web.archive.org/web/20210617120101/https://www.inecnigeria.org/wp-content/uploads/2019/02/2015-SENATORIAL-CANDIDATES-.xlsx
+      publisher: Independent National Electoral Commission (INEC)
+      title: Candidates for Senatorial Election 2015 (spreadsheet)
+      published: '2015-01-13'
+      quote: CANDIDATES FOR SENATORIAL ELECTION 2015 ... CROSS RIVER CENTRAL ... DR. SAN DY OJANG ONOR ... LP
+      retrieved: '2026-11-10'
+  - text: Senate (Cross River Central) candidate of the Peoples Democratic Party (PDP), 2019 election
+    citations:
+    - url: https://web.archive.org/web/20210430194040/https://www.inecnigeria.org/wp-content/uploads/2019/02/2019-GENERAL-ELECTIONS-FINAL-LIST-OF-SENATORIAL-CANDIDATE-1.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2019 General Elections: Final List of Senatorial Candidates'
+      published: '2019-01-17'
+      quote: 2019 GENERAL ELECTIONS ... FINAL LIST OF SENATORIAL CANDIDATES ... 12                CROSS RIVER CENTRAL   ONOR
+        SANDY OJANG                PDP      None       52      M
+      retrieved: '2026-11-10'
+  - text: Cross River State governorship candidate of the Peoples Democratic Party (PDP), 2023 election
+    citations:
+    - url: https://web.archive.org/web/20230114074647/https://inecnigeria.org/wp-content/uploads/2022/10/2023-GENERAL-ELECTION-FINAL-LIST-OF-CANDIDATES-FOR-STATE-ELECTIONS-GOVERNORSHIP-HOUSES-OF-ASSEMBLY.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2023 General Election: Final List of Candidates for State Elections (Governorship & Houses of Assembly)'
+      published: unknown
+      quote: Nigeria’s 2023 General Election is scheduled to hold in two phases ... 201   CROSS River   PDP   Governorship   ONOR
+        SANDY OJANG
+      retrieved: '2026-11-10'
   - text: Member of the Peoples Democratic Party (PDP)
     citations:
     - url: https://leadership.ng/2027-senator-onor-buys-pdp-presidential-nomination-forms/
@@ -1042,15 +1117,6 @@ people:
         an eight-year tenure that ended in 2007.
       retrieved: '2026-11-09'
   party_history:
-  - text: Member of the Peoples Democratic Party (PDP)
-    citations:
-    - url: https://www.vanguardngr.com/2026/10/donald-duke-from-cross-river-record-to-prps-2027-presidential-gamble/
-      publisher: Vanguard
-      title: 'Donald Duke: From Cross River record to PRP’s 2027 presidential gamble'
-      published: '2026-10-02'
-      quote: After leaving office in 2007, he sought the presidency on the PDP platform, but lost the party’s nomination to
-        Umaru Musa Yar’Adua.
-      retrieved: '2026-11-09'
   - text: Governorship candidate of the Peoples Democratic Party (PDP), 1999 election
     citations:
     - url: https://www.vanguardngr.com/2026/10/donald-duke-from-cross-river-record-to-prps-2027-presidential-gamble/
@@ -1067,6 +1133,15 @@ people:
       published: '2026-10-02'
       quote: He later contested the 2019 presidential election on the Social Democratic Party, SDP, platform after years away
         from frontline politics.
+      retrieved: '2026-11-09'
+  - text: Member of the Peoples Democratic Party (PDP)
+    citations:
+    - url: https://www.vanguardngr.com/2026/10/donald-duke-from-cross-river-record-to-prps-2027-presidential-gamble/
+      publisher: Vanguard
+      title: 'Donald Duke: From Cross River record to PRP’s 2027 presidential gamble'
+      published: '2026-10-02'
+      quote: After leaving office in 2007, he sought the presidency on the PDP platform, but lost the party’s nomination to
+        Umaru Musa Yar’Adua.
       retrieved: '2026-11-09'
 - candidate_id: jan-2027-president-prp
   role: running_mate
@@ -1183,6 +1258,16 @@ people:
     retrieved: '2026-11-09'
   public_offices: []
   party_history:
+  - text: Presidential candidate of the Zenith Labour Party (ZLP), 2023 election
+    citations:
+    - url: https://web.archive.org/web/20220923224421/https://inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf
+      publisher: Independent National Electoral Commission (INEC)
+      title: '2023 General Election: Final List of Candidates for National Elections (Presidential, Senatorial and House of
+        Representatives)'
+      published: unknown
+      quote: 2023 GENERAL ELECTION ... 35       NIGERIA         ZLP    Presidential   NWANYANWU DANIEL      None 62    M        WEST
+        AFRICAN SCHOOL ... DABERECHUKWU                              CERTIFICATE BACHELOR OF LAWS
+      retrieved: '2026-11-10'
   - text: National Chairman, Labour Party (LP)
     citations:
     - url: https://dailytrust.com/nwanyanwu-an-all-rounder-eyeing-presidency/
@@ -1225,3 +1310,4 @@ people:
     retrieved: '2026-11-09'
   public_offices: []
   party_history: []
+second_pass: 'D-026: official records (INEC candidate lists and results 2011-2023, National Assembly records), retrieved 2026-11-10'
