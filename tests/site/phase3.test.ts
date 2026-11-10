@@ -153,13 +153,23 @@ describe('background citations (review 7)', () => {
   it('show publisher and dates only, never a headline, the same way for every presidential candidate and running mate', async () => {
     const { allCandidates } = await import('@/lib/data')
     let n = 0
+    const unescape = (s: string) => s.replace(/<[^>]+>/g, '').replaceAll('&amp;', '&').replaceAll('&#x27;', '\'').replaceAll('&quot;', '"')
     for (const { race, c } of allCandidates().filter(({ race }) => race.office === 'president')) {
       const html = page(candidatePath(c.id))
-      const bg = html.split('data-background')[1]?.split('</section>')[0] ?? ''
-      for (const [, text] of bg.matchAll(/<p class="cite"><a href="[^"]+">([\s\S]*?)<\/a><\/p>/g)) {
-        const plain = text.replace(/<[^>]+>/g, '')
-        expect(plain, `${race.id} ${c.id}`).toMatch(/^Source: [^,:]+(, \d{1,2} [A-Z][a-z]+ \d{4})?, retrieved \d{1,2} [A-Z][a-z]+ \d{4}$/)
-        n++
+      for (const p of [c.candidate, c.running_mate]) {
+        const bg = p?.background
+        if (!bg) continue
+        for (const cite of [...bg.public_offices, ...bg.party_history].flatMap(e => e.citations)) {
+          const at = html.indexOf(`<p class="cite"><a href="${cite.url.replaceAll('&', '&amp;')}">`)
+          expect(at, `${race.id} ${c.id} ${cite.url}`).toBeGreaterThan(-1)
+          const start = html.indexOf('">', at + 20) + 2
+          const linkText = html.slice(start, html.indexOf('</a>', start))
+          const text = unescape(linkText)
+          expect(text.startsWith(`Source: ${cite.publisher}`), `${c.id}: ${text}`).toBe(true)
+          expect(text.includes(cite.title), `${c.id} shows a headline: ${cite.title}`).toBe(false)
+          expect(text, c.id).toMatch(/, retrieved \d{1,2} [A-Z][a-z]+ \d{4}$/)
+          n++
+        }
       }
     }
     expect(n).toBeGreaterThan(100)

@@ -32,7 +32,8 @@ describe('election-day page', () => {
     }
     const external = [...html.matchAll(/href="(https?:\/\/[^"]+)"/g)].map(m => inecHost(m[1]))
     expect(external.length).toBeGreaterThan(5)
-    expect(external.filter(h => !INEC_HOSTS.has(h))).toEqual([])
+    // the one exception: the civic note's citation of the Constitution at the National Library of Nigeria (D-034)
+    expect(external.filter(h => !INEC_HOSTS.has(h) && h !== 'nigeriareposit.nln.gov.ng')).toEqual([])
   })
 
   it('every claim names its INEC source, and that source is cited with a date on the page', () => {
