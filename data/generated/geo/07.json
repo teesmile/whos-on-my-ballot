@@ -25779,10 +25779,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-benue-vandeikya-i",
       "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -26354,10 +26355,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-benue-vandeikya-i",
       "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -26684,10 +26686,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-vandeikya-i"
+      "feb-2027-sha-benue-vandeikya-i",
+      "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -26897,10 +26900,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-benue-vandeikya-i",
       "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -27005,10 +27009,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-vandeikya-i"
+      "feb-2027-sha-benue-vandeikya-i",
+      "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -27145,10 +27150,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-vandeikya-i"
+      "feb-2027-sha-benue-vandeikya-i",
+      "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",

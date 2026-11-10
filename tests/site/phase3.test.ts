@@ -148,3 +148,20 @@ describe('share cards', () => {
     })
   }
 })
+
+describe('background citations (review 7)', () => {
+  it('show publisher and dates only, never a headline, the same way for every presidential candidate and running mate', async () => {
+    const { allCandidates } = await import('@/lib/data')
+    let n = 0
+    for (const { race, c } of allCandidates().filter(({ race }) => race.office === 'president')) {
+      const html = page(candidatePath(c.id))
+      const bg = html.split('data-background')[1]?.split('</section>')[0] ?? ''
+      for (const [, text] of bg.matchAll(/<p class="cite"><a href="[^"]+">([\s\S]*?)<\/a><\/p>/g)) {
+        const plain = text.replace(/<[^>]+>/g, '')
+        expect(plain, `${race.id} ${c.id}`).toMatch(/^Source: [^,:]+(, \d{1,2} [A-Z][a-z]+ \d{4})?, retrieved \d{1,2} [A-Z][a-z]+ \d{4}$/)
+        n++
+      }
+    }
+    expect(n).toBeGreaterThan(100)
+  })
+})

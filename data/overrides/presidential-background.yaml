@@ -105,7 +105,7 @@ people:
       former Minister of Transportation, Rotimi Amaechi.
     retrieved: '2026-11-09'
   public_offices:
-  - text: Vice-President of Nigeria, 1999–2007
+  - text: Vice President of Nigeria, 1999-2007
     citations:
     - url: https://www.channelstv.com/2025/07/16/breaking-atiku-resigns-from-pdp
       publisher: Channels Television
@@ -138,14 +138,14 @@ people:
       published: '2022-05-29'
       quote: On December 20, 2006, Action Congress (AC) selected Atiku as their presidential candidate.
       retrieved: '2026-11-09'
-    - url: https://www.channelstv.com/2025/07/16/breaking-atiku-resigns-from-pdp
-      publisher: Channels Television
-      title: 'UPDATED: Atiku Resigns From PDP, Cites ''Irreconcilable Differences'''
-      published: '2025-07-16'
-      quote: He first left the party just after serving out his term as the vice president to contest for the Presidency in
-        2007 on the platform of the Action Congress of Nigeria (ACN)
-      retrieved: '2026-11-09'
-  - text: Member of the All Progressives Congress (APC), 2014–2017
+    - url: https://www.thisdaylive.com/2023/02/25/atikus-last-chance/
+      publisher: ThisDay
+      title: Atiku’s Last Chance
+      published: '2023-02-25'
+      quote: Atiku’s second attempt at the presidency was in 2007. On December 20, 2006, he was chosen as the presidential
+        candidate of the then Action Congress (AC).
+      retrieved: '2026-11-10'
+  - text: Member of the All Progressives Congress (APC), 2014-2017
     citations:
     - url: https://guardian.ng/?p=1763349
       publisher: The Guardian Nigeria
@@ -154,7 +154,7 @@ people:
       quote: Atiku joined the All Progressives Congress (APC) on February 2, 2014 to further pursue his presidency ambition.
         For reasons best known to him, he left the APC on November 24, 2017. He returned to PDP on December 3, 2017.
       retrieved: '2026-11-09'
-  - text: Member of the Peoples Democratic Party (PDP), 2017–2025
+  - text: Member of the Peoples Democratic Party (PDP), 2017-2025
     citations:
     - url: https://guardian.ng/?p=1763349
       publisher: The Guardian Nigeria
@@ -220,7 +220,7 @@ people:
     quote: 'Party: African Democratic Congress (ADC) Age: 79 Running mate: Amaechi Chibuike Rotimi, 61'
     retrieved: '2026-11-09'
   public_offices:
-  - text: Speaker, Rivers State House of Assembly, 1999–2007
+  - text: Speaker, Rivers State House of Assembly, 1999-2007
     citations:
     - url: https://www.thecable.ng/amaechi-quits-apc-says-he-never-believed-in-tinubus-capacity-to-lead-nigeria
       publisher: TheCable
@@ -236,7 +236,7 @@ people:
       quote: Amaechi, who previously served as Speaker of the Rivers State House of Assembly and two-term governor of Rivers
         State, was also highlighted for his tenure as Minister of Transportation
       retrieved: '2026-11-09'
-  - text: Governor of Rivers State, 2007–2015
+  - text: Governor of Rivers State, 2007-2015
     citations:
     - url: https://www.thecable.ng/amaechi-quits-apc-says-he-never-believed-in-tinubus-capacity-to-lead-nigeria
       publisher: TheCable
@@ -245,7 +245,7 @@ people:
       quote: Amaechi served as governor of Rivers state from 2007 to 2015, after serving as speaker of the state house of
         assembly between 1999 and 2007.
       retrieved: '2026-11-09'
-  - text: Minister of Transportation, 2015–2022
+  - text: Minister of Transportation, 2015-2022
     citations:
     - url: https://businessday.ng/news/article/gbemi-saraki-now-transport-minister-as-amaechi-resigns/
       publisher: BusinessDay
@@ -316,16 +316,7 @@ people:
     quote: Aliyu Abbas-Bin of the Action Democratic Party (ADP), who will contest alongside Chinazam Ike.
     retrieved: '2026-11-09'
   public_offices: []
-  party_history:
-  - text: National Youth Leader, Action Democratic Party (ADP)
-    citations:
-    - url: https://leadership.ng/2027-adp-presidential-candidate-abbas-names-ike-as-running-mate/
-      publisher: Leadership
-      title: '2027: ADP Presidential Candidate Abbas Names Ike As Running Mate'
-      published: unknown
-      quote: vice chairman of the Forum of National Youth Leaders of Political Parties in Nigeria and as the National Youth
-        Leader of ADP.
-      retrieved: '2026-11-09'
+  party_history: []
 - candidate_id: jan-2027-president-apc
   role: candidate
   inec_name: TINUBU BOLA AHMED
@@ -338,7 +329,7 @@ people:
       Vice President Kashim Shettima, 59, as his running mate.
     retrieved: '2026-11-09'
   public_offices:
-  - text: Governor of Lagos State, 1999–2007
+  - text: Governor of Lagos State, 1999-2007
     citations:
     - url: https://voaafrica.com/a/bola-tinubu-nigeria-s-president/7113462.html
       publisher: Voice of America (VOA Africa, via AFP)
@@ -439,7 +430,7 @@ people:
     quote: The list shows that the APC has Tinubu, 74, as its standard-bearer, with Kashim Shettima, 59, as his running mate.
     retrieved: '2026-11-09'
   public_offices:
-  - text: Governor of Borno State, 2011–2019
+  - text: Governor of Borno State, 2011-2019
     citations:
     - url: https://thisdaylive.com/index.php/2022/07/11/shettima-a-pearl-from-north-east
       publisher: ThisDay
@@ -581,7 +572,7 @@ people:
       running mate.
     retrieved: '2026-11-09'
   public_offices:
-  - text: Director-General, State Security Service (SSS), 2015–2018
+  - text: Director-General, State Security Service (SSS), 2015-2018
     citations:
     - url: https://saharareporters.com/2026/08/13/governor-makinde-picks-sss-ex-director-general-musa-daura-running-mate-apm-presidential
       publisher: Sahara Reporters
@@ -749,14 +740,20 @@ people:
     quote: The presidential candidate of the Nigeria Democratic Congress (NDC), Peter Obi has nominated
     retrieved: '2026-11-09'
   public_offices:
-  - text: Governor of Anambra State, 2006–2014
+  - text: Governor of Anambra State, 2006-2014
     citations:
-    - url: https://www.vanguardngr.com/2018/10/peter-obi-a-complete-profile/
-      publisher: Vanguard
-      title: 'Peter Obi: A complete profile'
-      published: '2018-10-13'
-      quote: Governor, Anambra State of Nigeria (2006-2014)
-      retrieved: '2026-11-09'
+    - url: https://www.channelstv.com/2022/07/19/atiku-felicitates-peter-obi-on-61st-birthday/
+      publisher: Channels Television
+      title: Atiku Felicitates Peter Obi On 61st Birthday
+      published: '2022-07-19'
+      quote: Obi was a two-term governor of Anambra State, between 2006 and 2014
+      retrieved: '2026-11-10'
+    - url: https://guardian.ng/politics/you-will-not-win-but-making-tinubu-presidential-election-easier-soludo-hits-peter-obi/
+      publisher: The Guardian Nigeria
+      title: How Peter Obi is making presidential election easier for Tinubu - Soludo
+      published: '2022-11-15'
+      quote: Obi governed Anambra State between 2006 and 2014
+      retrieved: '2026-11-10'
   party_history:
   - text: Vice-presidential candidate of the Peoples Democratic Party (PDP), 2019 election
     citations:
@@ -764,15 +761,9 @@ people:
       publisher: Vanguard
       title: 'Breaking: Atiku picks Peter Obi as running mate'
       published: '2018-10-12'
-      quote: The Presidential candidate of the Peoples Democratic Party, PDP ... Friday picked the former governor of Anambra
-        state, Mr Peter Obi as his running mate.
-      retrieved: '2026-11-09'
-    - url: https://www.vanguardngr.com/2018/10/peter-obi-a-complete-profile/
-      publisher: Vanguard
-      title: 'Peter Obi: A complete profile'
-      published: '2018-10-13'
-      quote: Here is the complete profile of Peter Obi, named Friday as Atiku Abubakar’s running mate in the 2019 elections.
-      retrieved: '2026-11-09'
+      quote: The Presidential candidate of the Peoples Democratic Party, PDP, for the forthcoming 2019 election, Alhaji Atiku
+        Abubakar, Friday picked the former governor of Anambra state, Mr Peter Obi as his running mate.
+      retrieved: '2026-11-10'
   - text: Presidential candidate of the Labour Party (LP), 2023 election
     citations:
     - url: https://web.archive.org/web/20260815131359id_/https://www.inecnigeria.org/wp-content/uploads/2022/09/Final-List-of-Candidates-for-National-Elections-1.pdf
@@ -826,7 +817,7 @@ people:
     quote: Peter Obi has nominated former governor of Kano state, Rabiu Kwankwaso as his running mate.
     retrieved: '2026-11-09'
   public_offices:
-  - text: Governor of Kano State, 1999–2003
+  - text: Governor of Kano State, 1999-2003
     citations:
     - url: https://businessday.ng/politics/article/2027-kwankwaso-may-replace-shettima-as-tinubus-running-mate/
       publisher: BusinessDay
@@ -841,7 +832,7 @@ people:
       quote: Under this dispensation, he contested and won the governorship ticket of Kano State, a position he held from
         1999 to 2003.
       retrieved: '2026-11-09'
-  - text: Governor of Kano State, 2011–2015
+  - text: Governor of Kano State, 2011-2015
     citations:
     - url: https://businessday.ng/politics/article/2027-kwankwaso-may-replace-shettima-as-tinubus-running-mate/
       publisher: BusinessDay
@@ -849,7 +840,7 @@ people:
       published: '2025-06-22'
       quote: was governor of Kano State from 1999 to 2003 and 2011 to 2015
       retrieved: '2026-11-09'
-  - text: Senator (Kano Central), 2015–2019
+  - text: Senator (Kano Central), 2015-2019
     citations:
     - url: https://businessday.ng/politics/article/2027-kwankwaso-may-replace-shettima-as-tinubus-running-mate/
       publisher: BusinessDay
@@ -999,7 +990,7 @@ people:
     quote: The PDP ticket has Onor, 60, as its presidential candidate and Umaru Babangida, 61, as his running mate
     retrieved: '2026-11-09'
   public_offices:
-  - text: Executive Chairman, Etung Local Government Council, 1999–2002
+  - text: Executive Chairman, Etung Local Government Council, 1999-2002
     citations:
     - url: https://www.thisdaylive.com/2026/02/13/sandy-ojang-onor-making-his-mark-as-scholar-politician-and-orator-of-the-9th-senate
       publisher: ThisDay
@@ -1008,7 +999,7 @@ people:
       quote: As the Executive Chairman of Etung Local Government Council from 1999 to 2002, he also became the Deputy National
         President
       retrieved: '2026-11-09'
-  - text: Commissioner for Agriculture and Environment, Cross River State, 2010–2013
+  - text: Commissioner for Agriculture and Environment, Cross River State, 2010-2013
     citations:
     - url: https://www.thisdaylive.com/2026/02/13/sandy-ojang-onor-making-his-mark-as-scholar-politician-and-orator-of-the-9th-senate
       publisher: ThisDay
@@ -1017,7 +1008,7 @@ people:
       quote: Between 2010 and 2013, Senator Professor Onor superintended over the Ministries of Agriculture and Environment
         as Commissioner.
       retrieved: '2026-11-09'
-  - text: Senator (Cross River Central), 2019–2023
+  - text: Senator (Cross River Central), 2019-2023
     citations:
     - url: https://leadership.ng/2027-senator-onor-buys-pdp-presidential-nomination-forms/
       publisher: Leadership
@@ -1108,7 +1099,7 @@ people:
       Duke of the People’s Redemption Party (PRP), Sandy Onor of the Peoples Democratic Party (PDP)
     retrieved: '2026-11-09'
   public_offices:
-  - text: Governor of Cross River State, 1999–2007
+  - text: Governor of Cross River State, 1999-2007
     citations:
     - url: https://www.vanguardngr.com/2026/10/donald-duke-from-cross-river-record-to-prps-2027-presidential-gamble/
       publisher: Vanguard
@@ -1118,7 +1109,7 @@ people:
         an eight-year tenure that ended in 2007.
       retrieved: '2026-11-09'
   party_history:
-  - text: Governorship candidate of the Peoples Democratic Party (PDP), 1999 election
+  - text: Governorship candidate (Cross River State) of the Peoples Democratic Party (PDP), 1999 election
     citations:
     - url: https://www.vanguardngr.com/2026/10/donald-duke-from-cross-river-record-to-prps-2027-presidential-gamble/
       publisher: Vanguard
@@ -1181,7 +1172,7 @@ people:
     quote: The Social Democratic Party (SDP) is fielding Adewole Ebenezer Adebayo alongside Usman Muhammed Bugaje,
     retrieved: '2026-11-09'
   public_offices:
-  - text: Member, House of Representatives (Kaita/Jibia Federal Constituency, Katsina State), 2003–2007
+  - text: Member, House of Representatives (Kaita/Jibia Federal Constituency, Katsina State), 2003-2007
     citations:
     - url: https://dailytrust.com/lagos-boys-arrogantly-misled-tinubu-on-niger-crisis
       publisher: Daily Trust

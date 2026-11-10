@@ -9,6 +9,9 @@ Rules, all conservative:
   4. A ward showing several possible races keeps only IReV's, if IReV's is one of them; otherwise it is left as it is.
   5. A ward with one race from the 2011 workbook that IReV contradicts shows both races (OI-13): the sources disagree, and this
      project does not choose between INEC's own documents.
+  6. Where the two disagree on at least half of an LGA's checked wards (and on two or more), the conflict is systematic, such as
+     swapped "I"/"II" labels, so no ward of that LGA keeps a single race: every ward shows all the races its LGA's wards
+     resolve to (OI-13). Found by an independent re-check of Enugu East (D-036).
 """
 
 from __future__ import annotations
@@ -85,4 +88,20 @@ def apply_irev(ward_races: dict[str, list[str]], list_scs: list, race_of: dict[t
             report.append(f"{c} {name} ({lga}): the 2011 workbook reading gives {races[0]}, IReV 2023 gives {t}; both shown (OI-13)")
         else:
             how[c] = "irev-confirms"
+
+    # rule 6: a systematic conflict in an LGA leaves no ward of that LGA on a single race
+    by_lga: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for c in out:
+        st, lga, _ = ward_names[c]
+        by_lga[(st, lga)].append(c)
+    for (st, lga), codes in sorted(by_lga.items()):
+        checked = [c for c in codes if c in how]
+        disagree = [c for c in checked if how[c] == "disagree"]
+        if len(disagree) >= 2 and 2 * len(disagree) >= len(checked):
+            union = sorted({r for c in codes for r in out[c]})
+            moved = [c for c in sorted(codes) if out[c] and out[c] != union]
+            for c in moved:
+                out[c], how[c] = union, "disagree"
+            report.append(f"{st}/{lga}: INEC's workbook and IReV disagree on {len(disagree)} of {len(checked)} checked wards, so every "
+                          f"ward shows all {len(union)} races (OI-13); {len(moved)} more ward(s) changed")
     return out, how, report

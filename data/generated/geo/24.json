@@ -19,10 +19,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-lagos-agege-i"
+      "feb-2027-sha-lagos-agege-i",
+      "feb-2027-sha-lagos-agege-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -275,10 +276,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-lagos-agege-i"
+      "feb-2027-sha-lagos-agege-i",
+      "feb-2027-sha-lagos-agege-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -455,10 +457,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-lagos-agege-i"
+      "feb-2027-sha-lagos-agege-i",
+      "feb-2027-sha-lagos-agege-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -859,10 +862,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-lagos-agege-i"
+      "feb-2027-sha-lagos-agege-i",
+      "feb-2027-sha-lagos-agege-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -1247,10 +1251,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-lagos-agege-i"
+      "feb-2027-sha-lagos-agege-i",
+      "feb-2027-sha-lagos-agege-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -3079,6 +3084,7 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-lagos-agege-ii",
       "feb-2027-sha-lagos-ajeromi-ifelodun-i",
       "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
@@ -3453,7 +3459,8 @@
      "open_item": null,
      "state_constituency": [
       "feb-2027-sha-lagos-agege-ii",
-      "feb-2027-sha-lagos-ajeromi-ifelodun-i"
+      "feb-2027-sha-lagos-ajeromi-ifelodun-i",
+      "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-13",
@@ -3745,6 +3752,7 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-lagos-agege-ii",
       "feb-2027-sha-lagos-ajeromi-ifelodun-i",
       "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
@@ -3982,6 +3990,7 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-lagos-agege-ii",
       "feb-2027-sha-lagos-ajeromi-ifelodun-i",
       "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
@@ -4251,10 +4260,12 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-lagos-agege-ii",
+      "feb-2027-sha-lagos-ajeromi-ifelodun-i",
       "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -4683,10 +4694,12 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-lagos-agege-ii",
+      "feb-2027-sha-lagos-ajeromi-ifelodun-i",
       "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",
@@ -4864,7 +4877,8 @@
      "open_item": null,
      "state_constituency": [
       "feb-2027-sha-lagos-agege-ii",
-      "feb-2027-sha-lagos-ajeromi-ifelodun-i"
+      "feb-2027-sha-lagos-ajeromi-ifelodun-i",
+      "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-13",
@@ -5237,7 +5251,8 @@
      "open_item": null,
      "state_constituency": [
       "feb-2027-sha-lagos-agege-ii",
-      "feb-2027-sha-lagos-ajeromi-ifelodun-i"
+      "feb-2027-sha-lagos-ajeromi-ifelodun-i",
+      "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-13",
@@ -5534,7 +5549,8 @@
      "open_item": null,
      "state_constituency": [
       "feb-2027-sha-lagos-agege-ii",
-      "feb-2027-sha-lagos-ajeromi-ifelodun-i"
+      "feb-2027-sha-lagos-ajeromi-ifelodun-i",
+      "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-13",
@@ -5799,7 +5815,8 @@
      "open_item": null,
      "state_constituency": [
       "feb-2027-sha-lagos-agege-ii",
-      "feb-2027-sha-lagos-ajeromi-ifelodun-i"
+      "feb-2027-sha-lagos-ajeromi-ifelodun-i",
+      "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-13",
@@ -6099,10 +6116,12 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-lagos-agege-ii",
+      "feb-2027-sha-lagos-ajeromi-ifelodun-i",
       "feb-2027-sha-lagos-ajeromi-ifelodun-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook",

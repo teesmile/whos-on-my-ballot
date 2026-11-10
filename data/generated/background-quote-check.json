@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-10T15:29:59+00:00",
+ "checked_at": "2026-11-10T17:16:09+00:00",
  "results": {
   "https://businessday.ng/news/article/gbemi-saraki-now-transport-minister-as-amaechi-resigns/\nAmaechi was first appointed Transport Minister in December 2015 and served in that position till May 2019. He was reappointed in July 2019.": {
    "result": "ok"
@@ -115,7 +115,7 @@
   "https://guardian.ng/?p=2797748\nAddressing supporters shortly after registering as a member of the party, Amaechi commended security agencies for their swift response and urged residents to remain peaceful and avoid reprisals.": {
    "result": "ok"
   },
-  "https://leadership.ng/2027-adp-presidential-candidate-abbas-names-ike-as-running-mate/\nvice chairman of the Forum of National Youth Leaders of Political Parties in Nigeria and as the National Youth Leader of ADP.": {
+  "https://guardian.ng/politics/you-will-not-win-but-making-tinubu-presidential-election-easier-soludo-hits-peter-obi/\nObi governed Anambra State between 2006 and 2014": {
    "result": "ok"
   },
   "https://leadership.ng/2027-osun-dla-affirms-ambassador-olusoji-as-party-presidential-candidate/\naffirmed Ambassador Adebisi Moses Olusoji as the presidential candidate of the party": {
@@ -268,10 +268,10 @@
   "https://www.arise.tv/makinde-picks-lawal-daura-as-running-mate-for-2027-presidential-election/\nserved as DSS Director-General from July 2015 to August 2018": {
    "result": "ok"
   },
-  "https://www.channelstv.com/2025/07/16/breaking-atiku-resigns-from-pdp\nAtiku was elected as the Vice President on the platform of the PDP, serving under ex-President Olusegun Obasanjo from 1999 to 2007.": {
+  "https://www.channelstv.com/2022/07/19/atiku-felicitates-peter-obi-on-61st-birthday/\nObi was a two-term governor of Anambra State, between 2006 and 2014": {
    "result": "ok"
   },
-  "https://www.channelstv.com/2025/07/16/breaking-atiku-resigns-from-pdp\nHe first left the party just after serving out his term as the vice president to contest for the Presidency in 2007 on the platform of the Action Congress of Nigeria (ACN)": {
+  "https://www.channelstv.com/2025/07/16/breaking-atiku-resigns-from-pdp\nAtiku was elected as the Vice President on the platform of the PDP, serving under ex-President Olusegun Obasanjo from 1999 to 2007.": {
    "result": "ok"
   },
   "https://www.channelstv.com/2025/07/16/breaking-atiku-resigns-from-pdp\nHe has also been the PDP’s presidential candidate on two occasions, flying the party’s flag in the 2019 and 2023 elections.": {
@@ -316,6 +316,9 @@
   "https://www.thisdaylive.com/2022/05/21/nigeria-going-through-unprecedented-adversity-frustration-says-usman-bugaje/\nA presidential aspirant of the Peoples Redemption Party (PRP), Dr. Usman Buhaje, has said that Nigeria is going through": {
    "result": "ok"
   },
+  "https://www.thisdaylive.com/2023/02/25/atikus-last-chance/\nAtiku’s second attempt at the presidency was in 2007. On December 20, 2006, he was chosen as the presidential candidate of the then Action Congress (AC).": {
+   "result": "ok"
+  },
   "https://www.thisdaylive.com/2026/02/13/sandy-ojang-onor-making-his-mark-as-scholar-politician-and-orator-of-the-9th-senate\nAs the Executive Chairman of Etung Local Government Council from 1999 to 2002, he also became the Deputy National President": {
    "result": "ok"
   },
@@ -343,13 +346,7 @@
   "https://www.vanguardngr.com/2014/10/last-peter-obi-bows-pressure-defects-pdp/\ndecamped from the All Progressives Grand Alliance, APGA and defected to the Peoples Democratic Party, PDP.": {
    "result": "ok"
   },
-  "https://www.vanguardngr.com/2018/10/breaking-atiku-picks-peter-obi-as-running-mate/\nThe Presidential candidate of the Peoples Democratic Party, PDP ... Friday picked the former governor of Anambra state, Mr Peter Obi as his running mate.": {
-   "result": "ok"
-  },
-  "https://www.vanguardngr.com/2018/10/peter-obi-a-complete-profile/\nGovernor, Anambra State of Nigeria (2006-2014)": {
-   "result": "ok"
-  },
-  "https://www.vanguardngr.com/2018/10/peter-obi-a-complete-profile/\nHere is the complete profile of Peter Obi, named Friday as Atiku Abubakar’s running mate in the 2019 elections.": {
+  "https://www.vanguardngr.com/2018/10/breaking-atiku-picks-peter-obi-as-running-mate/\nThe Presidential candidate of the Peoples Democratic Party, PDP, for the forthcoming 2019 election, Alhaji Atiku Abubakar, Friday picked the former governor of Anambra state, Mr Peter Obi as his running mate.": {
    "result": "ok"
   },
   "https://www.vanguardngr.com/2026/10/babangida-umar-the-lesser-known-name-on-pdps-2027-ticket/\nUmar was the PDP’s National Vice Chairman, North-East, before being selected as Onor’s running mate.": {

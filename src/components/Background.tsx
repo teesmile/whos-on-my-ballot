@@ -4,13 +4,14 @@ import { formatDate } from './Candidate'
 
 export const NONE_FOUND = 'No entry found in independent sources.'
 
+/** One neutral form for every citation: publisher, publication date and retrieval date. Headlines are kept in the data but never
+ *  shown, because a headline can carry the outlet's opinion of a candidate (review 7). */
 function Cite({ c }: { c: BackgroundCitation }) {
   return (
     <p className="cite">
       <a href={c.url}>
+        {'Source: '}
         {c.publisher}
-        {': '}
-        {c.title}
         {c.published !== 'unknown' && (
           <>
             {', '}

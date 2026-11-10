@@ -97,3 +97,16 @@ def check_ward_spellings(spellings: dict, units_by_code: dict, hashed: set[str],
             elif st != s.state or (s.lgas and lga not in s.lgas):
                 errors.append(f"{label}: ward {v.get('code')} is in {st}/{lga}, outside the constituency's LGAs {s.lgas}")
     return errors
+
+
+def evidence_ward_gaps(sc_overrides: dict, race_by_workbook_code: dict[str, list[str]], ward_races: dict[str, list[str]]) -> list[str]:
+    """Review 6: every ward a reading cites as evidence must, on the final ballot, still offer that reading's constituency.
+    (Udubo's evidence ward 05/07/07 had been split away to Gamawa II by 2011 ward numbers that no longer fit.)"""
+    errors = []
+    for code, ov in sc_overrides.items():
+        races = race_by_workbook_code.get(code, [])
+        for w in ov.get("wards") or []:
+            if races and not set(races) & set(ward_races.get(w, [])):
+                errors.append(f"state_constituency_overrides {code}: evidence ward {w} does not offer {races} on its ballot "
+                              f"(it shows {ward_races.get(w, [])})")
+    return errors

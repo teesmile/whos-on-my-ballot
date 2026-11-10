@@ -58,3 +58,14 @@ def test_ward_spellings_must_cite_and_match_inecs_files():
     assert any("does not contain" in e for e in run(good, frag="ELSEWHERE"))
     assert any("not 'TRANS NKISI'" in e for e in run({**good, "code": "04/17/13"}))
     assert any("outside the constituency" in e for e in run({**good, "code": "04/18/01"}))
+
+
+
+def test_an_evidence_ward_must_keep_its_constituency_on_the_final_ballot():
+    """Review 6: Udubo's evidence ward 05/07/07 showed only Gamawa II."""
+    from ballot_pipeline.override_checks import evidence_ward_gaps
+
+    ov = {"SC/135/BA": {"wards": ["05/07/07"]}}
+    races = {"SC/135/BA": ["feb-2027-sha-bauchi-udubo-gamawa-i"]}
+    assert evidence_ward_gaps(ov, races, {"05/07/07": ["feb-2027-sha-bauchi-gamawa-gamawa-ii"]})
+    assert evidence_ward_gaps(ov, races, {"05/07/07": ["feb-2027-sha-bauchi-gamawa-gamawa-ii", "feb-2027-sha-bauchi-udubo-gamawa-i"]}) == []

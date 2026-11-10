@@ -89,15 +89,15 @@ Read from the composition text: 436; from the constituency name: 6; split LGAs (
 ## Presidential background (D-013)
 - [x] **PASS** all or none: every named presidential candidate and running mate, or no one: 36 of 36
 - [x] **PASS** background appears in the presidential race only
-- [x] **PASS** no citation anywhere is Wikipedia or a wiki: 143 citations
+- [x] **PASS** no citation anywhere is Wikipedia or a wiki: 142 citations
 - [x] **PASS** every background citation resolves to a reviewed independent source, with its quote confirmed by check-quotes: []
-Researched 2026-11-09: 36 people, 26 office entries, 62 party entries, 143 citations. No independently sourced entry found for 15: RUFAI ADEKUNLE OMO-AJE, SHEHU HUSSAINI, ABBAS-BIN ALIYU, YUSUF KABIRU, OFORDILE PEACE EGOBIA, ADEBISI MOSES OLUSOJI, ABUBAKAR NAFISAT USAKU, OKEREKE SUNDAY CHIBUZO, KONTO HAJJA BINTU, CHUKWUEMEKA UCHENNA ANTHONY, OKEREKE NKEM ESTHER, SULAIMAN NASIR MUHAMMED, MOHAMMED SULE, KEY PATIENCE NDIDI, HASSAN KHALID.
+Researched 2026-11-09: 36 people, 26 office entries, 61 party entries, 142 citations. No independently sourced entry found for 16: RUFAI ADEKUNLE OMO-AJE, SHEHU HUSSAINI, ABBAS-BIN ALIYU, IKE CHINAZAM, YUSUF KABIRU, OFORDILE PEACE EGOBIA, ADEBISI MOSES OLUSOJI, ABUBAKAR NAFISAT USAKU, OKEREKE SUNDAY CHIBUZO, KONTO HAJJA BINTU, CHUKWUEMEKA UCHENNA ANTHONY, OKEREKE NKEM ESTHER, SULAIMAN NASIR MUHAMMED, MOHAMMED SULE, KEY PATIENCE NDIDI, HASSAN KHALID.
 
 ## Election-day page (Phase 4)
 - [x] **PASS** every election-day statement rests on a quote found on INEC's fetched page (build fails otherwise): 8 steps, 2 election dates
 
 ## 6 February races (Phase 5)
-- [x] **PASS** the 16 January data is unchanged (SHA-256 pinned in sources.yaml): daa675102f95c051
+- [x] **PASS** the 16 January data is unchanged (SHA-256 pinned in sources.yaml): 883305aaee25c257
 - [x] **PASS** 28 governorship races: every state except the 8 off-cycle states and the FCT: 28
 - [x] **PASS** every governorship ticket has exactly one deputy
 - [x] **PASS** State Assembly races in 35 states (no FCT assembly; Borno absent from INEC's list, OI-11): 35 states: missing ['BORNO']
@@ -108,11 +108,11 @@ State Assembly constituencies on INEC's 2027 list: **991** (INEC's figure: 993; 
 - [x] **PASS** every State Assembly race has at least one ward: 0
 - [x] **PASS** every ward with several possible State Assembly races is tied to OI-6 (not split by INEC) or OI-13 (INEC's sources disagree)
 - [x] **PASS** every ward's State Assembly mapping names the recorded sources that decided it
-IReV 2023 ward lists (D-030): narrowed 1,002 wards to one race, confirmed 6,155, and contradicted the workbook reading for 138 (both races shown, OI-13).
+IReV 2023 ward lists (D-030): narrowed 1,020 wards to one race, confirmed 6,115, and contradicted the workbook reading for 160 (both races shown, OI-13).
 IReV items not used (128): ABIA UMUAHIA WEST (SC/22/AB): no 2027 constituency of that name; not used; ABIA UGWUNA AGBO L.G.A (SC/18/AB): no 2027 constituency of that name; not used; ADAMAWA FUFORE/GURIN (SC/38/AD): no 2027 constituency of that name; not used; ADAMAWA VERRE (SC/39/AD): no 2027 constituency of that name; not used; ADAMAWA HONG (SC/41/AD): no 2027 constituency of that name; not used; ADAMAWA UBA/GAYA (SC/40/AD): no 2027 constituency of that name; not used; ADAMAWA JADA/MBULO (SC/37/AD): no 2027 constituency of that name; not used; ADAMAWA KOMA/LEKO (SC/36/AD): no 2027 constituency of that name; not used; ADAMAWA NASSARAWA/BINYERI (SC/42/AD): no 2027 constituency of that name; not used; ADAMAWA MAYO-BELWA (SC/43/AD): no 2027 constituency of that name; not used; BAUCHI PALI (SC/106/BA): no 2027 constituency of that name; not used; BAUCHI DUGURI/GWANA (SC/107/BA): no 2027 constituency of that name; not used; BAUCHI BAUCHI (SC/109/BA): no 2027 constituency of that name; not used; BAUCHI ZUNGUR/GALAMBI (SC/110/BA): no 2027 constituency of that name; not used; BAUCHI DARAZO (SC/122/BA): no 2027 constituency of that name; not used …
-Wards with exactly one State Assembly race: 7,608; with several (OI-6 or OI-13, every possible race shown): 856 wards, 21,258 polling units (12.5%).
+Wards with exactly one State Assembly race: 7,552; with several (OI-6 or OI-13, every possible race shown): 912 wards, 23,467 polling units (13.9%).
 Workbook ward counts that differ from INEC's locator (1, reported only): SC/482/KD CITY: INEC's workbook says 6 wards, the locator gives 13
-Where INEC's 2027 list contradicted a workbook reading, the 2027 list was followed (5): BAUCHI 'AZARE (ZAKI II)': INEC's 2027 list places it in ['ZAKI']; the workbook reading gave ['KATAGUM'] (override). The 2027 list is followed. BAUCHI 'BURRA (NINGI II)': INEC's 2027 list places it in ['NINGI']; the workbook reading gave ['ZAKI'] (ward-number partition). The 2027 list is followed. BAUCHI 'CHIROMA (MISAU I)': INEC's 2027 list places it in ['MISAU']; the workbook reading gave ['ZAKI'] (ward-number partition). The 2027 list is followed. BAUCHI 'SAKWA (ZAKI I)': INEC's 2027 list places it in ['ZAKI']; the workbook reading gave ["JAMA'ARE"] (ward-number fit). The 2027 list is followed. TARABA 'KASHIMBILA (TAKUM II)': INEC's 2027 list places it in ['TAKUM']; the workbook reading gave ['YORRO'] (ward-number fit). The 2027 list is followed.
+Where INEC's 2027 list contradicted a workbook reading, the 2027 list was followed (4): BAUCHI 'BURRA (NINGI II)': INEC's 2027 list places it in ['NINGI']; the workbook reading gave ['ZAKI'] (ward-number partition). The 2027 list is followed. BAUCHI 'CHIROMA (MISAU I)': INEC's 2027 list places it in ['MISAU']; the workbook reading gave ['ZAKI'] (ward-number partition). The 2027 list is followed. BAUCHI 'SAKWA (ZAKI I)': INEC's 2027 list places it in ['ZAKI']; the workbook reading gave ["JAMA'ARE"] (ward-number fit). The 2027 list is followed. TARABA 'KASHIMBILA (TAKUM II)': INEC's 2027 list places it in ['TAKUM']; the workbook reading gave ['YORRO'] (ward-number fit). The 2027 list is followed.
 
 ## Provenance
 - [x] **PASS** every candidate and race cites a recorded source with a SHA-256

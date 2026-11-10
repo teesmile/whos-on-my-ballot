@@ -88,7 +88,7 @@ polling_units:
 
 # Phase 5 must not change the 16 January data: races/jan-2027.json must keep this SHA-256 (as merged to main after Phase 4).
 # Update it only deliberately, when INEC changes the 16 January lists.
-jan_2027_sha256: daa675102f95c051f0534659974092db3ba55cd0249fdd1f153a6fc57b3789ee   # updated once in Phase 5 for the owner-approved Onor spelling note (D-029)
+jan_2027_sha256: 883305aaee25c257132a30c745972ccc18df11b6253173d7618719e654ccf171   # re-pinned 10 Nov 2026 after the launch background review (review 7, D-037): neutral citations, plain hyphens, independent sources
 
 # The eight states whose governorship elections are off-cycle (and the FCT, which has no governor): no 6 February race.
 off_cycle_governorship: [ANAMBRA, BAYELSA, EDO, EKITI, IMO, KOGI, ONDO, OSUN]

@@ -100,3 +100,14 @@ def test_a_registered_irev_source_without_its_metadata_or_record_fails(tmp_path)
     assert len(preconditions(reg, {}, tmp_path)) == 2
     (tmp_path / "crawl.json").write_text("{}")
     assert preconditions(reg, {"inec-irev-2023-assembly": {}}, tmp_path) == []
+
+
+def test_a_systematic_conflict_leaves_no_ward_of_the_lga_on_one_race():
+    """D-036: Enugu East's workbook and IReV swap the I/II labels; the one ward they agree on is no safer than the rest."""
+    names = {"24/20/01": ("LAGOS", "SURULERE", "ORILE"), "24/20/04": ("LAGOS", "SURULERE", "AKINHANMI/COLE"),
+             "24/20/05": ("LAGOS", "SURULERE", "OTHER")}
+    w = irev(**{"24/20/05": IrevWard("24/20/05", "OTHER", "SC/671/LA", "SURULERE II")})
+    out, how, report = apply_irev({"24/20/01": ["surulere-i"], "24/20/04": ["surulere-ii"], "24/20/05": ["surulere-ii"]}, SCS, RACE, w, names)
+    assert out == {"24/20/01": BOTH, "24/20/04": BOTH, "24/20/05": BOTH}
+    assert how["24/20/05"] == "disagree" and any("2 of 3 checked" in r for r in report)
+

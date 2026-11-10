@@ -1,6 +1,5 @@
 {
  "notes": [
-  "BAUCHI 'AZARE (ZAKI II)': INEC's 2027 list places it in ['ZAKI']; the workbook reading gave ['KATAGUM'] (override). The 2027 list is followed.",
   "BAUCHI 'BURRA (NINGI II)': INEC's 2027 list places it in ['NINGI']; the workbook reading gave ['ZAKI'] (ward-number partition). The 2027 list is followed.",
   "BAUCHI 'CHIROMA (MISAU I)': INEC's 2027 list places it in ['MISAU']; the workbook reading gave ['ZAKI'] (ward-number partition). The 2027 list is followed.",
   "BAUCHI 'SAKWA (ZAKI I)': INEC's 2027 list places it in ['ZAKI']; the workbook reading gave [\"JAMA'ARE\"] (ward-number fit). The 2027 list is followed.",
@@ -16,11 +15,15 @@
   "ANAMBRA/ONITSHA-NORTH: 2027 constituencies ['ONITSHA NORTH I', 'ONITSHA NORTH II'] differ from the 2011 workbook's ['ONITSHA NORTH I', 'ONITSHA NORTH II']; its wards list all 2 (OI-6)",
   "ANAMBRA/ONITSHA -SOUTH: 2027 constituencies ['ONITSHA SOUTH I', 'ONITSHA SOUTH II'] differ from the 2011 workbook's ['ONITSHA SOUTH I', 'ONITSHA SOUTH II']; its wards list all 2 (OI-6)",
   "BAUCHI/ZAKI: 2027 constituencies ['AZARE (ZAKI II)', 'SAKWA (ZAKI I)'] differ from the 2011 workbook's ['BURRA', 'CHIROMA']; its wards list all 2 (OI-6)",
+  "BAUCHI/BAUCHI: 2027 constituencies ['BAUCHI (BAUCHI I)', 'ZUNGUR/GALAMBI (BAUCHI II)'] differ from the 2011 workbook's ['BAUCHI', 'ZUNGUR/GALAMBI']; its wards list all 2 (OI-6)",
   "BAUCHI/NINGI: 2027 constituencies ['BURRA (NINGI II)', 'NINGI (NINGI I)'] differ from the 2011 workbook's ['NINGI']; its wards list all 2 (OI-6)",
   "BAUCHI/MISAU: 2027 constituencies ['CHIROMA (MISAU I)', 'HARDAWA (MISAU II)'] differ from the 2011 workbook's ['HARDAWA']; its wards list all 2 (OI-6)",
+  "BAUCHI/DARAZO: 2027 constituencies ['DARAZO (DARAZO I)', 'SADE (DARAZO II)'] differ from the 2011 workbook's ['DARAZO', 'SADE']; its wards list all 2 (OI-6)",
   "BAUCHI/ALKALERI: 2027 constituencies ['DUGURI/GWANA (ALKALERI II)', 'PALI (ALKALERI I)'] differ from the 2011 workbook's ['DUGURI/GWANA', 'PALI']; its wards list all 2 (OI-6)",
+  "BAUCHI/GAMAWA: 2027 constituencies ['GAMAWA (GAMAWA II)', 'UDUBO (GAMAWA I)'] differ from the 2011 workbook's ['GAMAWA', 'UDUBO']; its wards list all 2 (OI-6)",
   "BAUCHI/GANJUWA: 2027 constituencies ['GANJUWA EAST', 'GANJUWA WEST'] differ from the 2011 workbook's ['GANJUWA EAST', 'GANJUWA WEST']; its wards list all 2 (OI-6)",
-  "BAUCHI/KATAGUM: 2027 constituencies ['KATAGUM (KATAGUM I)', 'MADARA/CHINADE (KATAGUM II)'] differ from the 2011 workbook's ['AZARE', 'KATAGUM', 'MADARA/CHINADE']; its wards list all 2 (OI-6)",
+  "BAUCHI/TORO: 2027 constituencies [\"JAMA'A/TORO (TORO II)\", 'LAME (TORO I)'] differ from the 2011 workbook's ['JAMA’A/TORO', 'LAME']; its wards list all 2 (OI-6)",
+  "BAUCHI/KATAGUM: 2027 constituencies ['KATAGUM (KATAGUM I)', 'MADARA/CHINADE (KATAGUM II)'] differ from the 2011 workbook's ['KATAGUM', 'MADARA/CHINADE']; its wards list all 2 (OI-6)",
   "BAUCHI/SHIRA: 2027 constituencies ['SHIRA I (DISINA)', 'SHIRA II (SHIRA)'] differ from the 2011 workbook's ['DISINA', 'SHIRA']; its wards list all 2 (OI-6)",
   "BAYELSA/NEMBE: 2027 constituencies ['NEMBE I', 'NEMBE II', 'NEMBE III'] differ from the 2011 workbook's ['NEMBE I', 'NEMBE II', 'NEMBE III']; its wards list all 3 (OI-6)",
   "BAYELSA/SAGBAMA: 2027 constituencies ['SAGBAMA I', 'SAGBAMA II', 'SAGBAMA III'] differ from the 2011 workbook's ['SAGBAMA I', 'SAGBAMA II', 'SAGBAMA III']; its wards list all 3 (OI-6)",
@@ -64,6 +67,9 @@
   "GOMBE/GOMBE: 2027 constituencies ['GOMBE NORTH', 'GOMBE SOUTH'] differ from the 2011 workbook's ['GOMBE NORTH', 'GOMBE SOUTH']; its wards list all 2 (OI-6)",
   "GOMBE/SHONGOM: 2027 constituencies ['PERO CHONGE', 'SHONGOM'] differ from the 2011 workbook's ['PERO CHONGE', 'SHONGOM']; its wards list all 2 (OI-6)",
   "JIGAWA/JAHUN: 2027 constituencies ['AUJARA', 'JAHUN'] differ from the 2011 workbook's ['JAHUN']; its wards list all 2 (OI-6)",
+  "JIGAWA/BABURA: 2027 constituencies ['BABURA', 'KANYA'] differ from the 2011 workbook's ['BABURA', 'KANYA']; its wards list all 2 (OI-6)",
+  "JIGAWA/KAFIN HAUSA: 2027 constituencies ['BALANGU', 'KAFIN HAUSA'] differ from the 2011 workbook's ['BULANGU', 'K/HAUSA']; its wards list all 2 (OI-6)",
+  "JIGAWA/DUTSE: 2027 constituencies ['DUTSE', 'FAGAM'] differ from the 2011 workbook's ['DUTSE', 'FAGAM']; its wards list all 2 (OI-6)",
   "KADUNA/SABON GARI: 2027 constituencies ['BASAWA', 'SABON GARI'] differ from the 2011 workbook's ['BASAWA', 'SABON GARI']; its wards list all 2 (OI-6)",
   "KADUNA/KADUNA NORTH: 2027 constituencies ['DOKA/GABASAWA', 'KAWO'] differ from the 2011 workbook's ['DOKA', 'KAWO/GABASAWA']; its wards list all 2 (OI-6)",
   "KADUNA/GIWA: 2027 constituencies ['GIWA EAST', 'GIWA WEST'] differ from the 2011 workbook's ['GIWA EAST', 'GIWA WEST']; its wards list all 2 (OI-6)",
@@ -124,7 +130,8 @@
   "TARABA/TAKUM: 2027 constituencies ['KASHIMBILA (TAKUM II)', 'TAKUM I'] differ from the 2011 workbook's ['TAKUM I']; its wards list all 2 (OI-6)",
   "YOBE/FIKA: 2027 constituencies ['FIKA/NGALDA', 'GOYA/NGEJI'] differ from the 2011 workbook's ['FIKA/NGALDA', 'GOYA/NGEJI']; its wards list all 2 (OI-6)",
   "YOBE/POTISKUM: 2027 constituencies ['MAMUDO', 'POTISKUM TOWN'] differ from the 2011 workbook's ['MAMUDO', 'POTISKUM TOWN']; its wards list all 2 (OI-6)",
-  "ZAMFARA/GUSAU: 2027 constituencies ['GUSAU EAST', 'GUSAU WEST'] differ from the 2011 workbook's ['GUSAU I', 'GUSAU II']; its wards list all 2 (OI-6)"
+  "ZAMFARA/GUSAU: 2027 constituencies ['GUSAU EAST', 'GUSAU WEST'] differ from the 2011 workbook's ['GUSAU I', 'GUSAU II']; its wards list all 2 (OI-6)",
+  "ZAMFARA/TSAFE: 2027 constituencies ['TSAFE EAST', 'TSAFE WEST'] differ from the 2011 workbook's ['TSAFE EAST', 'TSAFE WEST']; its wards list all 2 (OI-6)"
  ],
  "count_anomalies": [
   "SC/482/KD CITY: INEC's workbook says 6 wards, the locator gives 13"
@@ -1547,7 +1554,7 @@
    ],
    "lga_by": "INEC 2027 list",
    "workbook": "SC/116/BA",
-   "wards": 6
+   "wards": 11
   },
   {
    "state": "BAUCHI",
@@ -1602,7 +1609,7 @@
    ],
    "lga_by": "INEC 2027 list",
    "workbook": "SC/123/BA",
-   "wards": 5
+   "wards": 11
   },
   {
    "state": "BAUCHI",
@@ -1646,7 +1653,7 @@
    ],
    "lga_by": "INEC 2027 list",
    "workbook": "SC/135/BA",
-   "wards": 4
+   "wards": 11
   },
   {
    "state": "BAUCHI",
@@ -1668,7 +1675,7 @@
    ],
    "lga_by": "INEC 2027 list",
    "workbook": "SC/110/BA",
-   "wards": 4
+   "wards": 12
   },
   {
    "state": "BAYELSA",
@@ -4715,7 +4722,7 @@
    ],
    "lga_by": "workbook (ward names)",
    "workbook": "SC/438/JG",
-   "wards": 3
+   "wards": 11
   },
   {
    "state": "JIGAWA",
@@ -4880,7 +4887,7 @@
    ],
    "lga_by": "workbook (ward names)",
    "workbook": "SC/423/JG",
-   "wards": 3
+   "wards": 11
   },
   {
    "state": "JIGAWA",
@@ -11054,7 +11061,7 @@
    ],
    "lga_by": "workbook (ward names)",
    "workbook": "SC/973/ZF",
-   "wards": 6
+   "wards": 11
   },
   {
    "state": "ZAMFARA",
@@ -11065,7 +11072,7 @@
    ],
    "lga_by": "workbook (ward names)",
    "workbook": "SC/974/ZF",
-   "wards": 6
+   "wards": 11
   },
   {
    "state": "ZAMFARA",
@@ -11279,8 +11286,6 @@
    "14/03/10 IBAGWA-NIKE/EDEM (ENUGU EAST): the 2011 workbook reading gives feb-2027-sha-enugu-enugu-east-i, IReV 2023 gives feb-2027-sha-enugu-enugu-east-ii; both shown (OI-13)",
    "14/03/11 UGWUGO NIKE (ENUGU EAST): the 2011 workbook reading gives feb-2027-sha-enugu-enugu-east-i, IReV 2023 gives feb-2027-sha-enugu-enugu-east-ii; both shown (OI-13)",
    "14/13/12 EJUONA/UWANI (NSUKKA): the 2011 workbook reading gives feb-2027-sha-enugu-nsukka-west, IReV 2023 gives feb-2027-sha-enugu-nsukka-east; both shown (OI-13)",
-   "17/02/09 KUZUNZUMI (BABURA): the 2011 workbook reading gives feb-2027-sha-jigawa-babura, IReV 2023 gives feb-2027-sha-jigawa-kanya; both shown (OI-13)",
-   "17/02/11 TAKWASA (BABURA): the 2011 workbook reading gives feb-2027-sha-jigawa-babura, IReV 2023 gives feb-2027-sha-jigawa-kanya; both shown (OI-13)",
    "17/11/01 BASIRKA (GWARAM): the 2011 workbook reading gives feb-2027-sha-jigawa-gwaram, IReV 2023 gives feb-2027-sha-jigawa-fagam; both shown (OI-13)",
    "17/11/02 DINGAYA (GWARAM): the 2011 workbook reading gives feb-2027-sha-jigawa-gwaram, IReV 2023 gives feb-2027-sha-jigawa-fagam; both shown (OI-13)",
    "17/11/03 FAGAM (GWARAM): the 2011 workbook reading gives feb-2027-sha-jigawa-gwaram, IReV 2023 gives feb-2027-sha-jigawa-fagam; both shown (OI-13)",
@@ -11356,13 +11361,19 @@
    "36/08/07 KURYA MADARO (KAURA NAMODA): the 2011 workbook reading gives feb-2027-sha-zamfara-kaura-namoda-north, IReV 2023 gives feb-2027-sha-zamfara-kaura-namoda-south; both shown (OI-13)",
    "36/08/08 KYAM BARAWA (KAURA NAMODA): the 2011 workbook reading gives feb-2027-sha-zamfara-kaura-namoda-north, IReV 2023 gives feb-2027-sha-zamfara-kaura-namoda-south; both shown (OI-13)",
    "36/08/09 SAKAJIKI (KAURA NAMODA): the 2011 workbook reading gives feb-2027-sha-zamfara-kaura-namoda-north, IReV 2023 gives feb-2027-sha-zamfara-kaura-namoda-south; both shown (OI-13)",
-   "36/13/10 YAN WAREN DAJI (TSAFE): the 2011 workbook reading gives feb-2027-sha-zamfara-tsafe-west, IReV 2023 gives feb-2027-sha-zamfara-tsafe-east; both shown (OI-13)",
-   "36/14/04 GALADIMA/YANRUWA (ZURMI): the 2011 workbook reading gives feb-2027-sha-zamfara-zurmi-east, IReV 2023 gives feb-2027-sha-zamfara-zurmi-west; both shown (OI-13)"
+   "36/14/04 GALADIMA/YANRUWA (ZURMI): the 2011 workbook reading gives feb-2027-sha-zamfara-zurmi-east, IReV 2023 gives feb-2027-sha-zamfara-zurmi-west; both shown (OI-13)",
+   "BENUE/VANDEIKYA: INEC's workbook and IReV disagree on 6 of 12 checked wards, so every ward shows all 2 races (OI-13); 6 more ward(s) changed",
+   "CROSS RIVER/CALABAR MUNICIPALITY: INEC's workbook and IReV disagree on 9 of 10 checked wards, so every ward shows all 2 races (OI-13); 1 more ward(s) changed",
+   "EBONYI/EBONYI: INEC's workbook and IReV disagree on 8 of 13 checked wards, so every ward shows all 2 races (OI-13); 5 more ward(s) changed",
+   "ENUGU/ENUGU EAST: INEC's workbook and IReV disagree on 11 of 12 checked wards, so every ward shows all 2 races (OI-13); 1 more ward(s) changed",
+   "KEBBI/BIRNIN KEBBI: INEC's workbook and IReV disagree on 11 of 15 checked wards, so every ward shows all 2 races (OI-13); 4 more ward(s) changed",
+   "LAGOS/AGEGE: INEC's workbook and IReV disagree on 6 of 11 checked wards, so every ward shows all 2 races (OI-13); 5 more ward(s) changed",
+   "LAGOS/AJEROMI/IFELODUN: INEC's workbook and IReV disagree on 8 of 11 checked wards, so every ward shows all 3 races (OI-13); 11 more ward(s) changed"
   ],
   "how": {
-   "irev": 1002,
-   "irev-confirms": 6155,
-   "disagree": 138
+   "irev": 1020,
+   "irev-confirms": 6115,
+   "disagree": 160
   }
  }
 }

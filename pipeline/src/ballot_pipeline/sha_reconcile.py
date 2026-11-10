@@ -152,7 +152,10 @@ def reconcile(list_names: dict[str, list[str]], scs: list[SC], idx: dict[str, St
         wb_here = [s for s in wb_by_state[st] if l in s.lgas]
         same_roster = (len(linked) == len(group) == len(wb_here)
                        and {g.workbook.code for g in linked} == {s.code for s in wb_here}
-                       and all(g.workbook.wards & all_wards for g in linked))  # every constituency must receive wards
+                       and all(g.workbook.wards & all_wards for g in linked)  # every constituency must receive wards
+                       # review 6: overlapping claims (Katagum: "the entire LGA" beside "wards 05-11") mean the workbook
+                       # contradicts itself for this LGA, so it cannot split it
+                       and sum(len(g.workbook.wards & all_wards) for g in linked) == len(set().union(*(g.workbook.wards & all_wards for g in linked))))
         if same_roster:
             claimed: dict[str, list[str]] = defaultdict(list)
             for g in group:

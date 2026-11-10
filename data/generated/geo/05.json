@@ -1733,10 +1733,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -2036,10 +2037,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -2747,10 +2749,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -2966,10 +2969,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -3117,10 +3121,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -3340,10 +3345,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -3867,10 +3873,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -5094,10 +5101,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -6971,10 +6979,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-darazo-darazo-i"
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -7226,10 +7235,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-darazo-darazo-i"
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -7361,10 +7371,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-darazo-darazo-i"
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -7996,10 +8007,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-darazo-darazo-i"
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -8095,10 +8107,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-darazo-darazo-i"
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -8170,10 +8183,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-darazo-darazo-i"
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -9549,10 +9563,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -9684,10 +9699,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -9783,10 +9799,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -10038,10 +10055,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -10113,10 +10131,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -10260,10 +10279,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -10363,10 +10383,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -23105,10 +23126,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -24128,10 +24150,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -24303,10 +24326,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -24470,10 +24494,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"
@@ -24625,10 +24650,11 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "sc_sources": [
       "sha-2026-10-10",
       "inec-constituencies-workbook"

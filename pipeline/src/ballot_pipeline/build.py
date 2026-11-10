@@ -409,6 +409,13 @@ def build(log=print) -> BuildResult:
         ward_names = {w["code"]: (st, l["name"], w["name"]) for st, g in geo_dicts.items() for l in g["lgas"] for w in l["wards"]}
         ward_to_sha_races, sha_how, irev_report = apply_irev(ward_to_sha_races, sha_list, sha_race_by_name, irev_wards, ward_names)
         irev_report = [p for p in irev_problems if not p.startswith("IReV ward 37/")] + irev_report  # the FCT has no assembly
+    from .override_checks import evidence_ward_gaps
+
+    race_by_wb: dict[str, list[str]] = defaultdict(list)
+    for x in sha_list:
+        if x.workbook:
+            race_by_wb[x.workbook.code].append(sha_race_by_name[(x.state, x.name)])
+    errors.extend(evidence_ward_gaps(aliases.get("state_constituency_overrides") or {}, race_by_wb, ward_to_sha_races))
     sha_report = {"notes": sha_notes, "count_anomalies": count_anomalies(sc_units),
                   "workbook_per_state": dict(sorted(Counter(s.state for s in sc_units).items())),
                   "constituencies": [{"state": x.state, "name": x.name, "race_id": sha_race_by_name[(x.state, x.name)],
