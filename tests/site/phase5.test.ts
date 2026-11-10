@@ -152,6 +152,22 @@ describe('6 February ballot pages', () => {
   })
 })
 
+describe('owner ruling D-041: two Kogi readings rest on names alone, so their wards show all races', () => {
+  it.each([
+    ['22/11', ['feb-2027-sha-kogi-kogi-k-k', 'feb-2027-sha-kogi-koton-karfe-ii']],
+    ['22/07', ['feb-2027-sha-kogi-idah', 'feb-2027-sha-kogi-igala-ogwa']],
+  ])('every ward in LGA %s shows both races, marked unresolved', (lga, races) => {
+    const wards = stateGeo('22').lgas.find(l => l.code === lga)!.wards
+    expect(wards.length).toBeGreaterThan(0)
+    for (const w of wards) {
+      expect([...w.state_constituency].sort(), w.code).toEqual(races)
+      expect(w.sc_mapping, w.code).toBe('unresolved')
+      const page = html(wardFebBallotPath(stateGeo('22'), w).slice(1))
+      for (const r of races) expect(page, w.code).toContain(`data-race-id="${r}"`)
+    }
+  })
+})
+
 describe('6 February candidate pages', () => {
   it('governorship candidates show the deputy governor; nobody on 6 February gets a background section', () => {
     for (const r of febRaces()) {

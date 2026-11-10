@@ -56,13 +56,17 @@ test.describe('without JavaScript', () => {
 
 test('keyboard: the code lookup works with the keyboard alone', async ({ page }) => {
   await page.goto('/')
-  await page.keyboard.press('Tab') // skip link
-  await page.keyboard.press('Tab') // site name
-  await page.keyboard.press('Tab') // "Election day" in the header
-  await page.keyboard.press('Tab') // "About" in the header
-  await page.keyboard.press('Tab') // "How to find your polling unit"
-  await page.keyboard.press('Tab') // code input
-  await expect(page.getByLabel(/Delimitation code/)).toBeFocused()
+  // The guided path comes first: header, the 37 states, the landmark search (state, then search box and button;
+  // the LGA list stays disabled until a state is chosen), then the code shortcut.
+  const order: string[] = []
+  for (let i = 0; i < 60 && order.at(-1) !== 'code'; i++) {
+    await page.keyboard.press('Tab')
+    order.push(await page.evaluate(() => document.activeElement?.id || document.activeElement?.textContent?.trim() || ''))
+  }
+  expect(order.slice(0, 4)).toEqual(['Skip to content', 'Who’s on my ballot?', 'Election day', 'About'])
+  expect(order.slice(4, 41)).toHaveLength(37)
+  expect(order.slice(41)).toEqual(['home-state', 'home-q', 'Search', 'code'])
+  await expect(page.getByLabel(/Code on your voter’s card/)).toBeFocused()
   await page.keyboard.type('01/01/01/001')
   await page.keyboard.press('Enter')
   await expect(page.getByRole('status').filter({ hasText: 'Is this your polling unit?' })).toBeVisible()

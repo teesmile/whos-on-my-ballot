@@ -65,3 +65,6 @@ export function cardAlt(r: { office: string, name: string }): string {
   const office = { president: 'President', senate: 'Senate', house: 'House of Representatives', governor: 'Governor', state_assembly: 'State House of Assembly' }[r.office]
   return r.office === 'president' ? 'Candidates for President, in the order of INEC’s list' : `Candidates for ${office}: ${r.name}, in the order of INEC’s list`
 }
+
+/** The example delimitation code, in the dash format the voter's card prints. */
+export const CODE_EXAMPLE = '24-15-03-012'

@@ -8,18 +8,18 @@ test('a slow earlier lookup never overwrites a newer one', async ({ page }) => {
     await route.continue()
   })
   await page.goto('/')
-  const input = page.getByLabel(/Delimitation code/)
+  const input = page.getByLabel(/Code on your voter’s card/)
   const go = page.getByRole('button', { name: 'Find my polling unit' })
   await input.fill('01/01/01/001') // Abia: held back
   await go.click()
   await input.fill('02/01/01/001') // Adamawa: answers first
   await go.click()
-  await expect(page.getByRole('status').getByRole('link').first()).toContainText('02/01/01/001')
+  await expect(page.getByRole('status').getByRole('link').first()).toContainText('02-01-01-001')
   releaseAbia()
   await page.waitForResponse('**/data/pu/01.json')
   await page.waitForTimeout(300)
-  await expect(page.getByRole('status').getByRole('link').first()).toContainText('02/01/01/001')
-  await expect(page.getByRole('status')).not.toContainText('01/01/01/001')
+  await expect(page.getByRole('status').getByRole('link').first()).toContainText('02-01-01-001')
+  await expect(page.getByRole('status')).not.toContainText('01-01-01-001')
 })
 
 test('a newer invalid code also wins over a slow earlier lookup', async ({ page }) => {
@@ -30,7 +30,7 @@ test('a newer invalid code also wins over a slow earlier lookup', async ({ page 
     await route.continue()
   })
   await page.goto('/')
-  const input = page.getByLabel(/Delimitation code/)
+  const input = page.getByLabel(/Code on your voter’s card/)
   const go = page.getByRole('button', { name: 'Find my polling unit' })
   await input.fill('01/01/01/001')
   await go.click()
@@ -39,7 +39,7 @@ test('a newer invalid code also wins over a slow earlier lookup', async ({ page 
   release()
   await page.waitForResponse('**/data/pu/01.json')
   await page.waitForTimeout(300)
-  await expect(page.getByRole('status')).toContainText('isn’t a delimitation code')
+  await expect(page.getByRole('status')).toContainText('doesn’t look like the code on a voter’s card')
 })
 
 for (const url of ['/', '/state/01/', '/ward/01-01-01/', '/ballot/adamawa/gombi-hong--adamawa-central-or-adamawa-north-or-adamawa-south/', '/c/jan-2027-president-ndc/', '/corrections/', '/election-day/', '/ballot-feb/abia/aba-north/#pu-01-01-01-001', '/ward/24-20-01/', '/c/feb-2027-governor-taraba-apc/', '/about/', '/about/state-assembly-wards/']) {

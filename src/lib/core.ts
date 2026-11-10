@@ -16,18 +16,26 @@ export function slug(text: string): string {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
 }
 
-const DELIM = /^\s*(\d{1,2})[\s/.\-]+(\d{1,2})[\s/.\-]+(\d{1,2})[\s/.\-]+(\d{1,3})\s*$/
+// Between the parts: the card's dashes (or a phone's typographic dash), slashes, spaces, dots or commas, in any mix.
+const DELIM = /^\s*(\d{1,2})[\s/.,\-\u2010-\u2015\u2212]+(\d{1,2})[\s/.,\-\u2010-\u2015\u2212]+(\d{1,2})[\s/.,\-\u2010-\u2015\u2212]+(\d{1,3})\s*$/
+// No separators at all: exactly nine digits, two each for state, LGA and ward, three for the polling unit.
+const BARE = /^\s*(\d{2})(\d{2})(\d{2})(\d{3})\s*$/
 
 /**
  * Normalise a PVC delimitation code to "SS/LL/WW/PPP", or null. Mirrors pipeline geo.parse_delimitation_code.
  * It only normalises: whether the polling unit exists is checked against INEC's list, never guessed.
  */
 export function parseDelimitationCode(text: string): string | null {
-  const m = DELIM.exec(text ?? '')
+  const m = DELIM.exec(text ?? '') ?? BARE.exec(text ?? '')
   if (!m) return null
   const [s, l, w, p] = m.slice(1).map(Number)
   if (s < 1 || s > 37 || l < 1 || w < 1 || p < 1) return null
   return `${pad(s, 2)}/${pad(l, 2)}/${pad(w, 2)}/${pad(p, 3)}`
+}
+
+/** A code as the voter's card prints it, with dashes ("24-15-03-012"), for display. Data keeps "SS/LL/WW/PPP". */
+export function cardCode(code: string): string {
+  return code.replaceAll('/', '-')
 }
 
 function pad(n: number, width: number): string {

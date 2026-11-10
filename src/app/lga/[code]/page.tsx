@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
+import { Steps } from '@/components/Steps'
 
 import { findLga, stateGeo, states } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
@@ -37,13 +38,17 @@ export default async function LgaPage({ params }: { params: Promise<{ code: stri
         {' '}
         <span className="sub">LGA</span>
       </h1>
+      <Steps current={3} />
+      <section aria-labelledby="wards" className="panel">
+        <h2 id="wards">Choose your ward</h2>
+        <p className="panel-intro">Then your polling unit.</p>
+        <ul className="link-list tiles">
+          {lga.wards.map(w => (
+            <li key={w.code}><a href={`/ward/${w.code.replaceAll('/', '-')}/`}>{w.name}</a></li>
+          ))}
+        </ul>
+      </section>
       <SourceLine id="inec-pu-locator" what="LGAs, wards and polling units" />
-      <h2>Choose your ward</h2>
-      <ul className="link-list columns">
-        {lga.wards.map(w => (
-          <li key={w.code}><a href={`/ward/${w.code.replaceAll('/', '-')}/`}>{w.name}</a></li>
-        ))}
-      </ul>
     </>
   )
 }

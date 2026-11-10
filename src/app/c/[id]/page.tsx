@@ -77,7 +77,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
         <a href={`${ballot.path}#race-${race.id}`}>{raceTitle(race)}</a>
       </p>
 
-      <section aria-labelledby="inec">
+      <section aria-labelledby="inec" className="panel">
         <h2 id="inec">From INEC’s final list</h2>
         {ticket && <p className="position">{c.candidate.position}</p>}
         <PersonFields p={c.candidate} who="candidate" notes={c.printing_notes} />
@@ -89,7 +89,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
       </section>
 
       {ticket && c.running_mate && (
-        <section aria-labelledby="mate">
+        <section aria-labelledby="mate" className="panel">
           <h2 id="mate">
             {mateLabel(race)}
             {': '}
@@ -101,7 +101,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
       )}
 
       {showBackground && (
-        <section aria-labelledby="background">
+        <section aria-labelledby="background" className="panel">
           <h2 id="background">Background</h2>
           {([['Candidate', c.candidate], ['Running mate', c.running_mate]] as const).map(([role, p]) => (
             <div key={role}>

@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 
 import { CivicNote } from '@/components/CivicNote'
 import { JsonLd } from '@/components/JsonLd'
+import { Steps } from '@/components/Steps'
 import { states } from '@/lib/data'
 import { homeGraph, pageMeta } from '@/lib/seo'
-import { SITE_DESCRIPTION, SITE_NAME } from '@/lib/site'
+import { CODE_EXAMPLE, SITE_DESCRIPTION, SITE_NAME } from '@/lib/site'
 
 export const metadata: Metadata = pageMeta({ title: SITE_NAME, path: '/', description: SITE_DESCRIPTION })
 
@@ -24,34 +25,64 @@ export default function Home() {
         {' '}
         (Governor and State House of Assembly).
       </p>
-      <p>We never ask for your name or any personal details, and we don’t look you up anywhere.</p>
-      <p><a href="/about/find-your-polling-unit/">How to find your polling unit</a></p>
+      <Steps current={1} />
 
-      <section aria-labelledby="by-code" className="by-code">
-        <h2 id="by-code">Use the code on your voter card</h2>
+      <div className="guide">
+        <section aria-labelledby="by-state" className="panel">
+          <h2 id="by-state">Pick your state</h2>
+          <p className="panel-intro">Then your LGA, your ward and your polling unit.</p>
+          <ul className="link-list tiles">
+            {states().map(s => (
+              <li key={s.code}><a href={`/state/${s.code}/`}>{s.name}</a></li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="by-landmark" className="panel by-search">
+          <h2 id="by-landmark">Or search by a landmark</h2>
+          <p className="panel-intro">A school, market or church near where you vote, or the polling unit’s name.</p>
+          <form className="lookup" data-lookup="search" hidden>
+            <label htmlFor="home-state">Your state</label>
+            <select id="home-state" name="state" defaultValue="">
+              <option value="" disabled>Choose your state</option>
+              {states().map(s => <option key={s.code} value={s.code}>{s.name}</option>)}
+            </select>
+            <label htmlFor="home-lga">Your LGA</label>
+            <select id="home-lga" name="lga" defaultValue="" disabled>
+              <option value="">Choose your state first</option>
+            </select>
+            <label htmlFor="home-q">Landmark or polling unit name</label>
+            <input id="home-q" name="q" type="search" autoComplete="off" spellCheck={false} />
+            <button type="submit">Search</button>
+            <div className="result" role="status" aria-live="polite" />
+          </form>
+          <noscript>
+            <p>Searching needs JavaScript. Pick your state and go through your LGA and ward instead.</p>
+          </noscript>
+        </section>
+      </div>
+
+      <section aria-labelledby="by-code" className="panel by-code">
+        <h2 id="by-code">Have your voter’s card? Type its code.</h2>
         <form className="lookup" data-lookup="code" hidden>
           <label htmlFor="code">
-            Delimitation code from your PVC
-            <span className="hint">Four numbers, like 24/15/03/012</span>
+            Code on your voter’s card
+            <span className="hint">
+              {`Like ${CODE_EXAMPLE}, with or without the dashes`}
+            </span>
           </label>
-          <input id="code" name="code" type="text" inputMode="numeric" autoComplete="off" spellCheck={false} />
+          <p className="hint" id="code-parts">State, LGA and ward, then the last three digits for your polling unit.</p>
+          <input id="code" name="code" type="text" inputMode="numeric" autoComplete="off" spellCheck={false} aria-describedby="code-parts" />
           <button type="submit">Find my polling unit</button>
           <div className="result" role="status" aria-live="polite" />
         </form>
         <noscript>
-          <p>Finding by code needs JavaScript. Choose your state below and browse to your polling unit instead.</p>
+          <p>Finding by code needs JavaScript. Pick your state above and go through your LGA and ward instead.</p>
         </noscript>
       </section>
 
-      <section aria-labelledby="by-state">
-        <h2 id="by-state">Search or browse by state</h2>
-        <p>Choose your state, then search for your polling unit or a landmark near it, or go through your LGA and ward.</p>
-        <ul className="link-list columns">
-          {states().map(s => (
-            <li key={s.code}><a href={`/state/${s.code}/`}>{s.name}</a></li>
-          ))}
-        </ul>
-      </section>
+      <p className="quiet">We never ask for your name or any personal details, and we don’t look you up anywhere.</p>
+      <p><a href="/about/find-your-polling-unit/">How to find your polling unit</a></p>
       <CivicNote />
     </>
   )

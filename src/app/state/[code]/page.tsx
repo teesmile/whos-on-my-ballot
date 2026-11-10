@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
+import { Steps } from '@/components/Steps'
 
 import { stateGeo, states } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
@@ -28,33 +29,36 @@ export default async function StatePage({ params }: { params: Promise<{ code: st
       <JsonLd data={pageGraph(`/state/${st.code}/`, titleOf(st.name), [['Home', '/'], [st.name, `/state/${st.code}/`]])} />
       <nav aria-label="Breadcrumb" className="crumbs"><a href="/">All states</a></nav>
       <h1>{st.name}</h1>
-      <section aria-labelledby="search" className="by-search">
-        <h2 id="search">Search for your polling unit</h2>
-        <form className="lookup" data-lookup="search" data-state={st.code} hidden>
-          <label htmlFor="lga">Your LGA</label>
-          <select id="lga" name="lga" defaultValue="">
-            <option value="" disabled>Choose your LGA</option>
-            {st.lgas.map(l => <option key={l.code} value={l.code.split('/')[1]}>{l.name}</option>)}
-          </select>
-          <label htmlFor="q">
-            Polling unit name, or a landmark near it
-            <span className="hint">For example a school, market or church</span>
-          </label>
-          <input id="q" name="q" type="search" autoComplete="off" spellCheck={false} />
-          <button type="submit">Search</button>
-          <div className="result" role="status" aria-live="polite" />
-        </form>
-        <noscript><p>Search needs JavaScript. Choose your LGA below instead.</p></noscript>
-      </section>
+      <Steps current={2} />
+      <p className="jump"><a href="#search">Know a landmark near where you vote? Search instead</a></p>
+      <div className="guide">
+        <section aria-labelledby="browse" className="panel">
+          <h2 id="browse">Choose your LGA</h2>
+          <p className="panel-intro">Then your ward and your polling unit.</p>
+          <ul className="link-list tiles">
+            {st.lgas.map(l => (
+              <li key={l.code}><a href={`/lga/${l.code.replace('/', '-')}/`}>{l.name}</a></li>
+            ))}
+          </ul>
+        </section>
+        <section aria-labelledby="search" className="panel by-search">
+          <h2 id="search">Or search by a landmark</h2>
+          <p className="panel-intro">A school, market or church near where you vote, or the polling unit’s name.</p>
+          <form className="lookup" data-lookup="search" data-state={st.code} hidden>
+            <label htmlFor="lga">Your LGA</label>
+            <select id="lga" name="lga" defaultValue="">
+              <option value="" disabled>Choose your LGA</option>
+              {st.lgas.map(l => <option key={l.code} value={l.code.split('/')[1]}>{l.name}</option>)}
+            </select>
+            <label htmlFor="q">Landmark or polling unit name</label>
+            <input id="q" name="q" type="search" autoComplete="off" spellCheck={false} />
+            <button type="submit">Search</button>
+            <div className="result" role="status" aria-live="polite" />
+          </form>
+          <noscript><p>Searching needs JavaScript. Choose your LGA instead.</p></noscript>
+        </section>
+      </div>
       <SourceLine id="inec-pu-locator" what="LGAs, wards and polling units" />
-      <section aria-labelledby="browse">
-        <h2 id="browse">Or choose your LGA</h2>
-        <ul className="link-list columns">
-          {st.lgas.map(l => (
-            <li key={l.code}><a href={`/lga/${l.code.replace('/', '-')}/`}>{l.name}</a></li>
-          ))}
-        </ul>
-      </section>
     </>
   )
 }

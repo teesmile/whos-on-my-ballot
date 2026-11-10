@@ -29,7 +29,7 @@ function assertNothingLeaked(requests: Request[], typed: string[]) {
 test('code lookup: what is typed never leaves the browser', async ({ page }) => {
   const requests = recordRequests(page)
   await page.goto('/')
-  await page.getByLabel(/Delimitation code/).fill('01/01/01/001')
+  await page.getByLabel(/Code on your voter’s card/).fill('01/01/01/001')
   await page.getByRole('button', { name: 'Find my polling unit' }).click()
   const result = page.getByRole('link', { name: /RAILWAY QUARTERS I/ })
   await expect(result).toBeVisible()
@@ -43,19 +43,19 @@ test('code lookup: what is typed never leaves the browser', async ({ page }) => 
 
 test('unknown code says not found instead of guessing', async ({ page }) => {
   await page.goto('/')
-  await page.getByLabel(/Delimitation code/).fill('01/01/01/999')
+  await page.getByLabel(/Code on your voter’s card/).fill('01/01/01/999')
   await page.getByRole('button', { name: 'Find my polling unit' }).click()
-  await expect(page.getByText(/couldn’t find 01\/01\/01\/999/)).toBeVisible()
-  await page.getByLabel(/Delimitation code/).fill('hello')
+  await expect(page.getByText(/couldn’t find 01-01-01-999/)).toBeVisible()
+  await page.getByLabel(/Code on your voter’s card/).fill('hello')
   await page.getByRole('button', { name: 'Find my polling unit' }).click()
-  await expect(page.getByText(/isn’t a delimitation code/)).toBeVisible()
+  await expect(page.getByText(/doesn’t look like the code on a voter’s card/)).toBeVisible()
 })
 
 test('search: what is typed never leaves the browser', async ({ page }) => {
   const requests = recordRequests(page)
   await page.goto('/state/01/')
   await page.getByLabel('Your LGA', { exact: true }).selectOption({ label: 'ABA NORTH' })
-  await page.getByLabel(/Polling unit name/).fill('eziama high shool')
+  await page.getByLabel(/Landmark or polling unit name/).fill('eziama high shool')
   await page.getByRole('button', { name: 'Search' }).click()
   await expect(page.getByRole('link', { name: /EZIAMA HIGH SCHOOL/ }).first()).toBeVisible()
   assertNothingLeaked(requests, ['eziama', 'shool'])

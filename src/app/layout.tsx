@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 }
 
-export const viewport: Viewport = { width: 'device-width', initialScale: 1 }
+// Always light (D-039): the page asks the browser for its light form controls and a white browser bar.
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, colorScheme: 'light', themeColor: '#ffffff' }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

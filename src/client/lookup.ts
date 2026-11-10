@@ -1,7 +1,8 @@
 /**
  * The site's only script (decision D-022). It enhances three static forms:
  *   [data-lookup="code"]    find a polling unit from the PVC delimitation code
- *   [data-lookup="search"]  find a polling unit by name or nearby landmark within one LGA
+ *   [data-lookup="search"]  find a polling unit by name or nearby landmark within one LGA (on the home page the
+ *                           visitor picks the state too, and its LGAs are filled in from that state's file)
  *   [data-lookup="confirm"] on a ballot page, name the polling unit chosen (from the URL fragment) and link its
  *                           ballot for the other election day
  *   [data-copy]             copy a page's link to the clipboard
@@ -11,6 +12,7 @@
  */
 import { describePhase, phaseAt, type Schedule } from '../lib/election'
 import {
+  cardCode,
   codeFromHash,
   findByCode,
   type FoundPollingUnit,
@@ -25,7 +27,9 @@ const cache = new Map<string, Promise<StateSearchData>>()
 function stateData(code: string): Promise<StateSearchData> {
   let p = cache.get(code)
   if (!p) {
-    p = fetch(`/data/pu/${code}.json`, { credentials: 'omit', referrerPolicy: 'no-referrer' }).then((r) => {
+    // Same-origin credentials: the site sets no cookies, so in production nothing is sent. A protected preview's login
+    // cookie must go with the request, or the host answers with a redirect to its login page, which the CSP blocks.
+    p = fetch(`/data/pu/${code}.json`, { credentials: 'same-origin', referrerPolicy: 'no-referrer' }).then((r) => {
       if (!r.ok) throw new Error(String(r.status))
       return r.json() as Promise<StateSearchData>
     })
@@ -44,7 +48,7 @@ function el<K extends keyof HTMLElementTagNameMap>(tag: K, text?: string, attrs:
 
 function puLink(pu: FoundPollingUnit): HTMLAnchorElement {
   const a = el('a', '', { href: `${pu.ballotPath}${puHash(pu.code)}` })
-  a.append(el('strong', pu.name), document.createTextNode(` · ${pu.ward} ward, ${pu.lga} · `), el('span', pu.code, { class: 'code' }))
+  a.append(el('strong', pu.name), document.createTextNode(` · ${pu.ward} ward, ${pu.lga} · `), el('span', cardCode(pu.code), { class: 'code' }))
   return a
 }
 
@@ -82,7 +86,7 @@ function setupCode(form: HTMLFormElement) {
     const current = begin()
     const code = parseDelimitationCode(input.value)
     if (!code) {
-      show(result, el('p', 'That isn’t a delimitation code. It has four numbers, like 24/15/03/012.'))
+      show(result, el('p', 'That doesn’t look like the code on a voter’s card. It has four parts, like 24-15-03-012.'))
       return
     }
     show(result, el('p', 'Looking up…'))
@@ -97,7 +101,7 @@ function setupCode(form: HTMLFormElement) {
       return
     }
     if (!pu) {
-      show(result, el('p', `We couldn’t find ${code} in INEC’s list of polling units. Check the code on your card, or choose your state below.`))
+      show(result, el('p', `We couldn’t find ${cardCode(code)} in INEC’s list of polling units. Check the code on your card, or pick your state above.`))
       return
     }
     const ul = el('ul')
@@ -107,18 +111,45 @@ function setupCode(form: HTMLFormElement) {
 }
 
 function setupSearch(form: HTMLFormElement) {
-  const state = form.dataset.state!
-  const lga = form.querySelector('select')!
+  let state = form.dataset.state ?? ''
+  const stateSelect = form.querySelector<HTMLSelectElement>('select[name="state"]')
+  const lga = form.querySelector<HTMLSelectElement>('select[name="lga"]')!
   const input = form.querySelector('input')!
   const result = form.querySelector('.result')!
   const begin = latestOnly()
   form.hidden = false
-  const prefetch = () => void stateData(state).catch(() => {})
-  lga.addEventListener('change', prefetch, { once: true })
-  input.addEventListener('focus', prefetch, { once: true })
+  if (stateSelect) {
+    // Home page: the LGAs come from the chosen state's file, the same file the search then uses.
+    const pick = latestOnly()
+    stateSelect.addEventListener('change', async () => {
+      const current = pick()
+      state = stateSelect.value
+      lga.disabled = true
+      lga.replaceChildren(el('option', 'Loading the LGAs…', { value: '' }))
+      try {
+        const data = await stateData(state)
+        if (!current()) return
+        lga.replaceChildren(el('option', 'Choose your LGA', { value: '', disabled: '', selected: '' }), ...data.lgas.map(([code, name]) => el('option', name, { value: code })))
+        lga.disabled = false
+      }
+      catch {
+        if (current()) lga.replaceChildren(el('option', 'Couldn’t load the LGAs. Check your connection and choose the state again.', { value: '' }))
+      }
+    })
+  }
+  else {
+    const prefetch = () => void stateData(state).catch(() => {})
+    lga.addEventListener('change', prefetch, { once: true })
+    input.addEventListener('focus', prefetch, { once: true })
+  }
   form.addEventListener('submit', async (ev) => {
     ev.preventDefault()
     const current = begin()
+    if (!state) {
+      show(result, el('p', 'Choose your state first.'))
+      stateSelect?.focus()
+      return
+    }
     if (!lga.value) {
       show(result, el('p', 'Choose your LGA first.'))
       lga.focus()
@@ -157,7 +188,7 @@ async function setupConfirm(box: HTMLElement) {
     const here = location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`
     const feb = box.dataset.election === 'feb'
     const mine = feb ? pu.febBallotPath : pu.ballotPath
-    box.replaceChildren(el('p', `Your polling unit: ${pu.name}, ${pu.ward} ward, ${pu.lga} LGA (${pu.code}).`))
+    box.replaceChildren(el('p', `Your polling unit: ${pu.name}, ${pu.ward} ward, ${pu.lga} LGA (${cardCode(pu.code)}).`))
     if (mine !== here) {
       box.append(el('p', 'This polling unit belongs to a different ballot. Follow the link below.'))
       box.append(feb ? febLink(pu) : puLink(pu))

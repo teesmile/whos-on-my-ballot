@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
+import { Steps } from '@/components/Steps'
 
-import { puHash } from '@/lib/core'
+import { cardCode, puHash } from '@/lib/core'
 import { findWard, stateGeo, states, wardBallotPath, wardFebBallotPath } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 
@@ -52,20 +53,23 @@ export default async function WardPage({ params }: { params: Promise<{ code: str
         {' '}
         <span className="sub">ward</span>
       </h1>
-      <SourceLine id="inec-pu-locator" what="LGAs, wards and polling units" />
-      <h2>Is this your polling unit?</h2>
-      <p>Choose your polling unit to see your ballot for 16 January 2027. The code after each name is the delimitation code printed on voter cards.</p>
-      <ul className="link-list pu-list" data-ballot={path}>
+      <Steps current={4} />
+      <section aria-labelledby="pus" className="panel">
+        <h2 id="pus">Is this your polling unit?</h2>
+        <p className="panel-intro">Choose your polling unit to see your ballot for 16 January 2027. The code after each name is the one printed on the voter’s card.</p>
+        <ul className="link-list pu-list" data-ballot={path}>
         {ward.polling_units.map(p => (
           <li key={p.code}>
             <a href={`${path}${puHash(p.code)}`}>
               {p.name}
               {' '}
-              <span className="code">{p.code}</span>
+              <span className="code">{cardCode(p.code)}</span>
             </a>
           </li>
         ))}
-      </ul>
+        </ul>
+      </section>
+      <SourceLine id="inec-pu-locator" what="LGAs, wards and polling units" />
       <h2>6 February 2027</h2>
       <p>Every polling unit in this ward has the same ballot on 6 February.</p>
       <p><a className="feb-link" href={febPath} data-feb-ballot>{`Your ballot for 6 February 2027, ${ward.name} ward`}</a></p>

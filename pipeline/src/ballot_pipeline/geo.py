@@ -245,16 +245,19 @@ def read_lga_names() -> dict[str, list[str]]:
     return out
 
 
-DELIM_RE = re.compile(r"^\s*(\d{1,2})[\s/\-.]+(\d{1,2})[\s/\-.]+(\d{1,2})[\s/\-.]+(\d{1,3})\s*$")
+_SEP = r"[\s/.,\-\u2010-\u2015\u2212]+"  # the card's dashes, a typographic dash, slashes, spaces, dots or commas
+DELIM_RE = re.compile(rf"^\s*(\d{{1,2}}){_SEP}(\d{{1,2}}){_SEP}(\d{{1,2}}){_SEP}(\d{{1,3}})\s*$")
+BARE_RE = re.compile(r"^\s*(\d{2})(\d{2})(\d{2})(\d{3})\s*$")  # no separators: exactly nine digits
 
 
 def parse_delimitation_code(text: str) -> str | None:
     """Normalise a PVC delimitation code to ``SS/LL/WW/PPP``, or None if it isn't one.
 
-    Accepts '/', '-', '.' or spaces between parts and missing leading zeros ("24-15-3-12").
+    Accepts the card's dashes, '/', '.', ',' or spaces between parts, missing leading zeros ("24-15-3-12"), or no
+    separators at all (exactly nine digits, "241503012").
     It only normalises; whether the code exists is checked against the polling-unit table, never guessed.
     """
-    m = DELIM_RE.match(text or "")
+    m = DELIM_RE.match(text or "") or BARE_RE.match(text or "")
     if not m:
         return None
     s, l, w, p = (int(g) for g in m.groups())

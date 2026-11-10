@@ -1,128 +1,212 @@
-/* Neutral greys only. No colour carries party meaning anywhere (the working rules §1). */
+/*
+ * Always light (D-039). One accent, Nigeria's national green, on a white base: buttons, headings, highlights and focus.
+ * No red or blue anywhere, and nothing else coloured: party colours, logos and flags stay banned (the working rules §1).
+ * Every text colour here passes 4.5:1 on its background; borders that mark controls pass 3:1.
+ */
 :root {
   --bg: #ffffff;
-  --fg: #1a1a1a;
-  --muted: #545454;
-  --line: #c8c8c8;
-  --panel: #f3f3f3;
-  --link: #1a1a1a;
-  --focus: #000000;
-  color-scheme: light dark;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121212;
-    --fg: #ececec;
-    --muted: #b4b4b4;
-    --line: #4a4a4a;
-    --panel: #1e1e1e;
-    --link: #ececec;
-    --focus: #ffffff;
-  }
+  --fg: #1b1f1d;
+  --muted: #4d5551;
+  --line: #d6dcd9;
+  --field: #6b7370;
+  --panel: #f4f7f5;
+  --accent: #008751;
+  --accent-strong: #006b40;
+  --accent-deep: #00552f;
+  --accent-soft: #e7f4ed;
+  --radius: 10px;
+  color-scheme: light;
+  accent-color: var(--accent);
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); -webkit-tap-highlight-color: rgba(0, 135, 81, 0.15); }
 body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font: 1rem/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-main, .site-header, .site-footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
-main { padding-bottom: 2rem; }
-a { color: var(--link); text-underline-offset: 0.15em; }
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
-  outline: 3px solid var(--focus); outline-offset: 2px;
+::selection { background: var(--accent-soft); color: var(--fg); }
+main, .site-header, .site-footer { max-width: 62rem; margin: 0 auto; padding: 0 1rem; }
+main { padding-bottom: 2.5rem; }
+main > p, main > .lead, main > section > p, .race-meta p { max-width: 46rem; }
+
+/* Links: green, with a quiet underline that firms up on hover. Lists of places are rows and tiles instead. */
+a { color: var(--accent-strong); text-decoration: underline; text-decoration-color: rgba(0, 107, 64, 0.45); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:visited { color: var(--accent-strong); }
+a:hover { color: var(--accent-deep); text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--accent-strong); outline-offset: 2px; border-radius: 4px;
 }
 .skip { position: absolute; left: -9999px; }
-.skip:focus { left: 1rem; top: 0.5rem; background: var(--bg); padding: 0.5rem; z-index: 1; }
-.site-header { border-bottom: 1px solid var(--line); padding-top: 0.75rem; padding-bottom: 0.75rem; display: flex; flex-wrap: wrap; align-items: center; column-gap: 1rem; }
-.site-nav { display: inline-block; min-height: 44px; line-height: 44px; min-width: 44px; }
-.site-name { font-weight: 700; text-decoration: none; display: inline-block; min-height: 44px; line-height: 44px; margin-right: auto; }
+.skip:focus { left: 1rem; top: 0.5rem; background: var(--bg); padding: 0.5rem 0.75rem; z-index: 1; }
+
+/* Header and footer run the full width of the screen. */
+.site-header {
+  display: flex; flex-wrap: wrap; align-items: center; column-gap: 0.25rem;
+  padding-top: 0.5rem; padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 0 0 100vmax var(--bg); clip-path: inset(0 -100vmax);
+}
+.site-name { font-weight: 800; font-size: 1rem; color: var(--accent-strong); text-decoration: none; display: inline-block; min-height: 44px; line-height: 44px; margin-right: auto; }
+.site-name:visited { color: var(--accent-strong); }
+.site-nav { display: inline-block; min-height: 44px; line-height: 44px; min-width: 44px; padding: 0 0.45rem; border-radius: 999px; color: var(--fg); font-weight: 600; text-decoration: none; }
+.site-nav:visited { color: var(--fg); }
+.site-nav:hover { background: var(--accent-soft); color: var(--accent-deep); }
+.site-footer {
+  margin-top: 1rem; padding-top: 1.25rem; padding-bottom: 2rem;
+  color: var(--muted); font-size: 0.9rem;
+  background: var(--panel); border-top: 1px solid var(--line);
+  box-shadow: 0 0 0 100vmax var(--panel); clip-path: inset(0 -100vmax);
+}
+.site-footer a, .site-footer a:visited { color: var(--muted); }
+.site-footer a:hover { color: var(--accent-deep); }
+.affiliation { font-weight: 700; color: var(--fg); }
 .credit a { display: inline-block; min-height: 44px; line-height: 44px; }
-.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; padding-top: 1rem; padding-bottom: 2rem; }
-.site-footer a { color: var(--muted); }
-.affiliation { font-weight: 600; color: var(--fg); }
-h1 { font-size: 1.6rem; line-height: 1.25; margin: 1.25rem 0 0.75rem; }
-h2 { font-size: 1.3rem; margin: 1.75rem 0 0.5rem; }
-h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
-.sub { font-weight: 400; color: var(--muted); font-size: 0.8em; }
-.lead { font-size: 1.05rem; }
-.hint { display: block; font-weight: 400; color: var(--muted); font-size: 0.9rem; }
-.crumbs { margin-top: 1rem; font-size: 0.95rem; }
-.crumbs a { display: inline-block; min-height: 44px; line-height: 44px; }
+
+/* Type */
+h1, h2, h3 { color: var(--accent-strong); text-wrap: balance; }
+h1 { font-size: 1.75rem; line-height: 1.2; font-weight: 800; letter-spacing: -0.01em; margin: 1.25rem 0 0.75rem; }
+h2 { font-size: 1.3rem; line-height: 1.3; font-weight: 750; margin: 1.75rem 0 0.5rem; }
+h3 { font-size: 1.12rem; line-height: 1.35; margin: 1.5rem 0 0.5rem; }
+@media (min-width: 48rem) { h1 { font-size: 2.1rem; } }
+.sub { font-weight: 500; color: var(--muted); font-size: 0.7em; }
+.lead { font-size: 1.08rem; }
+.quiet, .hint, .panel-intro { color: var(--muted); }
+.hint { display: block; font-weight: 400; font-size: 0.9rem; }
+.panel-intro { margin: 0 0 0.75rem; }
+.crumbs { margin-top: 0.75rem; font-size: 0.95rem; color: var(--muted); }
+.crumbs a { display: inline-block; min-height: 44px; line-height: 44px; min-width: 44px; }
+.code { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 400; }
+
+/* Where you are on the guided path */
+.progress { list-style: none; counter-reset: step; display: flex; flex-wrap: wrap; gap: 0.3rem; padding: 0; margin: 0.25rem 0 1rem; font-size: 0.8rem; }
+.progress li { counter-increment: step; display: flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.55rem 0.2rem 0.25rem; white-space: nowrap; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+.progress li::before { content: counter(step); display: inline-grid; place-items: center; width: 1.35rem; height: 1.35rem; border-radius: 50%; background: var(--panel); color: var(--muted); font-weight: 700; font-size: 0.8rem; }
+.progress li.done { border-color: transparent; background: var(--accent-soft); color: var(--accent-deep); }
+.progress li.done::before { content: "✓"; background: var(--accent-strong); color: #fff; }
+.progress li[aria-current="step"] { border-color: var(--accent-strong); color: var(--accent-deep); font-weight: 700; }
+.progress li[aria-current="step"]::before { background: var(--accent-strong); color: #fff; }
+.jump { margin: 0 0 0.5rem; }
+
+/* Panels: the guided path and the searches */
+.panel { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 1rem; margin: 1rem 0; box-shadow: 0 1px 2px rgba(27, 31, 29, 0.05); }
+.panel > h2:first-child { margin-top: 0.1rem; }
+.guide { display: grid; gap: 0 1.25rem; align-items: start; }
+.guide > .panel { margin: 0.5rem 0; }
+@media (min-width: 56rem) {
+  .guide { grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); }
+  .guide > .by-search { position: sticky; top: 1rem; }
+}
 
 .link-list { list-style: none; padding: 0; margin: 0; }
 .link-list li { border-bottom: 1px solid var(--line); }
+.link-list li:last-child { border-bottom: 0; }
 .link-list a { display: block; padding: 0.7rem 0.25rem; min-height: 44px; }
-@media (min-width: 40rem) { .columns { columns: 2; column-gap: 2rem; } .columns li { break-inside: avoid; } }
-.code { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* Places to choose (states, LGAs, wards, polling units): tap targets that look like choices, with an arrow. */
+.tiles, .pu-list, .toc ul, .result ul { display: grid; gap: 0.5rem; }
+.tiles { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); }
+.tiles li, .pu-list li, .toc li, .result li { border: 0; }
+.tiles a, .pu-list a, .toc a, .result a {
+  display: flex; align-items: center; gap: 0.5rem; min-height: 48px; padding: 0.6rem 2rem 0.6rem 0.85rem; position: relative;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg);
+  color: var(--fg); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; line-height: 1.3;
+}
+.tiles a::after, .pu-list a::after, .toc a::after, .result a::after {
+  content: "›"; position: absolute; right: 0.8rem; top: 50%; transform: translateY(-55%); color: var(--accent); font-size: 1.35rem; font-weight: 400;
+}
+.tiles a:visited, .pu-list a:visited, .toc a:visited, .result a:visited { color: var(--fg); }
+.tiles a:hover, .pu-list a:hover, .toc a:hover, .result a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--fg); }
+.pu-list a { justify-content: space-between; flex-wrap: wrap; column-gap: 0.75rem; }
 
-form.lookup { display: grid; gap: 0.5rem; max-width: 28rem; }
-form.lookup label { font-weight: 600; margin-top: 0.5rem; }
-input, select, button { font: inherit; min-height: 44px; padding: 0.5rem 0.75rem; border: 1px solid var(--muted); border-radius: 4px; background: var(--bg); color: var(--fg); }
-button { background: var(--fg); color: var(--bg); border-color: var(--fg); font-weight: 600; cursor: pointer; }
+/* Forms */
+form.lookup { display: grid; gap: 0.4rem; }
+form.lookup label { font-weight: 700; margin-top: 0.4rem; }
+form.lookup .hint { margin: 0; }
+input, select, button { font: inherit; min-height: 48px; padding: 0.55rem 0.8rem; border: 1.5px solid var(--field); border-radius: 8px; background: var(--bg); color: var(--fg); width: 100%; }
+select:disabled { color: var(--muted); background: var(--panel); border-color: var(--line); }
+input:focus, select:focus { border-color: var(--accent-strong); }
+button {
+  margin-top: 0.4rem; background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0, 85, 47, 0.35);
+}
+button:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+button:active { background: var(--accent-deep); }
 .result:empty { display: none; }
-.result, .pu-confirmed, .note { background: var(--panel); border-left: 4px solid var(--muted); padding: 0.75rem 1rem; margin: 0.75rem 0; }
+.result, .pu-confirmed, .note {
+  background: var(--accent-soft); border: 1px solid #bfe0cf; border-left: 4px solid var(--accent); border-radius: 8px; padding: 0.75rem 1rem; margin: 0.75rem 0;
+}
+.result p:first-child, .pu-confirmed p:first-child, .note p:first-child { margin-top: 0; }
+.result p:last-child, .pu-confirmed p:last-child, .note p:last-child { margin-bottom: 0; }
 .result ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
-.result li + li { border-top: 1px solid var(--line); }
-.result a, .pu-confirmed > a { display: block; padding: 0.6rem 0; min-height: 44px; }
+.result a { flex-wrap: wrap; font-weight: 400; }
+.result a.feb-link { margin-top: 0.4rem; font-weight: 600; }
+.pu-confirmed > a { display: block; padding: 0.6rem 0; min-height: 44px; }
+.note .link-list li { border-color: #bfe0cf; }
+.note .link-list a { padding: 0.6rem 0; }
 
-.toc ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
-.toc li { border-bottom: 1px solid var(--line); }
-.toc a { display: block; padding: 0.6rem 0.25rem; min-height: 44px; }
-.race { border-top: 2px solid var(--fg); margin-top: 2rem; }
+/* A ballot: a contents list, then one card per race, with one card per candidate inside it */
+.toc { margin: 1rem 0; }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+@media (min-width: 40rem) { .toc ul { grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); } }
+.race { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 0.25rem 0.75rem 0.75rem; margin-top: 1.5rem; }
+@media (min-width: 40rem) { .race { padding: 0.25rem 1.25rem 1.25rem; } }
+.race > h2, .race > h3 { margin-top: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--accent); display: inline-block; }
+.race-group > .race { margin-top: 1rem; }
 .race-meta, .cite { color: var(--muted); font-size: 0.9rem; }
 .race-meta p { margin: 0.4rem 0; }
-.cite a { color: var(--muted); }
+.cite a, .cite a:visited { color: var(--muted); text-decoration-color: rgba(77, 85, 81, 0.45); }
+.cite a:hover { color: var(--accent-deep); }
 .candidates { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.75rem; }
 @media (min-width: 40rem) { .candidates { grid-template-columns: 1fr 1fr; } }
-.candidate { border: 1px solid var(--line); border-radius: 6px; padding: 0.75rem 1rem; }
-.party { margin: 0; color: var(--muted); }
-.acronym { font-weight: 700; color: var(--fg); }
-.name { font-size: 1.1rem; margin: 0.25rem 0 0.5rem; overflow-wrap: anywhere; }
+.candidate { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 0.9rem 1rem 0.5rem; box-shadow: 0 1px 2px rgba(27, 31, 29, 0.05); display: flex; flex-direction: column; }
+.candidate > .cite { margin-top: auto; border-top: 1px solid var(--line); }
+.party { margin: 0; color: var(--muted); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem; }
+/* The acronym is plain text in a neutral outline, the same for every party: never a party colour. */
+.acronym { font-weight: 800; color: var(--fg); border: 1px solid var(--field); border-radius: 6px; padding: 0 0.4rem; font-size: 0.9rem; letter-spacing: 0.02em; }
+.name { font-size: 1.12rem; margin: 0.35rem 0 0.5rem; overflow-wrap: anywhere; color: var(--fg); }
+.name a, .name a:visited { color: var(--fg); text-decoration: none; display: inline-block; min-height: 44px; padding: 0.4rem 0; }
+.name a:hover, .name a:focus-visible { color: var(--accent-deep); text-decoration: underline; text-decoration-color: currentColor; }
 .position { margin: 0 0 0.25rem; color: var(--muted); font-size: 0.9rem; }
 .running-mate { border-top: 1px dashed var(--line); margin-top: 0.75rem; padding-top: 0.5rem; }
-.running-mate .mate-name { font-size: 1rem; margin: 0 0 0.25rem; }
-.fields { display: grid; grid-template-columns: max-content 1fr; gap: 0.15rem 0.75rem; margin: 0; font-size: 0.95rem; }
+.running-mate .mate-name { font-size: 1rem; margin: 0 0 0.25rem; color: var(--fg); }
+.fields { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0.2rem 0.75rem; margin: 0 0 0.5rem; font-size: 0.95rem; }
 .fields dt { color: var(--muted); }
 .fields dd { margin: 0; overflow-wrap: anywhere; }
 .printing-note { color: var(--muted); font-style: italic; }
 .unresolved > h2 { margin-top: 2rem; }
 
-/* Room for the code form, which the script reveals; without JavaScript the same space holds the note. */
-.by-code { min-height: 15rem; }
+/* Room for the forms the script reveals, so nothing jumps; without JavaScript the same space holds the note. */
+.by-code { min-height: 17rem; }
+.by-search { min-height: 23rem; }
 
 /* Every tap target is at least 44px (the working rules §4). Citations are one full-width link each. */
 .cite { margin: 0.25rem 0; }
 .cite a { display: block; min-height: 44px; padding: 0.6rem 0; }
 main p > a { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
 .site-footer .cite a { padding: 0.5rem 0; }
-.crumbs a { min-width: 44px; }
-.note .link-list a { padding: 0.6rem 0; }
-/* Room for the search form, which the script reveals (no layout shift). */
-.by-search { min-height: 22rem; }
 
 .share, .background { margin-top: 1.5rem; }
+.share { border: 1px solid var(--line); border-radius: 14px; padding: 0.25rem 1rem 0.75rem; }
 .share-title { font-size: 1.15rem; }
-.share button { width: 100%; margin: 0.4rem 0; }
-.name a { text-decoration: none; display: inline-block; min-height: 44px; padding: 0.4rem 0; }
-.name a:hover, .name a:focus-visible { text-decoration: underline; }
+.share button { margin: 0.4rem 0; background: var(--bg); color: var(--accent-strong); border-color: var(--accent-strong); box-shadow: none; }
+.share button:hover { background: var(--accent-soft); color: var(--accent-deep); }
 .entries { list-style: none; padding: 0; margin: 0.25rem 0 0.75rem; }
-.entries > li { border-left: 3px solid var(--line); padding-left: 0.75rem; margin-bottom: 0.5rem; }
+.entries > li { border-left: 3px solid var(--accent); padding-left: 0.75rem; margin-bottom: 0.75rem; }
 .entry { margin: 0.25rem 0 0; }
 .method { color: var(--muted); font-size: 0.9rem; }
 
-.countdown { background: var(--panel); border-left: 4px solid var(--fg); padding: 0.75rem 1rem; margin: 0.75rem 0 1.25rem; min-height: 7.5rem; }
-.countdown .headline { font-size: 1.2rem; font-weight: 600; margin: 0 0 0.4rem; }
+.countdown { background: var(--accent-soft); border: 1px solid #bfe0cf; border-left: 4px solid var(--accent); border-radius: 8px; padding: 0.75rem 1rem; margin: 0.75rem 0 1.25rem; min-height: 7.5rem; }
+.countdown .headline { font-size: 1.2rem; font-weight: 700; color: var(--accent-deep); margin: 0 0 0.4rem; }
 .countdown p { margin: 0.3rem 0; }
 .steps { padding-left: 1.4rem; }
 .steps li { margin: 0.5rem 0; }
+.steps li::marker { color: var(--accent-strong); font-weight: 700; }
 .entry-note { color: var(--muted); font-size: 0.9rem; margin: 0.15rem 0 0; }
-/* The owner's civic note (D-034): plain text, set apart by space and a rule, no icon or colour. */
+/* The owner's civic note (D-034): plain text, set apart by space and a rule. */
 .civic-note { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; }
-.civic-note p[data-civic-note] { font-weight: 600; margin: 0 0 0.5rem; }
+.civic-note p[data-civic-note] { font-weight: 700; margin: 0 0 0.5rem; }
 .civic-note a { font-weight: 400; }
 .ext { display: inline-block; width: 0.75em; height: 0.75em; margin-left: 0.2em; vertical-align: baseline; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

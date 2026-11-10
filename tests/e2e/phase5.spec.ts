@@ -7,7 +7,7 @@ test('code lookup offers both election days, and each ballot links to the other 
   const requests: string[] = []
   page.on('request', r => requests.push(r.url()))
   await page.goto('/')
-  await page.getByLabel(/Delimitation code/).fill('01/01/01/001')
+  await page.getByLabel(/Code on your voter’s card/).fill('01/01/01/001')
   await page.getByRole('button', { name: 'Find my polling unit' }).click()
   await expect(page.getByRole('link', { name: /RAILWAY QUARTERS I/ })).toHaveAttribute('href', `${JAN_ABA}#pu-01-01-01-001`)
   const feb = page.getByRole('link', { name: '6 February 2027 ballot' })
