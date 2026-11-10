@@ -331,6 +331,49 @@ def _write_audit(res: BuildResult) -> None:
     pus = [(sg.name, l.name, w.name, p) for sg in res.geo.values() for l in sg.lgas for w in l.wards for p in w.polling_units]
     for st, lga, ward, p in rng.sample(pus, 20):
         lines.append(f"- [ ] {p.code} | {st} / {lga} / {ward} | {p.name}")
+    lines += _feb_audit(res)
     lines += ["", "## Mismatches found", "", "(none yet)"]
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     (AUDIT_DIR / "sample.md").write_text("\n".join(lines) + "\n")
+
+
+
+def _feb_audit(res: BuildResult) -> list[str]:
+    """The 6 February sample (launch checklist, D-031): its own fixed seed, so the January sample above never changes."""
+    rng = random.Random(20270206)
+    by_id = {s["source_id"]: s for s in res.sources}
+    link = lambda sid, page: f"{by_id[sid]['file_url']}#page={page}"  # noqa: E731
+    lines = ["", "# 6 February sample", "",
+             "Open each link (INEC's PDF at the page given) and compare every row letter by letter: serial number, party, name, age,",
+             "gender and, for governors, the deputy. Tick the box when it matches.", "", "## Six governorship races", ""]
+    gov = [r for r in res.races if r.office == "governor"]
+    for r in sorted(rng.sample(gov, 6), key=lambda x: x.state):
+        src = r.candidates[0].provenance
+        lines.append(f"### {r.state} ({link(src.source_id, src.page)})")
+        for cd in r.candidates:
+            p, m = cd.candidate, cd.running_mate
+            mate = f"{m.name} | {m.age} | {m.gender}" if m else "(no deputy)"
+            lines.append(f"- [ ] SN {cd.provenance.sn} p{cd.provenance.page} | {cd.party} | {p.name} | {p.age} | {p.gender} || deputy: {mate}")
+        lines.append("")
+    lines += ["## One State Assembly race per state", ""]
+    sha = [r for r in res.races if r.office == "state_assembly"]
+    for state in sorted({r.state for r in sha}):
+        r = rng.choice([x for x in sha if x.state == state])
+        src = r.candidates[0].provenance
+        lines.append(f"### {state}: {r.name} ({link(src.source_id, src.page)})")
+        for cd in r.candidates:
+            p = cd.candidate
+            lines.append(f"- [ ] SN {cd.provenance.sn} p{cd.provenance.page} | {cd.party} | {p.name} | {p.age} | {p.gender}")
+        lines.append("")
+    race_name = {r.id: r.name for r in sha}
+    wards = [(sg.name, l.name, w) for sg in res.geo.values() for l in sg.lgas for w in l.wards if w.sc_mapping == "exact"]
+    by_irev = [x for x in wards if "inec-irev-2023-assembly" in x[2].sc_sources]
+    by_workbook = [x for x in wards if "inec-irev-2023-assembly" not in x[2].sc_sources]
+    lines += ["## Twelve wards: which State Assembly race", "",
+              "For IReV rows: on https://www.inecelectionresults.ng choose the 18 March 2023 House of Assembly election for the state, open the",
+              "constituency named, and confirm the ward is listed under that LGA. For workbook rows: in INEC's constituency workbook (sheet",
+              "STATE CONST.), confirm the constituency's composition includes the ward or its LGA.", ""]
+    for label, pool in (("IReV", by_irev), ("workbook", by_workbook)):
+        for st, lga, w in sorted(rng.sample(pool, 6), key=lambda x: x[2].code):
+            lines.append(f"- [ ] {label} | {w.code} | {st} / {lga} / {w.name} -> {race_name[w.state_constituency[0]]}")
+    return lines

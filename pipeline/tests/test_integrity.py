@@ -69,6 +69,10 @@ def test_an_error_found_during_the_build_fails_verify(raw_source, monkeypatch):
     from ballot_pipeline.paths import GENERATED_DIR
 
     raw_source("sha-2026-10-10")  # skips when INEC's files are not fetched
+    from ballot_pipeline.paths import PU_RAW_DIR
+
+    if not (PU_RAW_DIR / "locator.html").exists():  # the ~2 h polling-unit crawl is local only (not in CI)
+        pytest.skip("no polling-unit crawl; run `make crawl-pu`")
     monkeypatch.setattr(manifest, "verify_pu_manifest", lambda: ["injected: polling-unit manifest mismatch"])
     monkeypatch.setattr(build_mod, "write_outputs", lambda res: None)
     report = GENERATED_DIR / "report.md"

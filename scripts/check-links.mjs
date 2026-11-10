@@ -2,7 +2,8 @@
 import fs from 'node:fs'
 
 const html = fs.readFileSync('out/election-day/index.html', 'utf8')
-const urls = [...new Set([...html.matchAll(/href="(https?:\/\/[^"]+)"/g)].map(m => m[1]))]
+// links a visitor can follow (<a>), not the page's own canonical address, which is checked on production at launch
+const urls = [...new Set([...html.matchAll(/<a\b[^>]*\bhref="(https?:\/\/[^"]+)"/g)].map(m => m[1]))]
 let failed = 0
 for (const url of urls) {
   try {
