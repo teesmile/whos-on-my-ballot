@@ -2,7 +2,8 @@
  * The site's only script (decision D-022). It enhances three static forms:
  *   [data-lookup="code"]    find a polling unit from the PVC delimitation code
  *   [data-lookup="search"]  find a polling unit by name or nearby landmark within one LGA
- *   [data-lookup="confirm"] on a ballot page, name the polling unit chosen (from the URL fragment)
+ *   [data-lookup="confirm"] on a ballot page, name the polling unit chosen (from the URL fragment) and link its
+ *                           ballot for the other election day
  *   [data-copy]             copy a page's link to the clipboard
  *   [data-countdown]        election-day schedule: where we are in it, updated each minute (no live announcements)
  * Privacy (D-015): the only network request is GET /data/pu/<SS>.json, a fixed per-state file. What the visitor
@@ -47,6 +48,17 @@ function puLink(pu: FoundPollingUnit): HTMLAnchorElement {
   return a
 }
 
+/** The 6 February ballot for the same polling unit (its ward decides it). */
+function febLink(pu: FoundPollingUnit): HTMLAnchorElement {
+  return el('a', '6 February 2027 ballot', { href: `${pu.febBallotPath}${puHash(pu.code)}`, class: 'feb-link' })
+}
+
+function resultItem(pu: FoundPollingUnit): HTMLLIElement {
+  const li = el('li')
+  li.append(puLink(pu), febLink(pu))
+  return li
+}
+
 function show(result: Element, ...nodes: Node[]) {
   result.replaceChildren(...nodes)
 }
@@ -89,9 +101,8 @@ function setupCode(form: HTMLFormElement) {
       return
     }
     const ul = el('ul')
-    ul.append(el('li'))
-    ul.firstChild!.appendChild(puLink(pu))
-    show(result, el('p', 'Is this your polling unit? Choose it to see your ballot.'), ul)
+    ul.append(resultItem(pu))
+    show(result, el('p', 'Is this your polling unit? Choose it to see your ballot for 16 January, or choose the 6 February ballot.'), ul)
   })
 }
 
@@ -132,12 +143,8 @@ function setupSearch(form: HTMLFormElement) {
       return
     }
     const ul = el('ul')
-    for (const h of hits) {
-      const li = el('li')
-      li.append(puLink(h))
-      ul.append(li)
-    }
-    show(result, el('p', `Is one of these your polling unit? ${hits.length === 1 ? 'Choose it' : 'Choose yours'} to see your ballot.`), ul)
+    for (const h of hits) ul.append(resultItem(h))
+    show(result, el('p', `Is one of these your polling unit? ${hits.length === 1 ? 'Choose it' : 'Choose yours'} to see your ballot for 16 January, or choose the 6 February ballot.`), ul)
   })
 }
 
@@ -148,11 +155,20 @@ async function setupConfirm(box: HTMLElement) {
     const pu = findByCode(await stateData(code.slice(0, 2)), code)
     if (!pu) return
     const here = location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`
-    box.replaceChildren(
-      el('p', `Your polling unit: ${pu.name}, ${pu.ward} ward, ${pu.lga} LGA (${pu.code}).`),
-      ...(pu.ballotPath === here ? [] : [el('p', 'This polling unit belongs to a different ballot. Follow the link below.')]),
-    )
-    if (pu.ballotPath !== here) box.append(puLink(pu))
+    const feb = box.dataset.election === 'feb'
+    const mine = feb ? pu.febBallotPath : pu.ballotPath
+    box.replaceChildren(el('p', `Your polling unit: ${pu.name}, ${pu.ward} ward, ${pu.lga} LGA (${pu.code}).`))
+    if (mine !== here) {
+      box.append(el('p', 'This polling unit belongs to a different ballot. Follow the link below.'))
+      box.append(feb ? febLink(pu) : puLink(pu))
+    }
+    // the same polling unit's ballot for the other election day
+    const other = feb
+      ? el('a', 'Your ballot for 16 January 2027', { href: `${pu.ballotPath}${puHash(pu.code)}` })
+      : el('a', 'Your ballot for 6 February 2027', { href: `${pu.febBallotPath}${puHash(pu.code)}` })
+    const p = el('p')
+    p.append(other)
+    box.append(p)
     box.hidden = false
   }
   catch {

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { SourceLine } from '@/components/SourceLine'
 
 import { puHash } from '@/lib/core'
-import { findWard, stateGeo, states, wardBallotPath } from '@/lib/data'
+import { findWard, stateGeo, states, wardBallotPath, wardFebBallotPath } from '@/lib/data'
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ code: str
 export default async function WardPage({ params }: { params: Promise<{ code: string }> }) {
   const { state, lga, ward } = await wardOf(params)
   const path = wardBallotPath(state, ward)
+  const febPath = wardFebBallotPath(state, ward)
   return (
     <>
       <nav aria-label="Breadcrumb" className="crumbs">
@@ -36,7 +37,7 @@ export default async function WardPage({ params }: { params: Promise<{ code: str
       </h1>
       <SourceLine id="inec-pu-locator" what="LGAs, wards and polling units" />
       <h2>Is this your polling unit?</h2>
-      <p>Choose your polling unit to see your ballot. The code after each name is the delimitation code printed on voter cards.</p>
+      <p>Choose your polling unit to see your ballot for 16 January 2027. The code after each name is the delimitation code printed on voter cards.</p>
       <ul className="link-list pu-list" data-ballot={path}>
         {ward.polling_units.map(p => (
           <li key={p.code}>
@@ -48,6 +49,9 @@ export default async function WardPage({ params }: { params: Promise<{ code: str
           </li>
         ))}
       </ul>
+      <h2>6 February 2027</h2>
+      <p>Every polling unit in this ward has the same ballot on 6 February.</p>
+      <p><a className="feb-link" href={febPath} data-feb-ballot>{`Your ballot for 6 February 2027, ${ward.name} ward`}</a></p>
     </>
   )
 }

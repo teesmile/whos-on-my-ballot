@@ -29,7 +29,17 @@ export function shareLinks(text: string, url: string) {
 export function cardSourceCaption(raceSources: string[]): string {
   if (raceSources.includes('house-2026-09-12-consolidated'))
     return 'Source: INEC final list, 12 Sep 2026 (the latest INEC list for Niger’s House races).'
+  if (raceSources.some(s => s.startsWith('governor-')))
+    return 'Source: INEC updated final list of governorship candidates, 31 Oct 2026.'
+  if (raceSources.includes('sha-2026-10-10'))
+    return 'Source: INEC final list of State House of Assembly candidates (statutory notice, 31 Oct 2026).'
   return 'Source: INEC final list, updated 31 Oct 2026.'
+}
+
+/** The 6 February preview card: the governorship race (on every ballot in the state), else the one State Assembly race;
+ *  never one of several possible State Assembly races (D-021). */
+export function febCardRace(governor: string | null, sha: string[]): string | null {
+  return governor ?? (sha.length === 1 ? sha[0] : null)
 }
 
 /** The share-card image for a ballot. With more than one possible House race (unresolved, D-021), use the

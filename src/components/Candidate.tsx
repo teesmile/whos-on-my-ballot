@@ -46,7 +46,7 @@ export function PersonFields({ p, who, notes }: { p: Person, who: PrintingNote['
   )
 }
 
-export function Candidate({ c, src, ticket, level }: { c: C, src: Source, ticket: boolean, level: 3 | 4 }) {
+export function Candidate({ c, src, ticket, level, mateLabel = 'Running mate' }: { c: C, src: Source, ticket: boolean, level: 3 | 4, mateLabel?: string }) {
   const Name = level === 3 ? 'h3' : 'h4'
   const Mate = level === 3 ? 'h4' : 'h5'
   const remarkNote = c.printing_notes.find(n => n.field === 'remarks')
@@ -69,7 +69,8 @@ export function Candidate({ c, src, ticket, level }: { c: C, src: Source, ticket
       {ticket && c.running_mate && (
         <div className="running-mate">
           <Mate className="mate-name">
-            Running mate:
+            {mateLabel}
+            :
             {' '}
             {c.running_mate.name || NOT_PROVIDED}
           </Mate>

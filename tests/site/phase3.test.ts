@@ -5,7 +5,7 @@ import path from 'node:path'
 import { PNG } from 'pngjs'
 import { describe, expect, it } from 'vitest'
 
-import { allCandidates, races } from '@/lib/data'
+import { allCandidates, allRaces } from '@/lib/data'
 import { candidatePath, CORRECTIONS_EMAIL, SITE_URL } from '@/lib/site'
 
 const OUT = path.resolve('out')
@@ -31,7 +31,7 @@ describe('candidate pages', () => {
     const shape = (html: string) => [...html.matchAll(/<(h[1-4])[^>]*>([\s\S]*?)<\/\1>/g)]
       .map(([, tag, text]) => `${tag}:${text.replace(/<[^>]+>/g, '').split(':')[0].trim()}`)
       .filter(h => !h.startsWith('h1:')) // the h1 is the candidate's own name
-    for (const office of ['president', 'senate', 'house']) {
+    for (const office of ['president', 'senate', 'house', 'governor', 'state_assembly']) {
       const shapes = new Set(all.filter(({ race }) => race.office === office).map(({ c }) => shape(page(candidatePath(c.id))).join('|')))
       expect(shapes.size, office).toBe(1)
     }
@@ -111,15 +111,15 @@ describe('share cards', () => {
   const decode = (id: string) => PNG.sync.read(fs.readFileSync(path.join(OUT, 'cards', `${id}.png`)))
 
   it('one 1200x630 card per race', () => {
-    for (const r of races()) {
+    for (const r of allRaces()) {
       const png = decode(r.id)
       expect([png.width, png.height], r.id).toEqual([1200, 630])
     }
-    expect(fs.readdirSync(path.join(OUT, 'cards')).length).toBe(races().length)
+    expect(fs.readdirSync(path.join(OUT, 'cards')).length).toBe(allRaces().length)
   })
 
   it('cards use greys only: every pixel has equal red, green and blue', () => {
-    for (const r of races()) {
+    for (const r of allRaces()) {
       const { data } = decode(r.id)
       for (let i = 0; i < data.length; i += 4) {
         if (Math.abs(data[i] - data[i + 1]) > 1 || Math.abs(data[i + 1] - data[i + 2]) > 1) {
@@ -133,7 +133,8 @@ describe('share cards', () => {
   // Update deliberately with UPDATE_CARD_SNAPSHOTS=1 after looking at the new images.
   const SNAPSHOTS = ['jan-2027-president', 'jan-2027-house-fct-municipal-bwari', 'jan-2027-house-lagos-eti-osa',
     'jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west', 'jan-2027-house-kwara-ilorin-east-ilorin-south',
-    'jan-2027-house-niger-chanchaga']
+    'jan-2027-house-niger-chanchaga', 'feb-2027-governor-taraba', 'feb-2027-sha-kwara-kaiama-wajibe-kemanji-kaiama-ii',
+    'feb-2027-sha-lagos-lagos-island-i']
   for (const id of SNAPSHOTS) {
     it(`card matches its reviewed snapshot: ${id}`, () => {
       const fixture = path.resolve('tests/fixtures/cards', `${id}.png`)

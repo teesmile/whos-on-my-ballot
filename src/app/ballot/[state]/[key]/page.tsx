@@ -42,7 +42,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
         <a href={`/state/${b.state.code}/`}>{b.state.name}</a>
       </nav>
       <h1>Your ballot for 16 January 2027</h1>
-      <div className="pu-confirmed" data-lookup="confirm" data-state={b.state.code} role="status" aria-live="polite" hidden />
+      <div className="pu-confirmed" data-lookup="confirm" data-election="jan" data-state={b.state.code} role="status" aria-live="polite" hidden />
       <p className="lead">
         {b.state.name}
         {' · '}

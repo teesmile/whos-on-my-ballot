@@ -17,6 +17,8 @@ const PAGES = [
   '/c/jan-2027-president-ndc/',
   '/c/jan-2027-house-fct-municipal-bwari-apc/',
   '/election-day/',
+  '/ballot-feb/rivers/port-harcourt-i-or-port-harcourt-ii-or-port-harcourt-iii/',
+  '/c/feb-2027-governor-taraba-apc/',
 ]
 
 const server = spawn('node', ['scripts/serve-out.mjs'], { env: { ...process.env, PORT: String(PORT) }, stdio: 'ignore' })

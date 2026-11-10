@@ -14,6 +14,7 @@ from .http import get
 from .paths import GENERATED_DIR, SOURCES_YAML
 
 PRESS_LINK = re.compile(r'href="(/press/[^"#?]+)"')
+ANY_DOC_LINK = re.compile(r'href="(/documents/[^"]+\.pdf)"', re.I)  # some INEC files sit outside /documents/uploads/
 
 
 def watch(summary_path: str | None = "watch-summary.md") -> int:
@@ -23,7 +24,8 @@ def watch(summary_path: str | None = "watch-summary.md") -> int:
     changes: list[str] = []
 
     index = get(reg["index_page"]).decode("utf-8", errors="replace")
-    known_pages = {p["url"].split("inecnigeria.org", 1)[1] for p in reg["press_pages"]}
+    doc_pages = sorted({d["page_url"] for d in reg["documents"] if d.get("page_url", "").startswith("https://www.inecnigeria.org/press/")})
+    known_pages = {p["url"].split("inecnigeria.org", 1)[1] for p in reg["press_pages"]} | {u.split("inecnigeria.org", 1)[1] for u in doc_pages}
     for href in sorted(set(PRESS_LINK.findall(index)) - known_pages):
         changes.append(f"New statutory publication on INEC's 2027 page: https://www.inecnigeria.org{href}")
     if re.search(r"ballot\s*(paper|order|specimen)", index, re.I):
@@ -40,6 +42,16 @@ def watch(summary_path: str | None = "watch-summary.md") -> int:
         for u in sorted(links & recorded_links):
             if hashlib.sha256(get(u)).hexdigest() != by_url[u]["sha256"]:
                 changes.append(f"{page['id']}: document changed {u}")
+
+    # a press page that holds one recorded document (State Assembly list): any other document posted there is new (OI-11, Borno)
+    for page_url in doc_pages:
+        html = get(page_url).decode("utf-8", errors="replace")
+        links = {"https://www.inecnigeria.org" + urllib.parse.quote(h, safe="/()") for h in ANY_DOC_LINK.findall(html)}
+        mine = {d["url"] for d in reg["documents"] if d.get("page_url") == page_url}
+        for u in sorted(links - mine):
+            changes.append(f"{page_url}: new document {u}")
+        for u in sorted(mine - links):
+            changes.append(f"{page_url}: document no longer linked {u}")
 
     for doc in reg["documents"]:
         rec = next((s for s in recorded if s["source_id"] == doc["id"]), None)

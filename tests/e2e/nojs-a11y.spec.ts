@@ -13,6 +13,12 @@ const PAGES = [
   '/c/jan-2027-president-a/',
   '/c/jan-2027-house-lagos-eti-osa-ndc/',
   '/corrections/',
+  '/ballot-feb/lagos/surulere-ii/',
+  '/ballot-feb/rivers/port-harcourt-i-or-port-harcourt-ii-or-port-harcourt-iii/',
+  '/ballot-feb/osun/ayedade/',
+  '/ballot-feb/borno/',
+  '/ballot-feb/fct/',
+  '/c/feb-2027-governor-taraba-apc/',
 ]
 
 for (const url of PAGES) {

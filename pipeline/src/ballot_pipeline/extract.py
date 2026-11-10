@@ -15,7 +15,7 @@ from dataclasses import dataclass, field
 
 import pdfplumber
 
-EXTRACTOR_VERSION = 3  # bump when output for the same PDF changes; invalidates the build cache
+EXTRACTOR_VERSION = 5  # bump when output for the same PDF changes; invalidates the build cache
 MAX_TEXT_SIZE = 12  # table text is 9-10pt, title 14pt, watermark glyphs 270-345pt
 
 HEADER_FIELDS = {
@@ -152,6 +152,9 @@ def extract_pdf(path: str, source_id: str, ticket: bool = False) -> list[Row]:
                 fields = _header_map(texts)
                 continue
             rec = {f: t for f, t in zip(fields, texts) if f}
+            for f in ("party", "age"):  # letter-spaced cells ("S D P", "3 4") are one token, as poppler reads them
+                if rec.get(f) and re.fullmatch(r"(\S )+\S", rec[f]):
+                    rec[f] = rec[f].replace(" ", "")
             if not rec.get("sn"):
                 # pdfmake let a row break across a page: append the continuation to the previous row.
                 if rows and any(rec.values()):
@@ -173,8 +176,8 @@ def extract_pdf(path: str, source_id: str, ticket: bool = False) -> list[Row]:
                         continue
                     halves[0][f] = words.text(cell, (top, split))
                     halves[1][f] = words.text(cell, (split, bottom))
-                if not halves[1].get("position", "").lower().startswith("vice"):
-                    raise ExtractionError(f"{source_id} p{page_no} SN {rec['sn']}: second half is not a Vice position")
+                if not halves[1].get("position", "").lower().startswith(("vice", "deputy")):
+                    raise ExtractionError(f"{source_id} p{page_no} SN {rec['sn']}: second half is not a Vice or Deputy position")
                 people = [Person(h["name"], h["pwd"], h["age"], h["gender"], h["qualifications"], h["position"]) for h in halves]
                 remarks = " / ".join(dict.fromkeys(r for r in (halves[0]["remarks"], halves[1]["remarks"]) if r))
                 rows.append(Row(source_id, page_no, int(rec["sn"]), normalise_state(halves[0]["state"]), "",
@@ -199,7 +202,8 @@ def count_sn_independently(path: str) -> list[int]:
     out = subprocess.run(["pdftotext", "-layout", path, "-"], capture_output=True, text=True, check=True).stdout
     sns = []
     for line in out.splitlines():
-        m = re.match(r"^\s{0,6}(\d{1,4})\s{1,6}(?=[A-Z])", line)
+        # pdfmake may centre the serial number on a line that holds only the party acronym ("5   …   ADP")
+        m = re.match(r"^\s{0,6}(\d{1,4})\s+(?=[A-Z])", line)
         if m:
             sns.append(int(m.group(1)))
     return sns

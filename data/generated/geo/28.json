@@ -18,6 +18,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/01/001",
@@ -80,6 +85,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/02/001",
@@ -122,6 +132,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/03/001",
@@ -188,6 +203,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/04/001",
@@ -278,6 +298,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/05/001",
@@ -336,6 +361,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/06/001",
@@ -406,6 +436,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/07/001",
@@ -504,6 +539,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/08/001",
@@ -582,6 +622,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/09/001",
@@ -628,6 +673,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/10/001",
@@ -690,6 +740,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/11/001",
@@ -736,6 +791,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/12/001",
@@ -786,6 +846,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/01/13/001",
@@ -842,6 +907,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/01/001",
@@ -952,6 +1023,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/02/001",
@@ -1018,6 +1095,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/03/001",
@@ -1104,6 +1187,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/04/001",
@@ -1162,6 +1251,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/05/001",
@@ -1252,6 +1347,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/06/001",
@@ -1366,6 +1467,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/07/001",
@@ -1448,6 +1555,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/08/001",
@@ -1514,6 +1627,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/09/001",
@@ -1572,6 +1691,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-north-west-i",
+      "feb-2027-sha-ondo-akoko-north-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/02/10/001",
@@ -1668,6 +1793,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/01/001",
@@ -1714,6 +1844,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/02/001",
@@ -1764,6 +1899,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/03/001",
@@ -1810,6 +1950,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/04/001",
@@ -1852,6 +1997,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/05/001",
@@ -1906,6 +2056,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/06/001",
@@ -1936,6 +2091,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/07/001",
@@ -1974,6 +2134,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/08/001",
@@ -2012,6 +2177,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/09/001",
@@ -2050,6 +2220,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/10/001",
@@ -2112,6 +2287,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/03/11/001",
@@ -2148,6 +2328,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/01/001",
@@ -2218,6 +2404,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/02/001",
@@ -2276,6 +2468,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/03/001",
@@ -2350,6 +2548,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/04/001",
@@ -2408,6 +2612,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/05/001",
@@ -2494,6 +2704,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/06/001",
@@ -2548,6 +2764,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/07/001",
@@ -2646,6 +2868,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/08/001",
@@ -2704,6 +2932,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/09/001",
@@ -2750,6 +2984,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/10/001",
@@ -2832,6 +3072,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/11/001",
@@ -2902,6 +3148,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/12/001",
@@ -2980,6 +3232,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/13/001",
@@ -3042,6 +3300,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/14/001",
@@ -3112,6 +3376,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akoko-south-west-i",
+      "feb-2027-sha-ondo-akoko-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/04/15/001",
@@ -3160,6 +3430,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/01/001",
@@ -3210,6 +3485,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/02/001",
@@ -3284,6 +3564,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/03/001",
@@ -3330,6 +3615,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/04/001",
@@ -3436,6 +3726,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/05/001",
@@ -3542,6 +3837,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/06/001",
@@ -3608,6 +3908,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/07/001",
@@ -3658,6 +3963,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/08/001",
@@ -3700,6 +4010,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/09/001",
@@ -3810,6 +4125,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/10/001",
@@ -3856,6 +4176,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/11/001",
@@ -3902,6 +4227,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/05/12/001",
@@ -3962,6 +4292,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/01/001",
@@ -4052,6 +4388,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/02/001",
@@ -4338,6 +4680,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/03/001",
@@ -4592,6 +4940,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/04/001",
@@ -4806,6 +5160,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/05/001",
@@ -5128,6 +5488,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/06/001",
@@ -5258,6 +5624,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/07/001",
@@ -5432,6 +5804,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/08/001",
@@ -5686,6 +6064,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/09/001",
@@ -5968,6 +6352,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/10/001",
@@ -6250,6 +6640,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-akure-south-i",
+      "feb-2027-sha-ondo-akure-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/06/11/001",
@@ -6506,6 +6902,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/01/001",
@@ -6584,6 +6985,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/02/001",
@@ -6666,6 +7072,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/03/001",
@@ -6752,6 +7163,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/04/001",
@@ -6794,6 +7210,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/05/001",
@@ -6840,6 +7261,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/06/001",
@@ -6934,6 +7360,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/07/001",
@@ -7004,6 +7435,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/08/001",
@@ -7074,6 +7510,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/09/001",
@@ -7140,6 +7581,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ese-odo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/07/10/001",
@@ -7224,6 +7670,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/01/001",
@@ -7298,6 +7749,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/02/001",
@@ -7408,6 +7864,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/03/001",
@@ -7486,6 +7947,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/04/001",
@@ -7572,6 +8038,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/05/001",
@@ -7630,6 +8101,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/06/001",
@@ -7688,6 +8164,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/07/001",
@@ -7766,6 +8247,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/08/001",
@@ -7856,6 +8342,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/09/001",
@@ -7958,6 +8449,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-idanre"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/08/10/001",
@@ -8034,6 +8530,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/01/001",
@@ -8092,6 +8593,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/02/001",
@@ -8214,6 +8720,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/03/001",
@@ -8272,6 +8783,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/04/001",
@@ -8346,6 +8862,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/05/001",
@@ -8404,6 +8925,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/06/001",
@@ -8462,6 +8988,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/07/001",
@@ -8544,6 +9075,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/08/001",
@@ -8642,6 +9178,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/09/001",
@@ -8736,6 +9277,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ifedore"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/09/10/001",
@@ -8856,6 +9402,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/01/001",
@@ -8990,6 +9542,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/02/001",
@@ -9056,6 +9614,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/03/001",
@@ -9214,6 +9778,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/04/001",
@@ -9372,6 +9942,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/05/001",
@@ -9522,6 +10098,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/06/001",
@@ -9636,6 +10218,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/07/001",
@@ -9718,6 +10306,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/08/001",
@@ -9824,6 +10418,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/09/001",
@@ -9906,6 +10506,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/10/001",
@@ -10008,6 +10614,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/11/001",
@@ -10098,6 +10710,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ilaje-i",
+      "feb-2027-sha-ondo-ilaje-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/10/12/001",
@@ -10198,6 +10816,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/01/001",
@@ -10256,6 +10879,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/02/001",
@@ -10338,6 +10966,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/03/001",
@@ -10408,6 +11041,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/04/001",
@@ -10486,6 +11124,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/05/001",
@@ -10632,6 +11275,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/06/001",
@@ -10766,6 +11414,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/07/001",
@@ -10848,6 +11501,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/08/001",
@@ -10910,6 +11568,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/09/001",
@@ -10996,6 +11659,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ile-oluji-oke-igbo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/11/10/001",
@@ -11108,6 +11776,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/01/001",
@@ -11178,6 +11851,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/02/001",
@@ -11240,6 +11918,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/03/001",
@@ -11290,6 +11973,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/04/001",
@@ -11360,6 +12048,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/05/001",
@@ -11422,6 +12115,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/06/001",
@@ -11504,6 +12202,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/07/001",
@@ -11602,6 +12305,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/08/001",
@@ -11692,6 +12400,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/09/001",
@@ -11782,6 +12495,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-irele"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/12/10/001",
@@ -11874,6 +12592,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/01/001",
@@ -11976,6 +12700,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/02/001",
@@ -12058,6 +12788,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/03/001",
@@ -12180,6 +12916,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/04/001",
@@ -12262,6 +13004,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/05/001",
@@ -12324,6 +13072,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/06/001",
@@ -12390,6 +13144,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/07/001",
@@ -12448,6 +13208,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/08/001",
@@ -12662,6 +13428,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/09/001",
@@ -12824,6 +13596,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/10/001",
@@ -13158,6 +13936,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-odigbo-i",
+      "feb-2027-sha-ondo-odigbo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/13/11/001",
@@ -13250,6 +14034,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/01/001",
@@ -13352,6 +14142,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/02/001",
@@ -13442,6 +14238,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/03/001",
@@ -13556,6 +14358,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/04/001",
@@ -13626,6 +14434,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/05/001",
@@ -13704,6 +14518,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/06/001",
@@ -13798,6 +14618,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/07/001",
@@ -13884,6 +14710,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/08/001",
@@ -13970,6 +14802,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/09/001",
@@ -14080,6 +14918,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/10/001",
@@ -14170,6 +15014,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/11/001",
@@ -14240,6 +15090,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/12/001",
@@ -14354,6 +15210,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-okitipupa-i",
+      "feb-2027-sha-ondo-okitipupa-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/14/13/001",
@@ -14514,6 +15376,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/01/001",
@@ -14592,6 +15459,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/02/001",
@@ -14626,6 +15498,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/03/001",
@@ -14688,6 +15565,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/04/001",
@@ -14766,6 +15648,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/05/001",
@@ -14824,6 +15711,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/06/001",
@@ -14862,6 +15754,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/07/001",
@@ -14920,6 +15817,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/08/001",
@@ -14986,6 +15888,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/09/001",
@@ -15032,6 +15939,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/15/10/001",
@@ -15084,6 +15996,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/01/001",
@@ -15222,6 +16140,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/02/001",
@@ -15372,6 +16296,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/03/001",
@@ -15482,6 +16412,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/04/001",
@@ -15588,6 +16524,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/05/001",
@@ -15662,6 +16604,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/06/001",
@@ -15752,6 +16700,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/07/001",
@@ -16042,6 +16996,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/08/001",
@@ -16200,6 +17160,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/09/001",
@@ -16326,6 +17292,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/10/001",
@@ -16480,6 +17452,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/11/001",
@@ -16630,6 +17608,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ondo-west-i",
+      "feb-2027-sha-ondo-ondo-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/16/12/001",
@@ -16702,6 +17686,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/01/001",
@@ -16756,6 +17745,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/02/001",
@@ -16826,6 +17820,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/03/001",
@@ -16880,6 +17879,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/04/001",
@@ -16942,6 +17946,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/05/001",
@@ -17016,6 +18025,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/06/001",
@@ -17082,6 +18096,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/07/001",
@@ -17120,6 +18139,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/08/001",
@@ -17194,6 +18218,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/09/001",
@@ -17240,6 +18269,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/10/001",
@@ -17298,6 +18332,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/11/001",
@@ -17356,6 +18395,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-ose"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "28/17/12/001",
@@ -17440,6 +18484,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/01/001",
@@ -17514,6 +18564,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/02/001",
@@ -17576,6 +18632,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/03/001",
@@ -17666,6 +18728,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/04/001",
@@ -17788,6 +18856,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/05/001",
@@ -17890,6 +18964,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/06/001",
@@ -17952,6 +19032,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/07/001",
@@ -18118,6 +19204,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/08/001",
@@ -18292,6 +19384,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/09/001",
@@ -18454,6 +19552,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/10/001",
@@ -18552,6 +19656,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ondo-owo-i",
+      "feb-2027-sha-ondo-owo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "28/18/11/001",

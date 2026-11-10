@@ -30,6 +30,7 @@ class Citation(Strict):
 class BackgroundEntry(Strict):
     text: str = Field(min_length=3)
     citations: list[Citation] = Field(min_length=1)
+    note: str | None = None  # a neutral note shown with the entry, e.g. how the source spells the name (D-029)
 
 
 class Background(Strict):
@@ -87,7 +88,7 @@ class Candidate(Strict):
 class Race(Strict):
     id: str
     election: Literal["jan-2027", "feb-2027"]
-    office: Literal["president", "senate", "house"]
+    office: Literal["president", "senate", "house", "governor", "state_assembly"]
     state: str | None
     name: str  # constituency or district name as INEC prints it on the candidate list
     workbook_code: str | None  # SD/... or FC/... code from INEC's constituency workbook
@@ -103,6 +104,14 @@ class PollingUnit(Strict):
 
 
 class Ward(Strict):
+    @model_validator(mode="after")
+    def _sc_status_consistent(self):
+        n = len(self.state_constituency)
+        expected = "none" if n == 0 else "exact" if n == 1 else "unresolved"
+        if self.sc_mapping != expected or (self.sc_mapping == "unresolved") != (self.sc_open_item == "OI-6"):
+            raise ValueError(f"ward {self.code}: sc_mapping {self.sc_mapping!r} inconsistent with {n} State Assembly races")
+        return self
+
     @model_validator(mode="after")
     def _status_consistent(self):
         exact = len(self.federal_constituency) == 1 and len(self.senatorial_district) == 1
@@ -120,6 +129,11 @@ class Ward(Strict):
     # races is this ward's; the site must show all of them as "one of these is on your ballot", never pick one.
     mapping: Literal["exact", "unresolved"]
     open_item: str | None  # required when mapping is "unresolved"
+    # 6 February (D-028): State House of Assembly race ids. One when INEC's sources settle it; several (OI-6) when INEC's
+    # 2011 workbook doesn't match its 2027 constituencies here; none in Borno (no list published, OI-11) and the FCT.
+    state_constituency: list[str] = []
+    sc_mapping: Literal["exact", "unresolved", "none"] = "none"
+    sc_open_item: str | None = None
     polling_units: list[PollingUnit]
 
 

@@ -15,7 +15,7 @@ from .paths import GENERATED_DIR, PU_RAW_DIR, RAW_DIR, SOURCES_YAML
 from .states import state_from_slug
 
 DOC_LINK = re.compile(r'href="(/documents/uploads/[^"]+\.pdf)"')
-FILE_NAME = re.compile(r"final-?list-(?P<state>[a-z-]+?)-(?:senatorial-districts?|house-of-representatives)\.pdf$")
+FILE_NAME = re.compile(r"final-?list-(?P<state>[a-z-]+?)-(?:senatorial-districts?|house-of-representatives|governorship)\.pdf$")
 
 
 def _sha256(b: bytes) -> str:
@@ -80,7 +80,7 @@ def fetch_all(log=print) -> list[dict]:
     for doc in reg["documents"]:
         body = get(doc["url"])
         suffix = {"workbook": ".xls", "html": ".html"}.get(doc.get("kind"), ".pdf")
-        extra = {k: doc[k] for k in ("race", "election", "use_states", "kind", "archive_url") if k in doc}
+        extra = {k: doc[k] for k in ("race", "election", "use_states", "kind", "archive_url", "page_url", "sn_per_state") if k in doc}
         rec = _record(doc["id"], title=doc["title"], url=doc.get("cite_url", doc["url"]), body=body, suffix=suffix,
                       fetched_from=doc["url"], **extra)
         records.append(rec)

@@ -11,3 +11,21 @@
   person: running_mate
   field: remarks
   as_printed: "C"
+- source_id: sha-2026-10-10
+  page: 145
+  sn: 341
+  person: candidate
+  field: age
+  as_printed: "957"
+- source_id: sha-2026-10-10
+  page: 184
+  sn: 300
+  person: candidate
+  field: age
+  as_printed: "955"
+- source_id: sha-2026-10-10
+  page: 425
+  sn: 33
+  person: candidate
+  field: age
+  as_printed: "156"

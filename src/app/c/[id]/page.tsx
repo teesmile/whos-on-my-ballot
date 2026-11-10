@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import { Background } from '@/components/Background'
 import { NOT_PROVIDED, noteFor, PersonFields, Value } from '@/components/Candidate'
-import { raceTitle } from '@/components/RaceSection'
+import { mateLabel, raceTitle, TICKET_OFFICES } from '@/components/RaceSection'
 import { Share } from '@/components/Share'
 import { SourceLine } from '@/components/SourceLine'
 import { aBallotFor, allCandidates, candidate, presidentialRace, source } from '@/lib/data'
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const title = `${c.candidate.name || NOT_PROVIDED} (${c.party}), ${raceTitle(race)}`
   return {
     title,
-    description: `As listed by INEC for the 16 January 2027 election: ${raceTitle(race)}.`,
+    description: `As listed by INEC for the ${race.election === 'feb-2027' ? '6 February' : '16 January'} 2027 election: ${raceTitle(race)}.`,
     openGraph: { title, url: `${SITE_URL}${candidatePath(c.id)}`, images: [{ url: cardPath(race.id), width: 1200, height: 630 }] },
     twitter: { card: 'summary_large_image' },
   }
@@ -34,11 +34,11 @@ function presidentialBackgroundReady(): boolean {
 
 export default async function CandidatePage({ params }: { params: Promise<{ id: string }> }) {
   const { race, c } = await of(params)
-  const ticket = race.office === 'president'
+  const ticket = TICKET_OFFICES.includes(race.office)
   const ballot = aBallotFor(race.id)
   const url = `${SITE_URL}${candidatePath(c.id)}`
   const name = c.candidate.name || NOT_PROVIDED
-  const showBackground = ticket && presidentialBackgroundReady()
+  const showBackground = race.office === 'president' && presidentialBackgroundReady()
   const inec = source(c.provenance.source_id)
   return (
     <>
@@ -55,7 +55,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
       </p>
       <SourceLine id="inec-parties" what="Full party name" />
       <p>
-        Candidate in the 16 January 2027 election:
+        {race.election === 'feb-2027' ? 'Candidate in the 6 February 2027 election:' : 'Candidate in the 16 January 2027 election:'}
         {' '}
         <a href={`${ballot.path}#race-${race.id}`}>{raceTitle(race)}</a>
       </p>
@@ -74,8 +74,8 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
       {ticket && c.running_mate && (
         <section aria-labelledby="mate">
           <h2 id="mate">
-            Running mate:
-            {' '}
+            {mateLabel(race)}
+            {': '}
             {c.running_mate.name || NOT_PROVIDED}
           </h2>
           <p className="position">{c.running_mate.position}</p>

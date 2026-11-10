@@ -70,7 +70,7 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
     for s in pdfs:
         sid = s["source_id"]
         rows = res.rows_by_source.get(sid + "#all", res.rows_by_source[sid])
-        if s.get("use_states"):
+        if s.get("use_states") or s.get("sn_per_state"):
             # consolidated file: serial numbers restart in each state
             by_state = defaultdict(list)
             for r in rows:
@@ -231,6 +231,49 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
     c.check(len(ed["elections"]) == 2 and all(s.get("quotes") for s in ed["steps"]),
             "every election-day statement rests on a quote found on INEC's fetched page (build fails otherwise)",
             f"{len(ed['steps'])} steps, {len(ed['elections'])} election dates")
+
+    c.note("\n## 6 February races (Phase 5)")
+    import hashlib as _hashlib
+
+    from .states import STATE_NAMES as _STATES
+
+    jan_digest = _hashlib.sha256((GENERATED_DIR / "races" / "jan-2027.json").read_bytes()).hexdigest()
+    c.check(jan_digest == reg["jan_2027_sha256"], "the 16 January data is unchanged (SHA-256 pinned in sources.yaml)", jan_digest[:16])
+    gov = [r for r in races if r.office == "governor"]
+    off = set(reg["off_cycle_governorship"])
+    c.check({r.state for r in gov} == _STATES - off - {"FCT"} and len(gov) == 28,
+            "28 governorship races: every state except the 8 off-cycle states and the FCT", f"{len(gov)}")
+    c.check(all(cd.running_mate is not None and (cd.running_mate.name or not cd.candidate.name) for r in gov for cd in r.candidates),
+            "every governorship ticket has exactly one deputy")
+    sha = [r for r in races if r.office == "state_assembly"]
+    sha_states = {r.state for r in sha}
+    c.check(sha_states == _STATES - {"FCT", "BORNO"}, "State Assembly races in 35 states (no FCT assembly; Borno absent from INEC's list, OI-11)",
+            f"{len(sha_states)} states: missing {sorted(_STATES - {'FCT'} - sha_states)}")
+    c.note(f"State Assembly constituencies on INEC's 2027 list: **{len(sha)}** (INEC's figure: 993; Borno's are not on the list; OI-5, OI-11).")
+    if res.sha_report:
+        wb = res.sha_report["workbook_per_state"]
+        c.check(sum(wb.values()) == 990, "every row of INEC's constituency workbook (STATE CONST.) is read", f"{sum(wb.values())} of 990")
+        on_list = Counter(r.state for r in sha)
+        diff = {s: on_list.get(s, 0) - wb.get(s, 0) for s in sorted(set(wb) | set(on_list)) if on_list.get(s, 0) != wb.get(s, 0)}
+        c.check(diff == reg["sha_count_vs_workbook"],
+                "OI-5 reconciled: each state's count on INEC's 2027 list differs from INEC's workbook only as recorded in sources.yaml",
+                ", ".join(f"{s} {d:+d}" for s, d in diff.items()))
+    sha_wards = [w for sg in res.geo.values() if sg.name in sha_states for l in sg.lgas for w in l.wards]
+    seen = {x for w in sha_wards for x in w.state_constituency}
+    c.check(all(w.state_constituency for w in sha_wards), "every ward in those 35 states reaches at least one State Assembly race",
+            str(sum(1 for w in sha_wards if not w.state_constituency)))
+    c.check(seen == {r.id for r in sha}, "every State Assembly race has at least one ward", str(len({r.id for r in sha} - seen)))
+    unres = [w for w in sha_wards if w.sc_mapping == "unresolved"]
+    c.check(all(w.sc_open_item == "OI-6" for w in unres), "every ward with several possible State Assembly races is tied to OI-6")
+    pus_unres = sum(len(w.polling_units) for w in unres)
+    pus_all = sum(len(w.polling_units) for w in sha_wards)
+    c.note(f"Wards with exactly one State Assembly race: {len(sha_wards) - len(unres):,}; with several (OI-6, every possible race shown): "
+           f"{len(unres):,} wards, {pus_unres:,} polling units ({pus_unres / pus_all:.1%}).")
+    if res.sha_report:
+        c.note(f"Workbook ward counts that differ from INEC's locator ({len(res.sha_report['count_anomalies'])}, reported only): "
+               + "; ".join(res.sha_report["count_anomalies"][:12]) + (" …" if len(res.sha_report["count_anomalies"]) > 12 else ""))
+        followed = [n for n in res.sha_report["notes"] if "The 2027 list is followed" in n]
+        c.note(f"Where INEC's 2027 list contradicted a workbook reading, the 2027 list was followed ({len(followed)}): " + " ".join(followed))
 
     c.note("\n## Provenance")
     ok = all(cd.provenance.source_id in by_id for cd in cands) and all(s in by_id for r in races for s in r.sources)

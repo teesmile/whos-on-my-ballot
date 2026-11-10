@@ -18,6 +18,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/01/001",
@@ -92,6 +98,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/02/001",
@@ -178,6 +190,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/03/001",
@@ -260,6 +278,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/04/001",
@@ -426,6 +450,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/05/001",
@@ -512,6 +542,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/06/001",
@@ -578,6 +614,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/07/001",
@@ -680,6 +722,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/08/001",
@@ -782,6 +830,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/09/001",
@@ -1016,6 +1070,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/10/001",
@@ -1170,6 +1230,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/11/001",
@@ -1344,6 +1410,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/12/001",
@@ -1426,6 +1498,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ado-i",
+      "feb-2027-sha-ekiti-ado-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/01/13/001",
@@ -1582,6 +1660,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/01/001",
@@ -1624,6 +1707,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/02/001",
@@ -1670,6 +1758,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/03/001",
@@ -1724,6 +1817,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/04/001",
@@ -1802,6 +1900,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/05/001",
@@ -1888,6 +1991,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/06/001",
@@ -1954,6 +2062,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/07/001",
@@ -2008,6 +2121,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/08/001",
@@ -2070,6 +2188,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/09/001",
@@ -2120,6 +2243,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-efon"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/02/10/001",
@@ -2204,6 +2332,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/01/001",
@@ -2258,6 +2392,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/02/001",
@@ -2312,6 +2452,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/03/001",
@@ -2354,6 +2500,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/04/001",
@@ -2404,6 +2556,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/05/001",
@@ -2442,6 +2600,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/06/001",
@@ -2488,6 +2652,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/07/001",
@@ -2530,6 +2700,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/08/001",
@@ -2576,6 +2752,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/09/001",
@@ -2638,6 +2820,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/10/001",
@@ -2696,6 +2884,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/11/001",
@@ -2758,6 +2952,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-east-i",
+      "feb-2027-sha-ekiti-ekiti-east-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/03/12/001",
@@ -2826,6 +3026,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/01/001",
@@ -2932,6 +3138,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/02/001",
@@ -3062,6 +3274,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/03/001",
@@ -3180,6 +3398,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/04/001",
@@ -3258,6 +3482,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/05/001",
@@ -3296,6 +3526,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/06/001",
@@ -3346,6 +3582,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/07/001",
@@ -3412,6 +3654,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/08/001",
@@ -3506,6 +3754,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/09/001",
@@ -3592,6 +3846,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/10/001",
@@ -3654,6 +3914,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-west-i",
+      "feb-2027-sha-ekiti-ekiti-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/04/11/001",
@@ -3722,6 +3988,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/01/001",
@@ -3784,6 +4056,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/02/001",
@@ -3858,6 +4136,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/03/001",
@@ -3916,6 +4200,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/04/001",
@@ -3990,6 +4280,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/05/001",
@@ -4052,6 +4348,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/06/001",
@@ -4118,6 +4420,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/07/001",
@@ -4176,6 +4484,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/08/001",
@@ -4298,6 +4612,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/09/001",
@@ -4440,6 +4760,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/10/001",
@@ -4550,6 +4876,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ekiti-south-west-i",
+      "feb-2027-sha-ekiti-ekiti-south-west-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/05/11/001",
@@ -4634,6 +4966,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/01/001",
@@ -4680,6 +5017,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/02/001",
@@ -4714,6 +5056,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/03/001",
@@ -4768,6 +5115,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/04/001",
@@ -4818,6 +5170,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/05/001",
@@ -4872,6 +5229,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/06/001",
@@ -4930,6 +5292,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/07/001",
@@ -4984,6 +5351,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/08/001",
@@ -5030,6 +5402,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/09/001",
@@ -5104,6 +5481,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-emure"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/06/10/001",
@@ -5156,6 +5538,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/01/001",
@@ -5230,6 +5617,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/02/001",
@@ -5280,6 +5672,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/03/001",
@@ -5330,6 +5727,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/04/001",
@@ -5380,6 +5782,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/05/001",
@@ -5446,6 +5853,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/06/001",
@@ -5520,6 +5932,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/07/001",
@@ -5570,6 +5987,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/08/001",
@@ -5620,6 +6042,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/09/001",
@@ -5682,6 +6109,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-gbonyin"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/07/10/001",
@@ -5762,6 +6194,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/01/001",
@@ -5856,6 +6294,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/02/001",
@@ -5922,6 +6366,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/03/001",
@@ -5968,6 +6418,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/04/001",
@@ -6034,6 +6490,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/05/001",
@@ -6116,6 +6578,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/06/001",
@@ -6194,6 +6662,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/07/001",
@@ -6256,6 +6730,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/08/001",
@@ -6346,6 +6826,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/09/001",
@@ -6392,6 +6878,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/10/001",
@@ -6438,6 +6930,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ido-osi-i",
+      "feb-2027-sha-ekiti-ido-osi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/08/11/001",
@@ -6498,6 +6996,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/01/001",
@@ -6552,6 +7055,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/02/001",
@@ -6610,6 +7118,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/03/001",
@@ -6652,6 +7165,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/04/001",
@@ -6702,6 +7220,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/05/001",
@@ -6748,6 +7271,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/06/001",
@@ -6810,6 +7338,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/07/001",
@@ -6876,6 +7409,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/08/001",
@@ -6934,6 +7472,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/09/001",
@@ -7020,6 +7563,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/10/001",
@@ -7110,6 +7658,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/11/001",
@@ -7188,6 +7741,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ijero"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/09/12/001",
@@ -7252,6 +7810,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/01/001",
@@ -7318,6 +7882,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/02/001",
@@ -7388,6 +7958,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/03/001",
@@ -7434,6 +8010,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/04/001",
@@ -7496,6 +8078,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/05/001",
@@ -7546,6 +8134,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/06/001",
@@ -7600,6 +8194,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/07/001",
@@ -7642,6 +8242,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/08/001",
@@ -7696,6 +8302,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/09/001",
@@ -7770,6 +8382,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/10/001",
@@ -7852,6 +8470,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikere-i",
+      "feb-2027-sha-ekiti-ikere-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/10/11/001",
@@ -7912,6 +8536,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/01/001",
@@ -7974,6 +8604,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/02/001",
@@ -8040,6 +8676,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/03/001",
@@ -8110,6 +8752,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/04/001",
@@ -8224,6 +8872,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/05/001",
@@ -8306,6 +8960,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/06/001",
@@ -8380,6 +9040,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/07/001",
@@ -8478,6 +9144,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/08/001",
@@ -8564,6 +9236,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/09/001",
@@ -8626,6 +9304,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/10/001",
@@ -8712,6 +9396,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/11/001",
@@ -8790,6 +9480,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ikole-i",
+      "feb-2027-sha-ekiti-ikole-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/11/12/001",
@@ -8842,6 +9538,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/01/001",
@@ -8900,6 +9601,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/02/001",
@@ -8942,6 +9648,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/03/001",
@@ -8988,6 +9699,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/04/001",
@@ -9046,6 +9762,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/05/001",
@@ -9096,6 +9817,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/06/001",
@@ -9138,6 +9864,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/07/001",
@@ -9188,6 +9919,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/08/001",
@@ -9238,6 +9974,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/09/001",
@@ -9292,6 +10033,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ilejemeje"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/12/10/001",
@@ -9352,6 +10098,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/01/001",
@@ -9398,6 +10150,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/02/001",
@@ -9452,6 +10210,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/03/001",
@@ -9514,6 +10278,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/04/001",
@@ -9612,6 +10382,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/05/001",
@@ -9686,6 +10462,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/06/001",
@@ -9760,6 +10542,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/07/001",
@@ -9818,6 +10606,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/08/001",
@@ -9896,6 +10690,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/09/001",
@@ -9998,6 +10798,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/10/001",
@@ -10104,6 +10910,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-irepodun-ifelodun-i",
+      "feb-2027-sha-ekiti-irepodun-ifelodun-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/13/11/001",
@@ -10208,6 +11020,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/01/001",
@@ -10274,6 +11091,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/02/001",
@@ -10328,6 +11150,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/03/001",
@@ -10398,6 +11225,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/04/001",
@@ -10456,6 +11288,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/05/001",
@@ -10506,6 +11343,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/06/001",
@@ -10568,6 +11410,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/07/001",
@@ -10630,6 +11477,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/08/001",
@@ -10688,6 +11540,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/09/001",
@@ -10742,6 +11599,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-ise-orun"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "13/14/10/001",
@@ -10810,6 +11672,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/01/001",
@@ -10868,6 +11736,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/02/001",
@@ -10922,6 +11796,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/03/001",
@@ -10972,6 +11852,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/04/001",
@@ -11022,6 +11908,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/05/001",
@@ -11108,6 +12000,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/06/001",
@@ -11166,6 +12064,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/07/001",
@@ -11220,6 +12124,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/08/001",
@@ -11262,6 +12172,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/09/001",
@@ -11308,6 +12224,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/10/001",
@@ -11378,6 +12300,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-moba-i",
+      "feb-2027-sha-ekiti-moba-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/15/11/001",
@@ -11434,6 +12362,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/01/001",
@@ -11524,6 +12458,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/02/001",
@@ -11614,6 +12554,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/03/001",
@@ -11700,6 +12646,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/04/001",
@@ -11774,6 +12726,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/05/001",
@@ -11868,6 +12826,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/06/001",
@@ -11922,6 +12886,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/07/001",
@@ -11996,6 +12966,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/08/001",
@@ -12086,6 +13062,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/09/001",
@@ -12160,6 +13142,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/10/001",
@@ -12242,6 +13230,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/11/001",
@@ -12304,6 +13298,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-ekiti-oye-i",
+      "feb-2027-sha-ekiti-oye-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "13/16/12/001",

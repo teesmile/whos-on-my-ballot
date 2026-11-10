@@ -66,7 +66,7 @@ button { background: var(--fg); color: var(--bg); border-color: var(--fg); font-
 .result, .pu-confirmed, .note { background: var(--panel); border-left: 4px solid var(--muted); padding: 0.75rem 1rem; margin: 0.75rem 0; }
 .result ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
 .result li + li { border-top: 1px solid var(--line); }
-.result a { display: block; padding: 0.6rem 0; min-height: 44px; }
+.result a, .pu-confirmed > a { display: block; padding: 0.6rem 0; min-height: 44px; }
 
 .toc ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
 .toc li { border-bottom: 1px solid var(--line); }
@@ -118,3 +118,4 @@ main p > a { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
 .countdown p { margin: 0.3rem 0; }
 .steps { padding-left: 1.4rem; }
 .steps li { margin: 0.5rem 0; }
+.entry-note { color: var(--muted); font-size: 0.9rem; margin: 0.15rem 0 0; }

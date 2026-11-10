@@ -8,7 +8,12 @@ export default function Home() {
         Your ballot depends on the polling unit where you are registered. Find it and see every race and every candidate on your ballot for
         {' '}
         <strong>16 January 2027</strong>
-        : President, Senate and House of Representatives.
+        {' '}
+        (President, Senate and House of Representatives) and
+        {' '}
+        <strong>6 February 2027</strong>
+        {' '}
+        (Governor and State House of Assembly).
       </p>
       <p>We never ask for your name or any personal details, and we don’t look you up anywhere.</p>
 

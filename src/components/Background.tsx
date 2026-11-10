@@ -36,6 +36,7 @@ function Entries({ title, list, level }: { title: string, list: B['public_office
               {list.map(e => (
                 <li key={e.text}>
                   <p className="entry">{e.text}</p>
+                  {e.note && <p className="entry-note">{e.note}</p>}
                   {e.citations.map(c => <Cite key={c.url} c={c} />)}
                 </li>
               ))}

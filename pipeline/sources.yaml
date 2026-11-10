@@ -22,6 +22,13 @@ press_pages:
     title: "INEC: Updated list of candidates for Jan 2027 National Assembly elections (31 Oct 2026)"
     expect_documents: 36   # Niger is missing from INEC's 31 Oct set (OI-1); see fallbacks
 
+  - id: governorship
+    race: governor
+    election: feb-2027
+    url: https://www.inecnigeria.org/press/updated-final-list-of-candidates-for-2027-governorship-election
+    title: "INEC: Updated final list of candidates for 2027 Governorship election (31 Oct 2026)"
+    expect_documents: 28   # 36 states less the 8 off-cycle states; the FCT has no governor
+
 index_page: https://www.inecnigeria.org/elections/2027-general-elections-update
 
 documents:
@@ -32,6 +39,14 @@ documents:
     url: "https://www.inecnigeria.org/documents/press/2027%20REPS%20FINAL%20LIST%20OF%20CANDIDATES.pdf"
     title: "INEC: Final list of candidates, House of Representatives (12 Sep 2026)"
     use_states: [NIGER]
+    sn_per_state: true
+  - id: sha-2026-10-10
+    race: state_assembly
+    election: feb-2027
+    url: "https://www.inecnigeria.org/documents/2027%20FINAL%20LIST%20-%20STATE%20HOUSES%20OF%20ASSEMBLY%20(1).pdf"
+    page_url: https://www.inecnigeria.org/press/final-list-of-candidates-for-2027-state-houses-of-assembly-elections
+    title: "INEC: Final list of candidates for 2027 State Houses of Assembly elections (statutory notice, 31 Oct 2026)"
+    sn_per_state: true   # serial numbers restart in each state
   - id: inec-constituencies-workbook
     kind: workbook
     url: "https://web.archive.org/web/20260815145133id_/https://inecnigeria.org/wp-content/uploads/2019/02/Name-of-Senatorial-DistrictsFederal-and-State-Constituencies-Nationwide-1.xls"
@@ -64,3 +79,20 @@ polling_units:
     wards: 8838        # after dropping the empty duplicate of Gwer East ward 09
     pus: 177299
     crawled: 2026-11-09
+
+# Phase 5 must not change the 16 January data: races/jan-2027.json must keep this SHA-256 (as merged to main after Phase 4).
+# Update it only deliberately, when INEC changes the 16 January lists.
+jan_2027_sha256: daa675102f95c051f0534659974092db3ba55cd0249fdd1f153a6fc57b3789ee   # updated once in Phase 5 for the owner-approved Onor spelling note (D-029)
+
+# The eight states whose governorship elections are off-cycle (and the FCT, which has no governor): no 6 February race.
+off_cycle_governorship: [ANAMBRA, BAYELSA, EDO, EKITI, IMO, KOGI, ONDO, OSUN]
+
+# OI-5: each state's count of State Assembly constituencies on INEC's 2027 list minus the count in INEC's constituency workbook.
+# The 2027 list names constituencies the workbook does not have (for example DELTA "ANIOCHA NORTH II", KOGI "YAGBA WEST II"),
+# and has no Borno list (OI-11). Any other difference fails verify.
+sha_count_vs_workbook:
+  BENUE: 8
+  BORNO: -28
+  DELTA: 9
+  JIGAWA: 1
+  KOGI: 11

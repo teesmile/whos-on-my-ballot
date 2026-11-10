@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   poweredByHeader: false,
+  // Each static-generation worker loads every state's geography; BUILD_CPUS lowers the worker count on a machine short of memory.
+  ...(process.env.BUILD_CPUS ? { experimental: { cpus: Number(process.env.BUILD_CPUS) } } : {}),
 }
 
 export default nextConfig

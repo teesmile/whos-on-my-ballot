@@ -7,10 +7,22 @@ const WORKBOOK = 'inec-constituencies-workbook'
 export const INEC_LOCATOR = 'https://cvr.inecnigeria.org/pu'
 export const INEC_2027 = 'https://www.inecnigeria.org/elections/2027-general-elections-update'
 
+const OFFICE_TITLE: Record<Race['office'], string> = {
+  president: 'President',
+  senate: 'Senate',
+  house: 'House of Representatives',
+  governor: 'Governor',
+  state_assembly: 'State House of Assembly',
+}
+
 export function raceTitle(r: Race): string {
   if (r.office === 'president') return 'President'
-  return `${r.office === 'senate' ? 'Senate' : 'House of Representatives'}: ${r.name}`
+  return `${OFFICE_TITLE[r.office]}: ${r.name}`
 }
+
+/** Races run on a ticket, and what INEC calls the second person on it. */
+export const TICKET_OFFICES: Race['office'][] = ['president', 'governor']
+export const mateLabel = (r: Race) => (r.office === 'governor' ? 'Deputy governor' : 'Running mate')
 
 function SourcesNote({ r }: { r: Race }) {
   const fallback = r.sources.includes('house-2026-09-12-consolidated')
@@ -67,7 +79,7 @@ export function RaceSection({ r, level = 2 }: { r: Race, level?: 2 | 3 }) {
       <PlacementNotes r={r} />
       <ul className="candidates" aria-label={`Candidates: ${raceTitle(r)}`}>
         {r.candidates.map(c => (
-          <Candidate key={c.id} c={c} src={source(c.provenance.source_id)} ticket={r.office === 'president'} level={level === 2 ? 3 : 4} />
+          <Candidate key={c.id} c={c} src={source(c.provenance.source_id)} ticket={TICKET_OFFICES.includes(r.office)} mateLabel={mateLabel(r)} level={level === 2 ? 3 : 4} />
         ))}
       </ul>
     </section>
@@ -75,10 +87,10 @@ export function RaceSection({ r, level = 2 }: { r: Race, level?: 2 | 3 }) {
 }
 
 /** Several races where INEC hasn't published which one applies to the voter's polling unit (owner ruling D-021). */
-export function UnresolvedGroup({ office, list }: { office: 'Senate' | 'House of Representatives', list: Race[] }) {
+export function UnresolvedGroup({ office, list }: { office: 'Senate' | 'House of Representatives' | 'State House of Assembly', list: Race[] }) {
   return (
-    <section className="race-group unresolved" aria-labelledby={`group-${office}`}>
-      <h2 id={`group-${office}`}>
+    <section className="race-group unresolved" aria-labelledby={`group-${slugId(office)}`}>
+      <h2 id={`group-${slugId(office)}`}>
         {office}
         : one of these is on your ballot
       </h2>
@@ -99,4 +111,8 @@ export function UnresolvedGroup({ office, list }: { office: 'Senate' | 'House of
       {list.map(r => <RaceSection key={r.id} r={r} level={3} />)}
     </section>
   )
+}
+
+function slugId(text: string) {
+  return text.toLowerCase().replace(/[^a-z]+/g, '-')
 }

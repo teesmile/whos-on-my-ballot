@@ -10,6 +10,36 @@
   ]
  },
  {
+  "source_id": "sha-2026-10-10",
+  "page": 145,
+  "sn": 341,
+  "party": "PDP",
+  "name": "IORTYOM BEMGBA",
+  "anomalies": [
+   "age printed as '957'"
+  ]
+ },
+ {
+  "source_id": "sha-2026-10-10",
+  "page": 184,
+  "sn": 300,
+  "party": "PDP",
+  "name": "EGAN BENJAMIN",
+  "anomalies": [
+   "age printed as '955'"
+  ]
+ },
+ {
+  "source_id": "sha-2026-10-10",
+  "page": 425,
+  "sn": 33,
+  "party": "ADP",
+  "name": "FAPOHUNDA OLANREWAJU",
+  "anomalies": [
+   "age printed as '156'"
+  ]
+ },
+ {
   "source_id": "inec-pu-locator",
   "ward": "07/07/09",
   "name": "MBAIKYAAN",

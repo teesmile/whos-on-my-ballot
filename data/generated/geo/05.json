@@ -18,6 +18,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/01/001",
@@ -232,6 +238,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/02/001",
@@ -342,6 +354,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/03/001",
@@ -416,6 +434,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/04/001",
@@ -550,6 +574,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/05/001",
@@ -612,6 +642,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/06/001",
@@ -734,6 +770,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/07/001",
@@ -848,6 +890,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/08/001",
@@ -1014,6 +1062,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/09/001",
@@ -1120,6 +1174,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/10/001",
@@ -1210,6 +1270,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii",
+      "feb-2027-sha-bauchi-pali-alkaleri-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/01/11/001",
@@ -1378,6 +1444,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/02/01/001",
@@ -1612,6 +1684,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/02/02/001",
@@ -1906,6 +1983,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/02/03/001",
@@ -2608,6 +2690,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/02/04/001",
@@ -2818,6 +2905,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/02/05/001",
@@ -2960,6 +3052,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/02/06/001",
@@ -3174,6 +3271,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/02/07/001",
@@ -3692,6 +3794,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/02/08/001",
@@ -3790,6 +3897,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/02/09/001",
@@ -4088,6 +4201,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/02/10/001",
@@ -4250,6 +4369,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i",
+      "feb-2027-sha-bauchi-zungur-galambi-bauchi-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/02/11/001",
@@ -4880,6 +5005,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bauchi-bauchi-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/02/12/001",
@@ -5128,6 +5258,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/01/001",
@@ -5194,6 +5329,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/02/001",
@@ -5236,6 +5376,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/03/001",
@@ -5318,6 +5463,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/04/001",
@@ -5412,6 +5562,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/05/001",
@@ -5462,6 +5617,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/06/001",
@@ -5528,6 +5688,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/07/001",
@@ -5578,6 +5743,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/08/001",
@@ -5632,6 +5802,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/09/001",
@@ -5694,6 +5869,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-bogoro"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/03/10/001",
@@ -5750,6 +5930,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/01/001",
@@ -5820,6 +6005,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/02/001",
@@ -5910,6 +6100,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/03/001",
@@ -6064,6 +6259,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/04/001",
@@ -6150,6 +6350,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/05/001",
@@ -6224,6 +6429,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/06/001",
@@ -6310,6 +6520,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/07/001",
@@ -6360,6 +6575,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/08/001",
@@ -6422,6 +6642,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/09/001",
@@ -6488,6 +6713,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dambam-dagauda-jalam"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/04/10/001",
@@ -6548,6 +6778,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/05/01/001",
@@ -6794,6 +7029,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/05/02/001",
@@ -6920,6 +7160,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/05/03/001",
@@ -7018,6 +7263,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/05/04/001",
@@ -7100,6 +7351,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/05/05/001",
@@ -7198,6 +7455,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/05/06/001",
@@ -7328,6 +7591,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/05/07/001",
@@ -7430,6 +7699,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i",
+      "feb-2027-sha-bauchi-sade-darazo-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/05/08/001",
@@ -7496,6 +7771,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/05/09/001",
@@ -7586,6 +7866,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/05/10/001",
@@ -7652,6 +7937,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-darazo-darazo-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/05/11/001",
@@ -7788,6 +8078,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/01/001",
@@ -7826,6 +8121,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/02/001",
@@ -7892,6 +8192,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/03/001",
@@ -8034,6 +8339,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/04/001",
@@ -8104,6 +8414,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/05/001",
@@ -8154,6 +8469,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/06/001",
@@ -8208,6 +8528,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/07/001",
@@ -8250,6 +8575,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/08/001",
@@ -8296,6 +8626,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/09/001",
@@ -8342,6 +8677,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-dass"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/06/10/001",
@@ -8398,6 +8738,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/07/01/001",
@@ -8588,6 +8934,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/07/02/001",
@@ -8650,6 +9002,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/07/03/001",
@@ -8768,6 +9126,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii",
+      "feb-2027-sha-bauchi-udubo-gamawa-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/07/04/001",
@@ -8882,6 +9246,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/07/05/001",
@@ -9008,6 +9377,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/07/06/001",
@@ -9098,6 +9472,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/07/07/001",
@@ -9344,6 +9723,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/07/08/001",
@@ -9410,6 +9794,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/07/09/001",
@@ -9548,6 +9937,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/07/10/001",
@@ -9642,6 +10036,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-gamawa-gamawa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/07/11/001",
@@ -9714,6 +10113,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/01/001",
@@ -9872,6 +10277,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/02/001",
@@ -9970,6 +10381,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/03/001",
@@ -10108,6 +10525,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/04/001",
@@ -10242,6 +10665,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/05/001",
@@ -10324,6 +10753,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/06/001",
@@ -10398,6 +10833,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/07/001",
@@ -10484,6 +10925,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/08/001",
@@ -10630,6 +11077,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/09/001",
@@ -10720,6 +11173,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/10/001",
@@ -10794,6 +11253,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-ganjuwa-east",
+      "feb-2027-sha-bauchi-ganjuwa-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/08/11/001",
@@ -10886,6 +11351,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/01/001",
@@ -10992,6 +11462,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/02/001",
@@ -11066,6 +11541,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/03/001",
@@ -11136,6 +11616,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/04/001",
@@ -11182,6 +11667,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/05/001",
@@ -11300,6 +11790,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/06/001",
@@ -11382,6 +11877,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/07/001",
@@ -11428,6 +11928,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/08/001",
@@ -11474,6 +11979,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/09/001",
@@ -11536,6 +12046,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-giade"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/09/10/001",
@@ -11612,6 +12127,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/01/001",
@@ -11778,6 +12298,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/02/001",
@@ -11892,6 +12417,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/03/001",
@@ -11966,6 +12496,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/04/001",
@@ -12044,6 +12579,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/05/001",
@@ -12126,6 +12666,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/06/001",
@@ -12228,6 +12773,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/07/001",
@@ -12298,6 +12848,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/08/001",
@@ -12432,6 +12987,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/09/001",
@@ -12526,6 +13086,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-itas-gadau"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/10/10/001",
@@ -12698,6 +13263,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/01/001",
@@ -12768,6 +13338,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/02/001",
@@ -12854,6 +13429,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/03/001",
@@ -12912,6 +13492,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/04/001",
@@ -13002,6 +13587,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/05/001",
@@ -13048,6 +13638,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/06/001",
@@ -13098,6 +13693,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/07/001",
@@ -13144,6 +13744,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/08/001",
@@ -13238,6 +13843,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/09/001",
@@ -13308,6 +13918,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-are"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/11/10/001",
@@ -13376,6 +13991,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/01/001",
@@ -13590,6 +14211,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/02/001",
@@ -13964,6 +14591,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/03/001",
@@ -14150,6 +14783,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/04/001",
@@ -14236,6 +14875,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/05/001",
@@ -14322,6 +14967,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/06/001",
@@ -14436,6 +15087,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/07/001",
@@ -14570,6 +15227,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/08/001",
@@ -14668,6 +15331,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/09/001",
@@ -14794,6 +15463,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/10/001",
@@ -14880,6 +15555,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-katagum-katagum-i",
+      "feb-2027-sha-bauchi-madara-chinade-katagum-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/12/11/001",
@@ -14992,6 +15673,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/01/001",
@@ -15078,6 +15764,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/02/001",
@@ -15200,6 +15891,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/03/001",
@@ -15266,6 +15962,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/04/001",
@@ -15316,6 +16017,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/05/001",
@@ -15382,6 +16088,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/06/001",
@@ -15452,6 +16163,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/07/001",
@@ -15550,6 +16266,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/08/001",
@@ -15616,6 +16337,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/09/001",
@@ -15658,6 +16384,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-kirfi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/13/10/001",
@@ -15754,6 +16485,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/01/001",
@@ -15880,6 +16617,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/02/001",
@@ -15962,6 +16705,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/03/001",
@@ -16052,6 +16801,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/04/001",
@@ -16342,6 +17097,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/05/001",
@@ -16472,6 +17233,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/06/001",
@@ -16554,6 +17321,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/07/001",
@@ -16656,6 +17429,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/08/001",
@@ -16790,6 +17569,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/09/001",
@@ -16840,6 +17625,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-chiroma-misau-i",
+      "feb-2027-sha-bauchi-hardawa-misau-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/14/10/001",
@@ -16924,6 +17715,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/01/001",
@@ -17186,6 +17983,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/02/001",
@@ -17292,6 +18095,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/03/001",
@@ -17450,6 +18259,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/04/001",
@@ -17556,6 +18371,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/05/001",
@@ -17710,6 +18531,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/06/001",
@@ -17868,6 +18695,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/07/001",
@@ -17986,6 +18819,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/08/001",
@@ -18136,6 +18975,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/09/001",
@@ -18254,6 +19099,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/10/001",
@@ -18416,6 +19267,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-burra-ningi-ii",
+      "feb-2027-sha-bauchi-ningi-ningi-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/15/11/001",
@@ -18568,6 +19425,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/01/001",
@@ -18646,6 +19509,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/02/001",
@@ -18720,6 +19589,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/03/001",
@@ -18862,6 +19737,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/04/001",
@@ -18972,6 +19853,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/05/001",
@@ -19082,6 +19969,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/06/001",
@@ -19192,6 +20085,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/07/001",
@@ -19278,6 +20177,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/08/001",
@@ -19476,6 +20381,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/09/001",
@@ -19566,6 +20477,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/10/001",
@@ -19640,6 +20557,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-shira-i-disina",
+      "feb-2027-sha-bauchi-shira-ii-shira"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/16/11/001",
@@ -19724,6 +20647,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/01/001",
@@ -19810,6 +20738,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/02/001",
@@ -19900,6 +20833,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/03/001",
@@ -20002,6 +20940,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/04/001",
@@ -20084,6 +21027,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/05/001",
@@ -20186,6 +21134,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/06/001",
@@ -20428,6 +21381,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/07/001",
@@ -20522,6 +21480,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/08/001",
@@ -20620,6 +21583,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/09/001",
@@ -20702,6 +21670,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/10/001",
@@ -20824,6 +21797,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-lere-bula-tafawa-balewa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/17/11/001",
@@ -21028,6 +22006,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/18/01/001",
@@ -21326,6 +22310,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/18/02/001",
@@ -21536,6 +22525,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/18/03/001",
@@ -21702,6 +22697,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/18/04/001",
@@ -21868,6 +22869,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/18/05/001",
@@ -21982,6 +22989,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/18/06/001",
@@ -22204,6 +23217,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii",
+      "feb-2027-sha-bauchi-lame-toro-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/18/07/001",
@@ -22290,6 +23309,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/18/08/001",
@@ -22456,6 +23480,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/18/09/001",
@@ -22614,6 +23643,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/18/10/001",
@@ -22760,6 +23794,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-jama-a-toro-toro-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/18/11/001",
@@ -22880,6 +23919,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/01/001",
@@ -22958,6 +24002,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/02/001",
@@ -23032,6 +24081,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/03/001",
@@ -23102,6 +24156,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/04/001",
@@ -23148,6 +24207,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/05/001",
@@ -23218,6 +24282,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/06/001",
@@ -23300,6 +24369,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/07/001",
@@ -23370,6 +24444,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/08/001",
@@ -23452,6 +24531,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/09/001",
@@ -23510,6 +24594,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-warji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "05/19/10/001",
@@ -23594,6 +24683,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/01/001",
@@ -23744,6 +24839,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/02/001",
@@ -23874,6 +24975,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/03/001",
@@ -24024,6 +25131,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/04/001",
@@ -24106,6 +25219,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/05/001",
@@ -24224,6 +25343,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/06/001",
@@ -24314,6 +25439,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/07/001",
@@ -24388,6 +25519,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/08/001",
@@ -24486,6 +25623,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/09/001",
@@ -24576,6 +25719,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/10/001",
@@ -24682,6 +25831,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bauchi-azare-zaki-ii",
+      "feb-2027-sha-bauchi-sakwa-zaki-i"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "05/20/11/001",

@@ -18,6 +18,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/01/001",
@@ -60,6 +65,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/02/001",
@@ -94,6 +104,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/03/001",
@@ -156,6 +171,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/04/001",
@@ -202,6 +222,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/05/001",
@@ -240,6 +265,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/06/001",
@@ -278,6 +308,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/07/001",
@@ -336,6 +371,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/08/001",
@@ -394,6 +434,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/09/001",
@@ -444,6 +489,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-binji"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/01/10/001",
@@ -504,6 +554,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/01/001",
@@ -610,6 +665,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/02/001",
@@ -660,6 +720,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/03/001",
@@ -766,6 +831,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/04/001",
@@ -868,6 +938,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/05/001",
@@ -934,6 +1009,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/06/001",
@@ -1008,6 +1088,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/07/001",
@@ -1090,6 +1175,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/08/001",
@@ -1180,6 +1270,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/09/001",
@@ -1262,6 +1357,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/10/001",
@@ -1316,6 +1416,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-bodinga-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/02/11/001",
@@ -1388,6 +1493,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/01/001",
@@ -1498,6 +1608,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/02/001",
@@ -1584,6 +1699,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/03/001",
@@ -1650,6 +1770,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/04/001",
@@ -1716,6 +1841,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/05/001",
@@ -1806,6 +1936,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/06/001",
@@ -1884,6 +2019,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/07/001",
@@ -1938,6 +2078,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/08/001",
@@ -2092,6 +2237,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/09/001",
@@ -2182,6 +2332,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/10/001",
@@ -2244,6 +2399,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-dange-shuni"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/03/11/001",
@@ -2324,6 +2484,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/01/001",
@@ -2486,6 +2651,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/02/001",
@@ -2572,6 +2742,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-west"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/03/001",
@@ -2690,6 +2865,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/04/001",
@@ -2788,6 +2968,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/05/001",
@@ -2866,6 +3051,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/06/001",
@@ -2936,6 +3126,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-west"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/07/001",
@@ -3042,6 +3237,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-west"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/08/001",
@@ -3196,6 +3396,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-west"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/09/001",
@@ -3298,6 +3503,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-west"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/10/001",
@@ -3388,6 +3598,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gada-west"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/04/11/001",
@@ -3440,6 +3655,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/01/001",
@@ -3602,6 +3822,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/02/001",
@@ -3644,6 +3869,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/03/001",
@@ -3686,6 +3916,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/04/001",
@@ -3740,6 +3975,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/05/001",
@@ -3822,6 +4062,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/06/001",
@@ -3868,6 +4113,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/07/001",
@@ -3978,6 +4228,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/08/001",
@@ -4088,6 +4343,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/09/001",
@@ -4174,6 +4434,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/10/001",
@@ -4232,6 +4497,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-goronyo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/05/11/001",
@@ -4288,6 +4558,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/01/001",
@@ -4330,6 +4605,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/02/001",
@@ -4380,6 +4660,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/03/001",
@@ -4446,6 +4731,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/04/001",
@@ -4484,6 +4774,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/05/001",
@@ -4562,6 +4857,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/06/001",
@@ -4644,6 +4944,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/07/001",
@@ -4678,6 +4983,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/08/001",
@@ -4716,6 +5026,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/09/001",
@@ -4754,6 +5069,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gudu"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/06/10/001",
@@ -4794,6 +5114,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/01/001",
@@ -4876,6 +5201,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/02/001",
@@ -4946,6 +5276,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/03/001",
@@ -5012,6 +5347,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/04/001",
@@ -5074,6 +5414,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/05/001",
@@ -5152,6 +5497,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/06/001",
@@ -5314,6 +5664,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/07/001",
@@ -5400,6 +5755,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/08/001",
@@ -5494,6 +5854,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/09/001",
@@ -5572,6 +5937,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/10/001",
@@ -5650,6 +6020,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-gwadabawa-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/07/11/001",
@@ -5698,6 +6073,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/01/001",
@@ -5932,6 +6312,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/02/001",
@@ -6002,6 +6387,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/03/001",
@@ -6072,6 +6462,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/04/001",
@@ -6162,6 +6557,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/05/001",
@@ -6224,6 +6624,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/06/001",
@@ -6358,6 +6763,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/07/001",
@@ -6436,6 +6846,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/08/001",
@@ -6490,6 +6905,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/09/001",
@@ -6568,6 +6988,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/10/001",
@@ -6634,6 +7059,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-illela"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/08/11/001",
@@ -6698,6 +7128,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/01/001",
@@ -6780,6 +7215,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/02/001",
@@ -6898,6 +7338,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/03/001",
@@ -6976,6 +7421,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/04/001",
@@ -7034,6 +7484,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/05/001",
@@ -7096,6 +7551,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/06/001",
@@ -7186,6 +7646,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/07/001",
@@ -7232,6 +7697,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/08/001",
@@ -7282,6 +7752,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/09/001",
@@ -7356,6 +7831,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-isa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/09/10/001",
@@ -7428,6 +7908,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/01/001",
@@ -7518,6 +8003,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/02/001",
@@ -7612,6 +8102,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/03/001",
@@ -7662,6 +8157,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/04/001",
@@ -7752,6 +8252,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/05/001",
@@ -7810,6 +8315,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/06/001",
@@ -7892,6 +8402,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/07/001",
@@ -7954,6 +8469,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/08/001",
@@ -8012,6 +8532,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/09/001",
@@ -8070,6 +8595,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/10/001",
@@ -8128,6 +8658,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kware"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/10/11/001",
@@ -8200,6 +8735,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/01/001",
@@ -8262,6 +8802,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/02/001",
@@ -8316,6 +8861,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/03/001",
@@ -8370,6 +8920,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/04/001",
@@ -8420,6 +8975,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/05/001",
@@ -8482,6 +9042,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/06/001",
@@ -8548,6 +9113,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/07/001",
@@ -8602,6 +9172,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/08/001",
@@ -8672,6 +9247,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/09/001",
@@ -8718,6 +9298,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-kebbe"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/11/10/001",
@@ -8798,6 +9383,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/01/001",
@@ -8888,6 +9478,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/02/001",
@@ -8942,6 +9537,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/03/001",
@@ -9012,6 +9612,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/04/001",
@@ -9062,6 +9667,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/05/001",
@@ -9120,6 +9730,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/06/001",
@@ -9206,6 +9821,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/07/001",
@@ -9256,6 +9876,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/08/001",
@@ -9302,6 +9927,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/09/001",
@@ -9368,6 +9998,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/10/001",
@@ -9410,6 +10045,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-rabah"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/12/11/001",
@@ -9462,6 +10102,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/01/001",
@@ -9564,6 +10209,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/02/001",
@@ -9726,6 +10376,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/03/001",
@@ -9812,6 +10467,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/04/001",
@@ -9910,6 +10570,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/05/001",
@@ -9996,6 +10661,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/06/001",
@@ -10102,6 +10772,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/07/001",
@@ -10208,6 +10883,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/08/001",
@@ -10282,6 +10962,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/09/001",
@@ -10356,6 +11041,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/10/001",
@@ -10458,6 +11148,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sabon-birni-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/13/11/001",
@@ -10550,6 +11245,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/01/001",
@@ -10608,6 +11308,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/02/001",
@@ -10662,6 +11367,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/03/001",
@@ -10768,6 +11478,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/04/001",
@@ -10822,6 +11537,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/05/001",
@@ -10880,6 +11600,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/06/001",
@@ -10966,6 +11691,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/07/001",
@@ -11068,6 +11798,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/08/001",
@@ -11146,6 +11881,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/09/001",
@@ -11220,6 +11960,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-shagari"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/14/10/001",
@@ -11288,6 +12033,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/01/001",
@@ -11354,6 +12104,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/02/001",
@@ -11404,6 +12159,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/03/001",
@@ -11462,6 +12222,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/04/001",
@@ -11520,6 +12285,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/05/001",
@@ -11562,6 +12332,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/06/001",
@@ -11608,6 +12383,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/07/001",
@@ -11662,6 +12442,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/08/001",
@@ -11716,6 +12501,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/09/001",
@@ -11758,6 +12548,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-silame"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/15/10/001",
@@ -11838,6 +12633,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/01/001",
@@ -11952,6 +12753,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/02/001",
@@ -12106,6 +12913,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/03/001",
@@ -12192,6 +13005,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/04/001",
@@ -12310,6 +13129,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/05/001",
@@ -12520,6 +13345,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/06/001",
@@ -12662,6 +13493,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/07/001",
@@ -12764,6 +13601,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/08/001",
@@ -12874,6 +13717,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/09/001",
@@ -12936,6 +13785,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/10/001",
@@ -12986,6 +13841,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-north-i",
+      "feb-2027-sha-sokoto-sokoto-north-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/16/11/001",
@@ -13154,6 +14015,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/01/001",
@@ -13268,6 +14135,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/02/001",
@@ -13430,6 +14303,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/03/001",
@@ -13612,6 +14491,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/04/001",
@@ -13782,6 +14667,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/05/001",
@@ -13860,6 +14751,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/06/001",
@@ -14014,6 +14911,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/07/001",
@@ -14120,6 +15023,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/08/001",
@@ -14242,6 +15151,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/09/001",
@@ -14392,6 +15307,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/10/001",
@@ -14558,6 +15479,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-sokoto-south-i",
+      "feb-2027-sha-sokoto-sokoto-south-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/17/11/001",
@@ -14678,6 +15605,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-west"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/18/01/001",
@@ -14748,6 +15680,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east",
+      "feb-2027-sha-sokoto-tambuwal-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/18/02/001",
@@ -14814,6 +15752,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-west"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/18/03/001",
@@ -14928,6 +15871,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east",
+      "feb-2027-sha-sokoto-tambuwal-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/18/04/001",
@@ -15042,6 +15991,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east",
+      "feb-2027-sha-sokoto-tambuwal-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/18/05/001",
@@ -15288,6 +16243,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east",
+      "feb-2027-sha-sokoto-tambuwal-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/18/06/001",
@@ -15358,6 +16319,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/18/07/001",
@@ -15524,6 +16490,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/18/08/001",
@@ -15598,6 +16569,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/18/09/001",
@@ -15676,6 +16652,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east",
+      "feb-2027-sha-sokoto-tambuwal-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/18/10/001",
@@ -15794,6 +16776,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tambuwal-east",
+      "feb-2027-sha-sokoto-tambuwal-west"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "33/18/11/001",
@@ -15874,6 +16862,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/01/001",
@@ -15988,6 +16981,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/02/001",
@@ -16070,6 +17068,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/03/001",
@@ -16116,6 +17119,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/04/001",
@@ -16162,6 +17170,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/05/001",
@@ -16236,6 +17249,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/06/001",
@@ -16294,6 +17312,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/07/001",
@@ -16352,6 +17375,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/08/001",
@@ -16402,6 +17430,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/09/001",
@@ -16480,6 +17513,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tangaza"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/19/10/001",
@@ -16576,6 +17614,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/01/001",
@@ -16622,6 +17665,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/02/001",
@@ -16664,6 +17712,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/03/001",
@@ -16714,6 +17767,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/04/001",
@@ -16748,6 +17806,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/05/001",
@@ -16790,6 +17853,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/06/001",
@@ -16848,6 +17916,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/07/001",
@@ -16922,6 +17995,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/08/001",
@@ -16952,6 +18030,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/09/001",
@@ -17010,6 +18093,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-tureta"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/20/10/001",
@@ -17050,6 +18138,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/01/001",
@@ -17364,6 +18457,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/02/001",
@@ -17486,6 +18584,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/03/001",
@@ -17568,6 +18671,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/04/001",
@@ -17666,6 +18774,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/05/001",
@@ -17740,6 +18853,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/06/001",
@@ -17818,6 +18936,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/07/001",
@@ -17876,6 +18999,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/08/001",
@@ -18006,6 +19134,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/09/001",
@@ -18104,6 +19237,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/10/001",
@@ -18174,6 +19312,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wamakko"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/21/11/001",
@@ -18246,6 +19389,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/01/001",
@@ -18336,6 +19484,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/02/001",
@@ -18378,6 +19531,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/03/001",
@@ -18428,6 +19586,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/04/001",
@@ -18474,6 +19637,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/05/001",
@@ -18540,6 +19708,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/06/001",
@@ -18626,6 +19799,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/07/001",
@@ -18668,6 +19846,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/08/001",
@@ -18734,6 +19917,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/09/001",
@@ -18808,6 +19996,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/10/001",
@@ -18874,6 +20067,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-wurno"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/22/11/001",
@@ -18934,6 +20132,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/01/001",
@@ -18996,6 +20199,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/02/001",
@@ -19054,6 +20262,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/03/001",
@@ -19100,6 +20313,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/04/001",
@@ -19158,6 +20376,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/05/001",
@@ -19224,6 +20447,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/06/001",
@@ -19310,6 +20538,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/07/001",
@@ -19388,6 +20621,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/08/001",
@@ -19438,6 +20676,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/09/001",
@@ -19476,6 +20719,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-sokoto-yabo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "33/23/10/001",

@@ -7,7 +7,7 @@ import 'server-only'
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { ballotPath, slug, type StateSearchData } from './core'
+import { ballotPath, febBallotPath, slug, type StateSearchData } from './core'
 
 const DIR = path.join(process.cwd(), 'data', 'generated')
 const read = <T,>(rel: string): T => JSON.parse(fs.readFileSync(path.join(DIR, rel), 'utf8')) as T
@@ -23,8 +23,8 @@ export interface BackgroundCitation {
 
 export interface Background {
   identity: BackgroundCitation | null
-  public_offices: { text: string, citations: BackgroundCitation[] }[]
-  party_history: { text: string, citations: BackgroundCitation[] }[]
+  public_offices: { text: string, citations: BackgroundCitation[], note?: string | null }[]
+  party_history: { text: string, citations: BackgroundCitation[], note?: string | null }[]
   researched: string
 }
 
@@ -70,7 +70,7 @@ export interface PlacementNote {
 export interface Race {
   id: string
   election: string
-  office: 'president' | 'senate' | 'house'
+  office: 'president' | 'senate' | 'house' | 'governor' | 'state_assembly'
   state: string | null
   name: string
   workbook_code: string | null
@@ -96,6 +96,9 @@ interface Ward {
   senatorial_district: string[]
   mapping: 'exact' | 'unresolved'
   open_item: string | null
+  state_constituency: string[]
+  sc_mapping: 'exact' | 'unresolved' | 'none'
+  sc_open_item: string | null
   polling_units: { code: string, name: string }[]
 }
 
@@ -105,6 +108,7 @@ export interface StateRef { code: string, name: string }
 
 let cache: {
   races: Race[]
+  febRaces: Race[]
   raceById: Map<string, Race>
   sources: Map<string, Source>
   states: StateRef[]
@@ -114,14 +118,19 @@ let cache: {
 function load() {
   if (cache) return cache
   const races = read<Race[]>('races/jan-2027.json')
+  const febRaces = read<Race[]>('races/feb-2027.json')
   const sources = new Map(read<Source[]>('sources.json').map(s => [s.source_id, s]))
   const states = read<StateRef[]>('geo/states.json')
   const geo = new Map(states.map(s => [s.code, read<StateGeo>(`geo/${s.code}.json`)]))
-  cache = { races, raceById: new Map(races.map(r => [r.id, r])), sources, states, geo }
+  cache = { races, febRaces, raceById: new Map([...races, ...febRaces].map(r => [r.id, r])), sources, states, geo }
   return cache
 }
 
+/** The 16 January races. */
 export const races = () => load().races
+/** The 6 February races (Governor, State House of Assembly). */
+export const febRaces = () => load().febRaces
+export const allRaces = () => [...load().races, ...load().febRaces]
 export const race = (id: string) => {
   const r = load().raceById.get(id)
   if (!r) throw new Error(`unknown race ${id}`)
@@ -139,20 +148,62 @@ export const stateGeo = (code: string) => {
   return g
 }
 export const candidate = (id: string) => {
-  for (const r of races()) {
+  for (const r of allRaces()) {
     const c = r.candidates.find(x => x.id === id)
     if (c) return { race: r, c }
   }
   throw new Error(`unknown candidate ${id}`)
 }
-export const allCandidates = () => races().flatMap(r => r.candidates.map(c => ({ race: r, c })))
+export const allCandidates = () => allRaces().flatMap(r => r.candidates.map(c => ({ race: r, c })))
 /** A ballot page that contains this race, for "see the full ballot" links: the first one in path order. */
-export const aBallotFor = (raceId: string) => ballots().filter(b => b.house.includes(raceId) || b.senate.includes(raceId) || raceId.includes('-president'))
-  .sort((a, b) => a.path.localeCompare(b.path))[0]
+export function aBallotFor(raceId: string): { path: string } {
+  if (raceId.startsWith('feb-2027-')) {
+    return febBallots().filter(b => b.sha.includes(raceId) || b.governor === raceId).sort((a, b) => a.path.localeCompare(b.path))[0]
+  }
+  return ballots().filter(b => b.house.includes(raceId) || b.senate.includes(raceId) || raceId.includes('-president'))
+    .sort((a, b) => a.path.localeCompare(b.path))[0]
+}
 export const presidentialRace = () => races().find(r => r.office === 'president')!
 
 export function wardBallotPath(state: StateGeo, ward: Ward): string {
   return ballotPath(state.name, ward.federal_constituency, ward.senatorial_district)
+}
+
+export function wardFebBallotPath(state: StateGeo, ward: Ward): string {
+  return febBallotPath(state.name, ward.state_constituency)
+}
+
+export interface FebBallotSpec {
+  state: StateGeo
+  path: string
+  stateSlug: string
+  key: string // '' for a state with no State Assembly race on the list (Borno) or no assembly (FCT)
+  governor: string | null
+  sha: string[]
+  unresolved: boolean
+}
+
+/** Every distinct 6 February ballot: one per combination of State Assembly races a ward resolves to (plus Borno, FCT). */
+let febMemo: FebBallotSpec[] | null = null
+export function febBallots(): FebBallotSpec[] {
+  if (febMemo) return febMemo
+  const governorOf = new Map(febRaces().filter(r => r.office === 'governor').map(r => [r.state, r.id]))
+  const out = new Map<string, FebBallotSpec>()
+  for (const st of load().geo.values()) {
+    for (const l of st.lgas) {
+      for (const w of l.wards) {
+        const p = wardFebBallotPath(st, w)
+        if (out.has(p)) continue
+        const parts = p.split('/')
+        out.set(p, {
+          state: st, path: p, stateSlug: parts[2], key: parts[3] ?? '', governor: governorOf.get(st.name) ?? null,
+          sha: [...w.state_constituency].sort(), unresolved: w.sc_mapping === 'unresolved',
+        })
+      }
+    }
+  }
+  febMemo = [...out.values()]
+  return febMemo
 }
 
 export interface BallotSpec {
@@ -166,7 +217,9 @@ export interface BallotSpec {
 }
 
 /** Every distinct ballot: one per combination of House and Senate races that some ward resolves to. */
+let janMemo: BallotSpec[] | null = null
 export function ballots(): BallotSpec[] {
+  if (janMemo) return janMemo
   const out = new Map<string, BallotSpec>()
   for (const st of load().geo.values()) {
     for (const l of st.lgas) {
@@ -181,7 +234,8 @@ export function ballots(): BallotSpec[] {
       }
     }
   }
-  return [...out.values()]
+  janMemo = [...out.values()]
+  return janMemo
 }
 
 export function findWard(code: string): { state: StateGeo, lga: Lga, ward: Ward } {
@@ -214,7 +268,8 @@ export function stateSearchData(code: string): StateSearchData {
         w.name,
         wardBallotPath(st, w),
         w.polling_units.map(p => [p.code.split('/')[3], p.name] as [string, string]),
-      ] as [string, string, string, [string, string][]]),
+        wardFebBallotPath(st, w),
+      ] as [string, string, string, [string, string][], string]),
     ] as StateSearchData['lgas'][number]),
   }
 }

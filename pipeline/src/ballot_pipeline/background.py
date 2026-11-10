@@ -118,8 +118,8 @@ def load(people: dict[tuple[str, str], str]) -> tuple[dict[tuple[str, str], Back
                 errors.append(f"background {key}: quote not confirmed on the live page by check-quotes: {c.url}")
         bg = _with_source_ids(bg, reg)
         for e in entries:
-            if EVALUATIVE.search(e.text):
-                errors.append(f"background {key}: evaluative wording in {e.text!r}")
+            if EVALUATIVE.search(e.text) or (e.note and EVALUATIVE.search(e.note)):
+                errors.append(f"background {key}: evaluative wording in {e.text!r} / {e.note!r}")
             # Years only as the source states them: every year in the entry must appear in one of its quotes.
             for year in re.findall(r"\b(?:19|20)\d{2}\b", e.text):
                 if not any(year in c.quote for c in e.citations):

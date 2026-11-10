@@ -8,8 +8,8 @@ export interface StateSearchData {
   code: string
   name: string
   /** [lgaCode, lgaName, wards] */
-  lgas: [string, string, [string, string, string, [string, string][]][]][]
-  // ward: [wardCode, wardName, ballotPath, [[puCode, puName]]]
+  lgas: [string, string, [string, string, string, [string, string][], string][]][]
+  // ward: [wardCode, wardName, ballotPath (16 Jan), [[puCode, puName]], febBallotPath (6 Feb)]
 }
 
 export function slug(text: string): string {
@@ -47,6 +47,17 @@ export function ballotPath(stateName: string, houseRaceIds: string[], senateRace
   return `/ballot/${st}/${house.join('-or-')}--${senate.join('-or-')}/`
 }
 
+/** "/ballot-feb/<state>/<sha>[-or-<sha>]/", or "/ballot-feb/<state>/" where no State Assembly race applies (Borno, FCT). */
+export function febBallotPath(stateName: string, shaRaceIds: string[]): string {
+  const st = slug(stateName)
+  const prefix = `feb-2027-sha-${st}-`
+  const keys = [...shaRaceIds].sort().map((id) => {
+    if (!id.startsWith(prefix)) throw new Error(`race ${id} is not in ${stateName}`)
+    return id.slice(prefix.length)
+  })
+  return keys.length ? `/ballot-feb/${st}/${keys.join('-or-')}/` : `/ballot-feb/${st}/`
+}
+
 /** Hash used to name the confirmed polling unit on a ballot page. The fragment never leaves the browser. */
 export function puHash(code: string): string {
   return `#pu-${code.replaceAll('/', '-')}`
@@ -64,6 +75,7 @@ export interface FoundPollingUnit {
   lga: string
   state: string
   ballotPath: string
+  febBallotPath: string
 }
 
 export function findByCode(data: StateSearchData, code: string): FoundPollingUnit | null {
@@ -71,10 +83,10 @@ export function findByCode(data: StateSearchData, code: string): FoundPollingUni
   if (s !== data.code) return null
   for (const [lc, ln, wards] of data.lgas) {
     if (lc !== l) continue
-    for (const [wc, wn, path, pus] of wards) {
+    for (const [wc, wn, path, pus, febPath] of wards) {
       if (wc !== w) continue
       for (const [pc, pn] of pus) {
-        if (pc === p) return { code, name: pn, ward: wn, lga: ln, state: data.name, ballotPath: path }
+        if (pc === p) return { code, name: pn, ward: wn, lga: ln, state: data.name, ballotPath: path, febBallotPath: febPath }
       }
     }
   }
@@ -146,7 +158,7 @@ export function searchLga(data: StateSearchData, lgaCode: string, query: string,
   const hits: SearchHit[] = []
   for (const [lc, ln, wards] of data.lgas) {
     if (lc !== lgaCode) continue
-    for (const [wc, wn, path, pus] of wards) {
+    for (const [wc, wn, path, pus, febPath] of wards) {
       const wardWords = normalise(wn)
       for (const [pc, pn] of pus) {
         const words = normalise(pn)
@@ -164,7 +176,7 @@ export function searchLga(data: StateSearchData, lgaCode: string, query: string,
         }
         if (!matchedAll) continue
         const score = (words.join(' ') === exact ? 2 : 0) + total / q.length
-        hits.push({ code: `${data.code}/${lc}/${wc}/${pc}`, name: pn, ward: wn, lga: ln, state: data.name, ballotPath: path, score })
+        hits.push({ code: `${data.code}/${lc}/${wc}/${pc}`, name: pn, ward: wn, lga: ln, state: data.name, ballotPath: path, febBallotPath: febPath, score })
       }
     }
   }

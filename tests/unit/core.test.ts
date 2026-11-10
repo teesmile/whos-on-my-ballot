@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { ballotCardRace, cardSourceCaption } from '@/lib/site'
 import {
-  ballotPath, codeFromHash, findByCode, parseDelimitationCode, puHash, searchLga, type StateSearchData,
+  ballotPath, codeFromHash, febBallotPath, findByCode, parseDelimitationCode, puHash, searchLga, type StateSearchData,
 } from '@/lib/core'
 
 describe('parseDelimitationCode (mirrors the pipeline parser)', () => {
@@ -14,6 +14,14 @@ describe('parseDelimitationCode (mirrors the pipeline parser)', () => {
   it.each(['', '24/15/03', '38/01/01/001', '00/01/01/001', '24/15/03/0', '24/15/03/1234', 'AB/15/03/012', '24/15/03/012/9', '24151503012', '24//15/03/012x'])(
     'rejects %j', text => expect(parseDelimitationCode(text)).toBeNull(),
   )
+})
+
+describe('6 February ballot paths', () => {
+  it('names the State Assembly races, or just the state where none applies', () => {
+    expect(febBallotPath('LAGOS', ['feb-2027-sha-lagos-surulere-ii', 'feb-2027-sha-lagos-surulere-i'])).toBe('/ballot-feb/lagos/surulere-i-or-surulere-ii/')
+    expect(febBallotPath('BORNO', [])).toBe('/ballot-feb/borno/')
+    expect(() => febBallotPath('ABIA', ['feb-2027-sha-imo-x'])).toThrow()
+  })
 })
 
 describe('ballot paths and fragments', () => {
@@ -46,20 +54,20 @@ const DATA: StateSearchData = {
         ['001', 'RAILWAY QUARTERS - RAILWAY QUARTERS I'],
         ['005', 'ABIA POLY - ABIA POLY I'],
         ['011', 'EZIAMA HIGH SCHOOL - EZIAMA HIGH SCHOOL I'],
-      ]],
+      ], '/ballot-feb/abia/x/'],
       ['09', 'ARIARIA MARKET', '/ballot/abia/a--b/', [
         ['001', 'ARIARIA MARKET SQUARE'],
         ['002', 'ST. MICHAEL\'S CATHOLIC CHURCH'],
         ['003', 'CENTRAL PRY SCH, OKPU UMUOBO'],
-      ]],
+      ], '/ballot-feb/abia/y/'],
     ]],
-    ['02', 'ABA SOUTH', [['01', 'ASA', '/ballot/abia/c--b/', [['001', 'ABIA POLY ANNEX']]]]],
+    ['02', 'ABA SOUTH', [['01', 'ASA', '/ballot/abia/c--b/', [['001', 'ABIA POLY ANNEX']], '/ballot-feb/abia/z/']]],
   ],
 }
 
 describe('findByCode', () => {
   it('finds a unit and its ballot', () => {
-    expect(findByCode(DATA, '01/01/09/002')).toMatchObject({ name: 'ST. MICHAEL\'S CATHOLIC CHURCH', ward: 'ARIARIA MARKET', ballotPath: '/ballot/abia/a--b/' })
+    expect(findByCode(DATA, '01/01/09/002')).toMatchObject({ name: 'ST. MICHAEL\'S CATHOLIC CHURCH', ward: 'ARIARIA MARKET', ballotPath: '/ballot/abia/a--b/', febBallotPath: '/ballot-feb/abia/y/' })
   })
   it('says not found instead of guessing', () => {
     expect(findByCode(DATA, '01/01/09/004')).toBeNull()
@@ -87,7 +95,7 @@ describe('searchLga', () => {
     const ward: StateSearchData = { code: '01', name: 'ABIA', lgas: [['10', 'OHAFIA', [['08', 'OHAFOR OHAFIA', '/b/', [
       ['001', 'ATAN ASAGA - ATAN HALL'], ['002', 'UMA UKPAI PRI. SCH. I'], ['003', 'NDI MBA'], ['004', 'NDI AJI'],
       ['005', 'NDI AGWU'], ['006', 'NDI AWAM'], ['008', 'OHAFOR OHAFIA'],
-    ]]]]] }
+    ], '/ballot-feb/abia/o/']]]] }
     expect(searchLga(ward, '10', 'Ohafor Ohafia')[0].code).toBe('01/10/08/008')
   })
   it('own-name matches outrank ward-name matches', () => expect(top('ariaria square')[0]).toBe('01/01/09/001'))

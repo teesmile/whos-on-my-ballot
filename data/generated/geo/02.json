@@ -18,6 +18,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/01/001",
@@ -88,6 +93,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/02/001",
@@ -158,6 +168,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/03/001",
@@ -300,6 +315,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/04/001",
@@ -370,6 +390,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/05/001",
@@ -436,6 +461,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/06/001",
@@ -514,6 +544,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/07/001",
@@ -572,6 +607,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/08/001",
@@ -690,6 +730,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/09/001",
@@ -772,6 +817,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-demsa"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/01/10/001",
@@ -872,6 +922,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-fufore-gurin-fufore-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/01/001",
@@ -974,6 +1029,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-fufore-gurin-fufore-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/02/001",
@@ -1096,6 +1156,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-fufore-gurin-fufore-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/03/001",
@@ -1242,6 +1307,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-fufore-gurin-fufore-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/04/001",
@@ -1408,6 +1478,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-verre-fufore-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/05/001",
@@ -1502,6 +1577,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-verre-fufore-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/06/001",
@@ -1636,6 +1716,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-fufore-gurin-fufore-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/07/001",
@@ -1778,6 +1863,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-fufore-gurin-fufore-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/08/001",
@@ -1888,6 +1978,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-verre-fufore-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/09/001",
@@ -1942,6 +2037,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-fufore-gurin-fufore-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/10/001",
@@ -2056,6 +2156,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-verre-fufore-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/02/11/001",
@@ -2128,6 +2233,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/01/001",
@@ -2194,6 +2304,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/02/001",
@@ -2248,6 +2363,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/03/001",
@@ -2394,6 +2514,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/04/001",
@@ -2520,6 +2645,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/05/001",
@@ -2614,6 +2744,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/06/001",
@@ -2672,6 +2807,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/07/001",
@@ -2766,6 +2906,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/08/001",
@@ -2864,6 +3009,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/09/001",
@@ -2970,6 +3120,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-ganye"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/03/10/001",
@@ -3066,6 +3221,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/01/001",
@@ -3132,6 +3292,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/02/001",
@@ -3198,6 +3363,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/03/001",
@@ -3336,6 +3506,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/04/001",
@@ -3414,6 +3589,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/05/001",
@@ -3476,6 +3656,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/06/001",
@@ -3514,6 +3699,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/07/001",
@@ -3560,6 +3750,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/08/001",
@@ -3670,6 +3865,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/09/001",
@@ -3740,6 +3940,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-girei"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/04/10/001",
@@ -3822,6 +4027,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/01/001",
@@ -3910,6 +4120,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/02/001",
@@ -3974,6 +4189,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/03/001",
@@ -4050,6 +4270,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/04/001",
@@ -4110,6 +4335,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/05/001",
@@ -4242,6 +4472,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/06/001",
@@ -4394,6 +4629,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/07/001",
@@ -4486,6 +4726,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/08/001",
@@ -4570,6 +4815,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/09/001",
@@ -4646,6 +4896,11 @@
      ],
      "mapping": "unresolved",
      "open_item": "OI-10",
+     "state_constituency": [
+      "feb-2027-sha-adamawa-gombi"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/05/10/001",
@@ -4706,6 +4961,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/01/001",
@@ -4760,6 +5020,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/02/001",
@@ -4822,6 +5087,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/03/001",
@@ -4880,6 +5150,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/04/001",
@@ -4998,6 +5273,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/05/001",
@@ -5072,6 +5352,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/06/001",
@@ -5146,6 +5431,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/07/001",
@@ -5272,6 +5562,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/08/001",
@@ -5346,6 +5641,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/09/001",
@@ -5396,6 +5696,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-guyuk"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/06/10/001",
@@ -5452,6 +5757,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-hong-hong-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/01/001",
@@ -5566,6 +5876,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-hong-hong-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/02/001",
@@ -5648,6 +5963,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-uba-gaya-hong-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/03/001",
@@ -5722,6 +6042,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-uba-gaya-hong-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/04/001",
@@ -5820,6 +6145,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-uba-gaya-hong-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/05/001",
@@ -5894,6 +6224,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-hong-hong-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/06/001",
@@ -6040,6 +6375,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-hong-hong-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/07/001",
@@ -6126,6 +6466,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-uba-gaya-hong-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/08/001",
@@ -6184,6 +6529,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-uba-gaya-hong-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/09/001",
@@ -6246,6 +6596,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-hong-hong-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/10/001",
@@ -6312,6 +6667,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-hong-hong-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/11/001",
@@ -6422,6 +6782,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-uba-gaya-hong-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/07/12/001",
@@ -6526,6 +6891,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-jada-mbulo-jada-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/01/001",
@@ -6596,6 +6966,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-jada-mbulo-jada-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/02/001",
@@ -6730,6 +7105,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-jada-mbulo-jada-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/03/001",
@@ -6832,6 +7212,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-koma-leko-jada-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/04/001",
@@ -6918,6 +7303,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-koma-leko-jada-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/05/001",
@@ -6984,6 +7374,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-koma-leko-jada-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/06/001",
@@ -7082,6 +7477,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-koma-leko-jada-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/07/001",
@@ -7164,6 +7564,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-jada-mbulo-jada-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/08/001",
@@ -7238,6 +7643,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-jada-mbulo-jada-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/09/001",
@@ -7348,6 +7758,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-jada-mbulo-jada-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/10/001",
@@ -7438,6 +7853,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-koma-leko-jada-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/08/11/001",
@@ -7546,6 +7966,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/01/001",
@@ -7604,6 +8029,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/02/001",
@@ -7698,6 +8128,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/03/001",
@@ -7796,6 +8231,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/04/001",
@@ -7894,6 +8334,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/05/001",
@@ -7936,6 +8381,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/06/001",
@@ -7998,6 +8448,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/07/001",
@@ -8052,6 +8507,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/08/001",
@@ -8102,6 +8562,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/09/001",
@@ -8208,6 +8673,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-lamurde"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/09/10/001",
@@ -8300,6 +8770,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/01/001",
@@ -8346,6 +8821,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/02/001",
@@ -8436,6 +8916,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/03/001",
@@ -8574,6 +9059,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/04/001",
@@ -8636,6 +9126,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/05/001",
@@ -8698,6 +9193,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/06/001",
@@ -8808,6 +9308,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/07/001",
@@ -8870,6 +9375,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/08/001",
@@ -8956,6 +9466,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/09/001",
@@ -9042,6 +9557,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-madagali"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/10/10/001",
@@ -9086,6 +9606,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/01/001",
@@ -9168,6 +9693,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/02/001",
@@ -9226,6 +9756,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/03/001",
@@ -9280,6 +9815,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/04/001",
@@ -9334,6 +9874,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/05/001",
@@ -9392,6 +9937,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/06/001",
@@ -9494,6 +10044,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/07/001",
@@ -9552,6 +10107,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/08/001",
@@ -9602,6 +10162,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/09/001",
@@ -9664,6 +10229,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-maiha"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/11/10/001",
@@ -9720,6 +10290,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-nassarawo-binyeri-mayo-belwa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/01/001",
@@ -9774,6 +10349,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-nassarawo-binyeri-mayo-belwa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/02/001",
@@ -9840,6 +10420,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-nassarawo-binyeri-mayo-belwa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/03/001",
@@ -9910,6 +10495,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mayo-belwa-mayo-belwa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/04/001",
@@ -9972,6 +10562,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-nassarawo-binyeri-mayo-belwa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/05/001",
@@ -10038,6 +10633,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mayo-belwa-mayo-belwa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/06/001",
@@ -10256,6 +10856,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-nassarawo-binyeri-mayo-belwa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/07/001",
@@ -10358,6 +10963,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-nassarawo-binyeri-mayo-belwa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/08/001",
@@ -10428,6 +11038,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mayo-belwa-mayo-belwa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/09/001",
@@ -10506,6 +11121,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mayo-belwa-mayo-belwa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/10/001",
@@ -10552,6 +11172,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-nassarawo-binyeri-mayo-belwa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/11/001",
@@ -10638,6 +11263,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mayo-belwa-mayo-belwa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/12/12/001",
@@ -10718,6 +11348,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/01/001",
@@ -10780,6 +11415,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/02/001",
@@ -10858,6 +11498,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/03/001",
@@ -10908,6 +11553,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/04/001",
@@ -10970,6 +11620,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/05/001",
@@ -11044,6 +11699,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/06/001",
@@ -11174,6 +11834,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/07/001",
@@ -11264,6 +11929,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/08/001",
@@ -11334,6 +12004,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/09/001",
@@ -11404,6 +12079,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/10/001",
@@ -11442,6 +12122,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/11/001",
@@ -11516,6 +12201,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/12/001",
@@ -11602,6 +12292,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/13/001",
@@ -11680,6 +12375,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/14/001",
@@ -11718,6 +12418,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/15/001",
@@ -11772,6 +12477,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-michika"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/13/16/001",
@@ -11840,6 +12550,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/01/001",
@@ -11906,6 +12621,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/02/001",
@@ -11972,6 +12692,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/03/001",
@@ -12034,6 +12759,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/04/001",
@@ -12156,6 +12886,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/05/001",
@@ -12342,6 +13077,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/06/001",
@@ -12416,6 +13156,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/07/001",
@@ -12502,6 +13247,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/08/001",
@@ -12620,6 +13370,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/09/001",
@@ -12818,6 +13573,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/10/001",
@@ -12888,6 +13648,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/14/11/001",
@@ -13104,6 +13869,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/01/001",
@@ -13146,6 +13916,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/02/001",
@@ -13196,6 +13971,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/03/001",
@@ -13242,6 +14022,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/04/001",
@@ -13316,6 +14101,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/05/001",
@@ -13358,6 +14148,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/06/001",
@@ -13496,6 +14291,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/07/001",
@@ -13566,6 +14366,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/08/001",
@@ -13620,6 +14425,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/09/001",
@@ -13766,6 +14576,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-mubi-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/15/10/001",
@@ -13822,6 +14637,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/01/001",
@@ -13876,6 +14696,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/02/001",
@@ -13942,6 +14767,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/03/001",
@@ -13996,6 +14826,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/04/001",
@@ -14110,6 +14945,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/05/001",
@@ -14176,6 +15016,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/06/001",
@@ -14254,6 +15099,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/07/001",
@@ -14332,6 +15182,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/08/001",
@@ -14418,6 +15273,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/09/001",
@@ -14584,6 +15444,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-numan"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/16/10/001",
@@ -14648,6 +15513,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/01/001",
@@ -14686,6 +15556,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/02/001",
@@ -14752,6 +15627,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/03/001",
@@ -14842,6 +15722,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/04/001",
@@ -14888,6 +15773,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/05/001",
@@ -14946,6 +15836,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/06/001",
@@ -15008,6 +15903,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/07/001",
@@ -15058,6 +15958,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/08/001",
@@ -15132,6 +16037,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/09/001",
@@ -15246,6 +16156,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-shelleng"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/17/10/001",
@@ -15290,6 +16205,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/01/001",
@@ -15380,6 +16300,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/02/001",
@@ -15490,6 +16415,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/03/001",
@@ -15544,6 +16474,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/04/001",
@@ -15614,6 +16549,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/05/001",
@@ -15668,6 +16608,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/06/001",
@@ -15746,6 +16691,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/07/001",
@@ -15840,6 +16790,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/08/001",
@@ -16038,6 +16993,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/09/001",
@@ -16132,6 +17092,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/10/001",
@@ -16206,6 +17171,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-song"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/18/11/001",
@@ -16278,6 +17248,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/01/001",
@@ -16328,6 +17303,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/02/001",
@@ -16382,6 +17362,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/03/001",
@@ -16432,6 +17417,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/04/001",
@@ -16490,6 +17480,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/05/001",
@@ -16536,6 +17531,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/06/001",
@@ -16570,6 +17570,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/07/001",
@@ -16604,6 +17609,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/08/001",
@@ -16678,6 +17688,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/09/001",
@@ -16756,6 +17771,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-toungo"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/19/10/001",
@@ -16828,6 +17848,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/01/001",
@@ -16966,6 +17991,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/02/001",
@@ -17040,6 +18070,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/03/001",
@@ -17290,6 +18325,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/04/001",
@@ -17432,6 +18472,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/05/001",
@@ -17638,6 +18683,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/06/001",
@@ -17892,6 +18942,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/07/001",
@@ -18010,6 +19065,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/08/001",
@@ -18136,6 +19196,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/09/001",
@@ -18314,6 +19379,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/10/001",
@@ -18388,6 +19458,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-north"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/20/11/001",
@@ -18496,6 +19571,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/01/001",
@@ -18606,6 +19686,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/02/001",
@@ -18712,6 +19797,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/03/001",
@@ -18886,6 +19976,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/04/001",
@@ -19008,6 +20103,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/05/001",
@@ -19146,6 +20246,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/06/001",
@@ -19280,6 +20385,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/07/001",
@@ -19386,6 +20496,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/08/001",
@@ -19488,6 +20603,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/09/001",
@@ -19570,6 +20690,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/10/001",
@@ -19664,6 +20789,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-adamawa-yola-south"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "02/21/11/001",

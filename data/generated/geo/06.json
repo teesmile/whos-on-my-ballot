@@ -18,6 +18,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/01/001",
@@ -124,6 +129,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/02/001",
@@ -210,6 +220,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/03/001",
@@ -276,6 +291,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/04/001",
@@ -358,6 +378,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/05/001",
@@ -448,6 +473,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/06/001",
@@ -546,6 +576,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/07/001",
@@ -624,6 +659,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/08/001",
@@ -686,6 +726,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/09/001",
@@ -772,6 +817,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-brass-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/01/10/001",
@@ -852,6 +902,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/02/01/001",
@@ -950,6 +1005,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/02/02/001",
@@ -1024,6 +1084,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/02/03/001",
@@ -1094,6 +1159,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/02/04/001",
@@ -1144,6 +1214,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/02/05/001",
@@ -1198,6 +1273,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i",
+      "feb-2027-sha-bayelsa-ekeremor-ii",
+      "feb-2027-sha-bayelsa-ekeremor-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/02/06/001",
@@ -1308,6 +1390,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/02/07/001",
@@ -1414,6 +1501,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i",
+      "feb-2027-sha-bayelsa-ekeremor-ii",
+      "feb-2027-sha-bayelsa-ekeremor-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/02/08/001",
@@ -1596,6 +1690,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i",
+      "feb-2027-sha-bayelsa-ekeremor-ii",
+      "feb-2027-sha-bayelsa-ekeremor-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/02/09/001",
@@ -1738,6 +1839,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/02/10/001",
@@ -1832,6 +1938,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/02/11/001",
@@ -1922,6 +2033,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ekeremor-i",
+      "feb-2027-sha-bayelsa-ekeremor-ii",
+      "feb-2027-sha-bayelsa-ekeremor-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/02/12/001",
@@ -2058,6 +2176,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-i",
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/03/01/001",
@@ -2112,6 +2236,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/02/001",
@@ -2186,6 +2315,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/03/001",
@@ -2260,6 +2394,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/04/001",
@@ -2326,6 +2465,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/05/001",
@@ -2404,6 +2548,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/06/001",
@@ -2462,6 +2611,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/07/001",
@@ -2532,6 +2686,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/08/001",
@@ -2602,6 +2761,12 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-i",
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-ii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/03/09/001",
@@ -2696,6 +2861,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/10/001",
@@ -2750,6 +2920,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-kolokuma-opokuma-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/03/11/001",
@@ -2810,6 +2985,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/01/001",
@@ -2896,6 +3078,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/02/001",
@@ -2966,6 +3155,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/03/001",
@@ -3044,6 +3240,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/04/001",
@@ -3102,6 +3305,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/05/001",
@@ -3172,6 +3382,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/06/001",
@@ -3218,6 +3435,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/07/001",
@@ -3268,6 +3492,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/08/001",
@@ -3394,6 +3625,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/09/001",
@@ -3488,6 +3726,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/10/001",
@@ -3582,6 +3827,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/11/001",
@@ -3688,6 +3940,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/12/001",
@@ -3818,6 +4077,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-nembe-i",
+      "feb-2027-sha-bayelsa-nembe-ii",
+      "feb-2027-sha-bayelsa-nembe-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/04/13/001",
@@ -3910,6 +4176,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/01/001",
@@ -3992,6 +4263,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/02/001",
@@ -4106,6 +4382,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/03/001",
@@ -4196,6 +4477,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/04/001",
@@ -4310,6 +4596,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/05/001",
@@ -4424,6 +4715,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/06/001",
@@ -4518,6 +4814,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/07/001",
@@ -4592,6 +4893,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/08/001",
@@ -4702,6 +5008,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/09/001",
@@ -4776,6 +5087,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/10/001",
@@ -4830,6 +5146,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/11/001",
@@ -4956,6 +5277,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/12/001",
@@ -5086,6 +5412,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-ogbia-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/05/13/001",
@@ -5302,6 +5633,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/01/001",
@@ -5368,6 +5706,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/02/001",
@@ -5518,6 +5863,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/03/001",
@@ -5604,6 +5956,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/04/001",
@@ -5714,6 +6073,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/05/001",
@@ -5820,6 +6186,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/06/001",
@@ -5882,6 +6255,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/07/001",
@@ -5952,6 +6332,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/08/001",
@@ -6018,6 +6405,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/09/001",
@@ -6068,6 +6462,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/10/001",
@@ -6150,6 +6551,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/11/001",
@@ -6256,6 +6664,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/12/001",
@@ -6318,6 +6733,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/13/001",
@@ -6400,6 +6822,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-sagbama-i",
+      "feb-2027-sha-bayelsa-sagbama-ii",
+      "feb-2027-sha-bayelsa-sagbama-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/06/14/001",
@@ -6480,6 +6909,14 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i",
+      "feb-2027-sha-bayelsa-southern-ijaw-ii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/07/01/001",
@@ -6646,6 +7083,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/02/001",
@@ -6764,6 +7206,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/03/001",
@@ -6918,6 +7365,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/04/001",
@@ -7052,6 +7504,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/05/001",
@@ -7162,6 +7619,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/06/001",
@@ -7236,6 +7698,14 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i",
+      "feb-2027-sha-bayelsa-southern-ijaw-ii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/07/07/001",
@@ -7302,6 +7772,14 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i",
+      "feb-2027-sha-bayelsa-southern-ijaw-ii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/07/08/001",
@@ -7368,6 +7846,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/09/001",
@@ -7482,6 +7965,14 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i",
+      "feb-2027-sha-bayelsa-southern-ijaw-ii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/07/10/001",
@@ -7616,6 +8107,14 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i",
+      "feb-2027-sha-bayelsa-southern-ijaw-ii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/07/11/001",
@@ -7726,6 +8225,14 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i",
+      "feb-2027-sha-bayelsa-southern-ijaw-ii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/07/12/001",
@@ -7868,6 +8375,14 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-i",
+      "feb-2027-sha-bayelsa-southern-ijaw-ii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iii",
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/07/13/001",
@@ -7978,6 +8493,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/14/001",
@@ -8116,6 +8636,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/15/001",
@@ -8282,6 +8807,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/16/001",
@@ -8440,6 +8970,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-southern-ijaw-iv"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/07/17/001",
@@ -8588,6 +9123,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/01/001",
@@ -8806,6 +9346,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/02/001",
@@ -8896,6 +9441,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/03/001",
@@ -9038,6 +9588,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/04/001",
@@ -9240,6 +9795,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i",
+      "feb-2027-sha-bayelsa-yenagoa-ii",
+      "feb-2027-sha-bayelsa-yenagoa-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/08/05/001",
@@ -9586,6 +10148,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/06/001",
@@ -9856,6 +10423,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/07/001",
@@ -9946,6 +10518,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/08/001",
@@ -10028,6 +10605,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/09/001",
@@ -10094,6 +10676,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-ii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/10/001",
@@ -10184,6 +10771,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i",
+      "feb-2027-sha-bayelsa-yenagoa-ii",
+      "feb-2027-sha-bayelsa-yenagoa-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/08/11/001",
@@ -10262,6 +10856,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i",
+      "feb-2027-sha-bayelsa-yenagoa-ii",
+      "feb-2027-sha-bayelsa-yenagoa-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/08/12/001",
@@ -10316,6 +10917,13 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-i",
+      "feb-2027-sha-bayelsa-yenagoa-ii",
+      "feb-2027-sha-bayelsa-yenagoa-iii"
+     ],
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-6",
      "polling_units": [
       {
        "code": "06/08/13/001",
@@ -10378,6 +10986,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/14/001",
@@ -10444,6 +11057,11 @@
      ],
      "mapping": "exact",
      "open_item": null,
+     "state_constituency": [
+      "feb-2027-sha-bayelsa-yenagoa-iii"
+     ],
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "06/08/15/001",

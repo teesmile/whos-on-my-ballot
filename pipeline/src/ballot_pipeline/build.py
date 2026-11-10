@@ -36,10 +36,18 @@ class BuildResult:
     inec_order_matches: dict[str, bool]
     locator_counts: dict[str, int]
     anomalies: list[dict] = field(default_factory=list)
+    sha_report: dict | None = None
     errors: list[str] = field(default_factory=list)
 
 
 # ---------------------------------------------------------------- helpers
+
+
+def st_of(ward_code: str) -> str:
+    """'24/15/03' -> 'LAGOS'."""
+    from .states import STATES
+
+    return STATES[ward_code.split("/")[0]]
 
 
 def _sha256(path) -> str:
@@ -54,7 +62,7 @@ def _cached_rows(src: dict) -> list[ex.Row]:
         return [ex.Row(**{**r, "candidate": ex.Person(**r["candidate"]),
                           "running_mate": ex.Person(**r["running_mate"]) if r["running_mate"] else None})
                 for r in data]
-    rows = ex.extract_pdf(str(RAW_DIR / src["local_file"]), src["source_id"], ticket=src.get("race") == "president")
+    rows = ex.extract_pdf(str(RAW_DIR / src["local_file"]), src["source_id"], ticket=src.get("race") in ("president", "governor"))
     cache.parent.mkdir(parents=True, exist_ok=True)
     cache.write_text(json.dumps([dataclasses.asdict(r) for r in rows], ensure_ascii=False))
     return rows
@@ -177,7 +185,7 @@ def build(log=print) -> BuildResult:
     # ---- printing errors (pinned to the printed value)
     printing = yaml.safe_load((PIPELINE_DIR / "printing_errors.yaml").read_text()) or []
     printing_by_row: dict[tuple[str, int], list[dict]] = defaultdict(list)
-    for e in printing:
+    for e in printing:  # serial numbers restart per state in consolidated files, so an entry may also name its page
         printing_by_row[(e["source_id"], e["sn"])].append(e)
     printing_used: set[int] = set()
 
@@ -193,21 +201,33 @@ def build(log=print) -> BuildResult:
         office = by_id[sid]["race"]
         for r in rows:
             # Group on a letters-and-digits key: INEC spells one constituency with and without spaces across rows.
-            k = (office, None, "NIGERIA") if office == "president" else (office, r.state, key(r.constituency))
+            if office == "president":
+                k = (office, None, "NIGERIA")
+            elif office == "governor":
+                k = (office, r.state, "GOVERNOR")
+            else:
+                k = (office, r.state, key(r.constituency))
             grouped[k].append(r)
             race_sources[k].add(sid)
-            spellings[k][r.constituency or "Nigeria"] += 1
+            spellings[k][r.state if office == "governor" else (r.constituency or "Nigeria")] += 1
 
     races: list[Race] = []
     inec_order_matches: dict[str, bool] = {}
     fc_to_race: dict[str, str] = {}
     sd_to_race: dict[str, str] = {}
+    sha_race_by_name: dict[tuple[str, str], str] = {}
     for gkey, rows in sorted(grouped.items(), key=lambda kv: (kv[0][0], kv[0][1] or "", kv[0][2])):
         office, state, _ = gkey
         # Display INEC's most frequent spelling (ties: first alphabetically), verbatim.
         cname = sorted(spellings[gkey].items(), key=lambda kv: (-kv[1], kv[0]))[0][0]
+        election = "feb-2027" if office in ("governor", "state_assembly") else ELECTION
         if office == "president":
             race_id, unit = f"{ELECTION}-president", None
+        elif office == "governor":
+            race_id, unit = f"feb-2027-governor-{slug(state)}", None
+        elif office == "state_assembly":
+            race_id, unit = f"feb-2027-sha-{slug(state)}-{slug(cname)}", None
+            sha_race_by_name[(state, cname)] = race_id
         else:
             unit = find_unit("SD" if office == "senate" else "FC", state, cname)
             if unit is None:
@@ -242,6 +262,8 @@ def build(log=print) -> BuildResult:
         for r, _, _ in cands:
             notes = []
             for e in printing_by_row.get((r.source_id, r.sn), []):
+                if e.get("page") and e["page"] != r.page:
+                    continue
                 person = r.candidate if e["person"] == "candidate" else r.running_mate
                 actual = r.remarks if e["field"] == "remarks" else getattr(person, e["field"], None)
                 if actual != e["as_printed"]:
@@ -250,17 +272,17 @@ def build(log=print) -> BuildResult:
                     continue
                 printing_used.add(id(e))
                 notes.append(PrintingNote(person=e["person"], field=e["field"], as_printed=e["as_printed"]))
-            cand_notes[(r.source_id, r.sn)] = notes
+            cand_notes[(r.source_id, r.page, r.sn)] = notes
         races.append(
             Race(
-                id=race_id, election=ELECTION, office=office, state=state, name=cname,
+                id=race_id, election=election, office=office, state=state, name=cname,
                 workbook_code=unit.code if unit else None, order_rule=ORDER_RULE,
                 sources=sorted(race_sources[gkey]),
                 candidates=[
                     Candidate(
                         id=f"{race_id}-{r.party.lower()}", race_id=race_id, party=r.party,
                         party_name=party_names.get(r.party), ballot_position=i, remarks=r.remarks,
-                        candidate=cand, running_mate=mate, printing_notes=cand_notes[(r.source_id, r.sn)],
+                        candidate=cand, running_mate=mate, printing_notes=cand_notes[(r.source_id, r.page, r.sn)],
                         provenance=Provenance(source_id=r.source_id, page=r.page, sn=r.sn),
                     )
                     for i, (r, cand, mate) in enumerate(cands, start=1)
@@ -326,6 +348,36 @@ def build(log=print) -> BuildResult:
             errors.append(f"pending_sd_placements {k}: the workbook already places it in {lga_to_sd[(st, lga)]}")
         lga_to_sd[(st, lga)] = list(codes)
 
+    # ---- 6 February: ward -> State House of Assembly constituency (D-028)
+    from .sha_reconcile import reconcile
+    from .state_constituencies import StateGeoIndex, count_anomalies, map_state_constituencies
+
+    geo_dicts = {st: {"name": st, "lgas": [{"name": l.name, "wards": [{"code": f"{sc_}/{l.code}/{w[0]}", "name": w[1]}
+                                                                     for w in l.wards]} for l in lgas]}
+                 for st, (sc_, lgas) in locator.items()}
+    ward_spellings = {c: {f: v["code"] for f, v in d.items()}
+                      for c, d in (yaml.safe_load((PIPELINE_DIR / "ward_spellings.yaml").read_text()) or {}).items()
+                      if not c.startswith("_")}
+    sc_units, _, sc_errors = map_state_constituencies(
+        str(RAW_DIR / by_id["inec-constituencies-workbook"]["local_file"]), geo_dicts,
+        {st: {key(k): v for k, v in d.items()} for st, d in (aliases.get("lga_spellings") or {}).items()},
+        aliases.get("state_constituency_overrides") or {}, ward_spellings)
+    errors.extend(e for e in sc_errors if "no LGA found" not in e)  # unplaced workbook rows are settled by the 2027 list
+    sc_idx = {st: StateGeoIndex(g, {key(k): v for k, v in (aliases.get("lga_spellings") or {}).get(st, {}).items()})
+              for st, g in geo_dicts.items()}
+    list_names: dict[str, list[str]] = defaultdict(list)
+    for (st, name) in sha_race_by_name:
+        list_names[st].append(name)
+    sha_list, ward_to_sha, sha_notes, sha_errors = reconcile(dict(list_names), sc_units, sc_idx,
+                                                              aliases.get("sha_links") or {}, aliases.get("sha_lga_overrides") or {})
+    errors.extend(sha_errors)
+    ward_to_sha_races = {w: sorted(sha_race_by_name[(st_of(w), n)] for n in names) for w, names in ward_to_sha.items()}
+    sha_report = {"notes": sha_notes, "count_anomalies": count_anomalies(sc_units),
+                  "workbook_per_state": dict(sorted(Counter(s.state for s in sc_units).items())),
+                  "constituencies": [{"state": x.state, "name": x.name, "race_id": sha_race_by_name[(x.state, x.name)],
+                                      "lgas": x.lgas, "lga_by": x.lga_by, "workbook": x.workbook.code if x.workbook else None,
+                                      "wards": len(x.wards)} for x in sha_list]}
+
     # ---- geography: ward -> races
     lga_to_fcs: dict[tuple[str, str], list[str]] = defaultdict(list)
     for u in fc_units.values():
@@ -361,9 +413,12 @@ def build(log=print) -> BuildResult:
                     if not fc_races or not sd_races:
                         continue
                 exact = len(fc_races) == 1 and len(sd_races) == 1
+                sha = ward_to_sha_races.get(code, [])
                 wards.append(Ward(
                     code=code, name=w_name, federal_constituency=fc_races, senatorial_district=sd_races,
                     mapping="exact" if exact else "unresolved", open_item=None if exact else open_item,
+                    state_constituency=sha, sc_mapping="none" if not sha else "exact" if len(sha) == 1 else "unresolved",
+                    sc_open_item="OI-6" if len(sha) > 1 else None,
                     polling_units=[PollingUnit(code=f"{code}/{p_code}", name=p_name) for p_code, p_name in pus],
                 ))
             out_lgas.append(Lga(code=f"{s_code}/{l.code}", name=l.name, wards=wards))
@@ -381,6 +436,7 @@ def build(log=print) -> BuildResult:
     }
     result = BuildResult(sources, parties, rows_by_source, independent_sn, races, quarantine, workbook, geo,
                          unresolved_wards, inec_order_matches, locator_counts, anomalies, errors)
+    result.sha_report = sha_report
     write_outputs(result)
     return result
 
@@ -393,7 +449,10 @@ def write_outputs(res: BuildResult) -> None:
         path.write_text(json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
 
     dump(GENERATED_DIR / "parties.json", res.parties)
-    dump(GENERATED_DIR / "races" / f"{ELECTION}.json", [r.model_dump() for r in res.races])
+    dump(GENERATED_DIR / "races" / f"{ELECTION}.json", [r.model_dump() for r in res.races if r.election == ELECTION])
+    dump(GENERATED_DIR / "races" / "feb-2027.json", [r.model_dump() for r in res.races if r.election == "feb-2027"])
+    if res.sha_report:
+        dump(GENERATED_DIR / "state-constituencies.json", res.sha_report)
     dump(GENERATED_DIR / "quarantine.json", res.quarantine)
     dump(GENERATED_DIR / "anomalies.json", res.anomalies)
     dump(GENERATED_DIR / "constituencies.json", [

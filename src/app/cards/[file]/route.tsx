@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 import { raceTitle } from '@/components/RaceSection'
-import { race, races } from '@/lib/data'
+import { allRaces, race } from '@/lib/data'
 import { cardSourceCaption } from '@/lib/site'
 
 // One share card per race, rendered at build time to /cards/<race-id>.png (1200x630, the Open Graph size).
@@ -10,7 +10,7 @@ export const dynamic = 'force-static'
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  return races().map(r => ({ file: `${r.id}.png` }))
+  return allRaces().map(r => ({ file: `${r.id}.png` }))
 }
 
 const INK = '#1a1a1a'
@@ -36,12 +36,13 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
   const longest = Math.max(...r.candidates.map(c => (c.candidate.name || 'Not provided in INEC’s list').length))
   const font = Math.max(14, Math.min(30, Math.floor(rowHeight * 0.62), Math.floor(columnWidth / (3.9 + 0.74 * longest))))
   const caption = cardSourceCaption(r.sources)
+  const day = r.election === 'feb-2027' ? '6 February 2027' : '16 January 2027'
   const cols = Array.from({ length: columns }, (_, i) => r.candidates.slice(i * rows, (i + 1) * rows))
 
   return new ImageResponse(
     (
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', background: PAPER, color: INK, padding: '36px 48px', fontFamily: 'Geist' }}>
-        <div style={{ display: 'flex', fontSize: 22, color: MUTED }}>Who’s on my ballot? · 16 January 2027</div>
+        <div style={{ display: 'flex', fontSize: 22, color: MUTED }}>{`Who’s on my ballot? · ${day}`}</div>
         <div style={{ display: 'flex', fontSize: titleSize, marginTop: 6, lineHeight: 1.15 }}>{title}</div>
         <div style={{ display: 'flex', height: listHeight, marginTop: 18, borderTop: `2px solid ${INK}`, paddingTop: 14, gap: 40, overflow: 'hidden' }}>
           {cols.map((col, i) => (
