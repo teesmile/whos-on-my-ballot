@@ -1,6 +1,8 @@
-import { type FebBallotSpec, race } from '@/lib/data'
+import { type FebBallotSpec, febBallotTitle, race } from '@/lib/data'
+import { pageGraph } from '@/lib/seo'
 import { SITE_URL } from '@/lib/site'
 
+import { JsonLd } from './JsonLd'
 import { INEC_2027, RaceSection, raceTitle, UnresolvedGroup } from './RaceSection'
 import { Share } from './Share'
 import { SourceLine } from './SourceLine'
@@ -18,6 +20,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
   const all = [...(b.governor ? [race(b.governor)] : []), ...sha]
   return (
     <>
+      <JsonLd data={pageGraph(b.path, febBallotTitle(b), [['Home', '/'], [st, `/state/${b.state.code}/`], [febBallotTitle(b), b.path]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
         {' / '}

@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 
 import { RaceSection, raceTitle, UnresolvedGroup } from '@/components/RaceSection'
 import { SourceLine } from '@/components/SourceLine'
-import { ballots, presidentialRace, race } from '@/lib/data'
-import { ballotCardRace, cardPath, SITE_URL } from '@/lib/site'
+import { ballots, janBallotTitle, presidentialRace, race } from '@/lib/data'
+import { JsonLd } from '@/components/JsonLd'
+import { pageGraph, pageMeta } from '@/lib/seo'
+import { ballotCardRace, cardAlt, cardPath, SITE_URL } from '@/lib/site'
 
 import { Share } from '@/components/Share'
 
@@ -21,13 +23,11 @@ async function ballotOf(params: Promise<{ state: string, key: string }>) {
 
 export async function generateMetadata({ params }: { params: Promise<{ state: string, key: string }> }): Promise<Metadata> {
   const b = await ballotOf(params)
-  const title = `Ballot: ${b.house.map(id => race(id).name).join(' or ')}, ${b.state.name}`
-  return {
-    title,
-    description: 'Every race and every candidate on this ballot for 16 January 2027, as listed by INEC.',
-    openGraph: { title, url: `${SITE_URL}${b.path}`, images: [{ url: cardPath(ballotCardRace(b.house, presidentialRace().id)), width: 1200, height: 630 }] },
-    twitter: { card: 'summary_large_image' },
-  }
+  const card = race(ballotCardRace(b.house, presidentialRace().id))
+  return pageMeta({
+    title: janBallotTitle(b), path: b.path, description: 'Every race and every candidate on this ballot for 16 January 2027, as listed by INEC.',
+    image: { url: cardPath(card.id), alt: cardAlt(card) },
+  })
 }
 
 export default async function BallotPage({ params }: { params: Promise<{ state: string, key: string }> }) {
@@ -36,6 +36,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
   const house = b.house.map(race)
   return (
     <>
+      <JsonLd data={pageGraph(b.path, janBallotTitle(b), [['Home', '/'], [b.state.name, `/state/${b.state.code}/`], [janBallotTitle(b), b.path]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
         {' / '}

@@ -87,6 +87,8 @@ export interface Source {
   page_url?: string
   archive_url?: string
   retrieved_at: string
+  pdf_created?: string | null
+  pdf_modified?: string | null
 }
 
 interface Ward {
@@ -142,6 +144,21 @@ export const source = (id: string) => {
   if (!s) throw new Error(`unknown source ${id}`)
   return s
 }
+const pdfDate = (d?: string | null) => (d && /^D:\d{8}/.test(d) ? `${d.slice(2, 6)}-${d.slice(6, 8)}-${d.slice(8, 10)}` : null)
+/** The date a source's content is from: INEC's own PDF date, else when the snapshot (crawl or page) was taken. */
+export const sourceContentDate = (id: string) => {
+  const s = source(id)
+  return pdfDate(s.pdf_modified) ?? pdfDate(s.pdf_created) ?? s.retrieved_at.slice(0, 10)
+}
+const latest = (dates: string[]) => [...dates].sort().at(-1)!
+/** A race's content date: its INEC list, or the background research for presidential tickets, whichever is later. */
+export const raceContentDate = (r: Race) => latest([
+  ...r.sources.map(sourceContentDate),
+  ...r.candidates.flatMap(c => [c.candidate.background?.researched, c.running_mate?.background?.researched]).filter((d): d is string => !!d),
+])
+/** Geography pages show INEC's locator, and their 6 February links follow the IReV ward lists (D-030). */
+export const geographyContentDate = () => latest(['inec-pu-locator', 'inec-irev-2023-assembly'].map(sourceContentDate))
+
 export const states = () => [...load().states].sort((a, b) => a.name.localeCompare(b.name))
 export const stateGeo = (code: string) => {
   const g = load().geo.get(code)
@@ -242,6 +259,40 @@ export function ballots(): BallotSpec[] {
   }
   janMemo = [...out.values()]
   return janMemo
+}
+
+/** A 16 January ballot's title (D-032): its House race(s), and its Senate race(s) where another ballot shares the House race. */
+export function janBallotTitle(b: BallotSpec): string {
+  const shared = ballots().filter(x => x.state.code === b.state.code && x.house.join() === b.house.join()).length > 1
+  const senate = shared ? ` (${b.senate.map(id => race(id).name).join(' or ')})` : ''
+  return `16 Jan ballot: ${b.house.map(id => race(id).name).join(' or ')}${senate}, ${b.state.name}`
+}
+
+/** A 6 February ballot's title (D-032). */
+export function febBallotTitle(b: FebBallotSpec): string {
+  return b.sha.length ? `6 Feb ballot: ${b.sha.map(id => race(id).name).join(' or ')}, ${b.state.name}` : `6 Feb ballot, ${b.state.name}`
+}
+
+/** The ward -> State Assembly figures for the explainer page, computed from the published data (D-028, D-030). */
+export function shaMappingStats() {
+  let one = 0, several = 0, disagree = 0, pusSeveral = 0, pusAll = 0
+  for (const st of load().geo.values()) {
+    for (const l of st.lgas) {
+      for (const w of l.wards) {
+        if (!w.state_constituency.length) continue
+        pusAll += w.polling_units.length
+        if (w.sc_mapping === 'exact') one++
+        else {
+          several++
+          pusSeveral += w.polling_units.length
+          if (w.sc_open_item === 'OI-13') disagree++
+        }
+      }
+    }
+  }
+  const constituencies = febRaces().filter(r => r.office === 'state_assembly').length
+  const statesWithList = new Set(febRaces().filter(r => r.office === 'state_assembly').map(r => r.state)).size
+  return { one, several, disagree, pusSeveral, pusAll, constituencies, statesWithList }
 }
 
 export function findWard(code: string): { state: StateGeo, lga: Lga, ward: Ward } {

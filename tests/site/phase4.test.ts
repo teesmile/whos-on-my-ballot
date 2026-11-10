@@ -7,7 +7,9 @@ import { describe, expect, it } from 'vitest'
 import { electionDay } from '@/lib/data'
 
 const OUT = path.resolve('out')
-const html = fs.readFileSync(path.join(OUT, 'election-day', 'index.html'), 'utf8')
+const page = fs.readFileSync(path.join(OUT, 'election-day', 'index.html'), 'utf8')
+// the page's own content: the footer (sources, credit) is shared by every page and checked elsewhere
+const html = page.split('<main')[1].split('</main>')[0]
 const INEC_HOSTS = new Set(['www.inecnigeria.org', 'inecnigeria.org', 'cvr.inecnigeria.org', 'inecelectionresults.ng'])
 
 function* walk(dir: string): Generator<string> {
@@ -49,6 +51,7 @@ describe('election-day page', () => {
   it('is linked from the header of every page', () => {
     for (const f of [...walk(OUT)].filter(x => x.endsWith('.html'))) {
       expect(fs.readFileSync(f, 'utf8'), f).toContain('<a href="/election-day/" class="site-nav">Election day</a>')
+      expect(fs.readFileSync(f, 'utf8'), f).toContain('<a href="/about/" class="site-nav">About</a>')
     }
   })
 })

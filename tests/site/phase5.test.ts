@@ -139,12 +139,11 @@ describe('6 February ballot pages', () => {
     }
   })
 
-  it('previews the governorship card, else the one State Assembly race, else no card', () => {
+  it('previews the governorship card, else the one State Assembly race, else the site card', () => {
     for (const b of all) {
       const page = html(b.path.slice(1))
-      const want = b.governor ?? (b.sha.length === 1 ? b.sha[0] : null)
-      if (want) expect(page, b.path).toContain(`<meta property="og:image" content="${SITE_URL}/cards/${want}.png"/>`)
-      else expect(page, b.path).not.toContain('og:image')
+      const want = b.governor ?? (b.sha.length === 1 ? b.sha[0] : 'site')
+      expect(page, b.path).toContain(`<meta property="og:image" content="${SITE_URL}/cards/${want}.png"/>`)
     }
   })
 

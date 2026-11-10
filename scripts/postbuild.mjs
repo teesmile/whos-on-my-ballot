@@ -2,7 +2,7 @@
 // 1. Bundle src/client/lookup.ts to out/lookup.js.
 // 2. Remove every framework <script> and script preload from the HTML; add lookup.js only where a page has [data-lookup], [data-copy] or [data-countdown].
 // 3. Delete the framework's JS files and RSC payloads (.txt), which nothing references any more. CSS stays.
-// 4. Fail if any HTML still loads a script other than /lookup.js.
+// 4. Fail if any HTML still loads a script other than /lookup.js (structured-data blocks are data and stay).
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -42,9 +42,10 @@ for (const file of walk(OUT)) {
   if (!file.endsWith('.html')) continue
   let html = fs.readFileSync(file, 'utf8')
   // React's empty separator comments between adjacent text nodes carry no content.
-  html = html.replace(SCRIPT, '').replace(PRELOAD, '').replaceAll('<!-- -->', '')
+  // Structured data (application/ld+json) is data, never executed: it stays (D-032). Every other script goes.
+  html = html.replace(SCRIPT, s => (s.startsWith('<script type="application/ld+json">') ? s : '')).replace(PRELOAD, '').replaceAll('<!-- -->', '')
   if (html.includes('data-lookup=') || html.includes('data-copy=') || html.includes('data-countdown=')) html = html.replace('</body>', '<script type="module" src="/lookup.js"></script></body>')
-  const left = [...html.matchAll(/<script\b[^>]*>/g)].map(m => m[0]).filter(s => !s.includes('src="/lookup.js"'))
+  const left = [...html.matchAll(/<script\b[^>]*>/g)].map(m => m[0]).filter(s => !s.includes('src="/lookup.js"') && s !== '<script type="application/ld+json">')
   if (left.length) throw new Error(`${file} still has scripts: ${left.join(' ')}`)
   if (/\/_next\/static\/[^"']+\.js/.test(html)) throw new Error(`${file} still references framework JS`)
   fs.writeFileSync(file, html)

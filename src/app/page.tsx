@@ -1,8 +1,16 @@
+import type { Metadata } from 'next'
+
+import { JsonLd } from '@/components/JsonLd'
 import { states } from '@/lib/data'
+import { homeGraph, pageMeta } from '@/lib/seo'
+import { SITE_DESCRIPTION, SITE_NAME } from '@/lib/site'
+
+export const metadata: Metadata = pageMeta({ title: SITE_NAME, path: '/', description: SITE_DESCRIPTION })
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={homeGraph()} />
       <h1>Where will you vote?</h1>
       <p className="lead">
         Your ballot depends on the polling unit where you are registered. Find it and see every race and every candidate on your ballot for
@@ -16,6 +24,7 @@ export default function Home() {
         (Governor and State House of Assembly).
       </p>
       <p>We never ask for your name or any personal details, and we don’t look you up anywhere.</p>
+      <p><a href="/about/find-your-polling-unit/">How to find your polling unit</a></p>
 
       <section aria-labelledby="by-code" className="by-code">
         <h2 id="by-code">Use the code on your voter card</h2>

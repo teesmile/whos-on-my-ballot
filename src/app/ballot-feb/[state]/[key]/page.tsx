@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 
 import { FebBallot } from '@/components/FebBallot'
-import { febBallots, race } from '@/lib/data'
-import { cardPath, febCardRace, SITE_URL } from '@/lib/site'
+import { febBallots, febBallotTitle, race } from '@/lib/data'
+import { pageMeta } from '@/lib/seo'
+import { cardAlt, cardPath, febCardRace } from '@/lib/site'
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -18,14 +19,11 @@ async function ballotOf(params: Promise<{ state: string, key: string }>) {
 
 export async function generateMetadata({ params }: { params: Promise<{ state: string, key: string }> }): Promise<Metadata> {
   const b = await ballotOf(params)
-  const title = `6 February ballot: ${b.sha.map(id => race(id).name).join(' or ')}, ${b.state.name}`
   const card = febCardRace(b.governor, b.sha)
-  return {
-    title,
-    description: 'Every race and every candidate on this ballot for 6 February 2027, as listed by INEC.',
-    openGraph: { title, url: `${SITE_URL}${b.path}`, ...(card ? { images: [{ url: cardPath(card), width: 1200, height: 630 }] } : {}) },
-    twitter: { card: card ? 'summary_large_image' : 'summary' },
-  }
+  return pageMeta({
+    title: febBallotTitle(b), path: b.path, description: 'Every race and every candidate on this ballot for 6 February 2027, as listed by INEC.',
+    ...(card ? { image: { url: cardPath(card), alt: cardAlt(race(card)) } } : {}),
+  })
 }
 
 export default async function Page({ params }: { params: Promise<{ state: string, key: string }> }) {

@@ -6,7 +6,25 @@ import { mateLabel, raceTitle, TICKET_OFFICES } from '@/components/RaceSection'
 import { Share } from '@/components/Share'
 import { SourceLine } from '@/components/SourceLine'
 import { aBallotFor, allCandidates, candidate, presidentialRace, source } from '@/lib/data'
-import { candidatePath, cardPath, correctionHref, SITE_URL } from '@/lib/site'
+import { pageGraph, pageMeta } from '@/lib/seo'
+import { candidatePath, cardAlt, cardPath, correctionHref, SITE_URL } from '@/lib/site'
+import { JsonLd } from '@/components/JsonLd'
+
+/** The same title pattern for every candidate (the working rules §1; D-032): name as INEC printed it, party, office. */
+const OFFICE_SHORT = { president: 'President', senate: 'Senate', house: 'House of Reps', governor: 'Governor', state_assembly: 'State Assembly' } as const
+const baseTitle = (race: { office: keyof typeof OFFICE_SHORT }, c: { party: string, candidate: { name: string } }) =>
+  `${c.candidate.name || NOT_PROVIDED} (${c.party}), ${OFFICE_SHORT[race.office]}`
+let shared: Set<string> | null = null
+/** When two candidates' pages would share a title (same name, party and office), both add their constituency: one rule for all. */
+function candidateTitle(race: { office: keyof typeof OFFICE_SHORT, name: string }, c: { party: string, candidate: { name: string } }) {
+  if (!shared) {
+    const counts = new Map<string, number>()
+    for (const x of allCandidates()) counts.set(baseTitle(x.race, x.c), (counts.get(baseTitle(x.race, x.c)) ?? 0) + 1)
+    shared = new Set([...counts].filter(([, n]) => n > 1).map(([k]) => k))
+  }
+  const base = baseTitle(race, c)
+  return shared.has(base) ? `${base}: ${race.name}` : base
+}
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -17,13 +35,11 @@ const of = async (params: Promise<{ id: string }>) => candidate((await params).i
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { race, c } = await of(params)
-  const title = `${c.candidate.name || NOT_PROVIDED} (${c.party}), ${raceTitle(race)}`
-  return {
-    title,
-    description: `As listed by INEC for the ${race.election === 'feb-2027' ? '6 February' : '16 January'} 2027 election: ${raceTitle(race)}.`,
-    openGraph: { title, url: `${SITE_URL}${candidatePath(c.id)}`, images: [{ url: cardPath(race.id), width: 1200, height: 630 }] },
-    twitter: { card: 'summary_large_image' },
-  }
+  return pageMeta({
+    title: candidateTitle(race, c), path: candidatePath(c.id),
+    description: `${c.candidate.name || NOT_PROVIDED} (${c.party}): ${raceTitle(race)}, ${race.election === 'feb-2027' ? '6 February' : '16 January'} 2027, as listed by INEC.`,
+    image: { url: cardPath(race.id), alt: cardAlt(race) },
+  })
 }
 
 /** Presidential background is all or none (D-013): shown only when every named person has a researched record. */
@@ -42,6 +58,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
   const inec = source(c.provenance.source_id)
   return (
     <>
+      <JsonLd data={pageGraph(candidatePath(c.id), candidateTitle(race, c), [['Home', '/'], [raceTitle(race), `${ballot.path}`], [name, candidatePath(c.id)]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
         {' / '}

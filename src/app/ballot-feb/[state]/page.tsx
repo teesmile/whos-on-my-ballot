@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 
 import { FebBallot } from '@/components/FebBallot'
-import { febBallots } from '@/lib/data'
-import { cardPath, SITE_URL } from '@/lib/site'
+import { febBallots, febBallotTitle, race } from '@/lib/data'
+import { pageMeta } from '@/lib/seo'
+import { cardAlt, cardPath, febCardRace } from '@/lib/site'
 
 // States where no State Assembly race applies on the list: Borno (not on INEC's list, OI-11) and the FCT (no assembly).
 export const dynamicParams = false
@@ -19,11 +20,14 @@ async function ballotOf(params: Promise<{ state: string }>) {
 
 export async function generateMetadata({ params }: { params: Promise<{ state: string }> }): Promise<Metadata> {
   const b = await ballotOf(params)
-  const title = `6 February ballot, ${b.state.name}`
-  return {
-    title,
-    openGraph: { title, url: `${SITE_URL}${b.path}`, ...(b.governor ? { images: [{ url: cardPath(b.governor), width: 1200, height: 630 }] } : {}) },
-  }
+  const card = febCardRace(b.governor, b.sha)
+  return pageMeta({
+    title: febBallotTitle(b), path: b.path,
+    description: b.state.name === 'FCT'
+      ? 'There is no election in the FCT on 6 February 2027: the FCT has no governor and no State House of Assembly.'
+      : `The ${b.state.name} ballot for 6 February 2027, as listed by INEC.`,
+    ...(card ? { image: { url: cardPath(card), alt: cardAlt(race(card)) } } : {}),
+  })
 }
 
 export default async function Page({ params }: { params: Promise<{ state: string }> }) {

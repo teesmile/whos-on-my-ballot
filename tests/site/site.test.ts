@@ -187,9 +187,10 @@ describe('every page', () => {
       const s = fs.readFileSync(f, 'utf8')
       expect(s, f).toContain('Not affiliated with or endorsed by INEC')
       const scripts = [...s.matchAll(/<script\b[^>]*>/g)].map(m => m[0])
-      expect(scripts.every(t => t === '<script type="module" src="/lookup.js">'), f).toBe(true)
-      // only links (a href) may point off-site; nothing the page loads may
+      expect(scripts.every(t => t === '<script type="module" src="/lookup.js">' || t === '<script type="application/ld+json">'), f).toBe(true)
+      // only links (a href) and the canonical address may point off-site; nothing the page loads may
       for (const m of s.matchAll(/<(?:link|img|script|iframe|source)\b[^>]*\b(?:href|src)="([^"]+)"/g)) {
+        if (m[0].startsWith('<link rel="canonical"')) continue
         expect(m[1].startsWith('/'), `${f}: ${m[1]}`).toBe(true)
       }
       expect(s).not.toMatch(/\sstyle="/)

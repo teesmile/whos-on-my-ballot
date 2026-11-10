@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from 'next'
 
 import { SourceLine } from '@/components/SourceLine'
-import { SITE_URL } from '@/lib/site'
+import { BUILT_BY, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: { default: 'Who’s on my ballot?', template: '%s · Who’s on my ballot?' },
-  description: 'Every candidate on your ballot in Nigeria’s 2027 elections, side by side, from INEC’s published lists.',
+  title: { default: SITE_NAME, template: `%s · ${SITE_NAME}` },
+  description: SITE_DESCRIPTION,
   referrer: 'no-referrer',
   metadataBase: new URL(SITE_URL),
 }
@@ -22,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="site-header">
           <a href="/" className="site-name">Who’s on my ballot?</a>
           <a href="/election-day/" className="site-nav">Election day</a>
+          <a href="/about/" className="site-nav">About</a>
         </header>
         <main id="main">{children}</main>
         <footer className="site-footer">
@@ -35,6 +36,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <p>Shown exactly as INEC printed them.</p>
           <ul className="link-list"><li><a href="/corrections/">Corrections</a></li></ul>
           <p>No tracking, no ads, no accounts. What you type stays in your browser.</p>
+          <p className="credit">
+            Built by
+            {' '}
+            <a href={BUILT_BY.url}>{BUILT_BY.name}</a>
+          </p>
         </footer>
       </body>
     </html>

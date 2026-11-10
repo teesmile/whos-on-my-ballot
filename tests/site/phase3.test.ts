@@ -88,7 +88,7 @@ describe('links', () => {
     for (const f of [...walk(OUT)].filter(x => x.endsWith('.html'))) {
       for (const [, href] of fs.readFileSync(f, 'utf8').matchAll(/href="(\/[^"#]*)/g)) {
         if (!exists.has(href)) {
-          const target = path.join(OUT, href)
+          const target = path.join(OUT, href.split('?')[0]) // a cache-busting query names the same file
           exists.set(href, fs.existsSync(target) && (fs.statSync(target).isFile() || fs.existsSync(path.join(target, 'index.html'))))
         }
         if (!exists.get(href)) broken.push(`${path.relative(OUT, f)} -> ${href}`)
@@ -111,15 +111,15 @@ describe('share cards', () => {
   const decode = (id: string) => PNG.sync.read(fs.readFileSync(path.join(OUT, 'cards', `${id}.png`)))
 
   it('one 1200x630 card per race', () => {
-    for (const r of allRaces()) {
-      const png = decode(r.id)
-      expect([png.width, png.height], r.id).toEqual([1200, 630])
+    for (const id of ['site', ...allRaces().map(r => r.id)]) {
+      const png = decode(id)
+      expect([png.width, png.height], id).toEqual([1200, 630])
     }
-    expect(fs.readdirSync(path.join(OUT, 'cards')).length).toBe(allRaces().length)
+    expect(fs.readdirSync(path.join(OUT, 'cards')).length).toBe(allRaces().length + 1) // plus the site card
   })
 
   it('cards use greys only: every pixel has equal red, green and blue', () => {
-    for (const r of allRaces()) {
+    for (const r of [{ id: 'site' }, ...allRaces()]) {
       const { data } = decode(r.id)
       for (let i = 0; i < data.length; i += 4) {
         if (Math.abs(data[i] - data[i + 1]) > 1 || Math.abs(data[i + 1] - data[i + 2]) > 1) {
@@ -134,7 +134,7 @@ describe('share cards', () => {
   const SNAPSHOTS = ['jan-2027-president', 'jan-2027-house-fct-municipal-bwari', 'jan-2027-house-lagos-eti-osa',
     'jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west', 'jan-2027-house-kwara-ilorin-east-ilorin-south',
     'jan-2027-house-niger-chanchaga', 'feb-2027-governor-taraba', 'feb-2027-sha-kwara-kaiama-wajibe-kemanji-kaiama-ii',
-    'feb-2027-sha-lagos-lagos-island-i']
+    'feb-2027-sha-lagos-lagos-island-i', 'site']
   for (const id of SNAPSHOTS) {
     it(`card matches its reviewed snapshot: ${id}`, () => {
       const fixture = path.resolve('tests/fixtures/cards', `${id}.png`)

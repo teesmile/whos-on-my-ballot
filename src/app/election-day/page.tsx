@@ -1,14 +1,16 @@
 import type { Metadata } from 'next'
 
 import { INEC_2027, INEC_LOCATOR } from '@/components/RaceSection'
+import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
 import { electionDay } from '@/lib/data'
 import { formatDay, formatTime, type Schedule } from '@/lib/election'
+import { pageGraph, pageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Election day',
+export const metadata: Metadata = pageMeta({
+  title: 'Election day: times and what to bring', suffix: true, path: '/election-day/',
   description: 'When polls open and close on 16 January and 6 February 2027, what to bring, and INEC’s own tools.',
-}
+})
 
 export const INEC_IREV = 'https://inecelectionresults.ng/'
 export const INEC_CVR = 'https://cvr.inecnigeria.org/'
@@ -23,6 +25,7 @@ export default function ElectionDay() {
   const close = formatTime(d.hours.close)
   return (
     <>
+      <JsonLd data={pageGraph('/election-day/', 'Election day: times and what to bring', [['Home', '/'], ['Election day', '/election-day/']])} />
       <h1>Election day</h1>
       {/* Server text is the schedule itself; the page script replaces it with where we are in it (no live announcements). */}
       <div className="countdown" data-countdown={JSON.stringify(schedule)}>

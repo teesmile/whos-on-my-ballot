@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 
+import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
 
 import { findLga, stateGeo, states } from '@/lib/data'
+import { pageGraph, pageMeta } from '@/lib/seo'
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -13,13 +15,18 @@ const lgaOf = async (params: Promise<{ code: string }>) => findLga((await params
 
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }): Promise<Metadata> {
   const { state, lga } = await lgaOf(params)
-  return { title: `${lga.name}, ${state.name}` }
+  return pageMeta({
+    title: `${lga.name} LGA, ${state.name}: wards`, suffix: true, path: `/lga/${lga.code.replace('/', '-')}/`,
+    description: `The wards of ${lga.name} LGA, ${state.name}. Choose yours to find your polling unit and every candidate on your 2027 ballot.`,
+  })
 }
 
 export default async function LgaPage({ params }: { params: Promise<{ code: string }> }) {
   const { state, lga } = await lgaOf(params)
+  const path = `/lga/${lga.code.replace('/', '-')}/`
   return (
     <>
+      <JsonLd data={pageGraph(path, `${lga.name} LGA, ${state.name}: wards`, [['Home', '/'], [state.name, `/state/${state.code}/`], [lga.name, path]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
         {' / '}

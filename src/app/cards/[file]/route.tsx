@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 import { raceTitle } from '@/components/RaceSection'
 import { allRaces, race } from '@/lib/data'
-import { cardSourceCaption } from '@/lib/site'
+import { cardSourceCaption, SITE_HOST } from '@/lib/site'
 
 // One share card per race, rendered at build time to /cards/<race-id>.png (1200x630, the Open Graph size).
 // Greys only and the same template for every race: no party colours, logos or photos (the working rules §1).
@@ -10,7 +10,7 @@ export const dynamic = 'force-static'
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  return allRaces().map(r => ({ file: `${r.id}.png` }))
+  return [{ file: 'site.png' }, ...allRaces().map(r => ({ file: `${r.id}.png` }))]
 }
 
 const INK = '#1a1a1a'
@@ -20,6 +20,7 @@ const PAPER = '#ffffff'
 
 export async function GET(_req: Request, { params }: { params: Promise<{ file: string }> }) {
   const { file } = await params
+  if (file === 'site.png') return siteCard()
   const r = race(file.replace(/\.png$/, ''))
   const n = r.candidates.length
   const columns = n > 8 ? 2 : 1
@@ -60,7 +61,26 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
         </div>
         <div style={{ display: 'flex', fontSize: 18, color: MUTED, marginTop: 'auto' }}>{caption}</div>
         <div style={{ display: 'flex', fontSize: 16, color: MUTED, marginTop: 4 }}>
-          {`${n} candidates in the order of INEC’s list · ballot.anthonyugwuja.dev · Independent project, not affiliated with INEC`}
+          {`${n} candidates in the order of INEC’s list · ${SITE_HOST} · Independent project, not affiliated with INEC`}
+        </div>
+      </div>
+    ),
+    { width: 1200, height: 630 },
+  )
+}
+
+/** The card for pages without a race of their own (home, states, wards, election day, about): the same greys, no candidates. */
+function siteCard() {
+  return new ImageResponse(
+    (
+      <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', background: PAPER, color: INK, padding: '72px 72px 48px', fontFamily: 'Geist' }}>
+        <div style={{ display: 'flex', fontSize: 30, color: MUTED }}>Nigeria’s 2027 elections · 16 January and 6 February</div>
+        <div style={{ display: 'flex', fontSize: 84, marginTop: 24, lineHeight: 1.1 }}>Who’s on my ballot?</div>
+        <div style={{ display: 'flex', fontSize: 38, marginTop: 28, lineHeight: 1.3, borderTop: `2px solid ${INK}`, paddingTop: 28 }}>
+          Every candidate on your ballot, side by side, from INEC’s published lists.
+        </div>
+        <div style={{ display: 'flex', fontSize: 22, color: MUTED, marginTop: 'auto' }}>
+          {`${SITE_HOST} · Independent project, not affiliated with or endorsed by INEC`}
         </div>
       </div>
     ),

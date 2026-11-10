@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
 
+import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
 
 import { stateGeo, states } from '@/lib/data'
+import { pageGraph, pageMeta } from '@/lib/seo'
+
+const titleOf = (name: string) => `${name}: find your polling unit`
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -10,13 +14,18 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }): Promise<Metadata> {
-  return { title: stateGeo((await params).code).name }
+  const st = stateGeo((await params).code)
+  return pageMeta({
+    title: titleOf(st.name), suffix: true, path: `/state/${st.code}/`,
+    description: `Find your polling unit in ${st.name}: search by its name or a landmark near it, or browse the LGAs and wards, then see every candidate on your ballot.`,
+  })
 }
 
 export default async function StatePage({ params }: { params: Promise<{ code: string }> }) {
   const st = stateGeo((await params).code)
   return (
     <>
+      <JsonLd data={pageGraph(`/state/${st.code}/`, titleOf(st.name), [['Home', '/'], [st.name, `/state/${st.code}/`]])} />
       <nav aria-label="Breadcrumb" className="crumbs"><a href="/">All states</a></nav>
       <h1>{st.name}</h1>
       <section aria-labelledby="search" className="by-search">

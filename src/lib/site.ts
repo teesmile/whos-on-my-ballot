@@ -1,4 +1,16 @@
-export const SITE_URL = 'https://ballot.anthonyugwuja.dev'
+/**
+ * The site's one address (D-032). Canonicals, the sitemap, robots.txt, structured data, Open Graph tags, share links,
+ * correction e-mails and the share cards all derive from it, so moving the site is this one change.
+ * Registered for one year without auto-renew; the owner confirms the purchase before launch (D-033).
+ */
+export const SITE_URL = 'https://whosonmyballot.ng'
+export const SITE_HOST = new URL(SITE_URL).host
+export const SITE_NAME = 'Who’s on my ballot?'
+export const SITE_DESCRIPTION = 'Every candidate on your ballot in Nigeria’s 2027 elections, side by side, from INEC’s published lists.'
+/** The owner's credit (D-032): footer and about page only, never in structured data. */
+export const BUILT_BY = { name: 'Anthony Ugwuja', url: 'https://anthonyugwuja.dev' }
+export const SITE_CARD = '/cards/site.png'
+export const SITE_CARD_ALT = 'Who’s on my ballot? Every candidate in Nigeria’s 2027 elections, from INEC’s published lists.'
 export const CORRECTIONS_EMAIL = 'corrections@anthonyugwuja.dev'
 
 export const candidatePath = (id: string) => `/c/${id}/`
@@ -46,4 +58,10 @@ export function febCardRace(governor: string | null, sha: string[]): string | nu
  *  presidential card, which is on every voter's ballot, rather than picking one of the possible races. */
 export function ballotCardRace(house: string[], presidentialId: string): string {
   return house.length === 1 ? house[0] : presidentialId
+}
+
+/** The text alternative for a race's share card (the same wording for every race). */
+export function cardAlt(r: { office: string, name: string }): string {
+  const office = { president: 'President', senate: 'Senate', house: 'House of Representatives', governor: 'Governor', state_assembly: 'State House of Assembly' }[r.office]
+  return r.office === 'president' ? 'Candidates for President, in the order of INEC’s list' : `Candidates for ${office}: ${r.name}, in the order of INEC’s list`
 }

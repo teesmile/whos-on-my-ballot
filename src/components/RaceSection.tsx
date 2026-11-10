@@ -102,6 +102,7 @@ export function UnresolvedGroup({ office, list }: { office: 'Senate' | 'House of
           {' '}
           races applies to each polling unit in your area, so all of them are shown. Only one will be on your ballot paper.
         </p>
+        {office === 'State House of Assembly' && <p><a href="/about/state-assembly-wards/">Why some wards show more than one State Assembly race</a></p>}
         <p>INEC’s own tools:</p>
         <ul className="link-list">
           <li><a href={INEC_LOCATOR}>INEC Polling Unit Locator</a></li>

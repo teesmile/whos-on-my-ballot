@@ -1,6 +1,8 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
+import { SITE_URL } from '../../src/lib/site'
+
 const PAGES = [
   '/',
   '/state/24/',
@@ -13,6 +15,9 @@ const PAGES = [
   '/c/jan-2027-president-a/',
   '/c/jan-2027-house-lagos-eti-osa-ndc/',
   '/corrections/',
+  '/about/',
+  '/about/find-your-polling-unit/',
+  '/about/state-assembly-wards/',
   '/ballot-feb/lagos/surulere-ii/',
   '/ballot-feb/abia/umuahia-central-or-umuahia-east-or-umuahia-north/',
   '/ballot-feb/rivers/oyigbo-or-tai/',
@@ -54,6 +59,8 @@ test('keyboard: the code lookup works with the keyboard alone', async ({ page })
   await page.keyboard.press('Tab') // skip link
   await page.keyboard.press('Tab') // site name
   await page.keyboard.press('Tab') // "Election day" in the header
+  await page.keyboard.press('Tab') // "About" in the header
+  await page.keyboard.press('Tab') // "How to find your polling unit"
   await page.keyboard.press('Tab') // code input
   await expect(page.getByLabel(/Delimitation code/)).toBeFocused()
   await page.keyboard.type('01/01/01/001')
@@ -71,7 +78,7 @@ test('copy link button copies the page link, and is hidden without JavaScript', 
   await page.goto('/c/jan-2027-president-apc/')
   await page.getByRole('button', { name: 'Copy link' }).click()
   await expect(page.getByRole('button', { name: 'Link copied' })).toBeVisible()
-  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('https://ballot.anthonyugwuja.dev/c/jan-2027-president-apc/')
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(`${SITE_URL}/c/jan-2027-president-apc/`)
 })
 
 test.describe('candidate page without JavaScript', () => {
