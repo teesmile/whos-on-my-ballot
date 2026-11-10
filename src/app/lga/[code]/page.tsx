@@ -29,7 +29,7 @@ export default async function LgaPage({ params }: { params: Promise<{ code: stri
       <JsonLd data={pageGraph(path, `${lga.name} LGA, ${state.name}: wards`, [['Home', '/'], [state.name, `/state/${state.code}/`], [lga.name, path]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
-        {' / '}
+        <span aria-hidden="true"> / </span>
         <a href={`/state/${state.code}/`}>{state.name}</a>
       </nav>
       <h1>

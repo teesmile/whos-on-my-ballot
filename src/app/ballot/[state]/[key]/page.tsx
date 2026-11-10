@@ -39,7 +39,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
       <JsonLd data={pageGraph(b.path, janBallotTitle(b), [['Home', '/'], [b.state.name, `/state/${b.state.code}/`], [janBallotTitle(b), b.path]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
-        {' / '}
+        <span aria-hidden="true"> / </span>
         <a href={`/state/${b.state.code}/`}>{b.state.name}</a>
       </nav>
       <h1>Your ballot for 16 January 2027</h1>

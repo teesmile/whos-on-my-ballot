@@ -38,7 +38,7 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
     c.check(not res.errors, "build raised no errors", "; ".join(res.errors[:20]) + (" …" if len(res.errors) > 20 else ""))
 
     c.note("\n## File set")
-    pdfs = [s for s in res.sources if s.get("local_file", "").endswith(".pdf")]
+    pdfs = [s for s in res.sources if s.get("local_file", "").endswith(".pdf") and s.get("race")]
     pres = [s for s in pdfs if s["race"] == "president"]
     sen_states = {s["state"] for s in pdfs if s["race"] == "senate" and s.get("state")}
     house_states = {s["state"] for s in pdfs if s["race"] == "house" and s.get("state")}

@@ -42,9 +42,9 @@ export default async function WardPage({ params }: { params: Promise<{ code: str
       <JsonLd data={pageGraph(pathOf(ward.code), wardTitle(ward.name, lga.name), [['Home', '/'], [state.name, `/state/${state.code}/`], [lga.name, `/lga/${lga.code.replace('/', '-')}/`], [ward.name, pathOf(ward.code)]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
-        {' / '}
+        <span aria-hidden="true"> / </span>
         <a href={`/state/${state.code}/`}>{state.name}</a>
-        {' / '}
+        <span aria-hidden="true"> / </span>
         <a href={`/lga/${lga.code.replace('/', '-')}/`}>{lga.name}</a>
       </nav>
       <h1>

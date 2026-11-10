@@ -120,3 +120,6 @@ main p > a { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
 .steps { padding-left: 1.4rem; }
 .steps li { margin: 0.5rem 0; }
 .entry-note { color: var(--muted); font-size: 0.9rem; margin: 0.15rem 0 0; }
+/* The owner's civic note (D-034): plain text, set apart by space and a rule, no icon or colour. */
+.civic-note { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; }
+.civic-note p[data-civic-note] { font-weight: 600; margin: 0 0 0.5rem; }

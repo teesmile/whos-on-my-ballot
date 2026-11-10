@@ -1,0 +1,23 @@
+name: Lighthouse on slow 3G
+# Manual: Lighthouse on a low-end Android phone over slow 3G, the working rules' first design target.
+# Runs on GitHub's runners, where timing is not disturbed by other work on a local machine.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  slow3g:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm build
+      - run: LH_PROFILE=slow3g pnpm lighthouse

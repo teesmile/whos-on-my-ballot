@@ -22,17 +22,25 @@ const PAGES = [
   '/c/feb-2027-governor-taraba-apc/',
 ]
 
+// LH_PROFILE=slow3g: a low-end Android phone on slow 3G (400 ms round trip, 400 kbps down, CPU 6x slower), the working
+// rules' first design target. Pass: accessibility 100 and LCP under 4 s (the line between "needs improvement" and "poor").
+const SLOW = process.env.LH_PROFILE === 'slow3g'
+const config = SLOW
+  ? { extends: 'lighthouse:default', settings: { formFactor: 'mobile', throttlingMethod: 'simulate', throttling: { rttMs: 400, throughputKbps: 400, cpuSlowdownMultiplier: 6 }, screenEmulation: { mobile: true, width: 360, height: 640, deviceScaleFactor: 2, disabled: false } } }
+  : undefined
+if (SLOW) console.log('Profile: slow 3G, low-end phone (400 ms RTT, 400 kbps, CPU x6, 360 px)')
+
 const server = spawn('node', ['scripts/serve-out.mjs'], { env: { ...process.env, PORT: String(PORT) }, stdio: 'ignore' })
 await sleep(800)
 const chrome = await chromeLauncher.launch({ chromePath: chromium.executablePath(), chromeFlags: ['--headless=new', '--no-sandbox'] })
 let failed = 0
 try {
   for (const p of PAGES) {
-    const { lhr } = await lighthouse(`http://localhost:${PORT}${p}`, { port: chrome.port, output: 'json', logLevel: 'error', onlyCategories: ['performance', 'accessibility'], formFactor: 'mobile' })
+    const { lhr } = await lighthouse(`http://localhost:${PORT}${p}`, { port: chrome.port, output: 'json', logLevel: 'error', onlyCategories: ['performance', 'accessibility'], formFactor: 'mobile' }, config)
     const perf = Math.round(lhr.categories.performance.score * 100)
     const a11y = Math.round(lhr.categories.accessibility.score * 100)
     const lcp = lhr.audits['largest-contentful-paint'].numericValue / 1000
-    const ok = perf >= 95 && a11y === 100 && lcp < 2.0
+    const ok = SLOW ? a11y === 100 && lcp < 4.0 : perf >= 95 && a11y === 100 && lcp < 2.0
     if (!ok) failed++
     console.log(`${ok ? 'PASS' : 'FAIL'} ${p}  performance ${perf}  accessibility ${a11y}  LCP ${lcp.toFixed(2)} s  TBT ${Math.round(lhr.audits['total-blocking-time'].numericValue)} ms  CLS ${lhr.audits['cumulative-layout-shift'].numericValue.toFixed(3)}`)
   }

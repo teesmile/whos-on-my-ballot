@@ -159,3 +159,15 @@ describe('icons and credit', () => {
     }
   })
 })
+
+describe('the owner\'s civic note (D-034)', () => {
+  const NOTE = 'Whoever wins will serve four years. Don’t sell your vote. Vote your conscience. Vote for competence.'
+  it('appears, exactly and with its citation, on the home and election-day pages only', () => {
+    for (const [p, h] of pages) {
+      const n = h.split('<footer')[0].split(NOTE).length - 1
+      expect(n, p).toBe(p === '/' || p === '/election-day/' ? 1 : 0)
+      if (n) expect(h, p).toMatch(/data-source="constitution-1999"><a href="[^"]+">Four-year terms: sections 64\(1\), 105\(1\), 135\(2\) and 180\(2\): Constitution of the Federal Republic of Nigeria 1999/)
+    }
+  })
+})
+

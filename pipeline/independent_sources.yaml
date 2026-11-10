@@ -22,9 +22,9 @@ sources:
   nan:           {hosts: [nannews.ng], publisher: News Agency of Nigeria, kind: news,
                   ownership: "federal government news agency, under the APC-led federal government", tied_to_parties: [APC], tied_to_people: []}
   newtelegraph:  {hosts: [newtelegraphng.com], publisher: New Telegraph, kind: news,
-                  ownership: "owned by Orji Uzor Kalu, an APC senator", tied_to_parties: [APC], tied_to_people: []}
+                  ownership: "chaired by Orji Uzor Kalu, APC senator for Abia North (owner-reviewed, D-035)", tied_to_parties: [APC], tied_to_people: []}
   pmnews:        {hosts: [pmnewsnigeria.com], publisher: P.M. News, kind: news,
-                  ownership: "Independent Communications Network Ltd; co-founded by Bayo Onanuga, adviser to President Tinubu",
+                  ownership: "Independent Communications Network Ltd; co-founded by Bayo Onanuga, now President Tinubu's Special Adviser on Information and Strategy (owner-reviewed, D-035)",
                   tied_to_parties: [APC], tied_to_people: [jan-2027-president-apc]}
   saharareporters: {hosts: [saharareporters.com], publisher: Sahara Reporters, kind: news,
                   ownership: "founded by Omoyele Sowore, the AAC presidential candidate and AAC founder",

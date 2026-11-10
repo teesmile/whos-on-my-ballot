@@ -61,7 +61,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
       <JsonLd data={pageGraph(candidatePath(c.id), candidateTitle(race, c), [['Home', '/'], [raceTitle(race), `${ballot.path}`], [name, candidatePath(c.id)]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
-        {' / '}
+        <span aria-hidden="true"> / </span>
         <a href={`${ballot.path}#race-${race.id}`}>{raceTitle(race)}</a>
       </nav>
       <h1 data-candidate-id={c.id}>{name}</h1>

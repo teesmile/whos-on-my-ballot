@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { INEC_2027, INEC_LOCATOR } from '@/components/RaceSection'
+import { CivicNote } from '@/components/CivicNote'
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
 import { electionDay } from '@/lib/data'
@@ -82,6 +83,7 @@ export default function ElectionDay() {
       </section>
 
       <p><a href="/">Find who’s on your ballot</a></p>
+      <CivicNote />
     </>
   )
 }

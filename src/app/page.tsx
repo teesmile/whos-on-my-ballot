@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import { CivicNote } from '@/components/CivicNote'
 import { JsonLd } from '@/components/JsonLd'
 import { states } from '@/lib/data'
 import { homeGraph, pageMeta } from '@/lib/seo'
@@ -51,6 +52,7 @@ export default function Home() {
           ))}
         </ul>
       </section>
+      <CivicNote />
     </>
   )
 }

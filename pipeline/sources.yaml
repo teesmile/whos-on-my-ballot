@@ -47,6 +47,12 @@ documents:
     page_url: https://www.inecnigeria.org/press/final-list-of-candidates-for-2027-state-houses-of-assembly-elections
     title: "INEC: Final list of candidates for 2027 State Houses of Assembly elections (statutory notice, 31 Oct 2026)"
     sn_per_state: true   # serial numbers restart in each state
+  # Reference document (D-034): the four-year terms cited under the civic note. Hashed and watched; not extracted.
+  - id: constitution-1999
+    kind: reference
+    url: "https://nigeriareposit.nln.gov.ng/server/api/core/bitstreams/b62fb209-2716-48c4-b277-f684ca18d29d/content"
+    page_url: https://nigeriareposit.nln.gov.ng/items/399df25a-52d0-4972-9365-c618cd3ddf5f
+    title: "Constitution of the Federal Republic of Nigeria 1999 (Federal Government Press), National Library of Nigeria"
   - id: inec-constituencies-workbook
     kind: workbook
     url: "https://web.archive.org/web/20260815145133id_/https://inecnigeria.org/wp-content/uploads/2019/02/Name-of-Senatorial-DistrictsFederal-and-State-Constituencies-Nationwide-1.xls"

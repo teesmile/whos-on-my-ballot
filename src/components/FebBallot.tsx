@@ -23,7 +23,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
       <JsonLd data={pageGraph(b.path, febBallotTitle(b), [['Home', '/'], [st, `/state/${b.state.code}/`], [febBallotTitle(b), b.path]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
-        {' / '}
+        <span aria-hidden="true"> / </span>
         <a href={`/state/${b.state.code}/`}>{st}</a>
       </nav>
       <h1>Your ballot for 6 February 2027</h1>

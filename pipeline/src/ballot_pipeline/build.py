@@ -116,7 +116,7 @@ def build(log=print) -> BuildResult:
     rows_by_source: dict[str, list[ex.Row]] = {}
     independent_sn: dict[str, list[int]] = {}
     for s in sources:
-        if s.get("local_file", "").endswith(".pdf"):
+        if s.get("local_file", "").endswith(".pdf") and s.get("race"):  # candidate lists; reference documents are only hashed
             rows = _cached_rows(s)
             fallback_states = s.get("use_states")
             if fallback_states:
