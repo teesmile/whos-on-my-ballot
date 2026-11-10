@@ -1,992 +1,1413 @@
 _about: Ward names in INEC's constituency workbook (STATE CONST.) matched to INEC's polling-unit locator, within the constituency's own LGA. Proposed
   by similarity (>= 0.9, or 0.85-0.9 with the same first two letters and 5+ letters), clearly the closest, numerals agreeing, and never a ward
-  another constituency claims. Generated 2026-11-10; part of the owner's Launch A review (D-028).
+  another constituency claims. Generated 2026-11-10; part of the owner's Launch A review (D-028). Each entry cites the workbook row its fragment
+  comes from; the build checks the row, the locator name and the LGA (review 5b).
 SC/100/AN:
   TRANSNKISSI:
+    source_id: inec-constituencies-workbook
+    row: 158
     locator_ward: TRANS NKISI
     code: 04/17/12
     similarity: 0.95
   WOLIWOLAYOUT:
+    source_id: inec-constituencies-workbook
+    row: 158
     locator_ward: WOLUWO LAYOUT
     code: 04/17/15
     similarity: 0.92
 SC/137/BY:
   CAPEFORMOSA:
+    source_id: inec-constituencies-workbook
+    row: 251
     locator_ward: CAPE FARMOSA
     code: 06/01/06
     similarity: 0.91
 SC/138/BY:
   ODIOAMADIEAMA:
+    source_id: inec-constituencies-workbook
+    row: 252
     locator_ward: ODIOMA/DIEMA
     code: 06/01/05
     similarity: 0.92
   OKPOMA:
+    source_id: inec-constituencies-workbook
+    row: 252
     locator_ward: OKPOAMA
     code: 06/01/04
     similarity: 0.92
 SC/139/BY:
   SANGAN:
+    source_id: inec-constituencies-workbook
+    row: 253
     locator_ward: SANGANA
     code: 06/01/10
     similarity: 0.92
 SC/143/BY:
   OTUABULAII:
+    source_id: inec-constituencies-workbook
+    row: 257
     locator_ward: OTUABULA
     code: 06/05/13
     similarity: 0.89
 SC/147/BY:
   IGBED:
+    source_id: inec-constituencies-workbook
+    row: 261
     locator_ward: IGBEDI
     code: 06/03/11
     similarity: 0.91
   OKOLOBASABAGERIA:
+    source_id: inec-constituencies-workbook
+    row: 261
     locator_ward: OKOLOBA (SABAGREIA) II
     code: 06/03/10
     similarity: 0.88
 SC/159/BY:
   WESTBOMA:
+    source_id: inec-constituencies-workbook
+    row: 273
     locator_ward: WEST BOMO
     code: 06/07/06
     similarity: 0.88
 SC/190/BO:
   FOGUWA:
+    source_id: inec-constituencies-workbook
+    row: 339
     locator_ward: FOUGUWA
     code: 08/01/03
     similarity: 0.92
 SC/197/BO:
   UFEYEGUJILE:
+    source_id: inec-constituencies-workbook
+    row: 367
     locator_ward: UFAYE / GUJILE
     code: 08/08/04
     similarity: 0.91
 SC/198/BO:
   ARDIMI:
+    source_id: inec-constituencies-workbook
+    row: 371
     locator_ward: ARDIMINI
     code: 08/09/01
     similarity: 0.86
 SC/201/BO:
   BITAZGE:
+    source_id: inec-constituencies-workbook
+    row: 379
     locator_ward: BITA / IZGE
     code: 08/11/02
     similarity: 0.93
   GAVVAGAPALWA:
+    source_id: inec-constituencies-workbook
+    row: 379
     locator_ward: GAVVA / AGAPALWA
     code: 08/11/04
     similarity: 0.96
   GUDUFNADADIYO:
+    source_id: inec-constituencies-workbook
+    row: 379
     locator_ward: GUDUF NAGADIYO
     code: 08/11/05
     similarity: 0.92
 SC/202/BO:
   GWZNANGPUSDA:
+    source_id: inec-constituencies-workbook
+    row: 384
     locator_ward: GWANZANG PUSDA
     code: 08/12/03
     similarity: 0.88
 SC/203/BO:
   BAALEGALTIMARI:
+    source_id: inec-constituencies-workbook
+    row: 389
     locator_ward: BALE GALTIMARI
     code: 08/13/02
     similarity: 0.96
 SC/204/BO:
   BENISHIEKH:
+    source_id: inec-constituencies-workbook
+    row: 393
     locator_ward: BENISHEIKH
     code: 08/14/02
     similarity: 0.9
 SC/206/BO:
   AUNOCHABOL:
+    source_id: inec-constituencies-workbook
+    row: 399
     locator_ward: AUNO / CHABBOL
     code: 08/16/01
     similarity: 0.95
   DALWAEASTMALARIKAIGAMARI:
+    source_id: inec-constituencies-workbook
+    row: 399
     locator_ward: DAWA EAST / MALARI / KANGAMARI
     code: 08/16/03
     similarity: 0.94
 SC/207/BO:
   MODUARIBARWATI:
+    source_id: inec-constituencies-workbook
+    row: 402
     locator_ward: MODUARI / BARWARI
     code: 08/17/09
     similarity: 0.93
 SC/208/BO:
   YIMIRITHLANG:
+    source_id: inec-constituencies-workbook
+    row: 403
     locator_ward: YIMIRTHALANG
     code: 08/18/10
     similarity: 0.92
 SC/209/BO:
   ANADUWA:
+    source_id: inec-constituencies-workbook
+    row: 404
     locator_ward: ANADUA
     code: 08/19/02
     similarity: 0.92
   KOSHEKE:
+    source_id: inec-constituencies-workbook
+    row: 404
     locator_ward: KOSHEBE
     code: 08/19/04
     similarity: 0.86
 SC/210/BO:
   AYIYASKA:
+    source_id: inec-constituencies-workbook
+    row: 406
     locator_ward: AYI / YASKU
     code: 08/20/02
     similarity: 0.88
 SC/211/BO:
   BULABULIN:
+    source_id: inec-constituencies-workbook
+    row: 409
     locator_ward: BULABLIN
     code: 08/21/03
     similarity: 0.94
 SC/218/CR:
   ITIGIGI:
+    source_id: inec-constituencies-workbook
+    row: 447
     locator_ward: ITIGIDI
     code: 09/01/09
     similarity: 0.86
 SC/221/CR:
   IDUNDUANYAGASE:
+    source_id: inec-constituencies-workbook
+    row: 450
     locator_ward: IDUNDU/ANYANGANSE
     code: 09/03/04
     similarity: 0.93
 SC/222/CR:
   AKPANIKANYA:
+    source_id: inec-constituencies-workbook
+    row: 451
     locator_ward: AKPANKANYA
     code: 09/04/02
     similarity: 0.95
   EFUTIWANG:
+    source_id: inec-constituencies-workbook
+    row: 451
     locator_ward: EFUT INWANG
     code: 09/04/08
     similarity: 0.95
 SC/223/CR:
   AGUAGUNEOKURIKE:
+    source_id: inec-constituencies-workbook
+    row: 452
     locator_ward: AGWAGUNE/OKURIKE
     code: 09/06/03
     similarity: 0.93
 SC/225/CR:
   KAWAGOMBAWOP:
+    source_id: inec-constituencies-workbook
+    row: 454
     locator_ward: KAKWAGOM/BAWOP
     code: 09/07/09
     similarity: 0.96
 SC/226/CR:
   ABOUCHICHE:
+    source_id: inec-constituencies-workbook
+    row: 455
     locator_ward: ABUOCHICHE
     code: 09/05/01
     similarity: 0.9
 SC/25/AD:
   NAMATARI:
+    source_id: inec-constituencies-workbook
+    row: 43
     locator_ward: NAMTARI
     code: 02/21/04
     similarity: 0.93
 SC/296/ED:
   IBILOEKPESAEKORIKIRANILEOKE:
+    source_id: inec-constituencies-workbook
+    row: 560
     locator_ward: IBILLO/ EKPESA/ EKOR/ IKIRAN-ILE/ OKE
     code: 12/01/04
     similarity: 0.98
   IMIOGALAMPESEBEKUMAEKPE:
+    source_id: inec-constituencies-workbook
+    row: 560
     locator_ward: IMOGA/ LAMPESE/ BEKUMA/ EKPE
     code: 12/01/03
     similarity: 0.98
 SC/297/ED:
   EWANATTEIKPESHIEGBIGELE:
+    source_id: inec-constituencies-workbook
+    row: 561
     locator_ward: ENWAN/ATTE/IKPESHI/EGBIGELE
     code: 12/01/08
     similarity: 0.98
   UNEMENEKHUAAKPAMAAYETOROEKPEDOERHURHUNOSU:
+    source_id: inec-constituencies-workbook
+    row: 561
     locator_ward: UNEME-NEKHUA/AKPAMA/ AIYETORO/ EKPEDO/ ERHURUN/ UNEME OSU
     code: 12/01/09
     similarity: 0.92
 SC/299/ED:
   EGOROIDOAUHUN:
+    source_id: inec-constituencies-workbook
+    row: 565
     locator_ward: EGORO/IDOA/UKHUN
     code: 12/06/03
     similarity: 0.96
 SC/301/ED:
   AMEDEOKHIAN:
+    source_id: inec-constituencies-workbook
+    row: 571
     locator_ward: AMEDOKHIAN
     code: 12/04/07
     similarity: 0.95
 SC/304/ED:
   AGENEBORE:
+    source_id: inec-constituencies-workbook
+    row: 579
     locator_ward: AGENEBODE
     code: 12/08/01
     similarity: 0.89
 SC/308/ED:
   OREGBEN:
+    source_id: inec-constituencies-workbook
+    row: 588
     locator_ward: OREGBENI
     code: 12/11/02
     similarity: 0.93
 SC/309/ED:
   IKEKHENIDUMUODOEGBIKI:
+    source_id: inec-constituencies-workbook
+    row: 591
     locator_ward: EKEKHEN/IDUMUOGO/EGBIKI
     code: 12/10/01
     similarity: 0.9
 SC/311/ED:
   IKEMAEGUADASE:
+    source_id: inec-constituencies-workbook
+    row: 595
     locator_ward: IKPEMA/EGUADASE
     code: 12/12/09
     similarity: 0.96
 SC/314/ED:
   OFUNMWENGBE:
+    source_id: inec-constituencies-workbook
+    row: 600
     locator_ward: OFUNMWEGBE
     code: 12/14/05
     similarity: 0.95
 SC/318/ED:
   AVBIOSO:
+    source_id: inec-constituencies-workbook
+    row: 607
     locator_ward: AVBIOSI
     code: 12/17/05
     similarity: 0.86
   ERUERRE:
+    source_id: inec-constituencies-workbook
+    row: 607
     locator_ward: ERUERE
     code: 12/17/07
     similarity: 0.92
   SABONGIDDAORAOGBETURU:
+    source_id: inec-constituencies-workbook
+    row: 607
     locator_ward: SABONGIDA/ORA/OGBETURU
     code: 12/17/04
     similarity: 0.98
   UHUNMORA:
+    source_id: inec-constituencies-workbook
+    row: 607
     locator_ward: UHONMORA
     code: 12/17/02
     similarity: 0.88
 SC/33/AD:
   DAMARRE:
+    source_id: inec-constituencies-workbook
+    row: 67
     locator_ward: DAMARE
     code: 02/04/02
     similarity: 0.92
 SC/346/EN:
   NDEABORI:
+    source_id: inec-constituencies-workbook
+    row: 650
     locator_ward: NDEABO
     code: 14/01/08
     similarity: 0.86
 SC/349/EN:
   AMOJI:
+    source_id: inec-constituencies-workbook
+    row: 654
     locator_ward: AMORJI
     code: 14/03/04
     similarity: 0.91
   IBAGWANIKEEME:
+    source_id: inec-constituencies-workbook
+    row: 654
     locator_ward: IBAGWA-NIKE/EDEM
     code: 14/03/10
     similarity: 0.89
   UGWOGONIKE:
+    source_id: inec-constituencies-workbook
+    row: 654
     locator_ward: UGWUGO NIKE
     code: 14/03/11
     similarity: 0.9
 SC/351/EN:
   UMUNEYO:
+    source_id: inec-constituencies-workbook
+    row: 656
     locator_ward: UMUNEVO
     code: 14/04/02
     similarity: 0.86
 SC/354/EN:
   OBELAGUUMANA:
+    source_id: inec-constituencies-workbook
+    row: 659
     locator_ward: OBELEAGU UMANA
     code: 14/06/19
     similarity: 0.96
   UMUMBANDIUNO:
+    source_id: inec-constituencies-workbook
+    row: 659
     locator_ward: UMUMBA NDIUMO
     code: 14/06/08
     similarity: 0.92
 SC/355/EN:
   DIOGBEUMUNKE:
+    source_id: inec-constituencies-workbook
+    row: 660
     locator_ward: DIOGBE/UMUNKO
     code: 14/07/12
     similarity: 0.92
 SC/359/EN:
   AMEBOHAYSAYORGBA:
+    source_id: inec-constituencies-workbook
+    row: 666
     locator_ward: AMEBO /HAUSA/ YORUBA
     code: 14/09/02
     similarity: 0.88
   IHEAKAUGOAKOYI:
+    source_id: inec-constituencies-workbook
+    row: 666
     locator_ward: IHEAKA (UGO EKOYI)
     code: 14/09/05
     similarity: 0.93
   IHEAKPUAJUONAOGBAGU:
+    source_id: inec-constituencies-workbook
+    row: 666
     locator_ward: IHEAKPU (AJUONA OGBAGU WARD)
     code: 14/09/08
     similarity: 0.9
   IHEAKPUEZZINGWU:
+    source_id: inec-constituencies-workbook
+    row: 666
     locator_ward: IHEAKPU (EZZI NGWU WARD)
     code: 14/09/07
     similarity: 0.88
   OVOKOUMUELOOVOKOAGU:
+    source_id: inec-constituencies-workbook
+    row: 666
     locator_ward: OVOKO (UMUELO/OVOKO AGU WARD)
     code: 14/09/13
     similarity: 0.9
   OVOKOUMULOLO:
+    source_id: inec-constituencies-workbook
+    row: 666
     locator_ward: OVOKO (UMULOLO WARD)
     code: 14/09/14
     similarity: 0.86
 SC/360/EN:
   NKEII:
+    source_id: inec-constituencies-workbook
+    row: 667
     locator_ward: NEKE II
     code: 14/10/04
     similarity: 0.91
 SC/361/EN:
   AKPAWFUISIENUAMAWGUEZE:
+    source_id: inec-constituencies-workbook
+    row: 668
     locator_ward: AKPOFU/ISIENU/AMAGUNZE
     code: 14/11/03
     similarity: 0.86
 SC/362/EN:
   AKEGBEUGWUOKWO:
+    source_id: inec-constituencies-workbook
+    row: 669
     locator_ward: AKEGBE-UGWU (OKWUO)
     code: 14/12/03
     similarity: 0.97
   AMURI:
+    source_id: inec-constituencies-workbook
+    row: 669
     locator_ward: AMURRI
     code: 14/12/02
     similarity: 0.91
   IBITEAKEGBEUGWUII:
+    source_id: inec-constituencies-workbook
+    row: 669
     locator_ward: IBITE AKEGBE UGWU
     code: 14/12/13
     similarity: 0.94
   OBUOFFOA:
+    source_id: inec-constituencies-workbook
+    row: 669
     locator_ward: OBUOFFIA
     code: 14/12/05
     similarity: 0.88
 SC/364/EN:
   OBIMOWUOKA:
+    source_id: inec-constituencies-workbook
+    row: 672
     locator_ward: OBIMO/IKWOKA
     code: 14/13/18
     similarity: 0.86
   OWERREUMUOYE:
+    source_id: inec-constituencies-workbook
+    row: 672
     locator_ward: OWERRE/UMUOYO
     code: 14/13/17
     similarity: 0.92
 SC/366/EN:
   AMALLA:
+    source_id: inec-constituencies-workbook
+    row: 675
     locator_ward: AMALA
     code: 14/15/01
     similarity: 0.91
   OGBODDUABA:
+    source_id: inec-constituencies-workbook
+    row: 675
     locator_ward: OGBODU-ABA
     code: 14/15/07
     similarity: 0.95
 SC/396/IM:
   NSUAIKEE:
+    source_id: inec-constituencies-workbook
+    row: 730
     locator_ward: NSU 'A' IKPE
     code: 16/03/03
     similarity: 0.88
 SC/398/IM:
   ISIOPO:
+    source_id: inec-constituencies-workbook
+    row: 737
     locator_ward: ISIOKPO
     code: 16/05/02
     similarity: 0.92
 SC/400/IM:
   ATONEERIM:
+    source_id: inec-constituencies-workbook
+    row: 745
     locator_ward: ATONERIM
     code: 16/07/04
     similarity: 0.94
 SC/41/AD:
   BANSHIKA:
+    source_id: inec-constituencies-workbook
+    row: 80
     locator_ward: BANGSHIKA
     code: 02/07/01
     similarity: 0.94
 SC/411/IM:
   EGBMAA:
+    source_id: inec-constituencies-workbook
+    row: 776
     locator_ward: EGBEMA 'A'
     code: 16/18/03
     similarity: 0.92
   OBITITIMGBISHI:
+    source_id: inec-constituencies-workbook
+    row: 776
     locator_ward: OBITTI/MGBISHI
     code: 16/18/09
     similarity: 0.96
 SC/412/IM:
   UMUALUMOKE:
+    source_id: inec-constituencies-workbook
+    row: 777
     locator_ward: UMUALUMUOKE
     code: 16/19/07
     similarity: 0.95
 SC/414/IM:
   OHAFOROFPOROUMUTANZE:
+    source_id: inec-constituencies-workbook
+    row: 783
     locator_ward: OHAFOR/OKPORO/UMUTANZE
     code: 16/21/01
     similarity: 0.95
 SC/42/AD:
   GANFADA:
+    source_id: inec-constituencies-workbook
+    row: 81
     locator_ward: GANGFADA
     code: 02/12/03
     similarity: 0.93
 SC/48/AD:
   GARTAGHUMCHI:
+    source_id: inec-constituencies-workbook
+    row: 93
     locator_ward: GARTA / GHUNCHI
     code: 02/13/03
     similarity: 0.92
 SC/583/KG:
   EGEIRUVUCHINOMI:
+    source_id: inec-constituencies-workbook
+    row: 1071
     locator_ward: EGE/IRUVOCHINOMI
     code: 22/01/11
     similarity: 0.93
   IDANNUHUA:
+    source_id: inec-constituencies-workbook
+    row: 1071
     locator_ward: IDANUHUA
     code: 22/01/04
     similarity: 0.94
   IRUVUNCHEBA:
+    source_id: inec-constituencies-workbook
+    row: 1071
     locator_ward: IRUVUCHEBA
     code: 22/01/03
     similarity: 0.95
   OGAMINAN:
+    source_id: inec-constituencies-workbook
+    row: 1071
     locator_ward: OGAMINANA
     code: 22/01/02
     similarity: 0.94
 SC/584/KG:
   ADOGUAKPAMIRAOGODOOHUOVENO:
+    source_id: inec-constituencies-workbook
+    row: 1072
     locator_ward: ADOGU/APAMIRA/OGODO UHUOVENE
     code: 22/02/11
     similarity: 0.9
   OBANGEDEOHUWENEOKULOINYERE:
+    source_id: inec-constituencies-workbook
+    row: 1072
     locator_ward: OBANGEDE/OHUNENE/UKOKO INYE'RE
     code: 22/02/12
     similarity: 0.88
   ODONAUNOSI:
+    source_id: inec-constituencies-workbook
+    row: 1072
     locator_ward: ODONU/UNOSI
     code: 22/02/09
     similarity: 0.9
 SC/587/KG:
   OZOGULOKPANCHE:
+    source_id: inec-constituencies-workbook
+    row: 1075
     locator_ward: OZONGULO/KPANCHE
     code: 22/04/04
     similarity: 0.97
 SC/591/KG:
   UKAJA:
+    source_id: inec-constituencies-workbook
+    row: 1079
     locator_ward: UKWAJA
     code: 22/07/04
     similarity: 0.91
 SC/593/KG:
   AGBEDAEGGAOKEDAYO:
+    source_id: inec-constituencies-workbook
+    row: 1081
     locator_ward: EGBEDA EGGA/OKEDAYO
     code: 22/09/10
     similarity: 0.94
   IFFEIKOUIOKEJUMU:
+    source_id: inec-constituencies-workbook
+    row: 1081
     locator_ward: IFFE/IKOYI/OKEJUMU
     code: 22/09/12
     similarity: 0.94
 SC/594/KG:
   ARUTUPAKIRI:
+    source_id: inec-constituencies-workbook
+    row: 1082
     locator_ward: AKUTUPA-KIRI
     code: 22/10/10
     similarity: 0.91
 SC/595/KG:
   ODAKIKOTOKARFE:
+    source_id: inec-constituencies-workbook
+    row: 1083
     locator_ward: ODAKI-KOTON KARFE
     code: 22/11/02
     similarity: 0.97
   UKWOKOTOKAFE:
+    source_id: inec-constituencies-workbook
+    row: 1083
     locator_ward: UKWO-KOTON KARFE
     code: 22/11/01
     similarity: 0.92
 SC/601/KG:
   OBANGEDEOHUODO:
+    source_id: inec-constituencies-workbook
+    row: 1089
     locator_ward: OBANGEDE / UHUODO
     code: 22/16/10
     similarity: 0.93
   OKAITOOSUNGWEN:
+    source_id: inec-constituencies-workbook
+    row: 1089
     locator_ward: OKAITO / USUNGWEN
     code: 22/16/08
     similarity: 0.93
 SC/603/KG:
   ABUGAAZUJA:
+    source_id: inec-constituencies-workbook
+    row: 1091
     locator_ward: ABUGA/OZUJA
     code: 22/17/10
     similarity: 0.9
   UPOGOROUDENKU:
+    source_id: inec-constituencies-workbook
+    row: 1091
     locator_ward: UPOGORO/ODENKU
     code: 22/17/11
     similarity: 0.92
 SC/607/KG:
   ISANLUESAOKOLOKEOKUNRAN:
+    source_id: inec-constituencies-workbook
+    row: 1095
     locator_ward: ISAULU ESA/OKOLOKE/OKUNRAN
     code: 22/21/04
     similarity: 0.96
 SC/636/LA:
   SHASAHAKOWONJO:
+    source_id: inec-constituencies-workbook
+    row: 1162
     locator_ward: SHASHA/AKOWONJO
     code: 24/03/01
     similarity: 0.93
 SC/638/LA:
   AMUWOODOFINHOUSINGESTATE:
+    source_id: inec-constituencies-workbook
+    row: 1165
     locator_ward: AMUWO-ODOFIN HOUSING ESTATE, MILE 2
     code: 24/04/01
     similarity: 0.91
 SC/642/LA:
   AWANJIGOH:
+    source_id: inec-constituencies-workbook
+    row: 1171
     locator_ward: AWHANJIGOH
     code: 24/06/02
     similarity: 0.95
 SC/644/LA:
   AJAGANNABE:
+    source_id: inec-constituencies-workbook
+    row: 1174
     locator_ward: AJAGANABE
     code: 24/07/05
     similarity: 0.95
 SC/650/LA:
   IJUISHAGA:
+    source_id: inec-constituencies-workbook
+    row: 1183
     locator_ward: IJU ISAGA
     code: 24/10/05
     similarity: 0.94
 SC/651/LA:
   IJAIYEJOKORO:
+    source_id: inec-constituencies-workbook
+    row: 1184
     locator_ward: IJAIYE/OJOKORO
     code: 24/10/08
     similarity: 0.96
   PANADAABULEEGBA:
+    source_id: inec-constituencies-workbook
+    row: 1184
     locator_ward: PAMADA/ABULE-EGBA
     code: 24/10/07
     similarity: 0.93
 SC/653/LA:
   ONIGBONGBOMILITARYCANTOMENT:
+    source_id: inec-constituencies-workbook
+    row: 1188
     locator_ward: ONIGBONGBO/MILITARY CANTONMENT
     code: 24/11/08
     similarity: 0.98
 SC/654/LA:
   AGAIJOMU:
+    source_id: inec-constituencies-workbook
+    row: 1189
     locator_ward: AGA/IJIMU
     code: 24/12/04
     similarity: 0.88
 SC/656/LA:
   OWORONSOKI:
+    source_id: inec-constituencies-workbook
+    row: 1193
     locator_ward: OWORONSHOKI
     code: 24/13/01
     similarity: 0.95
 SC/662/LA:
   IDIOROODIOLOWO:
+    source_id: inec-constituencies-workbook
+    row: 1204
     locator_ward: IDI-ORO/ODI-OLOWU
     code: 24/16/02
     similarity: 0.93
 SC/665/LA:
   TAFFI:
+    source_id: inec-constituencies-workbook
+    row: 1210
     locator_ward: TAFI
     code: 24/17/08
     similarity: 0.89
 SC/672/NW:
   ANHOBABA:
+    source_id: inec-constituencies-workbook
+    row: 1250
     locator_ward: ANCHOBABA
     code: 25/01/02
     similarity: 0.94
 SC/676/NW:
   MADANCHI:
+    source_id: inec-constituencies-workbook
+    row: 1256
     locator_ward: MADAUCHI
     code: 25/03/08
     similarity: 0.88
 SC/677/NW:
   AKPANJA:
+    source_id: inec-constituencies-workbook
+    row: 1257
     locator_ward: AKPANAJA
     code: 25/03/05
     similarity: 0.93
 SC/681/NW:
   TUDUNKOFAR:
+    source_id: inec-constituencies-workbook
+    row: 1264
     locator_ward: TUDUN KOFA T.V
     code: 25/06/03
     similarity: 0.86
 SC/685/NW:
   CIROMA:
+    source_id: inec-constituencies-workbook
+    row: 1269
     locator_ward: CHIROMA
     code: 25/08/07
     similarity: 0.92
 SC/686/NW:
   ARIKLYA:
+    source_id: inec-constituencies-workbook
+    row: 1271
     locator_ward: ARIKYA
     code: 25/08/04
     similarity: 0.92
   ASHIGE:
+    source_id: inec-constituencies-workbook
+    row: 1271
     locator_ward: ASHIGIE
     code: 25/08/06
     similarity: 0.92
 SC/687/NW:
   LAMIGA:
+    source_id: inec-constituencies-workbook
+    row: 1273
     locator_ward: LAMINGA
     code: 25/09/13
     similarity: 0.92
 SC/689/NW:
   LIZZENKEFFIEZZEN:
+    source_id: inec-constituencies-workbook
+    row: 1276
     locator_ward: LIZZIN KEFFI/EZZEN
     code: 25/10/06
     similarity: 0.94
 SC/690/NW:
   NASSARAWAEGGON:
+    source_id: inec-constituencies-workbook
+    row: 1278
     locator_ward: NASARAWA EGGON
     code: 25/10/01
     similarity: 0.96
 SC/691/NW:
   AGWATSAHI:
+    source_id: inec-constituencies-workbook
+    row: 1280
     locator_ward: AGWATASHI
     code: 25/11/01
     similarity: 0.89
 SC/693/NW:
   BUKGAKARMO:
+    source_id: inec-constituencies-workbook
+    row: 1282
     locator_ward: BUGAKARMO
     code: 25/12/03
     similarity: 0.95
 SC/723/OG:
   KESIEMERE:
+    source_id: inec-constituencies-workbook
+    row: 1349
     locator_ward: KEESI/EMERE
     code: 27/02/04
     similarity: 0.95
 SC/726/OG:
   AGOOKOO:
+    source_id: inec-constituencies-workbook
+    row: 1352
     locator_ward: AGO OKO
     code: 27/01/03
     similarity: 0.92
   IKTAOSINOLOMORE:
+    source_id: inec-constituencies-workbook
+    row: 1352
     locator_ward: ITA-OSHIN/OLOMORE
     code: 27/01/12
     similarity: 0.93
 SC/727/OG:
   MOOLOKIASIPA:
+    source_id: inec-constituencies-workbook
+    row: 1353
     locator_ward: MOLOKO-ASIPA
     code: 27/15/05
     similarity: 0.87
 SC/730/OG:
   PAPLANTO:
+    source_id: inec-constituencies-workbook
+    row: 1356
     locator_ward: PAPALANTO
     code: 27/06/06
     similarity: 0.94
 SC/732/OG:
   AKOONIGBAGBOGELEE:
+    source_id: inec-constituencies-workbook
+    row: 1358
     locator_ward: AKO-ONIGBAGBO/GELETE
     code: 27/09/10
     similarity: 0.97
 SC/735/OG:
   ODESA:
+    source_id: inec-constituencies-workbook
+    row: 1362
     locator_ward: ODO-ESA
     code: 27/11/02
     similarity: 0.91
 SC/736/OG:
   ALAGBILE:
+    source_id: inec-constituencies-workbook
+    row: 1363
     locator_ward: ALA/IGBILE
     code: 27/17/12
     similarity: 0.94
 SC/738/OG:
   AYEGBAIIJOKUN:
+    source_id: inec-constituencies-workbook
+    row: 1366
     locator_ward: AYEGBAMI/IJOKUN
     code: 27/20/03
     similarity: 0.96
 SC/742/OG:
   ILARAALAAGBE:
+    source_id: inec-constituencies-workbook
+    row: 1370
     locator_ward: ILARA/ALAGBE
     code: 27/13/05
     similarity: 0.96
 SC/743/OG:
   IMASAYI:
+    source_id: inec-constituencies-workbook
+    row: 1371
     locator_ward: IMASAI
     code: 27/04/06
     similarity: 0.92
 SC/744/OG:
   OHUNGBE:
+    source_id: inec-constituencies-workbook
+    row: 1372
     locator_ward: OHUNBE
     code: 27/04/08
     similarity: 0.92
 SC/745/OG:
   IFORNYINTEDO:
+    source_id: inec-constituencies-workbook
+    row: 1373
     locator_ward: IFONYINTEDO
     code: 27/14/10
     similarity: 0.96
 SC/748/OG:
   AGBARA:
+    source_id: inec-constituencies-workbook
+    row: 1376
     locator_ward: AGBARA I
     code: 27/03/15
     similarity: 0.92
 SC/775/OS:
   OBAAALAILORO:
+    source_id: inec-constituencies-workbook
+    row: 1420
     locator_ward: OBALA ILORO
     code: 29/05/06
     similarity: 0.91
 SC/776/OS:
   OBAAGUN:
+    source_id: inec-constituencies-workbook
+    row: 1421
     locator_ward: OBAGUN
     code: 29/14/11
     similarity: 0.92
 SC/780/OS:
   EESAOTUNBAALEODE:
+    source_id: inec-constituencies-workbook
+    row: 1425
     locator_ward: ESA OTUN BAALE ODE
     code: 29/25/12
     similarity: 0.97
   FAAJIOPETE:
+    source_id: inec-constituencies-workbook
+    row: 1425
     locator_ward: FAJI/OPETE
     code: 29/25/04
     similarity: 0.95
   JAGUNOSIBAALEODE:
+    source_id: inec-constituencies-workbook
+    row: 1425
     locator_ward: JAGUN OSI BALE ODE
     code: 29/25/13
     similarity: 0.97
   OLOYANELEMOSOEESA:
+    source_id: inec-constituencies-workbook
+    row: 1425
     locator_ward: OLOYAN ELEMOSHO / ESA
     code: 29/25/14
     similarity: 0.94
   OOREAGBEYE:
+    source_id: inec-constituencies-workbook
+    row: 1425
     locator_ward: ORE/AGBEYE
     code: 29/25/06
     similarity: 0.95
 SC/782/OS:
   OTUNBALOGUN:
+    source_id: inec-constituencies-workbook
+    row: 1427
     locator_ward: OTUN BALOGUN 'A'
     code: 29/30/14
     similarity: 0.96
 SC/786/OS:
   YAKOOYO:
+    source_id: inec-constituencies-workbook
+    row: 1431
     locator_ward: YAKOYO
     code: 29/15/05
     similarity: 0.92
 SC/787/OS:
   MEROWORADE:
+    source_id: inec-constituencies-workbook
+    row: 1432
     locator_ward: MEFOWORADE
     code: 29/16/05
     similarity: 0.9
 SC/788/OS:
   ILOROIROYE:
+    source_id: inec-constituencies-workbook
+    row: 1433
     locator_ward: ILORO/ROYE
     code: 29/18/07
     similarity: 0.95
 SC/791/OS:
   JEBUJESA:
+    source_id: inec-constituencies-workbook
+    row: 1436
     locator_ward: IJEBU-JESA
     code: 29/28/03
     similarity: 0.94
 SC/792/OS:
   OBALOFON:
+    source_id: inec-constituencies-workbook
+    row: 1437
     locator_ward: OBALUFON
     code: 29/03/09
     similarity: 0.88
   OSEOMURURAL:
+    source_id: inec-constituencies-workbook
+    row: 1437
     locator_ward: ODE-OMU RURAL
     code: 29/03/08
     similarity: 0.91
 SC/794/OS:
   ALUSEKE:
+    source_id: inec-constituencies-workbook
+    row: 1439
     locator_ward: ALUSEKERE
     code: 29/07/05
     similarity: 0.88
   BABAEJEMU:
+    source_id: inec-constituencies-workbook
+    row: 1439
     locator_ward: BARA EJEMU
     code: 29/07/11
     similarity: 0.89
   ISIBOBUHARIISOLA:
+    source_id: inec-constituencies-workbook
+    row: 1439
     locator_ward: ISIBO/BUARI-ISOLA
     code: 29/07/08
     similarity: 0.97
   OLOBAATAPARA:
+    source_id: inec-constituencies-workbook
+    row: 1439
     locator_ward: OLABA/ATAPARA
     code: 29/07/01
     similarity: 0.92
 SC/799/OS:
   ISEROIKONOFIN:
+    source_id: inec-constituencies-workbook
+    row: 1444
     locator_ward: ISERO/IKONIFIN
     code: 29/26/06
     similarity: 0.92
 SC/800/OS:
   INISAAATOIGBON:
+    source_id: inec-constituencies-workbook
+    row: 1445
     locator_ward: INISA I/AATO/IGBON
     code: 29/10/10
     similarity: 0.97
   OLAAYEAGUNRODO:
+    source_id: inec-constituencies-workbook
+    row: 1445
     locator_ward: OLA/AYE/AGURODO
     code: 29/10/06
     similarity: 0.96
 SC/87/AN:
   UZOAWKA:
+    source_id: inec-constituencies-workbook
+    row: 145
     locator_ward: UZOAKWA
     code: 04/12/19
     similarity: 0.86
 SC/871/RV:
   ULAKWOI:
+    source_id: inec-constituencies-workbook
+    row: 1557
     locator_ward: ULAKWO
     code: 32/11/13
     similarity: 0.92
 SC/875/RV:
   LUEKUNYOKURU:
+    source_id: inec-constituencies-workbook
+    row: 1561
     locator_ward: LLUEKU/NYOKURU
     code: 32/14/03
     similarity: 0.96
 SC/876/RV:
   RUMUDARA:
+    source_id: inec-constituencies-workbook
+    row: 1562
     locator_ward: RUMUODARA
     code: 32/15/02
     similarity: 0.94
   RUMUMASHI:
+    source_id: inec-constituencies-workbook
+    row: 1562
     locator_ward: RUMUOMASI
     code: 32/15/08
     similarity: 0.89
   RUMUODOMANYA:
+    source_id: inec-constituencies-workbook
+    row: 1562
     locator_ward: RUMUODOMAYA (3A)
     code: 32/15/04
     similarity: 0.88
   RUMUOKWU:
+    source_id: inec-constituencies-workbook
+    row: 1562
     locator_ward: RUMUOKWU (2B)
     code: 32/15/03
     similarity: 0.89
 SC/877/RV:
   RUMUIGBO:
+    source_id: inec-constituencies-workbook
+    row: 1563
     locator_ward: RUMUIGBO (8A)
     code: 32/15/12
     similarity: 0.89
 SC/880/RV:
   WAKAM:
+    source_id: inec-constituencies-workbook
+    row: 1566
     locator_ward: WAKAMA
     code: 32/17/11
     similarity: 0.91
 SC/883/RV:
   DIEPRI:
+    source_id: inec-constituencies-workbook
+    row: 1569
     locator_ward: DIEPIRI
     code: 32/20/03
     similarity: 0.92
 SC/884/RV:
   OYIGBOCENTRALASA:
+    source_id: inec-constituencies-workbook
+    row: 1570
     locator_ward: OYIGBO CENTRAL
     code: 32/21/09
     similarity: 0.9
   OYIGBOWESTASA:
+    source_id: inec-constituencies-workbook
+    row: 1570
     locator_ward: OYIGBO WEST
     code: 32/21/08
     similarity: 0.87
 SC/885/RV:
   ELEKAHIAH:
+    source_id: inec-constituencies-workbook
+    row: 1571
     locator_ward: ELEKAHIA
     code: 32/22/19
     similarity: 0.94
   ORABALI:
+    source_id: inec-constituencies-workbook
+    row: 1571
     locator_ward: OROABALI
     code: 32/22/03
     similarity: 0.93
   OROWOROKWO:
+    source_id: inec-constituencies-workbook
+    row: 1571
     locator_ward: OROWORUKWO
     code: 32/22/09
     similarity: 0.9
 SC/888/RV:
   GIOKPOGHORGBAMVI:
+    source_id: inec-constituencies-workbook
+    row: 1574
     locator_ward: GIO/KPORGHOR/GBAM
     code: 32/23/06
     similarity: 0.9
   KOROMAHOROIV:
+    source_id: inec-constituencies-workbook
+    row: 1574
     locator_ward: KOROMA/HORO
     code: 32/23/04
     similarity: 0.91
 SC/889/SO:
   MAIKULLI:
+    source_id: inec-constituencies-workbook
+    row: 1581
     locator_ward: MAIKULKI
     code: 33/01/07
     similarity: 0.88
 SC/892/SO:
   WABABASALAU:
+    source_id: inec-constituencies-workbook
+    row: 1588
     locator_ward: WABABE/SALAU
     code: 33/03/02
     similarity: 0.91
 SC/896/SO:
   CHALASMAKUYA:
+    source_id: inec-constituencies-workbook
+    row: 1598
     locator_ward: CHILAS/MAKUYA
     code: 33/06/02
     similarity: 0.92
 SC/898/SO:
   CHIMMOLAAREWA:
+    source_id: inec-constituencies-workbook
+    row: 1601
     locator_ward: CHIMOLA AREWA
     code: 33/07/05
     similarity: 0.96
   IDANKAYA:
+    source_id: inec-constituencies-workbook
+    row: 1601
     locator_ward: GIDAN KAYA
     code: 33/07/07
     similarity: 0.94
 SC/899/SO:
   KALMMALO:
+    source_id: inec-constituencies-workbook
+    row: 1602
     locator_ward: KALMALO
     code: 33/08/02
     similarity: 0.93
 SC/902/SO:
   NASGUDU:
+    source_id: inec-constituencies-workbook
+    row: 1611
     locator_ward: NASAGUDU
     code: 33/11/06
     similarity: 0.93
 SC/903/SO:
   GANIA:
+    source_id: inec-constituencies-workbook
+    row: 1613
     locator_ward: GANDI 'A'
     code: 33/12/06
     similarity: 0.91
   GWADDODIGBUWAI:
+    source_id: inec-constituencies-workbook
+    row: 1613
     locator_ward: GWADDODI/GIDAN BU WAI
     code: 33/12/04
     similarity: 0.88
   TAMIYA:
+    source_id: inec-constituencies-workbook
+    row: 1613
     locator_ward: TSAMIYA
     code: 33/12/08
     similarity: 0.92
 SC/906/SO:
   DADINMAHE:
+    source_id: inec-constituencies-workbook
+    row: 1617
     locator_ward: DANDIN MAHE
     code: 33/14/03
     similarity: 0.95
 SC/913/SO:
   DONGONDAJISALAH:
+    source_id: inec-constituencies-workbook
+    row: 1628
     locator_ward: DOGONDAJI/SALA
     code: 33/18/07
     similarity: 0.93
 SC/916/SO:
   GUMBIWAQJEKE:
+    source_id: inec-constituencies-workbook
+    row: 1634
     locator_ward: GUMBI/WAJAKE
     code: 33/21/03
     similarity: 0.87
 SC/917/SO:
   DINBISO:
+    source_id: inec-constituencies-workbook
+    row: 1638
     locator_ward: DIMBISO
     code: 33/22/04
     similarity: 0.86
   MARAAFA:
+    source_id: inec-constituencies-workbook
+    row: 1638
     locator_ward: MARAFA
     code: 33/22/01
     similarity: 0.92
 SC/918/SO:
   BIRNINRUWA:
+    source_id: inec-constituencies-workbook
+    row: 1641
     locator_ward: BIRNIRUWA
     code: 33/23/09
     similarity: 0.95
 SC/92/AN:
   AZIGBO:
+    source_id: inec-constituencies-workbook
+    row: 150
     locator_ward: AZUIGBO
     code: 04/15/05
     similarity: 0.92
 SC/941/OG:
   GANAJINA:
+    source_id: inec-constituencies-workbook
+    row: 1369
     locator_ward: IGAN/AJINA
     code: 27/19/02
     similarity: 0.94
   ODOFINIMAGBOPETEKUN:
+    source_id: inec-constituencies-workbook
+    row: 1369
     locator_ward: ODOFIN/IMAGBO/PETEKUN/DAWARA
     code: 27/19/04
     similarity: 0.86
 SC/96/AN:
   IYOWAODEKPEOHITA:
+    source_id: inec-constituencies-workbook
+    row: 154
     locator_ward: IYIOWA/ODEKPE/OHITA
     code: 04/16/05
     similarity: 0.97
 SC/969/ZF:
   BIRNINMAGAJILGA:
+    source_id: inec-constituencies-workbook
+    row: 1721
     locator_ward: BIRNIN MAGAJI
     code: 36/03/01
     similarity: 0.89
 SC/970/ZF:
   KWASHABAWA:
+    source_id: inec-constituencies-workbook
+    row: 1722
     locator_ward: KWASHBAWA
     code: 36/14/06
     similarity: 0.95
   MASHEME:
+    source_id: inec-constituencies-workbook
+    row: 1722
     locator_ward: MASHEM
     code: 36/14/07
     similarity: 0.92
 SC/978/ZF:
   NAHUCHE:
+    source_id: inec-constituencies-workbook
+    row: 1734
     locator_ward: NAHUCE
     code: 36/05/06
     similarity: 0.92
 SC/979/ZF:
   RUWANDOROWA:
+    source_id: inec-constituencies-workbook
+    row: 1735
     locator_ward: RUWAN DORAWA
     code: 36/10/10
     similarity: 0.91
 SC/980/ZF:
   KUYAMBANA:
+    source_id: inec-constituencies-workbook
+    row: 1736
     locator_ward: KUYAN BANA
     code: 36/10/07
     similarity: 0.89
 SC/981/ZF:
   SABONBIRNI:
+    source_id: inec-constituencies-workbook
+    row: 1737
     locator_ward: SABON BIRINI
     code: 36/01/07
     similarity: 0.95
 SC/985/ZF:
   DAMAGAGAMAGIWA:
+    source_id: inec-constituencies-workbook
+    row: 1741
     locator_ward: DAMAGA / DAMAGIWA
     code: 36/09/02
     similarity: 0.93
 SC/987/ZF:
   FLALE:
+    source_id: inec-constituencies-workbook
+    row: 1743
     locator_ward: FALALE
     code: 36/06/04
     similarity: 0.91
 SC/988/ZF:
   ILLELARAWWAL:
+    source_id: inec-constituencies-workbook
+    row: 1744
     locator_ward: ILLELAR AWAL
     code: 36/06/08
     similarity: 0.96

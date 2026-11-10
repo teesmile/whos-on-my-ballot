@@ -40,7 +40,7 @@ def apply_irev(ward_races: dict[str, list[str]], list_scs: list, race_of: dict[t
             wb_codes[(s.state, _code(s.workbook.code))].append(race_of[(s.state, s.name)])
 
     link: dict[tuple[str, str, str], str | None] = {}
-    for c, w in irev.items():
+    for c, w in sorted(irev.items()):
         if c not in ward_names:
             continue
         st = ward_names[c][0]
@@ -71,7 +71,7 @@ def apply_irev(ward_races: dict[str, list[str]], list_scs: list, race_of: dict[t
 
     out = dict(ward_races)
     how: dict[str, str] = {}
-    for c, races in ward_races.items():
+    for c, races in sorted(ward_races.items()):  # sorted: the same inputs give the same report
         st, lga, name = ward_names[c]
         w = irev.get(c)
         if not races or not w or key(w.name) != key(name) or not lga_ok[(st, lga)]:

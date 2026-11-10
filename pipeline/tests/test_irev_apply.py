@@ -60,3 +60,43 @@ def test_irevs_race_outside_the_wards_possible_races_is_ignored():
     w = irev(**{"24/20/01": IrevWard("24/20/01", "ORILE", "SC/1/LA", "AGEGE I")})
     out, how, _ = apply_irev({"24/20/01": BOTH}, SCS, RACE, w, names)
     assert out["24/20/01"] == BOTH and "24/20/01" not in how
+
+
+def _write_state(d, sid, wards):
+    import json
+
+    (d / f"elections-{sid}.json").write_text(json.dumps({"success": True, "data": [
+        {"election_date": "2023-03-18T00:00:00.000Z", "domain": {"state_constituency_id": 1, "code": "SC/1/AB", "name": "ABA NORTH"}},
+        {"election_date": "2023-03-18T00:00:00.000Z", "domain": {"state_constituency_id": 2, "code": "SC/2/AB", "name": "ABA CENTRAL"}}]}))
+    (d / f"wards-{sid}.json").write_text(json.dumps({"success": True, "data": [
+        {"state": {"code": "01"}, "lga": {"code": "01"}, "wards": wards}]}))
+
+
+def test_a_ward_irev_lists_twice_fails_the_build_and_is_not_used(tmp_path, monkeypatch):
+    """Review 5b: keeping the first of two contradictory rows would publish an arbitrary ballot."""
+    from ballot_pipeline import irev as irev_mod
+
+    for sid in range(1, 38):
+        _write_state(tmp_path, sid, [{"code": f"{sid:02d}", "name": "W", "state_constituency_id": 1}] if sid > 1 else [
+            {"code": "01", "name": "EZIAMA", "state_constituency_id": 1}, {"code": "01", "name": "EZIAMA", "state_constituency_id": 2}])
+    monkeypatch.setattr(irev_mod, "IREV_RAW_DIR", tmp_path)
+    wards, _, errors = irev_mod.load()
+    assert "01/01/01" not in wards
+    assert any("01/01/01 more than once" in e for e in errors)
+
+
+def test_an_incomplete_cache_fails_the_build(tmp_path, monkeypatch):
+    from ballot_pipeline import irev as irev_mod
+
+    _write_state(tmp_path, 1, [{"code": "01", "name": "EZIAMA", "state_constituency_id": 1}])
+    monkeypatch.setattr(irev_mod, "IREV_RAW_DIR", tmp_path)
+    assert any("incomplete" in e for e in irev_mod.load()[2])
+
+
+def test_a_registered_irev_source_without_its_metadata_or_record_fails(tmp_path):
+    from ballot_pipeline.irev import preconditions
+
+    reg = {"id": "inec-irev-2023-assembly"}
+    assert len(preconditions(reg, {}, tmp_path)) == 2
+    (tmp_path / "crawl.json").write_text("{}")
+    assert preconditions(reg, {"inec-irev-2023-assembly": {}}, tmp_path) == []

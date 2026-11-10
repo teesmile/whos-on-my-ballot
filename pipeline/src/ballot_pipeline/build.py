@@ -360,9 +360,9 @@ def build(log=print) -> BuildResult:
     geo_dicts = {st: {"name": st, "lgas": [{"name": l.name, "wards": [{"code": f"{sc_}/{l.code}/{w[0]}", "name": w[1]}
                                                                      for w in l.wards]} for l in lgas]}
                  for st, (sc_, lgas) in locator.items()}
-    ward_spellings = {c: {f: v["code"] for f, v in d.items()}
-                      for c, d in (yaml.safe_load((PIPELINE_DIR / "ward_spellings.yaml").read_text()) or {}).items()
-                      if not c.startswith("_")}
+    ward_spellings_full = {c: d for c, d in (yaml.safe_load((PIPELINE_DIR / "ward_spellings.yaml").read_text()) or {}).items()
+                           if not c.startswith("_")}
+    ward_spellings = {c: {f: v["code"] for f, v in d.items()} for c, d in ward_spellings_full.items()}
     sc_units, _, sc_errors = map_state_constituencies(
         str(RAW_DIR / by_id["inec-constituencies-workbook"]["local_file"]), geo_dicts,
         {st: {key(k): v for k, v in d.items()} for st, d in (aliases.get("lga_spellings") or {}).items()},
@@ -380,6 +380,11 @@ def build(log=print) -> BuildResult:
         if r.office == "state_assembly":
             printed_at[(r.state, r.name)] |= {(c.provenance.page, c.provenance.sn) for c in r.candidates}
     ward_lga = {w["code"]: (st, l["name"]) for st, g in geo_dicts.items() for l in g["lgas"] for w in l["wards"]}
+    from .override_checks import check_ward_spellings
+
+    ward_info = {w["code"]: (st, l["name"], w["name"]) for st, g in geo_dicts.items() for l in g["lgas"] for w in l["wards"]}
+    errors.extend(check_ward_spellings(ward_spellings_full, {s.code: s for s in sc_units},
+                                       {s["source_id"] for s in sources if "sha256" in s}, ward_info))
     errors.extend(check_sha_overrides(aliases.get("state_constituency_overrides") or {}, aliases.get("sha_lga_overrides") or {},
                                       {s["source_id"] for s in sources if "sha256" in s}, sc_units, ward_lga, printed_at))
     sha_list, ward_to_sha, sha_notes, sha_errors = reconcile(dict(list_names), sc_units, sc_idx,
@@ -390,13 +395,17 @@ def build(log=print) -> BuildResult:
     sha_how: dict[str, str] = {}
     irev_report: list[str] = []
     irev_reg = reg.get("irev")
-    if irev_reg and (RAW_DIR / "irev" / "crawl.json").exists():
+    if irev_reg:  # registered means required: a missing cache or manifest fails the build instead of hiding OI-13 (review 5b)
         from .irev import load as load_irev
         from .irev import verify_manifest as verify_irev
         from .irev_apply import apply_irev
 
+        from .irev import preconditions as irev_preconditions
+
+        errors.extend(irev_preconditions(irev_reg, by_id, RAW_DIR / "irev"))
         errors.extend(verify_irev())
-        irev_wards, irev_problems = load_irev()
+        irev_wards, irev_problems, irev_errors = load_irev()
+        errors.extend(irev_errors)
         ward_names = {w["code"]: (st, l["name"], w["name"]) for st, g in geo_dicts.items() for l in g["lgas"] for w in l["wards"]}
         ward_to_sha_races, sha_how, irev_report = apply_irev(ward_to_sha_races, sha_list, sha_race_by_name, irev_wards, ward_names)
         irev_report = [p for p in irev_problems if not p.startswith("IReV ward 37/")] + irev_report  # the FCT has no assembly

@@ -66,3 +66,34 @@ def check_sha_overrides(sc_overrides: dict, lga_overrides: dict, hashed: set[str
             if (state, r) not in rows_by_state:
                 errors.append(f"{label}: workbook row {r} is not a {state} constituency row")
     return errors
+
+
+def check_ward_spellings(spellings: dict, units_by_code: dict, hashed: set[str], ward_info: dict[str, tuple[str, str, str]]) -> list[str]:
+    """ward_spellings.yaml: each workbook ward-name fragment matched to a locator ward. Each entry must cite the workbook row whose
+    composition text holds the fragment, and name a locator ward that exists, is spelled as recorded, and lies in the constituency's
+    LGA (review 5b)."""
+    from .geo import key
+
+    errors: list[str] = []
+    for code, frags in spellings.items():
+        s = units_by_code.get(code)
+        for frag, v in frags.items():
+            label = f"ward_spellings {code} {frag}"
+            if v.get("source_id") != WORKBOOK or WORKBOOK not in hashed:
+                errors.append(f"{label}: must cite source_id {WORKBOOK} (a hashed source)")
+                continue
+            if s is None:
+                errors.append(f"{label}: no such code in INEC's workbook")
+                continue
+            if v.get("row") != s.row:
+                errors.append(f"{label}: cites row {v.get('row')}, but the code is on row {s.row}")
+            if frag not in key(s.comp):
+                errors.append(f"{label}: row {s.row} ({s.comp!r}) does not contain this fragment")
+            st, lga, name = ward_info.get(v.get("code"), (None, None, None))
+            if name is None:
+                errors.append(f"{label}: ward {v.get('code')} is not in INEC's locator")
+            elif name != v.get("locator_ward"):
+                errors.append(f"{label}: ward {v.get('code')} is {name!r} in INEC's locator, not {v.get('locator_ward')!r}")
+            elif st != s.state or (s.lgas and lga not in s.lgas):
+                errors.append(f"{label}: ward {v.get('code')} is in {st}/{lga}, outside the constituency's LGAs {s.lgas}")
+    return errors
