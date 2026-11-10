@@ -95,7 +95,7 @@ describe('6 February ballot pages', () => {
   it('Borno says INEC’s list has no State Assembly candidates for it; the FCT has no State Assembly section', () => {
     const borno = all.filter(b => b.state.name === 'BORNO')
     expect(borno.map(b => b.path)).toEqual(['/ballot-feb/borno/'])
-    expect(html('ballot-feb/borno')).toContain('has no candidates for Borno.')
+    expect(html('ballot-feb/borno')).toContain('INEC has not published a list of State House of Assembly candidates for Borno.')
     expect(html('ballot-feb/borno')).toContain('data-source="sha-2026-10-10"')
     expect(all.filter(b => b.state.name === 'FCT').map(b => b.path)).toEqual(['/ballot-feb/fct/'])
     expect(html('ballot-feb/fct')).not.toContain('State House of Assembly</h2>')

@@ -10,7 +10,7 @@ export const noGovernorText = (state: string) =>
   state === 'FCT'
     ? 'The FCT has no governor and no State House of Assembly, so there is no election in the FCT on 6 February 2027.'
     : `No governorship election in ${state} on 6 February 2027.`
-export const NO_SHA_BORNO = 'INEC’s published list of State House of Assembly candidates (statutory notice, 31 October 2026) has no candidates for Borno.'
+export const NO_SHA_BORNO = 'INEC has not published a list of State House of Assembly candidates for Borno. Its final list of 31 October 2026 covers the other 35 states with an assembly, so no Borno candidates can be shown here.'
 
 export function FebBallot({ b }: { b: FebBallotSpec }) {
   const st = b.state.name
