@@ -386,11 +386,26 @@ def build(log=print) -> BuildResult:
                                                               aliases.get("sha_links") or {}, aliases.get("sha_lga_overrides") or {})
     errors.extend(sha_errors)
     ward_to_sha_races = {w: sorted(sha_race_by_name[(st_of(w), n)] for n in names) for w, names in ward_to_sha.items()}
+    # D-030: IReV's 2023 ward lists settle or check the ward -> State Assembly mapping
+    sha_how: dict[str, str] = {}
+    irev_report: list[str] = []
+    irev_reg = reg.get("irev")
+    if irev_reg and (RAW_DIR / "irev" / "crawl.json").exists():
+        from .irev import load as load_irev
+        from .irev import verify_manifest as verify_irev
+        from .irev_apply import apply_irev
+
+        errors.extend(verify_irev())
+        irev_wards, irev_problems = load_irev()
+        ward_names = {w["code"]: (st, l["name"], w["name"]) for st, g in geo_dicts.items() for l in g["lgas"] for w in l["wards"]}
+        ward_to_sha_races, sha_how, irev_report = apply_irev(ward_to_sha_races, sha_list, sha_race_by_name, irev_wards, ward_names)
+        irev_report = [p for p in irev_problems if not p.startswith("IReV ward 37/")] + irev_report  # the FCT has no assembly
     sha_report = {"notes": sha_notes, "count_anomalies": count_anomalies(sc_units),
                   "workbook_per_state": dict(sorted(Counter(s.state for s in sc_units).items())),
                   "constituencies": [{"state": x.state, "name": x.name, "race_id": sha_race_by_name[(x.state, x.name)],
                                       "lgas": x.lgas, "lga_by": x.lga_by, "workbook": x.workbook.code if x.workbook else None,
-                                      "wards": len(x.wards)} for x in sha_list]}
+                                      "wards": len(x.wards)} for x in sha_list],
+                  "irev": {"report": irev_report, "how": dict(Counter(sha_how.values()))}}
 
     # ---- geography: ward -> races
     lga_to_fcs: dict[tuple[str, str], list[str]] = defaultdict(list)
@@ -432,7 +447,9 @@ def build(log=print) -> BuildResult:
                     code=code, name=w_name, federal_constituency=fc_races, senatorial_district=sd_races,
                     mapping="exact" if exact else "unresolved", open_item=None if exact else open_item,
                     state_constituency=sha, sc_mapping="none" if not sha else "exact" if len(sha) == 1 else "unresolved",
-                    sc_open_item="OI-6" if len(sha) > 1 else None,
+                    sc_open_item=("OI-13" if sha_how.get(code) == "disagree" else "OI-6") if len(sha) > 1 else None,
+                    sc_sources=([] if not sha else ["sha-2026-10-10", "inec-constituencies-workbook"]
+                                + (["inec-irev-2023-assembly"] if sha_how.get(code) else [])),
                     polling_units=[PollingUnit(code=f"{code}/{p_code}", name=p_name) for p_code, p_name in pus],
                 ))
             out_lgas.append(Lga(code=f"{s_code}/{l.code}", name=l.name, wards=wards))

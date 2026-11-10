@@ -1,13 +1,16 @@
 # Data pipeline. All steps except fetch/crawl/watch run offline from pipeline/raw/.
 PIPE = cd pipeline && uv run
 
-.PHONY: fetch crawl-pu build test verify-data verify watch site verify-site
+.PHONY: fetch crawl-pu crawl-irev build test verify-data verify watch site verify-site
 
 fetch:        ## download INEC sources, record hashes (network)
 	$(PIPE) ballot-pipeline fetch
 
 crawl-pu:     ## crawl INEC's polling-unit locator politely; resumable (network, ~2 h cold)
 	$(PIPE) ballot-pipeline crawl-pu
+
+crawl-irev:   ## cache IReV's 2023 State Assembly ward lists politely; resumable (network, ~2 min)
+	$(PIPE) ballot-pipeline crawl-irev
 
 build:        ## raw -> data/generated (offline)
 	$(PIPE) ballot-pipeline build

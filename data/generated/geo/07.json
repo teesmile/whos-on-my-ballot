@@ -23,6 +23,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/01/001",
@@ -98,6 +103,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/02/001",
@@ -197,6 +207,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/03/001",
@@ -272,6 +287,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/04/001",
@@ -331,6 +351,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/05/001",
@@ -398,6 +423,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/06/001",
@@ -497,6 +527,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/07/001",
@@ -584,6 +619,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/08/001",
@@ -667,6 +707,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/09/001",
@@ -766,6 +811,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/01/10/001",
@@ -847,6 +897,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/01/001",
@@ -930,6 +985,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/02/001",
@@ -989,6 +1049,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/03/001",
@@ -1088,6 +1153,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/04/001",
@@ -1131,6 +1201,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/05/001",
@@ -1170,6 +1245,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/06/001",
@@ -1229,6 +1309,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/07/001",
@@ -1300,6 +1385,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/08/001",
@@ -1351,6 +1441,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/09/001",
@@ -1398,6 +1493,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/02/10/001",
@@ -1491,6 +1591,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/01/001",
@@ -1550,6 +1655,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/02/001",
@@ -1597,6 +1707,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/03/001",
@@ -1660,6 +1775,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/04/001",
@@ -1719,6 +1839,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/05/001",
@@ -1786,6 +1911,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/06/001",
@@ -1845,6 +1975,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/07/001",
@@ -1912,6 +2047,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/08/001",
@@ -1971,6 +2111,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/09/001",
@@ -2038,6 +2183,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/10/001",
@@ -2093,6 +2243,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/03/11/001",
@@ -2203,6 +2358,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/01/001",
@@ -2319,6 +2478,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/02/001",
@@ -2407,6 +2570,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/03/001",
@@ -2479,6 +2646,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/04/001",
@@ -2587,6 +2758,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/05/001",
@@ -2735,6 +2910,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/06/001",
@@ -2839,6 +3018,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/07/001",
@@ -2915,6 +3098,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/08/001",
@@ -2975,6 +3162,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/09/001",
@@ -3087,6 +3278,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/10/001",
@@ -3159,6 +3354,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/11/001",
@@ -3263,6 +3462,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/12/001",
@@ -3339,6 +3542,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/04/13/001",
@@ -3430,6 +3637,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/01/001",
@@ -3575,6 +3786,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/02/001",
@@ -3828,6 +4043,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/03/001",
@@ -4065,6 +4284,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/04/001",
@@ -4310,6 +4533,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/05/001",
@@ -4419,6 +4646,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/06/001",
@@ -4540,6 +4771,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/07/001",
@@ -4605,6 +4840,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/08/001",
@@ -4646,6 +4885,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/09/001",
@@ -4815,6 +5058,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/10/001",
@@ -5044,6 +5291,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/11/001",
@@ -5157,6 +5408,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/12/001",
@@ -5230,6 +5485,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/13/001",
@@ -5315,6 +5574,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/14/001",
@@ -5432,6 +5695,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/15/001",
@@ -5513,6 +5780,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/16/001",
@@ -5594,6 +5865,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/05/17/001",
@@ -5692,6 +5967,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/01/001",
@@ -5764,6 +6043,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/02/001",
@@ -5860,6 +6143,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/03/001",
@@ -5932,6 +6219,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/04/001",
@@ -6008,6 +6299,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/05/001",
@@ -6108,6 +6403,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/06/001",
@@ -6208,6 +6507,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/07/001",
@@ -6344,6 +6647,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/08/001",
@@ -6444,6 +6751,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/09/001",
@@ -6592,6 +6903,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/06/10/001",
@@ -6697,6 +7012,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/01/001",
@@ -6740,6 +7060,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/02/001",
@@ -6859,6 +7184,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/03/001",
@@ -6914,6 +7244,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/04/001",
@@ -6973,6 +7308,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/05/001",
@@ -7048,6 +7388,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/06/001",
@@ -7119,6 +7464,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/07/001",
@@ -7190,6 +7540,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/08/001",
@@ -7261,6 +7616,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/09/001",
@@ -7372,6 +7732,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/10/001",
@@ -7439,6 +7804,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/11/001",
@@ -7514,6 +7884,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/12/001",
@@ -7557,6 +7932,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/13/001",
@@ -7624,6 +8004,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/07/14/001",
@@ -7725,6 +8110,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/01/001",
@@ -7780,6 +8170,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/02/001",
@@ -7823,6 +8218,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/03/001",
@@ -7878,6 +8278,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/04/001",
@@ -7965,6 +8370,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/05/001",
@@ -8016,6 +8426,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/06/001",
@@ -8063,6 +8478,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/07/001",
@@ -8118,6 +8538,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/08/001",
@@ -8157,6 +8582,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/09/001",
@@ -8208,6 +8638,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/10/001",
@@ -8255,6 +8690,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/11/001",
@@ -8306,6 +8746,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/12/001",
@@ -8361,6 +8806,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/13/001",
@@ -8412,6 +8862,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/14/001",
@@ -8463,6 +8918,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/08/15/001",
@@ -8508,6 +8968,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/01/001",
@@ -8623,6 +9088,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/02/001",
@@ -8698,6 +9168,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/03/001",
@@ -8801,6 +9276,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/04/001",
@@ -9028,6 +9508,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/05/001",
@@ -9135,6 +9620,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/06/001",
@@ -9206,6 +9696,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/07/001",
@@ -9277,6 +9772,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/08/001",
@@ -9388,6 +9888,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/09/001",
@@ -9519,6 +10024,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/10/001",
@@ -9698,6 +10208,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/11/001",
@@ -9825,6 +10340,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/09/12/001",
@@ -9927,6 +10447,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/01/001",
@@ -10007,6 +10531,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/02/001",
@@ -10099,6 +10627,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/03/001",
@@ -10259,6 +10791,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/04/001",
@@ -10383,6 +10919,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/05/001",
@@ -10495,6 +11035,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/06/001",
@@ -10583,6 +11127,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/07/001",
@@ -10699,6 +11247,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/08/001",
@@ -10775,6 +11327,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/09/001",
@@ -10899,6 +11455,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/10/001",
@@ -11035,6 +11595,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/10/11/001",
@@ -11168,6 +11732,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/01/001",
@@ -11335,6 +11904,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/02/001",
@@ -11450,6 +12024,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/03/001",
@@ -11601,6 +12180,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/04/001",
@@ -11696,6 +12280,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/05/001",
@@ -11827,6 +12416,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/06/001",
@@ -11982,6 +12576,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/07/001",
@@ -12085,6 +12684,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/08/001",
@@ -12200,6 +12804,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/09/001",
@@ -12291,6 +12900,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/10/001",
@@ -12410,6 +13024,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/11/001",
@@ -12481,6 +13100,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/12/001",
@@ -12560,6 +13184,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/13/001",
@@ -12663,6 +13292,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/14/001",
@@ -12738,6 +13372,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/11/15/001",
@@ -12815,6 +13454,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/01/001",
@@ -12886,6 +13530,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/02/001",
@@ -12989,6 +13638,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/03/001",
@@ -13084,6 +13738,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/04/001",
@@ -13195,6 +13854,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/05/001",
@@ -13290,6 +13954,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/06/001",
@@ -13361,6 +14030,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/07/001",
@@ -13488,6 +14162,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/08/001",
@@ -13563,6 +14242,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/09/001",
@@ -13658,6 +14342,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/12/10/001",
@@ -13749,6 +14438,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/01/001",
@@ -13922,6 +14615,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/02/001",
@@ -14191,6 +14888,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/03/001",
@@ -14384,6 +15085,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/04/001",
@@ -14637,6 +15342,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/05/001",
@@ -14770,6 +15479,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/06/001",
@@ -15187,6 +15900,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/07/001",
@@ -15300,6 +16017,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/08/001",
@@ -15477,6 +16198,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/09/001",
@@ -15670,6 +16395,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/10/001",
@@ -15823,6 +16552,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/13/11/001",
@@ -16232,6 +16965,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/01/001",
@@ -16291,6 +17029,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/02/001",
@@ -16342,6 +17085,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/03/001",
@@ -16405,6 +17153,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/04/001",
@@ -16448,6 +17201,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/05/001",
@@ -16523,6 +17281,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/06/001",
@@ -16586,6 +17349,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/07/001",
@@ -16649,6 +17417,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/08/001",
@@ -16716,6 +17489,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/09/001",
@@ -16763,6 +17541,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/10/001",
@@ -16830,6 +17613,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/11/001",
@@ -16885,6 +17673,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/14/12/001",
@@ -16946,6 +17739,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/01/001",
@@ -17013,6 +17811,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/02/001",
@@ -17088,6 +17891,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/03/001",
@@ -17143,6 +17951,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/04/001",
@@ -17206,6 +18019,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/05/001",
@@ -17273,6 +18091,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/06/001",
@@ -17340,6 +18163,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/07/001",
@@ -17387,6 +18215,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/08/001",
@@ -17438,6 +18271,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/09/001",
@@ -17497,6 +18335,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/10/001",
@@ -17552,6 +18395,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/11/001",
@@ -17623,6 +18471,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/12/001",
@@ -17698,6 +18551,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/15/13/001",
@@ -17768,6 +18626,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/01/001",
@@ -17820,6 +18682,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/02/001",
@@ -17980,6 +18846,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/03/001",
@@ -18100,6 +18970,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/04/001",
@@ -18176,6 +19050,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/05/001",
@@ -18272,6 +19150,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/06/001",
@@ -18344,6 +19226,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/07/001",
@@ -18400,6 +19286,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/08/001",
@@ -18504,6 +19394,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/09/001",
@@ -18572,6 +19466,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/10/001",
@@ -18652,6 +19550,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/16/11/001",
@@ -18809,6 +19711,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/01/001",
@@ -18876,6 +19783,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/02/001",
@@ -18915,6 +19827,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/03/001",
@@ -18954,6 +19871,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/04/001",
@@ -19005,6 +19927,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/05/001",
@@ -19060,6 +19987,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/06/001",
@@ -19107,6 +20039,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/07/001",
@@ -19170,6 +20107,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/08/001",
@@ -19241,6 +20183,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/09/001",
@@ -19296,6 +20243,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/17/10/001",
@@ -19353,6 +20305,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/01/001",
@@ -19424,6 +20381,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/02/001",
@@ -19511,6 +20473,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/03/001",
@@ -19562,6 +20529,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/04/001",
@@ -19673,6 +20645,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/05/001",
@@ -19720,6 +20697,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/06/001",
@@ -19783,6 +20765,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/07/001",
@@ -19846,6 +20833,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/08/001",
@@ -19905,6 +20897,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/09/001",
@@ -19972,6 +20969,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/10/001",
@@ -20027,6 +21029,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/11/001",
@@ -20074,6 +21081,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/18/12/001",
@@ -20176,6 +21188,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/01/001",
@@ -20332,6 +21348,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/02/001",
@@ -20416,6 +21436,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/03/001",
@@ -20476,6 +21500,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/04/001",
@@ -20532,6 +21560,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/05/001",
@@ -20648,6 +21680,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/06/001",
@@ -20724,6 +21760,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/07/001",
@@ -20796,6 +21836,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/08/001",
@@ -20976,6 +22020,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/09/001",
@@ -21136,6 +22184,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/10/001",
@@ -21268,6 +22320,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/11/001",
@@ -21356,6 +22412,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/12/001",
@@ -21472,6 +22532,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/19/13/001",
@@ -21561,6 +22625,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/01/001",
@@ -21612,6 +22681,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/02/001",
@@ -21651,6 +22725,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/03/001",
@@ -21738,6 +22817,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/04/001",
@@ -21785,6 +22869,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/05/001",
@@ -21832,6 +22921,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/06/001",
@@ -21943,6 +23037,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/07/001",
@@ -21990,6 +23089,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/08/001",
@@ -22025,6 +23129,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/09/001",
@@ -22084,6 +23193,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/20/10/001",
@@ -22142,6 +23256,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/01/001",
@@ -22206,6 +23324,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/02/001",
@@ -22338,6 +23460,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/03/001",
@@ -22450,6 +23576,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/04/001",
@@ -22530,6 +23660,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/05/001",
@@ -22638,6 +23772,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/06/001",
@@ -22698,6 +23836,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/07/001",
@@ -22810,6 +23952,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/08/001",
@@ -22886,6 +24032,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/09/001",
@@ -22974,6 +24124,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/10/001",
@@ -23146,6 +24300,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/11/001",
@@ -23262,6 +24420,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/12/001",
@@ -23334,6 +24496,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/21/13/001",
@@ -23496,6 +24662,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/01/001",
@@ -23600,6 +24770,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/02/001",
@@ -23708,6 +24882,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/03/001",
@@ -23796,6 +24974,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/04/001",
@@ -23904,6 +25086,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/05/001",
@@ -23988,6 +25174,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/06/001",
@@ -24064,6 +25254,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/07/001",
@@ -24180,6 +25374,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/08/001",
@@ -24260,6 +25458,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/09/001",
@@ -24380,6 +25582,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/10/001",
@@ -24492,6 +25698,10 @@
      ],
      "sc_mapping": "unresolved",
      "sc_open_item": "OI-6",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook"
+     ],
      "polling_units": [
       {
        "code": "07/22/11/001",
@@ -24573,6 +25783,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/01/001",
@@ -24816,10 +26031,16 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-benue-vandeikya-i",
       "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/02/001",
@@ -24903,10 +26124,16 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-vandeikya-i"
+      "feb-2027-sha-benue-vandeikya-i",
+      "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/03/001",
@@ -24986,10 +26213,16 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-benue-vandeikya-i",
       "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/04/001",
@@ -25125,6 +26358,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/05/001",
@@ -25196,10 +26434,16 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-vandeikya-i"
+      "feb-2027-sha-benue-vandeikya-i",
+      "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/06/001",
@@ -25275,10 +26519,16 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-vandeikya-i"
+      "feb-2027-sha-benue-vandeikya-i",
+      "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/07/001",
@@ -25438,6 +26688,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/08/001",
@@ -25561,10 +26816,16 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
+      "feb-2027-sha-benue-vandeikya-i",
       "feb-2027-sha-benue-vandeikya-ii"
      ],
-     "sc_mapping": "exact",
-     "sc_open_item": null,
+     "sc_mapping": "unresolved",
+     "sc_open_item": "OI-13",
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/09/001",
@@ -25640,6 +26901,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/10/001",
@@ -25743,6 +27009,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/11/001",
@@ -25878,6 +27149,11 @@
      ],
      "sc_mapping": "exact",
      "sc_open_item": null,
+     "sc_sources": [
+      "sha-2026-10-10",
+      "inec-constituencies-workbook",
+      "inec-irev-2023-assembly"
+     ],
      "polling_units": [
       {
        "code": "07/23/12/001",

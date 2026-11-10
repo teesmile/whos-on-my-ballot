@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test'
 
 const JAN_ABA = '/ballot/abia/aba-north-aba-south--abia-south/'
-const FEB_ABA = '/ballot-feb/abia/aba-central-or-aba-north/'
+const FEB_ABA = '/ballot-feb/abia/aba-north/'
 
 test('code lookup offers both election days, and each ballot links to the other for the same polling unit', async ({ page }) => {
   const requests: string[] = []
@@ -29,7 +29,7 @@ test('code lookup offers both election days, and each ballot links to the other 
 test('a 6 February ballot opened with another ward’s polling unit says so and links the right one', async ({ page }) => {
   await page.goto('/ballot-feb/lagos/surulere-ii/#pu-01-01-01-001')
   await expect(page.getByText('This polling unit belongs to a different ballot.')).toHaveCount(0) // a different state: ignored
-  await page.goto('/ballot-feb/abia/aba-central-or-aba-south/#pu-01-01-01-001')
+  await page.goto('/ballot-feb/abia/aba-central/#pu-01-01-01-001')
   await expect(page.getByText('This polling unit belongs to a different ballot.')).toBeVisible()
   await expect(page.getByRole('link', { name: '6 February 2027 ballot' })).toHaveAttribute('href', `${FEB_ABA}#pu-01-01-01-001`)
 })

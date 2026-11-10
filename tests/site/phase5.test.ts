@@ -109,10 +109,25 @@ describe('6 February ballot pages', () => {
       expect(b.sha.length, b.path).toBeGreaterThan(1)
       const page = html(b.path.slice(1))
       expect(page).toContain('<h2 id="group-state-house-of-assembly">State House of Assembly: one of these is on your ballot</h2>')
-      expect(page).toContain(`INEC has not published which of these ${b.sha.length} races`)
+      expect(page).toContain(`INEC’s published documents don’t settle which of these ${b.sha.length} races`)
       expect(page).toContain('href="https://cvr.inecnigeria.org/pu"')
     }
     for (const b of all.filter(x => !x.unresolved)) expect(b.sha.length, b.path).toBeLessThanOrEqual(1)
+  })
+
+  it('every ballot with a State Assembly race cites the workbook and IReV; disagreements are said plainly, only where they occur', () => {
+    let disagree = 0
+    for (const b of all) {
+      const page = html(b.path.slice(1)).split('<footer')[0] // the footer dates every source on every page
+      expect(page.includes('data-source="inec-irev-2023-assembly"'), b.path).toBe(b.sha.length > 0)
+      expect(page.includes('data-source="inec-constituencies-workbook"'), b.path).toBe(b.sha.length > 0)
+      expect(page.includes('data-sources-disagree'), b.path).toBe(b.disagree)
+      if (b.disagree) {
+        disagree++
+        expect(b.sha.length, b.path).toBeGreaterThan(1)
+      }
+    }
+    expect(disagree).toBeGreaterThan(0)
   })
 
   it('every candidate cites INEC with a link to the page and a retrieval date', () => {

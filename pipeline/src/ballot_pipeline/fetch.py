@@ -97,6 +97,16 @@ def fetch_all(log=print) -> list[dict]:
                         "retrieved_at": meta.get("finished_at"), "crawl": meta,
                         "manifest": "pu-manifest.json", "files": manifest["files"], "sha256": manifest["digest"]})
 
+    irev = reg.get("irev")
+    irev_meta = RAW_DIR / "irev" / "crawl.json"
+    if irev and irev_meta.exists():
+        from .irev import write_manifest as write_irev_manifest
+
+        meta = json.loads(irev_meta.read_text())
+        m = write_irev_manifest()
+        records.append({"source_id": irev["id"], "title": irev["title"], "file_url": irev["url"], "retrieved_at": meta.get("finished_at"),
+                        "crawl": meta, "manifest": "irev-manifest.json", "files": m["files"], "sha256": m["digest"]})
+
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
     (GENERATED_DIR / "sources.json").write_text(json.dumps(records, indent=2, ensure_ascii=False) + "\n")
     log(f"{len(records)} sources recorded")

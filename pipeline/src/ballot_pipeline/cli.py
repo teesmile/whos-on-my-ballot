@@ -11,6 +11,7 @@ def main(argv: list[str] | None = None) -> int:
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("fetch", help="download every registered INEC source into raw/ and hash it")
     sub.add_parser("crawl-pu", help="crawl INEC's polling-unit locator (polite, resumable)")
+    sub.add_parser("crawl-irev", help="cache IReV's 2023 State Assembly ward lists (polite, resumable; network)")
     sub.add_parser("build", help="extract, map, order and write data/generated/ (offline)")
     sub.add_parser("verify", help="build, then run every Phase 1 check; non-zero on any failure (offline)")
     sub.add_parser("check-quotes", help="re-fetch every background citation and confirm its quote is on the page (network)")
@@ -25,6 +26,10 @@ def main(argv: list[str] | None = None) -> int:
         from .crawl_pu import crawl
 
         crawl()
+    elif args.cmd == "crawl-irev":
+        from .crawl_irev import crawl as crawl_irev
+
+        crawl_irev()
     elif args.cmd == "build":
         from .build import build
 

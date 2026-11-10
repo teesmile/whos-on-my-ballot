@@ -99,6 +99,7 @@ interface Ward {
   state_constituency: string[]
   sc_mapping: 'exact' | 'unresolved' | 'none'
   sc_open_item: string | null
+  sc_sources: string[]
   polling_units: { code: string, name: string }[]
 }
 
@@ -181,6 +182,8 @@ export interface FebBallotSpec {
   governor: string | null
   sha: string[]
   unresolved: boolean
+  /** Some ward with this ballot is placed differently by INEC's workbook and by IReV (OI-13, D-030). */
+  disagree: boolean
 }
 
 /** Every distinct 6 February ballot: one per combination of State Assembly races a ward resolves to (plus Borno, FCT). */
@@ -193,11 +196,14 @@ export function febBallots(): FebBallotSpec[] {
     for (const l of st.lgas) {
       for (const w of l.wards) {
         const p = wardFebBallotPath(st, w)
-        if (out.has(p)) continue
+        if (out.has(p)) {
+          if (w.sc_open_item === 'OI-13') out.get(p)!.disagree = true
+          continue
+        }
         const parts = p.split('/')
         out.set(p, {
           state: st, path: p, stateSlug: parts[2], key: parts[3] ?? '', governor: governorOf.get(st.name) ?? null,
-          sha: [...w.state_constituency].sort(), unresolved: w.sc_mapping === 'unresolved',
+          sha: [...w.state_constituency].sort(), unresolved: w.sc_mapping === 'unresolved', disagree: w.sc_open_item === 'OI-13',
         })
       }
     }

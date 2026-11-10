@@ -264,10 +264,19 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
             str(sum(1 for w in sha_wards if not w.state_constituency)))
     c.check(seen == {r.id for r in sha}, "every State Assembly race has at least one ward", str(len({r.id for r in sha} - seen)))
     unres = [w for w in sha_wards if w.sc_mapping == "unresolved"]
-    c.check(all(w.sc_open_item == "OI-6" for w in unres), "every ward with several possible State Assembly races is tied to OI-6")
+    c.check(all(w.sc_open_item in ("OI-6", "OI-13") for w in unres),
+            "every ward with several possible State Assembly races is tied to OI-6 (not split by INEC) or OI-13 (INEC's sources disagree)")
+    c.check(all(w.sc_sources for w in sha_wards) and all(s in by_id for w in sha_wards for s in w.sc_sources),
+            "every ward's State Assembly mapping names the recorded sources that decided it")
+    if res.sha_report and res.sha_report.get("irev"):
+        how = res.sha_report["irev"]["how"]
+        c.note(f"IReV 2023 ward lists (D-030): narrowed {how.get('irev', 0):,} wards to one race, confirmed {how.get('irev-confirms', 0):,}, "
+               f"and contradicted the workbook reading for {how.get('disagree', 0):,} (both races shown, OI-13).")
+        other = [line for line in res.sha_report["irev"]["report"] if "OI-13" not in line]
+        c.note(f"IReV items not used ({len(other)}): " + "; ".join(other[:15]) + (" …" if len(other) > 15 else ""))
     pus_unres = sum(len(w.polling_units) for w in unres)
     pus_all = sum(len(w.polling_units) for w in sha_wards)
-    c.note(f"Wards with exactly one State Assembly race: {len(sha_wards) - len(unres):,}; with several (OI-6, every possible race shown): "
+    c.note(f"Wards with exactly one State Assembly race: {len(sha_wards) - len(unres):,}; with several (OI-6 or OI-13, every possible race shown): "
            f"{len(unres):,} wards, {pus_unres:,} polling units ({pus_unres / pus_all:.1%}).")
     if res.sha_report:
         c.note(f"Workbook ward counts that differ from INEC's locator ({len(res.sha_report['count_anomalies'])}, reported only): "

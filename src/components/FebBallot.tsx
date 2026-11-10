@@ -31,7 +31,17 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
         Every race on this ballot, with every candidate as INEC listed them.
       </p>
       <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
-      <SourceLine id="inec-constituencies-workbook" what="Which State Assembly constituency each ward is in (with INEC’s 2027 list)" />
+      {b.sha.length > 0 && (
+        <>
+          <SourceLine id="inec-constituencies-workbook" what="Which State Assembly constituency each ward is in (with INEC’s 2027 list)" />
+          <SourceLine id="inec-irev-2023-assembly" what="Which State Assembly constituency each ward was in at the 18 March 2023 elections" />
+        </>
+      )}
+      {b.disagree && (
+        <p className="note" data-sources-disagree>
+          For some wards here, INEC’s constituency workbook and INEC’s Result Viewing Portal (2023) give different State Assembly constituencies, so both are shown.
+        </p>
+      )}
       {all.length > 0 && (
         <nav aria-label="Races on this ballot" className="toc">
           <ul>{all.map(r => <li key={r.id}><a href={`#race-${r.id}`}>{raceTitle(r)}</a></li>)}</ul>

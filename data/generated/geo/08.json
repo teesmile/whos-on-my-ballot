@@ -21,6 +21,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/01/001",
@@ -102,6 +103,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/02/001",
@@ -135,6 +137,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/03/001",
@@ -192,6 +195,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/04/001",
@@ -233,6 +237,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/05/001",
@@ -306,6 +311,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/06/001",
@@ -387,6 +393,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/07/001",
@@ -428,6 +435,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/08/001",
@@ -469,6 +477,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/09/001",
@@ -518,6 +527,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/01/10/001",
@@ -569,6 +579,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/01/001",
@@ -662,6 +673,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/02/001",
@@ -747,6 +759,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/03/001",
@@ -848,6 +861,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/04/001",
@@ -945,6 +959,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/05/001",
@@ -1022,6 +1037,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/06/001",
@@ -1091,6 +1107,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/07/001",
@@ -1176,6 +1193,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/08/001",
@@ -1273,6 +1291,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/09/001",
@@ -1374,6 +1393,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/10/001",
@@ -1555,6 +1575,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/11/001",
@@ -1656,6 +1677,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/12/001",
@@ -1733,6 +1755,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/02/13/001",
@@ -1836,6 +1859,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/01/001",
@@ -1913,6 +1937,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/02/001",
@@ -2070,6 +2095,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/03/001",
@@ -2155,6 +2181,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/04/001",
@@ -2252,6 +2279,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/05/001",
@@ -2489,6 +2517,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/06/001",
@@ -2566,6 +2595,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/07/001",
@@ -2643,6 +2673,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/08/001",
@@ -2728,6 +2759,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/09/001",
@@ -2821,6 +2853,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/10/001",
@@ -2938,6 +2971,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/11/001",
@@ -3143,6 +3177,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/12/001",
@@ -3204,6 +3239,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/13/001",
@@ -3273,6 +3309,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/03/14/001",
@@ -3352,6 +3389,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/01/001",
@@ -3405,6 +3443,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/02/001",
@@ -3482,6 +3521,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/03/001",
@@ -3535,6 +3575,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/04/001",
@@ -3592,6 +3633,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/05/001",
@@ -3645,6 +3687,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/06/001",
@@ -3694,6 +3737,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/07/001",
@@ -3739,6 +3783,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/08/001",
@@ -3796,6 +3841,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/09/001",
@@ -3865,6 +3911,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/04/10/001",
@@ -3908,6 +3955,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/01/001",
@@ -3989,6 +4037,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/02/001",
@@ -4094,6 +4143,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/03/001",
@@ -4295,6 +4345,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/04/001",
@@ -4388,6 +4439,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/05/001",
@@ -4453,6 +4505,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/06/001",
@@ -4614,6 +4667,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/07/001",
@@ -4699,6 +4753,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/08/001",
@@ -4816,6 +4871,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/09/001",
@@ -4937,6 +4993,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/10/001",
@@ -5022,6 +5079,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/05/11/001",
@@ -5181,6 +5239,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/01/001",
@@ -5250,6 +5309,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/02/001",
@@ -5303,6 +5363,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/03/001",
@@ -5380,6 +5441,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/04/001",
@@ -5445,6 +5507,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/05/001",
@@ -5514,6 +5577,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/06/001",
@@ -5563,6 +5627,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/07/001",
@@ -5620,6 +5685,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/08/001",
@@ -5705,6 +5771,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/09/001",
@@ -5750,6 +5817,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/10/001",
@@ -5795,6 +5863,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/06/11/001",
@@ -5846,6 +5915,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/01/001",
@@ -5935,6 +6005,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/02/001",
@@ -5988,6 +6059,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/03/001",
@@ -6105,6 +6177,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/04/001",
@@ -6178,6 +6251,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/05/001",
@@ -6327,6 +6401,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/06/001",
@@ -6408,6 +6483,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/07/001",
@@ -6473,6 +6549,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/08/001",
@@ -6566,6 +6643,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/09/001",
@@ -6679,6 +6757,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/07/10/001",
@@ -6778,6 +6857,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/01/001",
@@ -6847,6 +6927,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/02/001",
@@ -6980,6 +7061,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/03/001",
@@ -7041,6 +7123,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/04/001",
@@ -7090,6 +7173,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/05/001",
@@ -7135,6 +7219,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/06/001",
@@ -7188,6 +7273,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/07/001",
@@ -7241,6 +7327,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/08/001",
@@ -7286,6 +7373,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/09/001",
@@ -7327,6 +7415,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/08/10/001",
@@ -7382,6 +7471,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/01/001",
@@ -7415,6 +7505,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/02/001",
@@ -7456,6 +7547,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/03/001",
@@ -7501,6 +7593,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/04/001",
@@ -7542,6 +7635,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/05/001",
@@ -7615,6 +7709,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/06/001",
@@ -7744,6 +7839,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/07/001",
@@ -7833,6 +7929,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/08/001",
@@ -7882,6 +7979,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/09/001",
@@ -7975,6 +8073,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/09/10/001",
@@ -8042,6 +8141,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/01/001",
@@ -8079,6 +8179,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/02/001",
@@ -8176,6 +8277,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/03/001",
@@ -8225,6 +8327,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/04/001",
@@ -8266,6 +8369,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/05/001",
@@ -8311,6 +8415,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/06/001",
@@ -8364,6 +8469,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/07/001",
@@ -8417,6 +8523,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/08/001",
@@ -8474,6 +8581,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/09/001",
@@ -8519,6 +8627,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/10/10/001",
@@ -8566,6 +8675,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/01/001",
@@ -8627,6 +8737,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/02/001",
@@ -8732,6 +8843,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/03/001",
@@ -8849,6 +8961,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/04/001",
@@ -8962,6 +9075,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/05/001",
@@ -9075,6 +9189,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/06/001",
@@ -9216,6 +9331,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/07/001",
@@ -9349,6 +9465,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/08/001",
@@ -9490,6 +9607,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/09/001",
@@ -9615,6 +9733,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/10/001",
@@ -9716,6 +9835,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/11/001",
@@ -9805,6 +9925,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/12/001",
@@ -9874,6 +9995,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/11/13/001",
@@ -10009,6 +10131,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/01/001",
@@ -10106,6 +10229,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/02/001",
@@ -10191,6 +10315,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/03/001",
@@ -10292,6 +10417,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/04/001",
@@ -10389,6 +10515,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/05/001",
@@ -10482,6 +10609,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/06/001",
@@ -10583,6 +10711,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/07/001",
@@ -10672,6 +10801,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/08/001",
@@ -10757,6 +10887,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/09/001",
@@ -10830,6 +10961,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/10/001",
@@ -10907,6 +11039,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/11/001",
@@ -10984,6 +11117,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/12/12/001",
@@ -11079,6 +11213,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/01/001",
@@ -11144,6 +11279,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/02/001",
@@ -11273,6 +11409,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/03/001",
@@ -11334,6 +11471,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/04/001",
@@ -11431,6 +11569,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/05/001",
@@ -11492,6 +11631,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/06/001",
@@ -11685,6 +11825,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/07/001",
@@ -11998,6 +12139,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/08/001",
@@ -12079,6 +12221,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/09/001",
@@ -12328,6 +12471,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/10/001",
@@ -12365,6 +12509,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/11/001",
@@ -12594,6 +12739,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/13/12/001",
@@ -12833,6 +12979,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/01/001",
@@ -12890,6 +13037,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/02/001",
@@ -12983,6 +13131,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/03/001",
@@ -13016,6 +13165,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/04/001",
@@ -13057,6 +13207,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/05/001",
@@ -13086,6 +13237,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/06/001",
@@ -13111,6 +13263,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/07/001",
@@ -13140,6 +13293,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/08/001",
@@ -13173,6 +13327,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/09/001",
@@ -13238,6 +13393,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/10/001",
@@ -13275,6 +13431,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/11/001",
@@ -13376,6 +13533,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/12/001",
@@ -13409,6 +13567,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/13/001",
@@ -13450,6 +13609,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/14/001",
@@ -13495,6 +13655,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/14/15/001",
@@ -13530,6 +13691,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/01/001",
@@ -13575,6 +13737,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/02/001",
@@ -13624,6 +13787,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/03/001",
@@ -13673,6 +13837,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/04/001",
@@ -13718,6 +13883,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/05/001",
@@ -13771,6 +13937,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/06/001",
@@ -13812,6 +13979,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/07/001",
@@ -13897,6 +14065,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/08/001",
@@ -13970,6 +14139,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/09/001",
@@ -14019,6 +14189,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/15/10/001",
@@ -14106,6 +14277,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/01/001",
@@ -14319,6 +14491,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/02/001",
@@ -14416,6 +14589,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/03/001",
@@ -14497,6 +14671,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/04/001",
@@ -14570,6 +14745,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/05/001",
@@ -14659,6 +14835,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/06/001",
@@ -14732,6 +14909,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/07/001",
@@ -14865,6 +15043,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/08/001",
@@ -14962,6 +15141,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/09/001",
@@ -15051,6 +15231,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/10/001",
@@ -15136,6 +15317,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/16/11/001",
@@ -15219,6 +15401,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/01/001",
@@ -15288,6 +15471,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/02/001",
@@ -15437,6 +15621,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/03/001",
@@ -15466,6 +15651,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/04/001",
@@ -15503,6 +15689,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/05/001",
@@ -15624,6 +15811,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/06/001",
@@ -15685,6 +15873,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/07/001",
@@ -15746,6 +15935,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/08/001",
@@ -15851,6 +16041,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/09/001",
@@ -15884,6 +16075,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/17/10/001",
@@ -15919,6 +16111,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/01/001",
@@ -15972,6 +16165,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/02/001",
@@ -16037,6 +16231,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/03/001",
@@ -16078,6 +16273,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/04/001",
@@ -16119,6 +16315,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/05/001",
@@ -16168,6 +16365,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/06/001",
@@ -16317,6 +16515,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/07/001",
@@ -16370,6 +16569,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/08/001",
@@ -16415,6 +16615,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/09/001",
@@ -16452,6 +16653,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/18/10/001",
@@ -16515,6 +16717,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/01/001",
@@ -16560,6 +16763,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/02/001",
@@ -16605,6 +16809,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/03/001",
@@ -16666,6 +16871,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/04/001",
@@ -16711,6 +16917,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/05/001",
@@ -16756,6 +16963,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/06/001",
@@ -16801,6 +17009,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/07/001",
@@ -16858,6 +17067,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/08/001",
@@ -16895,6 +17105,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/09/001",
@@ -16976,6 +17187,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/10/001",
@@ -17021,6 +17233,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/11/001",
@@ -17110,6 +17323,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/19/12/001",
@@ -17233,6 +17447,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/01/001",
@@ -17270,6 +17485,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/02/001",
@@ -17307,6 +17523,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/03/001",
@@ -17356,6 +17573,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/04/001",
@@ -17389,6 +17607,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/05/001",
@@ -17454,6 +17673,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/06/001",
@@ -17503,6 +17723,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/07/001",
@@ -17564,6 +17785,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/08/001",
@@ -17605,6 +17827,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/09/001",
@@ -17638,6 +17861,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/10/001",
@@ -17679,6 +17903,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/11/001",
@@ -17768,6 +17993,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/12/001",
@@ -17813,6 +18039,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/20/13/001",
@@ -17856,6 +18083,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/01/001",
@@ -18129,6 +18357,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/02/001",
@@ -18446,6 +18675,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/03/001",
@@ -18651,6 +18881,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/04/001",
@@ -18740,6 +18971,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/05/001",
@@ -18945,6 +19177,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/06/001",
@@ -19170,6 +19403,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/07/001",
@@ -19407,6 +19641,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/08/001",
@@ -19616,6 +19851,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/09/001",
@@ -19825,6 +20061,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/10/001",
@@ -20162,6 +20399,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/11/001",
@@ -20323,6 +20561,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/12/001",
@@ -20504,6 +20743,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/13/001",
@@ -21321,6 +21561,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/14/001",
@@ -21542,6 +21783,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/21/15/001",
@@ -21661,6 +21903,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/01/001",
@@ -21714,6 +21957,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/02/001",
@@ -21767,6 +22011,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/03/001",
@@ -21816,6 +22061,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/04/001",
@@ -21845,6 +22091,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/05/001",
@@ -21886,6 +22133,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/06/001",
@@ -21983,6 +22231,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/07/001",
@@ -22048,6 +22297,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/08/001",
@@ -22137,6 +22387,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/09/001",
@@ -22174,6 +22425,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/10/001",
@@ -22247,6 +22499,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/11/001",
@@ -22320,6 +22573,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/12/001",
@@ -22373,6 +22627,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/22/13/001",
@@ -22428,6 +22683,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/01/001",
@@ -22473,6 +22729,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/02/001",
@@ -22514,6 +22771,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/03/001",
@@ -22559,6 +22817,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/04/001",
@@ -22672,6 +22931,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/05/001",
@@ -22725,6 +22985,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/06/001",
@@ -22778,6 +23039,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/07/001",
@@ -22827,6 +23089,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/08/001",
@@ -22864,6 +23127,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/09/001",
@@ -22945,6 +23209,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/23/10/001",
@@ -22996,6 +23261,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/01/001",
@@ -23029,6 +23295,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/02/001",
@@ -23074,6 +23341,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/03/001",
@@ -23111,6 +23379,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/04/001",
@@ -23156,6 +23425,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/05/001",
@@ -23189,6 +23459,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/06/001",
@@ -23242,6 +23513,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/07/001",
@@ -23447,6 +23719,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/08/001",
@@ -23484,6 +23757,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/09/001",
@@ -23521,6 +23795,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/10/001",
@@ -23566,6 +23841,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/11/001",
@@ -23599,6 +23875,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/24/12/001",
@@ -23642,6 +23919,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/01/001",
@@ -23703,6 +23981,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/02/001",
@@ -23768,6 +24047,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/03/001",
@@ -23837,6 +24117,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/04/001",
@@ -23938,6 +24219,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/05/001",
@@ -23987,6 +24269,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/06/001",
@@ -24044,6 +24327,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/07/001",
@@ -24109,6 +24393,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/08/001",
@@ -24198,6 +24483,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/09/001",
@@ -24247,6 +24533,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/10/001",
@@ -24308,6 +24595,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/11/001",
@@ -24377,6 +24665,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/25/12/001",
@@ -24416,6 +24705,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/01/001",
@@ -24457,6 +24747,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/02/001",
@@ -24514,6 +24805,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/03/001",
@@ -24555,6 +24847,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/04/001",
@@ -24644,6 +24937,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/05/001",
@@ -24689,6 +24983,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/06/001",
@@ -24726,6 +25021,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/07/001",
@@ -24767,6 +25063,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/08/001",
@@ -24800,6 +25097,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/09/001",
@@ -24837,6 +25135,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/10/001",
@@ -24906,6 +25205,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/11/001",
@@ -24939,6 +25239,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/26/12/001",
@@ -25002,6 +25303,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/01/001",
@@ -25087,6 +25389,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/02/001",
@@ -25124,6 +25427,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/03/001",
@@ -25217,6 +25521,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/04/001",
@@ -25282,6 +25587,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/05/001",
@@ -25335,6 +25641,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/06/001",
@@ -25380,6 +25687,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/07/001",
@@ -25429,6 +25737,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/08/001",
@@ -25502,6 +25811,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/09/001",
@@ -25551,6 +25861,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/10/001",
@@ -25696,6 +26007,7 @@
      "state_constituency": [],
      "sc_mapping": "none",
      "sc_open_item": null,
+     "sc_sources": [],
      "polling_units": [
       {
        "code": "08/27/11/001",

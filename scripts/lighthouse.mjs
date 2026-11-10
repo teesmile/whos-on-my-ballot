@@ -17,7 +17,8 @@ const PAGES = [
   '/c/jan-2027-president-ndc/',
   '/c/jan-2027-house-fct-municipal-bwari-apc/',
   '/election-day/',
-  '/ballot-feb/rivers/port-harcourt-i-or-port-harcourt-ii-or-port-harcourt-iii/',
+  '/ballot-feb/abia/umuahia-central-or-umuahia-east-or-umuahia-north/',
+  '/ballot-feb/rivers/oyigbo-or-tai/',
   '/c/feb-2027-governor-taraba-apc/',
 ]
 

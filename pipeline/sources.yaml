@@ -96,3 +96,9 @@ sha_count_vs_workbook:
   DELTA: 9
   JIGAWA: 1
   KOGI: 11
+
+# INEC's Result Viewing Portal: which 2023 State Assembly constituency each ward was in (D-030). Cached by `crawl-irev`.
+irev:
+  id: inec-irev-2023-assembly
+  title: "INEC Result Viewing Portal (IReV): wards of each State House of Assembly constituency, 18 March 2023 elections"
+  url: https://www.inecelectionresults.ng

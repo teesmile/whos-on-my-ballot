@@ -96,7 +96,7 @@ export function UnresolvedGroup({ office, list }: { office: 'Senate' | 'House of
       </h2>
       <div className="note">
         <p>
-          INEC has not published which of these
+          {office === 'State House of Assembly' ? 'INEC’s published documents don’t settle which of these' : 'INEC has not published which of these'}
           {' '}
           {list.length}
           {' '}

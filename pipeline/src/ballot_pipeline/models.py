@@ -108,7 +108,7 @@ class Ward(Strict):
     def _sc_status_consistent(self):
         n = len(self.state_constituency)
         expected = "none" if n == 0 else "exact" if n == 1 else "unresolved"
-        if self.sc_mapping != expected or (self.sc_mapping == "unresolved") != (self.sc_open_item == "OI-6"):
+        if self.sc_mapping != expected or (self.sc_mapping == "unresolved") != (self.sc_open_item in ("OI-6", "OI-13")):
             raise ValueError(f"ward {self.code}: sc_mapping {self.sc_mapping!r} inconsistent with {n} State Assembly races")
         return self
 
@@ -133,7 +133,8 @@ class Ward(Strict):
     # 2011 workbook doesn't match its 2027 constituencies here; none in Borno (no list published, OI-11) and the FCT.
     state_constituency: list[str] = []
     sc_mapping: Literal["exact", "unresolved", "none"] = "none"
-    sc_open_item: str | None = None
+    sc_open_item: str | None = None  # OI-6: the workbook doesn't split the LGA; OI-13: INEC's workbook and IReV disagree (D-030)
+    sc_sources: list[str] = []  # the source ids that decided state_constituency (D-030)
     polling_units: list[PollingUnit]
 
 
