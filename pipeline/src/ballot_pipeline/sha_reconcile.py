@@ -42,7 +42,7 @@ def split_hint(name: str, ix: StateGeoIndex | None = None) -> tuple[str, str]:
         for n in range(1, min(4, len(words))):  # trailing 1-3 words (plus an optional numeral) naming an LGA
             tail = words[-n:]
             core = [w for w in tail if not re.fullmatch(r"I{1,3}|IV|V", w)]
-            if core and (ix.lga_from_name(" ".join(core)) or ix.lga_close_to(" ".join(core))):
+            if core and ix.lga_from_name(" ".join(core)):
                 head = " ".join(words[:-n])
                 if len(key(head)) >= 3:
                     return head, " ".join(tail)
@@ -100,7 +100,7 @@ def reconcile(list_names: dict[str, list[str]], scs: list[SC], idx: dict[str, St
             # constituency, then the name, then an LGA with a ward of that name (constituencies created after 2011)
             def lookup(text: str) -> list[str]:
                 core = re.sub(r"\s+\b(I{1,3}|IV|V)\b\s*$", "", text)
-                return ix.lga_from_name(core) or ix.lgas_in_name(core) or ix.lga_close_to(core)
+                return ix.lga_from_name(core) or ix.lgas_in_name(core)
             hint_lgas = lookup(hint) if hint else []
             base_whole = ix.lga_from_name(base) or (ix.lgas_in_name(base) if re.search(r"/|&|\bAND\b", base, re.I) else [])
             if hint_lgas and base_whole and set(base_whole) != set(hint_lgas) and "(" not in name:
@@ -132,7 +132,9 @@ def reconcile(list_names: dict[str, list[str]], scs: list[SC], idx: dict[str, St
                 notes.append(f"{st} {name!r}: INEC's 2027 list places it in {ls.lgas}; the workbook reading gave "
                              f"{ls.workbook.lgas} ({ls.workbook.lga_by}). The 2027 list is followed.")
             if not ls.lgas:
-                errors.append(f"{st} {name!r}: no LGA from INEC's 2027 name or the workbook (add a reviewed link)")
+                hint_text = ix.lga_close_to(base) or ix.lga_close_to(name)
+                errors.append(f"{st} {name!r}: no LGA from INEC's 2027 name or the workbook (add a sourced sha_lga_overrides entry)"
+                              + (f"; closest LGA name, unreviewed: {hint_text}" if hint_text else ""))
             out.append(ls)
 
     # Per LGA: use the workbook's ward split only if the LGA's 2027 constituencies match the workbook's one-to-one

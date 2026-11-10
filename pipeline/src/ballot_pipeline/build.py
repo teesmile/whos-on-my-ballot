@@ -39,6 +39,11 @@ class BuildResult:
     sha_report: dict | None = None
     errors: list[str] = field(default_factory=list)
 
+    def __post_init__(self) -> None:
+        # review 5: a positional field shift once dropped every accumulated error; errors must be a list of strings
+        if not isinstance(self.errors, list) or not all(isinstance(e, str) for e in self.errors):
+            raise TypeError("BuildResult.errors must be a list of strings")
+
 
 # ---------------------------------------------------------------- helpers
 
@@ -368,6 +373,15 @@ def build(log=print) -> BuildResult:
     list_names: dict[str, list[str]] = defaultdict(list)
     for (st, name) in sha_race_by_name:
         list_names[st].append(name)
+    from .override_checks import check_sha_overrides
+
+    printed_at: dict[tuple[str, str], set[tuple[int, int]]] = defaultdict(set)
+    for r in races:
+        if r.office == "state_assembly":
+            printed_at[(r.state, r.name)] |= {(c.provenance.page, c.provenance.sn) for c in r.candidates}
+    ward_lga = {w["code"]: (st, l["name"]) for st, g in geo_dicts.items() for l in g["lgas"] for w in l["wards"]}
+    errors.extend(check_sha_overrides(aliases.get("state_constituency_overrides") or {}, aliases.get("sha_lga_overrides") or {},
+                                      {s["source_id"] for s in sources if "sha256" in s}, sc_units, ward_lga, printed_at))
     sha_list, ward_to_sha, sha_notes, sha_errors = reconcile(dict(list_names), sc_units, sc_idx,
                                                               aliases.get("sha_links") or {}, aliases.get("sha_lga_overrides") or {})
     errors.extend(sha_errors)
@@ -434,9 +448,10 @@ def build(log=print) -> BuildResult:
         "wards": sum(len(l.wards) for _, lgas in locator.values() for l in lgas),
         "pus": sum(len(w[2]) for _, lgas in locator.values() for l in lgas for w in l.wards),
     }
-    result = BuildResult(sources, parties, rows_by_source, independent_sn, races, quarantine, workbook, geo,
-                         unresolved_wards, inec_order_matches, locator_counts, anomalies, errors)
-    result.sha_report = sha_report
+    result = BuildResult(sources=sources, parties=parties, rows_by_source=rows_by_source, independent_sn=independent_sn, races=races,
+                         quarantine=quarantine, workbook=workbook, geo=geo, unresolved_wards=unresolved_wards,
+                         inec_order_matches=inec_order_matches, locator_counts=locator_counts, anomalies=anomalies,
+                         sha_report=sha_report, errors=errors)
     write_outputs(result)
     return result
 

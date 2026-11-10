@@ -137,7 +137,8 @@ class StateGeoIndex:
         return []
 
     def lga_close_to(self, name: str) -> list[str]:
-        """An LGA whose name is at least 85% similar to the constituency name (minus suffixes), and clearly the closest."""
+        """A suggestion for error messages only, never a placement (review 5: "AKPA" is 86% similar to the LGA APA):
+        an LGA whose name is at least 85% similar to the constituency name (minus suffixes), and clearly the closest."""
         import difflib
 
         n = name
@@ -160,7 +161,7 @@ class StateGeoIndex:
             part = part.strip()
             if len(key(part)) < 3:
                 continue
-            for l in self.lga_from_name(part) or self.lga_close_to(part):
+            for l in self.lga_from_name(part):  # exact names and reviewed spellings only
                 if l not in out:
                     out.append(l)
         return out
@@ -216,7 +217,7 @@ def map_state_constituencies(sheet_path: str, geo_by_state: dict[str, dict], spe
             plural = bool(re.search(r"\bLGAs\b", sc.comp, re.I)) or bool(re.search(r"/|&|\bAND\b", sc.name))
             sc.lgas = (ix.lgas_in_text(re.sub(r"(?i)the entire (area of )?|lgas?\b", "", sc.comp))
                        or (ix.lgas_in_name(sc.name) if plural else []) or ix.lga_from_name(sc.name)
-                       or ix.lgas_in_text(sc.name) or ix.lga_close_to(sc.name))
+                       or ix.lgas_in_text(sc.name))
             sc.lga_by = "text" if sc.lgas else ""
         elif sc.kind == "count":
             place = re.sub(r"^\s*\d+\s*RAS?\s*OF\s*", "", sc.comp, flags=re.I)
@@ -231,7 +232,7 @@ def map_state_constituencies(sheet_path: str, geo_by_state: dict[str, dict], spe
             if scored and scored[0][0] and scored[0][0] * 2 >= len(fr) and (len(scored) == 1 or scored[1][0] < scored[0][0]):
                 sc.lgas, sc.lga_by = [scored[0][1]], "ward names"
         if not sc.lgas and sc.kind in ("nums", "part", "names", "count"):
-            sc.lgas = ix.lga_from_name(sc.name) or ix.lga_close_to(sc.name)
+            sc.lgas = ix.lga_from_name(sc.name)
             sc.lga_by = "name" if sc.lgas else ""
         if not sc.lgas and sc.kind == "nums":
             toks = [key(t) for t in re.split(r"/|-", sc.name) if len(key(t)) >= 3]

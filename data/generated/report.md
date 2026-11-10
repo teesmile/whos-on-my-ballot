@@ -67,7 +67,7 @@ Federal constituencies whose LGAs lie in two senatorial districts, per INEC's wo
 
 ## Constituency composition (INEC workbook)
 - [x] **PASS** every district and constituency resolves to locator LGAs: composition 436, name 6, override 17, split 10
-Read from the composition text: 436; from the constituency name: 6; split LGAs (OI-9): 10; reviewed overrides: 17; reviewed spellings: 109; constituency-name aliases: 10. Every LGA is in exactly one senatorial district and one federal constituency (split LGAs excepted), or the build fails.
+Read from the composition text: 436; from the constituency name: 6; split LGAs (OI-9): 10; reviewed overrides: 17; reviewed spellings: 114; constituency-name aliases: 10. Every LGA is in exactly one senatorial district and one federal constituency (split LGAs excepted), or the build fails.
 - Override FC/008/AB: INEC text "The entire Geographical Areas of Ukwa East and East L.G.As" read as UKWA EAST, UKWA WEST. 'East and East' is a typo; the constituency name is Ukwa East/Ukwa West
 - Override SD/050/JG: INEC text "AUYO, BIRNIWA, GURI, HADEJIA, KAUGAMA, K/HAUSA, K/KASAMMA, M/MADORI" read as AUYO, BIRNIWA, GURI, HADEJIA, KAUGAMA, KAFIN HAUSA, KIRIKA SAMMA, MALAM MADORI. abbreviations K/ = Kafin, Kirika; M/ = Malam
 - Override SD/051/JG: INEC text "BABURA, GAGARA, GARKI, GWIWA, KAZAURE, MAIGATAR, RONI, RINGIN, S/TANKAR, TAURA, YANKWASHI, GUME" read as BABURA, GAGARAWA, GARKI, GWIWA, KAZAURE, MAIGATARI, RONI, RINGIM, SULE-TANKARKAR, TAURA, YANKWASHI, GUMEL. S/TANKAR = Sule-Tankarkar; truncated spellings
@@ -107,7 +107,7 @@ State Assembly constituencies on INEC's 2027 list: **991** (INEC's figure: 993; 
 - [x] **PASS** every ward in those 35 states reaches at least one State Assembly race: 0
 - [x] **PASS** every State Assembly race has at least one ward: 0
 - [x] **PASS** every ward with several possible State Assembly races is tied to OI-6
-Wards with exactly one State Assembly race: 6,733; with several (OI-6, every possible race shown): 1,731 wards, 44,555 polling units (26.3%).
+Wards with exactly one State Assembly race: 6,744; with several (OI-6, every possible race shown): 1,720 wards, 44,431 polling units (26.2%).
 Workbook ward counts that differ from INEC's locator (1, reported only): SC/482/KD CITY: INEC's workbook says 6 wards, the locator gives 13
 Where INEC's 2027 list contradicted a workbook reading, the 2027 list was followed (5): BAUCHI 'AZARE (ZAKI II)': INEC's 2027 list places it in ['ZAKI']; the workbook reading gave ['KATAGUM'] (override). The 2027 list is followed. BAUCHI 'BURRA (NINGI II)': INEC's 2027 list places it in ['NINGI']; the workbook reading gave ['ZAKI'] (ward-number partition). The 2027 list is followed. BAUCHI 'CHIROMA (MISAU I)': INEC's 2027 list places it in ['MISAU']; the workbook reading gave ['ZAKI'] (ward-number partition). The 2027 list is followed. BAUCHI 'SAKWA (ZAKI I)': INEC's 2027 list places it in ['ZAKI']; the workbook reading gave ["JAMA'ARE"] (ward-number fit). The 2027 list is followed. TARABA 'KASHIMBILA (TAKUM II)': INEC's 2027 list places it in ['TAKUM']; the workbook reading gave ['YORRO'] (ward-number fit). The 2027 list is followed.
 

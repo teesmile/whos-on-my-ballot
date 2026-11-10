@@ -26,7 +26,6 @@
   "BAYELSA/SAGBAMA: 2027 constituencies ['SAGBAMA I', 'SAGBAMA II', 'SAGBAMA III'] differ from the 2011 workbook's ['SAGBAMA I', 'SAGBAMA II', 'SAGBAMA III']; its wards list all 3 (OI-6)",
   "BENUE/OTUKPO: 2027 constituencies ['ADOKA/UGBOJU', 'OTUKPO/AKPA'] differ from the 2011 workbook's ['OTUKPO', 'OTUKPO NORTH EAST']; its wards list all 2 (OI-6)",
   "BENUE/GUMA: 2027 constituencies ['AGASHA (GUMA II)', 'GUMA (GUMA I)'] differ from the 2011 workbook's ['GUMA']; its wards list all 2 (OI-6)",
-  "BENUE/APA: 2027 constituencies ['APA', 'OTUKPO/AKPA'] differ from the 2011 workbook's ['APA']; its wards list all 2 (OI-6)",
   "BENUE/BURUKU: 2027 constituencies ['BURUKU', 'NYAMATSOR (BURUKU)'] differ from the 2011 workbook's ['BURUKU']; its wards list all 2 (OI-6)",
   "BENUE/GBOKO: 2027 constituencies ['GBOKO I (EAST)', 'GBOKO III', 'GBOKO WEST'] differ from the 2011 workbook's ['GBOKO I (EAST)', 'GBOKO WEST']; its wards list all 3 (OI-6)",
   "BENUE/KONSHISHA: 2027 constituencies ['KONSHISHA I (GAAV)', 'SHANGEV - TIEV (KONSHISHA)'] differ from the 2011 workbook's ['KONSHISHA I (GAAV)']; its wards list all 2 (OI-6)",
@@ -353,7 +352,7 @@
    "lgas": [
     "UGWUNAGBO"
    ],
-   "lga_by": "workbook (text)",
+   "lga_by": "workbook (elimination)",
    "workbook": "SC/18/AB",
    "wards": 10
   },
@@ -1975,7 +1974,7 @@
    "lgas": [
     "AGATU"
    ],
-   "lga_by": "workbook (text)",
+   "lga_by": "workbook (elimination)",
    "workbook": "SC/162/BN",
    "wards": 10
   },
@@ -2270,12 +2269,11 @@
    "name": "OTUKPO/AKPA",
    "race_id": "feb-2027-sha-benue-otukpo-akpa",
    "lgas": [
-    "OTUKPO",
-    "APA"
+    "OTUKPO"
    ],
    "lga_by": "name",
    "workbook": null,
-   "wards": 24
+   "wards": 13
   },
   {
    "state": "BENUE",

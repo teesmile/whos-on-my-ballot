@@ -1487,11 +1487,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/01/001",
@@ -1547,11 +1546,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/02/001",
@@ -1595,11 +1593,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/03/001",
@@ -1659,11 +1656,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/04/001",
@@ -1719,11 +1715,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/05/001",
@@ -1787,11 +1782,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/06/001",
@@ -1847,11 +1841,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/07/001",
@@ -1915,11 +1908,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/08/001",
@@ -1975,11 +1967,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/09/001",
@@ -2043,11 +2034,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/10/001",
@@ -2099,11 +2089,10 @@
      "mapping": "exact",
      "open_item": null,
      "state_constituency": [
-      "feb-2027-sha-benue-apa",
-      "feb-2027-sha-benue-otukpo-akpa"
+      "feb-2027-sha-benue-apa"
      ],
-     "sc_mapping": "unresolved",
-     "sc_open_item": "OI-6",
+     "sc_mapping": "exact",
+     "sc_open_item": null,
      "polling_units": [
       {
        "code": "07/03/11/001",

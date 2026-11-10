@@ -133,3 +133,20 @@ def test_read_sheet_keeps_both_rows_of_a_code_inec_printed_twice(monkeypatch):
     rows = HEAD + [["251.0", "IKA SOUTH", "SC/252/DT", "The entire LGA"], ["252.0", "ISOKO NORTH", "SC/252/DT", "The entire LGA"]]
     got = _read(monkeypatch, rows)
     assert [(s.name, s.code) for s in got] == [("IKA SOUTH", "SC/252/DT@row3"), ("ISOKO NORTH", "SC/252/DT@row4")]
+
+
+def test_a_similar_name_never_places_a_constituency_in_another_lga():
+    """Review 5: "AKPA" is 86% similar to the LGA APA, which once put OTUKPO/AKPA on all 11 Apa wards."""
+    ix = StateGeoIndex(state([("OTUKPO", 3), ("APA", 2)]), {})
+    assert ix.lgas_in_name("OTUKPO/AKPA") == ["OTUKPO"]
+    assert ix.lga_from_name("AKPA") == []
+    out, wards, _, errors = run([("OTUKPO", 3), ("APA", 2)], [], ["OTUKPO/AKPA", "APA"])
+    assert not errors
+    assert {w: v for w, v in wards.items() if w.startswith("01/02/")} == {"01/02/01": ["APA"], "01/02/02": ["APA"]}
+
+
+def test_a_reviewed_spelling_places_a_constituency():
+    from ballot_pipeline.geo import key
+
+    ix = StateGeoIndex(state([("GARUN MALAM", 2)]), {key("GURUN MALLAM"): "GARUN MALAM"})  # keyed as build.py keys them
+    assert ix.lgas_in_name("KURA/GURUN MALLAM") == ["GARUN MALAM"]

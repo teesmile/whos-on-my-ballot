@@ -60,3 +60,29 @@ def test_ward_status_must_match_its_races(fc, sd, mapping, item):
     with pytest.raises(ValidationError):
         Ward(code="24/01/01", name="W", federal_constituency=fc, senatorial_district=sd, mapping=mapping,
              open_item=item, polling_units=PU)
+
+
+def test_an_error_found_during_the_build_fails_verify(raw_source, monkeypatch):
+    """Review 5: a positional field shift in BuildResult once dropped every accumulated error, so verify passed."""
+    from ballot_pipeline import build as build_mod
+    from ballot_pipeline import verify as verify_mod
+    from ballot_pipeline.paths import GENERATED_DIR
+
+    raw_source("sha-2026-10-10")  # skips when INEC's files are not fetched
+    monkeypatch.setattr(manifest, "verify_pu_manifest", lambda: ["injected: polling-unit manifest mismatch"])
+    monkeypatch.setattr(build_mod, "write_outputs", lambda res: None)
+    report = GENERATED_DIR / "report.md"
+    saved = report.read_bytes()
+    try:
+        res = build_mod.build(log=lambda *a: None)
+        assert "injected: polling-unit manifest mismatch" in res.errors
+        assert verify_mod.verify(res, write_audit=False) == 1
+    finally:
+        report.write_bytes(saved)
+
+
+def test_build_result_rejects_a_misplaced_errors_field():
+    from ballot_pipeline.build import BuildResult
+
+    with pytest.raises(TypeError):
+        BuildResult(*([None] * 12), {"notes": []}, errors={"not": "a list"})

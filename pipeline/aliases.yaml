@@ -39,16 +39,18 @@ lga_spellings:
   IMO: {EZINIHITTE: EZINIHITTE MBAISE, IHITE-UBOMA: IHITTE UBOMA, IHITE UBOMA: IHITTE UBOMA, NKWERE: NKWERRE,
         NWAGELE: NWANGELE, OHAJJI-EGBEMA: OHAJI EGBEMA}
   JIGAWA: {GAGARA: GAGARAWA, GUME: GUMEL, JAUN: JAHUN, MAIGATAR: MAIGATARI, MALLAM MADORI: MALAM MADORI, RINGIN: RINGIM}
-  KANO: {ALABASU: ALBASU, DANBATTA: DANBATA, DAWAKIN KUDU: DAWAKI KUDU, DAWAKIN TOFA: DAWAKI TOFA,
+  # KANO GURUN MALLAM: INEC 2027 State Assembly list p341 SN 280
+  KANO: {GURUN MALLAM: GARUN MALAM, ALABASU: ALBASU, DANBATTA: DANBATA, DAWAKIN KUDU: DAWAKI KUDU, DAWAKIN TOFA: DAWAKI TOFA,
          GARUM MALLAM: GARUN MALAM, GARUN MALLAM: GARUN MALAM, IKABO: KABO, MUNICIPAL: KANO MUNICIPAL,
          NASSARAWA: NASARAWA, RIMI GADO: RIMIN GADO, KUNCHI: GHARI}
   KATSINA: {INGWA: INGAWA, MALUMEFASHI: MALUFASHI, MALUMFASHI: MALUFASHI}
   KEBBI: {ALEIRO: ALIERO}
   KOGI: {MOPAMURO: MOPA MORO, OGORI-MAGONGO: OGORI MANGOGO, OLAMABARO: OLAMABORO}
-  KWARA: {KAIMA: KAIAMA, PATEGI: PATIGI}
-  LAGOS: {SHOMOLU: SOMOLU}
+  KWARA: {KAIMA: KAIAMA, PATEGI: PATIGI, BARUTIN: BARUTEN}   # BARUTIN: INEC 2027 State Assembly list p403 SN 23, p404 SN 33
+  LAGOS: {SHOMOLU: SOMOLU, IFAKO-IJAIYE: IFAKO-IJAYE}   # IFAKO / IJAIYE: INEC 2027 State Assembly list p433 SN 143, 151
   NASARAWA: {AKAWANGA: AKWANGA, NASARAWA-EGON: NASARAWA EGGON, NASSARAWA EGGON: NASARAWA EGGON, NASSARAWA: NASARAWA}
-  NIGER: {BOOSO: BOSSO, CHACHANGA: CHANCHAGA, EDATI: EDATTI, KONTOGORA: KONTAGORA, MUYA: MUNYA, TAPA: TAFA}
+  NIGER: {BOOSO: BOSSO, CHACHANGA: CHANCHAGA, EDATI: EDATTI, KONTOGORA: KONTAGORA, MUYA: MUNYA, TAPA: TAFA,
+          CHANCHANGA: CHANCHAGA, KOTANGORA: KONTAGORA}   # INEC 2027 State Assembly list p471 SN 72, p475 SN 143
   OGUN: {EGBADO NORTH: YEWA NORTH, EGBADO SOUTH: YEWA SOUTH, SHAGAMU: SAGAMU}
   OSUN: {ORULU: OROLU, ATAKUNMOSA EAST: ATAKUMOSA EAST, ATAKUNMOSA WEST: ATAKUMOSA WEST, AYADAADE: AYEDAADE,
          BOLOWADURO: BOLUWADURO, ILESHA EAST: ILESA EAST, ILESHA WEST: ILESA WEST}
@@ -238,43 +240,43 @@ placement_notes:
 # State constituencies whose LGA INEC's workbook doesn't make plain (Phase 5, D-028). Each quotes the workbook's text and
 # says what places it. `kind: remainder` = the LGA's wards that no other constituency claims. The build checks every one.
 state_constituency_overrides:
-  SC/03/AB: {workbook_text: "Part of the LGA", lgas: [ABA NORTH, ABA SOUTH],
+  SC/03/AB: {source_id: inec-constituencies-workbook, row: 9, workbook_text: "Part of the LGA", lgas: [ABA NORTH, ABA SOUTH],
              reading: "Aba Central's neighbours Aba North and Aba South are also 'Part of the LGA'; INEC names neither the LGA nor the wards, so the wards of both LGAs list all three Aba constituencies (OI-6)."}
-  SC/107/BA: {workbook_text: "Ward 06 – 10", lgas: [ALKALERI],
+  SC/107/BA: {source_id: inec-constituencies-workbook, row: 216, wards: [05/01/11], workbook_text: "Ward 06 – 10", lgas: [ALKALERI],
               reading: "Alkaleri is the LGA with a ward named GWANA / MANSUR; the sheet's previous constituency, PALI (wards 01 – 05), is also in Alkaleri."}
-  SC/120/BA: {workbook_text: "Ward 02 & 09 – 12", lgas: [MISAU], reading: "Misau is the only Bauchi LGA with a ward named HARDAWA."}
-  SC/130/BA: {workbook_text: "Ward 01, 07 & 10 – 13", lgas: [SHIRA], reading: "Shira is the only Bauchi LGA with a ward named DISINA."}
-  SC/133/BA: {workbook_text: "The entire LGA", lgas: [KATAGUM], kind: remainder,
+  SC/120/BA: {source_id: inec-constituencies-workbook, row: 229, wards: [05/14/07], workbook_text: "Ward 02 & 09 – 12", lgas: [MISAU], reading: "Misau is the only Bauchi LGA with a ward named HARDAWA."}
+  SC/130/BA: {source_id: inec-constituencies-workbook, row: 239, wards: [05/16/04], workbook_text: "Ward 01, 07 & 10 – 13", lgas: [SHIRA], reading: "Shira is the only Bauchi LGA with a ward named DISINA."}
+  SC/133/BA: {source_id: inec-constituencies-workbook, row: 242, workbook_text: "The entire LGA", lgas: [KATAGUM], kind: remainder,
               reading: "Azare is Katagum's headquarters; Katagum's other constituency, MADARA/CHINADE, is given wards 05 – 11, so Azare takes the Katagum wards no other constituency claims."}
-  SC/135/BA: {workbook_text: "Ward 01 – 04", lgas: [GAMAWA], reading: "Gamawa is the only Bauchi LGA with a ward named UDUBO."}
-  SC/476/KD: {workbook_text: "4 RAS OF BASAWA", lgas: [SABON GARI], reading: "Sabon Gari is the only Kaduna LGA with a ward named BASAWA."}
-  SC/466/KD: {workbook_text: "SHABA GAJI UNG LIMAN, MAIBURI,GABASAWA, KABALA, UNG SARKI", lgas: [KADUNA NORTH],
+  SC/135/BA: {source_id: inec-constituencies-workbook, row: 244, wards: [05/07/07], workbook_text: "Ward 01 – 04", lgas: [GAMAWA], reading: "Gamawa is the only Bauchi LGA with a ward named UDUBO."}
+  SC/476/KD: {source_id: inec-constituencies-workbook, row: 842, wards: [18/19/04], workbook_text: "4 RAS OF BASAWA", lgas: [SABON GARI], reading: "Sabon Gari is the only Kaduna LGA with a ward named BASAWA."}
+  SC/466/KD: {source_id: inec-constituencies-workbook, row: 846, wards: [18/09/05, 18/09/06], workbook_text: "SHABA GAJI UNG LIMAN, MAIBURI,GABASAWA, KABALA, UNG SARKI", lgas: [KADUNA NORTH],
               reading: "Two of the listed wards, GABASAWA and KABALA (KABALA COSTAIN/ DOKI), are Kaduna North wards; no other LGA has either."}
-  SC/452/KD: {workbook_text: "8 RAS OF KAKANGI", lgas: [BIRNIN GWARI],
+  SC/452/KD: {source_id: inec-constituencies-workbook, row: 857, wards: [18/01/07], workbook_text: "8 RAS OF KAKANGI", lgas: [BIRNIN GWARI],
               reading: "Birnin Gwari and Giwa both have a ward named KAKANGI. Giwa's wards are already split between GIWA EAST and GIWA WEST, so Kakangi is read as Birnin Gwari's; the build checks that the wards left there number 8."}
-  SC/468/KD: {workbook_text: "7 RAS OF DOKA/GABASAWA", lgas: [KADUNA SOUTH],
+  SC/468/KD: {source_id: inec-constituencies-workbook, row: 867, wards: [18/10/01], workbook_text: "7 RAS OF DOKA/GABASAWA", lgas: [KADUNA SOUTH],
               reading: "The constituency is MAKERA, a Kaduna South ward. The text's DOKA/GABASAWA are Kaduna North wards already listed for DOKA, so the name is followed; its wards stay unresolved among Kaduna South's count-only constituencies."}
-  SC/467/KD: {workbook_text: "4 RAS OFTUDUN WADA", lgas: [KADUNA SOUTH],
+  SC/467/KD: {source_id: inec-constituencies-workbook, row: 872, wards: [18/10/06, 18/10/07, 18/10/08, 18/10/12, 18/10/01], workbook_text: "4 RAS OFTUDUN WADA", lgas: [KADUNA SOUTH],
               reading: "Kaduna South has three wards named TUDUN WADA (NORTH, SOUTH, WEST); Makarfi and Zaria each have one. Read as Kaduna South with UNGUWAR SANUSI and MAKERA; wards stay unresolved among them."}
-  SC/492/KN: {workbook_text: "The entire LGA", lgas: [DANBATA], reading: "DAMBATTA is the workbook's spelling of Danbata LGA (the federal constituency 'Dambatta/Makoda')."}
-  SC/737/OG: {workbook_text: "", lgas: [IJEBU NORTH EAST], kind: entire,
+  SC/492/KN: {source_id: inec-constituencies-workbook, row: 925, workbook_text: "The entire LGA", lgas: [DANBATA], reading: "DAMBATTA is the workbook's spelling of Danbata LGA (the federal constituency 'Dambatta/Makoda')."}
+  SC/737/OG: {source_id: inec-constituencies-workbook, row: 1364, workbook_text: "", lgas: [IJEBU NORTH EAST], kind: entire,
               reading: "The workbook gives no composition; the constituency is named after Ijebu North East LGA, which has no other constituency."}
-  SC/739/OG: {workbook_text: "SURULERE, ISOTE, SIWMAWA/IWELEPE, EGBOWA, IBIDO/ITUN/ALARA", lgas: [SAGAMU],
+  SC/739/OG: {source_id: inec-constituencies-workbook, row: 1367, wards: [27/20/11, 27/20/12, 27/20/13, 27/20/15], workbook_text: "SURULERE, ISOTE, SIWMAWA/IWELEPE, EGBOWA, IBIDO/ITUN/ALARA", lgas: [SAGAMU],
               reading: "Four of the five listed wards are Sagamu wards (SURULERE, ISOTE, SIMAWA / IWELEPE, IBIDO/ITUWA/ALARA)."}
-  SC/772/OD: {workbook_text: "12 RAS OF ESE LGAS", lgas: [OSE],
+  SC/772/OD: {source_id: inec-constituencies-workbook, row: 1408, workbook_text: "12 RAS OF ESE LGAS", lgas: [OSE],
               reading: "Not Ese Odo, which is its own constituency ('10 RAS OF ESE ODO LGAS'). Ose is the Ondo LGA with 12 wards; the build checks the count."}
-  SC/928/TR: {workbook_text: "Ward 02, 04, 05 & 07 – 11", lgas: [USSA], reading: "Named after Ussa LGA."}
-  SC/939/TR: {workbook_text: "The entire LGA", lgas: [DONGA], reading: "DONDA is the workbook's spelling of Donga LGA."}
-  SC/470/KD: {workbook_text: "11 RAS OF KAURA", lgas: [KAURU],
+  SC/928/TR: {source_id: inec-constituencies-workbook, row: 1669, workbook_text: "Ward 02, 04, 05 & 07 – 11", lgas: [USSA], reading: "Named after Ussa LGA."}
+  SC/939/TR: {source_id: inec-constituencies-workbook, row: 1680, workbook_text: "The entire LGA", lgas: [DONGA], reading: "DONDA is the workbook's spelling of Donga LGA."}
+  SC/470/KD: {source_id: inec-constituencies-workbook, row: 843, workbook_text: "11 RAS OF KAURA", lgas: [KAURU],
               reading: "The constituency is CHAWAI/KAURU. 'KAURA' is the same Kaura-for-Kauru slip as in INEC's senatorial list (D-018); Kaura has its own constituency ('10 RAS OF KAURA') and Kauru has exactly 11 wards."}
-  SC/29/AD: {workbook_text: "GENGLE,M/BELWA,", lgas: [DEMSA], kind: entire,
+  SC/29/AD: {source_id: inec-constituencies-workbook, row: 56, workbook_text: "GENGLE,M/BELWA,", lgas: [DEMSA], kind: entire,
              reading: "The listed wards are Mayo-Belwa's, which MAYO-BELWA's own constituency lists ('GENGLE,MAYO-BELWA,NDIKONG,RIBADU,YOFFO'). Read by its name: Demsa LGA, which no other constituency covers."}
 
 # INEC 2027 State Assembly constituencies whose LGA neither INEC's 2027 name nor the workbook settles (Phase 5, D-028).
 # Applied before any other rule. "<STATE>|<name as INEC's 2027 list prints it>".
 sha_lga_overrides:
-  "KADUNA|DOKA/GABASAWA": {lgas: [KADUNA NORTH], reading: "Kaduna North is the only Kaduna LGA with a ward named GABASAWA (DOKA wards also exist in Kachia and Kudan)."}
-  "KOGI|KOTON KARFE II": {lgas: [KOGI . K. K.], reading: "INEC's locator calls Kogi (Koton Karfe) LGA 'KOGI . K. K.'; its wards include UKWO-KOTON KARFE and ODAKI-KOTON KARFE. The 2027 list also has 'KOGI (K.K)'."}
-  "KOGI|IGALA OGWA": {lgas: [IDAH], reading: "Idah's ward IGALAOGBA is the only Kogi ward resembling 'Igala Ogwa'."}
-  "PLATEAU|PENGANA": {lgas: [BASSA], reading: "With RUKUBA/IRIGWE, its workbook ward numbers (02, 04 – 06, 08, 12 & 16 and 01, 03, 07, 09 & 10 - 15) interleave to cover 1 – 16 exactly. Plateau's 16-ward LGAs are Bassa and Mangu, and Mangu's wards belong to MANGU NORTH and MANGU SOUTH, so Bassa."}
-  "PLATEAU|RUKUBA/IRIGWE": {lgas: [BASSA], reading: "See PENGANA: together they cover Bassa's 16 wards exactly."}
+  "KADUNA|DOKA/GABASAWA": {source_id: sha-2026-10-10, page: 311, sn: 140, wards: [18/09/06], lgas: [KADUNA NORTH], reading: "Kaduna North is the only Kaduna LGA with a ward named GABASAWA (DOKA wards also exist in Kachia and Kudan)."}
+  "KOGI|KOTON KARFE II": {source_id: sha-2026-10-10, page: 399, sn: 257, wards: [22/11/01, 22/11/02], lgas: [KOGI . K. K.], reading: "INEC's locator calls Kogi (Koton Karfe) LGA 'KOGI . K. K.'; its wards include UKWO-KOTON KARFE and ODAKI-KOTON KARFE. The 2027 list also has 'KOGI (K.K)'."}
+  "KOGI|IGALA OGWA": {source_id: sha-2026-10-10, page: 399, sn: 262, wards: [22/07/01], lgas: [IDAH], reading: "Idah's ward IGALAOGBA is the only Kogi ward resembling 'Igala Ogwa'."}
+  "PLATEAU|PENGANA": {source_id: sha-2026-10-10, page: 575, sn: 14, workbook_rows: [1513, 1514], lgas: [BASSA], reading: "With RUKUBA/IRIGWE, its workbook ward numbers (02, 04 – 06, 08, 12 & 16 and 01, 03, 07, 09 & 10 - 15) interleave to cover 1 – 16 exactly. Plateau's 16-ward LGAs are Bassa and Mangu, and Mangu's wards belong to MANGU NORTH and MANGU SOUTH, so Bassa."}
+  "PLATEAU|RUKUBA/IRIGWE": {source_id: sha-2026-10-10, page: 575, sn: 26, workbook_rows: [1513, 1514], lgas: [BASSA], reading: "See PENGANA: together they cover Bassa's 16 wards exactly."}
