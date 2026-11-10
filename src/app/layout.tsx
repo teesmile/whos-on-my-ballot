@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <footer className="site-footer">
           <p className="affiliation">
-            Independent project. Not affiliated with or endorsed by INEC (Independent National Electoral Commission).
+            Not affiliated with INEC.
           </p>
           <SourceLine id="president" what="Candidates (INEC final lists, updated 31 October 2026)" />
           <SourceLine id="inec-pu-locator" what="Polling units" />

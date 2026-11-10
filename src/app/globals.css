@@ -123,3 +123,6 @@ main p > a { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
 /* The owner's civic note (D-034): plain text, set apart by space and a rule, no icon or colour. */
 .civic-note { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; }
 .civic-note p[data-civic-note] { font-weight: 600; margin: 0 0 0.5rem; }
+.civic-note a { font-weight: 400; }
+.ext { display: inline-block; width: 0.75em; height: 0.75em; margin-left: 0.2em; vertical-align: baseline; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

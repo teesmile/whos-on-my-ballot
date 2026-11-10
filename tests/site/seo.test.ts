@@ -162,11 +162,16 @@ describe('icons and credit', () => {
 
 describe('the owner\'s civic note (D-034)', () => {
   const NOTE = 'Whoever wins will serve four years. Don’t sell your vote. Vote your conscience. Vote for competence.'
-  it('appears, exactly and with its citation, on the home and election-day pages only', () => {
+  it('the about page carries the full citation: sections and retrieval date', () => {
+    const about = pages.find(([p]) => p === '/about/')![1]
+    expect(about).toMatch(/data-source="constitution-1999"><a href="[^"]+">Four-year terms \(the note on the home and election-day pages\): sections 64\(1\), 105\(1\), 135\(2\) and 180\(2\): Constitution of the Federal Republic of Nigeria 1999[^<]*, retrieved <time/)
+  })
+
+  it('appears, exactly and with its link, on the home and election-day pages only', () => {
     for (const [p, h] of pages) {
       const n = h.split('<footer')[0].split(NOTE).length - 1
       expect(n, p).toBe(p === '/' || p === '/election-day/' ? 1 : 0)
-      if (n) expect(h, p).toMatch(/data-source="constitution-1999"><a href="[^"]+">Four-year terms: sections 64\(1\), 105\(1\), 135\(2\) and 180\(2\): Constitution of the Federal Republic of Nigeria 1999/)
+      if (n) expect(h, p).toMatch(/Vote for competence\. <a href="https:\/\/nigeriareposit\.nln\.gov\.ng\/[^"]+" target="_blank" rel="noopener noreferrer" data-source="constitution-1999">\(1999 Constitution\)<svg[^>]*aria-hidden="true"[\s\S]*?<span class="visually-hidden"> \(opens in a new tab\)<\/span><\/a>/)
     }
   })
 })

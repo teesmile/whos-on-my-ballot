@@ -61,7 +61,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
         </div>
         <div style={{ display: 'flex', fontSize: 18, color: MUTED, marginTop: 'auto' }}>{caption}</div>
         <div style={{ display: 'flex', fontSize: 16, color: MUTED, marginTop: 4 }}>
-          {`${n} candidates in the order of INEC’s list · ${SITE_HOST} · Independent project, not affiliated with INEC`}
+          {`${n} candidates in the order of INEC’s list · ${SITE_HOST} · Not affiliated with INEC.`}
         </div>
       </div>
     ),
@@ -80,7 +80,7 @@ function siteCard() {
           Every candidate on your ballot, side by side, from INEC’s published lists.
         </div>
         <div style={{ display: 'flex', fontSize: 22, color: MUTED, marginTop: 'auto' }}>
-          {`${SITE_HOST} · Independent project, not affiliated with or endorsed by INEC`}
+          {`${SITE_HOST} · Not affiliated with INEC.`}
         </div>
       </div>
     ),

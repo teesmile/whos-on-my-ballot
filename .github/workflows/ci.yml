@@ -33,6 +33,22 @@ jobs:
       - run: pnpm lint && pnpm typecheck && pnpm test
       - run: pnpm build
       - run: pnpm test:site
+      # When a card snapshot test fails, keep the new cards so they can be looked at and, if right, committed as fixtures.
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshot-cards
+          path: |
+            out/cards/site.png
+            out/cards/jan-2027-president.png
+            out/cards/jan-2027-house-fct-municipal-bwari.png
+            out/cards/jan-2027-house-lagos-eti-osa.png
+            out/cards/jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west.png
+            out/cards/jan-2027-house-kwara-ilorin-east-ilorin-south.png
+            out/cards/jan-2027-house-niger-chanchaga.png
+            out/cards/feb-2027-governor-taraba.png
+            out/cards/feb-2027-sha-kwara-kaiama-wajibe-kemanji-kaiama-ii.png
+            out/cards/feb-2027-sha-lagos-lagos-island-i.png
       - run: pnpm test:e2e
       - run: pnpm size
       - run: pnpm lighthouse

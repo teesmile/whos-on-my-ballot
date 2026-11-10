@@ -185,7 +185,7 @@ describe('every page', () => {
     expect(pages.length).toBeGreaterThan(10_000)
     for (const f of pages) {
       const s = fs.readFileSync(f, 'utf8')
-      expect(s, f).toContain('Not affiliated with or endorsed by INEC')
+      expect(s, f).toContain('Not affiliated with INEC.')
       const scripts = [...s.matchAll(/<script\b[^>]*>/g)].map(m => m[0])
       expect(scripts.every(t => t === '<script type="module" src="/lookup.js">' || t === '<script type="application/ld+json">'), f).toBe(true)
       // only links (a href) and the canonical address may point off-site; nothing the page loads may

@@ -31,6 +31,7 @@ export default function About() {
       <SourceLine id="inec-pu-locator" what="States, LGAs, wards and polling units" />
       <SourceLine id="inec-constituencies-workbook" what="Which constituencies each LGA and ward is in" />
       <SourceLine id="inec-irev-2023-assembly" what="Which State Assembly constituency each ward was in at the 2023 elections" />
+      <SourceLine id="constitution-1999" what="Four-year terms (the note on the home and election-day pages): sections 64(1), 105(1), 135(2) and 180(2)" />
       <p>For Niger’s House of Representatives races, INEC’s latest list is from 12 September 2026, and those pages say so.</p>
 
       <h2>How INEC’s lists are shown</h2>
@@ -96,7 +97,7 @@ export default function About() {
       </p>
 
       <h2>Independence</h2>
-      <p>This is an independent project. It is not affiliated with or endorsed by INEC (Independent National Electoral Commission).</p>
+      <p>Not affiliated with INEC.</p>
       <p className="credit">
         Built by
         {' '}
