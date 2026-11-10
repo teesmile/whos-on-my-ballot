@@ -197,14 +197,30 @@ describe('every page', () => {
     }
   })
 
-  it('stylesheets contain no party names, no party-keyed selectors and only greys', () => {
+  // D-039: neutral greys plus one accent, Nigeria's national green (hue 140-170). Never red, blue or any other hue.
+  it('stylesheets contain no party names, no party-keyed selectors, and only greys and the national green', () => {
     const css = [...walk(path.join(OUT, '_next'))].filter(f => f.endsWith('.css')).map(f => fs.readFileSync(f, 'utf8')).join('\n')
     const parties = [...new Set(races().flatMap(r => r.candidates.map(c => c.party)))]
     for (const p of parties) expect(css).not.toMatch(new RegExp(`[.#\\[]${p.toLowerCase()}\\b`))
     expect(css).not.toMatch(/data-party/)
-    for (const [, hex] of css.matchAll(/#([0-9a-f]{6})\b/gi)) {
-      const [r, g, b] = [0, 2, 4].map(i => Number.parseInt(hex.slice(i, i + 2), 16))
-      expect(r === g && g === b, `#${hex} is not grey`).toBe(true)
+    expect(css).not.toMatch(/:\s*(?:red|blue|navy|crimson|maroon|teal|cyan|aqua|purple|orange|yellow|pink)\b/i)
+    expect(css).not.toMatch(/prefers-color-scheme/)
+    const colours: [string, number[]][] = []
+    for (const [m, hex] of css.matchAll(/#([0-9a-f]{6}|[0-9a-f]{3})\b/gi)) {
+      const h = hex.length === 3 ? [...hex].map(c => c + c).join('') : hex
+      colours.push([m, [0, 2, 4].map(i => Number.parseInt(h.slice(i, i + 2), 16))])
     }
+    for (const m of css.matchAll(/rgba?\(\s*(\d+)[\s,]+(\d+)[\s,]+(\d+)/g)) colours.push([m[0], [1, 2, 3].map(i => Number(m[i]))])
+    expect(colours.length).toBeGreaterThan(5)
+    let greens = 0
+    for (const [text, [r, g, b]] of colours) {
+      const max = Math.max(r, g, b)
+      const min = Math.min(r, g, b)
+      if (max - min <= 8) continue // a neutral grey
+      const hue = 60 * (max === g ? 2 + (b - r) / (max - min) : max === r ? ((g - b) / (max - min) + 6) % 6 : 4 + (r - g) / (max - min))
+      expect(hue >= 140 && hue <= 170, `${text} (hue ${Math.round(hue)}) is neither grey nor the national green`).toBe(true)
+      greens++
+    }
+    expect(greens).toBeGreaterThan(0)
   })
 })

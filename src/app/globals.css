@@ -85,7 +85,7 @@ h3 { font-size: 1.12rem; line-height: 1.35; margin: 1.5rem 0 0.5rem; }
 .progress li { counter-increment: step; display: flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.55rem 0.2rem 0.25rem; white-space: nowrap; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
 .progress li::before { content: counter(step); display: inline-grid; place-items: center; width: 1.35rem; height: 1.35rem; border-radius: 50%; background: var(--panel); color: var(--muted); font-weight: 700; font-size: 0.8rem; }
 .progress li.done { border-color: transparent; background: var(--accent-soft); color: var(--accent-deep); }
-.progress li.done::before { content: "✓"; background: var(--accent-strong); color: #fff; }
+.progress li.done::before { content: "✓"; content: "✓" / ""; background: var(--accent-strong); color: #fff; }
 .progress li[aria-current="step"] { border-color: var(--accent-strong); color: var(--accent-deep); font-weight: 700; }
 .progress li[aria-current="step"]::before { background: var(--accent-strong); color: #fff; }
 .jump { margin: 0 0 0.5rem; }
@@ -113,8 +113,10 @@ h3 { font-size: 1.12rem; line-height: 1.35; margin: 1.5rem 0 0.5rem; }
   border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg);
   color: var(--fg); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; line-height: 1.3;
 }
+/* The arrow is drawn, not typed, so it never becomes part of the link's name for a screen reader. */
 .tiles a::after, .pu-list a::after, .toc a::after, .result a::after {
-  content: "›"; position: absolute; right: 0.8rem; top: 50%; transform: translateY(-55%); color: var(--accent); font-size: 1.35rem; font-weight: 400;
+  content: ""; position: absolute; right: 0.95rem; top: 50%; width: 0.45rem; height: 0.45rem;
+  border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); transform: translateY(-50%) rotate(45deg);
 }
 .tiles a:visited, .pu-list a:visited, .toc a:visited, .result a:visited { color: var(--fg); }
 .tiles a:hover, .pu-list a:hover, .toc a:hover, .result a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--fg); }
