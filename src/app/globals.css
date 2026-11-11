@@ -465,17 +465,22 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
   .clock-box:nth-child(4) { animation-delay: 0.44s; }
   .clock-box:first-child { animation-delay: 0.26s; }
   @supports (animation-timeline: view()) {
-    .card, .wa-tile, .panel, .results-panel, .link-list > li, .pu-list > li, .date-card, .step-card, .timeline > li, .sources > li,
-    .race > h2, .race > h3, .results-strip, .share, .correct-row, .civic-note, .state-map, .results-table tbody tr {
-      /* Two parts: the rise runs over the first 38% of the entrance; the fade is over within the first 40px, so text is only
-         ever part-faded right at the screen's bottom edge, never where it can be read (contrast stays AA). */
+    :is(.card, .wa-tile, .panel, .results-panel, .link-list > li, .pu-list > li, .date-card, .step-card, .timeline > li, .race > h2, .race > h3, .results-strip, .share, .correct-row, .civic-note, .state-map, .results-table tbody tr) {
+      animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 38%;
+    }
+    /* The fade runs over the first 40px of the entrance and only from 90% opacity, so even mid-fade every text colour stays
+       above AA's 4.5:1 (green links on grey: 5.0:1). White on the green buttons has the least room (4.58:1), so anything
+       holding a button rises without fading. */
+    :is(.card, .wa-tile, .panel, .results-panel, .link-list > li, .pu-list > li, .date-card, .step-card, .timeline > li, .race > h2, .race > h3, .results-strip, .share, .correct-row, .civic-note, .state-map, .results-table tbody tr):not(:has(.btn, button)) {
       animation: rise linear both, fade linear both; animation-timeline: view(), view(); animation-range: entry 0% entry 38%, entry 0 entry 40px;
     }
+    /* The sources list is where the numbered markers jump to, so it fades but never moves. */
+    .sources > li { animation: fade linear both; animation-timeline: view(); animation-range: entry 0 entry 40px; }
     /* A jump target (or the box holding one) never moves, so a jump lands exactly below the sticky bars. */
     :is(.card, .panel, .results-panel, .link-list > li, .date-card, .step-card, .timeline > li, .sources > li, .race > h2, .race > h3):is(:target, :has(:target)) { animation: none; }
   }
   @keyframes reveal { from { opacity: 0; transform: translateY(6px); } }
   @keyframes settle { from { opacity: 0; transform: translateY(14px) scale(0.99); } }
   @keyframes rise { from { transform: translateY(22px); } }
-  @keyframes fade { from { opacity: 0; } }
+  @keyframes fade { from { opacity: 0.9; } }
 }
