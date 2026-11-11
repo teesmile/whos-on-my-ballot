@@ -44,7 +44,14 @@ for (const file of walk(OUT)) {
   // React's empty separator comments between adjacent text nodes carry no content.
   // Structured data (application/ld+json) is data, never executed: it stays (D-032). Every other script goes.
   html = html.replace(SCRIPT, s => (s.startsWith('<script type="application/ld+json">') ? s : '')).replace(PRELOAD, '').replaceAll('<!-- -->', '')
-  if (html.includes('data-lookup=') || html.includes('data-copy=') || html.includes('data-countdown=')) html = html.replace('</body>', '<script type="module" src="/lookup.js"></script></body>')
+  // The header marks where the visitor is: the page itself, or a page inside that section (no script needed).
+  const rel = `/${path.relative(OUT, path.dirname(file)).split(path.sep).join('/')}/`.replace('//', '/')
+  for (const section of ['/election-day/', '/about/']) {
+    if (!rel.startsWith(section)) continue
+    const current = rel === section ? 'page' : 'true'
+    html = html.replace(`<a href="${section}" class="site-nav">`, `<a href="${section}" class="site-nav" aria-current="${current}">`)
+  }
+  if (html.includes('data-clock=') || html.includes('data-share=') || html.includes('data-tabs') || html.includes('data-lookup=') || html.includes('data-copy=')) html = html.replace('</body>', '<script type="module" src="/lookup.js"></script></body>')
   const left = [...html.matchAll(/<script\b[^>]*>/g)].map(m => m[0]).filter(s => !s.includes('src="/lookup.js"') && s !== '<script type="application/ld+json">')
   if (left.length) throw new Error(`${file} still has scripts: ${left.join(' ')}`)
   if (/\/_next\/static\/[^"']+\.js/.test(html)) throw new Error(`${file} still references framework JS`)

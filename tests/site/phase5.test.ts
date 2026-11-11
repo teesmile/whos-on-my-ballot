@@ -68,7 +68,7 @@ describe('6 February ballot pages', () => {
       for (const [i, sec] of sections.entries()) {
         const r = race(raceIds[i])
         const cands = ids(sec.split('<section class="race"')[0], 'data-candidate-id')
-        expect(cands, r.id).toEqual([...r.candidates].sort((a, z) => a.ballot_position - z.ballot_position).map(c => c.id))
+        expect(cands, r.id).toEqual(r.candidates.map(c => c.id))
         for (const c of cands) {
           if (!seen.has(c)) seen.set(c, new Set())
           seen.get(c)!.add(r.id)
@@ -108,7 +108,7 @@ describe('6 February ballot pages', () => {
     for (const b of unresolved) {
       expect(b.sha.length, b.path).toBeGreaterThan(1)
       const page = html(b.path.slice(1))
-      expect(page).toContain('<h2 id="group-state-house-of-assembly">State House of Assembly: one of these is on your ballot</h2>')
+      expect(page).toContain('<h2 id="group-state-house-of-assembly" class="band">State House of Assembly: one of these is on your ballot</h2>')
       expect(page).toContain(`INEC’s published documents don’t settle which of these ${b.sha.length} races`)
       expect(page).toContain('href="https://cvr.inecnigeria.org/pu"')
     }
@@ -130,11 +130,10 @@ describe('6 February ballot pages', () => {
     expect(disagree).toBeGreaterThan(0)
   })
 
-  it('every candidate cites INEC with a link to the page and a retrieval date', () => {
-    for (const b of all.filter((_, i) => i % 20 === 0)) {
-      const blocks = html(b.path.slice(1)).match(/<li class="candidate"[\s\S]*?<\/li>/g) ?? []
-      for (const block of blocks) {
-        expect(block).toMatch(/<p class="cite" data-source="[^"]+"><a href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+">Source, page \d+, row \d+: INEC: [^<]+, retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/)
+  it('every candidate’s page cites INEC with a link to the page and a retrieval date', () => {
+    for (const r of febRaces().filter((_, i) => i % 20 === 0)) {
+      for (const c of r.candidates) {
+        expect(html(`c/${c.id}`), c.id).toMatch(/<p class="cite" data-source="[^"]+"><a href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+">Source, page \d+, row \d+: INEC: [^<]+, retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/)
       }
     }
   })

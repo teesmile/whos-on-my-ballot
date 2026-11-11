@@ -56,16 +56,17 @@ test.describe('without JavaScript', () => {
 
 test('keyboard: the code lookup works with the keyboard alone', async ({ page }) => {
   await page.goto('/')
-  // The guided path comes first: header, the 37 states, the landmark search (state, then search box and button;
-  // the LGA list stays disabled until a state is chosen), then the code shortcut.
+  // The guided path comes first: header, the hero's two buttons and the countdown's source, the 37 states, the landmark
+  // search (state, then search box and button; the LGA list stays disabled until a state is chosen), then the code shortcut.
   const order: string[] = []
   for (let i = 0; i < 60 && order.at(-1) !== 'code'; i++) {
     await page.keyboard.press('Tab')
     order.push(await page.evaluate(() => document.activeElement?.id || document.activeElement?.textContent?.trim() || ''))
   }
-  expect(order.slice(0, 4)).toEqual(['Skip to content', 'Who’s on my ballot?', 'Election day', 'About'])
-  expect(order.slice(4, 41)).toHaveLength(37)
-  expect(order.slice(41)).toEqual(['home-state', 'home-q', 'Search', 'code'])
+  expect(order.slice(0, 6)).toEqual(['Skip to content', 'Who’s on my ballot?', 'Election day', 'About', 'Pick your state', 'Search by a landmark'])
+  expect(order[6]).toMatch(/^Dates: /)
+  expect(order.slice(7, 44)).toHaveLength(37)
+  expect(order.slice(44)).toEqual(['home-state', 'home-q', 'Search', 'code'])
   await expect(page.getByLabel(/Code on your voter’s card/)).toBeFocused()
   await page.keyboard.type('01/01/01/001')
   await page.keyboard.press('Enter')

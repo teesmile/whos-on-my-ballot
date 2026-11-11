@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 
-import { NOT_PROVIDED } from '@/components/Candidate'
+import { formatDate, NOT_PROVIDED } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
+import { firstGroup } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { BUILT_BY, CORRECTIONS_EMAIL } from '@/lib/site'
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = pageMeta({
 })
 
 export default function About() {
+  const fg = firstGroup()
   return (
     <>
       <JsonLd data={pageGraph('/about/', TITLE, [['Home', '/'], ['About', '/about/']])} />
@@ -27,7 +29,7 @@ export default function About() {
       <SourceLine id="president" what="Candidates for President, Senate and House of Representatives" />
       <SourceLine id="governor-abia" what="Candidates for Governor" />
       <SourceLine id="sha-2026-10-10" what="Candidates for the State Houses of Assembly" />
-      <SourceLine id="inec-parties" what="Full party names" />
+      <SourceLine id="inec-parties" what="Full party names and party logos" />
       <SourceLine id="inec-pu-locator" what="States, LGAs, wards and polling units" />
       <SourceLine id="inec-constituencies-workbook" what="Which constituencies each LGA and ward is in" />
       <SourceLine id="inec-irev-2023-assembly" what="Which State Assembly constituency each ward was in at the 2023 elections" />
@@ -42,16 +44,27 @@ export default function About() {
         <li>Every candidate has the same fields and the same layout.</li>
       </ul>
 
-      <h2>The order of candidates</h2>
+      <h2 id="order">The order of candidates</h2>
       <p>
-        Within each race, candidates are listed in the order of INEC’s final lists: alphabetical by party acronym. INEC has not published the
-        2027 ballot-paper order. If it does, this site will follow it.
+        {`Each race shows two groups. First, the five parties with the most candidates in 2027 (${fg.parties.join(', ')}), alphabetical by acronym. `}
+        {'They come from one published measure, not a choice: how many candidates each party fields across all 2027 races, counted from INEC’s final lists. They are the same five in every race, and a party with no candidate in a race is simply absent from it. '}
+        {'Then all other parties, in ballot order. INEC has not published the 2027 ballot-paper order, so that is the order of INEC’s lists, alphabetical by acronym; if INEC publishes it, this site will follow it.'}
       </p>
+      <p className="quiet">{`Candidates fielded: ${fg.measure_values.map(m => `${m.acronym} ${m.value.toLocaleString('en-GB')}`).join(', ')}.`}</p>
+      {fg.sources.map(src => (
+        <p className="cite" key={src.url} data-source="first-group">
+          <a href={src.url}>
+            {`The five parties: ${src.title}, retrieved `}
+            <time dateTime={src.retrieved}>{formatDate(src.retrieved)}</time>
+          </a>
+        </p>
+      ))}
 
       <h2>What this site never does</h2>
       <p>
-        No rankings, predictions, polls, endorsements or opinions. No party colours, logos or candidate photos. No candidate is featured or
-        given more space than another.
+        No rankings, predictions, polls, endorsements or opinions. No candidate photos. Party colours and marks appear only inside each
+        party’s official logo from INEC’s register, the same size for every party, never in the site’s own design. No candidate is featured
+        or given more space than another.
       </p>
 
       <h2>Background for presidential candidates</h2>

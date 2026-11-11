@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 
 import { INEC_2027, INEC_LOCATOR } from '@/components/RaceSection'
 import { CivicNote } from '@/components/CivicNote'
+import { Countdown } from '@/components/Countdown'
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
 import { electionDay } from '@/lib/data'
-import { formatDay, formatTime, type Schedule } from '@/lib/election'
+import { formatDay, formatTime } from '@/lib/election'
 import { pageGraph, pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
@@ -20,35 +21,25 @@ export const INEC_EDUCATION = 'https://www.inecnigeria.org/voters/education'
 
 export default function ElectionDay() {
   const d = electionDay()
-  const schedule: Schedule = { elections: d.elections.map(({ id, date, races }) => ({ id, date, races })), open: d.hours.open, close: d.hours.close }
-  const [first] = [...d.elections].sort((a, b) => a.date.localeCompare(b.date))
   const open = formatTime(d.hours.open)
   const close = formatTime(d.hours.close)
   return (
     <>
       <JsonLd data={pageGraph('/election-day/', 'Election day: times and what to bring', [['Home', '/'], ['Election day', '/election-day/']])} />
-      <h1>Election day</h1>
-      {/* Server text is the schedule itself; the page script replaces it with where we are in it (no live announcements). */}
-      <div className="countdown" data-countdown={JSON.stringify(schedule)}>
-        <p className="headline">
-          Polls open
-          {' '}
-          {formatDay(first.date)}
-          {' at '}
-          {open}
-          {' WAT.'}
-        </p>
-      </div>
+      <section className="hero hero-plain" aria-labelledby="ed-title">
+        <h1 id="ed-title">Election day</h1>
+        <p className="hero-line">{`Polls open at ${open} and close to new arrivals at ${close} WAT. What to bring, what to expect and INEC’s own tools.`}</p>
+        <Countdown headingLevel={2} />
+      </section>
 
       <section aria-labelledby="dates">
         <h2 id="dates">Dates and times</h2>
-        <ul className="entries">
+        <ul className="date-cards">
           {d.elections.map(e => (
-            <li key={e.id} data-claim data-source={e.source_id}>
-              <p className="entry">
-                <strong>{formatDay(e.date)}</strong>
-                {`, ${open} to ${close} WAT: ${e.races}.`}
-              </p>
+            <li key={e.id} className="date-card" data-claim data-source={e.source_id}>
+              <p className="date-day">{formatDay(e.date)}</p>
+              <p className="date-time">{`${open} to ${close} WAT`}</p>
+              <p className="date-races">{`${e.races}.`}</p>
             </li>
           ))}
         </ul>
@@ -59,15 +50,20 @@ export default function ElectionDay() {
 
       <section aria-labelledby="expect">
         <h2 id="expect">What to bring and what to expect</h2>
-        <ol className="steps">
-          {d.steps.map(s => <li key={s.text} data-claim data-source={d.steps_source_id}>{s.text}</li>)}
+        <ol className="step-cards">
+          {d.steps.map((s, i) => (
+            <li key={s.text} className="step-card" data-claim data-source={d.steps_source_id}>
+              <span className="step-n" aria-hidden="true">{i + 1}</span>
+              <p>{s.text}</p>
+            </li>
+          ))}
         </ol>
         <SourceLine id={d.steps_source_id} what="All of the above" />
       </section>
 
       <section aria-labelledby="tools">
         <h2 id="tools">INEC’s own tools</h2>
-        <ul className="link-list">
+        <ul className="link-list tiles tiles-wide">
           <li><a href={INEC_LOCATOR}>Find your polling unit (INEC Polling Unit Locator)</a></li>
           <li><a href={INEC_CVR}>Voter registration and PVC status (INEC CVR portal)</a></li>
           <li><a href={INEC_IREV}>Results as polling units upload them (INEC Result Viewing Portal, IReV)</a></li>
@@ -82,7 +78,7 @@ export default function ElectionDay() {
         </p>
       </section>
 
-      <p><a href="/">Find who’s on your ballot</a></p>
+      <p><a className="btn btn-big" href="/">Find who’s on your ballot</a></p>
       <CivicNote />
     </>
   )

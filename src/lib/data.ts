@@ -50,7 +50,10 @@ export interface Candidate {
   race_id: string
   party: string
   party_name: string | null
+  /** Ballot-paper order (D-011). */
   ballot_position: number
+  /** Owner decision D-042: one of the five parties shown first, or with all other parties in ballot order. */
+  display_group: 'first' | 'rest'
   remarks: string
   candidate: Person
   running_mate: Person | null
@@ -128,6 +131,30 @@ function load() {
   cache = { races, febRaces, raceById: new Map([...races, ...febRaces].map(r => [r.id, r])), sources, states, geo }
   return cache
 }
+
+export interface FirstGroup {
+  measure: string
+  label: string
+  parties: string[]
+  measure_values: { acronym: string, value: number }[]
+  sources: { title: string, url: string, retrieved: string }[]
+}
+/** The five parties shown first in every race, and the published measure that picks them (D-042). */
+export const firstGroup = (): FirstGroup => read<FirstGroup>('first-group.json')
+
+export interface Logo { file: string, png: string, width: number, height: number, bytes: number, source_url: string, retrieved_at: string }
+let logos: Record<string, Logo> | null = null
+/** Each party's logo from INEC's register (D-043): every party on a ballot has one, or the build fails. */
+export function logo(party: string): Logo {
+  logos ??= read<Record<string, Logo>>('logos.json')
+  const l = logos[party]
+  if (!l) throw new Error(`no INEC logo for ${party}`)
+  return l
+}
+export const logoParties = () => { logos ??= read<Record<string, Logo>>('logos.json'); return Object.keys(logos) }
+/** The same logo as a PNG data URL, for the build-time link-preview cards. */
+export const logoPngDataUrl = (party: string) => `data:image/png;base64,${fs.readFileSync(path.join(DIR, logo(party).png)).toString('base64')}`
+export const logoBytes = (party: string) => fs.readFileSync(path.join(DIR, logo(party).file))
 
 /** The 16 January races. */
 export const races = () => load().races

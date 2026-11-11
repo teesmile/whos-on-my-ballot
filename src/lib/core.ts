@@ -71,9 +71,26 @@ export function puHash(code: string): string {
   return `#pu-${code.replaceAll('/', '-')}`
 }
 
+/**
+ * A ballot page's address fragment holds up to two things: the polling unit chosen (#pu-SS-LL-WW-PPP, kept in the
+ * browser) and the race tab open (#senate). Together: #pu-24-15-03-012&senate. Fragments are never sent to a server.
+ */
 export function codeFromHash(hash: string): string | null {
-  const m = /^#pu-(\d{2})-(\d{2})-(\d{2})-(\d{3})$/.exec(hash)
+  const m = /^#pu-(\d{2})-(\d{2})-(\d{2})-(\d{3})(?:&[\w-]+)?$/.exec(hash)
   return m ? `${m[1]}/${m[2]}/${m[3]}/${m[4]}` : null
+}
+
+/** The tab (or element id) named in a ballot page's fragment, if any. */
+export function tabFromHash(hash: string): string | null {
+  const m = /^#(?:pu-\d{2}-\d{2}-\d{2}-\d{3})?&?([\w-]+)?$/.exec(hash)
+  const t = m?.[1]
+  return t && !t.startsWith('pu-') ? t : null
+}
+
+/** The fragment for a polling unit (if one was chosen) plus a tab. */
+export function hashWithTab(hash: string, tab: string): string {
+  const pu = /^#(pu-\d{2}-\d{2}-\d{2}-\d{3})/.exec(hash)?.[1]
+  return pu ? `#${pu}&${tab}` : `#${tab}`
 }
 
 export interface FoundPollingUnit {

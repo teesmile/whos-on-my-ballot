@@ -1,13 +1,11 @@
 import type { Metadata } from 'next'
 
-import { RaceSection, raceTitle, UnresolvedGroup } from '@/components/RaceSection'
+import { badgeFor, RaceSection, RaceTabs, UnresolvedGroup } from '@/components/RaceSection'
 import { SourceLine } from '@/components/SourceLine'
 import { ballots, janBallotTitle, presidentialRace, race } from '@/lib/data'
 import { JsonLd } from '@/components/JsonLd'
 import { pageGraph, pageMeta } from '@/lib/seo'
-import { ballotCardRace, cardAlt, cardPath, SITE_URL } from '@/lib/site'
-
-import { Share } from '@/components/Share'
+import { ballotCardRace, cardAlt, cardPath } from '@/lib/site'
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -34,6 +32,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
   const b = await ballotOf(params)
   const senate = b.senate.map(race)
   const house = b.house.map(race)
+  const pres = presidentialRace()
   return (
     <>
       <JsonLd data={pageGraph(b.path, janBallotTitle(b), [['Home', '/'], [b.state.name, `/state/${b.state.code}/`], [janBallotTitle(b), b.path]])} />
@@ -51,16 +50,18 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
       </p>
       <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
       <SourceLine id="inec-constituencies-workbook" what="Which Senate district and House constituency each LGA is in" />
-      <nav aria-label="Races on this ballot" className="toc">
-        <ul>
-          <li><a href="#race-jan-2027-president">President</a></li>
-          {[...senate, ...house].map(r => <li key={r.id}><a href={`#race-${r.id}`}>{raceTitle(r)}</a></li>)}
-        </ul>
-      </nav>
-      <RaceSection r={presidentialRace()} />
-      {senate.length === 1 ? <RaceSection r={senate[0]} /> : <UnresolvedGroup office="Senate" list={senate} />}
-      {house.length === 1 ? <RaceSection r={house[0]} /> : <UnresolvedGroup office="House of Representatives" list={house} />}
-      <Share label="Share this ballot" text={`Every candidate on the ballot for ${house.map(r => r.name).join(' or ')}, ${b.state.name}, as listed by INEC:`} url={`${SITE_URL}${b.path}`} />
+      <RaceTabs panels={[
+        { key: 'president', label: 'President', title: 'President', ...badgeFor([pres]), content: <RaceSection r={pres} shareUrl={`${b.path}#president`} eager /> },
+        {
+          key: 'senate', label: 'Senate', title: 'Senate', ...badgeFor(senate),
+          content: senate.length === 1 ? <RaceSection r={senate[0]} shareUrl={`${b.path}#senate`} /> : <UnresolvedGroup office="Senate" list={senate} path={b.path} />,
+        },
+        {
+          key: 'house', label: 'House of Reps', title: 'House of Representatives', ...badgeFor(house),
+          content: house.length === 1 ? <RaceSection r={house[0]} shareUrl={`${b.path}#house`} /> : <UnresolvedGroup office="House of Representatives" list={house} path={b.path} />,
+        },
+      ]}
+      />
       <p><a href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
     </>
   )

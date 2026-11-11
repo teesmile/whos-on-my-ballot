@@ -45,14 +45,17 @@ describe('election-day page', () => {
   })
 
   it('shows every step from the reviewed data, and nothing else in the steps list', () => {
-    const items = [...html.matchAll(/<li data-claim="true" data-source="inec-voter-education">([^<]+)<\/li>/g)].map(m => m[1].replaceAll('&#x27;', '\''))
+    const items = [...html.matchAll(/<li class="step-card" data-claim="true" data-source="inec-voter-education"><span class="step-n" aria-hidden="true">\d+<\/span><p>([^<]+)<\/p><\/li>/g)].map(m => m[1].replaceAll('&#x27;', '\''))
     expect(items).toEqual(electionDay().steps.map(s => s.text))
   })
 
   it('is linked from the header of every page', () => {
     for (const f of [...walk(OUT)].filter(x => x.endsWith('.html'))) {
-      expect(fs.readFileSync(f, 'utf8'), f).toContain('<a href="/election-day/" class="site-nav">Election day</a>')
-      expect(fs.readFileSync(f, 'utf8'), f).toContain('<a href="/about/" class="site-nav">About</a>')
+      const page = fs.readFileSync(f, 'utf8')
+      const rel = `/${path.relative(OUT, path.dirname(f)).split(path.sep).join('/')}/`.replace('//', '/')
+      const mark = (section: string) => (rel === section ? ' aria-current="page"' : rel.startsWith(section) ? ' aria-current="true"' : '')
+      expect(page, f).toContain(`<a href="/election-day/" class="site-nav"${mark('/election-day/')}>Election day</a>`)
+      expect(page, f).toContain(`<a href="/about/" class="site-nav"${mark('/about/')}>About</a>`)
     }
   })
 })

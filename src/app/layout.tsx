@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 }
 
-// Always light (D-039): the page asks the browser for its light form controls and a white browser bar.
-export const viewport: Viewport = { width: 'device-width', initialScale: 1, colorScheme: 'light', themeColor: '#ffffff' }
+// Always light (D-039): light form controls, and a browser bar in the header's national green.
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, colorScheme: 'light', themeColor: '#008751' }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,9 +21,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <a className="skip" href="#main">Skip to content</a>
         <header className="site-header">
-          <a href="/" className="site-name">Who’s on my ballot?</a>
-          <a href="/election-day/" className="site-nav">Election day</a>
-          <a href="/about/" className="site-nav">About</a>
+          <div className="site-header-in">
+            <a href="/" className="site-name">
+              <svg className="site-mark" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true" focusable="false">
+                <circle cx="32" cy="32" r="30.5" fill="#008751" stroke="#fff" strokeWidth="3" />
+                <rect x="14" y="11" width="27" height="35" rx="3.5" fill="#fff" />
+                <path d="M19.5 20h16M19.5 27.5h11" stroke="#008751" strokeWidth="3.4" strokeLinecap="round" />
+                <g transform="rotate(-12 41 42)">
+                  <ellipse cx="41" cy="42" rx="11.5" ry="14" fill="#fff" stroke="#008751" strokeWidth="2.6" />
+                  <path d="M40.32 45.85A2.2 3 0 1 1 42.47 45.23M39.21 50.04A5.8 7.4 0 1 1 44.57 48.83M38.1 54.22A9.4 11.8 0 1 1 46.26 52.78" fill="none" stroke="#008751" strokeWidth="2.3" strokeLinecap="round" />
+                </g>
+              </svg>
+              Who’s on my ballot?
+            </a>
+            <nav aria-label="Site" className="site-nav-list">
+              <a href="/election-day/" className="site-nav">Election day</a>
+              <a href="/about/" className="site-nav">About</a>
+            </nav>
+          </div>
         </header>
         <main id="main">{children}</main>
         <footer className="site-footer">
@@ -35,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SourceLine id="inec-constituencies-workbook" what="Constituencies" />
           <SourceLine id="inec-parties" what="Parties" />
           <p>Shown exactly as INEC printed them.</p>
-          <ul className="link-list"><li><a href="/corrections/">Corrections</a></li></ul>
+          <p><a href="/corrections/">Corrections</a></p>
           <p>No tracking, no ads, no accounts. What you type stays in your browser.</p>
           <p className="credit">
             Built by

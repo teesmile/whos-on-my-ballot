@@ -1,10 +1,8 @@
 import { type FebBallotSpec, febBallotTitle, race } from '@/lib/data'
 import { pageGraph } from '@/lib/seo'
-import { SITE_URL } from '@/lib/site'
 
 import { JsonLd } from './JsonLd'
-import { INEC_2027, RaceSection, raceTitle, UnresolvedGroup } from './RaceSection'
-import { Share } from './Share'
+import { badgeFor, INEC_2027, RaceSection, RaceTabs, type TabPanel, UnresolvedGroup } from './RaceSection'
 import { SourceLine } from './SourceLine'
 
 /** Identical wording for every state without a governorship race on 6 February (the working rules §1). */
@@ -17,7 +15,39 @@ export const NO_SHA_BORNO = 'INEC has not published a list of State House of Ass
 export function FebBallot({ b }: { b: FebBallotSpec }) {
   const st = b.state.name
   const sha = b.sha.map(race)
-  const all = [...(b.governor ? [race(b.governor)] : []), ...sha]
+  const gov = b.governor ? race(b.governor) : null
+  const panels: TabPanel[] = []
+  if (st !== 'FCT') {
+    panels.push({
+      key: 'governor', label: 'Governor', title: 'Governor',
+      ...(gov ? badgeFor([gov]) : { badge: 'None', badgeLong: 'no election in this state' }),
+      content: gov
+        ? <RaceSection r={gov} shareUrl={`${b.path}#governor`} eager />
+        : (
+            <section className="race" aria-labelledby="no-governor">
+              <h2 id="no-governor" className="band">Governor</h2>
+              <p className="note" data-no-governor>{noGovernorText(st)}</p>
+              <SourceLine id="governor-abia" what="States with a governorship election on 6 February" />
+            </section>
+          ),
+    })
+    panels.push({
+      key: 'assembly', label: 'State Assembly', title: 'State House of Assembly',
+      ...(sha.length ? badgeFor(sha) : { badge: 'None', badgeLong: 'no list published' }),
+      content: st === 'BORNO'
+        ? (
+            <section className="race" aria-labelledby="no-sha">
+              <h2 id="no-sha" className="band">State House of Assembly</h2>
+              <p className="note" data-no-sha>{NO_SHA_BORNO}</p>
+              <SourceLine id="sha-2026-10-10" what="State House of Assembly candidates" />
+              <p><a href={INEC_2027}>INEC 2027 general elections page</a></p>
+            </section>
+          )
+        : sha.length === 1
+          ? <RaceSection r={sha[0]} shareUrl={`${b.path}#assembly`} eager={!gov} />
+          : <UnresolvedGroup office="State House of Assembly" list={sha} path={b.path} />,
+    })
+  }
   return (
     <>
       <JsonLd data={pageGraph(b.path, febBallotTitle(b), [['Home', '/'], [st, `/state/${b.state.code}/`], [febBallotTitle(b), b.path]])} />
@@ -45,33 +75,15 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
           For some wards here, INEC’s constituency workbook and INEC’s Result Viewing Portal (2023) give different State Assembly constituencies, so both are shown.
         </p>
       )}
-      {all.length > 0 && (
-        <nav aria-label="Races on this ballot" className="toc">
-          <ul>{all.map(r => <li key={r.id}><a href={`#race-${r.id}`}>{raceTitle(r)}</a></li>)}</ul>
-        </nav>
-      )}
-      {b.governor
-        ? <RaceSection r={race(b.governor)} />
+      {panels.length > 0
+        ? <RaceTabs panels={panels} />
         : (
             <section className="race" aria-labelledby="no-governor">
-              <h2 id="no-governor">Governor</h2>
+              <h2 id="no-governor" className="band">6 February 2027</h2>
               <p className="note" data-no-governor>{noGovernorText(st)}</p>
               <SourceLine id="governor-abia" what="States with a governorship election on 6 February" />
             </section>
           )}
-      {st === 'BORNO' && (
-        <section className="race" aria-labelledby="no-sha">
-          <h2 id="no-sha">State House of Assembly</h2>
-          <p className="note" data-no-sha>{NO_SHA_BORNO}</p>
-          <SourceLine id="sha-2026-10-10" what="State House of Assembly candidates" />
-          <p><a href={INEC_2027}>INEC 2027 general elections page</a></p>
-        </section>
-      )}
-      {sha.length === 1 && <RaceSection r={sha[0]} />}
-      {sha.length > 1 && <UnresolvedGroup office="State House of Assembly" list={sha} />}
-      {all.length > 0 && (
-        <Share label="Share this ballot" text={`Every candidate on the 6 February 2027 ballot for ${sha.map(r => r.name).join(' or ') || st}, as listed by INEC:`} url={`${SITE_URL}${b.path}`} />
-      )}
       <p><a href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
     </>
   )

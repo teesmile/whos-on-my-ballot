@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 
 import { CivicNote } from '@/components/CivicNote'
+import { Countdown } from '@/components/Countdown'
+import { HeroArt } from '@/components/HeroArt'
 import { JsonLd } from '@/components/JsonLd'
 import { Steps } from '@/components/Steps'
 import { states } from '@/lib/data'
@@ -13,24 +15,25 @@ export default function Home() {
   return (
     <>
       <JsonLd data={homeGraph()} />
-      <h1>Where will you vote?</h1>
-      <p className="lead">
-        Your ballot depends on the polling unit where you are registered. Find it and see every race and every candidate on your ballot for
-        {' '}
-        <strong>16 January 2027</strong>
-        {' '}
-        (President, Senate and House of Representatives) and
-        {' '}
-        <strong>6 February 2027</strong>
-        {' '}
-        (Governor and State House of Assembly).
-      </p>
-      <Steps current={1} />
+      <section className="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Who’s on your ballot in 2027?</h1>
+        <HeroArt />
+        <p className="hero-line">Every race and every candidate at your polling unit, from INEC’s official lists.</p>
+        <div className="hero-action">
+          <h2 className="action-title">Where will you vote?</h2>
+          <Steps current={1} />
+          <p className="action-buttons">
+            <a className="btn btn-big" href="#by-state">Pick your state</a>
+            <a className="btn btn-secondary" href="#by-landmark">Search by a landmark</a>
+          </p>
+        </div>
+        <Countdown headingLevel={2} />
+      </section>
 
       <div className="guide">
         <section aria-labelledby="by-state" className="panel">
           <h2 id="by-state">Pick your state</h2>
-          <p className="panel-intro">Then your LGA, your ward and your polling unit.</p>
+          <p className="panel-intro">Then your LGA, your ward and your polling unit. Each step is one tap.</p>
           <ul className="link-list tiles">
             {states().map(s => (
               <li key={s.code}><a href={`/state/${s.code}/`}>{s.name}</a></li>

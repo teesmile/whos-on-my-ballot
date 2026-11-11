@@ -1,0 +1,16 @@
+# Owner decision D-042: the same five parties come first in every race nationwide, alphabetical by acronym; every other
+# party follows in ballot-paper order. The five are picked by one published measure, never by hand:
+# the number of candidates each party fields across every 2027 race (President, Senate, House of Representatives,
+# Governor, State House of Assembly), counted from INEC's final lists. A row with no candidate name is not counted.
+# The pipeline recounts this from the lists on every build and fails if the five it finds differ from these, or if
+# fifth place is tied, so a new INEC list can never change the group silently.
+measure: candidates-fielded-2027
+label: Five parties with the most candidates in 2027
+parties:
+  - {acronym: ADC, value: 1475}
+  - {acronym: APC, value: 1489}
+  - {acronym: NDC, value: 1419}
+  - {acronym: PDP, value: 1313}
+  - {acronym: SDP, value: 1273}
+sources:
+  - {title: "INEC: final lists of candidates for the 2027 general elections (President, Senate, House of Representatives, Governor, State Houses of Assembly)", url: "https://www.inecnigeria.org/elections/2027-general-elections-update", retrieved: "2026-11-10"}

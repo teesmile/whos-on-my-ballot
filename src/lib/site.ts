@@ -3,6 +3,9 @@
  * correction e-mails and the share cards all derive from it, so moving the site is this one change.
  * Registered for one year without auto-renew; the owner confirms the purchase before launch (D-033).
  */
+import type { Race } from './data'
+import { picture } from './share'
+
 export const SITE_URL = 'https://whosonmyballot.ng'
 export const SITE_HOST = new URL(SITE_URL).host
 export const SITE_NAME = 'Who’s on my ballot?'
@@ -60,10 +63,12 @@ export function ballotCardRace(house: string[], presidentialId: string): string 
   return house.length === 1 ? house[0] : presidentialId
 }
 
-/** The text alternative for a race's share card (the same wording for every race). */
-export function cardAlt(r: { office: string, name: string }): string {
-  const office = { president: 'President', senate: 'Senate', house: 'House of Representatives', governor: 'Governor', state_assembly: 'State House of Assembly' }[r.office]
-  return r.office === 'president' ? 'Candidates for President, in the order of INEC’s list' : `Candidates for ${office}: ${r.name}, in the order of INEC’s list`
+/** The text alternative for a race's share card (the same wording for every race): what the card shows. */
+export function cardAlt(r: Race): string {
+  const p = picture(r)
+  const parties = p.tiles.map(([party]) => party)
+  const list = parties.length > 1 ? `${parties.slice(0, -1).join(', ')} and ${parties.at(-1)}` : parties[0]
+  return `${p.title}: candidates of ${list}${p.more ? `, and ${p.more} more` : ''}`
 }
 
 /** The example delimitation code, in the dash format the voter's card prints. */

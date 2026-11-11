@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 
 import { Background } from '@/components/Background'
-import { NOT_PROVIDED, noteFor, PersonFields, Value } from '@/components/Candidate'
+import { NOT_PROVIDED, noteFor, PartyLogo, PersonFields, Value } from '@/components/Candidate'
 import { mateLabel, raceTitle, TICKET_OFFICES } from '@/components/RaceSection'
 import { Share } from '@/components/Share'
 import { SourceLine } from '@/components/SourceLine'
 import { aBallotFor, allCandidates, candidate, presidentialRace, source } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
+import { ELECTION_DAY, noCandidateText, picture } from '@/lib/share'
 import { candidatePath, cardAlt, cardPath, correctionHref, SITE_URL } from '@/lib/site'
 import { JsonLd } from '@/components/JsonLd'
 
@@ -53,7 +54,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
   const ticket = TICKET_OFFICES.includes(race.office)
   const ballot = aBallotFor(race.id)
   const url = `${SITE_URL}${candidatePath(c.id)}`
-  const name = c.candidate.name || NOT_PROVIDED
+  const name = c.candidate.name || noCandidateText(c)
   const showBackground = race.office === 'president' && presidentialBackgroundReady()
   const inec = source(c.provenance.source_id)
   return (
@@ -65,12 +66,15 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
         <a href={`${ballot.path}#race-${race.id}`}>{raceTitle(race)}</a>
       </nav>
       <h1 data-candidate-id={c.id}>{name}</h1>
-      <p className="party">
-        <span className="acronym">{c.party}</span>
-        {' '}
-        <span className="party-name">{c.party_name ?? NOT_PROVIDED}</span>
-      </p>
-      <SourceLine id="inec-parties" what="Full party name" />
+      <div className="party-head">
+        <PartyLogo party={c.party} size={64} eager />
+        <p className="party">
+          <span className="acronym" aria-hidden="true">{c.party}</span>
+          {' '}
+          <span className="party-name">{c.party_name ?? NOT_PROVIDED}</span>
+        </p>
+      </div>
+      <SourceLine id="inec-parties" what="Full party name and logo" />
       <p>
         {race.election === 'feb-2027' ? 'Candidate in the 6 February 2027 election:' : 'Candidate in the 16 January 2027 election:'}
         {' '}
@@ -125,7 +129,12 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
         </section>
       )}
 
-      <Share label="Share this race" text={`Every candidate for ${raceTitle(race)}, as listed by INEC:`} url={url} />
+      <Share
+        label="Share"
+        text={`Who’s on my ballot? ${c.candidate.name ? `${c.candidate.name} (${c.party})` : `${c.party}: ${noCandidateText(c)}`}, ${raceTitle(race)}, ${ELECTION_DAY[race.election]}:`}
+        url={url}
+        picture={picture(race)}
+      />
 
       <section aria-labelledby="correct">
         <h2 id="correct">Report a correction</h2>

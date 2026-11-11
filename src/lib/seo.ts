@@ -44,7 +44,7 @@ export function homeGraph() {
     '@graph': [
       {
         '@type': 'Organization', '@id': ORGANIZATION, 'name': SITE_NAME, 'url': `${SITE_URL}/`,
-        'logo': absolute('/icon.png'), 'description': 'A non-partisan civic project. Not affiliated with INEC.',
+        'logo': absolute('/icons/icon-512.png'), 'description': 'A non-partisan civic project. Not affiliated with INEC.',
       },
       {
         '@type': 'WebSite', '@id': WEBSITE, 'name': SITE_NAME, 'url': `${SITE_URL}/`, 'description': SITE_DESCRIPTION,

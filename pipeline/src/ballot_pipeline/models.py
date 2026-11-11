@@ -77,7 +77,8 @@ class Candidate(Strict):
     race_id: str
     party: str  # acronym, as printed by INEC
     party_name: str | None  # from INEC's /parties page; None only if INEC's register lacks the acronym
-    ballot_position: int = Field(ge=1)
+    ballot_position: int = Field(ge=1)  # ballot-paper order (D-011)
+    display_group: Literal["first", "rest"]  # owner decision D-042: shown first, or with all other parties in ballot order
     remarks: str  # verbatim
     candidate: Person
     running_mate: Person | None = None

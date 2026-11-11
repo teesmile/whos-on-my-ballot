@@ -118,15 +118,31 @@ describe('share cards', () => {
     expect(fs.readdirSync(path.join(OUT, 'cards')).length).toBe(allRaces().length + 1) // plus the site card
   })
 
-  it('cards use greys only: every pixel has equal red, green and blue', () => {
-    for (const r of [{ id: 'site' }, ...allRaces()]) {
-      const { data } = decode(r.id)
-      for (let i = 0; i < data.length; i += 4) {
-        if (Math.abs(data[i] - data[i + 1]) > 1 || Math.abs(data[i + 1] - data[i + 2]) > 1) {
-          throw new Error(`${r.id}: non-grey pixel rgb(${data[i]},${data[i + 1]},${data[i + 2]}) at ${i / 4}`)
-        }
-      }
+  // D-043/D-044: the card itself is white, greys and the national green; other colours appear only inside party logos.
+  const hue = ([r, g, b]: number[]) => {
+    const max = Math.max(r, g, b)
+    const min = Math.min(r, g, b)
+    if (max - min <= 12) return null // grey (antialiasing included)
+    return 60 * (max === g ? 2 + (b - r) / (max - min) : max === r ? ((g - b) / (max - min) + 6) % 6 : 4 + (r - g) / (max - min))
+  }
+  it('the site card (no logos) uses only greys and the national green, pixel by pixel', () => {
+    const { data } = decode('site')
+    for (let i = 0; i < data.length; i += 4) {
+      const h = hue([data[i], data[i + 1], data[i + 2]])
+      if (h !== null && (h < 135 || h > 175)) throw new Error(`site card: off-palette pixel rgb(${data[i]},${data[i + 1]},${data[i + 2]})`)
     }
+  })
+
+  it('the race-card template names only greys and the national green; colour comes only from INEC’s logos', () => {
+    const src = fs.readFileSync('src/app/cards/[file]/route.tsx', 'utf8')
+    const hexes = [...src.matchAll(/#([0-9a-f]{6})\b/gi)].map(m => [0, 2, 4].map(i => Number.parseInt(m[1].slice(i, i + 2), 16)))
+    expect(hexes.length).toBeGreaterThan(4)
+    for (const c of hexes) {
+      const h = hue(c)
+      expect(h === null || (h >= 140 && h <= 170), `rgb(${c})`).toBe(true)
+    }
+    expect(src).toContain('logoPngDataUrl(party)')
+    expect(src).not.toMatch(/data-party|candidate\.image|photo_url/)
   })
 
   // Visual regression: the largest race, the longest name, the longest race name and the presidential card.

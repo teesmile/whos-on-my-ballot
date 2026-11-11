@@ -67,7 +67,7 @@ describe('ballot pages', () => {
     expect(built).toBe(all.length)
   })
 
-  it('shows exactly its races, and each race exactly its candidates, in ballot order', () => {
+  it('shows exactly its races, and each race exactly its candidates, first group then ballot order (D-042)', () => {
     const seen = new Map<string, Set<string>>()
     for (const b of all) {
       const page = html(b.path.slice(1))
@@ -77,7 +77,7 @@ describe('ballot pages', () => {
       for (const [i, sec] of sections.entries()) {
         const r = race(raceIds[i])
         const cands = ids(sec, 'data-candidate-id')
-        expect(cands, r.id).toEqual([...r.candidates].sort((a, z) => a.ballot_position - z.ballot_position).map(c => c.id))
+        expect(cands, r.id).toEqual(r.candidates.map(c => c.id))
         for (const c of cands) {
           if (!seen.has(c)) seen.set(c, new Set())
           seen.get(c)!.add(r.id)
@@ -90,12 +90,54 @@ describe('ballot pages', () => {
     for (const c of expected) expect([...seen.get(c.id)!]).toEqual([c.race_id])
   })
 
-  it('every candidate cites INEC with a link and a retrieval date', () => {
+  it('every card opens its candidate’s page, and that page cites INEC with a link, page, row and retrieval date', () => {
     for (const b of all.slice(0, 60)) {
-      const blocks = html(b.path.slice(1)).match(/<li class="candidate"[\s\S]*?<\/li>/g)!
+      const blocks = html(b.path.slice(1)).match(/<li class="card[^"]*"[\s\S]*?<\/li>/g)!
       for (const block of blocks) {
-        expect(block).toMatch(/<p class="cite" data-source="[^"]+"><a href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+">Source, page \d+, row \d+: INEC: [^<]+, retrieved <time/)
-        expect(block).toMatch(/<time dateTime="\d{4}-\d{2}-\d{2}">/)
+        const id = /data-candidate-id="([^"]+)"/.exec(block)![1]
+        expect(block).toContain(`<a href="/c/${id}/">`)
+      }
+    }
+    for (const r of races()) {
+      for (const c of r.candidates.filter((_, i) => i % 7 === 0)) {
+        const page = html(`c/${c.id}`)
+        expect(page, c.id).toMatch(/<p class="cite" data-source="[^"]+"><a href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+">Source, page \d+, row \d+: INEC: [^<]+, retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/)
+      }
+    }
+  })
+
+  it('every card carries its party’s logo from INEC’s register, served from our own origin (D-043)', () => {
+    const manifest = JSON.parse(fs.readFileSync('data/generated/logos.json', 'utf8')) as Record<string, { file: string, source_url: string }>
+    for (const [party, m] of Object.entries(manifest)) {
+      expect(fs.existsSync(path.join(OUT, m.file)), party).toBe(true)
+      expect(m.source_url.startsWith('https://www.inecnigeria.org/_nuxt/') || m.source_url === 'embedded in the /parties page', party).toBe(true)
+    }
+    for (const b of all.filter((_, i) => i % 15 === 0)) {
+      const blocks = html(b.path.slice(1)).match(/<li class="card[^"]*"[\s\S]*?<\/li>/g)!
+      for (const block of blocks) {
+        const party = /data-party="([^"]+)"/.exec(block)![1]
+        expect(block, b.path).toContain(`<img class="logo" src="/logos/${party.toLowerCase()}.webp" alt="${party}" width="48" height="48"`)
+      }
+    }
+  })
+
+  it('races are tabs: one panel per office, each but the last ending in a button to the next', () => {
+    for (const b of all.filter((_, i) => i % 25 === 0)) {
+      const page = html(b.path.slice(1))
+      expect(ids(page, 'data-tab'), b.path).toEqual(['president', 'senate', 'house'])
+      expect(ids(page, 'data-panel'), b.path).toEqual(['president', 'senate', 'house'])
+      expect(page).toContain('>Next: Senate</a>')
+      expect(page).toContain('>Next: House of Representatives</a>')
+    }
+  })
+
+  it('share blocks link the race on this ballot, never a polling unit, with a plain caption', () => {
+    for (const b of all.filter((_, i) => i % 25 === 0)) {
+      for (const m of html(b.path.slice(1)).matchAll(/data-share="([^"]+)"/g)) {
+        const d = JSON.parse(m[1].replaceAll('&quot;', '"').replaceAll('&amp;', '&').replaceAll('&#x27;', '\'')) as { text: string, url: string }
+        expect(d.url.startsWith(`https://whosonmyballot.ng${b.path}#`), d.url).toBe(true)
+        expect(d.url).not.toMatch(/pu-/)
+        expect(d.text).toMatch(/^Who’s on my ballot\? Every candidate for .+, (16 January|6 February) 2027:$/)
       }
     }
   })
@@ -128,10 +170,16 @@ describe('ballot pages', () => {
     }
   })
 
-  it('printing errors are shown as printed with the neutral note', () => {
-    const oyo = all.find(b => b.house.includes('jan-2027-house-oyo-oluyole'))!
-    expect(html(oyo.path.slice(1))).toMatch(/947<span class="printing-note"> \(As printed in INEC’s list; this appears to be an error\.\)/)
-    expect(html(all[0].path.slice(1))).toMatch(/>C<span class="printing-note"> \(As printed in INEC’s list; this appears to be an error\.\)/)
+  it('printing errors are shown as printed with the neutral note, on the candidate’s page', () => {
+    const noted = races().flatMap(r => r.candidates).filter(c => c.printing_notes.length)
+    expect(noted.length).toBeGreaterThan(1)
+    for (const c of noted) {
+      for (const n of c.printing_notes) {
+        const esc = n.as_printed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replaceAll('&', '&amp;')
+        expect(html(`c/${c.id}`), c.id).toMatch(new RegExp(`${esc}<span class="printing-note"> \\(As printed in INEC’s list; this appears to be an error\\.\\)`))
+      }
+    }
+    expect(html(`c/${noted.find(c => c.race_id === 'jan-2027-house-oyo-oluyole')!.id}`)).toContain('947<span class="printing-note">')
   })
 
   it('Niger’s House races carry the 12 September note, and no other state’s do', () => {

@@ -1,0 +1,56 @@
+/**
+ * What a race's share picture and caption say: the same rules for every race (the working rules §1).
+ * Shared by the build (link-preview cards, the data each share button carries) and nothing else; no I/O here.
+ */
+import type { Candidate, Race } from './data'
+
+export const ELECTION_DAY: Record<string, string> = { 'jan-2027': '16 January 2027', 'feb-2027': '6 February 2027' }
+export const NO_CANDIDATE = 'No candidate named'
+
+const OFFICE_TITLE: Record<Race['office'], string> = {
+  president: 'President',
+  senate: 'Senate',
+  house: 'House of Representatives',
+  governor: 'Governor',
+  state_assembly: 'State House of Assembly',
+}
+
+export function raceTitle(r: Pick<Race, 'office' | 'name'>): string {
+  if (r.office === 'president') return 'President'
+  return `${OFFICE_TITLE[r.office]}: ${r.name}`
+}
+
+/** A ticket with no named candidate keeps its place, with INEC's remark verbatim. */
+export function noCandidateText(c: Pick<Candidate, 'remarks'>): string {
+  return c.remarks ? `${NO_CANDIDATE} - INEC remark: ${c.remarks}` : NO_CANDIDATE
+}
+
+/** Candidates INEC names in a race (a row with no name is a ticket, not a candidate). */
+export const namedCount = (r: Race) => r.candidates.filter(c => c.candidate.name).length
+
+export interface Picture {
+  /** "President - 16 January 2027" */
+  title: string
+  /** [acronym, name as INEC prints it, or the no-candidate text] */
+  tiles: [string, string][]
+  /** How many more candidates the race has beyond the tiles (0: every candidate is shown). */
+  more: number
+}
+
+/**
+ * Six tiles: the race's members of the first group (D-042) in display order, then one saying how many more candidates
+ * there are. A race with six tickets or fewer shows them all and no count.
+ */
+export function picture(r: Race): Picture {
+  const title = `${raceTitle(r)} - ${ELECTION_DAY[r.election]}`
+  const tile = (c: Candidate): [string, string] => [c.party, c.candidate.name || noCandidateText(c)]
+  if (r.candidates.length <= 6) return { title, tiles: r.candidates.map(tile), more: 0 }
+  const shown = r.candidates.filter(c => c.display_group === 'first').slice(0, 5)
+  const shownNamed = shown.filter(c => c.candidate.name).length
+  return { title, tiles: shown.map(tile), more: namedCount(r) - shownNamed }
+}
+
+/** The plain caption sent with a share: no slogans, the same words for every race. */
+export function caption(r: Race): string {
+  return `Who’s on my ballot? Every candidate for ${raceTitle(r)}, ${ELECTION_DAY[r.election]}:`
+}

@@ -15,6 +15,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("build", help="extract, map, order and write data/generated/ (offline)")
     sub.add_parser("verify", help="build, then run every Phase 1 check; non-zero on any failure (offline)")
     sub.add_parser("check-quotes", help="re-fetch every background citation and confirm its quote is on the page (network)")
+    sub.add_parser("logos", help="download each party's logo from INEC's /parties page and write the optimised files (network)")
     sub.add_parser("watch", help="re-read INEC index pages; exit 3 if any document list or hash changed")
     args = parser.parse_args(argv)
 
@@ -66,6 +67,14 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{v}: {url} :: {quote[:80]}")
         print(f"{len(results) - len(bad)} of {len(results)} quotes found on their pages")
         return 1 if bad else 0
+    elif args.cmd == "logos":
+        import json
+
+        from .logos import fetch_and_build
+        from .paths import GENERATED_DIR, RAW_DIR
+
+        rec = next(s for s in json.loads((GENERATED_DIR / "sources.json").read_text()) if s["source_id"] == "inec-parties")
+        fetch_and_build(RAW_DIR / rec["local_file"], rec)
     elif args.cmd == "watch":
         from .watch import watch
 

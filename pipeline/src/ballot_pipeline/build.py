@@ -14,9 +14,9 @@ import yaml
 from . import extract as ex
 from .geo import GeoError, WorkbookUnit, key, read_locator, read_workbook, resolve_composition
 from .models import Candidate, Lga, Person, PlacementNote, PollingUnit, PrintingNote, Provenance, Race, StateGeo, Ward
-from .ordering import ORDER_RULE, order_candidates
+from .ordering import ORDER_RULE, display_order, order_candidates
 from .parties import parse_parties
-from .paths import ALIASES_YAML, GENERATED_DIR, PIPELINE_DIR, RAW_DIR, SOURCES_YAML
+from .paths import ALIASES_YAML, DATA_DIR, GENERATED_DIR, PIPELINE_DIR, RAW_DIR, SOURCES_YAML
 from .states import slug
 
 ELECTION = "jan-2027"
@@ -38,6 +38,7 @@ class BuildResult:
     anomalies: list[dict] = field(default_factory=list)
     sha_report: dict | None = None
     errors: list[str] = field(default_factory=list)
+    first_group: dict = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         # review 5: a positional field shift once dropped every accumulated error; errors must be a list of strings
@@ -96,6 +97,22 @@ def _load_aliases() -> dict:
 # ---------------------------------------------------------------- build
 
 
+FIRST_GROUP_YAML = DATA_DIR / "overrides" / "first-group.yaml"
+
+
+def load_first_group(registered: set[str]) -> dict:
+    """The owner's first group (D-042): exactly five registered parties, from one cited measure."""
+    fg = yaml.safe_load(FIRST_GROUP_YAML.read_text())
+    parties = [p["acronym"] for p in fg["parties"]]
+    if len(parties) != 5 or len(set(parties)) != 5:
+        raise ValueError(f"first-group.yaml must name exactly five different parties, not {parties}")
+    if not set(parties) <= registered:
+        raise ValueError(f"first-group.yaml names parties not on INEC's register: {sorted(set(parties) - registered)}")
+    if not fg.get("label") or not fg.get("sources"):
+        raise ValueError("first-group.yaml needs the label shown on the page and its sources")
+    return {**fg, "parties": parties, "measure_values": fg["parties"]}
+
+
 def build(log=print) -> BuildResult:
     reg = yaml.safe_load(SOURCES_YAML.read_text())
     sources = json.loads((GENERATED_DIR / "sources.json").read_text())
@@ -110,6 +127,7 @@ def build(log=print) -> BuildResult:
 
     parties = parse_parties((RAW_DIR / by_id["inec-parties"]["local_file"]).read_text(encoding="utf-8"))
     party_names = {p["acronym"]: p["name"] for p in parties}
+    first_group = load_first_group(set(party_names))
     aliases = _load_aliases()
 
     # ---- candidate rows
@@ -247,8 +265,11 @@ def build(log=print) -> BuildResult:
             if in_file != sorted(in_file):
                 inec_order_matches[sid] = False
 
+        ballot_pos = {id(r): i for i, r in enumerate(order_candidates(rows, lambda r: r.party), start=1)}
         cands = []
-        for r in order_candidates(rows, lambda r: r.party):
+        groups = {}
+        for r, group in display_order(rows, lambda r: r.party, first_group["parties"]):
+            groups[id(r)] = group
             problems: list[str] = []
             if r.party not in party_names:
                 problems.append(f"party {r.party!r} not on INEC's register")
@@ -286,11 +307,12 @@ def build(log=print) -> BuildResult:
                 candidates=[
                     Candidate(
                         id=f"{race_id}-{r.party.lower()}", race_id=race_id, party=r.party,
-                        party_name=party_names.get(r.party), ballot_position=i, remarks=r.remarks,
+                        party_name=party_names.get(r.party), ballot_position=ballot_pos[id(r)], display_group=groups[id(r)],
+                        remarks=r.remarks,
                         candidate=cand, running_mate=mate, printing_notes=cand_notes[(r.source_id, r.page, r.sn)],
                         provenance=Provenance(source_id=r.source_id, page=r.page, sn=r.sn),
                     )
-                    for i, (r, cand, mate) in enumerate(cands, start=1)
+                    for r, cand, mate in cands
                 ],
             )
         )
@@ -481,10 +503,23 @@ def build(log=print) -> BuildResult:
         "wards": sum(len(l.wards) for _, lgas in locator.values() for l in lgas),
         "pus": sum(len(w[2]) for _, lgas in locator.values() for l in lgas for w in l.wards),
     }
+    from .logos import check_logos
+
+    # D-042: recount the measure from the lists themselves; the five must match first-group.yaml exactly, with no tie for fifth.
+    fielded = Counter(cd.party for r in races for cd in r.candidates if cd.candidate.name)
+    ranked = fielded.most_common()
+    top = {p for p, _ in ranked[:5]}
+    if top != set(first_group["parties"]) or (len(ranked) > 5 and ranked[4][1] == ranked[5][1]):
+        errors.append(f"first group (D-042): the lists now give {ranked[:6]}, not {first_group['parties']}; the owner must review")
+    for m in first_group["measure_values"]:
+        if fielded[m["acronym"]] != m["value"]:
+            errors.append(f"first group (D-042): {m['acronym']} now fields {fielded[m['acronym']]} candidates, not {m['value']}")
+
+    errors.extend(check_logos({cd.party for r in races for cd in r.candidates}))
     result = BuildResult(sources=sources, parties=parties, rows_by_source=rows_by_source, independent_sn=independent_sn, races=races,
                          quarantine=quarantine, workbook=workbook, geo=geo, unresolved_wards=unresolved_wards,
                          inec_order_matches=inec_order_matches, locator_counts=locator_counts, anomalies=anomalies,
-                         sha_report=sha_report, errors=errors)
+                         sha_report=sha_report, errors=errors, first_group=first_group)
     write_outputs(result)
     return result
 
@@ -497,6 +532,7 @@ def write_outputs(res: BuildResult) -> None:
         path.write_text(json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
 
     dump(GENERATED_DIR / "parties.json", res.parties)
+    dump(GENERATED_DIR / "first-group.json", res.first_group)
     dump(GENERATED_DIR / "races" / f"{ELECTION}.json", [r.model_dump() for r in res.races if r.election == ELECTION])
     dump(GENERATED_DIR / "races" / "feb-2027.json", [r.model_dump() for r in res.races if r.election == "feb-2027"])
     if res.sha_report:

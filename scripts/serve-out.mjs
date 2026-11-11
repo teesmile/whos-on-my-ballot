@@ -6,7 +6,7 @@ import zlib from 'node:zlib'
 
 const OUT = path.resolve('out')
 const PORT = Number(process.env.PORT ?? 4321)
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.txt': 'text/plain' }
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.png': 'image/png', '.webp': 'image/webp', '.txt': 'text/plain' }
 const headers = JSON.parse(fs.readFileSync('vercel.json', 'utf8')).headers.find(h => h.source === '/(.*)').headers
 
 http.createServer((req, res) => {

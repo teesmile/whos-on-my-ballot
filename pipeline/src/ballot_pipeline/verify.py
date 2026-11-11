@@ -121,12 +121,24 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
     c.note("INEC remarks, verbatim (count): " + (", ".join(f"`{k}` ({n})" for k, n in remarks.most_common()) or "none") + ".")
 
     c.note("\n## Ballot order (D-011)")
+    def ballot(r):
+        return sorted(r.candidates, key=lambda cd: cd.ballot_position)
+
     order_ok = all(
-        [cd.ballot_position for cd in r.candidates] == list(range(1, len(r.candidates) + 1))
-        and [cd.party for cd in r.candidates] == sorted(cd.party.upper() for cd in r.candidates)
+        [cd.ballot_position for cd in ballot(r)] == list(range(1, len(r.candidates) + 1))
+        and [cd.party for cd in ballot(r)] == sorted(cd.party.upper() for cd in r.candidates)
         for r in races
     )
     c.check(order_ok, "ballot_position runs 1..N in party-acronym order in every race")
+    five = set(res.first_group.get("parties", []))
+    display_ok = all(
+        [cd.party for cd in r.candidates] == sorted(cd.party for cd in r.candidates if cd.party in five)
+        + [cd.party for cd in ballot(r) if cd.party not in five]
+        and all((cd.display_group == "first") == (cd.party in five) for cd in r.candidates)
+        for r in races
+    )
+    c.check(len(five) == 5 and display_ok, "display order (D-042): the same five parties first in every race, alphabetical, "
+            "then all other parties in ballot order", ", ".join(sorted(five)))
     differ = sorted(sid for sid, ok in res.inec_order_matches.items() if not ok)
     c.note(f"INEC's own row order matches acronym order in {sum(res.inec_order_matches.values())} of "
            f"{len(res.inec_order_matches)} source files" + (f"; differs in: {', '.join(differ)}" if differ else "") + ".")
@@ -321,9 +333,9 @@ def _write_audit(res: BuildResult) -> None:
              "Record mismatches below. The phase passes with 0.", "", "## One House race per state", ""]
     for state in sorted({r.state for r in house}):
         r = rng.choice([x for x in house if x.state == state])
-        src = r.candidates[0].provenance
+        src = min(r.candidates, key=lambda c: c.ballot_position).provenance
         lines.append(f"### {state}: {r.name} ({src.source_id}, page {src.page})")
-        for cd in r.candidates:
+        for cd in sorted(r.candidates, key=lambda c: c.ballot_position):  # INEC's row order, to read beside the PDF
             p = cd.candidate
             lines.append(f"- [ ] SN {cd.provenance.sn} p{cd.provenance.page} | {cd.party} | {p.name} | {p.age} | {p.gender} | {p.qualifications}")
         lines.append("")
@@ -348,9 +360,9 @@ def _feb_audit(res: BuildResult) -> list[str]:
              "gender and, for governors, the deputy. Tick the box when it matches.", "", "## Six governorship races", ""]
     gov = [r for r in res.races if r.office == "governor"]
     for r in sorted(rng.sample(gov, 6), key=lambda x: x.state):
-        src = r.candidates[0].provenance
+        src = min(r.candidates, key=lambda c: c.ballot_position).provenance
         lines.append(f"### {r.state} ({link(src.source_id, src.page)})")
-        for cd in r.candidates:
+        for cd in sorted(r.candidates, key=lambda c: c.ballot_position):  # INEC's row order, to read beside the PDF
             p, m = cd.candidate, cd.running_mate
             mate = f"{m.name} | {m.age} | {m.gender}" if m else "(no deputy)"
             lines.append(f"- [ ] SN {cd.provenance.sn} p{cd.provenance.page} | {cd.party} | {p.name} | {p.age} | {p.gender} || deputy: {mate}")
@@ -359,9 +371,9 @@ def _feb_audit(res: BuildResult) -> list[str]:
     sha = [r for r in res.races if r.office == "state_assembly"]
     for state in sorted({r.state for r in sha}):
         r = rng.choice([x for x in sha if x.state == state])
-        src = r.candidates[0].provenance
+        src = min(r.candidates, key=lambda c: c.ballot_position).provenance
         lines.append(f"### {state}: {r.name} ({link(src.source_id, src.page)})")
-        for cd in r.candidates:
+        for cd in sorted(r.candidates, key=lambda c: c.ballot_position):  # INEC's row order, to read beside the PDF
             p = cd.candidate
             lines.append(f"- [ ] SN {cd.provenance.sn} p{cd.provenance.page} | {cd.party} | {p.name} | {p.age} | {p.gender}")
         lines.append("")

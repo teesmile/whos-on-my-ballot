@@ -144,12 +144,21 @@ describe('structured data', () => {
 })
 
 describe('icons and credit', () => {
-  it('favicon.ico, a PNG icon and an apple-touch icon exist and are linked', () => {
-    for (const f of ['favicon.ico', 'icon.png', 'apple-icon.png']) expect(fs.existsSync(path.join(OUT, f)), f).toBe(true)
+  it('the full icon set from the one mark (D-047) exists and is linked, with the manifest', () => {
+    for (const f of ['favicon.ico', 'icon.svg', 'apple-icon.png', 'icons/icon-32.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'manifest.webmanifest'])
+      expect(fs.existsSync(path.join(OUT, f)), f).toBe(true)
     const h = head(pages[0][1])
     expect(h).toMatch(/<link rel="icon" href="\/favicon\.ico/)
-    expect(h).toMatch(/<link rel="icon" href="\/icon\.png/)
+    expect(h).toMatch(/<link rel="icon" href="\/icon\.svg/)
     expect(h).toMatch(/<link rel="apple-touch-icon" href="\/apple-icon\.png/)
+    expect(h).toMatch(/<link rel="manifest" href="\/manifest\.webmanifest"/)
+    expect(h).toContain('<meta name="theme-color" content="#008751"/>')
+    const svg = fs.readFileSync(path.join(OUT, 'icon.svg'), 'utf8')
+    expect(svg).toContain('<circle cx="32" cy="32" r="32" fill="#008751"/>') // a true circle; the corners stay transparent
+    const m = JSON.parse(fs.readFileSync(path.join(OUT, 'manifest.webmanifest'), 'utf8')) as { theme_color: string, icons: { src: string, purpose?: string }[] }
+    expect(m.theme_color).toBe('#008751')
+    expect(m.icons.filter(i => i.purpose === 'maskable').map(i => i.src)).toEqual(['/icons/maskable-512.png'])
+    for (const i of m.icons) expect(fs.existsSync(path.join(OUT, i.src)), i.src).toBe(true)
   })
 
   it('every footer credits the builder, and nothing more', () => {

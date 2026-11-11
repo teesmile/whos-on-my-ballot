@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { ballotCardRace, cardSourceCaption } from '@/lib/site'
 import {
-  ballotPath, codeFromHash, febBallotPath, findByCode, parseDelimitationCode, puHash, searchLga, type StateSearchData,
+  ballotPath, codeFromHash, febBallotPath, hashWithTab, tabFromHash, findByCode, parseDelimitationCode, puHash, searchLga, type StateSearchData,
 } from '@/lib/core'
 
 describe('parseDelimitationCode (mirrors the pipeline parser)', () => {
@@ -111,5 +111,43 @@ describe('share-card choices (review 3)', () => {
   it('an unresolved ballot never previews one of its possible House races', () => {
     expect(ballotCardRace(['h1', 'h2'], 'p')).toBe('p')
     expect(ballotCardRace(['h1'], 'p')).toBe('h1')
+  })
+})
+
+describe('ballot fragments: a polling unit, a race tab, or both (never sent to a server)', () => {
+  it('reads the polling unit and the tab', () => {
+    expect(codeFromHash('#pu-24-15-03-012&senate')).toBe('24/15/03/012')
+    expect(tabFromHash('#pu-24-15-03-012&senate')).toBe('senate')
+    expect(tabFromHash('#pu-24-15-03-012')).toBeNull()
+    expect(tabFromHash('#house')).toBe('house')
+    expect(tabFromHash('#race-jan-2027-senate-lagos-lagos-central')).toBe('race-jan-2027-senate-lagos-lagos-central')
+    expect(tabFromHash('')).toBeNull()
+  })
+  it('keeps the polling unit when the tab changes', () => {
+    expect(hashWithTab('#pu-24-15-03-012&house', 'senate')).toBe('#pu-24-15-03-012&senate')
+    expect(hashWithTab('#pu-24-15-03-012', 'president')).toBe('#pu-24-15-03-012&president')
+    expect(hashWithTab('#house', 'senate')).toBe('#senate')
+    expect(hashWithTab('', 'president')).toBe('#president')
+  })
+})
+
+describe('share picture: the first group, then how many more (D-042)', () => {
+  it('six tiles at most; small races show everyone; the count is of named candidates', async () => {
+    const { races, febRaces } = await import('@/lib/data')
+    const { picture } = await import('@/lib/share')
+    for (const r of [...races(), ...febRaces()]) {
+      const p = picture(r)
+      const named = r.candidates.filter(c => c.candidate.name).length
+      if (r.candidates.length <= 6) {
+        expect(p.tiles.map(t => t[0]), r.id).toEqual(r.candidates.map(c => c.party))
+        expect(p.more).toBe(0)
+      }
+      else {
+        expect(p.tiles.map(t => t[0]), r.id).toEqual(r.candidates.filter(c => c.display_group === 'first').map(c => c.party))
+        expect(p.tiles.length).toBeLessThanOrEqual(5)
+        expect(p.more, r.id).toBe(named - r.candidates.filter(c => c.display_group === 'first' && c.candidate.name).length)
+      }
+      expect(p.title).toMatch(/ - (16 January|6 February) 2027$/)
+    }
   })
 })

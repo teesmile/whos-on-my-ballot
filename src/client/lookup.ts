@@ -5,12 +5,15 @@
  *                           visitor picks the state too, and its LGAs are filled in from that state's file)
  *   [data-lookup="confirm"] on a ballot page, name the polling unit chosen (from the URL fragment) and link its
  *                           ballot for the other election day
+ *   [data-tabs]             a ballot's races as tabs, one race at a time, the choice kept in the address fragment
+ *   [data-filter]           narrow a race's cards by party or name, in the browser only
+ *   [data-share]            share a race: the phone's share menu, with a picture of the race drawn here when it can take files
  *   [data-copy]             copy a page's link to the clipboard
- *   [data-countdown]        election-day schedule: where we are in it, updated each minute (no live announcements)
+ *   [data-clock]            the countdown to the next election day in Nigerian time (no live announcements)
  * Privacy (D-015): the only network request is GET /data/pu/<SS>.json, a fixed per-state file. What the visitor
  * types is matched in memory, never sent, never stored, and never put in a URL (fragments aren't sent to servers).
  */
-import { describePhase, phaseAt, type Schedule } from '../lib/election'
+import { describePhase, formatDay, formatTime, phaseAt, type Schedule } from '../lib/election'
 import {
   cardCode,
   codeFromHash,
@@ -20,6 +23,8 @@ import {
   puHash,
   searchLga,
   type StateSearchData,
+  tabFromHash,
+  hashWithTab,
 } from '../lib/core'
 
 const cache = new Map<string, Promise<StateSearchData>>()
@@ -225,27 +230,346 @@ for (const button of document.querySelectorAll<HTMLButtonElement>('button[data-c
   })
 }
 
+
+// ---- Race tabs (WAI-ARIA tabs pattern; automatic activation). Without this script the races show one after another.
+function setupTabs(nav: HTMLElement) {
+  const links = [...nav.querySelectorAll<HTMLAnchorElement>('a[data-tab]')]
+  const panels = links.map(a => document.getElementById(a.dataset.tab!)!)
+  const list = nav.querySelector('ul')!
+  list.setAttribute('role', 'tablist')
+  links.forEach((a, i) => {
+    a.parentElement!.setAttribute('role', 'presentation')
+    a.id = `tab-${a.dataset.tab}`
+    a.setAttribute('role', 'tab')
+    a.setAttribute('aria-controls', panels[i].id)
+    panels[i].setAttribute('role', 'tabpanel')
+    panels[i].setAttribute('aria-labelledby', a.id)
+    panels[i].tabIndex = 0
+  })
+  nav.classList.add('is-tabs')
+  let current = -1
+  const select = (i: number, how: { focus?: boolean, remember?: boolean, scroll?: boolean } = {}) => {
+    links.forEach((a, j) => {
+      a.setAttribute('aria-selected', String(i === j))
+      a.tabIndex = i === j ? 0 : -1
+      panels[j].hidden = i !== j
+    })
+    if (i !== current && current !== -1) {
+      panels[i].classList.remove('fade')
+      void panels[i].offsetWidth // restart the reveal
+      panels[i].classList.add('fade')
+    }
+    current = i
+    if (how.remember) history.replaceState(null, '', hashWithTab(location.hash, links[i].dataset.tab!))
+    if (how.scroll) {
+      // Bring the race's start just under the bar (which stays stuck to the top on phones).
+      const y = panels[i].getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 8
+      if (window.scrollY > y || how.focus) window.scrollTo({ top: Math.max(0, y) })
+    }
+    if (how.focus) links[i].focus({ preventScroll: true })
+  }
+  const fromHash = () => {
+    const t = tabFromHash(location.hash)
+    const target = t ? document.getElementById(t) : null
+    const i = target ? panels.findIndex(p => p.contains(target)) : -1
+    select(i === -1 ? Math.max(current, 0) : i)
+    if (target && !panels.includes(target)) target.scrollIntoView()
+  }
+  links.forEach((a, i) => {
+    a.addEventListener('click', (ev) => {
+      ev.preventDefault()
+      select(i, { remember: true, scroll: true })
+    })
+    a.addEventListener('keydown', (ev) => {
+      const next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: links.length - 1 }[ev.key]
+      if (next !== undefined) {
+        ev.preventDefault()
+        select((next + links.length) % links.length, { focus: true, remember: true })
+      }
+      else if (ev.key === ' ') {
+        ev.preventDefault()
+        select(i, { remember: true, scroll: true })
+      }
+    })
+  })
+  for (const a of document.querySelectorAll<HTMLAnchorElement>('a[data-next]')) {
+    a.addEventListener('click', (ev) => {
+      ev.preventDefault()
+      select(links.findIndex(l => l.dataset.tab === a.dataset.next), { focus: true, remember: true, scroll: true })
+    })
+  }
+  window.addEventListener('hashchange', fromHash)
+  fromHash()
+}
+
+// ---- Filter a race's cards as the visitor types. Nothing typed leaves the browser.
+function setupFilter(box: HTMLElement) {
+  const input = box.querySelector('input')!
+  const status = box.querySelector('.filter-none')!
+  const race = box.closest('.race')!
+  const cards = [...race.querySelectorAll<HTMLElement>('.card')]
+  const groups = [...race.querySelectorAll<HTMLElement>('.group')]
+  input.addEventListener('input', () => {
+    const words = input.value.toLowerCase().split(/\s+/).filter(Boolean)
+    let shown = 0
+    for (const c of cards) {
+      c.hidden = !words.every(w => c.dataset.words!.includes(w))
+      if (!c.hidden) shown++
+    }
+    for (const g of groups) g.hidden = !g.querySelector('.card:not([hidden])')
+    status.textContent = !words.length ? '' : shown ? `Showing ${shown} of ${cards.length}.` : 'No party or candidate in this race matches.'
+  })
+}
+
+// ---- Share a race: a portrait picture for WhatsApp Status, drawn here only when the phone can share files.
+interface ShareInfo { text: string, url: string, title: string, tiles: [string, string][], more: number }
+const GREEN = '#008751'
+const DEEP = '#00552f'
+const INK = '#1a1a1a'
+const FONT = 'system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif'
+
+function loadImage(src: string): Promise<HTMLImageElement | null> {
+  return new Promise((resolve) => {
+    const img = new Image()
+    img.onload = () => resolve(img)
+    img.onerror = () => resolve(null)
+    img.src = src
+  })
+}
+
+/** Lines of `text` no wider than `max`; a word too long for a line is broken, so nothing is ever cut off. */
+function wrap(g: CanvasRenderingContext2D, text: string, max: number): string[] {
+  const lines: string[] = []
+  let line = ''
+  for (const word of text.split(/\s+/)) {
+    const tryLine = line ? `${line} ${word}` : word
+    if (g.measureText(tryLine).width <= max) {
+      line = tryLine
+      continue
+    }
+    if (line) lines.push(line)
+    line = ''
+    for (const ch of word) {
+      if (g.measureText(line + ch).width > max && line) {
+        lines.push(line)
+        line = ''
+      }
+      line += ch
+    }
+  }
+  if (line) lines.push(line)
+  return lines
+}
+
+/** The largest size from `size` down to `min` at which `text` fits in `maxLines`; at `min` it takes the lines it needs. */
+function fit(g: CanvasRenderingContext2D, text: string, weight: number, size: number, min: number, max: number, maxLines: number) {
+  for (let s = size; ; s -= 2) {
+    g.font = `${weight} ${s}px ${FONT}`
+    const lines = wrap(g, text, max)
+    if (lines.length <= maxLines || s <= min) return { size: s, lines }
+  }
+}
+
+function box(g: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
+  g.beginPath()
+  g.moveTo(x + r, y)
+  g.arcTo(x + w, y, x + w, y + h, r)
+  g.arcTo(x + w, y + h, x, y + h, r)
+  g.arcTo(x, y + h, x, y, r)
+  g.arcTo(x, y, x + w, y, r)
+  g.closePath()
+}
+
+async function drawPicture(d: ShareInfo): Promise<File> {
+  const W = 1080
+  const H = 1920
+  const canvas = el('canvas')
+  canvas.width = W
+  canvas.height = H
+  const g = canvas.getContext('2d')!
+  const [mark, ...logos] = await Promise.all(['/icon.svg', ...d.tiles.map(([p]) => `/logos/${p.toLowerCase()}.webp`)].map(loadImage))
+  g.fillStyle = '#fff'
+  g.fillRect(0, 0, W, H)
+  g.textAlign = 'center'
+  g.textBaseline = 'top'
+  // Top: the race and the date, on the national green.
+  const title = fit(g, d.title, 800, 76, 44, W - 120, 3)
+  const lh = Math.round(title.size * 1.18)
+  const head = 150 + title.lines.length * lh + 40
+  g.fillStyle = GREEN
+  g.fillRect(0, 0, W, head)
+  g.fillStyle = '#fff'
+  g.font = `700 44px ${FONT}`
+  // The site's mark beside its name (D-047), on a white ring so the green circle shows on the green band.
+  const brand = 'Who’s on my ballot?'
+  const left = (W - (g.measureText(brand).width + 80)) / 2
+  if (mark) {
+    g.beginPath()
+    g.arc(left + 32, 82, 35, 0, Math.PI * 2)
+    g.fill()
+    g.drawImage(mark, left, 50, 64, 64)
+  }
+  g.textAlign = 'left'
+  g.fillText(brand, left + 80, 60)
+  g.textAlign = 'center'
+  g.font = `800 ${title.size}px ${FONT}`
+  title.lines.forEach((l, i) => g.fillText(l, W / 2, 150 + i * lh))
+  // Middle: the tiles, two across.
+  const n = d.tiles.length + (d.more ? 1 : 0)
+  const cols = n === 1 ? 1 : 2
+  const rows = Math.ceil(n / cols)
+  const gap = 36
+  const top = head + 56
+  const bottom = H - 300
+  const tw = (W - 120 - gap * (cols - 1)) / cols
+  const th = Math.min(440, (bottom - top - gap * (rows - 1)) / rows)
+  for (let k = 0; k < n; k++) {
+    const x = 60 + (k % cols) * (tw + gap)
+    const y = top + Math.floor(k / cols) * (th + gap)
+    box(g, x, y, tw, th, 28)
+    if (k < d.tiles.length) {
+      g.fillStyle = '#fff'
+      g.fill()
+      g.lineWidth = 3
+      g.strokeStyle = '#c9d1cd'
+      g.stroke()
+      const [party, name] = d.tiles[k]
+      const logo = Math.min(150, th * 0.36)
+      if (logos[k]) g.drawImage(logos[k]!, x + (tw - logo) / 2, y + 26, logo, logo)
+      g.fillStyle = INK
+      g.font = `800 50px ${FONT}`
+      g.fillText(party, x + tw / 2, y + 40 + logo)
+      const room = th - (logo + 108)
+      const nm = fit(g, name, 600, 42, 22, tw - 44, Math.max(1, Math.floor(room / 50)))
+      nm.lines.forEach((l, i) => g.fillText(l, x + tw / 2, y + 102 + logo + i * Math.round(nm.size * 1.18)))
+    }
+    else {
+      g.fillStyle = '#e7f4ed'
+      g.fill()
+      g.fillStyle = DEEP
+      g.font = `800 72px ${FONT}`
+      g.fillText(`and ${d.more} more`, x + tw / 2, y + th / 2 - 60, tw - 40)
+      g.font = `600 44px ${FONT}`
+      g.fillText(d.more === 1 ? 'candidate' : 'candidates', x + tw / 2, y + th / 2 + 30)
+    }
+  }
+  // Bottom: the address, large (WhatsApp can drop the caption), and the affiliation line.
+  g.fillStyle = GREEN
+  g.font = `800 92px ${FONT}`
+  g.fillText('whosonmyballot.ng', W / 2, H - 236, W - 80)
+  g.fillStyle = '#4d4d4d'
+  g.font = `500 40px ${FONT}`
+  g.fillText('Not affiliated with INEC.', W / 2, H - 112)
+  const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob(b => (b ? resolve(b) : reject(new Error('no picture'))), 'image/png'))
+  return new File([blob], 'whos-on-my-ballot.png', { type: 'image/png' })
+}
+
+function canShareFiles(): boolean {
+  try {
+    return Boolean(navigator.canShare?.({ files: [new File([''], 'x.png', { type: 'image/png' })] }))
+  }
+  catch {
+    return false
+  }
+}
+
+function setupShare(section: HTMLElement) {
+  const d = JSON.parse(section.dataset.share!) as ShareInfo
+  const wa = section.querySelector<HTMLAnchorElement>('[data-share-wa]')!
+  const sheet = section.querySelector<HTMLButtonElement>('[data-share-sheet]')!
+  const files = canShareFiles()
+  const message = `${d.text} ${d.url}`
+  let picture: Promise<File> | null = null
+  const getPicture = () => (picture ??= drawPicture(d).catch((e) => {
+    picture = null
+    throw e
+  }))
+  // The phone's share menu with the picture; if that can't happen, `fallback`. Closing the menu is not a failure.
+  const withPicture = async (fallback: () => void) => {
+    try {
+      await navigator.share({ files: [await getPicture()], text: message })
+    }
+    catch (e) {
+      if ((e as DOMException).name !== 'AbortError') fallback()
+    }
+  }
+  const linkOnly = () => void navigator.share({ text: d.text, url: d.url }).catch(() => {})
+  if (typeof navigator.share === 'function') sheet.hidden = false
+  wa.addEventListener('click', (ev) => {
+    if (!files) return // the plain link: WhatsApp with the caption and the address
+    ev.preventDefault()
+    void withPicture(() => { location.href = wa.href })
+  })
+  sheet.addEventListener('click', () => (files ? void withPicture(linkOnly) : linkOnly()))
+  // Draw the picture as the block comes near the screen, so a tap shares at once.
+  if (files && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (!entries.some(e => e.isIntersecting)) return
+      io.disconnect()
+      void getPicture().catch(() => {})
+    }, { rootMargin: '300px' })
+    io.observe(section)
+  }
+}
+
+// ---- Countdown to the next election day: four boxes, ticking each second, in Nigerian time.
 const IREV = 'https://inecelectionresults.ng/'
-for (const box of document.querySelectorAll<HTMLElement>('[data-countdown]')) {
-  const schedule = JSON.parse(box.dataset.countdown!) as Schedule
-  // Build the parts once and only change text that changed, so nothing focused is ever removed (review 4).
+function setupClock(section: HTMLElement) {
+  const s = JSON.parse(section.dataset.clock!) as Schedule
+  const boxes = section.querySelector<HTMLElement>('.clock-boxes')!
+  const staticText = section.querySelector<HTMLElement>('[data-clock-static]')!
+  const sr = section.querySelector<HTMLElement>('[data-clock-sr]')!
+  const nums = new Map([...section.querySelectorAll<HTMLElement>('[data-unit]')].map(e => [e.dataset.unit!, e]))
+  const dates = [...section.querySelectorAll<HTMLElement>('[data-date]')]
+  // Built once; later only their text changes, so nothing focused is ever removed (review 4).
+  const phase = el('div', '', { class: 'clock-phase' })
   const headline = el('p', '', { class: 'headline' })
   const details = el('div')
   const results = el('p')
   results.append(el('a', 'INEC Result Viewing Portal (IReV)', { href: IREV }))
-  box.replaceChildren(headline, details, results)
-  let last = ''
-  const render = () => {
-    const text = describePhase(phaseAt(new Date(), schedule), schedule)
+  phase.append(headline, details, results)
+  staticText.replaceWith(phase)
+  let lastText = ''
+  let lastDays = -1
+  const tick = () => {
+    const p = phaseAt(new Date(), s)
+    const text = p.kind === 'before' ? null : describePhase(p, s)
     const key = JSON.stringify(text)
-    if (key === last) return
-    last = key
-    headline.textContent = text.headline
-    const ps = text.details.map(d => el('p', d))
-    if (details.childElementCount !== ps.length || ps.some((p, i) => details.children[i].textContent !== p.textContent))
-      details.replaceChildren(...ps)
-    results.hidden = !text.showResultsLink
+    if (key !== lastText) {
+      lastText = key
+      phase.hidden = !text
+      if (text) {
+        headline.textContent = text.headline
+        const ps = text.details.map(t => el('p', t))
+        if (details.childElementCount !== ps.length || ps.some((x, i) => details.children[i].textContent !== x.textContent)) details.replaceChildren(...ps)
+        results.hidden = !text.showResultsLink
+      }
+    }
+    const next = p.kind === 'before' || p.kind === 'between' ? p.next : null
+    boxes.hidden = !next
+    for (const li of dates) li.classList.toggle('next', li.dataset.date === next?.date)
+    if (!next || (p.kind !== 'before' && p.kind !== 'between')) {
+      sr.textContent = ''
+      lastDays = -1
+      return
+    }
+    const t = Math.floor(p.msToOpen / 1000)
+    const v: Record<string, number> = { days: Math.floor(t / 86400), hours: Math.floor((t % 86400) / 3600), minutes: Math.floor((t % 3600) / 60), seconds: t % 60 }
+    for (const [unit, node] of nums) {
+      const want = String(v[unit]).padStart(2, '0')
+      if (node.textContent !== want) node.textContent = want
+    }
+    if (v.days !== lastDays) {
+      lastDays = v.days
+      const left = v.days === 0 ? 'less than a day to go' : `${v.days} ${v.days === 1 ? 'day' : 'days'} to go`
+      sr.textContent = `Polls open ${formatDay(next.date)} at ${formatTime(s.open)} WAT: ${left}.`
+    }
   }
-  render()
-  setInterval(render, 30_000)
+  tick()
+  setInterval(tick, 1000)
 }
+
+for (const nav of document.querySelectorAll<HTMLElement>('[data-tabs]')) setupTabs(nav)
+for (const box of document.querySelectorAll<HTMLElement>('[data-filter]')) setupFilter(box)
+for (const section of document.querySelectorAll<HTMLElement>('[data-share]')) setupShare(section)
+for (const section of document.querySelectorAll<HTMLElement>('[data-clock]')) setupClock(section)
