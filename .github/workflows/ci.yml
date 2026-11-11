@@ -14,7 +14,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
       # poppler-utils gives the pipeline its independent second extractor (`pdftotext`), so it truly needs apt. The packages are
-      # cached for this runner image; on a miss, apt runs with retries and a backoff, and the downloaded packages are saved.
+      # cached for this runner image; on a miss, apt runs with retries and a backoff (switching to a second mirror on another
+      # domain from the third try), and the downloaded packages are saved for the next run.
       - id: image
         run: echo "name=$ImageOS-$ImageVersion" >> "$GITHUB_OUTPUT"
       - uses: actions/cache@v4
@@ -28,6 +29,11 @@ jobs:
           mkdir -p "$D/partial"
           APT="sudo apt-get -q -o Acquire::Retries=3 -o APT::Keep-Downloaded-Packages=true -o Dir::Cache::Archives=$D"
           for i in 1 2 3 4 5; do
+            # From the third try, a mirror on another domain, in case *.ubuntu.com itself can't be reached (seen 11 Nov 2026).
+            if [ "$i" -eq 3 ]; then
+              sudo sed -i -E 's#https?://([a-z0-9.-]*\.)?(archive|security)\.ubuntu\.com/ubuntu/?#http://mirrors.edge.kernel.org/ubuntu/#g' \
+                /etc/apt/apt-mirrors.txt /etc/apt/sources.list.d/*.sources /etc/apt/sources.list 2>/dev/null || true
+            fi
             if $APT update && $APT install -y poppler-utils && pdftotext -v; then
               sudo rm -rf "$D/partial" "$D/lock"; sudo chown -R "$USER" "$D"; exit 0
             fi
