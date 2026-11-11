@@ -1,12 +1,13 @@
-"""Candidate photos (owner decision D-064, replacing D-048 and D-059): every presidential candidate of the first group (D-042)
-has one, taken from the candidate's own official account, their campaign or party website, or Wikimedia Commons, and credited
-with where it came from. No one else has a photo.
+"""Candidate photos (owner decisions D-064 and D-065): presidential candidates only, each taken from the candidate's own official
+account, their campaign or party website, or Wikimedia Commons, and credited with where it came from. A photo appears only
+after the owner has approved that face on a contact sheet (`owner_approved` in the yaml); everyone else shows the same
+neutral placeholder.
 
 Only images whose licence allows reuse (or that a party sends with written permission) are listed, in
 data/overrides/photos.yaml, each with its file page, author, licence and a crop box. `ballot-pipeline photos` downloads the
 listed originals politely into raw/photos/ and checks each against the hash recorded in the yaml. `ballot-pipeline assets`
 (offline) crops every photo the same way (a square head-and-shoulders box from the yaml), writes a page copy and a
-share-picture copy, and hands a copy to the sprite. Nothing is shown until the owner has switched photos on (`approved`).
+share-picture copy, and hands a copy to the sprite: only for entries the owner has approved.
 """
 
 from __future__ import annotations
@@ -39,13 +40,18 @@ def _sha256(b: bytes) -> str:
 
 def load() -> dict:
     if not PHOTOS_YAML.exists():
-        return {"approved": False, "people": []}
+        return {"people": []}
     data = yaml.safe_load(PHOTOS_YAML.read_text()) or {}
     for p in data.get("people") or []:
         missing = [f for f in FIELDS if f not in p]
         if missing:
             raise ValueError(f"photos.yaml: {p.get('candidate_id')} lacks {missing}")
-    return {"approved": bool(data.get("approved")), "people": data.get("people") or []}
+    return {"people": data.get("people") or []}
+
+
+def approved(p: dict) -> bool:
+    """The owner approved this face on a contact sheet (D-065): the date they did, as a string."""
+    return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(p.get("owner_approved") or "")))
 
 
 def _raw(p: dict) -> Path:
@@ -96,17 +102,16 @@ def fetch(log=print) -> None:
 
 def build_photos(log=print) -> dict[str, Path]:
     """Writes the cropped copies and photos.json; returns the square crops for the sprite (none until approved)."""
-    data = load()
+    listed = load()["people"]
     for old in PHOTO_DIR.glob("*"):
         old.unlink()
-    if not data["approved"] or not data["people"]:
-        PHOTOS_JSON.write_text(json.dumps({"approved": False, "people": {}}, indent=1) + "\n")
-        log("photos: none built (not approved, or none listed); the build will refuse until every first-group presidential candidate has one")
-        return {}
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)
     cells: dict[str, Path] = {}
     people: dict[str, dict] = {}
-    for p in data["people"]:
+    for p in listed:
+        if not approved(p):
+            log(f"photo {p['candidate_id']}: waiting for the owner's approval, not built")
+            continue
         raw = _raw(p)
         if not raw.exists() or _sha256(raw.read_bytes()) != p["sha256"]:
             raise ValueError(f"{p['candidate_id']}: original missing or changed; run `ballot-pipeline photos`")
@@ -129,22 +134,22 @@ def build_photos(log=print) -> dict[str, Path]:
             **{k: p[k] for k in OPTIONAL if p.get(k)},
         }
         log(f"photo {cid}: {page.stat().st_size} + {share.stat().st_size} bytes")
-    PHOTOS_JSON.write_text(json.dumps({"approved": True, "people": people}, indent=1, ensure_ascii=False) + "\n")
+    PHOTOS_JSON.write_text(json.dumps({"people": people}, indent=1, ensure_ascii=False) + "\n")
     return cells
 
 
-def check_photos(first_group_presidential: set[str]) -> list[str]:
-    """Every named presidential candidate of the first group has a photo, and nobody else (D-064)."""
+def check_photos(presidential: set[str]) -> list[str]:
+    """Only presidential candidates have photos, and only faces the owner approved (D-065)."""
     if not PHOTOS_JSON.exists():
         return ["no photos.json: run `ballot-pipeline assets`"]
     people = json.loads(PHOTOS_JSON.read_text())["people"]
     errors = []
-    missing = first_group_presidential - set(people)
-    extra = set(people) - first_group_presidential
-    if missing:
-        errors.append(f"photos (D-064): every first-group presidential candidate needs one; missing {sorted(missing)}")
+    extra = set(people) - presidential
     if extra:
-        errors.append(f"photos (D-064): only the first group's presidential candidates may have one; not {sorted(extra)}")
+        errors.append(f"photos (D-065): only presidential candidates may have one; not {sorted(extra)}")
+    ok = {p["candidate_id"] for p in load()["people"] if approved(p)}
+    if set(people) - ok:
+        errors.append(f"photos (D-065): built without the owner's approval: {sorted(set(people) - ok)}")
     for cid, m in people.items():
         for key in ("page", "share"):
             f = GENERATED_DIR / m[key]

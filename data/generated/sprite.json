@@ -1,10 +1,10 @@
 {
- "file": "logos/sprite-06db78fe27.webp",
+ "file": "logos/sprite-d2af74f63f.webp",
  "cell": 96,
- "width": 2592,
+ "width": 2112,
  "height": 96,
- "bytes": 44316,
- "sha256": "06db78fe270ae63b2d77c7eb01782599984a8ac649e2a651380fd51103148534",
+ "bytes": 34824,
+ "sha256": "d2af74f63f618989cf0fdb7d78d6df73caa313102ce777a13f54cf94c1bdfff4",
  "logos": {
   "A": 0,
   "AA": 1,
@@ -29,11 +29,5 @@
   "YPP": 20,
   "ZLP": 21
  },
- "photos": {
-  "jan-2027-president-adc": 22,
-  "jan-2027-president-apc": 23,
-  "jan-2027-president-ndc": 24,
-  "jan-2027-president-pdp": 25,
-  "jan-2027-president-sdp": 26
- }
+ "photos": {}
 }

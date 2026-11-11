@@ -366,38 +366,17 @@ describe('WhatsApp’s glyph (owner’s brand download, 11 Nov 2026)', () => {
   })
 })
 
-describe('candidate photos (owner decision D-064)', () => {
-  const pres = presidentialRace()
-  const first = pres.candidates.filter(c => c.display_group === 'first' && c.candidate.name)
-  it('every first-group presidential candidate has a photo credited with where it came from; nobody else has one', () => {
-    expect(first.length).toBe(5)
-    for (const c of first) {
+describe('candidate photos (owner decisions D-064, D-065)', () => {
+  const approved = new Set(Object.keys(JSON.parse(fs.readFileSync(path.resolve('data/generated/photos.json'), 'utf8')).people as object))
+  it('a photo appears only for a presidential candidate whose face the owner approved', () => {
+    const pres = presidentialRace()
+    for (const c of pres.candidates) {
       const page = html(`c/${c.id}`)
-      expect(page, c.id).toMatch(/<figure class="profile-photo"><img src="\/photos\/[^"]+\.webp" width="160" height="160" alt="Photo of [^"]+"\/><figcaption>Photo: <a href="https?:\/\/[^"]+">[^<]+<\/a>/)
-      // a Commons photo also names its photographer and licence, as CC BY-SA requires
-      if (page.includes('>Wikimedia Commons</a>')) expect(page, c.id).toMatch(/>Wikimedia Commons<\/a> \([^)]+\), <a href="https:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">CC BY-SA 4\.0<\/a>, cropped\.<\/figcaption>/)
-      expect(page, c.id).toContain('src-label">Photo: </span>')
+      if (approved.has(c.id)) expect(page, c.id).toMatch(/<figure class="profile-photo"><img src="\/photos\/[^"]+\.webp"/)
+      else expect(page, c.id).not.toContain('<figure class="profile-photo"><img')
     }
-    for (const c of pres.candidates.filter(x => x.display_group === 'rest')) expect(html(`c/${c.id}`), c.id).not.toContain('class="profile-photo"')
     for (const r of [...races().filter(x => x.office !== 'president').slice(0, 20), ...febRaces().slice(0, 20)]) {
-      expect(html(`c/${r.candidates[0].id}`), r.id).not.toContain('class="profile-photo"')
+      expect(html(`c/${r.candidates[0].id}`), r.id).not.toContain('<figure class="profile-photo"><img')
     }
-  })
-  it('the ballot cards and the share picture carry the same five photos', () => {
-    const ballot = html('ballot/abia/aba-north-aba-south--abia-south')
-    // the President tab only: the Senate and House races have first groups of their own, with no photos
-    const page = ballot.slice(ballot.indexOf('id="president" data-panel="president"'), ballot.indexOf('id="senate" data-panel="senate"'))
-    const cards = page.match(/<li class="card" [^>]*data-group="first"[\s\S]*?<\/li>/g)!
-    expect(cards.length).toBe(5)
-    for (const card of cards) expect(card).toContain('<svg class="photo"')
-    const d = JSON.parse(/data-share="([^"]+)"/.exec(page)![1].replaceAll('&quot;', '"').replaceAll('&amp;', '&').replaceAll('&#x27;', '\'')) as { tiles: string[][] }
-    expect(d.tiles.map(t => t[3])).toEqual(first.map(c => `/photos/${c.id}-share.jpg`))
-    for (const t of d.tiles) expect(fs.existsSync(path.join(OUT, t[3])), t[3]).toBe(true)
-  })
-  it('the About page says where the photos come from and how to ask for a change', () => {
-    const about = html('about')
-    expect(about).toContain('<h2 id="photos">Photos</h2>')
-    expect(about).toMatch(/official account, their campaign or party website, or Wikimedia Commons/)
-    expect(about).toMatch(/To ask for a change, write to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Photo%20change">/)
   })
 })

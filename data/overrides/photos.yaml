@@ -1,18 +1,10 @@
-# Candidate photos (owner decision D-064): every presidential candidate of the first group (D-042) has one, from the candidate's
-# own official account, their campaign or party website, or Wikimedia Commons; never a news site or agency. Each entry: where it
-# came from in the source's own words (`source`, shown as the credit), the page and the direct file, its SHA-256, the licence
-# where one exists, when it was taken or posted, when we retrieved it, and a square crop box [x, y, size, size] in source
-# pixels, chosen so every face sits at the same size (a negative x or y is padded with the picture's own edge colour).
-approved: true
+# Candidate photos (owner decisions D-064 and D-065): presidential candidates only, from the candidate's own verified official
+# account, their campaign or party website, or Wikimedia Commons; never a news site or agency. Each entry: where it came from
+# in the source's own words (`source`), the page and the direct file, its SHA-256, the licence where one exists, when it was
+# taken or posted, when we retrieved it, and a square crop box [x, y, size, size] in source pixels, chosen so every face sits
+# at the same size (a negative x or y is padded with the picture's own edge colour).
+# Nothing is built until the owner has approved the face on a contact sheet: `owner_approved: 'YYYY-MM-DD'`.
 people:
-  - candidate_id: jan-2027-president-adc
-    source: Official X account of Atiku Abubakar (@atiku)
-    file_page: https://x.com/atiku/status/2119768434216972763
-    file_url: https://pbs.twimg.com/media/HWruJsHXkAAOunJ?format=jpg&name=orig
-    sha256: 754c3a9be03607972a7eedb1880adc47733dfa93064d2f9b8b6ea1b2b797ca78
-    taken: '2026-11-09'
-    retrieved: '2026-11-11'
-    crop: [152, 28, 557, 557]
   - candidate_id: jan-2027-president-apc
     source: Wikimedia Commons
     file_page: https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait.jpg
