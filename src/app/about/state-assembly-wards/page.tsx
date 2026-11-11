@@ -72,7 +72,7 @@ export default function StateAssemblyWards() {
         <a href={INEC_2027}>2027 general elections page</a>
         , or your INEC local government office.
       </p>
-      <p><a href="/about/">About this site</a></p>
+      <p className="go"><a className="btn btn-secondary" href="/about/">About this site</a></p>
     </>
   )
 }

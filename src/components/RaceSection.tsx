@@ -1,9 +1,10 @@
-import { firstGroup, type Race, source } from '@/lib/data'
-import { caption, namedCount, picture, raceTitle } from '@/lib/share'
-import { SITE_URL } from '@/lib/site'
+import { firstGroup, type Race, sharePhoto, source } from '@/lib/data'
+import { slug } from '@/lib/core'
+import { caption, ELECTION_DAY, namedCount, picture, raceTitle } from '@/lib/share'
+import { raceCorrectionHref, shareLinks, SITE_URL } from '@/lib/site'
 
 import { CandidateCard } from './Candidate'
-import { Share } from './Share'
+import { Share, WhatsAppMark } from './Share'
 import { SourceLine } from './SourceLine'
 
 export { raceTitle }
@@ -59,11 +60,31 @@ function PlacementNotes({ r }: { r: Race }) {
   )
 }
 
+/** Where a race's results will be: the president and governors on the results page, every other race in its "other races" part. */
+export function resultsHref(r: Race): string {
+  if (r.office === 'president') return '/results/#president'
+  if (r.office === 'governor') return `/results/governor/${slug(r.state ?? '')}/`
+  return '/results/#other-races'
+}
+
+/** "Share on WhatsApp" as a tile in the grid, on phones only: in the empty slot beside an odd first group, or as a full row. */
+function WhatsAppTile({ r, url, row }: { r: Race, url: string, row: boolean }) {
+  const link = (
+    <a href={shareLinks(caption(), url).whatsapp} data-share-wa aria-label={`Share on WhatsApp: ${raceTitle(r)}`}>
+      <WhatsAppMark />
+      <span>Share on WhatsApp</span>
+    </a>
+  )
+  // In the grid's empty slot it is one more item of the grid; as a full row it sits under the list, not inside it.
+  return row ? <div className="wa-tile wa-row" data-wa-tile>{link}</div> : <li className="wa-tile" data-wa-tile>{link}</li>
+}
+
 /**
  * One race: its candidates as a grid of cards in two labelled groups (owner decision D-042), a filter the page script
- * runs in the browser, and the share block. `shareUrl` is the race's place on this page: never a polling unit.
+ * runs in the browser, when its results will appear, the share block and a correction button. `shareUrl` is the race's
+ * place on this page: never a polling unit.
  */
-export function RaceSection({ r, level = 2, shareUrl, eager = false }: { r: Race, level?: 2 | 3, shareUrl: string, eager?: boolean }) {
+export function RaceSection({ r, level = 2, shareUrl }: { r: Race, level?: 2 | 3, shareUrl: string }) {
   const H = level === 2 ? 'h2' : 'h3'
   const G = level === 2 ? 'h3' : 'h4'
   const titleId = `race-${r.id}`
@@ -72,6 +93,10 @@ export function RaceSection({ r, level = 2, shareUrl, eager = false }: { r: Race
   const rest = r.candidates.filter(c => c.display_group === 'rest')
   const mate = TICKET_OFFICES.includes(r.office) ? mateLabel(r) : null
   const n = namedCount(r)
+  const url = `${SITE_URL}${shareUrl}`
+  // The tile goes under the first group, or under the only group when the race has none of the five.
+  const tileAfter = first.length ? 'first' : 'rest'
+  const groups = [[fg.label, first, 'first'], [REST_LABEL, rest, 'rest']] as const
   return (
     <section className="race" data-race-id={r.id} aria-labelledby={titleId}>
       <H id={titleId} className="band">{raceTitle(r)}</H>
@@ -83,25 +108,33 @@ export function RaceSection({ r, level = 2, shareUrl, eager = false }: { r: Race
         <input id={`filter-${r.id}`} type="search" autoComplete="off" spellCheck={false} />
         <p className="filter-none" role="status" />
       </div>
-      {[[fg.label, first, 'first'], [REST_LABEL, rest, 'rest']].map(([label, list, key]) => (list as typeof first).length > 0 && (
-        <div className="group" key={key as string} data-group-of={key as string}>
-          <G className="group-label">{label as string}</G>
-          <ul className="cards" aria-label={`${label as string}: ${raceTitle(r)}`}>
-            {(list as typeof first).map((c, i) => <CandidateCard key={c.id} c={c} mateLabel={mate} eager={eager && key === 'first' && i < 4} />)}
+      {groups.map(([label, list, key]) => list.length > 0 && (
+        <div className="group" key={key} data-group-of={key}>
+          <G className="group-label">{label}</G>
+          <ul className="cards" aria-label={`${label}: ${raceTitle(r)}`}>
+            {list.map(c => <CandidateCard key={c.id} c={c} mateLabel={mate} />)}
+            {key === tileAfter && list.length % 2 === 1 && <WhatsAppTile r={r} url={url} row={false} />}
           </ul>
+          {key === tileAfter && list.length % 2 === 0 && <WhatsAppTile r={r} url={url} row />}
         </div>
       ))}
       <p className="order-note">
         <a href="/about/#order">How the order is set</a>
         . INEC has not published the 2027 ballot-paper order, so ballot order here is INEC’s list order: alphabetical by party acronym.
       </p>
+      <div className="results-strip">
+        <p>{`Results for this race will appear from ${ELECTION_DAY[r.election]}.`}</p>
+        <a className="btn btn-secondary btn-small" href={resultsHref(r)}>Results page</a>
+      </div>
       <Share
         label={`Share this race: ${raceTitle(r)}`}
-        text={caption(r)}
-        url={`${SITE_URL}${shareUrl}`}
-        picture={picture(r)}
+        url={url}
+        picture={picture(r, sharePhoto)}
         level={level === 2 ? 3 : 4}
       />
+      <p className="correct-row">
+        <a className="btn btn-secondary" href={raceCorrectionHref(r.id, url, raceTitle(r))}>Report a correction</a>
+      </p>
     </section>
   )
 }
@@ -122,7 +155,7 @@ export function UnresolvedGroup({ office, list, path }: { office: 'Senate' | 'Ho
           {' '}
           races applies to each polling unit in your area, so all of them are shown. Only one will be on your ballot paper.
         </p>
-        {office === 'State House of Assembly' && <p><a href="/about/state-assembly-wards/">Why some wards show more than one State Assembly race</a></p>}
+        {office === 'State House of Assembly' && <p className="go"><a className="btn btn-secondary" href="/about/state-assembly-wards/">Why some wards show more than one State Assembly race</a></p>}
         <p>INEC’s own tools:</p>
         <ul className="link-list tiles">
           <li><a href={INEC_LOCATOR}>INEC Polling Unit Locator</a></li>
@@ -153,6 +186,7 @@ export function RaceTabs({ panels }: { panels: TabPanel[] }) {
             <li key={p.key}>
               <a href={`#${p.key}`} data-tab={p.key}>
                 <span className="tab-name">{p.label}</span>
+                {' '}
                 <span className="tab-count">
                   {p.badge}
                   <span className="visually-hidden">{` ${p.badgeLong}`}</span>

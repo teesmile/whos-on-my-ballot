@@ -55,6 +55,7 @@ describe('election-day page', () => {
       const rel = `/${path.relative(OUT, path.dirname(f)).split(path.sep).join('/')}/`.replace('//', '/')
       const mark = (section: string) => (rel === section ? ' aria-current="page"' : rel.startsWith(section) ? ' aria-current="true"' : '')
       expect(page, f).toContain(`<a href="/election-day/" class="site-nav"${mark('/election-day/')}>Election day</a>`)
+      expect(page, f).toContain(`<a href="/results/" class="site-nav"${mark('/results/')}>Results</a>`)
       expect(page, f).toContain(`<a href="/about/" class="site-nav"${mark('/about/')}>About</a>`)
     }
   })

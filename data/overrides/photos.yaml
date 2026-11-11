@@ -1,0 +1,7 @@
+# Candidate photos (owner decision D-048): the presidential candidates of the first group (D-042), all five or none.
+# Only images whose licence allows reuse, or sent by a party with written permission. Each entry: the file page, the direct
+# file, its SHA-256, the author and credit line exactly as the licence asks, the licence and its URL, when it was taken, when
+# we retrieved it, and a square crop box [x, y, size, size] in source pixels, chosen so every face sits at the same size.
+# Nothing is shown until the owner has seen all five with their credits and set `approved: true`.
+approved: false
+people: []

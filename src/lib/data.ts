@@ -142,7 +142,7 @@ export interface FirstGroup {
 /** The five parties shown first in every race, and the published measure that picks them (D-042). */
 export const firstGroup = (): FirstGroup => read<FirstGroup>('first-group.json')
 
-export interface Logo { file: string, png: string, width: number, height: number, bytes: number, source_url: string, retrieved_at: string }
+export interface Logo { png: string, full: string, full_width: number, full_height: number, source_url: string, retrieved_at: string }
 let logos: Record<string, Logo> | null = null
 /** Each party's logo from INEC's register (D-043): every party on a ballot has one, or the build fails. */
 export function logo(party: string): Logo {
@@ -154,7 +154,36 @@ export function logo(party: string): Logo {
 export const logoParties = () => { logos ??= read<Record<string, Logo>>('logos.json'); return Object.keys(logos) }
 /** The same logo as a PNG data URL, for the build-time link-preview cards. */
 export const logoPngDataUrl = (party: string) => `data:image/png;base64,${fs.readFileSync(path.join(DIR, logo(party).png)).toString('base64')}`
-export const logoBytes = (party: string) => fs.readFileSync(path.join(DIR, logo(party).file))
+/** A file the pipeline wrote under data/generated (logos, the sprite, photos), for the routes that serve it. */
+export const generatedBytes = (rel: string) => fs.readFileSync(path.join(DIR, rel))
+
+/** One image holding every party logo and every approved photo, in square cells: one request per page, not one per party. */
+export interface Sprite { file: string, cell: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number> }
+export const sprite = (): Sprite => read<Sprite>('sprite.json')
+
+/** An approved candidate photo (owner decision D-048) and its credit, exactly as its licence asks. */
+export interface Photo {
+  page: string
+  page_size: number
+  share: string
+  share_size: number
+  file_page: string
+  author: string
+  credit: string
+  licence: string
+  licence_url: string
+  taken: string
+  retrieved: string
+}
+let photos: Record<string, Photo> | null = null
+export function allPhotos(): Record<string, Photo> {
+  photos ??= read<{ approved: boolean, people: Record<string, Photo> }>('photos.json').people
+  return photos
+}
+/** The candidate's photo, or null: only the first group's presidential candidates, all five or none (D-048). */
+export const photo = (candidateId: string): Photo | null => allPhotos()[candidateId] ?? null
+/** The larger copy the share picture loads, only when someone shares. */
+export const sharePhoto = (candidateId: string): string | null => { const p = photo(candidateId); return p ? `/${p.share}` : null }
 
 /** The 16 January races. */
 export const races = () => load().races

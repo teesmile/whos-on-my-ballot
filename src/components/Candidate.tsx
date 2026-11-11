@@ -1,5 +1,5 @@
 import type { Candidate as C, Person, PrintingNote } from '@/lib/data'
-import { logo } from '@/lib/data'
+import { photo, sprite } from '@/lib/data'
 import { noCandidateText } from '@/lib/share'
 import { candidatePath } from '@/lib/site'
 
@@ -50,23 +50,49 @@ export function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Africa/Lagos' })
 }
 
+/**
+ * One square cell of the sprite (every logo and approved photo in one image, so a page makes one image request).
+ * The 1-pixel inset keeps neighbouring cells from bleeding in when the browser scales the image.
+ */
+function SpriteCell({ index, size, label, className }: { index: number, size: number, label: string | null, className: string }) {
+  const s = sprite()
+  const a11y = label ? { 'role': 'img', 'aria-label': label } : { 'aria-hidden': true }
+  return (
+    <svg className={className} width={size} height={size} viewBox={`${index * s.cell + 1} 1 ${s.cell - 2} ${s.cell - 2}`} focusable="false" {...a11y}>
+      <image href={`/${s.file}`} width={s.width} height={s.height} />
+    </svg>
+  )
+}
+
 /** A party's logo from INEC's register (D-043): the same size and treatment for every party, the acronym as its text. */
-export function PartyLogo({ party, size, eager = false }: { party: string, size: number, eager?: boolean }) {
-  // eslint-disable-next-line @next/next/no-img-element -- static export: each logo is already a small pre-sized WebP
-  return <img className="logo" src={`/${logo(party).file}`} alt={party} width={size} height={size} loading={eager ? undefined : 'lazy'} decoding="async" />
+export function PartyLogo({ party, size }: { party: string, size: number }) {
+  const i = sprite().logos[party]
+  if (i === undefined) throw new Error(`no INEC logo for ${party} in the sprite`)
+  return <SpriteCell index={i} size={size} label={party} className="logo" />
+}
+
+/** A candidate's approved photo (D-048) from the sprite, or nothing. Beside the name it repeats, so it is hidden from screen readers. */
+export function CardPhoto({ id, size }: { id: string, size: number }) {
+  const i = sprite().photos[id]
+  if (i === undefined || !photo(id)) return null
+  return <SpriteCell index={i} size={size} label={null} className="photo" />
 }
 
 /**
  * One compact card per ticket, the same for every party (the working rules §1): logo, acronym, the name as INEC prints it
  * and, on a ticket, the running mate. The whole card opens the candidate's page, where every field and its citation is.
+ * The first group's presidential candidates also show their photo (D-048); every card stays the same size.
  */
-export function CandidateCard({ c, mateLabel, eager }: { c: C, mateLabel: string | null, eager: boolean }) {
+export function CandidateCard({ c, mateLabel }: { c: C, mateLabel: string | null }) {
   const named = Boolean(c.candidate.name)
   const words = [c.party, c.party_name ?? '', c.candidate.name, c.running_mate?.name ?? ''].join(' ').toLowerCase()
   return (
     <li className={named ? 'card' : 'card muted'} data-candidate-id={c.id} data-party={c.party} data-group={c.display_group} data-words={words}>
       <a href={candidatePath(c.id)}>
-        <PartyLogo party={c.party} size={48} eager={eager} />
+        <span className="card-pics">
+          <PartyLogo party={c.party} size={48} />
+          <CardPhoto id={c.id} size={48} />
+        </span>
         <span className="card-party" aria-hidden="true">{c.party}</span>
         <span className="card-name">{named ? c.candidate.name : noCandidateText(c)}</span>
         {mateLabel && c.running_mate?.name && (

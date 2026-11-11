@@ -64,18 +64,20 @@ describe('candidate pages', () => {
 describe('presidential background (D-013)', () => {
   const pres = allCandidates().filter(({ race }) => race.office === 'president')
 
-  it('every presidential page shows the Background section with the same two fields for candidate and running mate', () => {
+  it('every presidential page shows the same two background sections, each with candidate and running mate', () => {
     for (const { c } of pres) {
       const html = page(candidatePath(c.id))
-      expect(html, c.id).toContain('<h2 id="background">Background</h2>')
-      expect((html.match(/<h4>Public offices held<\/h4>/g) ?? []).length, c.id).toBe(2)
-      expect((html.match(/<h4>Party history<\/h4>/g) ?? []).length, c.id).toBe(2)
+      expect(html, c.id).toContain('<h2 id="career">Career and offices held</h2>')
+      expect(html, c.id).toContain('<h2 id="party-history">Party history</h2>')
+      // the candidate's heading in "From INEC's list", then candidate and running mate in each of the two sections
+      expect((html.match(/<h3>(Candidate|Running mate): [^<]*<\/h3>/g) ?? []).length, c.id).toBe(5)
+      expect(html, c.id).toContain('<h2 id="sources">Sources</h2>')
     }
   })
 
   it('no other race shows background, and Wikipedia is never linked anywhere', () => {
     for (const { c } of allCandidates().filter(({ race }) => race.office !== 'president').slice(0, 300)) {
-      expect(page(candidatePath(c.id))).not.toContain('id="background"')
+      expect(page(candidatePath(c.id))).not.toContain('id="career"')
     }
     for (const f of [...walk(OUT)].filter(x => x.endsWith('.html'))) expect(fs.readFileSync(f, 'utf8')).not.toMatch(/wikipedia\.org/i)
   })
@@ -165,28 +167,31 @@ describe('share cards', () => {
   }
 })
 
-describe('background citations (review 7)', () => {
-  it('show publisher and dates only, never a headline, the same way for every presidential candidate and running mate', async () => {
+describe('background citations (review 7; numbered sources, 11 Nov 2026)', () => {
+  it('every entry is numbered to its source; the list shows publisher and dates only, never a headline', async () => {
     const { allCandidates } = await import('@/lib/data')
     let n = 0
     const unescape = (s: string) => s.replace(/<[^>]+>/g, '').replaceAll('&amp;', '&').replaceAll('&#x27;', '\'').replaceAll('&quot;', '"')
     for (const { race, c } of allCandidates().filter(({ race }) => race.office === 'president')) {
       const html = page(candidatePath(c.id))
+      // The numbers in the list, by address.
+      const listed = new Map([...html.matchAll(/<li id="src-(\d+)"[^>]*><a class="src-link" href="([^"]+)">([\s\S]*?)<\/a><\/li>/g)].map(m => [m[2].replaceAll('&amp;', '&'), { n: m[1], text: unescape(m[3]) }]))
+      const markers = new Set([...html.matchAll(/<a class="ref" href="#src-(\d+)" aria-label="Source \1"><span aria-hidden="true">\1<\/span><\/a>/g)].map(m => m[1]))
       for (const p of [c.candidate, c.running_mate]) {
         const bg = p?.background
         if (!bg) continue
         for (const cite of [...bg.public_offices, ...bg.party_history].flatMap(e => e.citations)) {
-          const at = html.indexOf(`<p class="cite"><a href="${cite.url.replaceAll('&', '&amp;')}">`)
-          expect(at, `${race.id} ${c.id} ${cite.url}`).toBeGreaterThan(-1)
-          const start = html.indexOf('">', at + 20) + 2
-          const linkText = html.slice(start, html.indexOf('</a>', start))
-          const text = unescape(linkText)
-          expect(text.startsWith(`Source: ${cite.publisher}`), `${c.id}: ${text}`).toBe(true)
-          expect(text.includes(cite.title), `${c.id} shows a headline: ${cite.title}`).toBe(false)
-          expect(text, c.id).toMatch(/, retrieved \d{1,2} [A-Z][a-z]+ \d{4}$/)
+          const entry = listed.get(cite.url)
+          expect(entry, `${race.id} ${c.id} ${cite.url}`).toBeDefined()
+          expect(markers.has(entry!.n), `${c.id}: no marker for source ${entry!.n}`).toBe(true)
+          expect(entry!.text.replace(/^\d+/, '').startsWith(cite.publisher), `${c.id}: ${entry!.text}`).toBe(true)
+          expect(entry!.text.includes(cite.title), `${c.id} shows a headline: ${cite.title}`).toBe(false)
+          expect(entry!.text, c.id).toMatch(/\. Retrieved \d{1,2} [A-Z][a-z]+ \d{4}\.$/)
           n++
         }
       }
+      // every marker leads to an entry
+      for (const m of markers) expect(html, c.id).toContain(`<li id="src-${m}"`)
     }
     expect(n).toBeGreaterThan(100)
   })

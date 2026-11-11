@@ -133,7 +133,7 @@ describe('6 February ballot pages', () => {
   it('every candidate’s page cites INEC with a link to the page and a retrieval date', () => {
     for (const r of febRaces().filter((_, i) => i % 20 === 0)) {
       for (const c of r.candidates) {
-        expect(html(`c/${c.id}`), c.id).toMatch(/<p class="cite" data-source="[^"]+"><a href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+">Source, page \d+, row \d+: INEC: [^<]+, retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/)
+        expect(html(`c/${c.id}`), c.id).toMatch(/<li id="src-\d+" data-source="[^"]+"><a class="src-link" href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+"><span class="src-n" aria-hidden="true">\d+<\/span><span><strong>INEC<\/strong>: [^<]+, page \d+, row \d+\. Retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/)
       }
     }
   })
@@ -172,9 +172,9 @@ describe('6 February candidate pages', () => {
     for (const r of febRaces()) {
       for (const c of r.candidates.filter((_, i) => r.office === 'governor' || i === 0)) {
         const page = html(candidatePath(c.id).slice(1))
-        expect(page, c.id).toContain('Candidate in the 6 February 2027 election:')
-        expect(page).not.toContain('id="background"')
-        expect(page.includes('<h2 id="mate">Deputy governor'), c.id).toBe(r.office === 'governor')
+        expect(page, c.id).toContain(' - 6 February 2027</p>')
+        expect(page).not.toContain('id="career"')
+        expect(page.includes('<h3 id="mate">Deputy governor'), c.id).toBe(r.office === 'governor')
         expect(page).not.toContain('Running mate')
       }
     }

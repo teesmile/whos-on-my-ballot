@@ -7,8 +7,8 @@ import path from 'node:path'
 
 import { describe, expect, it } from 'vitest'
 
-import { findByCode, puHash, type StateSearchData } from '@/lib/core'
-import { ballots, presidentialRace, race, races, stateGeo, states, wardBallotPath } from '@/lib/data'
+import { findByCode, puHash, slug, type StateSearchData } from '@/lib/core'
+import { ballots, febRaces, presidentialRace, race, races, stateGeo, states, wardBallotPath } from '@/lib/data'
 
 const OUT = path.resolve('out')
 const html = (p: string) => fs.readFileSync(path.join(OUT, p, 'index.html'), 'utf8')
@@ -22,6 +22,11 @@ function* walk(dir: string): Generator<string> {
 }
 
 const ids = (s: string, attr: string) => [...s.matchAll(new RegExp(`${attr}="([^"]+)"`, 'g'))].map(m => m[1])
+
+/** A candidate page's INEC source, in its numbered list of sources: INEC's list, the page and row, and the retrieval date. */
+const INEC_SOURCE = /<li id="src-\d+" data-source="[^"]+"><a class="src-link" href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+"><span class="src-n" aria-hidden="true">\d+<\/span><span><strong>INEC<\/strong>: [^<]+, page \d+, row \d+\. Retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/
+/** The warm accent (D-049) and its dark ink, the only colours besides greys and the national green. */
+const ACCENT = ['#f0d49e', '#6e4f12']
 
 describe('every polling unit reaches the same ballot by every route', () => {
   it('code lookup, browse links and the ward mapping agree for all polling units', () => {
@@ -101,22 +106,28 @@ describe('ballot pages', () => {
     for (const r of races()) {
       for (const c of r.candidates.filter((_, i) => i % 7 === 0)) {
         const page = html(`c/${c.id}`)
-        expect(page, c.id).toMatch(/<p class="cite" data-source="[^"]+"><a href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+">Source, page \d+, row \d+: INEC: [^<]+, retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/)
+        expect(page, c.id).toMatch(INEC_SOURCE)
       }
     }
   })
 
-  it('every card carries its party’s logo from INEC’s register, served from our own origin (D-043)', () => {
-    const manifest = JSON.parse(fs.readFileSync('data/generated/logos.json', 'utf8')) as Record<string, { file: string, source_url: string }>
+  it('every card carries its party’s logo from INEC’s register, all from one sprite served from our own origin (D-043)', () => {
+    const manifest = JSON.parse(fs.readFileSync('data/generated/logos.json', 'utf8')) as Record<string, { full: string, source_url: string }>
+    const sprite = JSON.parse(fs.readFileSync('data/generated/sprite.json', 'utf8')) as { file: string, cell: number, logos: Record<string, number> }
+    expect(fs.existsSync(path.join(OUT, sprite.file))).toBe(true)
+    expect(sprite.file).toMatch(/^logos\/sprite-[0-9a-f]{10}\.webp$/)
     for (const [party, m] of Object.entries(manifest)) {
-      expect(fs.existsSync(path.join(OUT, m.file)), party).toBe(true)
+      expect(fs.existsSync(path.join(OUT, m.full)), party).toBe(true)
+      expect(sprite.logos[party], party).toBeGreaterThanOrEqual(0)
       expect(m.source_url.startsWith('https://www.inecnigeria.org/_nuxt/') || m.source_url === 'embedded in the /parties page', party).toBe(true)
     }
     for (const b of all.filter((_, i) => i % 15 === 0)) {
-      const blocks = html(b.path.slice(1)).match(/<li class="card[^"]*"[\s\S]*?<\/li>/g)!
-      for (const block of blocks) {
+      const page = html(b.path.slice(1))
+      expect(new Set([...page.matchAll(/<image href="([^"]+)"/g)].map(m => m[1])), b.path).toEqual(new Set([`/${sprite.file}`]))
+      expect(page, b.path).not.toMatch(/<img /)
+      for (const block of page.match(/<li class="card[^"]*"[\s\S]*?<\/li>/g)!) {
         const party = /data-party="([^"]+)"/.exec(block)![1]
-        expect(block, b.path).toContain(`<img class="logo" src="/logos/${party.toLowerCase()}.webp" alt="${party}" width="48" height="48"`)
+        expect(block, b.path).toContain(`<svg class="logo" width="48" height="48" viewBox="${sprite.logos[party] * sprite.cell + 1} 1 94 94" focusable="false" role="img" aria-label="${party}">`)
       }
     }
   })
@@ -137,7 +148,8 @@ describe('ballot pages', () => {
         const d = JSON.parse(m[1].replaceAll('&quot;', '"').replaceAll('&amp;', '&').replaceAll('&#x27;', '\'')) as { text: string, url: string }
         expect(d.url.startsWith(`https://whosonmyballot.ng${b.path}#`), d.url).toBe(true)
         expect(d.url).not.toMatch(/pu-/)
-        expect(d.text).toMatch(/^Who’s on my ballot\? Every candidate for .+, (16 January|6 February) 2027:$/)
+        expect(d.text).toBe('Check who is on your ballot:')
+        expect(d.url).toMatch(/^https:\/\//)
       }
     }
   })
@@ -245,8 +257,9 @@ describe('every page', () => {
     }
   })
 
-  // D-039: neutral greys plus one accent, Nigeria's national green (hue 140-170). Never red, blue or any other hue.
-  it('stylesheets contain no party names, no party-keyed selectors, and only greys and the national green', () => {
+  // D-039/D-049: neutral greys, Nigeria's national green (hue 140-170) and the one warm accent (D-049) and its dark ink.
+  // Never red, blue or any other hue (the red heart in the credit is an emoji, text, not a colour in the stylesheet).
+  it('stylesheets contain no party names, no party-keyed selectors, and only greys, the national green and the one accent', () => {
     const css = [...walk(path.join(OUT, '_next'))].filter(f => f.endsWith('.css')).map(f => fs.readFileSync(f, 'utf8')).join('\n')
     const parties = [...new Set(races().flatMap(r => r.candidates.map(c => c.party)))]
     for (const p of parties) expect(css).not.toMatch(new RegExp(`[.#\\[]${p.toLowerCase()}\\b`))
@@ -261,14 +274,66 @@ describe('every page', () => {
     for (const m of css.matchAll(/rgba?\(\s*(\d+)[\s,]+(\d+)[\s,]+(\d+)/g)) colours.push([m[0], [1, 2, 3].map(i => Number(m[i]))])
     expect(colours.length).toBeGreaterThan(5)
     let greens = 0
+    let accents = 0
     for (const [text, [r, g, b]] of colours) {
       const max = Math.max(r, g, b)
       const min = Math.min(r, g, b)
       if (max - min <= 8) continue // a neutral grey
+      if (ACCENT.includes(text.toLowerCase())) {
+        accents++
+        continue
+      }
       const hue = 60 * (max === g ? 2 + (b - r) / (max - min) : max === r ? ((g - b) / (max - min) + 6) % 6 : 4 + (r - g) / (max - min))
       expect(hue >= 140 && hue <= 170, `${text} (hue ${Math.round(hue)}) is neither grey nor the national green`).toBe(true)
       greens++
     }
     expect(greens).toBeGreaterThan(0)
+    expect(accents).toBeGreaterThan(0)
+  })
+})
+
+describe('results (waiting state, 11 Nov 2026)', () => {
+  const page = html('results')
+  it('is in the header, says when results appear, and shows no figures', () => {
+    expect(page).toContain('Results will appear here from 16 January 2027.')
+    expect(page).toContain('States reported:')
+    expect(page).toContain('<strong>0 of 37</strong>')
+    // no votes or shares: every cell waits
+    expect(page).not.toMatch(/<td class="num">[^<]*\d/)
+    expect(page).not.toMatch(/live count/i)
+  })
+  it('lists the presidential candidates in the ballot page’s order', () => {
+    const pres = races().find(r => r.office === 'president')!
+    const ids = [...page.matchAll(/<tr data-candidate-id="([^"]+)"/g)].map(m => m[1])
+    expect(ids).toEqual(pres.candidates.map(c => c.id))
+  })
+  it('has a page for every governorship race, in its waiting state', () => {
+    for (const r of febRaces().filter(x => x.office === 'governor')) {
+      const p = html(`results/governor/${slug(r.state ?? '')}`)
+      expect(p, r.id).toContain('Results will appear here from 6 February 2027.')
+      expect([...p.matchAll(/<tr data-candidate-id="([^"]+)"/g)].map(m => m[1]), r.id).toEqual(r.candidates.map(c => c.id))
+    }
+  })
+  it('every race on a ballot says when its results will appear and links the results page', () => {
+    for (const b of ballots().filter((_, i) => i % 40 === 0)) {
+      const p = html(b.path.slice(1))
+      const n = (p.match(/<section class="race"/g) ?? []).length
+      expect((p.match(/Results for this race will appear from 16 January 2027\./g) ?? []).length, b.path).toBe(n)
+      expect((p.match(/class="btn btn-secondary" href="mailto:[^"]+">Report a correction<\/a>/g) ?? []).length, b.path).toBe(n)
+    }
+  })
+})
+
+describe('links and dates everywhere', () => {
+  it('no stylesheet ever underlines a link', () => {
+    const css = [...walk(path.join(OUT, '_next'))].filter(f => f.endsWith('.css')).map(f => fs.readFileSync(f, 'utf8')).join('\n')
+    expect(css).not.toMatch(/text-decoration[^;}]*underline/)
+  })
+  it('no page gives 2026 as an election date', () => {
+    for (const f of [...walk(OUT)].filter(x => x.endsWith('.html'))) {
+      const text = fs.readFileSync(f, 'utf8').replace(/<[^>]+>/g, ' ')
+      expect(text, f).not.toMatch(/\b(?:election|polls?|vote|ballot)\b[^.]{0,40}\b(?:January|February) 2026\b/i)
+      expect(text, f).not.toMatch(/\b(?:16 January|6 February) 2026\b/)
+    }
   })
 })

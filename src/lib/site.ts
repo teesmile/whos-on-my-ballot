@@ -32,12 +32,23 @@ export function correctionHref(candidateId: string, pageUrl: string, name: strin
   return `mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 }
 
-/** Share links are plain links: no third-party script loads, nothing is sent until the visitor taps one. */
+/** Share links are plain links: no third-party script loads, nothing is sent until the visitor taps one.
+ *  The caption, then the full address on its own line. */
 export function shareLinks(text: string, url: string) {
-  return {
-    whatsapp: `https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`,
-    x: `https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
-  }
+  return { whatsapp: `https://wa.me/?text=${encodeURIComponent(`${text}\n${url}`)}` }
+}
+
+/** A correction for a race as a whole (a missing or wrong candidate, a wrong party), pre-filled the same way (D-014). */
+export function raceCorrectionHref(raceId: string, pageUrl: string, title: string): string {
+  const subject = `Correction: ${raceId}`
+  const body = [
+    `Page: ${pageUrl}`,
+    `Race: ${title} (${raceId})`,
+    'What to correct:',
+    'What it should say:',
+    'Where INEC (or another official source) says so, with a link:',
+  ].join('\n')
+  return `mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 }
 
 /** The source line printed on a race's share card: the race's own INEC list, never a generic one (review 3). */

@@ -31,6 +31,9 @@ function* walk(dir) {
 const SCRIPT = /<script\b[^>]*>[\s\S]*?<\/script>/g
 const PRELOAD = /<link\b[^>]*\b(?:rel="(?:modulepreload|preload)"[^>]*\bas="script"|rel="modulepreload")[^>]*\/?>/g
 
+// With no approved photos (D-048) the photo route still needs one path to export; that placeholder is not served.
+fs.rmSync(path.join(OUT, 'photos', 'none'), { force: true })
+
 let pages = 0
 let removedTxt = 0
 for (const file of walk(OUT)) {
@@ -46,7 +49,7 @@ for (const file of walk(OUT)) {
   html = html.replace(SCRIPT, s => (s.startsWith('<script type="application/ld+json">') ? s : '')).replace(PRELOAD, '').replaceAll('<!-- -->', '')
   // The header marks where the visitor is: the page itself, or a page inside that section (no script needed).
   const rel = `/${path.relative(OUT, path.dirname(file)).split(path.sep).join('/')}/`.replace('//', '/')
-  for (const section of ['/election-day/', '/about/']) {
+  for (const section of ['/election-day/', '/results/', '/about/']) {
     if (!rel.startsWith(section)) continue
     const current = rel === section ? 'page' : 'true'
     html = html.replace(`<a href="${section}" class="site-nav">`, `<a href="${section}" class="site-nav" aria-current="${current}">`)

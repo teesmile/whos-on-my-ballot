@@ -164,7 +164,9 @@ describe('icons and credit', () => {
   it('every footer credits the builder, and nothing more', () => {
     for (const [p, h] of pages) {
       const footer = h.split('<footer')[1]
-      expect(footer, p).toContain(`Built by <a href="${BUILT_BY.url}">${BUILT_BY.name}</a>`)
+      // The owner's credit and heart (D-050): the heart is text, read as "love".
+      expect(footer, p).toContain(`Built by <a href="${BUILT_BY.url}">${BUILT_BY.name}</a> with <span class="heart" role="img" aria-label="love">❤️</span>`)
+      expect(footer, p).not.toMatch(/\bads\b/i)
     }
   })
 })

@@ -3,9 +3,10 @@ import type { Metadata } from 'next'
 import { formatDate, NOT_PROVIDED } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
-import { firstGroup } from '@/lib/data'
+import { Credit } from '@/components/Credit'
+import { allPhotos, candidate, firstGroup } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
-import { BUILT_BY, CORRECTIONS_EMAIL } from '@/lib/site'
+import { CORRECTIONS_EMAIL } from '@/lib/site'
 
 const TITLE = 'About: how this site reads INEC’s lists'
 export const metadata: Metadata = pageMeta({
@@ -15,6 +16,7 @@ export const metadata: Metadata = pageMeta({
 
 export default function About() {
   const fg = firstGroup()
+  const photos = Object.entries(allPhotos())
   return (
     <>
       <JsonLd data={pageGraph('/about/', TITLE, [['Home', '/'], ['About', '/about/']])} />
@@ -25,7 +27,10 @@ export default function About() {
       </p>
 
       <h2>Where the information comes from</h2>
-      <p>Every fact on this site comes from a published document, and each one is cited next to it with a link and the date it was retrieved.</p>
+      <p>
+        Every fact on this site comes from a published document, cited with a link and the date it was retrieved: next to the fact, or,
+        on a candidate’s page, by a small number that leads to that page’s list of sources.
+      </p>
       <SourceLine id="president" what="Candidates for President, Senate and House of Representatives" />
       <SourceLine id="governor-abia" what="Candidates for Governor" />
       <SourceLine id="sha-2026-10-10" what="Candidates for the State Houses of Assembly" />
@@ -62,7 +67,8 @@ export default function About() {
 
       <h2>What this site never does</h2>
       <p>
-        No rankings, predictions, polls, endorsements or opinions. No candidate photos. Party colours and marks appear only inside each
+        {`No rankings, predictions, polls, endorsements or opinions. ${photos.length ? 'No photos except the five described below.' : 'No candidate photos.'} `}
+        Party colours and marks appear only inside each
         party’s official logo from INEC’s register, the same size for every party, never in the site’s own design. No candidate is featured
         or given more space than another.
       </p>
@@ -70,8 +76,31 @@ export default function About() {
       <h2>Background for presidential candidates</h2>
       <p>
         Only the presidential race has a background section, and it is shown for every presidential candidate and running mate or for none of
-        them. Each entry cites an official record or an independent source; Wikipedia is never used.
+        them. It lists roles and dates only, newest first, with no summary in our own words. Each entry is numbered to an official record or an
+        independent source in the page’s list of sources; Wikipedia is never used.
       </p>
+      {photos.length > 0 && (
+        <>
+          <h2 id="photos">Photos</h2>
+          <p>
+            The presidential candidates of the five parties shown first have a photo, all five or none: a recent head-and-shoulders portrait,
+            cropped the same way, from an image whose licence allows reuse. No other candidate has one. The credits, as each licence asks:
+          </p>
+          <ul className="photo-credits">
+            {photos.map(([id, p]) => (
+              <li key={id}>
+                {`${candidate(id).c.candidate.name} (${candidate(id).c.party}): photo by ${p.credit}, `}
+                <a href={p.licence_url}>{p.licence}</a>
+                {', '}
+                <a href={p.file_page}>source page</a>
+                {', retrieved '}
+                <time dateTime={p.retrieved}>{formatDate(p.retrieved)}</time>
+                .
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
 
       <h2>When INEC’s documents don’t settle your race</h2>
       <p>
@@ -82,7 +111,7 @@ export default function About() {
       </p>
 
       <h2>Finding your polling unit</h2>
-      <p><a href="/about/find-your-polling-unit/">How to find your polling unit from your voter card</a></p>
+      <p className="go"><a className="btn btn-secondary" href="/about/find-your-polling-unit/">How to find your polling unit from your voter card</a></p>
 
       <h2>Corrections</h2>
       <p>
@@ -98,7 +127,7 @@ export default function About() {
       <h2>Privacy</h2>
       <p>
         This site asks only where you will vote. It never asks for your name, voter number or phone number, and it never looks you up in INEC’s
-        register. What you type is matched in your browser and never sent anywhere. There is no tracking, no analytics, no cookies, no ads and
+        register. What you type is matched in your browser and never sent anywhere. The site sets no cookies, runs no tracking or analytics, and has
         no accounts.
       </p>
       <p>
@@ -111,11 +140,7 @@ export default function About() {
 
       <h2>Independence</h2>
       <p>Not affiliated with INEC.</p>
-      <p className="credit">
-        Built by
-        {' '}
-        <a href={BUILT_BY.url}>{BUILT_BY.name}</a>
-      </p>
+      <Credit />
     </>
   )
 }

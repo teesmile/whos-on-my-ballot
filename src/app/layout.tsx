@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 
+import { Credit } from '@/components/Credit'
 import { SourceLine } from '@/components/SourceLine'
-import { BUILT_BY, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 
 import './globals.css'
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             <nav aria-label="Site" className="site-nav-list">
               <a href="/election-day/" className="site-nav">Election day</a>
+              <a href="/results/" className="site-nav">Results</a>
               <a href="/about/" className="site-nav">About</a>
             </nav>
           </div>
@@ -50,13 +52,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SourceLine id="inec-constituencies-workbook" what="Constituencies" />
           <SourceLine id="inec-parties" what="Parties" />
           <p>Shown exactly as INEC printed them.</p>
-          <p><a href="/corrections/">Corrections</a></p>
-          <p>No tracking, no ads, no accounts. What you type stays in your browser.</p>
-          <p className="credit">
-            Built by
-            {' '}
-            <a href={BUILT_BY.url}>{BUILT_BY.name}</a>
-          </p>
+          <p className="go"><a className="btn btn-secondary" href="/corrections/">Corrections</a></p>
+          <p>This site sets no cookies and runs no trackers or analytics, and there are no accounts. What you type stays in your browser.</p>
+          <Credit />
         </footer>
       </body>
     </html>

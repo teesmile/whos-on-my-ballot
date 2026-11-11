@@ -55,12 +55,13 @@ test.describe('race tabs (D-045)', () => {
     await expect(page.getByRole('tab', { name: /House of Reps/ })).toHaveAttribute('aria-selected', 'true')
   })
 
-  test('the tab bar stays stuck to the top while scrolling on a phone', async ({ page }) => {
+  test('the tab bar stays stuck under the header while scrolling on a phone', async ({ page }) => {
     await page.goto(ABA)
     await page.mouse.wheel(0, 2500)
     await page.waitForTimeout(200)
     const box = await page.locator('nav.race-tabs').boundingBox()
-    expect(box!.y).toBeLessThanOrEqual(1)
+    const header = await page.locator('.site-header').boundingBox()
+    expect(Math.abs(box!.y - header!.height)).toBeLessThanOrEqual(1)
     await expect(page.getByRole('tab', { name: /Senate/ })).toBeInViewport()
   })
 
@@ -138,8 +139,8 @@ test.describe('the grid', () => {
     await page.goto(ABA)
     await page.getByRole('tabpanel').locator('.card').first().click()
     await expect(page).toHaveURL(/\/c\/jan-2027-president-adc\/$/)
-    await expect(page.getByRole('heading', { name: 'From INEC’s final list' })).toBeVisible()
-    await expect(page.locator('.party-head img.logo')).toHaveAttribute('alt', 'ADC')
+    await expect(page.getByRole('heading', { name: 'From INEC’s list' })).toBeVisible()
+    await expect(page.locator('.party-head svg.logo')).toHaveAttribute('aria-label', 'ADC')
   })
 })
 
@@ -158,38 +159,53 @@ async function fakeShareSheet(page: Page, files: boolean) {
   }, files)
 }
 
-test.describe('sharing (D-046)', () => {
-  test('on a phone that shares files, WhatsApp and Share send a portrait picture with a plain caption and the race’s link', async ({ page }, info) => {
+/** Words, logos and lines stay inside WhatsApp Status's safe area: every pixel row above and below it is one plain colour. */
+function expectSafeArea(png: PNG) {
+  const rowPlain = (y: number) => {
+    const at = (x: number) => png.data.readUInt32BE((y * png.width + x) * 4)
+    for (let x = 1; x < png.width; x++) if (at(x) !== at(0)) return false
+    return true
+  }
+  for (let y = 0; y < 250; y += 3) expect(rowPlain(y), `row ${y}`).toBe(true)
+  for (let y = 1650; y < 1920; y += 3) expect(rowPlain(y), `row ${y}`).toBe(true)
+}
+
+test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
+  test('on a phone that shares files, WhatsApp and Share send a sharp 1080x1920 picture inside Status’s safe area, the caption and the race’s link', async ({ page }, info) => {
+    const full: string[] = []
+    page.on('request', (r) => { if (/\/logos\/full\//.test(r.url())) full.push(r.url()) })
     await fakeShareSheet(page, true)
     await page.goto(`${ABA}#pu-01-01-01-001`)
     const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
     await share.scrollIntoViewIfNeeded()
+    expect(full).toEqual([]) // the full-size logos load only when someone shares
     await share.getByRole('link', { name: 'Share on WhatsApp' }).click()
     await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(1)
     await share.getByRole('button', { name: 'Share', exact: true }).click()
     await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(2)
+    expect(full.length).toBe(5)
     const [wa, sheet] = await page.evaluate(() => (window as unknown as { shared: { text: string, type: string, bytes: number[] }[] }).shared)
     for (const s of [wa, sheet]) {
       expect(s.type).toBe('image/png')
-      expect(s.text).toBe(`Who’s on my ballot? Every candidate for President, 16 January 2027: https://whosonmyballot.ng${ABA}#president`)
-      expect(s.text).not.toContain('pu-')
+      expect(s.text).toBe(`Check who is on your ballot:\nhttps://whosonmyballot.ng${ABA}#president`)
       const png = PNG.sync.read(Buffer.from(s.bytes))
       expect([png.width, png.height]).toEqual([1080, 1920])
+      expectSafeArea(png)
     }
     fs.writeFileSync(info.outputPath('share-president.png'), Buffer.from(wa.bytes))
     await info.attach('share-president', { path: info.outputPath('share-president.png'), contentType: 'image/png' })
     await expect(page).toHaveURL(new RegExp(`${ABA}#pu-01-01-01-001`)) // still on the page
   })
 
-  test('where files can’t be shared, WhatsApp opens with the caption and link, and Share sends the link', async ({ page }) => {
+  test('where files can’t be shared, WhatsApp opens with the caption and link, and Share sends them', async ({ page }) => {
     await fakeShareSheet(page, false)
     await page.goto(ABA)
     const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
     const wa = share.getByRole('link', { name: 'Share on WhatsApp' })
-    expect(decodeURIComponent((await wa.getAttribute('href'))!)).toBe(`https://wa.me/?text=Who’s on my ballot? Every candidate for President, 16 January 2027: https://whosonmyballot.ng${ABA}#president`)
+    expect(decodeURIComponent((await wa.getAttribute('href'))!)).toBe(`https://wa.me/?text=Check who is on your ballot:\nhttps://whosonmyballot.ng${ABA}#president`)
     await share.getByRole('button', { name: 'Share', exact: true }).click()
     const shared = await page.evaluate(() => (window as unknown as { shared: { text: string, url: string, type?: string }[] }).shared)
-    expect(shared).toEqual([{ text: 'Who’s on my ballot? Every candidate for President, 16 January 2027:', url: `https://whosonmyballot.ng${ABA}#president`, name: undefined, type: undefined, bytes: null }])
+    expect(shared).toEqual([{ text: `Check who is on your ballot:\nhttps://whosonmyballot.ng${ABA}#president`, url: undefined, name: undefined, type: undefined, bytes: null }])
   })
 
   test('the candidate page shares its own address with the race picture', async ({ page }) => {
@@ -199,7 +215,28 @@ test.describe('sharing (D-046)', () => {
     await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(1)
     const [s] = await page.evaluate(() => (window as unknown as { shared: { text: string, type: string }[] }).shared)
     expect(s.type).toBe('image/png')
-    expect(s.text).toMatch(/^Who’s on my ballot\? .+ \(APC\), President, 16 January 2027: https:\/\/whosonmyballot\.ng\/c\/jan-2027-president-apc\/$/)
+    expect(s.text).toBe('Check who is on your ballot:\nhttps://whosonmyballot.ng/c/jan-2027-president-apc/')
+  })
+
+  test('on phones, a “Share on WhatsApp” tile fills the slot beside SDP; on wide screens it is not there', async ({ page }) => {
+    await fakeShareSheet(page, true)
+    await page.emulateMedia({ reducedMotion: 'reduce' }) // the cards' scroll-in movement would offset them mid-way
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto(ABA)
+    const panel = page.getByRole('tabpanel')
+    const tile = panel.locator('li.wa-tile')
+    await expect(tile).toBeVisible()
+    const sdp = await panel.locator('.card[data-party="SDP"]').boundingBox()
+    const t = await tile.boundingBox()
+    expect(Math.abs(t!.y - sdp!.y)).toBeLessThan(2)
+    expect(Math.abs(t!.height - sdp!.height)).toBeLessThan(2)
+    await tile.getByRole('link').click()
+    await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(1)
+    await page.getByLabel(/Find a party or candidate/).first().fill('tinubu')
+    await expect(tile).toBeHidden()
+    await page.setViewportSize({ width: 1280, height: 900 })
+    await page.getByLabel(/Find a party or candidate/).first().fill('')
+    await expect(tile).toBeHidden()
   })
 })
 
@@ -241,14 +278,68 @@ test.describe('countdown (D-044)', () => {
   })
 })
 
-test('header: the site name and two buttons on one row at 360px, the current section marked', async ({ page }) => {
+test('header: one slim row at 360px (mark, name, three buttons), the current section marked, stuck to the top', async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 740 })
   await page.goto('/election-day/')
   const nav = page.getByRole('navigation', { name: 'Site' })
   await expect(nav.getByRole('link', { name: 'Election day' })).toHaveAttribute('aria-current', 'page')
   await expect(nav.getByRole('link', { name: 'About' })).not.toHaveAttribute('aria-current')
-  const name = await page.getByRole('link', { name: 'Who’s on my ballot?' }).first().boundingBox()
-  const about = await nav.getByRole('link', { name: 'About' }).boundingBox()
-  expect(Math.abs(name!.y + name!.height / 2 - (about!.y + about!.height / 2))).toBeLessThan(4)
-  for (const b of [name, about]) expect(b!.height).toBeGreaterThanOrEqual(44)
+  const name = page.getByRole('link', { name: 'Who’s on my ballot?' }).first()
+  const boxes = await Promise.all([name, ...['Election day', 'Results', 'About'].map(n => nav.getByRole('link', { name: n }))].map(l => l.boundingBox()))
+  for (const b of boxes) {
+    expect(Math.abs(b!.y + b!.height / 2 - (boxes[0]!.y + boxes[0]!.height / 2))).toBeLessThan(4) // one row
+    expect(b!.height).toBeGreaterThanOrEqual(44)
+    expect(b!.height).toBeLessThan(56) // no label wraps
+  }
+  expect(boxes.at(-1)!.x + boxes.at(-1)!.width).toBeLessThanOrEqual(360)
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(360)
+  const header = page.locator('.site-header')
+  expect((await header.boundingBox())!.height).toBeLessThanOrEqual(56)
+  await page.mouse.wheel(0, 1500)
+  await expect.poll(async () => (await header.boundingBox())!.y).toBe(0)
+})
+
+test('ballot: the race tabs stick under the header, and jumps land below both', async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 740 })
+  await page.goto(ABA)
+  await page.mouse.wheel(0, 2500)
+  const header = (await page.locator('.site-header').boundingBox())!
+  const tabs = (await page.locator('.race-tabs').boundingBox())!
+  await expect.poll(async () => (await page.locator('.race-tabs').boundingBox())!.y).toBeCloseTo(header.height, 0)
+  expect(header.height + tabs.height).toBeLessThan(740 * 0.2) // the candidates keep most of the screen
+  await page.getByRole('tabpanel').locator('a[href="/about/#order"]').scrollIntoViewIfNeeded()
+  await page.goto('/c/jan-2027-president-apc/#src-1')
+  const target = (await page.locator('#src-1').boundingBox())!
+  expect(target.y).toBeGreaterThanOrEqual((await page.locator('.site-header').boundingBox())!.height)
+})
+
+test.describe('without JavaScript, the header still sticks', () => {
+  test.use({ javaScriptEnabled: false })
+  test('on a ballot page', async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 740 })
+    await page.goto(ABA)
+    await page.mouse.wheel(0, 3000)
+    await expect.poll(async () => (await page.locator('.site-header').boundingBox())!.y).toBe(0)
+  })
+})
+
+test('no link is ever underlined, at rest, on hover or on focus; links in text are bold with an arrow', async ({ page }) => {
+  test.setTimeout(120_000)
+  for (const path of ['/', '/about/', '/election-day/', '/results/', ABA, '/c/jan-2027-president-apc/', '/state/01/']) {
+    await page.goto(path)
+    const bad = await page.evaluate(() => [...document.querySelectorAll('a')].filter(a => a.getClientRects().length && getComputedStyle(a).textDecorationLine.includes('underline')).map(a => a.textContent))
+    expect(bad, path).toEqual([])
+    for (const a of (await page.locator('main a:visible, header a:visible').all()).slice(0, 5)) {
+      await a.hover({ force: true, timeout: 3000 })
+      expect(await a.evaluate(e => getComputedStyle(e).textDecorationLine), path).not.toContain('underline')
+      await a.focus({ timeout: 3000 })
+      expect(await a.evaluate(e => getComputedStyle(e).textDecorationLine), path).not.toContain('underline')
+    }
+    // a link inside a sentence is bold and carries the arrow
+    const inText = await page.evaluate(() => [...document.querySelectorAll('main p a:not(.btn, .ref), main ul:not([class]) > li a:not([data-tab])')].filter(a => a.getClientRects().length && !a.querySelector('.ext')).map(a => ({ w: getComputedStyle(a).fontWeight, arrow: getComputedStyle(a, '::after').maskImage || getComputedStyle(a, '::after').webkitMaskImage })))
+    for (const l of inText) {
+      expect(Number(l.w), path).toBeGreaterThanOrEqual(700)
+      expect(l.arrow, path).toContain('svg')
+    }
+  }
 })

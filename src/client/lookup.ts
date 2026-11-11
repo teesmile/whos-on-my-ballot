@@ -262,8 +262,8 @@ function setupTabs(nav: HTMLElement) {
     current = i
     if (how.remember) history.replaceState(null, '', hashWithTab(location.hash, links[i].dataset.tab!))
     if (how.scroll) {
-      // Bring the race's start just under the bar (which stays stuck to the top on phones).
-      const y = panels[i].getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 8
+      // Bring the race's start just under the header and the tabs, which both stay stuck to the top.
+      const y = panels[i].getBoundingClientRect().top + window.scrollY - (Number.parseFloat(getComputedStyle(nav).top) || 0) - nav.offsetHeight - 8
       if (window.scrollY > y || how.focus) window.scrollTo({ top: Math.max(0, y) })
     }
     if (how.focus) links[i].focus({ preventScroll: true })
@@ -317,20 +317,22 @@ function setupFilter(box: HTMLElement) {
       if (!c.hidden) shown++
     }
     for (const g of groups) g.hidden = !g.querySelector('.card:not([hidden])')
+    for (const t of race.querySelectorAll<HTMLElement>('[data-wa-tile]')) t.hidden = words.length > 0
     status.textContent = !words.length ? '' : shown ? `Showing ${shown} of ${cards.length}.` : 'No party or candidate in this race matches.'
   })
 }
 
-// ---- Share a race: a portrait picture for WhatsApp Status, drawn here only when the phone can share files.
-interface ShareInfo { text: string, url: string, title: string, tiles: [string, string][], more: number }
+// ---- Share a race: a portrait picture for WhatsApp Status, drawn here only when someone starts to share.
+interface ShareInfo { text: string, url: string, title: string, tiles: [string, string, string, string][], more: number }
 const GREEN = '#008751'
 const DEEP = '#00552f'
-const INK = '#1a1a1a'
+const INK = '#161616'
 const FONT = 'system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif'
 
 function loadImage(src: string): Promise<HTMLImageElement | null> {
   return new Promise((resolve) => {
     const img = new Image()
+    img.decoding = 'async'
     img.onload = () => resolve(img)
     img.onerror = () => resolve(null)
     img.src = src
@@ -380,86 +382,121 @@ function box(g: CanvasRenderingContext2D, x: number, y: number, w: number, h: nu
   g.closePath()
 }
 
+/** Draw `img` fitted inside a w x h box, centred, never stretched. */
+function contain(g: CanvasRenderingContext2D, img: HTMLImageElement, x: number, y: number, w: number, h: number) {
+  const k = Math.min(w / img.naturalWidth, h / img.naturalHeight)
+  const dw = img.naturalWidth * k
+  const dh = img.naturalHeight * k
+  g.drawImage(img, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh)
+}
+
+// WhatsApp Status covers the top (progress bar, name) and the bottom (reply bar) of a 1080 x 1920 picture, so every word
+// and logo sits inside this central area; only the plain background reaches the edges.
+const PICTURE = { W: 1080, H: 1920, top: 250, bottom: 1650, side: 72 }
+
+/**
+ * The share picture: exactly 1080 x 1920 pixels, drawn from the full-size logos and photos (never the page's small
+ * sprite), loaded only now. Race and date at the top, one row per tile, then the address large and the affiliation line.
+ */
 async function drawPicture(d: ShareInfo): Promise<File> {
-  const W = 1080
-  const H = 1920
+  const { W, H, top, bottom, side } = PICTURE
   const canvas = el('canvas')
   canvas.width = W
   canvas.height = H
   const g = canvas.getContext('2d')!
-  const [mark, ...logos] = await Promise.all(['/icon.svg', ...d.tiles.map(([p]) => `/logos/${p.toLowerCase()}.webp`)].map(loadImage))
+  g.imageSmoothingEnabled = true
+  g.imageSmoothingQuality = 'high'
+  const withPhotos = d.tiles.some(t => t[3])
+  const [mark, ...imgs] = await Promise.all([
+    loadImage('/icon.svg'),
+    ...d.tiles.flatMap(([p, , , photo]) => [loadImage(`/logos/full/${p.toLowerCase()}.webp`), photo ? loadImage(photo) : Promise.resolve(null)]),
+  ])
   g.fillStyle = '#fff'
   g.fillRect(0, 0, W, H)
-  g.textAlign = 'center'
   g.textBaseline = 'top'
-  // Top: the race and the date, on the national green.
-  const title = fit(g, d.title, 800, 76, 44, W - 120, 3)
-  const lh = Math.round(title.size * 1.18)
-  const head = 150 + title.lines.length * lh + 40
+  // Top: the site, then the race and the date, on the national green (the band runs to the edge; the words stay inside).
+  const title = fit(g, d.title, 800, 78, 50, W - 2 * side, 3)
+  const lh = Math.round(title.size * 1.16)
+  const titleY = top + 104
+  const band = titleY + title.lines.length * lh + 40
   g.fillStyle = GREEN
-  g.fillRect(0, 0, W, head)
-  g.fillStyle = '#fff'
-  g.font = `700 44px ${FONT}`
-  // The site's mark beside its name (D-047), on a white ring so the green circle shows on the green band.
+  g.fillRect(0, 0, W, band)
+  g.font = `700 46px ${FONT}`
   const brand = 'Who’s on my ballot?'
-  const left = (W - (g.measureText(brand).width + 80)) / 2
+  const left = (W - (g.measureText(brand).width + 92)) / 2
   if (mark) {
+    g.fillStyle = '#fff'
     g.beginPath()
-    g.arc(left + 32, 82, 35, 0, Math.PI * 2)
+    g.arc(left + 36, top + 42, 38, 0, Math.PI * 2)
     g.fill()
-    g.drawImage(mark, left, 50, 64, 64)
+    g.drawImage(mark, left + 2, top + 8, 68, 68)
   }
+  g.fillStyle = '#fff'
   g.textAlign = 'left'
-  g.fillText(brand, left + 80, 60)
+  g.fillText(brand, left + 92, top + 18)
   g.textAlign = 'center'
   g.font = `800 ${title.size}px ${FONT}`
-  title.lines.forEach((l, i) => g.fillText(l, W / 2, 150 + i * lh))
-  // Middle: the tiles, two across.
+  title.lines.forEach((l, i) => g.fillText(l, W / 2, titleY + i * lh))
+  // Middle: one row per tile, the same for every party.
   const n = d.tiles.length + (d.more ? 1 : 0)
-  const cols = n === 1 ? 1 : 2
-  const rows = Math.ceil(n / cols)
-  const gap = 36
-  const top = head + 56
-  const bottom = H - 300
-  const tw = (W - 120 - gap * (cols - 1)) / cols
-  const th = Math.min(440, (bottom - top - gap * (rows - 1)) / rows)
+  const gap = 18
+  const rowsTop = band + 36
+  const rowsBottom = bottom - 200
+  const rh = Math.min(176, (rowsBottom - rowsTop - gap * (n - 1)) / n)
+  const rw = W - 2 * side
   for (let k = 0; k < n; k++) {
-    const x = 60 + (k % cols) * (tw + gap)
-    const y = top + Math.floor(k / cols) * (th + gap)
-    box(g, x, y, tw, th, 28)
+    const y = rowsTop + k * (rh + gap)
+    box(g, side, y, rw, rh, 24)
     if (k < d.tiles.length) {
+      const [party, name] = d.tiles[k]
+      const [logo, photo] = [imgs[2 * k], imgs[2 * k + 1]]
       g.fillStyle = '#fff'
       g.fill()
       g.lineWidth = 3
-      g.strokeStyle = '#c9d1cd'
+      g.strokeStyle = '#c4c4c4'
       g.stroke()
-      const [party, name] = d.tiles[k]
-      const logo = Math.min(150, th * 0.36)
-      if (logos[k]) g.drawImage(logos[k]!, x + (tw - logo) / 2, y + 26, logo, logo)
+      const pad = 16
+      const pic = rh - 2 * pad
+      let x = side + pad
+      if (withPhotos) {
+        g.save()
+        box(g, x, y + pad, pic, pic, 18)
+        g.clip()
+        g.fillStyle = '#f4f4f4'
+        g.fillRect(x, y + pad, pic, pic)
+        if (photo) g.drawImage(photo, x, y + pad, pic, pic)
+        g.restore()
+        x += pic + 14
+      }
+      if (logo) contain(g, logo, x, y + pad, pic, pic)
+      x += pic + 24
+      const room = side + rw - pad - x
+      g.textAlign = 'left'
       g.fillStyle = INK
-      g.font = `800 50px ${FONT}`
-      g.fillText(party, x + tw / 2, y + 40 + logo)
-      const room = th - (logo + 108)
-      const nm = fit(g, name, 600, 42, 22, tw - 44, Math.max(1, Math.floor(room / 50)))
-      nm.lines.forEach((l, i) => g.fillText(l, x + tw / 2, y + 102 + logo + i * Math.round(nm.size * 1.18)))
+      g.font = `800 46px ${FONT}`
+      g.fillText(party, x, y + pad + 4, room)
+      const nm = fit(g, name, 600, 38, 26, room, 2)
+      const nlh = Math.round(nm.size * 1.15)
+      g.fillStyle = '#333'
+      nm.lines.slice(0, 2).forEach((l, i) => g.fillText(l, x, y + pad + 62 + i * nlh))
     }
     else {
-      g.fillStyle = '#e7f4ed'
+      g.fillStyle = '#f4f4f4'
       g.fill()
       g.fillStyle = DEEP
-      g.font = `800 72px ${FONT}`
-      g.fillText(`and ${d.more} more`, x + tw / 2, y + th / 2 - 60, tw - 40)
-      g.font = `600 44px ${FONT}`
-      g.fillText(d.more === 1 ? 'candidate' : 'candidates', x + tw / 2, y + th / 2 + 30)
+      g.textAlign = 'center'
+      g.font = `800 52px ${FONT}`
+      g.fillText(`and ${d.more} more ${d.more === 1 ? 'candidate' : 'candidates'}`, W / 2, y + rh / 2 - 30, rw - 40)
     }
   }
   // Bottom: the address, large (WhatsApp can drop the caption), and the affiliation line.
+  g.textAlign = 'center'
   g.fillStyle = GREEN
-  g.font = `800 92px ${FONT}`
-  g.fillText('whosonmyballot.ng', W / 2, H - 236, W - 80)
+  g.font = `800 90px ${FONT}`
+  g.fillText('whosonmyballot.ng', W / 2, bottom - 170, W - 2 * side)
   g.fillStyle = '#4d4d4d'
-  g.font = `500 40px ${FONT}`
-  g.fillText('Not affiliated with INEC.', W / 2, H - 112)
+  g.font = `600 40px ${FONT}`
+  g.fillText('Not affiliated with INEC.', W / 2, bottom - 52)
   const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob(b => (b ? resolve(b) : reject(new Error('no picture'))), 'image/png'))
   return new File([blob], 'whos-on-my-ballot.png', { type: 'image/png' })
 }
@@ -475,41 +512,51 @@ function canShareFiles(): boolean {
 
 function setupShare(section: HTMLElement) {
   const d = JSON.parse(section.dataset.share!) as ShareInfo
-  const wa = section.querySelector<HTMLAnchorElement>('[data-share-wa]')!
+  // The race's "Share on WhatsApp" button, and the tile in its grid on phones.
+  const scope = section.closest('.race') ?? section
+  const was = [...scope.querySelectorAll<HTMLAnchorElement>('[data-share-wa]')]
   const sheet = section.querySelector<HTMLButtonElement>('[data-share-sheet]')!
+  const status = section.querySelector<HTMLElement>('[data-share-status]')
   const files = canShareFiles()
-  const message = `${d.text} ${d.url}`
+  const message = `${d.text}\n${d.url}`
   let picture: Promise<File> | null = null
   const getPicture = () => (picture ??= drawPicture(d).catch((e) => {
     picture = null
     throw e
   }))
+  // Start drawing as soon as someone reaches for a share button, so the tap shares at once.
+  if (files) {
+    const warm = () => void getPicture().catch(() => {})
+    for (const target of [section, ...was]) {
+      for (const type of ['pointerdown', 'focusin', 'mouseenter', 'touchstart']) target.addEventListener(type, warm, { once: true, passive: true })
+    }
+  }
+  const say = (text: string) => {
+    if (status) status.textContent = text
+  }
   // The phone's share menu with the picture; if that can't happen, `fallback`. Closing the menu is not a failure.
+  // On a slow connection the picture may finish after the phone stops counting the tap; then a second tap shares it.
   const withPicture = async (fallback: () => void) => {
     try {
       await navigator.share({ files: [await getPicture()], text: message })
+      say('')
     }
     catch (e) {
-      if ((e as DOMException).name !== 'AbortError') fallback()
+      const name = (e as DOMException).name
+      if (name === 'NotAllowedError') say('Your picture is ready. Tap the share button again to send it.')
+      else if (name !== 'AbortError') fallback()
     }
   }
-  const linkOnly = () => void navigator.share({ text: d.text, url: d.url }).catch(() => {})
+  const linkOnly = () => void navigator.share({ text: message }).catch(() => {})
   if (typeof navigator.share === 'function') sheet.hidden = false
-  wa.addEventListener('click', (ev) => {
-    if (!files) return // the plain link: WhatsApp with the caption and the address
-    ev.preventDefault()
-    void withPicture(() => { location.href = wa.href })
-  })
-  sheet.addEventListener('click', () => (files ? void withPicture(linkOnly) : linkOnly()))
-  // Draw the picture as the block comes near the screen, so a tap shares at once.
-  if (files && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      if (!entries.some(e => e.isIntersecting)) return
-      io.disconnect()
-      void getPicture().catch(() => {})
-    }, { rootMargin: '300px' })
-    io.observe(section)
+  for (const wa of was) {
+    wa.addEventListener('click', (ev) => {
+      if (!files) return // the plain link: WhatsApp with the caption and the address
+      ev.preventDefault()
+      void withPicture(() => { location.href = wa.href })
+    })
   }
+  sheet.addEventListener('click', () => (files ? void withPicture(linkOnly) : linkOnly()))
 }
 
 // ---- Countdown to the next election day: four boxes, ticking each second, in Nigerian time.

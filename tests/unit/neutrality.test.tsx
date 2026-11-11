@@ -2,7 +2,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { describe, expect, it } from 'vitest'
 
 import { RaceSection } from '@/components/RaceSection'
-import { firstGroup, races } from '@/lib/data'
+import { firstGroup, races, sprite } from '@/lib/data'
 
 /** Replace every text node and attribute value with a placeholder, keeping tags and attribute names. */
 function skeleton(html: string): string {
@@ -27,12 +27,26 @@ describe('neutral rendering', () => {
     expect(new Set(named).size).toBe(1)
   })
 
-  it('every card shows its party’s INEC logo at the same size, with the acronym as its text', () => {
+  it('every card shows its party’s INEC logo from the one sprite, at the same size, with the acronym as its text', () => {
+    const s = sprite()
     for (const r of [pres, ...all.filter(x => x.office === 'senate').slice(0, 20)]) {
       const html = renderToStaticMarkup(<RaceSection r={r} shareUrl="/x/" />)
-      const logos = [...html.matchAll(/<img class="logo" src="\/logos\/([a-z]+)\.webp" alt="([A-Z]+)" width="48" height="48"/g)]
+      const logos = [...html.matchAll(/<svg class="logo" width="48" height="48" viewBox="(\d+) 1 94 94" focusable="false" role="img" aria-label="([A-Z]+)"><image href="([^"]+)"/g)]
       expect(logos.map(m => m[2]), r.id).toEqual(r.candidates.map(c => c.party))
-      for (const m of logos) expect(m[1]).toBe(m[2].toLowerCase())
+      for (const m of logos) {
+        expect(Number(m[1])).toBe(s.logos[m[2]] * s.cell + 1)
+        expect(m[3]).toBe(`/${s.file}`)
+      }
+    }
+  })
+
+  it('the WhatsApp tile fills the empty slot beside an odd first group, else is a full row under it', () => {
+    for (const r of [pres, ...all.slice(0, 80)]) {
+      const html = renderToStaticMarkup(<RaceSection r={r} shareUrl="/x/" />)
+      const first = r.candidates.filter(c => c.display_group === 'first').length
+      expect((html.match(/data-wa-tile/g) ?? []).length, r.id).toBe(1)
+      if (first % 2 === 1) expect(html, r.id).toMatch(/<li class="wa-tile" data-wa-tile="true">/)
+      else expect(html, r.id).toMatch(/<div class="wa-tile wa-row" data-wa-tile="true">/)
     }
   })
 

@@ -16,6 +16,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("verify", help="build, then run every Phase 1 check; non-zero on any failure (offline)")
     sub.add_parser("check-quotes", help="re-fetch every background citation and confirm its quote is on the page (network)")
     sub.add_parser("logos", help="download each party's logo from INEC's /parties page and write the optimised files (network)")
+    sub.add_parser("photos", help="download the candidate photos listed in data/overrides/photos.yaml and check their hashes (network)")
+    sub.add_parser("assets", help="build the logo sprite, share-picture copies and photo crops from stored originals (offline)")
     sub.add_parser("watch", help="re-read INEC index pages; exit 3 if any document list or hash changed")
     args = parser.parse_args(argv)
 
@@ -75,11 +77,35 @@ def main(argv: list[str] | None = None) -> int:
 
         rec = next(s for s in json.loads((GENERATED_DIR / "sources.json").read_text()) if s["source_id"] == "inec-parties")
         fetch_and_build(RAW_DIR / rec["local_file"], rec)
+        _assets()
+    elif args.cmd == "photos":
+        from .photos import fetch
+
+        fetch()
+    elif args.cmd == "assets":
+        _assets()
     elif args.cmd == "watch":
         from .watch import watch
 
         return watch()
     return 0
+
+
+def _assets() -> None:
+    """Offline: the files every page and the share picture use, rebuilt from the stored originals."""
+    import json
+
+    from .logos import LOGO_RAW_DIR, MANIFEST, build_logo_files, build_sprite
+    from .photos import build_photos, cleanup_cells
+
+    records = {}
+    for acronym, m in json.loads(MANIFEST.read_text()).items():
+        raw = m.get("raw") or next(p.name for p in LOGO_RAW_DIR.glob(f"{acronym}.*"))
+        records[acronym] = {"raw": raw, **{k: m[k] for k in ("source_id", "source_url", "source_sha256", "retrieved_at")}}
+    build_logo_files(records)
+    cells = build_photos()
+    build_sprite(cells)
+    cleanup_cells(cells)
 
 
 if __name__ == "__main__":

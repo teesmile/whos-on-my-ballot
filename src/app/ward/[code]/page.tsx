@@ -72,7 +72,7 @@ export default async function WardPage({ params }: { params: Promise<{ code: str
       <SourceLine id="inec-pu-locator" what="LGAs, wards and polling units" />
       <h2>6 February 2027</h2>
       <p>Every polling unit in this ward has the same ballot on 6 February.</p>
-      <p><a className="feb-link" href={febPath} data-feb-ballot>{`Your ballot for 6 February 2027, ${ward.name} ward`}</a></p>
+      <p className="go"><a className="btn btn-secondary feb-link" href={febPath} data-feb-ballot>{`Your ballot for 6 February 2027, ${ward.name} ward`}</a></p>
     </>
   )
 }

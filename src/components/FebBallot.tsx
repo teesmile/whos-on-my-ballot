@@ -22,7 +22,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
       key: 'governor', label: 'Governor', title: 'Governor',
       ...(gov ? badgeFor([gov]) : { badge: 'None', badgeLong: 'no election in this state' }),
       content: gov
-        ? <RaceSection r={gov} shareUrl={`${b.path}#governor`} eager />
+        ? <RaceSection r={gov} shareUrl={`${b.path}#governor`} />
         : (
             <section className="race" aria-labelledby="no-governor">
               <h2 id="no-governor" className="band">Governor</h2>
@@ -40,11 +40,11 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
               <h2 id="no-sha" className="band">State House of Assembly</h2>
               <p className="note" data-no-sha>{NO_SHA_BORNO}</p>
               <SourceLine id="sha-2026-10-10" what="State House of Assembly candidates" />
-              <p><a href={INEC_2027}>INEC 2027 general elections page</a></p>
+              <p className="go"><a className="btn btn-secondary" href={INEC_2027}>INEC 2027 general elections page</a></p>
             </section>
           )
         : sha.length === 1
-          ? <RaceSection r={sha[0]} shareUrl={`${b.path}#assembly`} eager={!gov} />
+          ? <RaceSection r={sha[0]} shareUrl={`${b.path}#assembly`} />
           : <UnresolvedGroup office="State House of Assembly" list={sha} path={b.path} />,
     })
   }
@@ -84,7 +84,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
               <SourceLine id="governor-abia" what="States with a governorship election on 6 February" />
             </section>
           )}
-      <p><a href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
+      <p className="go"><a className="btn btn-secondary" href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
     </>
   )
 }

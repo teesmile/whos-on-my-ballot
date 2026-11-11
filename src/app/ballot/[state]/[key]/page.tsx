@@ -51,7 +51,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
       <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
       <SourceLine id="inec-constituencies-workbook" what="Which Senate district and House constituency each LGA is in" />
       <RaceTabs panels={[
-        { key: 'president', label: 'President', title: 'President', ...badgeFor([pres]), content: <RaceSection r={pres} shareUrl={`${b.path}#president`} eager /> },
+        { key: 'president', label: 'President', title: 'President', ...badgeFor([pres]), content: <RaceSection r={pres} shareUrl={`${b.path}#president`} /> },
         {
           key: 'senate', label: 'Senate', title: 'Senate', ...badgeFor(senate),
           content: senate.length === 1 ? <RaceSection r={senate[0]} shareUrl={`${b.path}#senate`} /> : <UnresolvedGroup office="Senate" list={senate} path={b.path} />,
@@ -62,7 +62,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
         },
       ]}
       />
-      <p><a href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
+      <p className="go"><a className="btn btn-secondary" href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
     </>
   )
 }

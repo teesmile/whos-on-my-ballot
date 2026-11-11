@@ -1,8 +1,9 @@
 """Party logos, from INEC's register of political parties only (owner decision D-043).
 
 `ballot-pipeline logos` reads the party cards on INEC's /parties page (the same page the party names come from), downloads
-each card's logo with the polite client, keeps the original in raw/logos/ with its hash, and writes one small WebP per party
-to data/generated/logos/, every one the same size and treatment: fitted into a square on white, nothing else changed.
+each card's logo with the polite client and keeps the original in raw/logos/ with its hash. `ballot-pipeline assets` (offline)
+then writes, with the same treatment for every party (fitted into a square on white, nothing else changed): one sprite
+holding every logo for the pages, a PNG per party for the link-preview cards, and a larger copy per party for the share picture.
 The build then refuses to continue unless every party on any ballot has a logo: all parties or none.
 """
 
@@ -15,6 +16,7 @@ import json
 import re
 import subprocess
 from datetime import UTC, datetime
+from pathlib import Path
 
 from .http import get
 from .paths import GENERATED_DIR, RAW_DIR
@@ -23,8 +25,12 @@ INEC_ORIGIN = "https://www.inecnigeria.org"
 LOGO_RAW_DIR = RAW_DIR / "logos"
 LOGO_DIR = GENERATED_DIR / "logos"
 MANIFEST = GENERATED_DIR / "logos.json"
-SIZE = 96  # pixels; shown at 44-64 CSS pixels, so sharp on 1.5x-2x phone screens
+SPRITE = GENERATED_DIR / "sprite.json"
+SIZE = 96  # pixels per sprite cell; shown at 44-64 CSS pixels, so sharp on 1.5x-2x phone screens
+PAD = 2  # white margin inside each logo cell, so neighbouring cells never bleed into each other when scaled
 QUALITY = 82
+FULL = 400  # the share picture's copy: the original's own size, reduced only beyond this
+FULL_QUALITY = 92
 
 
 def parse_logo_sources(page_html: str) -> dict[str, str]:
@@ -47,11 +53,10 @@ def _sha256(b: bytes) -> str:
 
 
 def fetch_and_build(page_path, page_record: dict, log=print) -> dict:
-    """Download each logo named on the stored /parties page and write the optimised files and their manifest."""
+    """Download each logo named on the stored /parties page, record where each came from, then build the files (offline)."""
     sources = parse_logo_sources(page_path.read_text(encoding="utf-8"))
     LOGO_RAW_DIR.mkdir(parents=True, exist_ok=True)
-    LOGO_DIR.mkdir(parents=True, exist_ok=True)
-    manifest: dict[str, dict] = {}
+    records: dict[str, dict] = {}
     for acronym, src in sorted(sources.items()):
         retrieved = datetime.now(UTC).isoformat(timespec="seconds")
         if src.startswith("data:"):
@@ -67,32 +72,111 @@ def fetch_and_build(page_path, page_record: dict, log=print) -> dict:
             body, ext = get(origin), src.rsplit(".", 1)[-1].lower()
         raw = LOGO_RAW_DIR / f"{acronym}.{'jpg' if ext == 'jpeg' else ext}"
         raw.write_bytes(body)
-        out = LOGO_DIR / f"{acronym.lower()}.webp"
-        # Same treatment for every party: fit inside the square, centre it on white, strip metadata.
-        subprocess.run(["gm", "convert", str(raw), "-resize", f"{SIZE}x{SIZE}", "-background", "white", "-gravity", "center",
-                        "-extent", f"{SIZE}x{SIZE}", "-strip", "-quality", str(QUALITY), f"webp:{out}"], check=True)
-        # A PNG copy of the same treatment, for the build-time link-preview cards (their renderer reads PNG, not WebP).
+        records[acronym] = {"raw": raw.name, "source_id": "inec-parties", "source_url": origin, "source_sha256": _sha256(body),
+                            "retrieved_at": retrieved}
+        log(f"logo {acronym}: {len(body)} bytes")
+    return build_logo_files(records, log)
+
+
+def _gm(*args: str) -> None:
+    subprocess.run(["gm", "convert", *args], check=True)
+
+
+def build_logo_files(records: dict[str, dict], log=print) -> dict:
+    """From the stored originals: for every party the same treatment (fit inside a square, centred on white, metadata
+    stripped). Writes a PNG for the build-time link-preview cards and a larger copy for the share picture, which the
+    browser loads only when someone shares (never the small sprite: review of 11 Nov 2026)."""
+    (LOGO_DIR / "full").mkdir(parents=True, exist_ok=True)
+    for old in LOGO_DIR.glob("*.webp"):
+        old.unlink()  # the per-party files are replaced by the one sprite
+    manifest: dict[str, dict] = {}
+    for acronym, rec in sorted(records.items()):
+        raw = LOGO_RAW_DIR / rec["raw"]
+        body = raw.read_bytes()
+        if _sha256(body) != rec["source_sha256"]:
+            raise ValueError(f"{acronym}: stored original changed since it was downloaded")
         png = LOGO_DIR / f"{acronym.lower()}.png"
-        subprocess.run(["gm", "convert", str(out), "-strip", f"png:{png}"], check=True)
+        _gm(str(raw), "-resize", f"{SIZE}x{SIZE}", "-background", "white", "-gravity", "center", "-extent", f"{SIZE}x{SIZE}",
+            "-strip", f"png:{png}")
+        full = LOGO_DIR / "full" / f"{acronym.lower()}.webp"
+        # The original's own pixels, never enlarged; only an unusually large original is reduced to FULL on its longer side.
+        _gm(str(raw), "-resize", f"{FULL}x{FULL}>", "-background", "white", "-flatten", "-strip", "-quality", str(FULL_QUALITY),
+            f"webp:{full}")
+        w, h = _size(full)
         manifest[acronym] = {
-            "file": f"logos/{out.name}", "width": SIZE, "height": SIZE, "bytes": out.stat().st_size, "sha256": _sha256(out.read_bytes()),
             "png": f"logos/{png.name}", "png_sha256": _sha256(png.read_bytes()),
-            "source_id": "inec-parties", "source_url": origin, "source_sha256": _sha256(body), "retrieved_at": retrieved,
+            "full": f"logos/full/{full.name}", "full_width": w, "full_height": h, "full_sha256": _sha256(full.read_bytes()),
+            **{k: v for k, v in rec.items() if k != "raw"}, "raw": rec["raw"],
         }
-        log(f"logo {acronym}: {len(body)} bytes -> {out.stat().st_size} bytes")
+        log(f"logo {acronym}: share copy {w}x{h}, {full.stat().st_size} bytes")
     MANIFEST.write_text(json.dumps(manifest, indent=1, ensure_ascii=False) + "\n")
     return manifest
 
 
-def check_logos(parties_on_ballots: set[str]) -> list[str]:
-    """Errors if any party on a ballot lacks a logo, or a logo file is missing or changed: all parties or none."""
-    if not MANIFEST.exists():
-        return ["no party logos: run `ballot-pipeline logos`"]
+def _size(path) -> tuple[int, int]:
+    out = subprocess.run(["gm", "identify", "-format", "%w %h", str(path)], check=True, capture_output=True, text=True).stdout
+    w, h = out.split()
+    return int(w), int(h)
+
+
+def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
+    """One image holding every party logo, then every approved photo (D-048), each in a SIZE-pixel square cell, so a
+    ballot page makes one image request instead of one per party. Its name carries its hash, so it can be cached for a
+    year and a change is never served stale."""
     manifest = json.loads(MANIFEST.read_text())
+    cells: list[tuple[str, str, object]] = []
+    for acronym, m in sorted(manifest.items()):
+        raw = LOGO_RAW_DIR / m["raw"]
+        if _sha256(raw.read_bytes()) != m["source_sha256"]:
+            raise ValueError(f"{acronym}: stored original changed since it was downloaded")
+        cells.append(("logo", acronym, raw))
+    for cid, path in sorted(photo_cells.items()):
+        cells.append(("photo", cid, path))
+    tmp = LOGO_DIR / "_cells"
+    tmp.mkdir(exist_ok=True)
+    parts = []
+    for i, (kind, _key, src) in enumerate(cells):
+        cell = tmp / f"{i:03d}.png"
+        if kind == "logo":
+            _gm(str(src), "-resize", f"{SIZE - 2 * PAD}x{SIZE - 2 * PAD}", "-background", "white", "-gravity", "center",
+                "-extent", f"{SIZE}x{SIZE}", "-strip", f"png:{cell}")
+        else:
+            _gm(str(src), "-resize", f"{SIZE}x{SIZE}!", "-strip", f"png:{cell}")
+        parts.append(str(cell))
+    for old in LOGO_DIR.glob("sprite-*.webp"):
+        old.unlink()
+    staging = LOGO_DIR / "sprite.webp"
+    _gm(*parts, "+append", "-quality", str(QUALITY), f"webp:{staging}")
+    for p in parts:
+        Path(p).unlink()
+    tmp.rmdir()
+    digest = _sha256(staging.read_bytes())
+    out = LOGO_DIR / f"sprite-{digest[:10]}.webp"
+    staging.rename(out)
+    sprite = {
+        "file": f"logos/{out.name}", "cell": SIZE, "width": SIZE * len(cells), "height": SIZE, "bytes": out.stat().st_size, "sha256": digest,
+        "logos": {k: i for i, (kind, k, _) in enumerate(cells) if kind == "logo"},
+        "photos": {k: i for i, (kind, k, _) in enumerate(cells) if kind == "photo"},
+    }
+    SPRITE.write_text(json.dumps(sprite, indent=1) + "\n")
+    log(f"sprite: {len(cells)} cells, {sprite['bytes']} bytes -> {out.name}")
+    return sprite
+
+
+def check_logos(parties_on_ballots: set[str]) -> list[str]:
+    """Errors if any party on a ballot lacks a logo, or a built file is missing or changed: all parties or none."""
+    if not MANIFEST.exists() or not SPRITE.exists():
+        return ["no party logos: run `ballot-pipeline logos` (network) or `ballot-pipeline assets`"]
+    manifest = json.loads(MANIFEST.read_text())
+    sprite = json.loads(SPRITE.read_text())
     errors = [f"no INEC logo for {p}" for p in sorted(parties_on_ballots - manifest.keys())]
+    errors += [f"no INEC logo for {p} in the sprite" for p in sorted(parties_on_ballots - sprite["logos"].keys())]
     for acronym, m in manifest.items():
-        f = GENERATED_DIR / m["file"]
-        p = GENERATED_DIR / m["png"]
-        if not f.exists() or _sha256(f.read_bytes()) != m["sha256"] or not p.exists() or _sha256(p.read_bytes()) != m["png_sha256"]:
-            errors.append(f"logo file for {acronym} is missing or changed since it was built")
+        for key in ("png", "full"):
+            f = GENERATED_DIR / m[key]
+            if not f.exists() or _sha256(f.read_bytes()) != m[f"{key}_sha256"]:
+                errors.append(f"logo file {m[key]} for {acronym} is missing or changed since it was built")
+    f = GENERATED_DIR / sprite["file"]
+    if not f.exists() or _sha256(f.read_bytes()) != sprite["sha256"]:
+        errors.append("the logo sprite is missing or changed since it was built")
     return errors

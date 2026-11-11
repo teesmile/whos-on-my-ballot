@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next'
 
 import { CONTENT_DATES } from '@/lib/content-dates'
-import { allCandidates, ballots, febBallots, geographyContentDate, presidentialRace, race, raceContentDate, stateGeo, states } from '@/lib/data'
+import { allCandidates, ballots, febBallots, febRaces, geographyContentDate, presidentialRace, race, raceContentDate, stateGeo, states } from '@/lib/data'
+import { slug } from '@/lib/core'
 import { absolute } from '@/lib/seo'
 import { candidatePath } from '@/lib/site'
 
@@ -19,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/about/state-assembly-wards/', CONTENT_DATES['about/state-assembly-wards']),
     entry('/election-day/', CONTENT_DATES['election-day']),
     entry('/corrections/', CONTENT_DATES.corrections),
+    entry('/results/', CONTENT_DATES.results),
+    ...febRaces().filter(r => r.office === 'governor').map(r => entry(`/results/governor/${slug(r.state ?? '')}/`, CONTENT_DATES.results)),
   ]
   for (const s of states()) {
     const st = stateGeo(s.code)

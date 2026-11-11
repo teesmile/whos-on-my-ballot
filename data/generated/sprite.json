@@ -1,0 +1,33 @@
+{
+ "file": "logos/sprite-d2af74f63f.webp",
+ "cell": 96,
+ "width": 2112,
+ "height": 96,
+ "bytes": 34824,
+ "sha256": "d2af74f63f618989cf0fdb7d78d6df73caa313102ce777a13f54cf94c1bdfff4",
+ "logos": {
+  "A": 0,
+  "AA": 1,
+  "AAC": 2,
+  "ADC": 3,
+  "ADP": 4,
+  "APC": 5,
+  "APGA": 6,
+  "APM": 7,
+  "APP": 8,
+  "BP": 9,
+  "DLA": 10,
+  "LP": 11,
+  "NDC": 12,
+  "NDP": 13,
+  "NNPP": 14,
+  "NRM": 15,
+  "PDP": 16,
+  "PRP": 17,
+  "SDP": 18,
+  "YP": 19,
+  "YPP": 20,
+  "ZLP": 21
+ },
+ "photos": {}
+}

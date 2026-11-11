@@ -31,8 +31,8 @@ export const namedCount = (r: Race) => r.candidates.filter(c => c.candidate.name
 export interface Picture {
   /** "President - 16 January 2027" */
   title: string
-  /** [acronym, name as INEC prints it, or the no-candidate text] */
-  tiles: [string, string][]
+  /** [acronym, name as INEC prints it or the no-candidate text, candidate id, the photo's share copy or ''] */
+  tiles: [string, string, string, string][]
   /** How many more candidates the race has beyond the tiles (0: every candidate is shown). */
   more: number
 }
@@ -41,16 +41,16 @@ export interface Picture {
  * Six tiles: the race's members of the first group (D-042) in display order, then one saying how many more candidates
  * there are. A race with six tickets or fewer shows them all and no count.
  */
-export function picture(r: Race): Picture {
+export function picture(r: Race, photoOf: (id: string) => string | null = () => null): Picture {
   const title = `${raceTitle(r)} - ${ELECTION_DAY[r.election]}`
-  const tile = (c: Candidate): [string, string] => [c.party, c.candidate.name || noCandidateText(c)]
+  const tile = (c: Candidate): [string, string, string, string] => [c.party, c.candidate.name || noCandidateText(c), c.id, photoOf(c.id) ?? '']
   if (r.candidates.length <= 6) return { title, tiles: r.candidates.map(tile), more: 0 }
   const shown = r.candidates.filter(c => c.display_group === 'first').slice(0, 5)
   const shownNamed = shown.filter(c => c.candidate.name).length
   return { title, tiles: shown.map(tile), more: namedCount(r) - shownNamed }
 }
 
-/** The plain caption sent with a share: no slogans, the same words for every race. */
-export function caption(r: Race): string {
-  return `Who’s on my ballot? Every candidate for ${raceTitle(r)}, ${ELECTION_DAY[r.election]}:`
-}
+/** The caption sent with every share (owner's wording, 11 Nov 2026): the same words for every race and candidate, no year.
+ *  The full address follows it on the next line. */
+export const CAPTION = 'Check who is on your ballot:'
+export const caption = () => CAPTION

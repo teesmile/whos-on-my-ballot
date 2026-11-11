@@ -84,8 +84,17 @@ export default function Home() {
         </noscript>
       </section>
 
+      <section aria-labelledby="results-card" className="panel results-card">
+        <h2 id="results-card">Results</h2>
+        <p>
+          Results for President will appear on this site from 16 January 2027, and for Governor from 6 February 2027. Every figure will show
+          its source and the time it was published.
+        </p>
+        <p className="action-buttons"><a className="btn" href="/results/">Go to the results page</a></p>
+      </section>
+
       <p className="quiet">We never ask for your name or any personal details, and we don’t look you up anywhere.</p>
-      <p><a href="/about/find-your-polling-unit/">How to find your polling unit</a></p>
+      <ul className="link-list tiles-wide"><li><a href="/about/find-your-polling-unit/">How to find your polling unit</a></li></ul>
       <CivicNote />
     </>
   )
