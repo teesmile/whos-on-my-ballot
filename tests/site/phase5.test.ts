@@ -85,8 +85,10 @@ describe('6 February ballot pages', () => {
       const page = html(b.path.slice(1))
       const want = b.state.name === 'FCT'
         ? 'The FCT has no governor and no State House of Assembly, so there is no election in the FCT on 6 February 2027.'
-        : `No governorship election in ${b.state.name} on 6 February 2027.`
+        : `${b.state.name} has no governorship election on 6 February 2027.`
       expect(page, b.path).toContain(`<p class="note" data-no-governor="true">${want}</p>`)
+      // the Governor tab counts 0 candidates, in the same circle as every other tab
+      if (b.state.name !== 'FCT') expect(page, b.path).toMatch(/data-tab="governor"><span class="tab-name"[^>]*>Governor<\/span> <span class="tab-count"><span class="tab-n">0<\/span>/)
       expect(page).toContain('data-source="governor-abia"><a href="https://www.inecnigeria.org/press/updated-final-list-of-candidates-for-2027-governorship-election"')
     }
     for (const b of all.filter(x => x.governor)) expect(html(b.path.slice(1))).not.toContain('data-no-governor')

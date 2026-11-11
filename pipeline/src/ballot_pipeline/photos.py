@@ -30,7 +30,7 @@ PHOTO_DIR = GENERATED_DIR / "photos"
 PHOTOS_JSON = GENERATED_DIR / "photos.json"
 PAGE = 320  # shown at up to 160 CSS pixels on the candidate page
 SHARE = 720  # drawn into the 1080 x 1920 share picture
-FIELDS = ("candidate_id", "source", "file_page", "file_url", "sha256", "retrieved", "crop")
+FIELDS = ("candidate_id", "credit", "source", "file_page", "file_url", "sha256", "retrieved", "crop")
 OPTIONAL = ("author", "licence", "licence_url", "taken")
 
 
@@ -130,7 +130,7 @@ def build_photos(log=print) -> dict[str, Path]:
         people[cid] = {
             "page": f"photos/{page.name}", "page_sha256": _sha256(page.read_bytes()), "page_size": PAGE,
             "share": f"photos/{share.name}", "share_sha256": _sha256(share.read_bytes()), "share_size": SHARE,
-            **{k: p[k] for k in ("source", "file_page", "retrieved")},
+            **{k: p[k] for k in ("credit", "source", "file_page", "retrieved")},
             **{k: p[k] for k in OPTIONAL if p.get(k)},
         }
         log(f"photo {cid}: {page.stat().st_size} + {share.stat().st_size} bytes")

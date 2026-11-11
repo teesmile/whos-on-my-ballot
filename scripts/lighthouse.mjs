@@ -8,7 +8,7 @@ import lighthouse from 'lighthouse'
 import * as chromeLauncher from 'chrome-launcher'
 
 const PORT = 4323
-const PAGES = [
+const PAGES = process.env.LH_PAGES ? process.env.LH_PAGES.split(',') : [
   '/',
   '/state/24/',
   '/ward/24-15-03/',
@@ -42,6 +42,8 @@ try {
     const lcp = lhr.audits['largest-contentful-paint'].numericValue / 1000
     const ok = SLOW ? a11y === 100 && lcp < 4.0 : perf >= 95 && a11y === 100 && lcp < 2.0
     if (!ok) failed++
+    // name what failed, so a drop is never a mystery
+    if (a11y < 100) for (const a of Object.values(lhr.audits).filter(a => a.score === 0 && lhr.categories.accessibility.auditRefs.some(r => r.id === a.id))) console.log(`  ${a.id}: ${(a.details?.items ?? []).map(i => i.node?.snippet).filter(Boolean).slice(0, 4).join(' | ')}`)
     console.log(`${ok ? 'PASS' : 'FAIL'} ${p}  performance ${perf}  accessibility ${a11y}  LCP ${lcp.toFixed(2)} s  TBT ${Math.round(lhr.audits['total-blocking-time'].numericValue)} ms  CLS ${lhr.audits['cumulative-layout-shift'].numericValue.toFixed(3)}`)
   }
 }

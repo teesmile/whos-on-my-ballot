@@ -20,16 +20,14 @@ describe('neutral rendering', () => {
       expect(blocks.length, r.id).toBe(r.candidates.length)
       expect(new Set(blocks.map(skeleton)).size, r.id).toBe(1)
     }
-    // tickets: candidate and running mate on every card. The only difference allowed (D-064): the first group's photo.
+    // tickets: candidate and running mate on every card. Every card has one photo slot in the same place: an approved photo
+    // (presidential candidates only, D-065) or the same placeholder; nothing else differs.
     const html = renderToStaticMarkup(<RaceSection r={pres} pageUrl="/x/" />)
     const named = html.match(/<li class="card" [^>]*data-group="(first|rest)"[\s\S]*?<\/li>/g) ?? []
     expect(named.length).toBe(pres.candidates.filter(c => c.candidate.name).length)
-    const first = new Set(named.filter(b => b.includes('data-group="first"')).map(skeleton))
-    const rest = new Set(named.filter(b => b.includes('data-group="rest"')).map(skeleton))
-    expect(first.size).toBe(1)
-    expect(rest.size).toBe(1)
-    const withoutPhoto = (b: string) => b.replace(/<svg class="photo"[\s\S]*?<\/svg>/, '')
-    expect(skeleton(withoutPhoto(named.find(b => b.includes('data-group="first"'))!))).toBe([...rest][0])
+    const slot = (b: string) => b.replace(/<svg class="photo"[\s\S]*?<\/svg>|<span class="photo ph" aria-hidden="true"><\/span>/, 'PHOTO')
+    for (const b of named) expect(slot(b).match(/PHOTO/g)?.length, b.slice(0, 80)).toBe(1)
+    expect(new Set(named.map(b => skeleton(slot(b)))).size).toBe(1)
   })
 
   it('every card shows its party’s INEC logo from the one sprite, at the same size, with the acronym as its text', () => {

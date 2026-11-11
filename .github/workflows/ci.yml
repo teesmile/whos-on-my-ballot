@@ -55,15 +55,15 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      # Chromium only, without --with-deps: the runner image already has the system libraries, so nothing goes through apt
-      # and an Ubuntu mirror outage can't block the run. The browser download is cached per Playwright version.
+      # Chromium, and Firefox for the scroll-in motion's tests, without --with-deps: the runner image already has the system
+      # libraries, so nothing goes through apt and an Ubuntu mirror outage can't block the run. The downloads are cached.
       - id: pw
         run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
       - uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}
-      - run: pnpm exec playwright install chromium
+          key: playwright-ff-${{ runner.os }}-${{ steps.pw.outputs.version }}
+      - run: pnpm exec playwright install chromium firefox
       - run: pnpm lint && pnpm typecheck && pnpm test
       - run: pnpm build
       - run: pnpm test:site

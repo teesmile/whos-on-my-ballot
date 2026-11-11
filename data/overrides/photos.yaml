@@ -1,11 +1,13 @@
 # Candidate photos (owner decisions D-064 and D-065): presidential candidates only, from the candidate's own verified official
 # account, their campaign or party website, or Wikimedia Commons; never a news site or agency. Each entry: where it came from
-# in the source's own words (`source`), the page and the direct file, its SHA-256, the licence where one exists, when it was
-# taken or posted, when we retrieved it, and a square crop box [x, y, size, size] in source pixels, chosen so every face sits
-# at the same size (a negative x or y is padded with the picture's own edge colour).
+# in the source's own words (`source`), the short credit shown under the photo (`credit`), the page and the direct file, its
+# SHA-256, the licence where one exists, when it was taken or posted, when we retrieved it, and a square crop box
+# [x, y, size, size] in source pixels, chosen so every face sits at the same size (a negative x or y is padded with the
+# picture's own edge colour).
 # Nothing is built until the owner has approved the face on a contact sheet: `owner_approved: 'YYYY-MM-DD'`.
 people:
   - candidate_id: jan-2027-president-apc
+    credit: Wikimedia Commons
     source: Wikimedia Commons
     file_page: https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait.jpg
     file_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Bola_Tinubu_portrait.jpg
@@ -15,8 +17,9 @@ people:
     licence_url: https://creativecommons.org/licenses/by-sa/4.0/
     taken: '2023-05-29'
     retrieved: '2026-11-11'
-    crop: [0, 33, 1687, 1687]
+    crop: [480, 250, 1060, 1060]
   - candidate_id: jan-2027-president-ndc
+    credit: official website
     source: Official website of Peter Obi (mrpeterobi.com)
     file_page: https://mrpeterobi.com/
     file_url: https://media.mrpeterobi.com/peterobi.jpg
@@ -24,15 +27,8 @@ people:
     taken: '2018-10-12'
     retrieved: '2026-11-11'
     crop: [45, -67, 600, 600]
-  - candidate_id: jan-2027-president-pdp
-    source: Official X account of Sandy Ojang Onor (@sandyonor)
-    file_page: https://x.com/sandyonor
-    file_url: https://pbs.twimg.com/profile_images/1470693360704921601/mnoOvzTd.jpg
-    sha256: d95645ff6f3548dda588041bbbdfecf566fb8f866c732a83c2d9711de62a7242
-    taken: '2021-12-14'
-    retrieved: '2026-11-11'
-    crop: [20, 24, 300, 300]
   - candidate_id: jan-2027-president-sdp
+    credit: Wikimedia Commons
     source: Wikimedia Commons
     file_page: https://commons.wikimedia.org/wiki/File:ADEWOLE_ADEBAYO.jpg
     file_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/ADEWOLE_ADEBAYO.jpg
@@ -42,4 +38,4 @@ people:
     licence_url: https://creativecommons.org/licenses/by-sa/4.0/
     taken: '2022-03-02'
     retrieved: '2026-11-11'
-    crop: [2534, 236, 1920, 1920]
+    crop: [2110, 0, 2795, 2795]

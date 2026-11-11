@@ -54,11 +54,11 @@ export function formatDate(iso: string): string {
  * One square cell of the sprite (every logo and approved photo in one image, so a page makes one image request).
  * The 1-pixel inset keeps neighbouring cells from bleeding in when the browser scales the image.
  */
-function SpriteCell({ index, size, label, className }: { index: number, size: number, label: string | null, className: string }) {
+function SpriteCell({ x, y, cell, size, label, className }: { x: number, y: number, cell: number, size: number, label: string | null, className: string }) {
   const s = sprite()
   const a11y = label ? { 'role': 'img', 'aria-label': label } : { 'aria-hidden': true }
   return (
-    <svg className={className} width={size} height={size} viewBox={`${index * s.cell + 1} 1 ${s.cell - 2} ${s.cell - 2}`} focusable="false" {...a11y}>
+    <svg className={className} width={size} height={size} viewBox={`${x + 1} ${y + 1} ${cell - 2} ${cell - 2}`} focusable="false" {...a11y}>
       <image href={`/${s.file}`} width={s.width} height={s.height} />
     </svg>
   )
@@ -66,23 +66,29 @@ function SpriteCell({ index, size, label, className }: { index: number, size: nu
 
 /** A party's logo from INEC's register (D-043): the same size and treatment for every party, the acronym as its text. */
 export function PartyLogo({ party, size }: { party: string, size: number }) {
-  const i = sprite().logos[party]
+  const s = sprite()
+  const i = s.logos[party]
   if (i === undefined) throw new Error(`no INEC logo for ${party} in the sprite`)
-  return <SpriteCell index={i} size={size} label={party} className="logo" />
+  return <SpriteCell x={i * s.cell} y={0} cell={s.cell} size={size} label={party} className="logo" />
 }
 
-/** A candidate's photo (D-064) from the sprite, or nothing. Beside the name it repeats, so it is hidden from screen readers. */
+/**
+ * The candidate's photo from the sprite (only presidential candidates, only faces the owner approved: D-065), or the same
+ * plain placeholder for everyone else, in the same place and size. Beside the name it repeats, so screen readers skip it.
+ */
 export function CardPhoto({ c, size }: { c: C, size: number }) {
-  if (!photo(c.id)) return null
-  const i = sprite().photos[c.id]
+  // sized by the stylesheet (the CSP allows no inline styles), the same as a photo of `size` pixels
+  if (!photo(c.id)) return <span className="photo ph" aria-hidden="true" />
+  const s = sprite()
+  const i = s.photos[c.id]
   if (i === undefined) throw new Error(`no sprite cell for ${c.id}'s photo`)
-  return <SpriteCell index={i} size={size} label={null} className="photo" />
+  return <SpriteCell x={i * s.photo_cell} y={s.photo_y} cell={s.photo_cell} size={size} label={null} className="photo" />
 }
 
 /**
  * One compact card per ticket, the same for every party (the working rules §1): logo, acronym, the name as INEC prints it
- * and, on a ticket, the running mate. The whole card opens the candidate's page, where every field and its citation is.
- * The first group's presidential candidates also show their photo (D-064); every card stays the same size.
+ * and, on a ticket, the running mate. The photo, or the same placeholder for everyone without one, fills the card's top
+ * right corner. The whole card opens the candidate's page, where every field and its citation is.
  */
 export function CandidateCard({ c, mateLabel }: { c: C, mateLabel: string | null }) {
   const named = Boolean(c.candidate.name)
@@ -90,11 +96,13 @@ export function CandidateCard({ c, mateLabel }: { c: C, mateLabel: string | null
   return (
     <li className={named ? 'card' : 'card muted'} data-candidate-id={c.id} data-party={c.party} data-group={c.display_group} data-words={words}>
       <a href={candidatePath(c.id)}>
-        <span className="card-pics">
-          <PartyLogo party={c.party} size={48} />
-          <CardPhoto c={c} size={48} />
+        <span className="card-top">
+          <span className="card-id">
+            <PartyLogo party={c.party} size={48} />
+            <span className="card-party" aria-hidden="true">{c.party}</span>
+          </span>
+          <CardPhoto c={c} size={76} />
         </span>
-        <span className="card-party" aria-hidden="true">{c.party}</span>
         <span className="card-name">{named ? c.candidate.name : noCandidateText(c)}</span>
         {mateLabel && c.running_mate?.name && (
           <span className="card-mate">

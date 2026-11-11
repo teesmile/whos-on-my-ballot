@@ -248,7 +248,9 @@ describe('every page', () => {
       const s = fs.readFileSync(f, 'utf8')
       expect(s, f).toContain('Not affiliated with INEC.')
       const scripts = [...s.matchAll(/<script\b[^>]*>/g)].map(m => m[0])
-      expect(scripts.every(t => t === '<script type="module" src="/lookup.js">' || t === '<script type="application/ld+json">'), f).toBe(true)
+      // our own two modules (one per page: lookup.js includes the motion fallback) and structured data
+      expect(scripts.every(t => ['<script type="module" src="/lookup.js">', '<script type="module" src="/motion.js">', '<script type="application/ld+json">'].includes(t)), f).toBe(true)
+      expect(scripts.filter(t => t.includes('src=')).length, f).toBe(1)
       // only links (a href) and the canonical address may point off-site; nothing the page loads may
       for (const m of s.matchAll(/<(?:link|img|script|iframe|source)\b[^>]*\b(?:href|src)="([^"]+)"/g)) {
         if (m[0].startsWith('<link rel="canonical"')) continue
@@ -376,7 +378,28 @@ describe('candidate photos (owner decisions D-064, D-065)', () => {
       else expect(page, c.id).not.toContain('<figure class="profile-photo"><img')
     }
     for (const r of [...races().filter(x => x.office !== 'president').slice(0, 20), ...febRaces().slice(0, 20)]) {
-      expect(html(`c/${r.candidates[0].id}`), r.id).not.toContain('<figure class="profile-photo"><img')
+      const page = html(`c/${r.candidates[0].id}`)
+      expect(page, r.id).not.toContain('<figure class="profile-photo"><img')
+      // everyone without a photo has the same placeholder
+      expect(page, r.id).toContain('<div class="profile-photo"><span class="photo ph" aria-hidden="true"></span></div>')
     }
+  })
+  it('under a photo only a short plain credit; the full credit is in the About page\'s list', () => {
+    for (const id of approved) {
+      expect(html(`c/${id}`), id).toMatch(/<figcaption>Photo: (Wikimedia Commons|official [A-Za-z]+ account|official website)<\/figcaption>/)
+      expect(html('about'), id).toContain(`<li id="credit-${id}">`)
+    }
+  })
+  it('every card has the photo slot, a photo or the same placeholder, in the same place', () => {
+    const ballot = html('ballot/abia/aba-north-aba-south--abia-south')
+    const cards = ballot.match(/<li class="card[^"]*" [\s\S]*?<\/li>/g)!
+    expect(cards.length).toBeGreaterThan(30)
+    for (const c of cards) expect(c, c.slice(0, 120)).toMatch(/<span class="card-top"><span class="card-id"><svg class="logo"[\s\S]*?<\/span><\/span>(<svg class="photo"|<span class="photo ph" aria-hidden="true"><\/span>)/)
+  })
+  it('the About page says where photos come from and that a candidate or party can send an official one', () => {
+    const about = html('about')
+    expect(about).toContain('<h2 id="photos">Photos</h2>')
+    expect(about).toMatch(/official account, their campaign or party website, or\s+Wikimedia Commons/)
+    expect(about).toMatch(/A candidate or party can send an official\s+photo to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Official%20photo">/)
   })
 })

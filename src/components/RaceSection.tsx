@@ -208,7 +208,7 @@ export function RaceTabs({ panels }: { panels: TabPanel[] }) {
                 {p.label !== p.title && <span className="visually-hidden">{p.title}</span>}
                 {' '}
                 <span className="tab-count">
-                  {p.badge}
+                  <span className="tab-n">{p.badge}</span>
                   <span className="visually-hidden">{` ${p.badgeLong}`}</span>
                 </span>
               </a>

@@ -10,9 +10,11 @@
  *   [data-share]            share a race: the phone's share menu, with a picture of the race drawn here when it can take files
  *   [data-copy]             copy a page's link to the clipboard
  *   [data-clock]            the countdown to the next election day in Nigerian time (no live announcements)
+ * It also runs the scroll-in motion (motion.ts); pages without any of the above load motion.js alone.
  * Privacy (D-015): the only network request is GET /data/pu/<SS>.json, a fixed per-state file. What the visitor
  * types is matched in memory, never sent, never stored, and never put in a URL (fragments aren't sent to servers).
  */
+import { motion } from './motion'
 import { describePhase, formatDay, formatTime, phaseAt, type Schedule } from '../lib/election'
 import {
   cardCode,
@@ -59,7 +61,7 @@ function puLink(pu: FoundPollingUnit): HTMLAnchorElement {
 
 /** The 6 February ballot for the same polling unit (its ward decides it). */
 function febLink(pu: FoundPollingUnit): HTMLAnchorElement {
-  return el('a', '6 February 2027 ballot', { href: `${pu.febBallotPath}${puHash(pu.code)}`, class: 'feb-link' })
+  return el('a', '6 February 2027 ballot', { href: `${pu.febBallotPath}${puHash(pu.code)}`, class: 'feb-link btn btn-secondary btn-small' })
 }
 
 function resultItem(pu: FoundPollingUnit): HTMLLIElement {
@@ -197,12 +199,14 @@ async function setupConfirm(box: HTMLElement) {
     box.replaceChildren(el('p', `Your polling unit: ${pu.name}, ${pu.ward} ward, ${pu.lga} LGA (${cardCode(pu.code)}).`))
     if (mine !== here) {
       box.append(el('p', 'This polling unit belongs to a different ballot. Follow the link below.'))
-      box.append(feb ? febLink(pu) : puLink(pu))
+      const go = feb ? febLink(pu) : puLink(pu)
+      go.className = 'btn btn-secondary'
+      box.append(go)
     }
     // the same polling unit's ballot for the other election day
     const other = feb
-      ? el('a', 'Your ballot for 16 January 2027', { href: `${pu.ballotPath}${puHash(pu.code)}` })
-      : el('a', 'Your ballot for 6 February 2027', { href: `${pu.febBallotPath}${puHash(pu.code)}` })
+      ? el('a', 'Your ballot for 16 January 2027', { href: `${pu.ballotPath}${puHash(pu.code)}`, class: 'btn' })
+      : el('a', 'Your ballot for 6 February 2027', { href: `${pu.febBallotPath}${puHash(pu.code)}`, class: 'btn' })
     const p = el('p')
     p.append(other)
     box.append(p)
@@ -333,7 +337,7 @@ function setupFilter(box: HTMLElement) {
 }
 
 // ---- Share a race: a portrait picture for WhatsApp Status, drawn here only when someone starts to share.
-interface ShareInfo { text: string, url: string, title: string, tiles: [string, string, string, string][], more: number }
+interface ShareInfo { text: string, url: string, title: string, office: string, place: string, date: string, tiles: [string, string, string, string][], more: number }
 const GREEN = '#008751'
 const DEEP = '#00552f'
 const INK = '#161616'
@@ -392,25 +396,45 @@ function box(g: CanvasRenderingContext2D, x: number, y: number, w: number, h: nu
   g.closePath()
 }
 
-/** Draw `img` fitted inside a w x h box, centred, never stretched. */
-function contain(g: CanvasRenderingContext2D, img: HTMLImageElement, x: number, y: number, w: number, h: number) {
+/** Draw `img` fitted inside a w x h box, never stretched: centred, or against the box's left edge. */
+function contain(g: CanvasRenderingContext2D, img: HTMLImageElement, x: number, y: number, w: number, h: number, left = false) {
   const k = Math.min(w / img.naturalWidth, h / img.naturalHeight)
   const dw = img.naturalWidth * k
   const dh = img.naturalHeight * k
-  g.drawImage(img, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh)
+  g.drawImage(img, left ? x : x + (w - dw) / 2, y + (h - dh) / 2, dw, dh)
 }
 
 // WhatsApp Status covers the top (progress bar, name) and the bottom (reply bar) of a 1080 x 1920 picture, so every word
-// and logo sits inside this central area; only the plain background reaches the edges.
-const PICTURE = { W: 1080, H: 1920, top: 250, bottom: 1650, side: 60 }
+// and logo sits inside this central area; only the plain bands reach the edges.
+const PICTURE = { W: 1080, H: 1920, top: 200, bottom: 1650, side: 60 }
 // PNG, exactly 1080 x 1920. Tested against a quality-95 JPEG on 11 Nov 2026 (D-060): after the kind of re-encoding WhatsApp
 // applies to Status pictures, the PNG source kept about 1.2 dB more detail, and the JPEG was only 7% smaller.
 const EXPORT = { type: 'image/png', quality: 1, name: 'whos-on-my-ballot.png' }
+const PLACEHOLDER = { bg: '#f4f4f4', line: '#c4c4c4', figure: '#cfcfcf' }
+
+/** The same plain placeholder as the site's cards: a grey head-and-shoulders outline in a rounded square. */
+function placeholder(g: CanvasRenderingContext2D, x: number, y: number, s: number) {
+  g.fillStyle = PLACEHOLDER.bg
+  g.fill()
+  g.fillStyle = PLACEHOLDER.figure
+  const k = s / 64
+  g.beginPath()
+  g.arc(x + 32 * k, y + 25 * k, 11 * k, 0, Math.PI * 2)
+  g.fill()
+  g.beginPath()
+  g.moveTo(x + 10 * k, y + 64 * k)
+  g.bezierCurveTo(x + 10 * k, y + 51 * k, x + 20 * k, y + 41 * k, x + 32 * k, y + 41 * k)
+  g.bezierCurveTo(x + 44 * k, y + 41 * k, x + 54 * k, y + 51 * k, x + 54 * k, y + 64 * k)
+  g.closePath()
+  g.fill()
+}
 
 /**
- * The share picture: exactly 1080 x 1920, the site's card grid (two columns, three rows), drawn from the full-size logos and
- * photos (never the page's small sprite), loaded only now. Large, heavy text only: the race and date at the top, then each
- * tile's photo (President's first group), logo, acronym and name, then the address and the affiliation line.
+ * The share picture: exactly 1080 x 1920. A short green band at the top (the office, where, and the date), a white middle
+ * holding the site's card grid (two columns, three rows), then the address, large, and a green band at the bottom with the
+ * affiliation line in white. Each tile: the party's logo and acronym at the top left, the candidate's photo (or the same
+ * plain placeholder as the site) at the top right, and the name across the full width beneath. Drawn from the full-size
+ * logos and photos (never the page's small sprite), loaded only now.
  */
 async function drawPicture(d: ShareInfo): Promise<File> {
   const { W, H, top, bottom, side } = PICTURE
@@ -420,7 +444,6 @@ async function drawPicture(d: ShareInfo): Promise<File> {
   const g = canvas.getContext('2d')!
   g.imageSmoothingEnabled = true
   g.imageSmoothingQuality = 'high'
-  const withPhotos = d.tiles.some(t => t[3])
   const [mark, ...imgs] = await Promise.all([loadImage('/icon.svg'), ...d.tiles.flatMap(([p, , , photo]) => [
     loadImage(`/logos/full/${p.toLowerCase()}.webp`),
     photo ? loadImage(photo) : Promise.resolve(null),
@@ -429,36 +452,69 @@ async function drawPicture(d: ShareInfo): Promise<File> {
   g.fillRect(0, 0, W, H)
   g.textBaseline = 'top'
   g.textAlign = 'center'
-  // Top: the race and the date, large, on the national green (the band runs to the edge; the words stay inside).
-  // One line if it fits at a large size; otherwise two (or more, never cut off).
-  let title = fit(g, d.title, 900, 80, 62, W - 2 * side, 1)
-  if (title.lines.length > 1) title = fit(g, d.title, 900, 72, 46, W - 2 * side, 2)
-  const lh = Math.round(title.size * 1.12)
-  const titleY = top + 106
-  const band = titleY + title.lines.length * lh + 34
+
+  // Top band: the site's mark beside the office, then where (constituency and state) and the date. Never cut off.
+  const markS = 68
+  const office = fit(g, d.office, 900, 66, 46, W - 2 * side - markS - 24, 1)
+  const place = d.place ? fit(g, d.place, 800, 46, 32, W - 2 * side, 2) : { size: 0, lines: [] as string[] }
+  const placeLh = Math.round(place.size * 1.15)
+  let y = top
+  const rowH = Math.max(markS, office.size)
+  const placeY = y + rowH + 14
+  const dateY = placeY + place.lines.length * placeLh + (place.lines.length ? 8 : 0)
+  const band = dateY + 42 + 30
   g.fillStyle = GREEN
   g.fillRect(0, 0, W, band)
-  // The site's mark (D-047), large, on a white ring so its green circle shows on the green band.
+  g.font = `900 ${office.size}px ${FONT}`
+  const ow = g.measureText(office.lines[0]).width
+  const rowX = (W - (markS + 24 + ow)) / 2
   if (mark) {
     g.fillStyle = '#fff'
     g.beginPath()
-    g.arc(W / 2, top + 46, 46, 0, Math.PI * 2)
+    g.arc(rowX + markS / 2, y + rowH / 2, markS / 2 + 4, 0, Math.PI * 2)
     g.fill()
-    g.drawImage(mark, W / 2 - 42, top + 4, 84, 84)
+    g.drawImage(mark, rowX, y + (rowH - markS) / 2, markS, markS)
   }
   g.fillStyle = '#fff'
-  g.font = `900 ${title.size}px ${FONT}`
-  title.lines.forEach((l, i) => g.fillText(l, W / 2, titleY + i * lh))
+  g.textAlign = 'left'
+  g.fillText(office.lines[0], rowX + markS + 24, y + (rowH - office.size) / 2 + 2)
+  g.textAlign = 'center'
+  g.font = `800 ${place.size}px ${FONT}`
+  place.lines.forEach((l, i) => g.fillText(l, W / 2, placeY + i * placeLh))
+  g.font = `700 42px ${FONT}`
+  g.fillText(d.date, W / 2, dateY)
+
+  // Bottom: the address, large and green on white (WhatsApp can drop the caption), then the green band with the
+  // affiliation line in white, inside the area WhatsApp leaves clear.
+  const foot = bottom - 96
+  g.fillStyle = GREEN
+  g.fillRect(0, foot, W, H - foot)
+  g.fillStyle = '#fff'
+  g.font = `700 48px ${FONT}`
+  g.fillText('Not affiliated with INEC.', W / 2, foot + 26, W - 2 * side)
+  g.fillStyle = GREEN
+  g.font = `900 96px ${FONT}`
+  const addrY = foot - 30 - 96
+  g.fillText('whosonmyballot.ng', W / 2, addrY, W - 2 * side)
+
   // Middle: the card grid, two by three, the same for every party.
   const gap = 22
   const gridTop = band + 26
-  const gridBottom = bottom - 192
+  const gridBottom = addrY - 28
   const tw = (W - 2 * side - gap) / 2
   const th = (gridBottom - gridTop - 2 * gap) / 3
+  const pad = 18
   const n = d.tiles.length + (d.more ? 1 : 0)
+  // One name size and one photo size for every tile: the size at which every name fits in three lines, and the photo
+  // takes the height the longest name leaves.
+  const nameSize = Math.min(...d.tiles.map(([, name]) => fit(g, name, 800, 38, 28, tw - 2 * pad, 2).size))
+  g.font = `800 ${nameSize}px ${FONT}`
+  const nameLines = Math.max(...d.tiles.map(([, name]) => wrap(g, name, tw - 2 * pad).length))
+  const nlh = Math.round(nameSize * 1.14)
+  const ps = Math.min(Math.round(th - 2 * pad - 14 - nameLines * nlh), Math.round(tw * 0.5))
   for (let k = 0; k < n; k++) {
     const x = side + (k % 2) * (tw + gap)
-    const y = gridTop + Math.floor(k / 2) * (th + gap)
+    y = gridTop + Math.floor(k / 2) * (th + gap)
     box(g, x, y, tw, th, 26)
     if (k < d.tiles.length) {
       const [party, name] = d.tiles[k]
@@ -468,38 +524,35 @@ async function drawPicture(d: ShareInfo): Promise<File> {
       g.lineWidth = 4
       g.strokeStyle = '#bdbdbd'
       g.stroke()
-      // Room for two lines of name always, so a long name is never cut off; the photo takes what is left.
-      const ls = withPhotos ? 60 : 104
-      const nameRoom = 2 * 45
-      let cy = y + 16
-      if (withPhotos) {
-        const ps = Math.round(th - 16 - 12 - ls - 10 - nameRoom - 12)
-        const px = x + (tw - ps) / 2
-        g.save()
-        box(g, px, cy, ps, ps, 16)
-        g.clip()
-        if (pic) g.drawImage(pic, px, cy, ps, ps)
-        g.restore()
-        cy += ps + 12
-      }
-      else cy += Math.max(0, (th - 16 - ls - 10 - nameRoom - 12 - 60) / 2)
-      // The logo beside the acronym, then the name.
-      const as = withPhotos ? 52 : 60
-      g.font = `900 ${as}px ${FONT}`
-      const aw = g.measureText(party).width
-      const rowW = ls + 16 + aw
-      const lx = x + (tw - rowW) / 2
-      if (logo) contain(g, logo, lx, cy, ls, ls)
+      // The name across the full width at the bottom, never cut off.
+      g.font = `800 ${nameSize}px ${FONT}`
+      const nm = wrap(g, name, tw - 2 * pad)
+      const nameTop = y + pad + ps + 14
+      const px = x + tw - pad - ps
+      const py = y + pad
+      g.save()
+      box(g, px, py, ps, ps, 18)
+      g.clip()
+      if (pic) g.drawImage(pic, px, py, ps, ps)
+      else placeholder(g, px, py, ps)
+      g.restore()
+      box(g, px, py, ps, ps, 18)
+      g.lineWidth = 3
+      g.strokeStyle = PLACEHOLDER.line
+      g.stroke()
+      // The logo and, under it, the acronym, at the top left.
+      const leftW = px - 14 - (x + pad)
+      const ac = fit(g, party, 900, 50, 30, leftW, 1)
+      const ls = Math.max(64, Math.min(100, leftW, ps - 12 - ac.size))
+      // a wide logo may use the width beside the photo, so every logo reads at a similar size
+      if (logo) contain(g, logo, x + pad, py, Math.min(leftW, Math.round(ls * 1.7)), ls, true)
       g.fillStyle = INK
       g.textAlign = 'left'
-      g.fillText(party, lx + ls + 16, cy + (ls - as) / 2 + 2)
+      g.font = `900 ${ac.size}px ${FONT}`
+      g.fillText(ac.lines[0], x + pad, py + ls + 12)
       g.textAlign = 'center'
-      cy += ls + 10
-      const nm = fit(g, name, 800, 40, 24, tw - 32, 2)
-      const nlh = Math.round(nm.size * 1.12)
-      g.fillStyle = INK
-      g.font = `800 ${nm.size}px ${FONT}`
-      nm.lines.forEach((l, i) => g.fillText(l, x + tw / 2, cy + i * nlh))
+      g.font = `800 ${nameSize}px ${FONT}`
+      nm.forEach((l, i) => g.fillText(l, x + tw / 2, nameTop + i * nlh))
     }
     else {
       g.fillStyle = '#f2f2f2'
@@ -511,13 +564,6 @@ async function drawPicture(d: ShareInfo): Promise<File> {
       g.fillText(d.more === 1 ? 'more candidate' : 'more candidates', x + tw / 2, y + th / 2 + 40, tw - 30)
     }
   }
-  // Bottom: the address, large (WhatsApp can drop the caption), and the affiliation line.
-  g.fillStyle = GREEN
-  g.font = `900 96px ${FONT}`
-  g.fillText('whosonmyballot.ng', W / 2, bottom - 180, W - 2 * side)
-  g.fillStyle = '#333'
-  g.font = `700 46px ${FONT}`
-  g.fillText('Not affiliated with INEC.', W / 2, bottom - 62)
   const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob(b => (b ? resolve(b) : reject(new Error('no picture'))), EXPORT.type, EXPORT.quality))
   return new File([blob], EXPORT.name, { type: EXPORT.type })
 }
@@ -641,3 +687,5 @@ for (const nav of document.querySelectorAll<HTMLElement>('[data-tabs]')) setupTa
 for (const box of document.querySelectorAll<HTMLElement>('[data-filter]')) setupFilter(box)
 for (const section of document.querySelectorAll<HTMLElement>('[data-share]')) setupShare(section)
 for (const section of document.querySelectorAll<HTMLElement>('[data-clock]')) setupClock(section)
+
+motion()

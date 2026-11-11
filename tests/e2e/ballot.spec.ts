@@ -113,6 +113,7 @@ test.describe('without JavaScript', () => {
 
 test.describe('the grid', () => {
   test('two cards per row on a phone, names whole, the first group labelled, no sideways scroll', async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' }) // the cards' entrance would offset them mid-way
     await page.goto(ABA)
     const panel = page.getByRole('tabpanel')
     await expect(panel.getByRole('heading', { name: 'Five parties with the most candidates in 2027' })).toBeVisible()
@@ -194,7 +195,7 @@ async function pictureCheck(page: Page, bytes: number[]) {
       return true
     }
     const outside: number[] = []
-    for (let y = 0; y < 244; y += 4) if (!plain(y)) outside.push(y)
+    for (let y = 0; y < 196; y += 4) if (!plain(y)) outside.push(y)
     for (let y = 1656; y < 1920; y += 4) if (!plain(y)) outside.push(y)
     return { w: img.width, h: img.height, outside }
   }, bytes)
@@ -392,12 +393,11 @@ test('no link is ever underlined, at rest, on hover or on focus; links in text a
       await a.focus({ timeout: 3000 })
       expect(await a.evaluate(e => getComputedStyle(e).textDecorationLine), path).not.toContain('underline')
     }
-    // a link inside a sentence is bold and carries the arrow
-    const inText = await page.evaluate(() => [...document.querySelectorAll('main p:not(.credit) a:not(.btn, .ref), main ul:not([class]) > li a:not([data-tab])')].filter(a => a.getClientRects().length && !a.querySelector('.ext')).map(a => ({ w: getComputedStyle(a).fontWeight, arrow: getComputedStyle(a, '::after').maskImage || getComputedStyle(a, '::after').webkitMaskImage })))
-    for (const l of inText) {
-      expect(Number(l.w), path).toBeGreaterThanOrEqual(700)
-      expect(l.arrow, path).toContain('svg')
-    }
+    // a link inside a sentence is bold green; no link anywhere carries an arrow (owner feedback, 11 Nov 2026)
+    const inText = await page.evaluate(() => [...document.querySelectorAll('main p:not(.credit) a:not(.btn, .ref), main ul:not([class]) > li a:not([data-tab])')].filter(a => a.getClientRects().length).map(a => getComputedStyle(a).fontWeight))
+    for (const w of inText) expect(Number(w), path).toBeGreaterThanOrEqual(700)
+    const arrows = await page.evaluate(() => [...document.querySelectorAll('a')].filter(a => ['::before', '::after'].some(p => !['none', 'normal'].includes(getComputedStyle(a, p).content)) || a.querySelector('svg.ext')).map(a => a.textContent))
+    expect(arrows, path).toEqual([])
   }
 })
 
@@ -465,14 +465,16 @@ test('the credit: one italic line, the name a link with no arrow, the heart text
   await expect(page.locator('.credit')).toHaveCount(1) // the footer's only
 })
 
-test('with motion on, everything that fades in on scroll ends fully opaque and in place once on screen (D-058)', async ({ page }) => {
+test('with motion on, everything that fades in on scroll ends fully opaque and in place once on screen (D-058, D-066)', async ({ page }) => {
+  test.setTimeout(180_000) // the entrance takes 0.7 s at every step
   for (const path of ['/', '/c/jan-2027-president-ndc/', ABA]) {
     await page.goto(path)
     await settled(page) // the load animations first
     const height = await page.evaluate(() => document.documentElement.scrollHeight)
     for (let y = 0; y < height; y += 300) {
       await page.evaluate(top => window.scrollTo({ top, behavior: 'instant' }), y)
-      await page.waitForTimeout(30)
+      // motion.js plays a 0.7 s entrance as each one appears
+      await page.waitForTimeout(900)
       // anything wholly inside the screen and below the sticky bars has finished its entrance
       const half = await page.evaluate(() => [...document.querySelectorAll('.card, .panel, .link-list > li, .timeline > li, .sources > li')].filter((e) => {
         const r = e.getBoundingClientRect()
@@ -481,4 +483,29 @@ test('with motion on, everything that fades in on scroll ends fully opaque and i
       expect(half, `${path} at ${y}`).toBe(0)
     }
   }
+})
+
+test('the scroll-in motion is clearly visible: a card below the screen starts invisible and 48px low, then arrives (D-066)', async ({ page }) => {
+  await page.goto('/race/jan-2027-president/')
+  await settled(page)
+  expect(await page.evaluate(() => document.documentElement.classList.contains('rv-js'))).toBe(true)
+  // what was on screen at load never waits
+  expect(await page.evaluate(() => [...document.querySelectorAll('.rv-wait')].filter(e => e.getBoundingClientRect().top - 48 < innerHeight).length)).toBe(0)
+  const last = page.locator('.card').last()
+  const before = await last.evaluate(e => ({ o: Number(getComputedStyle(e).opacity), t: getComputedStyle(e).transform }))
+  expect(before.o).toBeLessThan(0.05)
+  expect(before.t).toMatch(/matrix\(1, 0, 0, 1, 0, 4[0-9]/)
+  await last.evaluate(e => e.scrollIntoView({ block: 'center', behavior: 'instant' }))
+  await page.waitForTimeout(900)
+  const after = await last.evaluate(e => ({ o: Number(getComputedStyle(e).opacity), t: getComputedStyle(e).transform }))
+  expect(after.o).toBeGreaterThan(0.99)
+  expect(['none', 'matrix(1, 0, 0, 1, 0, 0)']).toContain(after.t)
+})
+
+test('with reduced motion, nothing waits or moves on scroll', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.goto('/race/jan-2027-president/')
+  const last = page.locator('.card').last()
+  expect(await last.evaluate(e => [getComputedStyle(e).opacity, getComputedStyle(e).transform, getComputedStyle(e).animationName])).toEqual(['1', 'none', 'none'])
+  expect(await page.evaluate(() => document.documentElement.classList.contains('rv-js'))).toBe(false)
 })

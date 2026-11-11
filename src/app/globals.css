@@ -38,16 +38,12 @@ main > p, main > .lead, main > section > p, .race-meta p { max-width: 46rem; }
 /* Without JavaScript, controls that need it are not shown. */
 @media (scripting: none) { .js-only { display: none !important; } }
 
-/* Links. Never underlined (at rest, on hover, on tap or on focus). A link inside text is bold green with a small arrow,
-   so it looks tappable without hovering; every other link is a button, a tile, a card or a tab. */
+/* Links. Never underlined (at rest, on hover, on tap or on focus) and never with an arrow (owner feedback, 11 Nov 2026). A
+   link inside text is bold green, so it looks tappable without hovering; a link that takes the voter somewhere important is
+   a button; every other link is a tile, a card or a tab. */
 a, a:visited { color: var(--green-strong); text-decoration: none; }
 a:hover, a:focus, a:active { text-decoration: none; }
 :is(p, dd, figcaption, li) a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result ul a, .race-tabs a, .card a, .wa-tile a, .credit a) { font-weight: 700; }
-:is(p, dd, figcaption, li) a:not(:has(.ext), .btn, .ref, .src-link, .link-list a, .pu-list a, .result ul a, .race-tabs a, .card a, .wa-tile a, .credit a)::after {
-  content: ""; display: inline-block; width: 0.78em; height: 0.78em; margin-left: 0.22em; vertical-align: -0.06em; background: currentColor;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8h10M8.5 3.5 13 8l-4.5 4.5' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8h10M8.5 3.5 13 8l-4.5 4.5' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
-}
 :is(p, dd, figcaption, li) a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result ul a, .race-tabs a, .card a, .wa-tile a, .credit a):hover { color: var(--green-deep); }
 /* Focus: a clear outline for keyboard users, never an underline. */
 :focus-visible { outline: 3px solid var(--green-strong); outline-offset: 2px; border-radius: 6px; }
@@ -194,23 +190,18 @@ main p > a.btn { margin: 0.25rem 0; }
   .guide > .by-search { position: sticky; top: calc(var(--hdr) + 1rem); }
 }
 
-/* Places to pick and lists of actions are tiles: a clear label and a drawn arrow. */
+/* Places to pick and lists of actions are tiles: a clear label in a bordered box. */
 .link-list { list-style: none; padding: 0; margin: 0.5rem 0; display: grid; gap: 0.5rem; }
 .tiles { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); }
 .tiles-wide { grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
 .pu-list, .result ul { display: grid; gap: 0.5rem; }
-.link-list a, .pu-list a, .result a {
-  display: flex; align-items: center; gap: 0.5rem; min-height: 48px; padding: 0.6rem 2.1rem 0.6rem 0.85rem; position: relative;
+.link-list a, .pu-list a, .result a:not(.btn) {
+  display: flex; align-items: center; gap: 0.5rem; min-height: 48px; padding: 0.6rem 0.85rem; position: relative;
   border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg);
   color: var(--fg); font-weight: 650; overflow-wrap: anywhere; line-height: 1.3;
 }
-/* The arrow is drawn, not typed, so it never becomes part of the link's name for a screen reader. */
-.link-list a::after, .pu-list a::after, .result a::after {
-  content: ""; position: absolute; right: 0.95rem; top: 50%; width: 0.45rem; height: 0.45rem;
-  border-top: 2.5px solid var(--green-strong); border-right: 2.5px solid var(--green-strong); transform: translateY(-50%) rotate(45deg);
-}
-.link-list a:visited, .pu-list a:visited, .result a:visited { color: var(--fg); }
-.link-list a:hover, .pu-list a:hover, .result a:hover { border-color: var(--green-strong); background: var(--panel); color: var(--fg); }
+.link-list a:visited, .pu-list a:visited, .result a:not(.btn):visited { color: var(--fg); }
+.link-list a:hover, .pu-list a:hover, .result a:not(.btn):hover { border-color: var(--green-strong); background: var(--panel); color: var(--fg); }
 .pu-list a { justify-content: space-between; flex-wrap: wrap; column-gap: 0.75rem; }
 
 /* Forms */
@@ -226,9 +217,10 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .result p:first-child, .pu-confirmed p:first-child, .note p:first-child { margin-top: 0; }
 .result p:last-child, .pu-confirmed p:last-child, .note p:last-child { margin-bottom: 0; }
 .result ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
-.result a { flex-wrap: wrap; font-weight: 400; }
-.result a.feb-link { margin-top: 0.4rem; font-weight: 650; }
-.pu-confirmed > a { display: block; padding: 0.6rem 0; min-height: 44px; font-weight: 700; }
+.result a:not(.btn) { flex-wrap: wrap; font-weight: 400; }
+.result a.feb-link { margin-top: 0.4rem; }
+.pu-confirmed .btn { margin-top: 0.25rem; }
+.pu-confirmed .btn .code { color: inherit; }
 
 /* A ballot: the race tabs, stuck directly under the header while scrolling */
 .race-tabs { position: sticky; top: var(--hdr); z-index: 15; background: var(--bg); padding: 0.4rem 0; margin: 1rem 0 0.25rem; box-shadow: 0 0 0 100vmax var(--bg), 0 1px 0 100vmax var(--line); clip-path: inset(0 -100vmax -1px); }
@@ -242,15 +234,18 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .race-tabs a:visited { color: var(--fg); }
 .race-tabs a:hover { background: var(--panel); }
 .race-tabs a[aria-selected="true"] { background: var(--green); border-color: var(--green); color: #fff; }
-.tab-name { font-size: 0.92rem; white-space: nowrap; }
-/* The count in a true circle */
-.tab-count { flex: none; display: inline-grid; place-items: center; width: 1.65rem; height: 1.65rem; border-radius: 50%; font-size: 0.74rem; font-weight: 800; background: var(--panel); color: var(--fg); border: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.tab-name { font-size: 0.92rem; white-space: nowrap; line-height: 1; }
+/* The count in a true circle. The word and the number are each trimmed to the height of their capitals and figures where
+   the browser can, so the circle lines up with the middle of the word and the number sits exactly in the circle's middle,
+   whatever the phone's own font. */
+.tab-count { flex: none; position: relative; display: inline-flex; align-items: center; justify-content: center; width: 1.65rem; height: 1.65rem; border-radius: 50%; font-size: 0.74rem; font-weight: 800; line-height: 1; background: var(--panel); color: var(--fg); border: 1px solid var(--line); font-variant-numeric: tabular-nums lining-nums; }
+.tab-n { display: block; }
+@supports (text-box: trim-both cap alphabetic) { .tab-name, .tab-n { text-box: trim-both cap alphabetic; } }
 .race-tabs a[aria-selected="true"] .tab-count { background: #fff; color: var(--green-deep); border-color: #fff; }
 @media (max-width: 22.5rem) { .tab-name { font-size: 0.85rem; } .race-tabs a { gap: 0.3rem; } }
 .tab-panel:focus { outline: none; }
 .next { margin: 1.5rem 0 0.5rem; }
 .btn-next { width: 100%; }
-.btn-next::after { content: ""; width: 0.5rem; height: 0.5rem; border-top: 2.5px solid currentColor; border-right: 2.5px solid currentColor; transform: rotate(45deg); }
 
 /* A race: its heading, two labelled groups of compact cards, when results come, sharing and corrections */
 .race { margin-top: 1.25rem; }
@@ -275,13 +270,20 @@ input:focus, select:focus { border-color: var(--green-strong); }
 }
 .card > a:visited { color: var(--fg); }
 .card > a:hover { border-color: var(--green-strong); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); }
-.card-pics { display: flex; gap: 0.4rem; }
+/* The card's top row: the logo and acronym on the left; on the right, reaching the card's inner edge, the photo or the
+   same plain placeholder for everyone without one (D-065). Square with rounded corners, the same for every card. */
+.card-top { align-self: stretch; display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+.card-id { display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; min-width: 0; }
 .logo, .photo { display: block; flex: none; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
 .logo { padding: 3px; }
-.photo { border-radius: 50%; overflow: hidden; }
-/* The credit's links stay inline in the sentence; invisible padding gives each a 44px tap area without moving the text. */
-.profile-photo figcaption a { padding-block: 0.9rem; }
-.card-party { font-weight: 800; font-size: 0.95rem; margin-top: 0.3rem; letter-spacing: 0.02em; }
+.photo { border-radius: 12px; overflow: hidden; }
+.card .photo { width: 76px; height: 76px; }
+.rt-pics .photo { width: 40px; height: 40px; border-radius: 8px; }
+/* The placeholder: a plain head-and-shoulders outline in grey, drawn by the stylesheet, so it costs no request. */
+.ph {
+  background: var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='25' r='11' fill='%23cfcfcf'/%3E%3Cpath d='M10 64c0-13 10-23 22-23s22 10 22 23z' fill='%23cfcfcf'/%3E%3C/svg%3E") center bottom / 100% no-repeat;
+}
+.card-party { font-weight: 800; font-size: 0.95rem; letter-spacing: 0.02em; }
 .card-name { font-weight: 700; font-size: 0.95rem; line-height: 1.3; }
 .card-mate { color: var(--muted); font-size: 0.82rem; line-height: 1.3; }
 .card.muted > a { background: var(--panel); border-style: dashed; border-color: var(--field); box-shadow: none; }
@@ -307,11 +309,11 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .profile { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1.1rem 1rem; margin: 0.5rem 0 1.25rem; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); }
 .profile h1 { margin: 0 0 0.6rem; }
 .profile-photo { margin: 0; }
-.profile-photo img, .profile-photo svg { display: block; width: 8rem; height: 8rem; border-radius: 16px; border: 1px solid var(--line); overflow: hidden; }
+.profile-photo img, .profile-photo svg, .profile-photo .ph { display: block; width: 8rem; height: 8rem; border-radius: 16px; border: 1px solid var(--line); overflow: hidden; }
 .profile-photo figcaption { margin-top: 0.35rem; font-size: 0.78rem; color: var(--muted); max-width: 16rem; }
 @media (min-width: 40rem) {
   .profile.has-photo { grid-template-columns: auto minmax(0, 1fr); column-gap: 1.5rem; padding: 1.4rem; }
-  .profile-photo img, .profile-photo svg { width: 10rem; height: 10rem; }
+  .profile-photo img, .profile-photo svg, .profile-photo .ph { width: 10rem; height: 10rem; }
 }
 .party-head { display: flex; align-items: center; gap: 0.75rem; margin: 0.25rem 0; }
 .party { margin: 0; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
@@ -352,12 +354,11 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .sources-section { margin-top: 2rem; }
 .sources { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; font-size: 0.92rem; }
 .src-link {
-  position: relative; display: flex; gap: 0.6rem; align-items: flex-start; min-height: 44px; padding: 0.6rem 2.1rem 0.6rem 0.6rem;
+  position: relative; display: flex; gap: 0.6rem; align-items: flex-start; min-height: 44px; padding: 0.6rem 0.75rem 0.6rem 0.6rem;
   border: 1px solid var(--line-soft); border-radius: 12px; color: var(--fg); font-weight: 400; line-height: 1.45;
 }
 .src-link:visited { color: var(--fg); }
 .src-link strong { color: var(--green-deep); }
-.src-link::after { content: ""; position: absolute; right: 0.95rem; top: 50%; width: 0.45rem; height: 0.45rem; border-top: 2.5px solid var(--green-strong); border-right: 2.5px solid var(--green-strong); transform: translateY(-50%) rotate(45deg); }
 .src-link:hover { border-color: var(--green-strong); background: var(--panel); }
 .sources li:target .src-link { border-color: var(--accent-ink); box-shadow: inset 5px 0 0 var(--accent); }
 .src-n { flex: none; margin-top: 0.05rem; display: inline-grid; place-items: center; min-width: 1.55rem; height: 1.55rem; border-radius: 999px; background: var(--green-strong); color: #fff; font-size: 0.76rem; font-weight: 800; }
@@ -443,12 +444,11 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
 /* The owner's civic note (D-034): plain text, set apart by space and a rule. */
 .civic-note { border-top: 1px solid var(--line-soft); margin-top: 2rem; padding-top: 1rem; }
 .civic-note p[data-civic-note] { font-weight: 700; margin: 0 0 0.5rem; }
-.ext { display: inline-block; width: 0.75em; height: 0.75em; margin-left: 0.2em; vertical-align: baseline; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-/* Motion (D-044, D-058): CSS only, and none at all for anyone who asks for reduced motion. On load the hero's panels settle
-   in, one after another; as the visitor scrolls, sections, cards and tiles rise and fade in as they enter the screen. Only
-   opacity and transform move, so nothing shifts the layout; the main heading never waits. */
+/* Motion (D-044, D-058, D-066), none at all for anyone who asks for reduced motion. On load the hero's panels settle in, one
+   after another; as the visitor scrolls, sections, cards and tiles rise and fade in as they enter the screen. Only opacity
+   and transform move, so nothing shifts the layout; the main heading never waits. */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }
   ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.18s; }
@@ -466,23 +466,13 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
   .clock-box:nth-child(3) { animation-delay: 0.38s; }
   .clock-box:nth-child(4) { animation-delay: 0.44s; }
   .clock-box:first-child { animation-delay: 0.26s; }
-  @supports (animation-timeline: view()) {
-    :is(.card, .wa-tile, .panel, .results-panel, .link-list > li, .pu-list > li, .date-card, .step-card, .timeline > li, .race > h2, .race > h3, .results-strip, .share, .correct-row, .civic-note, .state-map, .results-table tbody tr) {
-      animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 38%;
-    }
-    /* The fade runs over the first 40px of the entrance and only from 90% opacity, so even mid-fade every text colour stays
-       above AA's 4.5:1 (green links on grey: 5.0:1). White on the green buttons has the least room (4.58:1), so anything
-       holding a button rises without fading. */
-    :is(.card, .wa-tile, .panel, .results-panel, .link-list > li, .pu-list > li, .date-card, .step-card, .timeline > li, .race > h2, .race > h3, .results-strip, .share, .correct-row, .civic-note, .state-map, .results-table tbody tr):not(:has(.btn, button)) {
-      animation: rise linear both, fade linear both; animation-timeline: view(), view(); animation-range: entry 0% entry 38%, entry 0 entry 40px;
-    }
-    /* The sources list is where the numbered markers jump to, so it fades but never moves. */
-    .sources > li { animation: fade linear both; animation-timeline: view(); animation-range: entry 0 entry 40px; }
-    /* A jump target (or the box holding one) never moves, so a jump lands exactly below the sticky bars. */
-    :is(.card, .panel, .results-panel, .link-list > li, .date-card, .step-card, .timeline > li, .sources > li, .race > h2, .race > h3):is(:target, :has(:target)) { animation: none; }
-  }
+  /* As the visitor scrolls, cards, tiles and panels rise 48px and fade in from nothing as they come into view (owner
+     feedback, 11 Nov 2026: clearly visible). motion.js marks what is still below the screen and lets each one go as it
+     appears, in every browser, so the entrance plays the same way everywhere and always finishes: nothing is ever left
+     part-faded at the edge of the screen while the visitor is still (that would drop text below AA contrast, D-066).
+     Without the script everything is simply shown. Only opacity and transform move, so nothing shifts the layout. */
+  .rv-js .rv { transition: opacity 0.6s ease-out, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .rv-js .rv-wait { opacity: 0; transform: translateY(48px); }
   @keyframes reveal { from { opacity: 0; transform: translateY(6px); } }
   @keyframes settle { from { opacity: 0; transform: translateY(14px) scale(0.99); } }
-  @keyframes rise { from { transform: translateY(22px); } }
-  @keyframes fade { from { opacity: 0.9; } }
 }

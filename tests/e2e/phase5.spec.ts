@@ -47,6 +47,6 @@ test.describe('without JavaScript', () => {
 
   test('an off-cycle state says there is no governorship election', async ({ page }) => {
     await page.goto('/ballot-feb/osun/ayedade/')
-    await expect(page.getByText('No governorship election in OSUN on 6 February 2027.')).toBeVisible()
+    await expect(page.getByText('OSUN has no governorship election on 6 February 2027.')).toBeVisible()
   })
 })

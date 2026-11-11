@@ -183,7 +183,7 @@ describe('the owner\'s civic note (D-034)', () => {
     for (const [p, h] of pages) {
       const n = h.split('<footer')[0].split(NOTE).length - 1
       expect(n, p).toBe(p === '/' || p === '/election-day/' ? 1 : 0)
-      if (n) expect(h, p).toMatch(/Vote for competence\. <a href="https:\/\/nigeriareposit\.nln\.gov\.ng\/[^"]+" target="_blank" rel="noopener noreferrer" data-source="constitution-1999">\(1999 Constitution\)<svg[^>]*aria-hidden="true"[\s\S]*?<span class="visually-hidden"> \(opens in a new tab\)<\/span><\/a>/)
+      if (n) expect(h, p).toMatch(/Vote for competence\. <a href="https:\/\/nigeriareposit\.nln\.gov\.ng\/[^"]+" target="_blank" rel="noopener noreferrer" data-source="constitution-1999">\(1999 Constitution\)<span class="visually-hidden"> \(opens in a new tab\)<\/span><\/a>/)
     }
   })
 })

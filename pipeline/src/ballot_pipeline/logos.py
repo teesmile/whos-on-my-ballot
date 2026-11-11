@@ -26,7 +26,8 @@ LOGO_RAW_DIR = RAW_DIR / "logos"
 LOGO_DIR = GENERATED_DIR / "logos"
 MANIFEST = GENERATED_DIR / "logos.json"
 SPRITE = GENERATED_DIR / "sprite.json"
-SIZE = 96  # pixels per sprite cell; shown at 44-64 CSS pixels, so sharp on 1.5x-2x phone screens
+SIZE = 96  # pixels per logo cell; shown at 44-64 CSS pixels, so sharp on 1.5x-2x phone screens
+PHOTO_SIZE = 128  # pixels per photo cell, in a second row; a card shows the photo at 64-76 CSS pixels
 PAD = 2  # white margin inside each logo cell, so neighbouring cells never bleed into each other when scaled
 QUALITY = 82
 FULL = 400  # the share picture's copy: the original's own size, reduced only beyond this
@@ -120,46 +121,56 @@ def _size(path) -> tuple[int, int]:
 
 
 def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
-    """One image holding every party logo, then every candidate photo (D-064), each in a SIZE-pixel square cell, so a
-    ballot page makes one image request instead of one per party. Its name carries its hash, so it can be cached for a
-    year and a change is never served stale."""
+    """One image holding every party logo in a row of SIZE-pixel square cells and, under them, every approved candidate photo
+    (D-064, D-065) in a row of PHOTO_SIZE-pixel cells, so a ballot page makes one image request instead of one per party.
+    Its name carries its hash, so it can be cached for a year and a change is never served stale."""
     manifest = json.loads(MANIFEST.read_text())
-    cells: list[tuple[str, str, object]] = []
+    logos: list[tuple[str, Path]] = []
     for acronym, m in sorted(manifest.items()):
         raw = LOGO_RAW_DIR / m["raw"]
         if _sha256(raw.read_bytes()) != m["source_sha256"]:
             raise ValueError(f"{acronym}: stored original changed since it was downloaded")
-        cells.append(("logo", acronym, raw))
-    for cid, path in sorted(photo_cells.items()):
-        cells.append(("photo", cid, path))
+        logos.append((acronym, raw))
+    photos = sorted(photo_cells.items())
     tmp = LOGO_DIR / "_cells"
     tmp.mkdir(exist_ok=True)
-    parts = []
-    for i, (kind, _key, src) in enumerate(cells):
-        cell = tmp / f"{i:03d}.png"
-        if kind == "logo":
-            _gm(str(src), "-resize", f"{SIZE - 2 * PAD}x{SIZE - 2 * PAD}", "-background", "white", "-gravity", "center",
-                "-extent", f"{SIZE}x{SIZE}", "-strip", f"png:{cell}")
-        else:
-            _gm(str(src), "-resize", f"{SIZE}x{SIZE}!", "-strip", f"png:{cell}")
-        parts.append(str(cell))
+    rows: list[str] = []
+    for kind, items in (("logo", logos), ("photo", photos)):
+        if not items:
+            continue
+        parts = []
+        for i, (_key, src) in enumerate(items):
+            cell = tmp / f"{kind}-{i:03d}.png"
+            if kind == "logo":
+                _gm(str(src), "-resize", f"{SIZE - 2 * PAD}x{SIZE - 2 * PAD}", "-background", "white", "-gravity", "center",
+                    "-extent", f"{SIZE}x{SIZE}", "-strip", f"png:{cell}")
+            else:
+                _gm(str(src), "-resize", f"{PHOTO_SIZE}x{PHOTO_SIZE}!", "-strip", f"png:{cell}")
+            parts.append(str(cell))
+        row = tmp / f"row-{kind}.png"
+        _gm(*parts, "+append", f"png:{row}")
+        rows.append(str(row))
+        for c in parts:
+            Path(c).unlink()
     for old in LOGO_DIR.glob("sprite-*.webp"):
         old.unlink()
     staging = LOGO_DIR / "sprite.webp"
-    _gm(*parts, "+append", "-quality", str(QUALITY), f"webp:{staging}")
-    for p in parts:
-        Path(p).unlink()
+    _gm(*rows, "-background", "white", "-append", "-quality", str(QUALITY), f"webp:{staging}")
+    for r in rows:
+        Path(r).unlink()
     tmp.rmdir()
     digest = _sha256(staging.read_bytes())
     out = LOGO_DIR / f"sprite-{digest[:10]}.webp"
     staging.rename(out)
+    width = max(SIZE * len(logos), PHOTO_SIZE * len(photos))
     sprite = {
-        "file": f"logos/{out.name}", "cell": SIZE, "width": SIZE * len(cells), "height": SIZE, "bytes": out.stat().st_size, "sha256": digest,
-        "logos": {k: i for i, (kind, k, _) in enumerate(cells) if kind == "logo"},
-        "photos": {k: i for i, (kind, k, _) in enumerate(cells) if kind == "photo"},
+        "file": f"logos/{out.name}", "cell": SIZE, "photo_cell": PHOTO_SIZE, "photo_y": SIZE, "width": width,
+        "height": SIZE + (PHOTO_SIZE if photos else 0), "bytes": out.stat().st_size, "sha256": digest,
+        "logos": {k: i for i, (k, _) in enumerate(logos)},
+        "photos": {k: i for i, (k, _) in enumerate(photos)},
     }
     SPRITE.write_text(json.dumps(sprite, indent=1) + "\n")
-    log(f"sprite: {len(cells)} cells, {sprite['bytes']} bytes -> {out.name}")
+    log(f"sprite: {len(logos)} logos, {len(photos)} photos, {sprite['bytes']} bytes -> {out.name}")
     return sprite
 
 

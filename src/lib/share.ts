@@ -20,6 +20,15 @@ export function raceTitle(r: Pick<Race, 'office' | 'name'>): string {
   return `${OFFICE_TITLE[r.office]}: ${r.name}`
 }
 
+/** Where a race is, for the share picture: the constituency and its state as INEC prints them; just the state for a
+ *  governorship; nothing for President. */
+export function racePlace(r: Pick<Race, 'office' | 'name' | 'state'>): string {
+  if (r.office === 'president') return ''
+  const state = r.state ?? ''
+  if (!r.name || r.name === state) return state
+  return state ? `${r.name}, ${state}` : r.name
+}
+
 /** A ticket with no named candidate keeps its place, with INEC's remark verbatim. */
 export function noCandidateText(c: Pick<Candidate, 'remarks'>): string {
   return c.remarks ? `${NO_CANDIDATE} - INEC remark: ${c.remarks}` : NO_CANDIDATE
@@ -29,8 +38,12 @@ export function noCandidateText(c: Pick<Candidate, 'remarks'>): string {
 export const namedCount = (r: Race) => r.candidates.filter(c => c.candidate.name).length
 
 export interface Picture {
-  /** "President - 16 January 2027" */
+  /** "President - 16 January 2027" (the link-preview card's one line) */
   title: string
+  /** The share picture's top band: the office, where (the constituency and state, as INEC prints them; '' for President), the date. */
+  office: string
+  place: string
+  date: string
   /** [acronym, name as INEC prints it or the no-candidate text, candidate id, the photo's share copy or ''] */
   tiles: [string, string, string, string][]
   /** How many more candidates the race has beyond the tiles (0: every candidate is shown). */
@@ -43,11 +56,12 @@ export interface Picture {
  */
 export function picture(r: Race, slotOf: (c: Candidate) => string = () => ''): Picture {
   const title = `${raceTitle(r)} - ${ELECTION_DAY[r.election]}`
+  const top = { office: OFFICE_TITLE[r.office], place: racePlace(r), date: ELECTION_DAY[r.election] }
   const tile = (c: Candidate): [string, string, string, string] => [c.party, c.candidate.name || noCandidateText(c), c.id, slotOf(c)]
-  if (r.candidates.length <= 6) return { title, tiles: r.candidates.map(tile), more: 0 }
+  if (r.candidates.length <= 6) return { title, ...top, tiles: r.candidates.map(tile), more: 0 }
   const shown = r.candidates.filter(c => c.display_group === 'first').slice(0, 5)
   const shownNamed = shown.filter(c => c.candidate.name).length
-  return { title, tiles: shown.map(tile), more: namedCount(r) - shownNamed }
+  return { title, ...top, tiles: shown.map(tile), more: namedCount(r) - shownNamed }
 }
 
 /** The caption sent with every share (owner's wording, 11 Nov 2026): the same words for every race and candidate, no year.

@@ -1,8 +1,9 @@
 // After `next build`: turn the export into plain HTML plus one small module (decision D-022).
-// 1. Bundle src/client/lookup.ts to out/lookup.js.
-// 2. Remove every framework <script> and script preload from the HTML; add lookup.js only where a page has [data-lookup], [data-copy] or [data-countdown].
+// 1. Bundle src/client/lookup.ts to out/lookup.js, and the scroll-in motion alone to out/motion.js (D-066).
+// 2. Remove every framework <script> and script preload from the HTML; add lookup.js only where a page has [data-lookup],
+//    [data-copy] or [data-countdown], and motion.js to every other page (lookup.js includes it).
 // 3. Delete the framework's JS files and RSC payloads (.txt), which nothing references any more. CSS stays.
-// 4. Fail if any HTML still loads a script other than /lookup.js (structured-data blocks are data and stay).
+// 4. Fail if any HTML still loads a script other than /lookup.js or /motion.js (structured-data blocks are data and stay).
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -10,15 +11,17 @@ import { build } from 'esbuild'
 
 const OUT = path.resolve('out')
 
-await build({
-  entryPoints: ['src/client/lookup.ts'],
-  bundle: true,
-  minify: true,
-  format: 'esm',
-  target: 'es2020',
-  outfile: path.join(OUT, 'lookup.js'),
-  legalComments: 'none',
-})
+for (const [entry, out] of [['src/client/lookup.ts', 'lookup.js'], ['src/client/motion-page.ts', 'motion.js']]) {
+  await build({
+    entryPoints: [entry],
+    bundle: true,
+    minify: true,
+    format: 'esm',
+    target: 'es2020',
+    outfile: path.join(OUT, out),
+    legalComments: 'none',
+  })
+}
 
 function* walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -55,7 +58,8 @@ for (const file of walk(OUT)) {
     html = html.replace(`<a href="${section}" class="site-nav">`, `<a href="${section}" class="site-nav" aria-current="${current}">`)
   }
   if (html.includes('data-clock=') || html.includes('data-share=') || html.includes('data-tabs') || html.includes('data-lookup=') || html.includes('data-copy=')) html = html.replace('</body>', '<script type="module" src="/lookup.js"></script></body>')
-  const left = [...html.matchAll(/<script\b[^>]*>/g)].map(m => m[0]).filter(s => !s.includes('src="/lookup.js"') && s !== '<script type="application/ld+json">')
+  else html = html.replace('</body>', '<script type="module" src="/motion.js"></script></body>')
+  const left = [...html.matchAll(/<script\b[^>]*>/g)].map(m => m[0]).filter(s => !s.includes('src="/lookup.js"') && !s.includes('src="/motion.js"') && s !== '<script type="application/ld+json">')
   if (left.length) throw new Error(`${file} still has scripts: ${left.join(' ')}`)
   if (/\/_next\/static\/[^"']+\.js/.test(html)) throw new Error(`${file} still references framework JS`)
   fs.writeFileSync(file, html)
@@ -68,4 +72,4 @@ for (const file of walk(path.join(OUT, '_next'))) {
     removedJs++
   }
 }
-console.log(`postbuild: ${pages} pages stripped of framework JS, ${removedJs} framework JS files and ${removedTxt} RSC payloads removed, lookup.js ${fs.statSync(path.join(OUT, 'lookup.js')).size} bytes`)
+console.log(`postbuild: ${pages} pages stripped of framework JS, ${removedJs} framework JS files and ${removedTxt} RSC payloads removed, lookup.js ${fs.statSync(path.join(OUT, 'lookup.js')).size} bytes, motion.js ${fs.statSync(path.join(OUT, 'motion.js')).size} bytes`)

@@ -10,7 +10,7 @@ import { SourceLine } from './SourceLine'
 export const noGovernorText = (state: string) =>
   state === 'FCT'
     ? 'The FCT has no governor and no State House of Assembly, so there is no election in the FCT on 6 February 2027.'
-    : `No governorship election in ${state} on 6 February 2027.`
+    : `${state} has no governorship election on 6 February 2027.`
 export const NO_SHA_BORNO = 'INEC has not published a list of State House of Assembly candidates for Borno. Its final list of 31 October 2026 covers the other 35 states with an assembly, so no Borno candidates can be shown here.'
 
 export function FebBallot({ b }: { b: FebBallotSpec }) {
@@ -21,7 +21,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
   if (st !== 'FCT') {
     panels.push({
       key: 'governor', label: 'Governor', title: 'Governor',
-      ...(gov ? badgeFor([gov]) : { badge: 'None', badgeLong: 'no election in this state' }),
+      ...(gov ? badgeFor([gov]) : { badge: '0', badgeLong: 'candidates: no governorship election in this state' }),
       content: gov
         ? <RaceSection r={gov} pageUrl={b.path} />
         : (
@@ -34,7 +34,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
     })
     panels.push({
       key: 'assembly', label: 'Assembly', title: 'State House of Assembly',
-      ...(sha.length ? badgeFor(sha) : { badge: 'None', badgeLong: 'no list published' }),
+      ...(sha.length ? badgeFor(sha) : { badge: '0', badgeLong: 'candidates: no list published' }),
       content: st === 'BORNO'
         ? (
             <section className="race" aria-labelledby="no-sha">

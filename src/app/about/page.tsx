@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { formatDate, NOT_PROVIDED } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
-import { allPhotos, firstGroup } from '@/lib/data'
+import { allPhotos, candidate, firstGroup } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { CORRECTIONS_EMAIL } from '@/lib/site'
 
@@ -66,7 +66,7 @@ export default function About() {
 
       <h2>What this site never does</h2>
       <p>
-        {`No rankings, predictions, polls, endorsements or opinions. ${photos.length ? 'Photos only for the five presidential candidates described below.' : 'No candidate photos.'} `}
+        {'No rankings, predictions, polls, endorsements or opinions. Photos only for presidential candidates, as described below. '}
         Party colours and marks appear only inside each
         party’s official logo from INEC’s register, the same size for every party, never in the site’s own design. No candidate is featured
         or given more space than another.
@@ -78,17 +78,36 @@ export default function About() {
         them. It lists roles and dates only, newest first, with no summary in our own words. Each entry is numbered to an official record or an
         independent source in the page’s list of sources; Wikipedia is never used.
       </p>
+      <h2 id="photos">Photos</h2>
+      <p>
+        Only presidential candidates have a photo, taken from the candidate’s own official account, their campaign or party website, or
+        Wikimedia Commons, never from a news site or agency, with the same head-and-shoulders crop and size for all. Every other candidate,
+        and any presidential candidate without a suitable photo, shows the same plain placeholder. A candidate or party can send an official
+        photo to
+        {' '}
+        <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Official photo')}`}>{CORRECTIONS_EMAIL}</a>
+        ; the same address takes any request to change a photo.
+      </p>
       {photos.length > 0 && (
         <>
-          <h2 id="photos">Photos</h2>
-          <p>
-            The presidential candidates of the five parties shown first each have a photo, taken from the candidate’s own official account,
-            their campaign or party website, or Wikimedia Commons, and credited on the candidate’s page. The same head-and-shoulders crop and
-            size for all; no other candidate has one. To ask for a change, write to
-            {' '}
-            <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Photo change')}`}>{CORRECTIONS_EMAIL}</a>
-            .
-          </p>
+          <h3 id="photo-credits">Photo credits</h3>
+          <ul className="photo-credits">
+            {photos.map(([id, p]) => (
+              <li key={id} id={`credit-${id}`}>
+                <strong>{candidate(id).c.candidate.name}</strong>
+                {` (${candidate(id).c.party}): `}
+                <a href={p.file_page}>{p.source}</a>
+                {p.author && `, by ${p.author}`}
+                {p.licence && p.licence_url && (
+                  <>
+                    {', licensed under '}
+                    <a href={p.licence_url}>{p.licence}</a>
+                  </>
+                )}
+                {`; cropped to a square for this site. Retrieved ${formatDate(p.retrieved)}.`}
+              </li>
+            ))}
+          </ul>
         </>
       )}
 

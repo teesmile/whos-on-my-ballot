@@ -77,7 +77,8 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
   const general: GeneralSource[] = [
     { label: 'The details above', entry: inecSource(c.provenance.source_id, `, page ${c.provenance.page}, row ${c.provenance.sn}`, `${inec.file_url}#page=${c.provenance.page}`) },
     { label: 'Party name and logo', entry: inecSource('inec-parties', '') },
-    ...(pic ? [{ label: 'Photo', entry: { key: pic.file_page, href: pic.file_page, publisher: pic.source, detail: [pic.author, pic.licence, 'cropped'].filter(Boolean).join(', '), published: null, retrieved: pic.retrieved } }] : []),
+    // where the photo came from; the photographer, licence and crop are in the About page's photo credits
+    ...(pic ? [{ label: 'Photo', entry: { key: pic.file_page, href: pic.file_page, publisher: pic.source, detail: null, published: null, retrieved: pic.retrieved } }] : []),
   ]
   const people = ([['Candidate', c.candidate], [mateLabel(race), c.running_mate]] as const).filter(([, p]) => p)
   const raceLine = `${raceTitle(race)} - ${ELECTION_DAY[race.election]}`
@@ -93,25 +94,19 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
         <a href={racePath(race.id)}>{raceTitle(race)}</a>
       </nav>
 
-      <header className={pic ? 'profile has-photo' : 'profile'}>
-        {pic && (
-          <figure className="profile-photo">
-            {/* eslint-disable-next-line @next/next/no-img-element -- static export: a pre-sized WebP from the pipeline */}
-            <img src={`/${pic.page}`} width={pic.page_size / 2} height={pic.page_size / 2} alt={`Photo of ${c.candidate.name}`} />
-            <figcaption>
-              {'Photo: '}
-              <a href={pic.file_page}>{pic.source}</a>
-              {pic.author && ` (${pic.author})`}
-              {pic.licence && pic.licence_url && (
-                <>
-                  {', '}
-                  <a href={pic.licence_url}>{pic.licence}</a>
-                </>
-              )}
-              {', cropped.'}
-            </figcaption>
-          </figure>
-        )}
+      <header className="profile has-photo">
+        {pic
+          ? (
+              <figure className="profile-photo">
+                {/* eslint-disable-next-line @next/next/no-img-element -- static export: a pre-sized WebP from the pipeline */}
+                <img src={`/${pic.page}`} width={pic.page_size / 2} height={pic.page_size / 2} alt={`Photo of ${c.candidate.name}`} />
+                <figcaption>{`Photo: ${pic.credit}`}</figcaption>
+              </figure>
+            )
+          : (
+              // the same plain placeholder for everyone without an approved photo (D-065)
+              <div className="profile-photo"><span className="photo ph" aria-hidden="true" /></div>
+            )}
         <div className="profile-text">
           <h1 data-candidate-id={c.id}>{name}</h1>
           <div className="party-head">

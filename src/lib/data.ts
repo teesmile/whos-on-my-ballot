@@ -157,12 +157,17 @@ export const logoPngDataUrl = (party: string) => `data:image/png;base64,${fs.rea
 /** A file the pipeline wrote under data/generated (logos, the sprite, photos), for the routes that serve it. */
 export const generatedBytes = (rel: string) => fs.readFileSync(path.join(DIR, rel))
 
-/** One image holding every party logo and every candidate photo, in square cells: one request per page, not one per party. */
-export interface Sprite { file: string, cell: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number> }
+/**
+ * One image holding every party logo (a row of `cell`-pixel squares) and every approved candidate photo (a row of
+ * `photo_cell`-pixel squares at y = `photo_y`): one request per page, not one per party.
+ */
+export interface Sprite { file: string, cell: number, photo_cell: number, photo_y: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number> }
 export const sprite = (): Sprite => read<Sprite>('sprite.json')
 
-/** A candidate's photo (owner decision D-064) and where it came from, credited in the source's own words. */
+/** A presidential candidate's photo, approved face by face by the owner (D-064, D-065), and where it came from. */
 export interface Photo {
+  /** The short credit under the photo: "Wikimedia Commons", "official X account", ... */
+  credit: string
   page: string
   page_size: number
   share: string
@@ -178,10 +183,10 @@ export interface Photo {
 }
 let photos: Record<string, Photo> | null = null
 export function allPhotos(): Record<string, Photo> {
-  photos ??= read<{ approved: boolean, people: Record<string, Photo> }>('photos.json').people
+  photos ??= read<{ people: Record<string, Photo> }>('photos.json').people
   return photos
 }
-/** The candidate's photo, or null: every first-group presidential candidate has one, nobody else (D-064). */
+/** The candidate's photo, or null (the neutral placeholder): only presidential candidates, only approved faces (D-065). */
 export const photo = (candidateId: string): Photo | null => allPhotos()[candidateId] ?? null
 /** For the share picture: the photo's larger copy (loaded only when someone shares), or '' for no photo. */
 export const sharePhoto = (c: Candidate): string => { const p = photo(c.id); return p ? `/${p.share}` : '' }

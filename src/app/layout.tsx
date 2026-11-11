@@ -50,7 +50,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SourceLine id="inec-pu-locator" what="Polling units" />
           <SourceLine id="inec-constituencies-workbook" what="Constituencies" />
           <SourceLine id="inec-parties" what="Parties" />
-          <p>This site sets no cookies and runs no trackers or analytics, and there are no accounts. What you type stays in your browser.</p>
           <div className="footer-row">
             <p className="footer-printed">Shown exactly as INEC printed them.</p>
             <p className="footer-correct"><a className="btn btn-secondary" href="/corrections/">Report a correction</a></p>
