@@ -13,7 +13,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: sudo apt-get install -y poppler-utils
+      # poppler-utils gives the pipeline its independent second extractor (`pdftotext`), so it truly needs apt. The packages are
+      # cached for this runner image; on a miss, apt runs with retries and a backoff, and the downloaded packages are saved.
+      - id: image
+        run: echo "name=$ImageOS-$ImageVersion" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: ~/apt-debs
+          key: apt-poppler-${{ steps.image.outputs.name }}
+      - name: Install poppler-utils (cached, else apt with retries)
+        run: |
+          D="$HOME/apt-debs"
+          if compgen -G "$D/*.deb" > /dev/null && sudo dpkg -i "$D"/*.deb && pdftotext -v; then exit 0; fi
+          mkdir -p "$D/partial"
+          APT="sudo apt-get -q -o Acquire::Retries=3 -o APT::Keep-Downloaded-Packages=true -o Dir::Cache::Archives=$D"
+          for i in 1 2 3 4 5; do
+            if $APT update && $APT install -y poppler-utils && pdftotext -v; then
+              sudo rm -rf "$D/partial" "$D/lock"; sudo chown -R "$USER" "$D"; exit 0
+            fi
+            echo "apt attempt $i failed; retrying in $((i * 30)) s"; sleep $((i * 30))
+          done
+          exit 1
       # Fetch INEC's PDFs so extraction tests run against the real files (they are never committed, D-005).
       # The full `make verify-data` also needs the ~2 h polling-unit crawl and is run locally before each phase closes.
       - run: make fetch
@@ -29,7 +49,15 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm exec playwright install --with-deps chromium
+      # Chromium only, without --with-deps: the runner image already has the system libraries, so nothing goes through apt
+      # and an Ubuntu mirror outage can't block the run. The browser download is cached per Playwright version.
+      - id: pw
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}
+      - run: pnpm exec playwright install chromium
       - run: pnpm lint && pnpm typecheck && pnpm test
       - run: pnpm build
       - run: pnpm test:site

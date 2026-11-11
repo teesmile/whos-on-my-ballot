@@ -18,6 +18,14 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm exec playwright install --with-deps chromium
+      # Chromium only, without --with-deps: the runner image already has the system libraries, so nothing goes through apt
+      # and an Ubuntu mirror outage can't block the run. The browser download is cached per Playwright version.
+      - id: pw
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}
+      - run: pnpm exec playwright install chromium
       - run: pnpm build
       - run: LH_PROFILE=slow3g pnpm lighthouse
