@@ -60,8 +60,9 @@ describe('titles, descriptions and share tags', () => {
       expect(description.length, `${p}: ${description}`).toBeLessThanOrEqual(155)
     }
     // Names are shown exactly as INEC prints them (the working rules §1), so a page titled by a long INEC name may pass 60
-    // characters. Hand-written, state and LGA titles never may, and a long ward title is the ward's name alone.
-    const fixed = long.filter(t => !/\([A-Z]{1,5}\), (?:President|Senate|House of Reps|Governor|State Assembly)(?:: .+)?$|^(?:16 Jan|6 Feb) ballot[:,] | ward(?:, [^:]+)?$/.test(t.replace(/^\d+ /, '')))
+    // characters (candidates, ballots, wards and races). Hand-written, state and LGA titles never may, and a long ward title is
+    // the ward's name alone.
+    const fixed = long.filter(t => !/\([A-Z]{1,5}\), (?:President|Senate|House of Reps|Governor|State Assembly)(?:: .+)?$|^(?:16 Jan|6 Feb) ballot[:,] | ward(?:, [^:]+)?$|^(?:Senate|House of Reps|State Assembly): .+, [A-Z ]+$/.test(t.replace(/^\d+ /, '')))
     expect(fixed, fixed.slice(0, 5).join('\n')).toEqual([])
     for (const t of long.filter(x => / ward(?:, [^:]+)?$/.test(x))) expect(t, t).toMatch(/^\d+ [^,]+ ward$|^\d+ .+ ward$/) // the name alone
     for (const t of long) expect(t, t).not.toMatch(/ ward, .+: polling units$/)

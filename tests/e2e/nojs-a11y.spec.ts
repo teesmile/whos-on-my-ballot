@@ -1,6 +1,8 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
+import { settled } from './settled'
+
 import { SITE_URL } from '../../src/lib/site'
 
 const PAGES = [
@@ -31,6 +33,8 @@ for (const url of PAGES) {
   test(`axe finds no violations: ${url}`, async ({ page }) => {
     await page.goto(url)
     await page.waitForLoadState('networkidle')
+    await page.emulateMedia({ reducedMotion: 'reduce' }) // axe checks the final colours, not a fade part-way (D-058)
+    await settled(page)
     const { violations } = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze()
     expect(violations.map(v => `${v.id}: ${v.nodes.length} nodes`)).toEqual([])
   })
@@ -65,8 +69,9 @@ test('keyboard: the code lookup works with the keyboard alone', async ({ page })
   }
   expect(order.slice(0, 7)).toEqual(['Skip to content', 'Who’s on my ballot?', 'Election day', 'Results', 'About', 'Pick your state', 'Search by a landmark'])
   expect(order[7]).toMatch(/^Dates: /)
-  expect(order.slice(8, 45)).toHaveLength(37)
-  expect(order.slice(45)).toEqual(['home-state', 'home-q', 'Search', 'code'])
+  expect(order[8]).toBe('Go to the results page')
+  expect(order.slice(9, 46)).toHaveLength(37)
+  expect(order.slice(46)).toEqual(['home-state', 'home-q', 'Search', 'code'])
   await expect(page.getByLabel(/Code on your voter’s card/)).toBeFocused()
   await page.keyboard.type('01/01/01/001')
   await page.keyboard.press('Enter')
@@ -92,7 +97,7 @@ test.describe('candidate page without JavaScript', () => {
     await page.goto('/c/jan-2027-president-apc/')
     await expect(page.getByRole('heading', { name: 'Career and offices held' })).toBeVisible()
     await expect(page.getByRole('heading', { name: 'Sources' })).toBeVisible()
-    await expect(page.getByRole('link', { name: 'Report a correction' })).toBeVisible()
+    await expect(page.getByRole('main').getByRole('link', { name: 'Report a correction' })).toBeVisible()
     await expect(page.getByRole('button', { name: 'Copy link' })).toBeHidden()
   })
 })

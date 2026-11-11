@@ -35,9 +35,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Who’s on my ballot?
             </a>
             <nav aria-label="Site" className="site-nav-list">
-              <a href="/election-day/" className="site-nav">Election day</a>
-              <a href="/results/" className="site-nav">Results</a>
-              <a href="/about/" className="site-nav">About</a>
+              <a href="/election-day/" className="site-nav"><span>Election day</span></a>
+              <a href="/results/" className="site-nav"><span>Results</span></a>
+              <a href="/about/" className="site-nav"><span>About</span></a>
             </nav>
           </div>
         </header>
@@ -50,9 +50,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SourceLine id="inec-pu-locator" what="Polling units" />
           <SourceLine id="inec-constituencies-workbook" what="Constituencies" />
           <SourceLine id="inec-parties" what="Parties" />
-          <p>Shown exactly as INEC printed them.</p>
-          <p className="go"><a className="btn btn-secondary" href="/corrections/">Corrections</a></p>
           <p>This site sets no cookies and runs no trackers or analytics, and there are no accounts. What you type stays in your browser.</p>
+          <div className="footer-row">
+            <p className="footer-printed">Shown exactly as INEC printed them.</p>
+            <p className="footer-correct"><a className="btn btn-secondary" href="/corrections/">Report a correction</a></p>
+          </div>
           <Credit />
         </footer>
       </body>

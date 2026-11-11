@@ -1,10 +1,11 @@
-"""Candidate photos (owner decision D-048): the presidential candidates of the first group (D-042), all of them or none.
+"""Candidate photos (owner decisions D-048, D-059): the presidential candidates of the first group (D-042) only. Each one with a
+properly licensed photo shows it; the site shows the same plain placeholder for any without (D-059 replaced all-five-or-none).
 
 Only images whose licence allows reuse (or that a party sends with written permission) are listed, in
 data/overrides/photos.yaml, each with its file page, author, licence and a crop box. `ballot-pipeline photos` downloads the
 listed originals politely into raw/photos/ and checks each against the hash recorded in the yaml. `ballot-pipeline assets`
 (offline) crops every photo the same way (a square head-and-shoulders box from the yaml), writes a page copy and a
-share-picture copy, and hands a copy to the sprite. Nothing is shown until the owner has approved every photo (`approved`).
+share-picture copy, and hands a copy to the sprite. Nothing is shown until the owner has switched photos on (`approved`).
 """
 
 from __future__ import annotations
@@ -99,15 +100,14 @@ def build_photos(log=print) -> dict[str, Path]:
 
 
 def check_photos(first_group_presidential: set[str]) -> list[str]:
-    """All or none (D-048): either no photos, or one for every named presidential candidate of the first group and nobody else."""
+    """Only the first group's named presidential candidates may have a photo (D-048, D-059); any subset of them, the rest a placeholder."""
     if not PHOTOS_JSON.exists():
         return ["no photos.json: run `ballot-pipeline assets`"]
     people = json.loads(PHOTOS_JSON.read_text())["people"]
-    if not people:
-        return []
     errors = []
-    if set(people) != first_group_presidential:
-        errors.append(f"photos (D-048): all five or none; have {sorted(people)}, need {sorted(first_group_presidential)}")
+    extra = set(people) - first_group_presidential
+    if extra:
+        errors.append(f"photos (D-059): only the first group's presidential candidates may have one; not {sorted(extra)}")
     for cid, m in people.items():
         for key in ("page", "share"):
             f = GENERATED_DIR / m[key]

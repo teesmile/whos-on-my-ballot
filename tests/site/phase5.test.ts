@@ -133,7 +133,7 @@ describe('6 February ballot pages', () => {
   it('every candidate’s page cites INEC with a link to the page and a retrieval date', () => {
     for (const r of febRaces().filter((_, i) => i % 20 === 0)) {
       for (const c of r.candidates) {
-        expect(html(`c/${c.id}`), c.id).toMatch(/<li id="src-\d+" data-source="[^"]+"><a class="src-link" href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+"><span class="src-n" aria-hidden="true">\d+<\/span><span><strong>INEC<\/strong>: [^<]+, page \d+, row \d+\. Retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/)
+        expect(html(`c/${c.id}`), c.id).toMatch(/<li data-source="[^"]+"><a class="src-link" href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+"><span><span class="src-label">The details above: <\/span><strong>INEC<\/strong>: [^<]+, page \d+, row \d+\. Retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/)
       }
     }
   })

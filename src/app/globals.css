@@ -60,12 +60,14 @@ a:hover, a:focus, a:active { text-decoration: none; }
 .site-name, .site-name:visited { color: #fff; font-weight: 800; font-size: 1.1rem; line-height: 1; display: inline-flex; align-items: center; min-height: 44px; flex: 0 1 auto; min-width: 0; white-space: nowrap; letter-spacing: -0.01em; }
 .site-mark { flex: none; width: 26px; height: 29px; margin-right: 0.5rem; }
 .site-nav-list { display: flex; flex: none; gap: 0.4rem; margin-left: auto; }
-.site-nav, .site-nav:visited {
-  display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; height: 44px; padding: 0 0.85rem; border-radius: 8px;
-  border: 1.5px solid rgba(255, 255, 255, 0.85); color: #fff; font-weight: 700; font-size: 0.92rem; line-height: 1; white-space: nowrap;
-}
-.site-nav:hover { background: rgba(255, 255, 255, 0.16); }
-.site-nav[aria-current] { background: #fff; color: var(--green-deep); border-color: #fff; }
+/* The three header buttons match: the same rectangle, corners, height and border; only the width follows the word. The link
+   keeps a 44px tap area; the visible box sits inside it. */
+.site-nav, .site-nav:visited { display: inline-flex; align-items: center; height: 44px; color: #fff; font-weight: 700; font-size: 0.92rem; line-height: 1; white-space: nowrap; }
+.site-nav > span { display: inline-flex; align-items: center; height: 36px; padding: 0 0.85rem; border: 1px solid rgba(255, 255, 255, 0.85); border-radius: 8px; }
+.site-nav:hover > span { background: rgba(255, 255, 255, 0.16); }
+.site-nav[aria-current] > span { background: #fff; color: var(--green-deep); border-color: #fff; }
+.site-nav:focus-visible { outline: none; }
+.site-nav:focus-visible > span { outline: 3px solid #fff; outline-offset: 2px; }
 .site-header :focus-visible { outline-color: #fff; }
 /* Phones: the mark, the name and all three buttons on one row down to 360px, in an Arial-width font that every
    phone has (Roboto, Helvetica, Arial), sized with the screen. */
@@ -74,9 +76,9 @@ a:hover, a:focus, a:active { text-decoration: none; }
   .site-header-in { padding: 0 0.5rem; gap: 0.25rem; }
   .site-name { font-size: clamp(12px, 3.4vw, 16px); }
   .site-mark { width: 21px; height: 24px; margin-right: 0.3rem; }
-  .site-nav-list { gap: 0.2rem; }
-  .site-nav-list { padding-left: 0.2rem; }
-  .site-nav { padding: 0 0.4rem; font-size: clamp(11.5px, 3.3vw, 14px); border-radius: 7px; }
+  .site-nav-list { gap: 0.25rem; padding-left: 0.2rem; }
+  .site-nav { font-size: clamp(11.5px, 3.3vw, 14px); }
+  .site-nav > span { height: 26px; padding: 0 0.42rem; border-radius: 6px; }
 }
 
 .site-footer {
@@ -84,7 +86,11 @@ a:hover, a:focus, a:active { text-decoration: none; }
   background: var(--panel); border-top: 1px solid var(--line); box-shadow: 0 0 0 100vmax var(--panel); clip-path: inset(0 -100vmax);
 }
 .affiliation { font-weight: 700; color: var(--fg); }
-.credit { font-style: italic; white-space: nowrap; }
+/* Phones: the printing line and the correction button centred, stacked; wide screens: one row, line left, button right. */
+.footer-row { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; text-align: center; margin-top: 0.75rem; }
+.footer-row p { margin: 0.25rem 0; }
+@media (min-width: 40rem) { .footer-row { flex-direction: row; justify-content: space-between; text-align: left; } }
+.credit { font-style: italic; white-space: nowrap; text-align: center; margin: 0.5rem 0 0; }
 .credit a { display: inline-flex; align-items: center; min-height: 44px; font-style: italic; font-weight: 700; }
 /* The heart is text, the same size as the words around it and on the same line; emoji don't italicise, so it is slanted to match. */
 .heart { display: inline-block; font-size: 1em; line-height: 1; font-style: normal; font-weight: 400; transform: skewX(-12deg); font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
@@ -123,7 +129,7 @@ button.btn-quiet { background: var(--bg); color: var(--fg); border: 1.5px solid 
 button.btn-quiet:hover { background: var(--panel); color: var(--fg); border-color: var(--fg); }
 main p > a.btn { margin: 0.25rem 0; }
 .go { margin: 1rem 0; }
-.site-footer .go .btn { min-height: 44px; padding: 0.45rem 0.95rem; }
+.site-footer .go .btn, .footer-correct .btn { min-height: 44px; padding: 0.45rem 0.95rem; }
 
 /* Where you are on the guided path: the current step carries the warm accent. */
 .progress { list-style: none; display: flex; flex-wrap: wrap; gap: 0.3rem; padding: 0; margin: 0.25rem 0 1rem; font-size: 0.82rem; counter-reset: step; }
@@ -137,7 +143,7 @@ main p > a.btn { margin: 0.25rem 0; }
 
 /* Home and election-day hero */
 .hero {
-  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "title art" "line line" "action action" "clock clock";
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "title art" "line line" "action action" "clock clock" "results results";
   column-gap: 1rem; padding: 1.25rem 0 0.5rem; border-bottom: 1px solid var(--line-soft); margin-bottom: 1rem;
 }
 .hero > h1 { grid-area: title; margin: 0.25rem 0 0.5rem; font-size: 2.1rem; }
@@ -145,12 +151,14 @@ main p > a.btn { margin: 0.25rem 0; }
 .hero-line { grid-area: line; font-size: 1.12rem; color: var(--fg); margin: 0 0 1rem; max-width: 34rem; }
 .hero-action { grid-area: action; }
 .hero .clock { grid-area: clock; }
+.hero .results-card { grid-area: results; margin: 0 0 1rem; }
 .action-title { font-size: 1.5rem; margin: 0.25rem 0 0.5rem; }
 .action-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.5rem 0 1.25rem; }
 .action-buttons .btn { flex: 1 1 11rem; }
 .hero-plain { grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "line" "clock"; }
 @media (min-width: 56rem) {
-  .hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); grid-template-areas: "title art" "line art" "action clock"; column-gap: 2.5rem; padding-top: 2rem; }
+  .hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); grid-template-areas: "title art" "line art" "action clock" "results clock"; column-gap: 2.5rem; padding-top: 2rem; }
+  .hero .results-card { align-self: start; }
   .hero > h1 { font-size: 3rem; }
   .hero-art { width: 11rem; height: 11rem; justify-self: center; align-self: center; }
   .hero-plain { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "title clock" "line clock"; }
@@ -225,16 +233,20 @@ input:focus, select:focus { border-color: var(--green-strong); }
 /* A ballot: the race tabs, stuck directly under the header while scrolling */
 .race-tabs { position: sticky; top: var(--hdr); z-index: 15; background: var(--bg); padding: 0.4rem 0; margin: 1rem 0 0.25rem; box-shadow: 0 0 0 100vmax var(--bg), 0 1px 0 100vmax var(--line); clip-path: inset(0 -100vmax -1px); }
 .race-tabs ul { list-style: none; margin: 0; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 0.4rem; }
+.race-tabs li { display: flex; }
+/* Equal boxes: the same width and height for every tab, whatever its label. */
 .race-tabs a {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem; min-height: 48px; padding: 0.25rem 0.35rem;
-  border: 2px solid var(--green-strong); border-radius: var(--radius); background: var(--bg); color: var(--fg); font-weight: 700; text-align: center; line-height: 1.15;
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.4rem; height: 48px; padding: 0 0.35rem;
+  border: 2px solid var(--green-strong); border-radius: var(--radius); background: var(--bg); color: var(--fg); font-weight: 700; text-align: center; line-height: 1.1;
 }
 .race-tabs a:visited { color: var(--fg); }
 .race-tabs a:hover { background: var(--panel); }
 .race-tabs a[aria-selected="true"] { background: var(--green); border-color: var(--green); color: #fff; }
-.tab-name { font-size: 0.88rem; }
-.tab-count { font-size: 0.74rem; font-weight: 800; padding: 0 0.45rem; border-radius: 999px; background: var(--panel); color: var(--fg); border: 1px solid var(--line); }
+.tab-name { font-size: 0.92rem; white-space: nowrap; }
+/* The count in a true circle */
+.tab-count { flex: none; display: inline-grid; place-items: center; width: 1.65rem; height: 1.65rem; border-radius: 50%; font-size: 0.74rem; font-weight: 800; background: var(--panel); color: var(--fg); border: 1px solid var(--line); font-variant-numeric: tabular-nums; }
 .race-tabs a[aria-selected="true"] .tab-count { background: #fff; color: var(--green-deep); border-color: #fff; }
+@media (max-width: 22.5rem) { .tab-name { font-size: 0.85rem; } .race-tabs a { gap: 0.3rem; } }
 .tab-panel:focus { outline: none; }
 .next { margin: 1.5rem 0 0.5rem; }
 .btn-next { width: 100%; }
@@ -266,22 +278,24 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .card-pics { display: flex; gap: 0.4rem; }
 .logo, .photo { display: block; flex: none; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
 .logo { padding: 3px; }
-.photo { border-radius: 50%; }
+.photo { border-radius: 50%; overflow: hidden; }
 .card-party { font-weight: 800; font-size: 0.95rem; margin-top: 0.3rem; letter-spacing: 0.02em; }
 .card-name { font-weight: 700; font-size: 0.95rem; line-height: 1.3; }
 .card-mate { color: var(--muted); font-size: 0.82rem; line-height: 1.3; }
 .card.muted > a { background: var(--panel); border-style: dashed; border-color: var(--field); box-shadow: none; }
 .card.muted .card-name { color: var(--muted); font-weight: 600; }
-/* "Share on WhatsApp" in the grid, phones only: in the slot beside an odd first group, or as a full row under it. */
+/* "Share on WhatsApp" in the grid, phones only: no card, no border, no box. It keeps a card's space so the grid stays even:
+   the words, and WhatsApp's glyph on a round button beneath them. As a full row under the group when there is no slot. */
 .wa-tile { display: none; }
 @media (max-width: 39.99rem) { .wa-tile { display: block; } }
 .wa-tile > a {
-  height: 100%; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.75rem;
-  border: 2px solid var(--green); border-radius: 14px; background: var(--bg); color: var(--green-deep); font-weight: 800; text-align: center; line-height: 1.25;
+  height: 100%; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.75rem;
+  color: var(--green-deep); font-weight: 800; text-align: center; line-height: 1.25;
 }
-.wa-tile > a:hover { background: var(--panel); }
-.wa-row > a { flex-direction: row; margin-top: 0.6rem; }
-.share-icon { flex: none; }
+.wa-tile-button { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--green); }
+.wa-tile-button .wa-glyph { width: 28px; height: 28px; }
+.wa-tile > a:hover .wa-tile-button { background: var(--green-strong); }
+.wa-row > a { margin-top: 0.6rem; padding: 0.25rem; }
 .order-note { color: var(--muted); font-size: 0.9rem; margin: 0.75rem 0; }
 .results-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; padding: 0.7rem 0.9rem; margin: 1rem 0; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
 .results-strip p { margin: 0; font-weight: 650; }
@@ -291,11 +305,11 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .profile { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1.1rem 1rem; margin: 0.5rem 0 1.25rem; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); }
 .profile h1 { margin: 0 0 0.6rem; }
 .profile-photo { margin: 0; }
-.profile-photo img { display: block; width: 8rem; height: 8rem; border-radius: 16px; border: 1px solid var(--line); }
+.profile-photo img, .profile-photo svg { display: block; width: 8rem; height: 8rem; border-radius: 16px; border: 1px solid var(--line); overflow: hidden; }
 .profile-photo figcaption { margin-top: 0.35rem; font-size: 0.78rem; color: var(--muted); max-width: 16rem; }
 @media (min-width: 40rem) {
   .profile.has-photo { grid-template-columns: auto minmax(0, 1fr); column-gap: 1.5rem; padding: 1.4rem; }
-  .profile-photo img { width: 10rem; height: 10rem; }
+  .profile-photo img, .profile-photo svg { width: 10rem; height: 10rem; }
 }
 .party-head { display: flex; align-items: center; gap: 0.75rem; margin: 0.25rem 0; }
 .party { margin: 0; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
@@ -347,6 +361,11 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .src-n { flex: none; margin-top: 0.05rem; display: inline-grid; place-items: center; min-width: 1.55rem; height: 1.55rem; border-radius: 999px; background: var(--green-strong); color: #fff; font-size: 0.76rem; font-weight: 800; }
 .correct .correct-row { margin: 0.75rem 0; }
 .photo-credits { padding-left: 1.2rem; }
+.src-label { font-weight: 700; }
+.sources-general { margin-bottom: 0.6rem; }
+.choose-first { border-left-color: var(--accent-ink); }
+.choose-first p { margin: 0.25rem 0; }
+.choose-first-go { margin-top: 0.5rem !important; }
 
 /* Room for the forms the script reveals, so nothing jumps; without JavaScript the same space holds the note. */
 .by-code { min-height: 17rem; }
@@ -360,6 +379,10 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
 .share-buttons > * { flex: 1 1 10rem; min-height: 52px; }
 .share-status { margin: 0.5rem 0 0; font-weight: 650; min-height: 1.4em; }
 .share-status:empty { min-height: 0; margin: 0; }
+
+/* WhatsApp's official glyph (src/assets/brand/whatsapp), unaltered: white on green, green on white. Embedded byte for byte. */
+.wa-glyph { display: inline-block; flex: none; width: 1.35em; height: 1.35em; background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgNzIwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNjAsMEMxNjEuMTgsMCwwLDE2MS4xOCwwLDM2MGMwLDY1LjQxLDE3LjQ1LDEyNi43NSw0Ny45NCwxNzkuNjFMMCw3MjBsMTg3LjAyLTQ0LjIxYzUxLjM0LDI4LjE4LDExMC4yOCw0NC4yMSwxNzIuOTgsNDQuMjEsMTk4LjgyLDAsMzYwLTE2MS4xOCwzNjAtMzYwUzU1OC44MiwwLDM2MCwwWk0zNjAsNjU1LjUyYy02MC4xNywwLTExNi4xMy0xNy45OC0xNjIuODItNDguODdsLTExMC40OSwyOC4xNCwzMC45OS0xMDUuNjFjLTMzLjUzLTQ3LjkzLTUzLjItMTA2LjI2LTUzLjItMTY5LjE5LDAtMTYzLjIxLDEzMi4zMS0yOTUuNTIsMjk1LjUyLTI5NS41MnMyOTUuNTIsMTMyLjMxLDI5NS41MiwyOTUuNTItMTMyLjMxLDI5NS41Mi0yOTUuNTIsMjk1LjUyWiIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQ0NC4zNSw0MDcuNTJsODcuMSw0MS4wNmM0LDEuODgsNi41Niw1Ljk0LDYuMiwxMC4zNC0uOTQsMTEuNDYtNS41NCwzNC40My0yNi4xMyw1NS4wMi01OC4xMiw1OC4xMi0xNjIuNDktNy42NC0xNjYuNzQtMTAuMTgtMjUuNjctMTMuNzktNTAuMDYtMzIuMjQtNzMuMTktNTUuMzZzLTQxLjU4LTQ3LjUyLTU1LjM3LTczLjE5Yy0yLjU1LTQuMjQtNjguMzEtMTA4LjYxLTEwLjE4LTE2Ni43NCwyMC41OS0yMC41OSw0My41Ni0yNS4xOSw1NS4wMi0yNi4xMyw0LjQxLS4zNiw4LjQ2LDIuMiwxMC4zNCw2LjJsNDEuMDcsODcuMWMxLjk0LDQuMTIsMS4wOSw5LjAyLTIuMTMsMTIuMjRsLTMwLjYxLDMwLjYxYy02LjYyLDYuNjItOC41NiwxNi45My00LDI1LjExLDExLjE3LDIwLjAzLDI2LjE5LDM5LjMyLDQzLjU5LDU3LjA3LDE3Ljc1LDE3LjQsMzcuMDQsMzIuNDMsNTcuMDcsNDMuNTksOC4xOCw0LjU2LDE4LjQ4LDIuNjIsMjUuMTEtNGwzMC42MS0zMC42MWMzLjIyLTMuMjIsOC4xMi00LjA4LDEyLjI0LTIuMTNaIi8+Cjwvc3ZnPg==") center / contain no-repeat; }
+.wa-glyph-green { background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgNzIwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjMjVkMzY2OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNjAsMEMxNjEuMTgsMCwwLDE2MS4xOCwwLDM2MGMwLDY1LjQxLDE3LjQ1LDEyNi43NSw0Ny45NCwxNzkuNjFMMCw3MjBsMTg3LjAyLTQ0LjIxYzUxLjM0LDI4LjE4LDExMC4yOCw0NC4yMSwxNzIuOTgsNDQuMjEsMTk4LjgyLDAsMzYwLTE2MS4xOCwzNjAtMzYwUzU1OC44MiwwLDM2MCwwWk0zNjAsNjU1LjUyYy02MC4xNywwLTExNi4xMy0xNy45OC0xNjIuODItNDguODdsLTExMC40OSwyOC4xNCwzMC45OS0xMDUuNjFjLTMzLjUzLTQ3LjkzLTUzLjItMTA2LjI2LTUzLjItMTY5LjE5LDAtMTYzLjIxLDEzMi4zMS0yOTUuNTIsMjk1LjUyLTI5NS41MnMyOTUuNTIsMTMyLjMxLDI5NS41MiwyOTUuNTItMTMyLjMxLDI5NS41Mi0yOTUuNTIsMjk1LjUyWiIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQ0NC4zNSw0MDcuNTJsODcuMSw0MS4wNmM0LDEuODgsNi41Niw1Ljk0LDYuMiwxMC4zNC0uOTQsMTEuNDYtNS41NCwzNC40My0yNi4xMyw1NS4wMi01OC4xMiw1OC4xMi0xNjIuNDktNy42NC0xNjYuNzQtMTAuMTgtMjUuNjctMTMuNzktNTAuMDYtMzIuMjQtNzMuMTktNTUuMzYtMjMuMTItMjMuMTItNDEuNTgtNDcuNTItNTUuMzctNzMuMTktMi41NS00LjI0LTY4LjMxLTEwOC42MS0xMC4xOC0xNjYuNzQsMjAuNTktMjAuNTksNDMuNTYtMjUuMTksNTUuMDItMjYuMTMsNC40MS0uMzYsOC40NiwyLjIsMTAuMzQsNi4ybDQxLjA3LDg3LjFjMS45NCw0LjEyLDEuMDksOS4wMi0yLjEzLDEyLjI0bC0zMC42MSwzMC42MWMtNi42Miw2LjYyLTguNTYsMTYuOTMtNCwyNS4xMSwxMS4xNywyMC4wMywyNi4xOSwzOS4zMiw0My41OSw1Ny4wNywxNy43NSwxNy40LDM3LjA0LDMyLjQzLDU3LjA3LDQzLjU5LDguMTgsNC41NiwxOC40OCwyLjYyLDI1LjExLTRsMzAuNjEtMzAuNjFjMy4yMi0zLjIyLDguMTItNC4wOCwxMi4yNC0yLjEzWiIvPgo8L3N2Zz4="); }
 
 /* Election day: dates and steps as cards */
 .date-cards, .step-cards { list-style: none; padding: 0; margin: 0.5rem 0; display: grid; gap: 0.6rem; }
@@ -421,15 +444,38 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
 .ext { display: inline-block; width: 0.75em; height: 0.75em; margin-left: 0.2em; vertical-align: baseline; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-/* Motion (D-044): CSS only, gentle, and none at all for anyone who asks for reduced motion. */
+/* Motion (D-044, D-058): CSS only, and none at all for anyone who asks for reduced motion. On load the hero's panels settle
+   in, one after another; as the visitor scrolls, sections, cards and tiles rise and fade in as they enter the screen. Only
+   opacity and transform move, so nothing shifts the layout; the main heading never waits. */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }
   ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.18s; }
-  .btn, button, .link-list a, .pu-list a, .card > a, .race-tabs a, .site-nav, .wa-tile > a, .ref { transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.1s; }
-  .btn:active, button:active, .link-list a:active, .card > a:active, .race-tabs a:active, .wa-tile > a:active { transform: scale(0.98); }
+  .btn, button, .link-list a, .pu-list a, .card > a, .race-tabs a, .site-nav > span, .wa-tile-button, .ref { transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.1s; }
+  .btn:active, button:active, .link-list a:active, .card > a:active, .race-tabs a:active, .wa-tile > a:active .wa-tile-button { transform: scale(0.97); }
   .tab-panel.fade { animation: reveal 0.22s ease-out; }
+  .hero > :not(h1), .profile, main > .crumbs + h1 + .choose-first { animation: settle 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .hero > .hero-art { animation-delay: 0.05s; }
+  .hero > .hero-line { animation-delay: 0.1s; }
+  .hero > .hero-action { animation-delay: 0.16s; }
+  .hero > .clock { animation-delay: 0.22s; }
+  .hero > .results-card { animation-delay: 0.3s; }
+  .clock-box { animation: settle 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .clock-box:nth-child(2) { animation-delay: 0.32s; }
+  .clock-box:nth-child(3) { animation-delay: 0.38s; }
+  .clock-box:nth-child(4) { animation-delay: 0.44s; }
+  .clock-box:first-child { animation-delay: 0.26s; }
   @supports (animation-timeline: view()) {
-    .card { animation: reveal linear both; animation-timeline: view(); animation-range: entry 0% entry 35%; }
+    .card, .wa-tile, .panel, .results-panel, .link-list > li, .pu-list > li, .date-card, .step-card, .timeline > li, .sources > li,
+    .race > h2, .race > h3, .results-strip, .share, .correct-row, .civic-note, .state-map, .results-table tbody tr {
+      /* Two parts: the rise runs over the first 38% of the entrance; the fade is over within the first 40px, so text is only
+         ever part-faded right at the screen's bottom edge, never where it can be read (contrast stays AA). */
+      animation: rise linear both, fade linear both; animation-timeline: view(), view(); animation-range: entry 0% entry 38%, entry 0 entry 40px;
+    }
+    /* A jump target (or the box holding one) never moves, so a jump lands exactly below the sticky bars. */
+    :is(.card, .panel, .results-panel, .link-list > li, .date-card, .step-card, .timeline > li, .sources > li, .race > h2, .race > h3):is(:target, :has(:target)) { animation: none; }
   }
   @keyframes reveal { from { opacity: 0; transform: translateY(6px); } }
+  @keyframes settle { from { opacity: 0; transform: translateY(14px) scale(0.99); } }
+  @keyframes rise { from { transform: translateY(22px); } }
+  @keyframes fade { from { opacity: 0; } }
 }

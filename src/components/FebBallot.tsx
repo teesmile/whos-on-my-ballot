@@ -2,6 +2,7 @@ import { type FebBallotSpec, febBallotTitle, race } from '@/lib/data'
 import { pageGraph } from '@/lib/seo'
 
 import { JsonLd } from './JsonLd'
+import { ChooseFirst } from './ChooseFirst'
 import { badgeFor, INEC_2027, RaceSection, RaceTabs, type TabPanel, UnresolvedGroup } from './RaceSection'
 import { SourceLine } from './SourceLine'
 
@@ -22,7 +23,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
       key: 'governor', label: 'Governor', title: 'Governor',
       ...(gov ? badgeFor([gov]) : { badge: 'None', badgeLong: 'no election in this state' }),
       content: gov
-        ? <RaceSection r={gov} shareUrl={`${b.path}#governor`} />
+        ? <RaceSection r={gov} pageUrl={b.path} />
         : (
             <section className="race" aria-labelledby="no-governor">
               <h2 id="no-governor" className="band">Governor</h2>
@@ -32,7 +33,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
           ),
     })
     panels.push({
-      key: 'assembly', label: 'State Assembly', title: 'State House of Assembly',
+      key: 'assembly', label: 'Assembly', title: 'State House of Assembly',
       ...(sha.length ? badgeFor(sha) : { badge: 'None', badgeLong: 'no list published' }),
       content: st === 'BORNO'
         ? (
@@ -44,7 +45,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
             </section>
           )
         : sha.length === 1
-          ? <RaceSection r={sha[0]} shareUrl={`${b.path}#assembly`} />
+          ? <RaceSection r={sha[0]} pageUrl={b.path} />
           : <UnresolvedGroup office="State House of Assembly" list={sha} path={b.path} />,
     })
   }
@@ -57,7 +58,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
         <a href={`/state/${b.state.code}/`}>{st}</a>
       </nav>
       <h1>Your ballot for 6 February 2027</h1>
-      <div className="pu-confirmed" data-lookup="confirm" data-election="feb" data-state={b.state.code} role="status" aria-live="polite" hidden />
+      <ChooseFirst election="feb" state={b.state} area={b.sha.length ? `${b.sha.map(id => race(id).name).join(' or ')}, ${st}` : st} />
       <p className="lead">
         {st}
         {' · '}

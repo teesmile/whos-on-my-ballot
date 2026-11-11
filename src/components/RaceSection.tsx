@@ -1,10 +1,10 @@
-import { firstGroup, type Race, sharePhoto, source } from '@/lib/data'
+import { firstGroup, type Race, sharePhotoSlot, source } from '@/lib/data'
 import { slug } from '@/lib/core'
 import { caption, ELECTION_DAY, namedCount, picture, raceTitle } from '@/lib/share'
 import { raceCorrectionHref, shareLinks, SITE_URL } from '@/lib/site'
 
 import { CandidateCard } from './Candidate'
-import { Share, WhatsAppMark } from './Share'
+import { Share, WhatsAppGlyph } from './Share'
 import { SourceLine } from './SourceLine'
 
 export { raceTitle }
@@ -87,10 +87,11 @@ function ResultsStrip({ r }: { r: Race }) {
 
 /** "Share on WhatsApp" as a tile in the grid, on phones only: in the empty slot beside an odd first group, or as a full row. */
 function WhatsAppTile({ r, url, row }: { r: Race, url: string, row: boolean }) {
+  // No card or box: the words, and WhatsApp's glyph on a round button beneath them (owner feedback, 11 Nov 2026).
   const link = (
     <a href={shareLinks(caption(), url).whatsapp} data-share-wa aria-label={`Share on WhatsApp: ${raceTitle(r)}`}>
-      <WhatsAppMark />
-      <span>Share on WhatsApp</span>
+      <span className="wa-tile-text">Share on WhatsApp</span>
+      <span className="wa-tile-button"><WhatsAppGlyph /></span>
     </a>
   )
   // In the grid's empty slot it is one more item of the grid; as a full row it sits under the list, not inside it.
@@ -99,10 +100,10 @@ function WhatsAppTile({ r, url, row }: { r: Race, url: string, row: boolean }) {
 
 /**
  * One race: its candidates as a grid of cards in two labelled groups (owner decision D-042), a filter the page script
- * runs in the browser, when its results will appear, the share block and a correction button. `shareUrl` is the race's
- * place on this page: never a polling unit.
+ * runs in the browser, when its results will appear, the share block and a correction button. `pageUrl` is the page's
+ * own path (never a polling unit), for "Copy link" and corrections.
  */
-export function RaceSection({ r, level = 2, shareUrl }: { r: Race, level?: 2 | 3, shareUrl: string }) {
+export function RaceSection({ r, level = 2, pageUrl }: { r: Race, level?: 2 | 3, pageUrl: string }) {
   const H = level === 2 ? 'h2' : 'h3'
   const G = level === 2 ? 'h3' : 'h4'
   const titleId = `race-${r.id}`
@@ -111,7 +112,8 @@ export function RaceSection({ r, level = 2, shareUrl }: { r: Race, level?: 2 | 3
   const rest = r.candidates.filter(c => c.display_group === 'rest')
   const mate = TICKET_OFFICES.includes(r.office) ? mateLabel(r) : null
   const n = namedCount(r)
-  const url = `${SITE_URL}${shareUrl}`
+  // Sharing a race shares the home page, so whoever opens it picks their own place; "Copy link" copies this page.
+  const url = `${SITE_URL}/`
   // The tile goes under the first group, or under the only group when the race has none of the five.
   const tileAfter = first.length ? 'first' : 'rest'
   const groups = [[fg.label, first, 'first'], [REST_LABEL, rest, 'rest']] as const
@@ -144,11 +146,12 @@ export function RaceSection({ r, level = 2, shareUrl }: { r: Race, level?: 2 | 3
       <Share
         label={`Share this race: ${raceTitle(r)}`}
         url={url}
-        picture={picture(r, sharePhoto)}
+        copyUrl={`${SITE_URL}${pageUrl}`}
+        picture={picture(r, sharePhotoSlot)}
         level={level === 2 ? 3 : 4}
       />
       <p className="correct-row">
-        <a className="btn btn-secondary" href={raceCorrectionHref(r.id, url, raceTitle(r))}>Report a correction</a>
+        <a className="btn btn-secondary" href={raceCorrectionHref(r.id, `${SITE_URL}${pageUrl}`, raceTitle(r))}>Report a correction</a>
       </p>
     </section>
   )
@@ -177,7 +180,7 @@ export function UnresolvedGroup({ office, list, path }: { office: 'Senate' | 'Ho
           <li><a href={INEC_2027}>INEC 2027 general elections page</a></li>
         </ul>
       </div>
-      {list.map(r => <RaceSection key={r.id} r={r} level={3} shareUrl={`${path}#race-${r.id}`} />)}
+      {list.map(r => <RaceSection key={r.id} r={r} level={3} pageUrl={path} />)}
     </section>
   )
 }
@@ -200,7 +203,9 @@ export function RaceTabs({ panels }: { panels: TabPanel[] }) {
           {panels.map(p => (
             <li key={p.key}>
               <a href={`#${p.key}`} data-tab={p.key}>
-                <span className="tab-name">{p.label}</span>
+                {/* The same short form for every tab on a phone; screen readers hear the full name. */}
+                <span className="tab-name" aria-hidden={p.label !== p.title || undefined}>{p.label}</span>
+                {p.label !== p.title && <span className="visually-hidden">{p.title}</span>}
                 {' '}
                 <span className="tab-count">
                   {p.badge}
@@ -231,5 +236,5 @@ export function badgeFor(list: Race[]): { badge: string, badgeLong: string } {
     const n = namedCount(list[0])
     return { badge: String(n), badgeLong: n === 1 ? 'candidate' : 'candidates' }
   }
-  return { badge: `${list.length} races`, badgeLong: 'possible, one is on your ballot' }
+  return { badge: String(list.length), badgeLong: 'possible races, one is on your ballot' }
 }

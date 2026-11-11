@@ -1,7 +1,31 @@
-# Candidate photos (owner decision D-048): the presidential candidates of the first group (D-042), all five or none.
-# Only images whose licence allows reuse, or sent by a party with written permission. Each entry: the file page, the direct
-# file, its SHA-256, the author and credit line exactly as the licence asks, the licence and its URL, when it was taken, when
-# we retrieved it, and a square crop box [x, y, size, size] in source pixels, chosen so every face sits at the same size.
-# Nothing is shown until the owner has seen all five with their credits and set `approved: true`.
-approved: false
-people: []
+# Candidate photos (owner decisions D-048, D-059): only the first group's presidential candidates. Each one with a properly
+# licensed photo shows it; any without shows the same plain placeholder. Only images whose licence allows reuse (CC0, public
+# domain, CC BY, CC BY-SA, OGL; not NC or ND), or sent by a party with written permission. Each entry: the file page, the direct
+# file, its SHA-256, the author and the credit line as the licence asks, the licence and its URL, when it was taken, when we
+# retrieved it, and a square crop box [x, y, size, size] in source pixels, chosen so every face sits at the same size.
+# Searched 11 Nov 2026 (Commons, Flickr incl. Chatham House, US and UK government accounts, Openverse): none found for NDC or PDP;
+# ADC's only free photo is from 2010 (held for the owner, see D-059).
+approved: true
+people:
+  - candidate_id: jan-2027-president-apc
+    file_page: https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Bola_Tinubu_portrait.jpg
+    sha256: 62b825303f61a90f6c74984b40763d760cbe67c5522fa429a2cfb74ec1bf99aa
+    author: Nosa Asemota
+    credit: Nosa Asemota, cropped
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0/
+    taken: '2023-05-29'
+    retrieved: '2026-11-11'
+    crop: [6, 53, 1680, 1680]
+  - candidate_id: jan-2027-president-sdp
+    file_page: https://commons.wikimedia.org/wiki/File:ADEWOLE_ADEBAYO.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/ADEWOLE_ADEBAYO.jpg
+    sha256: e370641cc96070e7a8eec435a01df5bd8b883c4db2ccbe46abeb42d4d998f93c
+    author: Benbaahi
+    credit: Benbaahi, cropped
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0/
+    taken: '2022-03-02'
+    retrieved: '2026-11-11'
+    crop: [2717, 376, 1620, 1620]

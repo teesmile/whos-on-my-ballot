@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next'
 
 import { CONTENT_DATES } from '@/lib/content-dates'
-import { allCandidates, ballots, febBallots, febRaces, geographyContentDate, presidentialRace, race, raceContentDate, stateGeo, states } from '@/lib/data'
+import { allCandidates, allRaces, ballots, febBallots, febRaces, geographyContentDate, presidentialRace, race, raceContentDate, stateGeo, states } from '@/lib/data'
 import { slug } from '@/lib/core'
 import { absolute } from '@/lib/seo'
-import { candidatePath } from '@/lib/site'
+import { candidatePath, racePath } from '@/lib/site'
 
 // Every indexable page with its content date (D-032). Share cards, data files and the 404 page are left out.
 export const dynamic = 'force-static'
@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/corrections/', CONTENT_DATES.corrections),
     entry('/results/', CONTENT_DATES.results),
     ...febRaces().filter(r => r.office === 'governor').map(r => entry(`/results/governor/${slug(r.state ?? '')}/`, CONTENT_DATES.results)),
+    ...allRaces().map(r => entry(racePath(r.id), raceContentDate(r))),
   ]
   for (const s of states()) {
     const st = stateGeo(s.code)

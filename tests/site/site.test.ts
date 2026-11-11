@@ -23,8 +23,8 @@ function* walk(dir: string): Generator<string> {
 
 const ids = (s: string, attr: string) => [...s.matchAll(new RegExp(`${attr}="([^"]+)"`, 'g'))].map(m => m[1])
 
-/** A candidate page's INEC source, in its numbered list of sources: INEC's list, the page and row, and the retrieval date. */
-const INEC_SOURCE = /<li id="src-\d+" data-source="[^"]+"><a class="src-link" href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+"><span class="src-n" aria-hidden="true">\d+<\/span><span><strong>INEC<\/strong>: [^<]+, page \d+, row \d+\. Retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/
+/** A candidate page's INEC source, named once at the top of its Sources list: INEC's list, the page and row, the retrieval date. */
+const INEC_SOURCE = /<li data-source="[^"]+"><a class="src-link" href="https:\/\/www\.inecnigeria\.org\/documents\/[^"]+#page=\d+"><span><span class="src-label">The details above: <\/span><strong>INEC<\/strong>: [^<]+, page \d+, row \d+\. Retrieved <time dateTime="\d{4}-\d{2}-\d{2}">/
 /** The warm accent (D-049) and its dark ink, the only colours besides greys and the national green. */
 const ACCENT = ['#f0d49e', '#6e4f12']
 
@@ -142,15 +142,16 @@ describe('ballot pages', () => {
     }
   })
 
-  it('share blocks link the race on this ballot, never a polling unit, with a plain caption', () => {
+  it('share blocks send the home page, so whoever opens it picks their own place; Copy link copies this page, never a polling unit', () => {
     for (const b of all.filter((_, i) => i % 25 === 0)) {
-      for (const m of html(b.path.slice(1)).matchAll(/data-share="([^"]+)"/g)) {
+      const page = html(b.path.slice(1))
+      for (const m of page.matchAll(/data-share="([^"]+)"/g)) {
         const d = JSON.parse(m[1].replaceAll('&quot;', '"').replaceAll('&amp;', '&').replaceAll('&#x27;', '\'')) as { text: string, url: string }
-        expect(d.url.startsWith(`https://whosonmyballot.ng${b.path}#`), d.url).toBe(true)
-        expect(d.url).not.toMatch(/pu-/)
+        expect(d.url).toBe('https://whosonmyballot.ng/')
         expect(d.text).toBe('Check who is on your ballot:')
-        expect(d.url).toMatch(/^https:\/\//)
       }
+      for (const [, copy] of page.matchAll(/data-copy="([^"]+)"/g)) expect(copy).toBe(`https://whosonmyballot.ng${b.path}`)
+      expect(page).not.toMatch(/pu-\d/)
     }
   })
 
@@ -336,6 +337,31 @@ describe('links and dates everywhere', () => {
       const text = fs.readFileSync(f, 'utf8').replace(/<[^>]+>/g, ' ')
       expect(text, f).not.toMatch(/\b(?:election|polls?|vote|ballot)\b[^.]{0,40}\b(?:January|February) 2026\b/i)
       expect(text, f).not.toMatch(/\b(?:16 January|6 February) 2026\b/)
+    }
+  })
+})
+
+describe('reaching a ballot only for a place the visitor picked (owner feedback, 11 Nov 2026)', () => {
+  it('no candidate page links to a ballot; each links its own race page, which exists', () => {
+    for (const r of [...races(), ...febRaces()].filter((_, i) => i % 9 === 0)) {
+      const c = r.candidates[0]
+      const page = html(`c/${c.id}`)
+      expect(page, c.id).not.toMatch(/href="\/ballot(-feb)?\//)
+      expect(page, c.id).toContain(`href="/race/${r.id}/"`)
+      expect(fs.existsSync(path.join(OUT, 'race', r.id, 'index.html')), r.id).toBe(true)
+    }
+  })
+  it('every ballot asks the visitor to choose first until a polling unit is confirmed', () => {
+    for (const b of ballots().filter((_, i) => i % 50 === 0)) expect(html(b.path.slice(1))).toContain('Did you choose this place?')
+  })
+})
+
+describe('WhatsApp’s glyph (owner’s brand download, 11 Nov 2026)', () => {
+  it('is embedded byte for byte from the files in src/assets/brand/whatsapp', () => {
+    const css = [...walk(path.join(OUT, '_next'))].filter(f => f.endsWith('.css')).map(f => fs.readFileSync(f, 'utf8')).join('\n')
+    for (const name of ['Digital_Glyph_White_RGB_2026.svg', 'Digital_Glyph_Green_RGB_2026.svg']) {
+      const b64 = fs.readFileSync(path.join('src/assets/brand/whatsapp', name)).toString('base64')
+      expect(css, name).toContain(`data:image/svg+xml;base64,${b64}`)
     }
   })
 })

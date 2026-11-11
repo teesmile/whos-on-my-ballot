@@ -158,7 +158,7 @@ export const logoPngDataUrl = (party: string) => `data:image/png;base64,${fs.rea
 export const generatedBytes = (rel: string) => fs.readFileSync(path.join(DIR, rel))
 
 /** One image holding every party logo and every approved photo, in square cells: one request per page, not one per party. */
-export interface Sprite { file: string, cell: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number> }
+export interface Sprite { file: string, cell: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number>, placeholder: number }
 export const sprite = (): Sprite => read<Sprite>('sprite.json')
 
 /** An approved candidate photo (owner decision D-048) and its credit, exactly as its licence asks. */
@@ -180,10 +180,23 @@ export function allPhotos(): Record<string, Photo> {
   photos ??= read<{ approved: boolean, people: Record<string, Photo> }>('photos.json').people
   return photos
 }
-/** The candidate's photo, or null: only the first group's presidential candidates, all five or none (D-048). */
+/** The candidate's photo, or null. Only the first group's presidential candidates can have one (D-048, D-059). */
 export const photo = (candidateId: string): Photo | null => allPhotos()[candidateId] ?? null
-/** The larger copy the share picture loads, only when someone shares. */
-export const sharePhoto = (candidateId: string): string | null => { const p = photo(candidateId); return p ? `/${p.share}` : null }
+/**
+ * What goes in a candidate's photo slot (owner decision D-059, replacing all-five-or-none): the first group's named
+ * presidential candidates each get their properly licensed photo or, where none was found, the same plain placeholder.
+ * Every other candidate has no photo slot.
+ */
+export function photoSlot(c: Pick<Candidate, 'id' | 'race_id' | 'display_group' | 'candidate'>): 'photo' | 'placeholder' | null {
+  if (c.display_group !== 'first' || !c.candidate.name || c.race_id !== presidentialRace().id) return null
+  return photo(c.id) ? 'photo' : 'placeholder'
+}
+/** For the share picture: the photo's larger copy (loaded only when someone shares), 'placeholder', or '' for no slot. */
+export function sharePhotoSlot(c: Candidate): string {
+  const slot = photoSlot(c)
+  return slot === 'photo' ? `/${photo(c.id)!.share}` : slot ?? ''
+}
+
 
 /** The 16 January races. */
 export const races = () => load().races
@@ -229,14 +242,6 @@ export const candidate = (id: string) => {
   throw new Error(`unknown candidate ${id}`)
 }
 export const allCandidates = () => allRaces().flatMap(r => r.candidates.map(c => ({ race: r, c })))
-/** A ballot page that contains this race, for "see the full ballot" links: the first one in path order. */
-export function aBallotFor(raceId: string): { path: string } {
-  if (raceId.startsWith('feb-2027-')) {
-    return febBallots().filter(b => b.sha.includes(raceId) || b.governor === raceId).sort((a, b) => a.path.localeCompare(b.path))[0]
-  }
-  return ballots().filter(b => b.house.includes(raceId) || b.senate.includes(raceId) || raceId.includes('-president'))
-    .sort((a, b) => a.path.localeCompare(b.path))[0]
-}
 export const presidentialRace = () => races().find(r => r.office === 'president')!
 
 export function wardBallotPath(state: StateGeo, ward: Ward): string {

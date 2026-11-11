@@ -1,5 +1,5 @@
 import type { Candidate as C, Person, PrintingNote } from '@/lib/data'
-import { photo, sprite } from '@/lib/data'
+import { photo, photoSlot, sprite } from '@/lib/data'
 import { noCandidateText } from '@/lib/share'
 import { candidatePath } from '@/lib/site'
 
@@ -71,17 +71,32 @@ export function PartyLogo({ party, size }: { party: string, size: number }) {
   return <SpriteCell index={i} size={size} label={party} className="logo" />
 }
 
-/** A candidate's approved photo (D-048) from the sprite, or nothing. Beside the name it repeats, so it is hidden from screen readers. */
-export function CardPhoto({ id, size }: { id: string, size: number }) {
-  const i = sprite().photos[id]
-  if (i === undefined || !photo(id)) return null
+/** The same plain placeholder for every first-group presidential candidate with no properly licensed photo (D-059). */
+export function PhotoPlaceholder({ size, label = null }: { size: number, label?: string | null }) {
+  const a11y = label ? { 'role': 'img', 'aria-label': label } : { 'aria-hidden': true }
+  return (
+    <svg className="photo photo-none" width={size} height={size} viewBox="0 0 48 48" focusable="false" {...a11y}>
+      <rect width="48" height="48" fill="#eeeeee" />
+      <circle cx="24" cy="19" r="8" fill="#c4c4c4" />
+      <path d="M9 44c1.5-9 7.5-14 15-14s13.5 5 15 14z" fill="#c4c4c4" />
+    </svg>
+  )
+}
+
+/** A candidate's photo slot (D-059): the photo from the sprite, the placeholder, or nothing. Beside the name, so hidden from screen readers. */
+export function CardPhoto({ c, size }: { c: C, size: number }) {
+  const slot = photoSlot(c)
+  if (!slot) return null
+  // The placeholder is a cell of the same sprite, so every first-group card has exactly the same markup (D-059).
+  const i = slot === 'photo' ? sprite().photos[c.id] : sprite().placeholder
+  if (i === undefined) throw new Error(`no sprite cell for ${c.id}'s photo`)
   return <SpriteCell index={i} size={size} label={null} className="photo" />
 }
 
 /**
  * One compact card per ticket, the same for every party (the working rules §1): logo, acronym, the name as INEC prints it
  * and, on a ticket, the running mate. The whole card opens the candidate's page, where every field and its citation is.
- * The first group's presidential candidates also show their photo (D-048); every card stays the same size.
+ * The first group's presidential candidates also show their photo or the placeholder (D-059); every card stays the same size.
  */
 export function CandidateCard({ c, mateLabel }: { c: C, mateLabel: string | null }) {
   const named = Boolean(c.candidate.name)
@@ -91,7 +106,7 @@ export function CandidateCard({ c, mateLabel }: { c: C, mateLabel: string | null
       <a href={candidatePath(c.id)}>
         <span className="card-pics">
           <PartyLogo party={c.party} size={48} />
-          <CardPhoto id={c.id} size={48} />
+          <CardPhoto c={c} size={48} />
         </span>
         <span className="card-party" aria-hidden="true">{c.party}</span>
         <span className="card-name">{named ? c.candidate.name : noCandidateText(c)}</span>

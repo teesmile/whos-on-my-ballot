@@ -1,4 +1,35 @@
 {
- "approved": false,
- "people": {}
+ "approved": true,
+ "people": {
+  "jan-2027-president-apc": {
+   "page": "photos/jan-2027-president-apc.webp",
+   "page_sha256": "9e7fca8daa816129e88865f15f6f01a81ce5d4979069026cd8a16f05b7e2003c",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-apc-share.jpg",
+   "share_sha256": "b9bd09ec777222b43ad36ff0f023fe37a1c10e400fdf50e76a4307d40ecb0eed",
+   "share_size": 720,
+   "file_page": "https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait.jpg",
+   "author": "Nosa Asemota",
+   "credit": "Nosa Asemota, cropped",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "taken": "2023-05-29",
+   "retrieved": "2026-11-11"
+  },
+  "jan-2027-president-sdp": {
+   "page": "photos/jan-2027-president-sdp.webp",
+   "page_sha256": "d82868e9f9cf69ea6d98fdf2527ef89a3b9bf6ffb23758c80d74b3f606124ad8",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-sdp-share.jpg",
+   "share_sha256": "4a18aba681a1294a9dfd7bb7747c8c74d5542a119ada24797c43eb531db3af12",
+   "share_size": 720,
+   "file_page": "https://commons.wikimedia.org/wiki/File:ADEWOLE_ADEBAYO.jpg",
+   "author": "Benbaahi",
+   "credit": "Benbaahi, cropped",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "taken": "2022-03-02",
+   "retrieved": "2026-11-11"
+  }
+ }
 }

@@ -1,6 +1,8 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
+import { settled } from './settled'
+
 // The same instants checked in three device time zones: the text must not change (Phase 4, Verified by).
 const MOMENTS: [string, string, RegExp | string][] = [
   ['T-1 minute', '2027-01-16T07:29:00Z', '00:00:01:00'],
@@ -62,6 +64,8 @@ test.describe('without JavaScript', () => {
 
 test('axe finds no violations on the election-day page', async ({ page }) => {
   await page.goto('/election-day/')
+  await page.emulateMedia({ reducedMotion: 'reduce' }) // axe checks the final colours, not a fade part-way (D-058)
+  await settled(page)
   const { violations } = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze()
   expect(violations.map(v => `${v.id}: ${v.nodes.length} nodes`)).toEqual([])
 })

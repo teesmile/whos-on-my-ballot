@@ -18,6 +18,7 @@ export const CORRECTIONS_EMAIL = 'corrections@anthonyugwuja.dev'
 
 export const candidatePath = (id: string) => `/c/${id}/`
 export const cardPath = (raceId: string) => `/cards/${raceId}.png`
+export const racePath = (raceId: string) => `/race/${raceId}/`
 
 /** A mailto link pre-filled with what we need to check a correction against INEC's documents (D-014). */
 export function correctionHref(candidateId: string, pageUrl: string, name: string): string {

@@ -34,7 +34,7 @@ export function ResultsTable({ r, label }: { r: Race, label: string }) {
               <th scope="row" className="rt-cand">
                 <span className="rt-pics">
                   <PartyLogo party={c.party} size={40} />
-                  <CardPhoto id={c.id} size={40} />
+                  <CardPhoto c={c} size={40} />
                 </span>
                 <span className="rt-who">
                   <span className="rt-name">{c.candidate.name || noCandidateText(c)}</span>

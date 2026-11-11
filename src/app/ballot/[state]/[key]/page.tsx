@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { badgeFor, RaceSection, RaceTabs, UnresolvedGroup } from '@/components/RaceSection'
+import { ChooseFirst } from '@/components/ChooseFirst'
 import { SourceLine } from '@/components/SourceLine'
 import { ballots, janBallotTitle, presidentialRace, race } from '@/lib/data'
 import { JsonLd } from '@/components/JsonLd'
@@ -42,7 +43,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
         <a href={`/state/${b.state.code}/`}>{b.state.name}</a>
       </nav>
       <h1>Your ballot for 16 January 2027</h1>
-      <div className="pu-confirmed" data-lookup="confirm" data-election="jan" data-state={b.state.code} role="status" aria-live="polite" hidden />
+      <ChooseFirst election="jan" state={b.state} area={`${house.map(r => r.name).join(' or ')}, ${b.state.name}`} />
       <p className="lead">
         {b.state.name}
         {' · '}
@@ -51,14 +52,14 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
       <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
       <SourceLine id="inec-constituencies-workbook" what="Which Senate district and House constituency each LGA is in" />
       <RaceTabs panels={[
-        { key: 'president', label: 'President', title: 'President', ...badgeFor([pres]), content: <RaceSection r={pres} shareUrl={`${b.path}#president`} /> },
+        { key: 'president', label: 'President', title: 'President', ...badgeFor([pres]), content: <RaceSection r={pres} pageUrl={b.path} /> },
         {
           key: 'senate', label: 'Senate', title: 'Senate', ...badgeFor(senate),
-          content: senate.length === 1 ? <RaceSection r={senate[0]} shareUrl={`${b.path}#senate`} /> : <UnresolvedGroup office="Senate" list={senate} path={b.path} />,
+          content: senate.length === 1 ? <RaceSection r={senate[0]} pageUrl={b.path} /> : <UnresolvedGroup office="Senate" list={senate} path={b.path} />,
         },
         {
-          key: 'house', label: 'House of Reps', title: 'House of Representatives', ...badgeFor(house),
-          content: house.length === 1 ? <RaceSection r={house[0]} shareUrl={`${b.path}#house`} /> : <UnresolvedGroup office="House of Representatives" list={house} path={b.path} />,
+          key: 'house', label: 'House', title: 'House of Representatives', ...badgeFor(house),
+          content: house.length === 1 ? <RaceSection r={house[0]} pageUrl={b.path} /> : <UnresolvedGroup office="House of Representatives" list={house} path={b.path} />,
         },
       ]}
       />

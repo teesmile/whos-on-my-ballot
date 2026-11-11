@@ -28,6 +28,14 @@ export default function Home() {
           </p>
         </div>
         <Countdown headingLevel={2} />
+        <section aria-labelledby="results-card" className="panel results-card">
+          <h2 id="results-card">Results</h2>
+          <p>
+            Results for President will appear on this site from 16 January 2027, and for Governor from 6 February 2027. Every figure will show
+            its source and the time it was published.
+          </p>
+          <p className="action-buttons"><a className="btn" href="/results/">Go to the results page</a></p>
+        </section>
       </section>
 
       <div className="guide">
@@ -82,15 +90,6 @@ export default function Home() {
         <noscript>
           <p>Finding by code needs JavaScript. Pick your state above and go through your LGA and ward instead.</p>
         </noscript>
-      </section>
-
-      <section aria-labelledby="results-card" className="panel results-card">
-        <h2 id="results-card">Results</h2>
-        <p>
-          Results for President will appear on this site from 16 January 2027, and for Governor from 6 February 2027. Every figure will show
-          its source and the time it was published.
-        </p>
-        <p className="action-buttons"><a className="btn" href="/results/">Go to the results page</a></p>
       </section>
 
       <p className="quiet">We never ask for your name or any personal details, and we don’t look you up anywhere.</p>

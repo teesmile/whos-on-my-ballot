@@ -15,22 +15,27 @@ describe('neutral rendering', () => {
 
   it('every candidate card has the same structure, whatever the party', () => {
     for (const r of all.filter(x => x.office === 'house').slice(0, 40)) {
-      const html = renderToStaticMarkup(<RaceSection r={r} shareUrl="/x/" />)
+      const html = renderToStaticMarkup(<RaceSection r={r} pageUrl="/x/" />)
       const blocks = html.match(/<li class="card[^"]*"[\s\S]*?<\/li>/g) ?? []
       expect(blocks.length, r.id).toBe(r.candidates.length)
       expect(new Set(blocks.map(skeleton)).size, r.id).toBe(1)
     }
-    // tickets: candidate and running mate on every card
-    const html = renderToStaticMarkup(<RaceSection r={pres} shareUrl="/x/" />)
-    const named = (html.match(/<li class="card"[\s\S]*?<\/li>/g) ?? []).map(skeleton)
+    // tickets: candidate and running mate on every card. The only difference allowed (D-059): the first group's photo slot.
+    const html = renderToStaticMarkup(<RaceSection r={pres} pageUrl="/x/" />)
+    const named = html.match(/<li class="card" [^>]*data-group="(first|rest)"[\s\S]*?<\/li>/g) ?? []
     expect(named.length).toBe(pres.candidates.filter(c => c.candidate.name).length)
-    expect(new Set(named).size).toBe(1)
+    const first = new Set(named.filter(b => b.includes('data-group="first"')).map(skeleton))
+    const rest = new Set(named.filter(b => b.includes('data-group="rest"')).map(skeleton))
+    expect(first.size).toBe(1)
+    expect(rest.size).toBe(1)
+    const withoutPhoto = (b: string) => b.replace(/<svg class="photo"[\s\S]*?<\/svg>/, '')
+    expect(skeleton(withoutPhoto(named.find(b => b.includes('data-group="first"'))!))).toBe([...rest][0])
   })
 
   it('every card shows its party’s INEC logo from the one sprite, at the same size, with the acronym as its text', () => {
     const s = sprite()
     for (const r of [pres, ...all.filter(x => x.office === 'senate').slice(0, 20)]) {
-      const html = renderToStaticMarkup(<RaceSection r={r} shareUrl="/x/" />)
+      const html = renderToStaticMarkup(<RaceSection r={r} pageUrl="/x/" />)
       const logos = [...html.matchAll(/<svg class="logo" width="48" height="48" viewBox="(\d+) 1 94 94" focusable="false" role="img" aria-label="([A-Z]+)"><image href="([^"]+)"/g)]
       expect(logos.map(m => m[2]), r.id).toEqual(r.candidates.map(c => c.party))
       for (const m of logos) {
@@ -42,7 +47,7 @@ describe('neutral rendering', () => {
 
   it('the WhatsApp tile fills the empty slot beside an odd first group, else is a full row under it', () => {
     for (const r of [pres, ...all.slice(0, 80)]) {
-      const html = renderToStaticMarkup(<RaceSection r={r} shareUrl="/x/" />)
+      const html = renderToStaticMarkup(<RaceSection r={r} pageUrl="/x/" />)
       const first = r.candidates.filter(c => c.display_group === 'first').length
       expect((html.match(/data-wa-tile/g) ?? []).length, r.id).toBe(1)
       if (first % 2 === 1) expect(html, r.id).toMatch(/<li class="wa-tile" data-wa-tile="true">/)
@@ -52,13 +57,13 @@ describe('neutral rendering', () => {
 
   it('shuffling party names changes no markup structure', () => {
     const shuffled = { ...pres, candidates: pres.candidates.map((c, i, arr) => ({ ...c, party: arr[(i + 7) % arr.length].party, party_name: arr[(i + 7) % arr.length].party_name })) }
-    expect(skeleton(renderToStaticMarkup(<RaceSection r={shuffled} shareUrl="/x/" />))).toBe(skeleton(renderToStaticMarkup(<RaceSection r={pres} shareUrl="/x/" />)))
+    expect(skeleton(renderToStaticMarkup(<RaceSection r={shuffled} pageUrl="/x/" />))).toBe(skeleton(renderToStaticMarkup(<RaceSection r={pres} pageUrl="/x/" />)))
   })
 
   it('renders the first group (D-042) alphabetically, then all other parties in ballot order, each group labelled', () => {
     const fg = firstGroup()
     for (const r of [pres, ...all.slice(0, 60)]) {
-      const html = renderToStaticMarkup(<RaceSection r={r} shareUrl="/x/" />)
+      const html = renderToStaticMarkup(<RaceSection r={r} pageUrl="/x/" />)
       const ids = [...html.matchAll(/data-candidate-id="([^"]+)"/g)].map(m => m[1])
       const first = r.candidates.filter(c => fg.parties.includes(c.party)).sort((a, b) => a.party.localeCompare(b.party))
       const rest = r.candidates.filter(c => !fg.parties.includes(c.party)).sort((a, b) => a.ballot_position - b.ballot_position)
@@ -69,7 +74,7 @@ describe('neutral rendering', () => {
   })
 
   it('no inline styles or party-keyed classes', () => {
-    const html = renderToStaticMarkup(<RaceSection r={pres} shareUrl="/x/" />)
+    const html = renderToStaticMarkup(<RaceSection r={pres} pageUrl="/x/" />)
     expect(html).not.toMatch(/style="/)
     const classes = new Set([...html.matchAll(/class="([^"]+)"/g)].flatMap(m => m[1].split(' ')))
     for (const c of pres.candidates) expect(classes.has(c.party.toLowerCase())).toBe(false)

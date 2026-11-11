@@ -27,11 +27,36 @@ export function Ref({ n }: { n: number }) {
   return <a className="ref" href={`#src-${n}`} aria-label={`Source ${n}`}><span aria-hidden="true">{n}</span></a>
 }
 
-/** The one list of sources at the end of a page: publisher, publication date and retrieval date, numbered to match. */
-export function SourceList({ refs }: { refs: Refs }) {
+/** A source for the page's details as a whole (INEC's list, its party register, a photo): named once, without a number. */
+export interface GeneralSource { label: string, entry: SourceEntry }
+
+/**
+ * The one list of sources at the end of a page: first the sources for the details above (named once, unnumbered), then the
+ * numbered sources of the career and party-history entries. Publisher, publication date and retrieval date for each.
+ */
+export function SourceList({ refs, general = [] }: { refs: Refs, general?: GeneralSource[] }) {
   return (
     <section aria-labelledby="sources" className="sources-section">
       <h2 id="sources">Sources</h2>
+      {general.length > 0 && (
+        <ul className="sources sources-general">
+          {general.map(({ label, entry: s }) => (
+            <li key={s.key} data-source={s.sourceId}>
+              <a className="src-link" href={s.href}>
+                <span>
+                  <span className="src-label">{`${label}: `}</span>
+                  <strong>{s.publisher}</strong>
+                  {s.detail && `: ${s.detail}`}
+                  {'. Retrieved '}
+                  <time dateTime={s.retrieved.slice(0, 10)}>{formatDate(s.retrieved)}</time>
+                  .
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+      {refs.list.length > 0 && (
       <ol className="sources">
         {refs.list.map((s, i) => (
           <li key={s.key} id={`src-${i + 1}`} data-source={s.sourceId}>
@@ -54,6 +79,7 @@ export function SourceList({ refs }: { refs: Refs }) {
           </li>
         ))}
       </ol>
+      )}
     </section>
   )
 }

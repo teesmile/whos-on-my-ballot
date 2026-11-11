@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { formatDate, NOT_PROVIDED } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
-import { Credit } from '@/components/Credit'
 import { allPhotos, candidate, firstGroup } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { CORRECTIONS_EMAIL } from '@/lib/site'
@@ -67,7 +66,7 @@ export default function About() {
 
       <h2>What this site never does</h2>
       <p>
-        {`No rankings, predictions, polls, endorsements or opinions. ${photos.length ? 'No photos except the five described below.' : 'No candidate photos.'} `}
+        {`No rankings, predictions, polls, endorsements or opinions. ${photos.length ? 'No photos except those described below.' : 'No candidate photos.'} `}
         Party colours and marks appear only inside each
         party’s official logo from INEC’s register, the same size for every party, never in the site’s own design. No candidate is featured
         or given more space than another.
@@ -83,16 +82,18 @@ export default function About() {
         <>
           <h2 id="photos">Photos</h2>
           <p>
-            The presidential candidates of the five parties shown first have a photo, all five or none: a recent head-and-shoulders portrait,
-            cropped the same way, from an image whose licence allows reuse. No other candidate has one. The credits, as each licence asks:
+            The presidential candidates of the five parties shown first each have a photo where one with a licence that allows reuse
+            was found, and the same plain placeholder where none was. No other candidate has a photo. Each is a head-and-shoulders crop,
+            the same size for all. The cropped photos are shared under the same licence as the originals. The credits, as each licence
+            asks:
           </p>
           <ul className="photo-credits">
             {photos.map(([id, p]) => (
               <li key={id}>
-                {`${candidate(id).c.candidate.name} (${candidate(id).c.party}): photo by ${p.credit}, `}
+                {`${candidate(id).c.candidate.name} (${candidate(id).c.party}): photo by `}
+                <a href={p.file_page}>{p.author}</a>
+                {', cropped, '}
                 <a href={p.licence_url}>{p.licence}</a>
-                {', '}
-                <a href={p.file_page}>source page</a>
                 {', retrieved '}
                 <time dateTime={p.retrieved}>{formatDate(p.retrieved)}</time>
                 .
@@ -140,7 +141,6 @@ export default function About() {
 
       <h2>Independence</h2>
       <p>Not affiliated with INEC.</p>
-      <Credit />
     </>
   )
 }
