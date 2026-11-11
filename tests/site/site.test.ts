@@ -314,11 +314,13 @@ describe('results (waiting state, 11 Nov 2026)', () => {
       expect([...p.matchAll(/<tr data-candidate-id="([^"]+)"/g)].map(m => m[1]), r.id).toEqual(r.candidates.map(c => c.id))
     }
   })
-  it('every race on a ballot says when its results will appear and links the results page', () => {
+  it('every race on a ballot says when its result will appear: president and governor by date, the rest once INEC lists the winners', () => {
     for (const b of ballots().filter((_, i) => i % 40 === 0)) {
       const p = html(b.path.slice(1))
       const n = (p.match(/<section class="race"/g) ?? []).length
-      expect((p.match(/Results for this race will appear from 16 January 2027\./g) ?? []).length, b.path).toBe(n)
+      // the president: the date and the results page; Senate and House: the declared winner, once INEC lists those elected
+      expect((p.match(/Results for this race will appear from 16 January 2027\./g) ?? []).length, b.path).toBe(1)
+      expect((p.match(/The declared winner will be shown here once INEC publishes its list of those elected\./g) ?? []).length, b.path).toBe(n - 1)
       expect((p.match(/class="btn btn-secondary" href="mailto:[^"]+">Report a correction<\/a>/g) ?? []).length, b.path).toBe(n)
     }
   })

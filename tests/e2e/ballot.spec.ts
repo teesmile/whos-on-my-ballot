@@ -336,10 +336,59 @@ test('no link is ever underlined, at rest, on hover or on focus; links in text a
       expect(await a.evaluate(e => getComputedStyle(e).textDecorationLine), path).not.toContain('underline')
     }
     // a link inside a sentence is bold and carries the arrow
-    const inText = await page.evaluate(() => [...document.querySelectorAll('main p a:not(.btn, .ref), main ul:not([class]) > li a:not([data-tab])')].filter(a => a.getClientRects().length && !a.querySelector('.ext')).map(a => ({ w: getComputedStyle(a).fontWeight, arrow: getComputedStyle(a, '::after').maskImage || getComputedStyle(a, '::after').webkitMaskImage })))
+    const inText = await page.evaluate(() => [...document.querySelectorAll('main p:not(.credit) a:not(.btn, .ref), main ul:not([class]) > li a:not([data-tab])')].filter(a => a.getClientRects().length && !a.querySelector('.ext')).map(a => ({ w: getComputedStyle(a).fontWeight, arrow: getComputedStyle(a, '::after').maskImage || getComputedStyle(a, '::after').webkitMaskImage })))
     for (const l of inText) {
       expect(Number(l.w), path).toBeGreaterThanOrEqual(700)
       expect(l.arrow, path).toContain('svg')
     }
   }
+})
+
+test('header buttons match: rectangles, same corners, height and border; the current one marked the same way', async ({ page }) => {
+  for (const width of [360, 390, 1280]) {
+    await page.setViewportSize({ width, height: 800 })
+    for (const [path, current] of [['/election-day/', 'Election day'], ['/results/', 'Results'], ['/about/', 'About']] as const) {
+      await page.goto(path)
+      const nav = page.getByRole('navigation', { name: 'Site' })
+      const looks = await Promise.all(['Election day', 'Results', 'About'].map(n => nav.getByRole('link', { name: n }).evaluate((e) => {
+        const s = getComputedStyle(e)
+        const r = e.getBoundingClientRect()
+        return { h: r.height, w: r.width, radius: s.borderTopLeftRadius, border: s.borderTopWidth, bg: s.backgroundColor, current: e.getAttribute('aria-current') }
+      })))
+      for (const l of looks) {
+        expect(l.h, `${width} ${path}`).toBe(looks[0].h)
+        expect(l.h).toBeGreaterThanOrEqual(44)
+        expect(l.radius).toBe(looks[0].radius)
+        expect(Number.parseFloat(l.radius)).toBeLessThanOrEqual(8) // gently rounded: never a pill or a circle
+        expect(l.border).toBe(looks[0].border)
+        expect(l.w).toBeGreaterThan(l.h) // a short word stays a rectangle
+      }
+      const marked = looks.filter(l => l.current)
+      expect(marked).toHaveLength(1)
+      expect(marked[0].bg, `${width} ${current}`).toBe('rgb(255, 255, 255)')
+      for (const l of looks.filter(x => !x.current)) expect(l.bg).not.toBe('rgb(255, 255, 255)')
+    }
+  }
+})
+
+test('the credit: one italic line, the name a link with no arrow, the heart text-sized and slanted', async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 })
+  await page.goto('/')
+  const credit = page.locator('.site-footer .credit')
+  await expect(credit).toHaveText('Built by Anthony Ugwuja with ❤️')
+  const c = await credit.evaluate((p) => {
+    const a = p.querySelector('a')!
+    const h = p.querySelector('.heart')!
+    const lines = new Set([...p.getClientRects()].map(r => Math.round(r.top)))
+    return {
+      italic: getComputedStyle(p).fontStyle, aItalic: getComputedStyle(a).fontStyle, href: a.getAttribute('href'),
+      arrow: getComputedStyle(a, '::after').content, deco: getComputedStyle(a).textDecorationLine,
+      heartSize: getComputedStyle(h).fontSize, textSize: getComputedStyle(p).fontSize, skew: getComputedStyle(h).transform,
+      oneLine: lines.size === 1 && Math.abs(h.getBoundingClientRect().top - a.getBoundingClientRect().top) < 16,
+    }
+  })
+  expect(c).toMatchObject({ italic: 'italic', aItalic: 'italic', href: 'https://anthonyugwuja.dev', deco: 'none', oneLine: true })
+  expect(['none', 'normal']).toContain(c.arrow)
+  expect(c.heartSize).toBe(c.textSize)
+  expect(c.skew).not.toBe('none')
 })

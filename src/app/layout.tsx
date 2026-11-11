@@ -24,8 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="site-header">
           <div className="site-header-in">
             <a href="/" className="site-name">
-              <svg className="site-mark" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true" focusable="false">
-                <circle cx="32" cy="32" r="30.5" fill="#008751" stroke="#fff" strokeWidth="3" />
+              <svg className="site-mark" viewBox="11 8 46 51" width="24" height="27" aria-hidden="true" focusable="false">
                 <rect x="14" y="11" width="27" height="35" rx="3.5" fill="#fff" />
                 <path d="M19.5 20h16M19.5 27.5h11" stroke="#008751" strokeWidth="3.4" strokeLinecap="round" />
                 <g transform="rotate(-12 41 42)">

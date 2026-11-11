@@ -64,8 +64,7 @@ export default function ResultsPage() {
       <section className="results-panel" aria-labelledby="other-races">
         <h2 id="other-races">Senate, House of Representatives and State Houses of Assembly</h2>
         <p>
-          Results for the Senate and House of Representatives will appear here from 16 January 2027, and for the State Houses of Assembly from
-          6 February 2027, as INEC declares them.
+          For these races, the declared winner will be shown on each race’s ballot page once INEC publishes its list of those elected.
         </p>
       </section>
     </>

@@ -60,11 +60,29 @@ function PlacementNotes({ r }: { r: Race }) {
   )
 }
 
-/** Where a race's results will be: the president and governors on the results page, every other race in its "other races" part. */
+/** Where a race's results will be: the president and governors on the results page. */
 export function resultsHref(r: Race): string {
-  if (r.office === 'president') return '/results/#president'
-  if (r.office === 'governor') return `/results/governor/${slug(r.state ?? '')}/`
-  return '/results/#other-races'
+  return r.office === 'president' ? '/results/#president' : `/results/governor/${slug(r.state ?? '')}/`
+}
+
+/** Races with a results page (owner decision, 11 Nov 2026): the president and the governors. */
+export const RESULTS_OFFICES: Race['office'][] = ['president', 'governor']
+export const WINNER_LINE = 'The declared winner will be shown here once INEC publishes its list of those elected.'
+
+/**
+ * Under every race: when its results come. President and Governor: the date, and the results page. Senate, House and
+ * State Assembly: the declared winner, once INEC publishes its list of those elected (a bulk import, like the candidates).
+ */
+function ResultsStrip({ r }: { r: Race }) {
+  if (!RESULTS_OFFICES.includes(r.office)) {
+    return <div className="results-strip"><p>{WINNER_LINE}</p></div>
+  }
+  return (
+    <div className="results-strip">
+      <p>{`Results for this race will appear from ${ELECTION_DAY[r.election]}.`}</p>
+      <a className="btn btn-secondary btn-small" href={resultsHref(r)}>Results page</a>
+    </div>
+  )
 }
 
 /** "Share on WhatsApp" as a tile in the grid, on phones only: in the empty slot beside an odd first group, or as a full row. */
@@ -122,10 +140,7 @@ export function RaceSection({ r, level = 2, shareUrl }: { r: Race, level?: 2 | 3
         <a href="/about/#order">How the order is set</a>
         . INEC has not published the 2027 ballot-paper order, so ballot order here is INEC’s list order: alphabetical by party acronym.
       </p>
-      <div className="results-strip">
-        <p>{`Results for this race will appear from ${ELECTION_DAY[r.election]}.`}</p>
-        <a className="btn btn-secondary btn-small" href={resultsHref(r)}>Results page</a>
-      </div>
+      <ResultsStrip r={r} />
       <Share
         label={`Share this race: ${raceTitle(r)}`}
         url={url}
