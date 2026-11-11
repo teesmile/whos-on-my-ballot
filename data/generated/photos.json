@@ -1,35 +1,71 @@
 {
  "approved": true,
  "people": {
+  "jan-2027-president-adc": {
+   "page": "photos/jan-2027-president-adc.webp",
+   "page_sha256": "ed6b8ca11097b0e5a06e320193f97c27a63c154b9d368502f267df3708f29dde",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-adc-share.jpg",
+   "share_sha256": "c03483f0be2c914ad25e487492cf05072d892736305c34a9db367cd6254f204f",
+   "share_size": 720,
+   "source": "Official X account of Atiku Abubakar (@atiku)",
+   "file_page": "https://x.com/atiku/status/2119768434216972763",
+   "retrieved": "2026-11-11",
+   "taken": "2026-11-09"
+  },
   "jan-2027-president-apc": {
    "page": "photos/jan-2027-president-apc.webp",
-   "page_sha256": "9e7fca8daa816129e88865f15f6f01a81ce5d4979069026cd8a16f05b7e2003c",
+   "page_sha256": "4827c13916f98ba70e7e7f82a4d3331745fe2e9e891b89703445dc3a592655c2",
    "page_size": 320,
    "share": "photos/jan-2027-president-apc-share.jpg",
-   "share_sha256": "b9bd09ec777222b43ad36ff0f023fe37a1c10e400fdf50e76a4307d40ecb0eed",
+   "share_sha256": "34086f25cd9c82b6717f2d162a20d0de2e7d23a00f0f0c95cd55427b062f5aa3",
    "share_size": 720,
+   "source": "Wikimedia Commons",
    "file_page": "https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait.jpg",
+   "retrieved": "2026-11-11",
    "author": "Nosa Asemota",
-   "credit": "Nosa Asemota, cropped",
    "licence": "CC BY-SA 4.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-   "taken": "2023-05-29",
-   "retrieved": "2026-11-11"
+   "taken": "2023-05-29"
+  },
+  "jan-2027-president-ndc": {
+   "page": "photos/jan-2027-president-ndc.webp",
+   "page_sha256": "cd39ca0a01af1e11e3e0f57aa4ee44ac3659d0200e05b2402c0f827829b2525f",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-ndc-share.jpg",
+   "share_sha256": "4f7fe625aa2775b1fc2ed5c7c8bf579039568e37709a76491540c60ce6a4a79f",
+   "share_size": 720,
+   "source": "Official website of Peter Obi (mrpeterobi.com)",
+   "file_page": "https://mrpeterobi.com/",
+   "retrieved": "2026-11-11",
+   "taken": "2018-10-12"
+  },
+  "jan-2027-president-pdp": {
+   "page": "photos/jan-2027-president-pdp.webp",
+   "page_sha256": "03fd70f6d1aa5216975d241ad56e36bea3c8506178ba98fc7c293dc021b88757",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-pdp-share.jpg",
+   "share_sha256": "3a1cbee739b793260e96ed13de7f1dbe4748677d8e5005c1a6058a3f404a9242",
+   "share_size": 720,
+   "source": "Official X account of Sandy Ojang Onor (@sandyonor)",
+   "file_page": "https://x.com/sandyonor",
+   "retrieved": "2026-11-11",
+   "taken": "2021-12-14"
   },
   "jan-2027-president-sdp": {
    "page": "photos/jan-2027-president-sdp.webp",
-   "page_sha256": "d82868e9f9cf69ea6d98fdf2527ef89a3b9bf6ffb23758c80d74b3f606124ad8",
+   "page_sha256": "839247ffc59a51458b1df054acffa2aecca49a3d529c25fb604627707225372a",
    "page_size": 320,
    "share": "photos/jan-2027-president-sdp-share.jpg",
-   "share_sha256": "4a18aba681a1294a9dfd7bb7747c8c74d5542a119ada24797c43eb531db3af12",
+   "share_sha256": "ac3141f031eea3940faea3b01430247e95b2631005dec5544cb345d5db590469",
    "share_size": 720,
+   "source": "Wikimedia Commons",
    "file_page": "https://commons.wikimedia.org/wiki/File:ADEWOLE_ADEBAYO.jpg",
+   "retrieved": "2026-11-11",
    "author": "Benbaahi",
-   "credit": "Benbaahi, cropped",
    "licence": "CC BY-SA 4.0",
    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-   "taken": "2022-03-02",
-   "retrieved": "2026-11-11"
+   "taken": "2022-03-02"
   }
  }
 }

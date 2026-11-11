@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 import { BackgroundMethod, type GeneralSource, Refs, type SourceEntry, SourceList, Timeline, timelineItems } from '@/components/Background'
-import { NOT_PROVIDED, noteFor, PartyLogo, PersonFields, PhotoPlaceholder, Value } from '@/components/Candidate'
+import { NOT_PROVIDED, noteFor, PartyLogo, PersonFields, Value } from '@/components/Candidate'
 import { mateLabel, raceTitle, TICKET_OFFICES } from '@/components/RaceSection'
 import { Share } from '@/components/Share'
-import { allCandidates, type Candidate as CandidateT, candidate, type Person as PersonT, photo, photoSlot, presidentialRace, sharePhotoSlot, source } from '@/lib/data'
+import { allCandidates, type Candidate as CandidateT, candidate, type Person as PersonT, photo, presidentialRace, sharePhoto, source } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { ELECTION_DAY, noCandidateText, picture } from '@/lib/share'
 import { candidatePath, cardAlt, cardPath, correctionHref, racePath, SITE_URL } from '@/lib/site'
@@ -73,12 +73,11 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
   const showBackground = race.office === 'president' && presidentialBackgroundReady()
   const inec = source(c.provenance.source_id)
   const pic = photo(c.id)
-  const slot = photoSlot(c)
   const refs = new Refs()
   const general: GeneralSource[] = [
     { label: 'The details above', entry: inecSource(c.provenance.source_id, `, page ${c.provenance.page}, row ${c.provenance.sn}`, `${inec.file_url}#page=${c.provenance.page}`) },
     { label: 'Party name and logo', entry: inecSource('inec-parties', '') },
-    ...(pic ? [{ label: 'Photo', entry: { key: pic.file_page, href: pic.file_page, publisher: pic.author, detail: `${pic.licence} (cropped)`, published: null, retrieved: pic.retrieved } }] : []),
+    ...(pic ? [{ label: 'Photo', entry: { key: pic.file_page, href: pic.file_page, publisher: pic.source, detail: [pic.author, pic.licence, 'cropped'].filter(Boolean).join(', '), published: null, retrieved: pic.retrieved } }] : []),
   ]
   const people = ([['Candidate', c.candidate], [mateLabel(race), c.running_mate]] as const).filter(([, p]) => p)
   const raceLine = `${raceTitle(race)} - ${ELECTION_DAY[race.election]}`
@@ -94,22 +93,22 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
         <a href={racePath(race.id)}>{raceTitle(race)}</a>
       </nav>
 
-      <header className={slot ? 'profile has-photo' : 'profile'}>
-        {slot === 'placeholder' && (
-          <figure className="profile-photo">
-            <PhotoPlaceholder size={160} label="No photo" />
-            <figcaption>No photo found with a licence that allows reuse.</figcaption>
-          </figure>
-        )}
+      <header className={pic ? 'profile has-photo' : 'profile'}>
         {pic && (
           <figure className="profile-photo">
             {/* eslint-disable-next-line @next/next/no-img-element -- static export: a pre-sized WebP from the pipeline */}
             <img src={`/${pic.page}`} width={pic.page_size / 2} height={pic.page_size / 2} alt={`Photo of ${c.candidate.name}`} />
             <figcaption>
               {'Photo: '}
-              <a href={pic.file_page}>{pic.author}</a>
-              {', cropped. '}
-              <a href={pic.licence_url}>{pic.licence}</a>
+              <a href={pic.file_page}>{pic.source}</a>
+              {pic.author && ` (${pic.author})`}
+              {pic.licence && pic.licence_url && (
+                <>
+                  {', '}
+                  <a href={pic.licence_url}>{pic.licence}</a>
+                </>
+              )}
+              {', cropped.'}
             </figcaption>
           </figure>
         )}
@@ -173,7 +172,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
         </>
       )}
 
-      <Share label="Share" url={url} picture={picture(race, sharePhotoSlot)} />
+      <Share label="Share" url={url} picture={picture(race, sharePhoto)} />
 
       <section aria-labelledby="correct" className="correct">
         <h2 id="correct">Report a correction</h2>

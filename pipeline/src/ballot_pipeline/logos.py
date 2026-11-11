@@ -120,7 +120,7 @@ def _size(path) -> tuple[int, int]:
 
 
 def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
-    """One image holding every party logo, then every approved photo (D-048), each in a SIZE-pixel square cell, so a
+    """One image holding every party logo, then every candidate photo (D-064), each in a SIZE-pixel square cell, so a
     ballot page makes one image request instead of one per party. Its name carries its hash, so it can be cached for a
     year and a change is never served stale."""
     manifest = json.loads(MANIFEST.read_text())
@@ -132,9 +132,6 @@ def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
         cells.append(("logo", acronym, raw))
     for cid, path in sorted(photo_cells.items()):
         cells.append(("photo", cid, path))
-    # The same plain placeholder for every first-group presidential candidate without a licensed photo (D-059), in the sprite
-    # too, so every one of their cards has exactly the same markup.
-    cells.append(("placeholder", "placeholder", None))
     tmp = LOGO_DIR / "_cells"
     tmp.mkdir(exist_ok=True)
     parts = []
@@ -143,15 +140,8 @@ def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
         if kind == "logo":
             _gm(str(src), "-resize", f"{SIZE - 2 * PAD}x{SIZE - 2 * PAD}", "-background", "white", "-gravity", "center",
                 "-extent", f"{SIZE}x{SIZE}", "-strip", f"png:{cell}")
-        elif kind == "photo":
-            _gm(str(src), "-resize", f"{SIZE}x{SIZE}!", "-strip", f"png:{cell}")
         else:
-            u = SIZE / 48  # the site's 48-unit placeholder drawing, at the cell's size
-            _gm("-size", f"{SIZE}x{SIZE}", "xc:#eeeeee", "-fill", "#c4c4c4",
-                "-draw", f"circle {24 * u},{19 * u} {24 * u},{11 * u}",
-                "-draw", f"path 'M {9 * u},{44 * u} C {10.5 * u},{35 * u} {16.5 * u},{30 * u} {24 * u},{30 * u} "
-                         f"C {31.5 * u},{30 * u} {37.5 * u},{35 * u} {39 * u},{44 * u} Z'",
-                "-strip", f"png:{cell}")
+            _gm(str(src), "-resize", f"{SIZE}x{SIZE}!", "-strip", f"png:{cell}")
         parts.append(str(cell))
     for old in LOGO_DIR.glob("sprite-*.webp"):
         old.unlink()
@@ -167,7 +157,6 @@ def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
         "file": f"logos/{out.name}", "cell": SIZE, "width": SIZE * len(cells), "height": SIZE, "bytes": out.stat().st_size, "sha256": digest,
         "logos": {k: i for i, (kind, k, _) in enumerate(cells) if kind == "logo"},
         "photos": {k: i for i, (kind, k, _) in enumerate(cells) if kind == "photo"},
-        "placeholder": next(i for i, (kind, _, _) in enumerate(cells) if kind == "placeholder"),
     }
     SPRITE.write_text(json.dumps(sprite, indent=1) + "\n")
     log(f"sprite: {len(cells)} cells, {sprite['bytes']} bytes -> {out.name}")

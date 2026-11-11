@@ -1,4 +1,4 @@
-import { firstGroup, type Race, sharePhotoSlot, source } from '@/lib/data'
+import { firstGroup, type Race, sharePhoto, source } from '@/lib/data'
 import { slug } from '@/lib/core'
 import { caption, ELECTION_DAY, namedCount, picture, raceTitle } from '@/lib/share'
 import { raceCorrectionHref, shareLinks, SITE_URL } from '@/lib/site'
@@ -147,7 +147,7 @@ export function RaceSection({ r, level = 2, pageUrl }: { r: Race, level?: 2 | 3,
         label={`Share this race: ${raceTitle(r)}`}
         url={url}
         copyUrl={`${SITE_URL}${pageUrl}`}
-        picture={picture(r, sharePhotoSlot)}
+        picture={picture(r, sharePhoto)}
         level={level === 2 ? 3 : 4}
       />
       <p className="correct-row">

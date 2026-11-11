@@ -157,22 +157,23 @@ export const logoPngDataUrl = (party: string) => `data:image/png;base64,${fs.rea
 /** A file the pipeline wrote under data/generated (logos, the sprite, photos), for the routes that serve it. */
 export const generatedBytes = (rel: string) => fs.readFileSync(path.join(DIR, rel))
 
-/** One image holding every party logo and every approved photo, in square cells: one request per page, not one per party. */
-export interface Sprite { file: string, cell: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number>, placeholder: number }
+/** One image holding every party logo and every candidate photo, in square cells: one request per page, not one per party. */
+export interface Sprite { file: string, cell: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number> }
 export const sprite = (): Sprite => read<Sprite>('sprite.json')
 
-/** An approved candidate photo (owner decision D-048) and its credit, exactly as its licence asks. */
+/** A candidate's photo (owner decision D-064) and where it came from, credited in the source's own words. */
 export interface Photo {
   page: string
   page_size: number
   share: string
   share_size: number
+  /** "Official X account of Bola Tinubu (@officialABAT)", "Wikimedia Commons", ... */
+  source: string
   file_page: string
-  author: string
-  credit: string
-  licence: string
-  licence_url: string
-  taken: string
+  author?: string
+  licence?: string
+  licence_url?: string
+  taken?: string
   retrieved: string
 }
 let photos: Record<string, Photo> | null = null
@@ -180,23 +181,10 @@ export function allPhotos(): Record<string, Photo> {
   photos ??= read<{ approved: boolean, people: Record<string, Photo> }>('photos.json').people
   return photos
 }
-/** The candidate's photo, or null. Only the first group's presidential candidates can have one (D-048, D-059). */
+/** The candidate's photo, or null: every first-group presidential candidate has one, nobody else (D-064). */
 export const photo = (candidateId: string): Photo | null => allPhotos()[candidateId] ?? null
-/**
- * What goes in a candidate's photo slot (owner decision D-059, replacing all-five-or-none): the first group's named
- * presidential candidates each get their properly licensed photo or, where none was found, the same plain placeholder.
- * Every other candidate has no photo slot.
- */
-export function photoSlot(c: Pick<Candidate, 'id' | 'race_id' | 'display_group' | 'candidate'>): 'photo' | 'placeholder' | null {
-  if (c.display_group !== 'first' || !c.candidate.name || c.race_id !== presidentialRace().id) return null
-  return photo(c.id) ? 'photo' : 'placeholder'
-}
-/** For the share picture: the photo's larger copy (loaded only when someone shares), 'placeholder', or '' for no slot. */
-export function sharePhotoSlot(c: Candidate): string {
-  const slot = photoSlot(c)
-  return slot === 'photo' ? `/${photo(c.id)!.share}` : slot ?? ''
-}
-
+/** For the share picture: the photo's larger copy (loaded only when someone shares), or '' for no photo. */
+export const sharePhoto = (c: Candidate): string => { const p = photo(c.id); return p ? `/${p.share}` : '' }
 
 /** The 16 January races. */
 export const races = () => load().races

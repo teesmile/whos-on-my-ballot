@@ -407,22 +407,6 @@ const PICTURE = { W: 1080, H: 1920, top: 250, bottom: 1650, side: 60 }
 // applies to Status pictures, the PNG source kept about 1.2 dB more detail, and the JPEG was only 7% smaller.
 const EXPORT = { type: 'image/png', quality: 1, name: 'whos-on-my-ballot.png' }
 
-/** The same plain placeholder as on the site, for a first-group presidential candidate with no licensed photo. */
-function placeholder(g: CanvasRenderingContext2D, x: number, y: number, s: number) {
-  g.fillStyle = '#eeeeee'
-  g.fillRect(x, y, s, s)
-  g.fillStyle = '#c4c4c4'
-  g.beginPath()
-  g.arc(x + s / 2, y + s * 0.4, s / 6, 0, Math.PI * 2)
-  g.fill()
-  g.beginPath()
-  g.moveTo(x + s * 0.19, y + s * 0.92)
-  g.bezierCurveTo(x + s * 0.22, y + s * 0.73, x + s * 0.34, y + s * 0.625, x + s / 2, y + s * 0.625)
-  g.bezierCurveTo(x + s * 0.66, y + s * 0.625, x + s * 0.78, y + s * 0.73, x + s * 0.81, y + s * 0.92)
-  g.closePath()
-  g.fill()
-}
-
 /**
  * The share picture: exactly 1080 x 1920, the site's card grid (two columns, three rows), drawn from the full-size logos and
  * photos (never the page's small sprite), loaded only now. Large, heavy text only: the race and date at the top, then each
@@ -439,7 +423,7 @@ async function drawPicture(d: ShareInfo): Promise<File> {
   const withPhotos = d.tiles.some(t => t[3])
   const [mark, ...imgs] = await Promise.all([loadImage('/icon.svg'), ...d.tiles.flatMap(([p, , , photo]) => [
     loadImage(`/logos/full/${p.toLowerCase()}.webp`),
-    photo && photo !== 'placeholder' ? loadImage(photo) : Promise.resolve(null),
+    photo ? loadImage(photo) : Promise.resolve(null),
   ])])
   g.fillStyle = '#fff'
   g.fillRect(0, 0, W, H)
@@ -477,7 +461,7 @@ async function drawPicture(d: ShareInfo): Promise<File> {
     const y = gridTop + Math.floor(k / 2) * (th + gap)
     box(g, x, y, tw, th, 26)
     if (k < d.tiles.length) {
-      const [party, name, , photo] = d.tiles[k]
+      const [party, name] = d.tiles[k]
       const [logo, pic] = [imgs[2 * k], imgs[2 * k + 1]]
       g.fillStyle = '#fff'
       g.fill()
@@ -495,7 +479,6 @@ async function drawPicture(d: ShareInfo): Promise<File> {
         box(g, px, cy, ps, ps, 16)
         g.clip()
         if (pic) g.drawImage(pic, px, cy, ps, ps)
-        else if (photo) placeholder(g, px, cy, ps)
         g.restore()
         cy += ps + 12
       }

@@ -20,7 +20,7 @@ describe('neutral rendering', () => {
       expect(blocks.length, r.id).toBe(r.candidates.length)
       expect(new Set(blocks.map(skeleton)).size, r.id).toBe(1)
     }
-    // tickets: candidate and running mate on every card. The only difference allowed (D-059): the first group's photo slot.
+    // tickets: candidate and running mate on every card. The only difference allowed (D-064): the first group's photo.
     const html = renderToStaticMarkup(<RaceSection r={pres} pageUrl="/x/" />)
     const named = html.match(/<li class="card" [^>]*data-group="(first|rest)"[\s\S]*?<\/li>/g) ?? []
     expect(named.length).toBe(pres.candidates.filter(c => c.candidate.name).length)

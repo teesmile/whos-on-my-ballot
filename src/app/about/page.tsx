@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { formatDate, NOT_PROVIDED } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
 import { SourceLine } from '@/components/SourceLine'
-import { allPhotos, candidate, firstGroup } from '@/lib/data'
+import { allPhotos, firstGroup } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { CORRECTIONS_EMAIL } from '@/lib/site'
 
@@ -66,7 +66,7 @@ export default function About() {
 
       <h2>What this site never does</h2>
       <p>
-        {`No rankings, predictions, polls, endorsements or opinions. ${photos.length ? 'No photos except those described below.' : 'No candidate photos.'} `}
+        {`No rankings, predictions, polls, endorsements or opinions. ${photos.length ? 'Photos only for the five presidential candidates described below.' : 'No candidate photos.'} `}
         Party colours and marks appear only inside each
         party’s official logo from INEC’s register, the same size for every party, never in the site’s own design. No candidate is featured
         or given more space than another.
@@ -82,24 +82,13 @@ export default function About() {
         <>
           <h2 id="photos">Photos</h2>
           <p>
-            The presidential candidates of the five parties shown first each have a photo where one with a licence that allows reuse
-            was found, and the same plain placeholder where none was. No other candidate has a photo. Each is a head-and-shoulders crop,
-            the same size for all. The cropped photos are shared under the same licence as the originals. The credits, as each licence
-            asks:
+            The presidential candidates of the five parties shown first each have a photo, taken from the candidate’s own official account,
+            their campaign or party website, or Wikimedia Commons, and credited on the candidate’s page. The same head-and-shoulders crop and
+            size for all; no other candidate has one. To ask for a change, write to
+            {' '}
+            <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Photo change')}`}>{CORRECTIONS_EMAIL}</a>
+            .
           </p>
-          <ul className="photo-credits">
-            {photos.map(([id, p]) => (
-              <li key={id}>
-                {`${candidate(id).c.candidate.name} (${candidate(id).c.party}): photo by `}
-                <a href={p.file_page}>{p.author}</a>
-                {', cropped, '}
-                <a href={p.licence_url}>{p.licence}</a>
-                {', retrieved '}
-                <time dateTime={p.retrieved}>{formatDate(p.retrieved)}</time>
-                .
-              </li>
-            ))}
-          </ul>
         </>
       )}
 

@@ -31,7 +31,7 @@ export const namedCount = (r: Race) => r.candidates.filter(c => c.candidate.name
 export interface Picture {
   /** "President - 16 January 2027" */
   title: string
-  /** [acronym, name as INEC prints it or the no-candidate text, candidate id, the photo's share copy, 'placeholder' or ''] */
+  /** [acronym, name as INEC prints it or the no-candidate text, candidate id, the photo's share copy or ''] */
   tiles: [string, string, string, string][]
   /** How many more candidates the race has beyond the tiles (0: every candidate is shown). */
   more: number
