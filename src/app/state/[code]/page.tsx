@@ -30,7 +30,7 @@ export default async function StatePage({ params }: { params: Promise<{ code: st
       <nav aria-label="Breadcrumb" className="crumbs"><a href="/">All states</a></nav>
       <h1>{st.name}</h1>
       <Steps current={2} />
-      <p className="jump"><a className="btn btn-secondary" href="#search">Know a landmark near where you vote? Search instead</a></p>
+      <p className="jump"><a className="btn" href="#search">Know a landmark near where you vote? Search instead</a></p>
       <div className="guide">
         <section aria-labelledby="browse" className="panel">
           <h2 id="browse">Choose your LGA</h2>

@@ -152,19 +152,26 @@ def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
         rows.append(str(row))
         for c in parts:
             Path(c).unlink()
-    for old in LOGO_DIR.glob("sprite-*.webp"):
+    for old in [*LOGO_DIR.glob("sprite-*.webp"), *LOGO_DIR.glob("logos-*.webp")]:
         old.unlink()
     staging = LOGO_DIR / "sprite.webp"
     _gm(*rows, "-background", "white", "-append", "-quality", str(QUALITY), f"webp:{staging}")
+    # The logos row alone, the same geometry, for pages that show a logo but no photo card (a candidate page, whose own
+    # photo is a separate file), so they don't download every photo too.
+    logo_staging = LOGO_DIR / "logos.webp"
+    _gm(rows[0], "-quality", str(QUALITY), f"webp:{logo_staging}")
     for r in rows:
         Path(r).unlink()
     tmp.rmdir()
     digest = _sha256(staging.read_bytes())
     out = LOGO_DIR / f"sprite-{digest[:10]}.webp"
     staging.rename(out)
+    logo_digest = _sha256(logo_staging.read_bytes())
+    logo_out = LOGO_DIR / f"logos-{logo_digest[:10]}.webp"
+    logo_staging.rename(logo_out)
     width = max(SIZE * len(logos), PHOTO_SIZE * len(photos))
     sprite = {
-        "file": f"logos/{out.name}", "cell": SIZE, "photo_cell": PHOTO_SIZE, "photo_y": SIZE, "width": width,
+        "file": f"logos/{out.name}", "logo_file": f"logos/{logo_out.name}", "logo_width": SIZE * len(logos), "cell": SIZE, "photo_cell": PHOTO_SIZE, "photo_y": SIZE, "width": width,
         "height": SIZE + (PHOTO_SIZE if photos else 0), "bytes": out.stat().st_size, "sha256": digest,
         "logos": {k: i for i, (k, _) in enumerate(logos)},
         "photos": {k: i for i, (k, _) in enumerate(photos)},
@@ -190,4 +197,6 @@ def check_logos(parties_on_ballots: set[str]) -> list[str]:
     f = GENERATED_DIR / sprite["file"]
     if not f.exists() or _sha256(f.read_bytes()) != sprite["sha256"]:
         errors.append("the logo sprite is missing or changed since it was built")
+    if not (GENERATED_DIR / sprite.get("logo_file", "-")).exists():
+        errors.append("the logos-only sprite is missing: run `ballot-pipeline assets`")
     return errors

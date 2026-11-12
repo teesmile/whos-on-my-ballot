@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SourceLine id="inec-parties" what="Parties" />
           <div className="footer-row">
             <p className="footer-printed">Shown exactly as INEC printed them.</p>
-            <p className="footer-correct"><a className="btn btn-secondary" href="/corrections/">Report a correction</a></p>
+            <p className="footer-correct"><a className="btn" href="/corrections/">Report a correction</a></p>
           </div>
           <Credit />
         </footer>

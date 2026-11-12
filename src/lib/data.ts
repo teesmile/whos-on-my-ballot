@@ -161,13 +161,11 @@ export const generatedBytes = (rel: string) => fs.readFileSync(path.join(DIR, re
  * One image holding every party logo (a row of `cell`-pixel squares) and every approved candidate photo (a row of
  * `photo_cell`-pixel squares at y = `photo_y`): one request per page, not one per party.
  */
-export interface Sprite { file: string, cell: number, photo_cell: number, photo_y: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number> }
+export interface Sprite { file: string, logo_file: string, logo_width: number, cell: number, photo_cell: number, photo_y: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number> }
 export const sprite = (): Sprite => read<Sprite>('sprite.json')
 
 /** A presidential candidate's photo, approved face by face by the owner (D-064, D-065), and where it came from. */
 export interface Photo {
-  /** The short credit under the photo: "Wikimedia Commons", "official X account", ... */
-  credit: string
   page: string
   page_size: number
   share: string

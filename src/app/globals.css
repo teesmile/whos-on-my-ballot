@@ -125,6 +125,14 @@ button.btn-quiet { background: var(--bg); color: var(--fg); border: 1.5px solid 
 button.btn-quiet:hover { background: var(--panel); color: var(--fg); border-color: var(--fg); }
 main p > a.btn { margin: 0.25rem 0; }
 .go { margin: 1rem 0; }
+/* On phones a button that takes the voter somewhere sits in the middle of the column (owner feedback, 11 Nov 2026). */
+@media (max-width: 39.99rem) {
+  main p:has(> a.btn), .site-footer p:has(> a.btn) { text-align: center; }
+  .results-strip { flex-direction: column; align-items: center; text-align: center; }
+}
+/* After a lookup, "Your ballot for ..." sits in the middle of its box, at every width. */
+.pu-confirmed p:has(> a.btn) { text-align: center; }
+.pu-confirmed > a.btn { display: flex; width: fit-content; margin: 0.5rem auto 0; }
 .site-footer .go .btn, .footer-correct .btn { min-height: 44px; padding: 0.45rem 0.95rem; }
 
 /* Where you are on the guided path: the current step carries the warm accent. */
@@ -476,3 +484,12 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
   @keyframes reveal { from { opacity: 0; transform: translateY(6px); } }
   @keyframes settle { from { opacity: 0; transform: translateY(14px) scale(0.99); } }
 }
+
+/* Tapping a tile (state, LGA, ward, polling unit) or an outlined button fills it solid green with white text at once, and it
+   stays filled until the next page opens (the page script keeps it with .tapped; :active covers no script). Last in the
+   stylesheet, so a phone's sticky hover never paints over it. */
+:is(.link-list a, .pu-list a, .result a:not(.btn), button.btn-share, button.btn-quiet, .race-tabs a):is(:active, .tapped) {
+  background: var(--green); border-color: var(--green); color: #fff; transition: none;
+}
+:is(.link-list a, .pu-list a, .result a:not(.btn), button.btn-share, button.btn-quiet, .race-tabs a):is(:active, .tapped) :is(*, .code) { color: #fff; }
+:is(.race-tabs a):is(:active, .tapped) .tab-count { background: #fff; color: var(--green-deep); border-color: #fff; }

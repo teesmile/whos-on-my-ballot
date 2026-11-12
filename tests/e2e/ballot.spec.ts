@@ -195,8 +195,8 @@ async function pictureCheck(page: Page, bytes: number[]) {
       return true
     }
     const outside: number[] = []
-    for (let y = 0; y < 196; y += 4) if (!plain(y)) outside.push(y)
-    for (let y = 1656; y < 1920; y += 4) if (!plain(y)) outside.push(y)
+    for (let y = 0; y < 258; y += 4) if (!plain(y)) outside.push(y)
+    for (let y = 1724; y < 1920; y += 4) if (!plain(y)) outside.push(y)
     return { w: img.width, h: img.height, outside }
   }, bytes)
 }
@@ -508,4 +508,37 @@ test('with reduced motion, nothing waits or moves on scroll', async ({ page }) =
   const last = page.locator('.card').last()
   expect(await last.evaluate(e => [getComputedStyle(e).opacity, getComputedStyle(e).transform, getComputedStyle(e).animationName])).toEqual(['1', 'none', 'none'])
   expect(await page.evaluate(() => document.documentElement.classList.contains('rv-js'))).toBe(false)
+})
+
+test('every button that takes the voter somewhere is solid green with white text; on a phone it sits in the middle', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  for (const path of ['/', '/state/24/', ABA, '/c/jan-2027-president-apc/', '/about/', '/election-day/']) {
+    await page.goto(path)
+    // a button alone in its row; a pair side by side (the home page's two) shares the row
+    const looks = await page.evaluate(() => [...document.querySelectorAll<HTMLAnchorElement>('main a.btn, footer a.btn')].filter(a => a.getClientRects().length && !a.classList.contains('btn-wa') && a.parentElement!.children.length === 1).map((a) => {
+      const s = getComputedStyle(a)
+      const r = a.getBoundingClientRect()
+      const box = a.parentElement!.getBoundingClientRect()
+      const cs = getComputedStyle(a.parentElement!)
+      const pad = parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)
+      return { text: a.textContent, bg: s.backgroundColor, fg: s.color, off: Math.abs((r.left + r.right) / 2 - (box.left + box.right + pad) / 2) }
+    }))
+    expect(looks.length, path).toBeGreaterThan(0)
+    for (const l of looks) {
+      expect(l.bg, `${path}: ${l.text}`).toBe('rgb(0, 135, 81)')
+      expect(l.fg, `${path}: ${l.text}`).toBe('rgb(255, 255, 255)')
+      expect(l.off, `${path}: ${l.text} is off-centre`).toBeLessThan(2)
+    }
+  }
+})
+
+test('tapping a state tile fills it solid green with white text at once, before the next page opens', async ({ page }) => {
+  await page.goto('/')
+  // hold the page where it is at the moment of the tap (the fill is put on as the tap lands, before any navigation)
+  await page.evaluate(() => document.addEventListener('click', e => e.preventDefault()))
+  const tile = page.locator('.link-list a[href^="/state/"]').first()
+  await tile.scrollIntoViewIfNeeded()
+  await tile.click()
+  const look = await tile.evaluate(a => ({ tapped: a.classList.contains('tapped'), bg: getComputedStyle(a).backgroundColor, fg: getComputedStyle(a).color }))
+  expect(look).toEqual({ tapped: true, bg: 'rgb(0, 135, 81)', fg: 'rgb(255, 255, 255)' })
 })

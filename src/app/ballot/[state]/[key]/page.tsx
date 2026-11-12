@@ -63,7 +63,7 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
         },
       ]}
       />
-      <p className="go"><a className="btn btn-secondary" href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
+      <p className="go"><a className="btn" href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
     </>
   )
 }

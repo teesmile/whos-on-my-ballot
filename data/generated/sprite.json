@@ -1,12 +1,14 @@
 {
- "file": "logos/sprite-d2af74f63f.webp",
+ "file": "logos/sprite-d541efb506.webp",
+ "logo_file": "logos/logos-d2af74f63f.webp",
+ "logo_width": 2112,
  "cell": 96,
  "photo_cell": 128,
  "photo_y": 96,
  "width": 2112,
- "height": 96,
- "bytes": 34824,
- "sha256": "d2af74f63f618989cf0fdb7d78d6df73caa313102ce777a13f54cf94c1bdfff4",
+ "height": 224,
+ "bytes": 58692,
+ "sha256": "d541efb506877cecb8bd0324a043fd42990fa57a3a545eaf0eaeeac468d2f510",
  "logos": {
   "A": 0,
   "AA": 1,
@@ -31,5 +33,16 @@
   "YPP": 20,
   "ZLP": 21
  },
- "photos": {}
+ "photos": {
+  "jan-2027-president-aac": 0,
+  "jan-2027-president-adc": 1,
+  "jan-2027-president-adp": 2,
+  "jan-2027-president-apc": 3,
+  "jan-2027-president-apm": 4,
+  "jan-2027-president-bp": 5,
+  "jan-2027-president-ndc": 6,
+  "jan-2027-president-nrm": 7,
+  "jan-2027-president-sdp": 8,
+  "jan-2027-president-zlp": 9
+ }
 }

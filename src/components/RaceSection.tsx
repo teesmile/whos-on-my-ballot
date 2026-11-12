@@ -80,7 +80,7 @@ function ResultsStrip({ r }: { r: Race }) {
   return (
     <div className="results-strip">
       <p>{`Results for this race will appear from ${ELECTION_DAY[r.election]}.`}</p>
-      <a className="btn btn-secondary btn-small" href={resultsHref(r)}>Results page</a>
+      <a className="btn btn-small" href={resultsHref(r)}>Results page</a>
     </div>
   )
 }
@@ -151,7 +151,7 @@ export function RaceSection({ r, level = 2, pageUrl }: { r: Race, level?: 2 | 3,
         level={level === 2 ? 3 : 4}
       />
       <p className="correct-row">
-        <a className="btn btn-secondary" href={raceCorrectionHref(r.id, `${SITE_URL}${pageUrl}`, raceTitle(r))}>Report a correction</a>
+        <a className="btn" href={raceCorrectionHref(r.id, `${SITE_URL}${pageUrl}`, raceTitle(r))}>Report a correction</a>
       </p>
     </section>
   )
@@ -173,7 +173,7 @@ export function UnresolvedGroup({ office, list, path }: { office: 'Senate' | 'Ho
           {' '}
           races applies to each polling unit in your area, so all of them are shown. Only one will be on your ballot paper.
         </p>
-        {office === 'State House of Assembly' && <p className="go"><a className="btn btn-secondary" href="/about/state-assembly-wards/">Why some wards show more than one State Assembly race</a></p>}
+        {office === 'State House of Assembly' && <p className="go"><a className="btn" href="/about/state-assembly-wards/">Why some wards show more than one State Assembly race</a></p>}
         <p>INEC’s own tools:</p>
         <ul className="link-list tiles">
           <li><a href={INEC_LOCATOR}>INEC Polling Unit Locator</a></li>

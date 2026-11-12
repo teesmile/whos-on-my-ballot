@@ -77,8 +77,6 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
   const general: GeneralSource[] = [
     { label: 'The details above', entry: inecSource(c.provenance.source_id, `, page ${c.provenance.page}, row ${c.provenance.sn}`, `${inec.file_url}#page=${c.provenance.page}`) },
     { label: 'Party name and logo', entry: inecSource('inec-parties', '') },
-    // where the photo came from; the photographer, licence and crop are in the About page's photo credits
-    ...(pic ? [{ label: 'Photo', entry: { key: pic.file_page, href: pic.file_page, publisher: pic.source, detail: null, published: null, retrieved: pic.retrieved } }] : []),
   ]
   const people = ([['Candidate', c.candidate], [mateLabel(race), c.running_mate]] as const).filter(([, p]) => p)
   const raceLine = `${raceTitle(race)} - ${ELECTION_DAY[race.election]}`
@@ -97,11 +95,11 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
       <header className="profile has-photo">
         {pic
           ? (
-              <figure className="profile-photo">
+              // No credit here (owner decision, 11 Nov 2026): the full credits are in the About page's list.
+              <div className="profile-photo">
                 {/* eslint-disable-next-line @next/next/no-img-element -- static export: a pre-sized WebP from the pipeline */}
                 <img src={`/${pic.page}`} width={pic.page_size / 2} height={pic.page_size / 2} alt={`Photo of ${c.candidate.name}`} />
-                <figcaption>{`Photo: ${pic.credit}`}</figcaption>
-              </figure>
+              </div>
             )
           : (
               // the same plain placeholder for everyone without an approved photo (D-065)
@@ -110,7 +108,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
         <div className="profile-text">
           <h1 data-candidate-id={c.id}>{name}</h1>
           <div className="party-head">
-            <PartyLogo party={c.party} size={56} />
+            <PartyLogo party={c.party} size={56} logosOnly />
             <p className="party">
               <span className="acronym" aria-hidden="true">{c.party}</span>
               {' '}
@@ -125,7 +123,7 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
             </p>
           )}
           <p className="profile-actions">
-            <a className="btn btn-secondary" href={racePath(race.id)}>Everyone in this race</a>
+            <a className="btn" href={racePath(race.id)}>Everyone in this race</a>
           </p>
         </div>
       </header>

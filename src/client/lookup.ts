@@ -14,7 +14,7 @@
  * Privacy (D-015): the only network request is GET /data/pu/<SS>.json, a fixed per-state file. What the visitor
  * types is matched in memory, never sent, never stored, and never put in a URL (fragments aren't sent to servers).
  */
-import { motion } from './motion'
+import { motion, tapFeedback } from './motion'
 import { describePhase, formatDay, formatTime, phaseAt, type Schedule } from '../lib/election'
 import {
   cardCode,
@@ -61,7 +61,7 @@ function puLink(pu: FoundPollingUnit): HTMLAnchorElement {
 
 /** The 6 February ballot for the same polling unit (its ward decides it). */
 function febLink(pu: FoundPollingUnit): HTMLAnchorElement {
-  return el('a', '6 February 2027 ballot', { href: `${pu.febBallotPath}${puHash(pu.code)}`, class: 'feb-link btn btn-secondary btn-small' })
+  return el('a', '6 February 2027 ballot', { href: `${pu.febBallotPath}${puHash(pu.code)}`, class: 'feb-link btn btn-small' })
 }
 
 function resultItem(pu: FoundPollingUnit): HTMLLIElement {
@@ -200,7 +200,7 @@ async function setupConfirm(box: HTMLElement) {
     if (mine !== here) {
       box.append(el('p', 'This polling unit belongs to a different ballot. Follow the link below.'))
       const go = feb ? febLink(pu) : puLink(pu)
-      go.className = 'btn btn-secondary'
+      go.className = 'btn'
       box.append(go)
     }
     // the same polling unit's ballot for the other election day
@@ -406,7 +406,9 @@ function contain(g: CanvasRenderingContext2D, img: HTMLImageElement, x: number, 
 
 // WhatsApp Status covers the top (progress bar, name) and the bottom (reply bar) of a 1080 x 1920 picture, so every word
 // and logo sits inside this central area; only the plain bands reach the edges.
-const PICTURE = { W: 1080, H: 1920, top: 200, bottom: 1650, side: 60 }
+// (Measured for a 16:9 screen, the worst case: Status's progress bar and name end above y 250, its reply bar starts below
+// y 1720. On taller phones the picture is letterboxed and nothing covers it.)
+const PICTURE = { W: 1080, H: 1920, top: 262, bottom: 1720, side: 60 }
 // PNG, exactly 1080 x 1920. Tested against a quality-95 JPEG on 11 Nov 2026 (D-060): after the kind of re-encoding WhatsApp
 // applies to Status pictures, the PNG source kept about 1.2 dB more detail, and the JPEG was only 7% smaller.
 const EXPORT = { type: 'image/png', quality: 1, name: 'whos-on-my-ballot.png' }
@@ -430,9 +432,9 @@ function placeholder(g: CanvasRenderingContext2D, x: number, y: number, s: numbe
 }
 
 /**
- * The share picture: exactly 1080 x 1920. A short green band at the top (the office, where, and the date), a white middle
- * holding the site's card grid (two columns, three rows), then the address, large, and a green band at the bottom with the
- * affiliation line in white. Each tile: the party's logo and acronym at the top left, the candidate's photo (or the same
+ * The share picture: exactly 1080 x 1920. A green band at the top (the office, where, and the date), a white middle holding
+ * the site's card grid (two columns, three rows), the site's name and its address, large, and a short green band hugging the
+ * bottom edge with the affiliation line in white. Each tile: the party's logo and acronym at the top left, the candidate's photo (or the same
  * plain placeholder as the site) at the top right, and the name across the full width beneath. Drawn from the full-size
  * logos and photos (never the page's small sprite), loaded only now.
  */
@@ -462,7 +464,7 @@ async function drawPicture(d: ShareInfo): Promise<File> {
   const rowH = Math.max(markS, office.size)
   const placeY = y + rowH + 14
   const dateY = placeY + place.lines.length * placeLh + (place.lines.length ? 8 : 0)
-  const band = dateY + 42 + 30
+  const band = dateY + 42 + 34
   g.fillStyle = GREEN
   g.fillRect(0, 0, W, band)
   g.font = `900 ${office.size}px ${FONT}`
@@ -484,23 +486,27 @@ async function drawPicture(d: ShareInfo): Promise<File> {
   g.font = `700 42px ${FONT}`
   g.fillText(d.date, W / 2, dateY)
 
-  // Bottom: the address, large and green on white (WhatsApp can drop the caption), then the green band with the
-  // affiliation line in white, inside the area WhatsApp leaves clear.
-  const foot = bottom - 96
+  // Bottom: a short green band hugging the bottom edge, the affiliation line in white inside it, clear of the reply bar.
+  // Above it, with room around them, the site's name and its address, large (WhatsApp can drop the caption).
+  const foot = bottom - 70
   g.fillStyle = GREEN
   g.fillRect(0, foot, W, H - foot)
   g.fillStyle = '#fff'
-  g.font = `700 48px ${FONT}`
-  g.fillText('Not affiliated with INEC.', W / 2, foot + 26, W - 2 * side)
+  g.font = `700 46px ${FONT}`
+  g.fillText('Not affiliated with INEC.', W / 2, foot + 14, W - 2 * side)
   g.fillStyle = GREEN
   g.font = `900 96px ${FONT}`
-  const addrY = foot - 30 - 96
+  const addrY = foot - 46 - 96
   g.fillText('whosonmyballot.ng', W / 2, addrY, W - 2 * side)
+  g.fillStyle = INK
+  g.font = `800 50px ${FONT}`
+  const nameY = addrY - 18 - 50
+  g.fillText('Who’s on my ballot?', W / 2, nameY, W - 2 * side)
 
   // Middle: the card grid, two by three, the same for every party.
   const gap = 22
   const gridTop = band + 26
-  const gridBottom = addrY - 28
+  const gridBottom = nameY - 42
   const tw = (W - 2 * side - gap) / 2
   const th = (gridBottom - gridTop - 2 * gap) / 3
   const pad = 18
@@ -689,3 +695,4 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-share]')) se
 for (const section of document.querySelectorAll<HTMLElement>('[data-clock]')) setupClock(section)
 
 motion()
+tapFeedback()

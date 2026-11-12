@@ -17,7 +17,7 @@ export default function About() {
   const fg = firstGroup()
   const photos = Object.entries(allPhotos())
   return (
-    <>
+    <div className="about-page">
       <JsonLd data={pageGraph('/about/', TITLE, [['Home', '/'], ['About', '/about/']])} />
       <h1>About this site</h1>
       <p className="lead">
@@ -81,35 +81,14 @@ export default function About() {
       <h2 id="photos">Photos</h2>
       <p>
         Only presidential candidates have a photo, taken from the candidate’s own official account, their campaign or party website, or
-        Wikimedia Commons, never from a news site or agency, with the same head-and-shoulders crop and size for all. Every other candidate,
+        Wikimedia Commons, never from a news site or agency, with the same head-and-shoulders crop and size for all, and each
+        one approved by the site’s owner before it appears. Their credits are listed at the end of this page. Every other candidate,
         and any presidential candidate without a suitable photo, shows the same plain placeholder. A candidate or party can send an official
         photo to
         {' '}
         <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Official photo')}`}>{CORRECTIONS_EMAIL}</a>
         ; the same address takes any request to change a photo.
       </p>
-      {photos.length > 0 && (
-        <>
-          <h3 id="photo-credits">Photo credits</h3>
-          <ul className="photo-credits">
-            {photos.map(([id, p]) => (
-              <li key={id} id={`credit-${id}`}>
-                <strong>{candidate(id).c.candidate.name}</strong>
-                {` (${candidate(id).c.party}): `}
-                <a href={p.file_page}>{p.source}</a>
-                {p.author && `, by ${p.author}`}
-                {p.licence && p.licence_url && (
-                  <>
-                    {', licensed under '}
-                    <a href={p.licence_url}>{p.licence}</a>
-                  </>
-                )}
-                {`; cropped to a square for this site. Retrieved ${formatDate(p.retrieved)}.`}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
 
       <h2>When INEC’s documents don’t settle your race</h2>
       <p>
@@ -120,7 +99,7 @@ export default function About() {
       </p>
 
       <h2>Finding your polling unit</h2>
-      <p className="go"><a className="btn btn-secondary" href="/about/find-your-polling-unit/">How to find your polling unit from your voter card</a></p>
+      <p className="go"><a className="btn" href="/about/find-your-polling-unit/">How to find your polling unit from your voter card</a></p>
 
       <h2>Corrections</h2>
       <p>
@@ -149,6 +128,29 @@ export default function About() {
 
       <h2>Independence</h2>
       <p>Not affiliated with INEC.</p>
-    </>
+
+      {photos.length > 0 && (
+        <>
+          <h2 id="photo-credits">Photo credits</h2>
+          <ul className="photo-credits">
+            {photos.map(([id, p]) => (
+              <li key={id} id={`credit-${id}`}>
+                <strong>{candidate(id).c.candidate.name}</strong>
+                {` (${candidate(id).c.party}): `}
+                <a href={p.file_page}>{p.source}</a>
+                {p.author && `, by ${p.author}`}
+                {p.licence && p.licence_url && (
+                  <>
+                    {', licensed under '}
+                    <a href={p.licence_url}>{p.licence}</a>
+                  </>
+                )}
+                {`; cropped to a square for this site. Retrieved ${formatDate(p.retrieved)}.`}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </div>
   )
 }

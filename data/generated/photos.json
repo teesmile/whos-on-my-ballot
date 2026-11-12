@@ -1,3 +1,137 @@
 {
- "people": {}
+ "people": {
+  "jan-2027-president-adc": {
+   "page": "photos/jan-2027-president-adc.webp",
+   "page_sha256": "61922c8211877c2cbbf5ec7896155f9ae986234531f55e9719facf3b7503e732",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-adc-share.jpg",
+   "share_sha256": "67e283a35011025cebd6f8cad78e8d29a7a3f0c60142261d2e7fd7a29dc66b46",
+   "share_size": 720,
+   "source": "Wikimedia Commons",
+   "file_page": "https://commons.wikimedia.org/wiki/File:Atiku_Abubakar_2023.jpg",
+   "retrieved": "2026-11-11",
+   "author": "Etauso",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "taken": "2022-09-15"
+  },
+  "jan-2027-president-apc": {
+   "page": "photos/jan-2027-president-apc.webp",
+   "page_sha256": "dc89e8f59b040ebb1e219a9069cbb64fbdf44d5636719eb58cad348634109794",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-apc-share.jpg",
+   "share_sha256": "0ecfdcd759afcca1db02e4761e18a538c38663d3302e88b4f05655ba7b659622",
+   "share_size": 720,
+   "source": "Wikimedia Commons",
+   "file_page": "https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait.jpg",
+   "retrieved": "2026-11-11",
+   "author": "Nosa Asemota",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "taken": "2023-05-29"
+  },
+  "jan-2027-president-ndc": {
+   "page": "photos/jan-2027-president-ndc.webp",
+   "page_sha256": "cd39ca0a01af1e11e3e0f57aa4ee44ac3659d0200e05b2402c0f827829b2525f",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-ndc-share.jpg",
+   "share_sha256": "4f7fe625aa2775b1fc2ed5c7c8bf579039568e37709a76491540c60ce6a4a79f",
+   "share_size": 720,
+   "source": "Official website of Peter Obi (mrpeterobi.com)",
+   "file_page": "https://mrpeterobi.com/",
+   "retrieved": "2026-11-11",
+   "taken": "2018-10-12"
+  },
+  "jan-2027-president-sdp": {
+   "page": "photos/jan-2027-president-sdp.webp",
+   "page_sha256": "ede6d052cdf6eb1273d0a1206c8bc42325f35dc2d9bc69e903f20c25e01bd080",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-sdp-share.jpg",
+   "share_sha256": "b71f14883eec4ba5e63af16e978cbbd6e897455b1d9e8a7b1895af3f4333bfcb",
+   "share_size": 720,
+   "source": "Wikimedia Commons",
+   "file_page": "https://commons.wikimedia.org/wiki/File:ADEWOLE_ADEBAYO.jpg",
+   "retrieved": "2026-11-11",
+   "author": "Benbaahi",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "taken": "2022-03-02"
+  },
+  "jan-2027-president-aac": {
+   "page": "photos/jan-2027-president-aac.webp",
+   "page_sha256": "70f3fc6e036bcdc24e0ea2c87ccf9a07081c2bb7286c30f47f406a8d64064621",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-aac-share.jpg",
+   "share_sha256": "bb4371d469178fe14bb24885722e82095850c74d9cdfe3fbc89b16903c5779cf",
+   "share_size": 720,
+   "source": "Wikimedia Commons",
+   "file_page": "https://commons.wikimedia.org/wiki/File:Omoyele_Sowore_(29682338514).jpg",
+   "retrieved": "2026-11-11",
+   "author": "Mohamed Nanabhay",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0/",
+   "taken": "2016-10-03"
+  },
+  "jan-2027-president-adp": {
+   "page": "photos/jan-2027-president-adp.webp",
+   "page_sha256": "201f509284136e4a6cc16a61bc3f82b05a54fd0a4e497f9928b98d851ba3e1bb",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-adp-share.jpg",
+   "share_sha256": "2c2cc101c823ba79e73cab4c2213de2284b2e28bf48da2b9f9a606766a2e681f",
+   "share_size": 720,
+   "source": "Wikimedia Commons",
+   "file_page": "https://commons.wikimedia.org/wiki/File:Aliyu_Bin_Abbas.png",
+   "retrieved": "2026-11-11",
+   "author": "Ultimatemastery",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "taken": "2026-04-05"
+  },
+  "jan-2027-president-apm": {
+   "page": "photos/jan-2027-president-apm.webp",
+   "page_sha256": "50cd0c4f153015c5f229484e822074527d6406adaa38a878c4e3347c3a40eaa2",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-apm-share.jpg",
+   "share_sha256": "7411b919e14550e6fff87e3528cfa7d7ee45f4bc58c22941fe1f754dc292b33c",
+   "share_size": 720,
+   "source": "Official campaign website of Seyi Makinde (seyimakinde.org)",
+   "file_page": "https://seyimakinde.org/",
+   "retrieved": "2026-11-11"
+  },
+  "jan-2027-president-bp": {
+   "page": "photos/jan-2027-president-bp.webp",
+   "page_sha256": "912f6a54fbd3a7f0d448b3dd97e6b342dec88f3b98df9e99145bbb49a861b7d3",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-bp-share.jpg",
+   "share_sha256": "0de97ad4514b37037ba0e7cbca2be4808b81dcd23951125804159e9fe96b168a",
+   "share_size": 720,
+   "source": "Official website of the BOOT Party (boot.org.ng)",
+   "file_page": "https://boot.org.ng/people/boot_nec_nwc.php",
+   "retrieved": "2026-11-11",
+   "taken": "2018-08-09"
+  },
+  "jan-2027-president-nrm": {
+   "page": "photos/jan-2027-president-nrm.webp",
+   "page_sha256": "120d34014392269ceb301f8d2483818f1944d8848173dd94aeaf3b5488cfc92d",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-nrm-share.jpg",
+   "share_sha256": "a862fbd2dd9789778d35e25f1067bcd29c25e1204c51ae683b2c5e3668a5793f",
+   "share_size": 720,
+   "source": "Official website of Dr Esther Nkem Okereke (esthernkemokereke.com)",
+   "file_page": "https://www.esthernkemokereke.com/biography",
+   "retrieved": "2026-11-11",
+   "taken": "2026-03-23"
+  },
+  "jan-2027-president-zlp": {
+   "page": "photos/jan-2027-president-zlp.webp",
+   "page_sha256": "5a08f9a3a476f5e705c1032201d98e292169ba2e9f952a6e86527e42bd633bb6",
+   "page_size": 320,
+   "share": "photos/jan-2027-president-zlp-share.jpg",
+   "share_sha256": "81cfd1dc1c21de58ea16bbb1bb88e5a6c515781cc18a269e15bdaa27304753a0",
+   "share_size": 720,
+   "source": "Official website of the Zenith Labour Party (zlp.ng)",
+   "file_page": "https://zlp.ng/candidate/national-chairman/",
+   "retrieved": "2026-11-11"
+  }
+ }
 }

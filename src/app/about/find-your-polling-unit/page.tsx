@@ -62,7 +62,7 @@ export default function FindYourPollingUnit() {
 
       <h2>What you type stays with you</h2>
       <p>The code or name you type is matched in your browser. It is never sent to this site or anyone else.</p>
-      <p className="go"><a className="btn btn-secondary" href="/about/">About this site</a></p>
+      <p className="go"><a className="btn" href="/about/">About this site</a></p>
     </>
   )
 }

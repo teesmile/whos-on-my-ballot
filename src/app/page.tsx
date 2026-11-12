@@ -24,7 +24,7 @@ export default function Home() {
           <Steps current={1} />
           <p className="action-buttons">
             <a className="btn btn-big" href="#by-state">Pick your state</a>
-            <a className="btn btn-secondary" href="#by-landmark">Search by a landmark</a>
+            <a className="btn" href="#by-landmark">Search by a landmark</a>
           </p>
         </div>
         <Countdown headingLevel={2} />
@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       <p className="quiet">We never ask for your name or any personal details, and we don’t look you up anywhere.</p>
-      <ul className="link-list tiles-wide"><li><a href="/about/find-your-polling-unit/">How to find your polling unit</a></li></ul>
+      <p className="go"><a className="btn" href="/about/find-your-polling-unit/">How to find your polling unit</a></p>
       <CivicNote />
     </>
   )

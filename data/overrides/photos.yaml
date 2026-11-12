@@ -1,13 +1,23 @@
 # Candidate photos (owner decisions D-064 and D-065): presidential candidates only, from the candidate's own verified official
 # account, their campaign or party website, or Wikimedia Commons; never a news site or agency. Each entry: where it came from
-# in the source's own words (`source`), the short credit shown under the photo (`credit`), the page and the direct file, its
-# SHA-256, the licence where one exists, when it was taken or posted, when we retrieved it, and a square crop box
+# in the source's own words (`source`), the page and the direct file, its SHA-256, the licence where one exists, when it was taken or posted, when we retrieved it, and a square crop box
 # [x, y, size, size] in source pixels, chosen so every face sits at the same size (a negative x or y is padded with the
 # picture's own edge colour).
 # Nothing is built until the owner has approved the face on a contact sheet: `owner_approved: 'YYYY-MM-DD'`.
 people:
+  - candidate_id: jan-2027-president-adc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Atiku_Abubakar_2023.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/5/5d/Atiku_Abubakar_2023.jpg
+    sha256: df058c4938c21e253deba5f9fb03afc59b59277be7b47d9bce8c239cd06317e8
+    author: Etauso
+    licence: CC0 1.0
+    licence_url: https://creativecommons.org/publicdomain/zero/1.0/
+    taken: '2022-09-15'
+    retrieved: '2026-11-11'
+    crop: [677, 150, 2600, 2600]
+    owner_approved: '2026-11-11'  # contact sheet option ADC-B
   - candidate_id: jan-2027-president-apc
-    credit: Wikimedia Commons
     source: Wikimedia Commons
     file_page: https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait.jpg
     file_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Bola_Tinubu_portrait.jpg
@@ -17,9 +27,9 @@ people:
     licence_url: https://creativecommons.org/licenses/by-sa/4.0/
     taken: '2023-05-29'
     retrieved: '2026-11-11'
-    crop: [480, 250, 1060, 1060]
+    crop: [250, 150, 1300, 1300]
+    owner_approved: '2026-11-11'  # contact sheet option APC-A
   - candidate_id: jan-2027-president-ndc
-    credit: official website
     source: Official website of Peter Obi (mrpeterobi.com)
     file_page: https://mrpeterobi.com/
     file_url: https://media.mrpeterobi.com/peterobi.jpg
@@ -27,8 +37,8 @@ people:
     taken: '2018-10-12'
     retrieved: '2026-11-11'
     crop: [45, -67, 600, 600]
+    owner_approved: '2026-11-11'  # contact sheet option NDC-A
   - candidate_id: jan-2027-president-sdp
-    credit: Wikimedia Commons
     source: Wikimedia Commons
     file_page: https://commons.wikimedia.org/wiki/File:ADEWOLE_ADEBAYO.jpg
     file_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/ADEWOLE_ADEBAYO.jpg
@@ -39,3 +49,62 @@ people:
     taken: '2022-03-02'
     retrieved: '2026-11-11'
     crop: [2110, 0, 2795, 2795]
+    owner_approved: '2026-11-11'  # contact sheet option SDP
+  - candidate_id: jan-2027-president-aac
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Omoyele_Sowore_(29682338514).jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Omoyele_Sowore_%2829682338514%29.jpg
+    sha256: 94ed76e24e76310696a9b163c5d31e6a3458a55091bf95ef980bed20b5480c0f
+    author: Mohamed Nanabhay
+    licence: CC BY 2.0
+    licence_url: https://creativecommons.org/licenses/by/2.0/
+    taken: '2016-10-03'
+    retrieved: '2026-11-11'
+    crop: [0, 455, 2265, 2265]
+    owner_approved: '2026-11-11'  # contact sheet option AAC
+  - candidate_id: jan-2027-president-adp
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Aliyu_Bin_Abbas.png
+    file_url: https://upload.wikimedia.org/wikipedia/commons/0/04/Aliyu_Bin_Abbas.png
+    sha256: 4a85873720487f0702b537f22ef0ff72b6e1f9728d1d347371f507fe14d0469b
+    author: Ultimatemastery
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0/
+    taken: '2026-04-05'
+    retrieved: '2026-11-11'
+    crop: [0, 5, 720, 720]
+    owner_approved: '2026-11-11'  # contact sheet option ADP
+  - candidate_id: jan-2027-president-apm
+    source: Official campaign website of Seyi Makinde (seyimakinde.org)
+    file_page: https://seyimakinde.org/
+    file_url: https://seyimakinde.org/media/home-v2/seyi-makinde.webp
+    sha256: a003101f1a74f05ac9adde2a2be89da94b824bffe1633a237df1d73801132609
+    retrieved: '2026-11-11'
+    crop: [254, 0, 600, 600]
+    owner_approved: '2026-11-11'  # contact sheet option APM
+  - candidate_id: jan-2027-president-bp
+    source: Official website of the BOOT Party (boot.org.ng)
+    file_page: https://boot.org.ng/people/boot_nec_nwc.php
+    file_url: https://boot.org.ng/images/nec/SA.jpg
+    sha256: 6157bac490a7dedd55b45039208391b5a0e0c6068e3953726ad256c7d9b69bcc
+    taken: '2018-08-09'
+    retrieved: '2026-11-11'
+    crop: [0, 0, 315, 315]
+    owner_approved: '2026-11-11'  # contact sheet option BP
+  - candidate_id: jan-2027-president-nrm
+    source: Official website of Dr Esther Nkem Okereke (esthernkemokereke.com)
+    file_page: https://www.esthernkemokereke.com/biography
+    file_url: https://static.wixstatic.com/media/c65736_de6bc43734e2404e8b4baeacc7c98775~mv2.jpg
+    sha256: f742c644ea6542b08c31b75c78f1a33d2131f3877f29933c4a610559f8b7566e
+    taken: '2026-03-23'
+    retrieved: '2026-11-11'
+    crop: [205, 0, 458, 458]
+    owner_approved: '2026-11-11'  # contact sheet option NRM
+  - candidate_id: jan-2027-president-zlp
+    source: Official website of the Zenith Labour Party (zlp.ng)
+    file_page: https://zlp.ng/candidate/national-chairman/
+    file_url: https://zlp.ng/wp-content/uploads/2020/01/mr_dan_nwanyanwu-scaled.jpg
+    sha256: f0dae891ae3041d41c0661058cb9ec3b75dec6e7e878449149514af6cac7e75a
+    retrieved: '2026-11-11'
+    crop: [679, 386, 777, 777]
+    owner_approved: '2026-11-11'  # contact sheet option ZLP

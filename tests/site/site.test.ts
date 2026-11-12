@@ -324,7 +324,7 @@ describe('results (waiting state, 11 Nov 2026)', () => {
       // the president: the date and the results page; Senate and House: the declared winner, once INEC lists those elected
       expect((p.match(/Results for this race will appear from 16 January 2027\./g) ?? []).length, b.path).toBe(1)
       expect((p.match(/The declared winner will be shown here once INEC publishes its list of those elected\./g) ?? []).length, b.path).toBe(n - 1)
-      expect((p.match(/class="btn btn-secondary" href="mailto:[^"]+">Report a correction<\/a>/g) ?? []).length, b.path).toBe(n)
+      expect((p.match(/class="btn" href="mailto:[^"]+">Report a correction<\/a>/g) ?? []).length, b.path).toBe(n)
     }
   })
 })
@@ -374,21 +374,28 @@ describe('candidate photos (owner decisions D-064, D-065)', () => {
     const pres = presidentialRace()
     for (const c of pres.candidates) {
       const page = html(`c/${c.id}`)
-      if (approved.has(c.id)) expect(page, c.id).toMatch(/<figure class="profile-photo"><img src="\/photos\/[^"]+\.webp"/)
-      else expect(page, c.id).not.toContain('<figure class="profile-photo"><img')
+      if (approved.has(c.id)) expect(page, c.id).toMatch(/<div class="profile-photo"><img src="\/photos\/[^"]+\.webp"/)
+      else expect(page, c.id).toContain('<div class="profile-photo"><span class="photo ph" aria-hidden="true"></span></div>')
     }
     for (const r of [...races().filter(x => x.office !== 'president').slice(0, 20), ...febRaces().slice(0, 20)]) {
       const page = html(`c/${r.candidates[0].id}`)
-      expect(page, r.id).not.toContain('<figure class="profile-photo"><img')
+      expect(page, r.id).not.toContain('<div class="profile-photo"><img')
       // everyone without a photo has the same placeholder
       expect(page, r.id).toContain('<div class="profile-photo"><span class="photo ph" aria-hidden="true"></span></div>')
     }
   })
-  it('under a photo only a short plain credit; the full credit is in the About page\'s list', () => {
+  it('no credit on the candidate page; the full credit for each photo is in one list at the end of the About page', () => {
+    expect(approved.size).toBe(10)
+    const about = html('about')
+    const credits = about.slice(about.indexOf('<h2 id="photo-credits">Photo credits</h2>'))
+    expect(credits.match(/<h2/g)?.length, 'Photo credits is the last section').toBe(1)
     for (const id of approved) {
-      expect(html(`c/${id}`), id).toMatch(/<figcaption>Photo: (Wikimedia Commons|official [A-Za-z]+ account|official website)<\/figcaption>/)
-      expect(html('about'), id).toContain(`<li id="credit-${id}">`)
+      const page = html(`c/${id}`)
+      expect(page, id).toMatch(/<div class="profile-photo"><img src="\/photos\/[^"]+\.webp" width="160" height="160" alt="Photo of [^"]+"\/><\/div>/)
+      expect(page, id).not.toMatch(/figcaption|CC BY|CC0|Wikimedia|Photo: /)
+      expect(credits, id).toContain(`<li id="credit-${id}">`)
     }
+    for (const m of credits.matchAll(/<li id="credit-[^"]+">([\s\S]*?)<\/li>/g)) expect(m[1]).toMatch(/<a href="https?:\/\/[^"]+">[^<]+<\/a>[\s\S]*cropped to a square[\s\S]*Retrieved/)
   })
   it('every card has the photo slot, a photo or the same placeholder, in the same place', () => {
     const ballot = html('ballot/abia/aba-north-aba-south--abia-south')

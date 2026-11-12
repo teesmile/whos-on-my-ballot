@@ -5,7 +5,7 @@
  * finishes. Nothing happens under reduced motion or without IntersectionObserver; without this script everything is shown.
  * Only opacity and transform change, so nothing shifts the layout.
  */
-export const REVEAL = '.card, .wa-tile, .panel, .results-panel, .link-list > li, .pu-list > li, .date-card, .step-card, .timeline > li, .race > h2, .race > h3, .results-strip, .share, .correct-row, .civic-note, .state-map, .results-table tbody tr, .sources > li'
+export const REVEAL = '.card, .wa-tile, .panel, .results-panel, .link-list > li, .pu-list > li, .date-card, .step-card, .timeline > li, .race > h2, .race > h3, .results-strip, .share, .correct-row, .civic-note, .state-map, .results-table tbody tr, .sources > li, .about-page > :is(h2, p, ul)'
 
 export function motion() {
   const root = document.documentElement
@@ -42,4 +42,28 @@ export function motion() {
     const a = (e.target as Element | null)?.closest?.('a[href^="#"]')
     if (a) land(a.getAttribute('href')!)
   }, true)
+}
+
+/**
+ * Tapping a tile (state, LGA, ward, polling unit) or an outlined button fills it solid green at once (owner feedback, 11 Nov
+ * 2026); the stylesheet does it while the finger is down (:active), and this keeps it filled until the next page opens.
+ */
+export const TAP = '.link-list a, .pu-list a, .result a:not(.btn), button.btn-share, button.btn-quiet, .race-tabs a'
+
+export function tapFeedback() {
+  const root = document.documentElement
+  if (root.dataset.tap) return
+  root.dataset.tap = '1'
+  // Safari applies :active on touch only when the page listens for touches
+  addEventListener('touchstart', () => {}, { passive: true })
+  addEventListener('click', (e) => {
+    const t = (e.target as Element | null)?.closest?.(TAP)
+    if (!t) return
+    for (const o of document.querySelectorAll('.tapped')) o.classList.remove('tapped')
+    t.classList.add('tapped')
+    // an in-page action (a tab, Share, Copy link) lets go once it has shown
+    if (!(t instanceof HTMLAnchorElement) || t.getAttribute('href')?.startsWith('#')) setTimeout(() => t.classList.remove('tapped'), 250)
+  }, true)
+  // coming back with the browser's Back button shows the page as it was left: let go of the fill
+  addEventListener('pageshow', () => { for (const o of document.querySelectorAll('.tapped')) o.classList.remove('tapped') })
 }

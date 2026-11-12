@@ -54,22 +54,26 @@ export function formatDate(iso: string): string {
  * One square cell of the sprite (every logo and approved photo in one image, so a page makes one image request).
  * The 1-pixel inset keeps neighbouring cells from bleeding in when the browser scales the image.
  */
-function SpriteCell({ x, y, cell, size, label, className }: { x: number, y: number, cell: number, size: number, label: string | null, className: string }) {
+function SpriteCell({ x, y, cell, size, label, className, logosOnly = false }: { x: number, y: number, cell: number, size: number, label: string | null, className: string, logosOnly?: boolean }) {
   const s = sprite()
   const a11y = label ? { 'role': 'img', 'aria-label': label } : { 'aria-hidden': true }
+  const img = logosOnly ? { href: `/${s.logo_file}`, width: s.logo_width, height: s.cell } : { href: `/${s.file}`, width: s.width, height: s.height }
   return (
     <svg className={className} width={size} height={size} viewBox={`${x + 1} ${y + 1} ${cell - 2} ${cell - 2}`} focusable="false" {...a11y}>
-      <image href={`/${s.file}`} width={s.width} height={s.height} />
+      <image {...img} />
     </svg>
   )
 }
 
-/** A party's logo from INEC's register (D-043): the same size and treatment for every party, the acronym as its text. */
-export function PartyLogo({ party, size }: { party: string, size: number }) {
+/**
+ * A party's logo from INEC's register (D-043): the same size and treatment for every party, the acronym as its text.
+ * `logosOnly` draws it from the logos-only sprite, for a page that shows no photo card (a candidate page).
+ */
+export function PartyLogo({ party, size, logosOnly = false }: { party: string, size: number, logosOnly?: boolean }) {
   const s = sprite()
   const i = s.logos[party]
   if (i === undefined) throw new Error(`no INEC logo for ${party} in the sprite`)
-  return <SpriteCell x={i * s.cell} y={0} cell={s.cell} size={size} label={party} className="logo" />
+  return <SpriteCell x={i * s.cell} y={0} cell={s.cell} size={size} label={party} className="logo" logosOnly={logosOnly} />
 }
 
 /**
