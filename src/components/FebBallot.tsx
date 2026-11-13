@@ -3,7 +3,7 @@ import { pageGraph } from '@/lib/seo'
 
 import { JsonLd } from './JsonLd'
 import { ChooseFirst } from './ChooseFirst'
-import { badgeFor, INEC_2027, RaceSection, RaceTabs, type TabPanel, UnresolvedGroup } from './RaceSection'
+import { badgeFor, BallotSources, INEC_2027, RaceSection, RaceTabs, type TabPanel, UnresolvedGroup } from './RaceSection'
 import { SourceLine } from './SourceLine'
 
 /** Identical wording for every state without a governorship race on 6 February (the working rules §1). */
@@ -23,12 +23,11 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
       key: 'governor', label: 'Governor', title: 'Governor',
       ...(gov ? badgeFor([gov]) : { badge: '0', badgeLong: 'candidates: no governorship election in this state' }),
       content: gov
-        ? <RaceSection r={gov} pageUrl={b.path} />
+        ? <RaceSection r={gov} pageUrl={b.path} linksAtEnd />
         : (
             <section className="race" aria-labelledby="no-governor">
               <h2 id="no-governor" className="band">Governor</h2>
               <p className="note" data-no-governor>{noGovernorText(st)}</p>
-              <SourceLine id="governor-abia" what="States with a governorship election on 6 February" />
             </section>
           ),
     })
@@ -40,13 +39,12 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
             <section className="race" aria-labelledby="no-sha">
               <h2 id="no-sha" className="band">State House of Assembly</h2>
               <p className="note" data-no-sha>{NO_SHA_BORNO}</p>
-              <SourceLine id="sha-2026-10-10" what="State House of Assembly candidates" />
               <p className="go"><a className="btn" href={INEC_2027}>INEC 2027 general elections page</a></p>
             </section>
           )
         : sha.length === 1
-          ? <RaceSection r={sha[0]} pageUrl={b.path} />
-          : <UnresolvedGroup office="State House of Assembly" list={sha} path={b.path} />,
+          ? <RaceSection r={sha[0]} pageUrl={b.path} linksAtEnd />
+          : <UnresolvedGroup office="State House of Assembly" list={sha} path={b.path} linksAtEnd />,
     })
   }
   return (
@@ -64,13 +62,6 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
         {' · '}
         Every race on this ballot, with every candidate as INEC listed them.
       </p>
-      <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
-      {b.sha.length > 0 && (
-        <>
-          <SourceLine id="inec-constituencies-workbook" what="Which State Assembly constituency each ward is in (with INEC’s 2027 list)" />
-          <SourceLine id="inec-irev-2023-assembly" what="Which State Assembly constituency each ward was in at the 18 March 2023 elections" />
-        </>
-      )}
       {b.disagree && (
         <p className="note" data-sources-disagree>
           For some wards here, INEC’s constituency workbook and INEC’s Result Viewing Portal (2023) give different State Assembly constituencies, so both are shown.
@@ -82,10 +73,20 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
             <section className="race" aria-labelledby="no-governor">
               <h2 id="no-governor" className="band">6 February 2027</h2>
               <p className="note" data-no-governor>{noGovernorText(st)}</p>
-              <SourceLine id="governor-abia" what="States with a governorship election on 6 February" />
             </section>
           )}
       <p className="go"><a className="btn" href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
+      <BallotSources races={gov ? [gov, ...sha] : sha}>
+        <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
+        {b.sha.length > 0 && (
+          <>
+            <SourceLine id="inec-constituencies-workbook" what="Which State Assembly constituency each ward is in (with INEC’s 2027 list)" />
+            <SourceLine id="inec-irev-2023-assembly" what="Which State Assembly constituency each ward was in at the 18 March 2023 elections" />
+          </>
+        )}
+        {!gov && <SourceLine id="governor-abia" what="States with a governorship election on 6 February" />}
+        {st === 'BORNO' && <SourceLine id="sha-2026-10-10" what="State House of Assembly candidates" />}
+      </BallotSources>
     </>
   )
 }

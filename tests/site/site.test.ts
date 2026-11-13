@@ -8,7 +8,7 @@ import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 
 import { findByCode, puHash, slug, type StateSearchData } from '@/lib/core'
-import { ballots, febRaces, presidentialRace, race, races, stateGeo, states, wardBallotPath } from '@/lib/data'
+import { ballots, febBallots, febRaces, presidentialRace, race, races, stateGeo, states, wardBallotPath } from '@/lib/data'
 
 const OUT = path.resolve('out')
 const html = (p: string) => fs.readFileSync(path.join(OUT, p, 'index.html'), 'utf8')
@@ -216,12 +216,27 @@ describe('citations beyond candidate blocks', () => {
     }
   })
 
-  it('every race cites INEC’s party register for the full party names, and every ballot cites how it was matched', () => {
-    for (const b of ballots()) {
+  it('a ballot page shows the candidates first and its references last: no citation before “Not your polling unit?”, then one Sources section citing every race, the party register and how the ballot was matched', () => {
+    const specs = [
+      ...ballots().map(b => ({ path: b.path, ids: [presidentialRace().id, ...b.senate, ...b.house], workbook: true })),
+      ...febBallots().map(b => ({ path: b.path, ids: [...(b.governor ? [b.governor] : []), ...b.sha], workbook: b.sha.length > 0 })),
+    ]
+    expect(specs.length).toBeGreaterThan(1000)
+    for (const b of specs) {
       const page = html(b.path.slice(1))
-      const sections = page.split('<section class="race"').slice(1)
-      for (const sec of sections) expect(dated(sec, 'inec-parties'), b.path).toBe(true)
-      expect(dated(page, 'inec-pu-locator') && dated(page, 'inec-constituencies-workbook'), b.path).toBe(true)
+      const main = page.slice(page.indexOf('<main'), page.indexOf('</main>'))
+      const button = main.indexOf('Not your polling unit? Search again')
+      const end = main.indexOf('<section class="ballot-sources"')
+      expect(button, b.path).toBeGreaterThan(0)
+      expect(end, b.path).toBeGreaterThan(button)
+      expect(main.slice(0, end), b.path).not.toContain('class="cite"')
+      const sources = main.slice(end)
+      expect(dated(sources, 'inec-parties') && dated(sources, 'inec-pu-locator'), b.path).toBe(true)
+      expect(dated(sources, 'inec-constituencies-workbook'), b.path).toBe(b.workbook)
+      for (const id of b.ids) {
+        const block = sources.slice(sources.indexOf(`data-sources-of="${id}"`)).split('</div>')[0]
+        for (const src of race(id).sources) expect(dated(block, src), `${b.path} ${id} ${src}`).toBe(true)
+      }
     }
   })
 

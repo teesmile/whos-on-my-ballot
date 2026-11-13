@@ -14,7 +14,7 @@ import yaml
 from . import extract as ex
 from .geo import GeoError, WorkbookUnit, key, read_locator, read_workbook, resolve_composition
 from .models import Candidate, Lga, Person, PlacementNote, PollingUnit, PrintingNote, Provenance, Race, StateGeo, Ward
-from .ordering import ORDER_RULE, display_order, order_candidates
+from .ordering import ORDER_RULE, display_order, order_candidates, state_five
 from .parties import parse_parties
 from .paths import ALIASES_YAML, DATA_DIR, GENERATED_DIR, PIPELINE_DIR, RAW_DIR, SOURCES_YAML
 from .states import slug
@@ -110,7 +110,57 @@ def load_first_group(registered: set[str]) -> dict:
         raise ValueError(f"first-group.yaml names parties not on INEC's register: {sorted(set(parties) - registered)}")
     if not fg.get("label") or not fg.get("sources"):
         raise ValueError("first-group.yaml needs the label shown on the page and its sources")
+    rule = fg.get("state_rule") or {}
+    for st, w in (rule.get("winners") or {}).items():
+        if w.get("party") not in registered:
+            raise ValueError(f"first-group.yaml state_rule: {st}'s winner {w.get('party')!r} is not on INEC's register")
+        if w.get("source") not in (rule.get("sources") or {}) or not w.get("name") or not w.get("date"):
+            raise ValueError(f"first-group.yaml state_rule: {st} needs a name, a date and a listed source")
+    for key, src in (rule.get("sources") or {}).items():
+        if not all(src.get(k) for k in ("title", "url", "retrieved", "declared_by")):
+            raise ValueError(f"first-group.yaml state_rule source {key} needs a title, url, retrieved date and declared_by")
     return {**fg, "parties": parties, "measure_values": fg["parties"]}
+
+
+def apply_state_rule(races: list[Race], first_group: dict, errors: list[str]) -> tuple[list[Race], dict]:
+    """D-070: each state's first group for every race except President, recomputed from the lists, then applied."""
+    rule = first_group.get("state_rule") or {}
+    winners = rule.get("winners") or {}
+    states = sorted({r.state for r in races if r.state and r.state != "FCT"})
+    missing = sorted(set(states) - set(winners))
+    if missing:
+        errors.append(f"first group (D-070): no governorship winner recorded for {missing}")
+        return races, {}
+    national = {m["acronym"]: m["value"] for m in first_group["measure_values"]}
+    out: dict[str, dict] = {}
+    for st in states:
+        w = winners[st]
+        in_state = Counter(cd.party for r in races if r.state == st and r.office != "president"
+                           for cd in r.candidates if cd.candidate.name)
+        try:
+            five, replaced = state_five(national, in_state, w["party"])
+        except ValueError as e:
+            errors.append(f"first group (D-070) {st}: {e}")
+            continue
+        if replaced:
+            src = rule["sources"][w["source"]]
+            out[st] = {"parties": five, "joins": w["party"], "replaces": replaced,
+                       "label": rule["label"].format(party=w["party"], state=w["name"]),
+                       "state_name": w["name"], "election_date": w["date"],
+                       "counts": {p: in_state.get(p, 0) for p in sorted([*national, w["party"]])},
+                       "source": {k: src[k] for k in ("title", "url", "retrieved", "declared_by")}}
+    expected = rule.get("changes") or {}
+    got = {st: {"joins": v["joins"], "replaces": v["replaces"]} for st, v in out.items()}
+    if got != expected:
+        errors.append(f"first group (D-070): the lists now give {got}, not {expected}; the owner must review")
+    new_races = []
+    for r in races:
+        if r.office != "president" and r.state in out:
+            cands = [c.model_copy(update={"display_group": g})
+                     for c, g in display_order(r.candidates, lambda c: c.party, out[r.state]["parties"])]
+            r = r.model_copy(update={"candidates": cands})
+        new_races.append(r)
+    return new_races, out
 
 
 def build(log=print) -> BuildResult:
@@ -504,6 +554,9 @@ def build(log=print) -> BuildResult:
         "pus": sum(len(w[2]) for _, lgas in locator.values() for l in lgas for w in l.wards),
     }
     from .logos import check_logos
+
+    races, by_state = apply_state_rule(races, first_group, errors)
+    first_group = {**{k: v for k, v in first_group.items() if k != "state_rule"}, "states": by_state}
 
     # D-042: recount the measure from the lists themselves; the five must match first-group.yaml exactly, with no tie for fifth.
     fielded = Counter(cd.party for r in races for cd in r.candidates if cd.candidate.name)

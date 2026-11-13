@@ -65,6 +65,32 @@
     }
    },
    {
+    "id": "jan-2027-house-abia-aba-north-aba-south-lp",
+    "race_id": "jan-2027-house-abia-aba-north-aba-south",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 7,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "IKWECHEGH ALEX MASCOT",
+     "age": 46,
+     "age_as_printed": "46",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE WAEC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 1,
+     "sn": 7
+    }
+   },
+   {
     "id": "jan-2027-house-abia-aba-north-aba-south-ndc",
     "race_id": "jan-2027-house-abia-aba-north-aba-south",
     "party": "NDC",
@@ -88,32 +114,6 @@
      "source_id": "house-abia",
      "page": 1,
      "sn": 8
-    }
-   },
-   {
-    "id": "jan-2027-house-abia-aba-north-aba-south-pdp",
-    "race_id": "jan-2027-house-abia-aba-north-aba-south",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 10,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "AJUZIEOGU ROWLAND CHIMA",
-     "age": 59,
-     "age_as_printed": "59",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAEC/GCE B.A (HONS) M.SC MASS COM)",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 1,
-     "sn": 10
     }
    },
    {
@@ -247,32 +247,6 @@
     }
    },
    {
-    "id": "jan-2027-house-abia-aba-north-aba-south-lp",
-    "race_id": "jan-2027-house-abia-aba-north-aba-south",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 7,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "IKWECHEGH ALEX MASCOT",
-     "age": 46,
-     "age_as_printed": "46",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE WAEC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 1,
-     "sn": 7
-    }
-   },
-   {
     "id": "jan-2027-house-abia-aba-north-aba-south-nrm",
     "race_id": "jan-2027-house-abia-aba-north-aba-south",
     "party": "NRM",
@@ -296,6 +270,32 @@
      "source_id": "house-abia",
      "page": 1,
      "sn": 9
+    }
+   },
+   {
+    "id": "jan-2027-house-abia-aba-north-aba-south-pdp",
+    "race_id": "jan-2027-house-abia-aba-north-aba-south",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 10,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "AJUZIEOGU ROWLAND CHIMA",
+     "age": 59,
+     "age_as_printed": "59",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC/GCE B.A (HONS) M.SC MASS COM)",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 1,
+     "sn": 10
     }
    },
    {
@@ -392,6 +392,32 @@
     }
    },
    {
+    "id": "jan-2027-house-abia-arochukwu-ohafia-lp",
+    "race_id": "jan-2027-house-abia-arochukwu-ohafia",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 8,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "OSONWA IBE OKWARA",
+     "age": 51,
+     "age_as_printed": "51",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC BA (HONOURS)",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 2,
+     "sn": 20
+    }
+   },
+   {
     "id": "jan-2027-house-abia-arochukwu-ohafia-ndc",
     "race_id": "jan-2027-house-abia-arochukwu-ohafia",
     "party": "NDC",
@@ -415,32 +441,6 @@
      "source_id": "house-abia",
      "page": 2,
      "sn": 21
-    }
-   },
-   {
-    "id": "jan-2027-house-abia-arochukwu-ohafia-pdp",
-    "race_id": "jan-2027-house-abia-arochukwu-ohafia",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 10,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "AGWU EMMANUEL UKPONG",
-     "age": 55,
-     "age_as_printed": "55",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE SSCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 2,
-     "sn": 22
     }
    },
    {
@@ -600,20 +600,20 @@
     }
    },
    {
-    "id": "jan-2027-house-abia-arochukwu-ohafia-lp",
+    "id": "jan-2027-house-abia-arochukwu-ohafia-pdp",
     "race_id": "jan-2027-house-abia-arochukwu-ohafia",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 8,
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 10,
     "display_group": "rest",
     "remarks": "",
     "candidate": {
-     "name": "OSONWA IBE OKWARA",
-     "age": 51,
-     "age_as_printed": "51",
+     "name": "AGWU EMMANUEL UKPONG",
+     "age": 55,
+     "age_as_printed": "55",
      "gender": "M",
      "pwd": "None",
-     "qualifications": "FSLC WAEC BA (HONOURS)",
+     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE SSCE",
      "position": "",
      "background": null
     },
@@ -622,7 +622,7 @@
     "provenance": {
      "source_id": "house-abia",
      "page": 2,
-     "sn": 20
+     "sn": 22
     }
    },
    {
@@ -771,6 +771,32 @@
     }
    },
    {
+    "id": "jan-2027-house-abia-bende-lp",
+    "race_id": "jan-2027-house-abia-bende",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 8,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ANYASO CHIMAOBI DESMOND",
+     "age": 45,
+     "age_as_printed": "45",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC BA (ENGLISH & LITERATURE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 3,
+     "sn": 34
+    }
+   },
+   {
     "id": "jan-2027-house-abia-bende-ndc",
     "race_id": "jan-2027-house-abia-bende",
     "party": "NDC",
@@ -794,32 +820,6 @@
      "source_id": "house-abia",
      "page": 3,
      "sn": 35
-    }
-   },
-   {
-    "id": "jan-2027-house-abia-bende-pdp",
-    "race_id": "jan-2027-house-abia-bende",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 11,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "MEZIEOBI CHIDI EZEOGU",
-     "age": 46,
-     "age_as_printed": "46",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "WAEC/NECO (SSCE) B. SC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 3,
-     "sn": 37
     }
    },
    {
@@ -979,32 +979,6 @@
     }
    },
    {
-    "id": "jan-2027-house-abia-bende-lp",
-    "race_id": "jan-2027-house-abia-bende",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 8,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ANYASO CHIMAOBI DESMOND",
-     "age": 45,
-     "age_as_printed": "45",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAEC BA (ENGLISH & LITERATURE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 3,
-     "sn": 34
-    }
-   },
-   {
     "id": "jan-2027-house-abia-bende-nrm",
     "race_id": "jan-2027-house-abia-bende",
     "party": "NRM",
@@ -1028,6 +1002,32 @@
      "source_id": "house-abia",
      "page": 3,
      "sn": 36
+    }
+   },
+   {
+    "id": "jan-2027-house-abia-bende-pdp",
+    "race_id": "jan-2027-house-abia-bende",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 11,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "MEZIEOBI CHIDI EZEOGU",
+     "age": 46,
+     "age_as_printed": "46",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "WAEC/NECO (SSCE) B. SC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 3,
+     "sn": 37
     }
    },
    {
@@ -1150,6 +1150,32 @@
     }
    },
    {
+    "id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south-lp",
+    "race_id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 6,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ONWUSIBE OBINNA GINGER",
+     "age": 54,
+     "age_as_printed": "54",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE GCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 4,
+     "sn": 46
+    }
+   },
+   {
     "id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south-ndc",
     "race_id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south",
     "party": "NDC",
@@ -1173,32 +1199,6 @@
      "source_id": "house-abia",
      "page": 4,
      "sn": 47
-    }
-   },
-   {
-    "id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south-pdp",
-    "race_id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 8,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "NWOSU ONYEDIKACHI ALEXANDER",
-     "age": 58,
-     "age_as_printed": "58",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "EKULU PRIMARY SCHOOL, ENUGU (FSLC) GOVERNMENT COLLEGE, OWERRI(GCE) AHMADU BELLO UNIVERSITY(LLB)",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 4,
-     "sn": 48
     }
    },
    {
@@ -1306,20 +1306,20 @@
     }
    },
    {
-    "id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south-lp",
+    "id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south-pdp",
     "race_id": "jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 6,
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 8,
     "display_group": "rest",
     "remarks": "",
     "candidate": {
-     "name": "ONWUSIBE OBINNA GINGER",
-     "age": 54,
-     "age_as_printed": "54",
+     "name": "NWOSU ONYEDIKACHI ALEXANDER",
+     "age": 58,
+     "age_as_printed": "58",
      "gender": "M",
      "pwd": "None",
-     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE GCE",
+     "qualifications": "EKULU PRIMARY SCHOOL, ENUGU (FSLC) GOVERNMENT COLLEGE, OWERRI(GCE) AHMADU BELLO UNIVERSITY(LLB)",
      "position": "",
      "background": null
     },
@@ -1328,7 +1328,7 @@
     "provenance": {
      "source_id": "house-abia",
      "page": 4,
-     "sn": 46
+     "sn": 48
     }
    },
    {
@@ -1451,6 +1451,32 @@
     }
    },
    {
+    "id": "jan-2027-house-abia-isuikwuato-umu-nneochi-lp",
+    "race_id": "jan-2027-house-abia-isuikwuato-umu-nneochi",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 6,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "OGAH AMOBI GODWIN",
+     "age": 46,
+     "age_as_printed": "46",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE SSCE/NECO BSC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 5,
+     "sn": 57
+    }
+   },
+   {
     "id": "jan-2027-house-abia-isuikwuato-umu-nneochi-ndc",
     "race_id": "jan-2027-house-abia-isuikwuato-umu-nneochi",
     "party": "NDC",
@@ -1474,32 +1500,6 @@
      "source_id": "house-abia",
      "page": 5,
      "sn": 58
-    }
-   },
-   {
-    "id": "jan-2027-house-abia-isuikwuato-umu-nneochi-pdp",
-    "race_id": "jan-2027-house-abia-isuikwuato-umu-nneochi",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 8,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "OSUOHA OKECHUKWU DONATUS",
-     "age": 62,
-     "age_as_printed": "62",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WASC LLB(HONS), BL",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 5,
-     "sn": 59
     }
    },
    {
@@ -1607,20 +1607,20 @@
     }
    },
    {
-    "id": "jan-2027-house-abia-isuikwuato-umu-nneochi-lp",
+    "id": "jan-2027-house-abia-isuikwuato-umu-nneochi-pdp",
     "race_id": "jan-2027-house-abia-isuikwuato-umu-nneochi",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 6,
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 8,
     "display_group": "rest",
     "remarks": "",
     "candidate": {
-     "name": "OGAH AMOBI GODWIN",
-     "age": 46,
-     "age_as_printed": "46",
+     "name": "OSUOHA OKECHUKWU DONATUS",
+     "age": 62,
+     "age_as_printed": "62",
      "gender": "M",
      "pwd": "None",
-     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE SSCE/NECO BSC",
+     "qualifications": "FSLC WASC LLB(HONS), BL",
      "position": "",
      "background": null
     },
@@ -1629,7 +1629,7 @@
     "provenance": {
      "source_id": "house-abia",
      "page": 5,
-     "sn": 57
+     "sn": 59
     }
    },
    {
@@ -1726,6 +1726,32 @@
     }
    },
    {
+    "id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma-lp",
+    "race_id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 7,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "WAMBU CHIEMELA GODWIN",
+     "age": 41,
+     "age_as_printed": "41",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE SSCE Ph.D. MA & BA",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 6,
+     "sn": 68
+    }
+   },
+   {
     "id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma-ndc",
     "race_id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma",
     "party": "NDC",
@@ -1749,32 +1775,6 @@
      "source_id": "house-abia",
      "page": 6,
      "sn": 69
-    }
-   },
-   {
-    "id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma-pdp",
-    "race_id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 9,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "AKPULONU CHIJIOKE SOLOMON",
-     "age": 54,
-     "age_as_printed": "54",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE LLB, LLM",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 6,
-     "sn": 70
     }
    },
    {
@@ -1908,20 +1908,20 @@
     }
    },
    {
-    "id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma-lp",
+    "id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma-pdp",
     "race_id": "jan-2027-house-abia-obingwa-ugwunagbo-osisioma",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 7,
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 9,
     "display_group": "rest",
     "remarks": "",
     "candidate": {
-     "name": "WAMBU CHIEMELA GODWIN",
-     "age": 41,
-     "age_as_printed": "41",
+     "name": "AKPULONU CHIJIOKE SOLOMON",
+     "age": 54,
+     "age_as_printed": "54",
      "gender": "M",
      "pwd": "None",
-     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE SSCE Ph.D. MA & BA",
+     "qualifications": "FSLC SSCE LLB, LLM",
      "position": "",
      "background": null
     },
@@ -1930,7 +1930,7 @@
     "provenance": {
      "source_id": "house-abia",
      "page": 6,
-     "sn": 68
+     "sn": 70
     }
    },
    {
@@ -2027,6 +2027,32 @@
     }
    },
    {
+    "id": "jan-2027-house-abia-ukwa-east-ukwa-west-lp",
+    "race_id": "jan-2027-house-abia-ukwa-east-ukwa-west",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 4,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ADINIGWE UGOCHUKWU NWOKE",
+     "age": 53,
+     "age_as_printed": "53",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE WAEC BACHELORS",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 6,
+     "sn": 76
+    }
+   },
+   {
     "id": "jan-2027-house-abia-ukwa-east-ukwa-west-ndc",
     "race_id": "jan-2027-house-abia-ukwa-east-ukwa-west",
     "party": "NDC",
@@ -2102,32 +2128,6 @@
      "source_id": "house-abia",
      "page": 6,
      "sn": 75
-    }
-   },
-   {
-    "id": "jan-2027-house-abia-ukwa-east-ukwa-west-lp",
-    "race_id": "jan-2027-house-abia-ukwa-east-ukwa-west",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 4,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ADINIGWE UGOCHUKWU NWOKE",
-     "age": 53,
-     "age_as_printed": "53",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE WAEC BACHELORS",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 6,
-     "sn": 76
     }
    },
    {
@@ -2224,6 +2224,32 @@
     }
    },
    {
+    "id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-lp",
+    "race_id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 8,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "AGUOCHA OBINNA",
+     "age": 59,
+     "age_as_printed": "59",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "WAEC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 8,
+     "sn": 87
+    }
+   },
+   {
     "id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-ndc",
     "race_id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano",
     "party": "NDC",
@@ -2247,32 +2273,6 @@
      "source_id": "house-abia",
      "page": 8,
      "sn": 88
-    }
-   },
-   {
-    "id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-pdp",
-    "race_id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 11,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "BENSON HUMPHERY CHUKWUDI",
-     "age": 51,
-     "age_as_printed": "51",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAEC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 8,
-     "sn": 90
     }
    },
    {
@@ -2432,32 +2432,6 @@
     }
    },
    {
-    "id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-lp",
-    "race_id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 8,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "AGUOCHA OBINNA",
-     "age": 59,
-     "age_as_printed": "59",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "WAEC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-abia",
-     "page": 8,
-     "sn": 87
-    }
-   },
-   {
     "id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-nrm",
     "race_id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano",
     "party": "NRM",
@@ -2481,6 +2455,32 @@
      "source_id": "house-abia",
      "page": 8,
      "sn": 89
+    }
+   },
+   {
+    "id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-pdp",
+    "race_id": "jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 11,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "BENSON HUMPHERY CHUKWUDI",
+     "age": 51,
+     "age_as_printed": "51",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-abia",
+     "page": 8,
+     "sn": 90
     }
    },
    {
@@ -8021,6 +8021,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-aguata-apga",
+    "race_id": "jan-2027-house-anambra-aguata",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 4,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "OFOBUIKE LAWRENCE CHIBUEZE",
+     "age": 37,
+     "age_as_printed": "37",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE PHD IN POLITICAL SCIENCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 1,
+     "sn": 4
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-aguata-ndc",
     "race_id": "jan-2027-house-anambra-aguata",
     "party": "NDC",
@@ -8047,32 +8073,6 @@
     }
    },
    {
-    "id": "jan-2027-house-anambra-aguata-pdp",
-    "race_id": "jan-2027-house-anambra-aguata",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 9,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "OKOLI OGOCHUKWU EVANGELINE",
-     "age": 35,
-     "age_as_printed": "35",
-     "gender": "F",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE MED LAB TECHNICIAN",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 1,
-     "sn": 9
-    }
-   },
-   {
     "id": "jan-2027-house-anambra-aguata-adp",
     "race_id": "jan-2027-house-anambra-aguata",
     "party": "ADP",
@@ -8096,32 +8096,6 @@
      "source_id": "house-anambra",
      "page": 1,
      "sn": 2
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-aguata-apga",
-    "race_id": "jan-2027-house-anambra-aguata",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 4,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "OFOBUIKE LAWRENCE CHIBUEZE",
-     "age": 37,
-     "age_as_printed": "37",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE PHD IN POLITICAL SCIENCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 1,
-     "sn": 4
     }
    },
    {
@@ -8200,6 +8174,32 @@
      "source_id": "house-anambra",
      "page": 1,
      "sn": 8
+    }
+   },
+   {
+    "id": "jan-2027-house-anambra-aguata-pdp",
+    "race_id": "jan-2027-house-anambra-aguata",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 9,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "OKOLI OGOCHUKWU EVANGELINE",
+     "age": 35,
+     "age_as_printed": "35",
+     "gender": "F",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE MED LAB TECHNICIAN",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 1,
+     "sn": 9
     }
    },
    {
@@ -8296,6 +8296,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-anambra-east-anambra-west-apga",
+    "race_id": "jan-2027-house-anambra-anambra-east-anambra-west",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 3,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "OBIDIGWE CHINEDU BENJAMIN",
+     "age": 46,
+     "age_as_printed": "46",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC B.MLS",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 2,
+     "sn": 13
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-anambra-east-anambra-west-ndc",
     "race_id": "jan-2027-house-anambra-anambra-east-anambra-west",
     "party": "NDC",
@@ -8319,32 +8345,6 @@
      "source_id": "house-anambra",
      "page": 2,
      "sn": 17
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-anambra-east-anambra-west-apga",
-    "race_id": "jan-2027-house-anambra-anambra-east-anambra-west",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 3,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "OBIDIGWE CHINEDU BENJAMIN",
-     "age": 46,
-     "age_as_printed": "46",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAEC B.MLS",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 2,
-     "sn": 13
     }
    },
    {
@@ -8545,6 +8545,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-awka-north-awka-south-apga",
+    "race_id": "jan-2027-house-anambra-awka-north-awka-south",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 5,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "NWANKWO OBBY",
+     "age": 57,
+     "age_as_printed": "57",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE BSc",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 3,
+     "sn": 24
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-awka-north-awka-south-ndc",
     "race_id": "jan-2027-house-anambra-awka-north-awka-south",
     "party": "NDC",
@@ -8646,32 +8672,6 @@
      "source_id": "house-anambra",
      "page": 2,
      "sn": 21
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-awka-north-awka-south-apga",
-    "race_id": "jan-2027-house-anambra-awka-north-awka-south",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 5,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "NWANKWO OBBY",
-     "age": 57,
-     "age_as_printed": "57",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE BSc",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 3,
-     "sn": 24
     }
    },
    {
@@ -8898,6 +8898,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-idemili-north-idemili-south-apga",
+    "race_id": "jan-2027-house-anambra-idemili-north-idemili-south",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 4,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "IYIEGBU IKENNA OBUMNEME",
+     "age": 53,
+     "age_as_printed": "53",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "TESTIMONIAL SSCE BACHELORS",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 4,
+     "sn": 36
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-idemili-north-idemili-south-ndc",
     "race_id": "jan-2027-house-anambra-idemili-north-idemili-south",
     "party": "NDC",
@@ -8921,32 +8947,6 @@
      "source_id": "house-anambra",
      "page": 4,
      "sn": 38
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-idemili-north-idemili-south-pdp",
-    "race_id": "jan-2027-house-anambra-idemili-north-idemili-south",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 8,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "CHITA CHIAMAKA MODESTER",
-     "age": 33,
-     "age_as_printed": "33",
-     "gender": "F",
-     "pwd": "None",
-     "qualifications": "FSLC NECO B. SC. (ED)",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 4,
-     "sn": 40
     }
    },
    {
@@ -9002,32 +9002,6 @@
     }
    },
    {
-    "id": "jan-2027-house-anambra-idemili-north-idemili-south-apga",
-    "race_id": "jan-2027-house-anambra-idemili-north-idemili-south",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 4,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "IYIEGBU IKENNA OBUMNEME",
-     "age": 53,
-     "age_as_printed": "53",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "TESTIMONIAL SSCE BACHELORS",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 4,
-     "sn": 36
-    }
-   },
-   {
     "id": "jan-2027-house-anambra-idemili-north-idemili-south-lp",
     "race_id": "jan-2027-house-anambra-idemili-north-idemili-south",
     "party": "LP",
@@ -9077,6 +9051,32 @@
      "source_id": "house-anambra",
      "page": 4,
      "sn": 39
+    }
+   },
+   {
+    "id": "jan-2027-house-anambra-idemili-north-idemili-south-pdp",
+    "race_id": "jan-2027-house-anambra-idemili-north-idemili-south",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 8,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "CHITA CHIAMAKA MODESTER",
+     "age": 33,
+     "age_as_printed": "33",
+     "gender": "F",
+     "pwd": "None",
+     "qualifications": "FSLC NECO B. SC. (ED)",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 4,
+     "sn": 40
     }
    },
    {
@@ -9199,6 +9199,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-ihiala-apga",
+    "race_id": "jan-2027-house-anambra-ihiala",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 3,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "AGBODIKE PASCHAL",
+     "age": 46,
+     "age_as_printed": "46",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WASSC BA MA PHD PHILOSOPHY",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 5,
+     "sn": 46
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-ihiala-ndc",
     "race_id": "jan-2027-house-anambra-ihiala",
     "party": "NDC",
@@ -9225,32 +9251,6 @@
     }
    },
    {
-    "id": "jan-2027-house-anambra-ihiala-pdp",
-    "race_id": "jan-2027-house-anambra-ihiala",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 7,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "NWANGWU IZUCHUKWU STANLEY",
-     "age": 51,
-     "age_as_printed": "51",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 5,
-     "sn": 50
-    }
-   },
-   {
     "id": "jan-2027-house-anambra-ihiala-sdp",
     "race_id": "jan-2027-house-anambra-ihiala",
     "party": "SDP",
@@ -9274,32 +9274,6 @@
      "source_id": "house-anambra",
      "page": 5,
      "sn": 51
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-ihiala-apga",
-    "race_id": "jan-2027-house-anambra-ihiala",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 3,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "AGBODIKE PASCHAL",
-     "age": 46,
-     "age_as_printed": "46",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WASSC BA MA PHD PHILOSOPHY",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 5,
-     "sn": 46
     }
    },
    {
@@ -9352,6 +9326,32 @@
      "source_id": "house-anambra",
      "page": 5,
      "sn": 49
+    }
+   },
+   {
+    "id": "jan-2027-house-anambra-ihiala-pdp",
+    "race_id": "jan-2027-house-anambra-ihiala",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 7,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "NWANGWU IZUCHUKWU STANLEY",
+     "age": 51,
+     "age_as_printed": "51",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 5,
+     "sn": 50
     }
    },
    {
@@ -9448,6 +9448,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha-apga",
+    "race_id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 4,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "OLI CHUKWUDI PRINCE",
+     "age": 45,
+     "age_as_printed": "45",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAECSSC BL",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 5,
+     "sn": 56
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha-ndc",
     "race_id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha",
     "party": "NDC",
@@ -9471,32 +9497,6 @@
      "source_id": "house-anambra",
      "page": 5,
      "sn": 58
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha-pdp",
-    "race_id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 7,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "ONUORA HELEN UJU",
-     "age": 26,
-     "age_as_printed": "26",
-     "gender": "F",
-     "pwd": "None",
-     "qualifications": "FSLC NECO M.SC BA",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 6,
-     "sn": 59
     }
    },
    {
@@ -9552,32 +9552,6 @@
     }
    },
    {
-    "id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha-apga",
-    "race_id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 4,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "OLI CHUKWUDI PRINCE",
-     "age": 45,
-     "age_as_printed": "45",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAECSSC BL",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 5,
-     "sn": 56
-    }
-   },
-   {
     "id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha-lp",
     "race_id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha",
     "party": "LP",
@@ -9601,6 +9575,32 @@
      "source_id": "house-anambra",
      "page": 5,
      "sn": 57
+    }
+   },
+   {
+    "id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha-pdp",
+    "race_id": "jan-2027-house-anambra-njikoka-dunukofia-anaocha",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 7,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "ONUORA HELEN UJU",
+     "age": 26,
+     "age_as_printed": "26",
+     "gender": "F",
+     "pwd": "None",
+     "qualifications": "FSLC NECO M.SC BA",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 6,
+     "sn": 59
     }
    },
    {
@@ -9723,6 +9723,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo-apga",
+    "race_id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 3,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "DIKE OBIM VINCENT",
+     "age": 68,
+     "age_as_printed": "68",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC MASTER OF PUBLIC ADMINISTRATION",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 6,
+     "sn": 65
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo-ndc",
     "race_id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo",
     "party": "NDC",
@@ -9746,58 +9772,6 @@
      "source_id": "house-anambra",
      "page": 6,
      "sn": 67
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo-pdp",
-    "race_id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 8,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "EZEIRUAKU FREEMAN IFECHUKWU",
-     "age": 38,
-     "age_as_printed": "38",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 7,
-     "sn": 70
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo-apga",
-    "race_id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 3,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "DIKE OBIM VINCENT",
-     "age": 68,
-     "age_as_printed": "68",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAEC MASTER OF PUBLIC ADMINISTRATION",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 6,
-     "sn": 65
     }
    },
    {
@@ -9876,6 +9850,32 @@
      "source_id": "house-anambra",
      "page": 6,
      "sn": 69
+    }
+   },
+   {
+    "id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo-pdp",
+    "race_id": "jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 8,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "EZEIRUAKU FREEMAN IFECHUKWU",
+     "age": 38,
+     "age_as_printed": "38",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 7,
+     "sn": 70
     }
    },
    {
@@ -9972,6 +9972,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-ogbaru-apga",
+    "race_id": "jan-2027-house-anambra-ogbaru",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 3,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ONYEMA WILFRED CHUKWUKA",
+     "age": 56,
+     "age_as_printed": "56",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC GCE BSc",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 7,
+     "sn": 74
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-ogbaru-ndc",
     "race_id": "jan-2027-house-anambra-ogbaru",
     "party": "NDC",
@@ -9995,32 +10021,6 @@
      "source_id": "house-anambra",
      "page": 7,
      "sn": 77
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-ogbaru-apga",
-    "race_id": "jan-2027-house-anambra-ogbaru",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 3,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ONYEMA WILFRED CHUKWUKA",
-     "age": 56,
-     "age_as_printed": "56",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC GCE BSc",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 7,
-     "sn": 74
     }
    },
    {
@@ -10169,6 +10169,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-onitsha-north-onitsha-south-apga",
+    "race_id": "jan-2027-house-anambra-onitsha-north-onitsha-south",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 4,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "NWORA ANTHONY AMECHI",
+     "age": 50,
+     "age_as_printed": "50",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC B.S, MASTERS",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 8,
+     "sn": 82
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-onitsha-north-onitsha-south-ndc",
     "race_id": "jan-2027-house-anambra-onitsha-north-onitsha-south",
     "party": "NDC",
@@ -10195,32 +10221,6 @@
     }
    },
    {
-    "id": "jan-2027-house-anambra-onitsha-north-onitsha-south-pdp",
-    "race_id": "jan-2027-house-anambra-onitsha-north-onitsha-south",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 10,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "OKEKE CHIDINMA NGOZI",
-     "age": 40,
-     "age_as_printed": "40",
-     "gender": "F",
-     "pwd": "None",
-     "qualifications": "ONYCABO MEMORIAL PRIMARY SCHOOL ONITSHA GOVT SEC SCHOOL IHIALA M.SC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 8,
-     "sn": 88
-    }
-   },
-   {
     "id": "jan-2027-house-anambra-onitsha-north-onitsha-south-adp",
     "race_id": "jan-2027-house-anambra-onitsha-north-onitsha-south",
     "party": "ADP",
@@ -10244,32 +10244,6 @@
      "source_id": "house-anambra",
      "page": 7,
      "sn": 80
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-onitsha-north-onitsha-south-apga",
-    "race_id": "jan-2027-house-anambra-onitsha-north-onitsha-south",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 4,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "NWORA ANTHONY AMECHI",
-     "age": 50,
-     "age_as_printed": "50",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAEC B.S, MASTERS",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 8,
-     "sn": 82
     }
    },
    {
@@ -10377,6 +10351,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-onitsha-north-onitsha-south-pdp",
+    "race_id": "jan-2027-house-anambra-onitsha-north-onitsha-south",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 10,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "OKEKE CHIDINMA NGOZI",
+     "age": 40,
+     "age_as_printed": "40",
+     "gender": "F",
+     "pwd": "None",
+     "qualifications": "ONYCABO MEMORIAL PRIMARY SCHOOL ONITSHA GOVT SEC SCHOOL IHIALA M.SC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 8,
+     "sn": 88
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-onitsha-north-onitsha-south-ypp",
     "race_id": "jan-2027-house-anambra-onitsha-north-onitsha-south",
     "party": "YPP",
@@ -10470,6 +10470,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-orumba-north-orumba-south-apga",
+    "race_id": "jan-2027-house-anambra-orumba-north-orumba-south",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 3,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "NWANKWOR ODIRAA CAMILLUS",
+     "age": 56,
+     "age_as_printed": "56",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "GCE BACHELORS",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 9,
+     "sn": 92
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-orumba-north-orumba-south-ndc",
     "race_id": "jan-2027-house-anambra-orumba-north-orumba-south",
     "party": "NDC",
@@ -10493,58 +10519,6 @@
      "source_id": "house-anambra",
      "page": 9,
      "sn": 94
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-orumba-north-orumba-south-pdp",
-    "race_id": "jan-2027-house-anambra-orumba-north-orumba-south",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 7,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "UZOESHE CECILIA AZUKA",
-     "age": 50,
-     "age_as_printed": "50",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "UGWUNANO PRIMARY SCHOOL UMUNZE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 9,
-     "sn": 96
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-orumba-north-orumba-south-apga",
-    "race_id": "jan-2027-house-anambra-orumba-north-orumba-south",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 3,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "NWANKWOR ODIRAA CAMILLUS",
-     "age": 56,
-     "age_as_printed": "56",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "GCE BACHELORS",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 9,
-     "sn": 92
     }
    },
    {
@@ -10597,6 +10571,32 @@
      "source_id": "house-anambra",
      "page": 9,
      "sn": 95
+    }
+   },
+   {
+    "id": "jan-2027-house-anambra-orumba-north-orumba-south-pdp",
+    "race_id": "jan-2027-house-anambra-orumba-north-orumba-south",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 7,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "UZOESHE CECILIA AZUKA",
+     "age": 50,
+     "age_as_printed": "50",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "UGWUNANO PRIMARY SCHOOL UMUNZE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 9,
+     "sn": 96
     }
    },
    {
@@ -10693,6 +10693,32 @@
     }
    },
    {
+    "id": "jan-2027-house-anambra-oyi-ayamelum-apga",
+    "race_id": "jan-2027-house-anambra-oyi-ayamelum",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 4,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "GWACHAM MAUREEN CHINWE",
+     "age": 51,
+     "age_as_printed": "51",
+     "gender": "F",
+     "pwd": "None",
+     "qualifications": "NKWO CENTRAL SCHOOL, OGBUNIKE GCE B.A",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 9,
+     "sn": 101
+    }
+   },
+   {
     "id": "jan-2027-house-anambra-oyi-ayamelum-ndc",
     "race_id": "jan-2027-house-anambra-oyi-ayamelum",
     "party": "NDC",
@@ -10716,32 +10742,6 @@
      "source_id": "house-anambra",
      "page": 10,
      "sn": 105
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-oyi-ayamelum-pdp",
-    "race_id": "jan-2027-house-anambra-oyi-ayamelum",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 10,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "OKAFOR JENNIFER",
-     "age": 39,
-     "age_as_printed": "39",
-     "gender": "F",
-     "pwd": "None",
-     "qualifications": "FSLC GCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 10,
-     "sn": 107
     }
    },
    {
@@ -10794,32 +10794,6 @@
      "source_id": "house-anambra",
      "page": 9,
      "sn": 98
-    }
-   },
-   {
-    "id": "jan-2027-house-anambra-oyi-ayamelum-apga",
-    "race_id": "jan-2027-house-anambra-oyi-ayamelum",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 4,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "GWACHAM MAUREEN CHINWE",
-     "age": 51,
-     "age_as_printed": "51",
-     "gender": "F",
-     "pwd": "None",
-     "qualifications": "NKWO CENTRAL SCHOOL, OGBUNIKE GCE B.A",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-anambra",
-     "page": 9,
-     "sn": 101
     }
    },
    {
@@ -10924,6 +10898,32 @@
      "source_id": "house-anambra",
      "page": 10,
      "sn": 106
+    }
+   },
+   {
+    "id": "jan-2027-house-anambra-oyi-ayamelum-pdp",
+    "race_id": "jan-2027-house-anambra-oyi-ayamelum",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 10,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "OKAFOR JENNIFER",
+     "age": 39,
+     "age_as_printed": "39",
+     "gender": "F",
+     "pwd": "None",
+     "qualifications": "FSLC GCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-anambra",
+     "page": 10,
+     "sn": 107
     }
    }
   ]
@@ -45852,32 +45852,6 @@
     }
    },
    {
-    "id": "jan-2027-house-kano-albasu-gaya-ajingi-sdp",
-    "race_id": "jan-2027-house-kano-albasu-gaya-ajingi",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 12,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "SHEHU ADO AJINGI",
-     "age": 43,
-     "age_as_printed": "43",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FLSC SSCE NCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 2,
-     "sn": 12
-    }
-   },
-   {
     "id": "jan-2027-house-kano-albasu-gaya-ajingi-adp",
     "race_id": "jan-2027-house-kano-albasu-gaya-ajingi",
     "party": "ADP",
@@ -46057,6 +46031,32 @@
      "source_id": "house-kano",
      "page": 1,
      "sn": 11
+    }
+   },
+   {
+    "id": "jan-2027-house-kano-albasu-gaya-ajingi-sdp",
+    "race_id": "jan-2027-house-kano-albasu-gaya-ajingi",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 12,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "SHEHU ADO AJINGI",
+     "age": 43,
+     "age_as_printed": "43",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FLSC SSCE NCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 2,
+     "sn": 12
     }
    },
    {
@@ -46402,32 +46402,6 @@
     }
    },
    {
-    "id": "jan-2027-house-kano-bichi-sdp",
-    "race_id": "jan-2027-house-kano-bichi",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 9,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "NASIRU MUSA",
-     "age": 58,
-     "age_as_printed": "58",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 3,
-     "sn": 29
-    }
-   },
-   {
     "id": "jan-2027-house-kano-bichi-adp",
     "race_id": "jan-2027-house-kano-bichi",
     "party": "ADP",
@@ -46529,6 +46503,32 @@
      "source_id": "house-kano",
      "page": 2,
      "sn": 27
+    }
+   },
+   {
+    "id": "jan-2027-house-kano-bichi-sdp",
+    "race_id": "jan-2027-house-kano-bichi",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 9,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "NASIRU MUSA",
+     "age": 58,
+     "age_as_printed": "58",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 3,
+     "sn": 29
     }
    }
   ]
@@ -46648,32 +46648,6 @@
      "source_id": "house-kano",
      "page": 3,
      "sn": 37
-    }
-   },
-   {
-    "id": "jan-2027-house-kano-dala-sdp",
-    "race_id": "jan-2027-house-kano-dala",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 10,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "MAMUD A. GARBA",
-     "age": 58,
-     "age_as_printed": "58",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "SSCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 3,
-     "sn": 39
     }
    },
    {
@@ -46804,6 +46778,32 @@
      "source_id": "house-kano",
      "page": 3,
      "sn": 38
+    }
+   },
+   {
+    "id": "jan-2027-house-kano-dala-sdp",
+    "race_id": "jan-2027-house-kano-dala",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 10,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "MAMUD A. GARBA",
+     "age": 58,
+     "age_as_printed": "58",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "SSCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 3,
+     "sn": 39
     }
    },
    {
@@ -48249,32 +48249,6 @@
     }
    },
    {
-    "id": "jan-2027-house-kano-gezawa-gabasawa-sdp",
-    "race_id": "jan-2027-house-kano-gezawa-gabasawa",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 12,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "SABO ABDULKADIR",
-     "age": 52,
-     "age_as_printed": "52",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSST DIPLOMA",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 8,
-     "sn": 108
-    }
-   },
-   {
     "id": "jan-2027-house-kano-gezawa-gabasawa-a",
     "race_id": "jan-2027-house-kano-gezawa-gabasawa",
     "party": "A",
@@ -48457,6 +48431,32 @@
     }
    },
    {
+    "id": "jan-2027-house-kano-gezawa-gabasawa-sdp",
+    "race_id": "jan-2027-house-kano-gezawa-gabasawa",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 12,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "SABO ABDULKADIR",
+     "age": 52,
+     "age_as_printed": "52",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSST DIPLOMA",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 8,
+     "sn": 108
+    }
+   },
+   {
     "id": "jan-2027-house-kano-gezawa-gabasawa-ypp",
     "race_id": "jan-2027-house-kano-gezawa-gabasawa",
     "party": "YPP",
@@ -48599,32 +48599,6 @@
      "source_id": "house-kano",
      "page": 9,
      "sn": 121
-    }
-   },
-   {
-    "id": "jan-2027-house-kano-gwale-sdp",
-    "race_id": "jan-2027-house-kano-gwale",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 14,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "MURTALA KABIRU MUHAMMAD",
-     "age": 36,
-     "age_as_printed": "36",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE BSC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 9,
-     "sn": 123
     }
    },
    {
@@ -48859,6 +48833,32 @@
      "source_id": "house-kano",
      "page": 9,
      "sn": 122
+    }
+   },
+   {
+    "id": "jan-2027-house-kano-gwale-sdp",
+    "race_id": "jan-2027-house-kano-gwale",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 14,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "MURTALA KABIRU MUHAMMAD",
+     "age": 36,
+     "age_as_printed": "36",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE BSC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 9,
+     "sn": 123
     }
    },
    {
@@ -49256,32 +49256,6 @@
     }
    },
    {
-    "id": "jan-2027-house-kano-karaye-rogo-sdp",
-    "race_id": "jan-2027-house-kano-karaye-rogo",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 8,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "UMAR HABUBAKAR ASHIRU KARAYE",
-     "age": 40,
-     "age_as_printed": "40",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FLSC SSCE DIPOLMA",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 10,
-     "sn": 132
-    }
-   },
-   {
     "id": "jan-2027-house-kano-karaye-rogo-adp",
     "race_id": "jan-2027-house-kano-karaye-rogo",
     "party": "ADP",
@@ -49357,6 +49331,32 @@
      "source_id": "house-kano",
      "page": 9,
      "sn": 129
+    }
+   },
+   {
+    "id": "jan-2027-house-kano-karaye-rogo-sdp",
+    "race_id": "jan-2027-house-kano-karaye-rogo",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 8,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "UMAR HABUBAKAR ASHIRU KARAYE",
+     "age": 40,
+     "age_as_printed": "40",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FLSC SSCE DIPOLMA",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 10,
+     "sn": 132
     }
    }
   ]
@@ -50434,32 +50434,6 @@
     }
    },
    {
-    "id": "jan-2027-house-kano-municipal-sdp",
-    "race_id": "jan-2027-house-kano-municipal",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 12,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "DR. JAMILU ALHASSAN",
-     "age": 38,
-     "age_as_printed": "38",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC NECO DR PHYLOSOPHY",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 13,
-     "sn": 179
-    }
-   },
-   {
     "id": "jan-2027-house-kano-municipal-a",
     "race_id": "jan-2027-house-kano-municipal",
     "party": "A",
@@ -50642,6 +50616,32 @@
     }
    },
    {
+    "id": "jan-2027-house-kano-municipal-sdp",
+    "race_id": "jan-2027-house-kano-municipal",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 12,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "DR. JAMILU ALHASSAN",
+     "age": 38,
+     "age_as_printed": "38",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC NECO DR PHYLOSOPHY",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 13,
+     "sn": 179
+    }
+   },
+   {
     "id": "jan-2027-house-kano-municipal-ypp",
     "race_id": "jan-2027-house-kano-municipal",
     "party": "YPP",
@@ -50810,32 +50810,6 @@
      "source_id": "house-kano",
      "page": 14,
      "sn": 191
-    }
-   },
-   {
-    "id": "jan-2027-house-kano-nassarawa-sdp",
-    "race_id": "jan-2027-house-kano-nassarawa",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 12,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "USMAN BALA IBRAHIM",
-     "age": 43,
-     "age_as_printed": "43",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "flsc ssce kogi poly",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 14,
-     "sn": 193
     }
    },
    {
@@ -51021,6 +50995,32 @@
     }
    },
    {
+    "id": "jan-2027-house-kano-nassarawa-sdp",
+    "race_id": "jan-2027-house-kano-nassarawa",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 12,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "USMAN BALA IBRAHIM",
+     "age": 43,
+     "age_as_printed": "43",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "flsc ssce kogi poly",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 14,
+     "sn": 193
+    }
+   },
+   {
     "id": "jan-2027-house-kano-nassarawa-ypp",
     "race_id": "jan-2027-house-kano-nassarawa",
     "party": "YPP",
@@ -51114,32 +51114,6 @@
     }
    },
    {
-    "id": "jan-2027-house-kano-rano-bunkure-kibiya-sdp",
-    "race_id": "jan-2027-house-kano-rano-bunkure-kibiya",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 6,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "HAMISU DANLADI KIBIYA",
-     "age": 44,
-     "age_as_printed": "44",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC ANN INST FOR ISLAMIC SCH FOR HIGHER ISLAMIC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 14,
-     "sn": 200
-    }
-   },
-   {
     "id": "jan-2027-house-kano-rano-bunkure-kibiya-adp",
     "race_id": "jan-2027-house-kano-rano-bunkure-kibiya",
     "party": "ADP",
@@ -51215,6 +51189,32 @@
      "source_id": "house-kano",
      "page": 14,
      "sn": 198
+    }
+   },
+   {
+    "id": "jan-2027-house-kano-rano-bunkure-kibiya-sdp",
+    "race_id": "jan-2027-house-kano-rano-bunkure-kibiya",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 6,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "HAMISU DANLADI KIBIYA",
+     "age": 44,
+     "age_as_printed": "44",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC ANN INST FOR ISLAMIC SCH FOR HIGHER ISLAMIC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 14,
+     "sn": 200
     }
    }
   ]
@@ -51308,32 +51308,6 @@
      "source_id": "house-kano",
      "page": 15,
      "sn": 208
-    }
-   },
-   {
-    "id": "jan-2027-house-kano-shanono-bagwai-sdp",
-    "race_id": "jan-2027-house-kano-shanono-bagwai",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 9,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "USMAN MUSA SHANONO",
-     "age": 26,
-     "age_as_printed": "26",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FLSC SSCE DIPLOMA",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 15,
-     "sn": 209
     }
    },
    {
@@ -51465,6 +51439,32 @@
      "page": 15,
      "sn": 207
     }
+   },
+   {
+    "id": "jan-2027-house-kano-shanono-bagwai-sdp",
+    "race_id": "jan-2027-house-kano-shanono-bagwai",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 9,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "USMAN MUSA SHANONO",
+     "age": 26,
+     "age_as_printed": "26",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FLSC SSCE DIPLOMA",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 15,
+     "sn": 209
+    }
    }
   ]
  },
@@ -51583,32 +51583,6 @@
      "source_id": "house-kano",
      "page": 15,
      "sn": 218
-    }
-   },
-   {
-    "id": "jan-2027-house-kano-sumaila-takai-sdp",
-    "race_id": "jan-2027-house-kano-sumaila-takai",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 10,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "AUWAL SANI ALIYU",
-     "age": 42,
-     "age_as_printed": "42",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FLSC SSCE higher national diploma",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 15,
-     "sn": 219
     }
    },
    {
@@ -51739,6 +51713,32 @@
      "source_id": "house-kano",
      "page": 15,
      "sn": 217
+    }
+   },
+   {
+    "id": "jan-2027-house-kano-sumaila-takai-sdp",
+    "race_id": "jan-2027-house-kano-sumaila-takai",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 10,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "AUWAL SANI ALIYU",
+     "age": 42,
+     "age_as_printed": "42",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FLSC SSCE higher national diploma",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 15,
+     "sn": 219
     }
    },
    {
@@ -51884,32 +51884,6 @@
      "source_id": "house-kano",
      "page": 16,
      "sn": 230
-    }
-   },
-   {
-    "id": "jan-2027-house-kano-tarauni-sdp",
-    "race_id": "jan-2027-house-kano-tarauni",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 11,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "ABDULKARIM ALIYU YAKUBU",
-     "age": 47,
-     "age_as_printed": "47",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FLSC SSCE ADVANCED DIPLOMA",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 16,
-     "sn": 232
     }
    },
    {
@@ -52095,6 +52069,32 @@
     }
    },
    {
+    "id": "jan-2027-house-kano-tarauni-sdp",
+    "race_id": "jan-2027-house-kano-tarauni",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 11,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "ABDULKARIM ALIYU YAKUBU",
+     "age": 47,
+     "age_as_printed": "47",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FLSC SSCE ADVANCED DIPLOMA",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 16,
+     "sn": 232
+    }
+   },
+   {
     "id": "jan-2027-house-kano-tarauni-ypp",
     "race_id": "jan-2027-house-kano-tarauni",
     "party": "YPP",
@@ -52240,32 +52240,6 @@
     }
    },
    {
-    "id": "jan-2027-house-kano-tsanyawa-kunchi-sdp",
-    "race_id": "jan-2027-house-kano-tsanyawa-kunchi",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 10,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "KABIRU YAHUZA",
-     "age": 48,
-     "age_as_printed": "48",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FLSC SSCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-kano",
-     "page": 17,
-     "sn": 243
-    }
-   },
-   {
     "id": "jan-2027-house-kano-tsanyawa-kunchi-adp",
     "race_id": "jan-2027-house-kano-tsanyawa-kunchi",
     "party": "ADP",
@@ -52393,6 +52367,32 @@
      "source_id": "house-kano",
      "page": 17,
      "sn": 242
+    }
+   },
+   {
+    "id": "jan-2027-house-kano-tsanyawa-kunchi-sdp",
+    "race_id": "jan-2027-house-kano-tsanyawa-kunchi",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 10,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "KABIRU YAHUZA",
+     "age": 48,
+     "age_as_printed": "48",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FLSC SSCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-kano",
+     "page": 17,
+     "sn": 243
     }
    },
    {
@@ -76133,6 +76133,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west-a",
+    "race_id": "jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ALABA IBRAHIM POPOOLA",
+     "age": 44,
+     "age_as_printed": "44",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 1,
+     "sn": 1
+    }
+   },
+   {
     "id": "jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west-adc",
     "race_id": "jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west",
     "party": "ADC",
@@ -76208,32 +76234,6 @@
      "source_id": "house-osun",
      "page": 1,
      "sn": 6
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west-a",
-    "race_id": "jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ALABA IBRAHIM POPOOLA",
-     "age": 44,
-     "age_as_printed": "44",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 1,
-     "sn": 1
     }
    },
    {
@@ -76330,6 +76330,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-house-osun-ayedaade-irewole-isokan-a",
+    "race_id": "jan-2027-house-osun-ayedaade-irewole-isokan",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "OLADEBO LANRE OMOLEYE",
+     "age": 48,
+     "age_as_printed": "48",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE B.TECH (HONS)",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 2,
+     "sn": 8
+    }
+   },
+   {
     "id": "jan-2027-house-osun-ayedaade-irewole-isokan-adc",
     "race_id": "jan-2027-house-osun-ayedaade-irewole-isokan",
     "party": "ADC",
@@ -76405,32 +76431,6 @@
      "source_id": "house-osun",
      "page": 2,
      "sn": 15
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-ayedaade-irewole-isokan-a",
-    "race_id": "jan-2027-house-osun-ayedaade-irewole-isokan",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "OLADEBO LANRE OMOLEYE",
-     "age": 48,
-     "age_as_printed": "48",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE B.TECH (HONS)",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 2,
-     "sn": 8
     }
    },
    {
@@ -76631,6 +76631,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-house-osun-ayedire-iwo-ola-oluwa-a",
+    "race_id": "jan-2027-house-osun-ayedire-iwo-ola-oluwa",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "MUDASHIRU LUKMAN ALANI",
+     "age": 57,
+     "age_as_printed": "57",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE HND",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 3,
+     "sn": 19
+    }
+   },
+   {
     "id": "jan-2027-house-osun-ayedire-iwo-ola-oluwa-adc",
     "race_id": "jan-2027-house-osun-ayedire-iwo-ola-oluwa",
     "party": "ADC",
@@ -76680,32 +76706,6 @@
      "source_id": "house-osun",
      "page": 3,
      "sn": 22
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-ayedire-iwo-ola-oluwa-a",
-    "race_id": "jan-2027-house-osun-ayedire-iwo-ola-oluwa",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "MUDASHIRU LUKMAN ALANI",
-     "age": 57,
-     "age_as_printed": "57",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE HND",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 3,
-     "sn": 19
     }
    },
    {
@@ -76775,6 +76775,32 @@
   ],
   "placement_notes": [],
   "candidates": [
+   {
+    "id": "jan-2027-house-osun-boluwaduro-ifedayo-ila-a",
+    "race_id": "jan-2027-house-osun-boluwaduro-ifedayo-ila",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "AKANNI CLEMENT ADEMOLA",
+     "age": 60,
+     "age_as_printed": "60",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC (First leaving certificate) SSCE NCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 3,
+     "sn": 24
+    }
+   },
    {
     "id": "jan-2027-house-osun-boluwaduro-ifedayo-ila-adc",
     "race_id": "jan-2027-house-osun-boluwaduro-ifedayo-ila",
@@ -76877,32 +76903,6 @@
      "source_id": "house-osun",
      "page": 4,
      "sn": 32
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-boluwaduro-ifedayo-ila-a",
-    "race_id": "jan-2027-house-osun-boluwaduro-ifedayo-ila",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "AKANNI CLEMENT ADEMOLA",
-     "age": 60,
-     "age_as_printed": "60",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC (First leaving certificate) SSCE NCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 3,
-     "sn": 24
     }
    },
    {
@@ -77025,6 +77025,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-house-osun-ede-north-ede-south-egbedore-ejigbo-a",
+    "race_id": "jan-2027-house-osun-ede-north-ede-south-egbedore-ejigbo",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "SALAM BAMIDELE",
+     "age": 56,
+     "age_as_printed": "56",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC (First leaving certificate) GCE LLB",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 4,
+     "sn": 33
+    }
+   },
+   {
     "id": "jan-2027-house-osun-ede-north-ede-south-egbedore-ejigbo-adc",
     "race_id": "jan-2027-house-osun-ede-north-ede-south-egbedore-ejigbo",
     "party": "ADC",
@@ -77100,32 +77126,6 @@
      "source_id": "house-osun",
      "page": 4,
      "sn": 40
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-ede-north-ede-south-egbedore-ejigbo-a",
-    "race_id": "jan-2027-house-osun-ede-north-ede-south-egbedore-ejigbo",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "SALAM BAMIDELE",
-     "age": 56,
-     "age_as_printed": "56",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC (First leaving certificate) GCE LLB",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 4,
-     "sn": 33
     }
    },
    {
@@ -77274,6 +77274,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-house-osun-ife-central-ife-north-ife-south-ife-east-a",
+    "race_id": "jan-2027-house-osun-ife-central-ife-north-ife-south-ife-east",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ELUWOLE OLUWATOSIN ODUNAYO",
+     "age": 36,
+     "age_as_printed": "36",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE B.TECH",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 4,
+     "sn": 42
+    }
+   },
+   {
     "id": "jan-2027-house-osun-ife-central-ife-north-ife-south-ife-east-adc",
     "race_id": "jan-2027-house-osun-ife-central-ife-north-ife-south-ife-east",
     "party": "ADC",
@@ -77349,32 +77375,6 @@
      "source_id": "house-osun",
      "page": 5,
      "sn": 48
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-ife-central-ife-north-ife-south-ife-east-a",
-    "race_id": "jan-2027-house-osun-ife-central-ife-north-ife-south-ife-east",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ELUWOLE OLUWATOSIN ODUNAYO",
-     "age": 36,
-     "age_as_printed": "36",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE B.TECH",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 4,
-     "sn": 42
     }
    },
    {
@@ -77497,6 +77497,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-house-osun-irepodun-olorunda-osogbo-orolu-a",
+    "race_id": "jan-2027-house-osun-irepodun-olorunda-osogbo-orolu",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ADEWALE MORUFU ADEBAYO",
+     "age": 59,
+     "age_as_printed": "59",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC (First leaving certificate) SSCE (secondary school leaving certificate) BSc, MSc",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 5,
+     "sn": 50
+    }
+   },
+   {
     "id": "jan-2027-house-osun-irepodun-olorunda-osogbo-orolu-adc",
     "race_id": "jan-2027-house-osun-irepodun-olorunda-osogbo-orolu",
     "party": "ADC",
@@ -77598,32 +77624,6 @@
      "source_id": "house-osun",
      "page": 6,
      "sn": 60
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-irepodun-olorunda-osogbo-orolu-a",
-    "race_id": "jan-2027-house-osun-irepodun-olorunda-osogbo-orolu",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ADEWALE MORUFU ADEBAYO",
-     "age": 59,
-     "age_as_printed": "59",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC (First leaving certificate) SSCE (secondary school leaving certificate) BSc, MSc",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 5,
-     "sn": 50
     }
    },
    {
@@ -77798,6 +77798,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-house-osun-obokun-oriade-a",
+    "race_id": "jan-2027-house-osun-obokun-oriade",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "OLAJENGBESI PELUMI JACOB",
+     "age": 40,
+     "age_as_printed": "40",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE LL.B",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 6,
+     "sn": 61
+    }
+   },
+   {
     "id": "jan-2027-house-osun-obokun-oriade-adc",
     "race_id": "jan-2027-house-osun-obokun-oriade",
     "party": "ADC",
@@ -77899,32 +77925,6 @@
      "source_id": "house-osun",
      "page": 7,
      "sn": 71
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-obokun-oriade-a",
-    "race_id": "jan-2027-house-osun-obokun-oriade",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "OLAJENGBESI PELUMI JACOB",
-     "age": 40,
-     "age_as_printed": "40",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE LL.B",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 6,
-     "sn": 61
     }
    },
    {
@@ -78099,6 +78099,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-house-osun-odo-otin-ifelodun-boripe-a",
+    "race_id": "jan-2027-house-osun-odo-otin-ifelodun-boripe",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ADETUNJI ABIDEMI OLUSOJI",
+     "age": 51,
+     "age_as_printed": "51",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "SSCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "house-osun",
+     "page": 7,
+     "sn": 72
+    }
+   },
+   {
     "id": "jan-2027-house-osun-odo-otin-ifelodun-boripe-adc",
     "race_id": "jan-2027-house-osun-odo-otin-ifelodun-boripe",
     "party": "ADC",
@@ -78174,32 +78200,6 @@
      "source_id": "house-osun",
      "page": 7,
      "sn": 78
-    }
-   },
-   {
-    "id": "jan-2027-house-osun-odo-otin-ifelodun-boripe-a",
-    "race_id": "jan-2027-house-osun-odo-otin-ifelodun-boripe",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ADETUNJI ABIDEMI OLUSOJI",
-     "age": 51,
-     "age_as_printed": "51",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "SSCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "house-osun",
-     "page": 7,
-     "sn": 72
     }
    },
    {
@@ -100945,6 +100945,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-abia-abia-central-lp",
+    "race_id": "jan-2027-senate-abia-abia-central",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 6,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "NWOKOCHA DARLINGTON GIDEON",
+     "age": 59,
+     "age_as_printed": "59",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC BSC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-abia",
+     "page": 1,
+     "sn": 6
+    }
+   },
+   {
     "id": "jan-2027-senate-abia-abia-central-ndc",
     "race_id": "jan-2027-senate-abia-abia-central",
     "party": "NDC",
@@ -100968,32 +100994,6 @@
      "source_id": "senate-abia",
      "page": 1,
      "sn": 7
-    }
-   },
-   {
-    "id": "jan-2027-senate-abia-abia-central-pdp",
-    "race_id": "jan-2027-senate-abia-abia-central",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 9,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "OGU BOB",
-     "age": 64,
-     "age_as_printed": "64",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "CSLC WASC LLB BL",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-abia",
-     "page": 1,
-     "sn": 9
     }
    },
    {
@@ -101101,32 +101101,6 @@
     }
    },
    {
-    "id": "jan-2027-senate-abia-abia-central-lp",
-    "race_id": "jan-2027-senate-abia-abia-central",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 6,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "NWOKOCHA DARLINGTON GIDEON",
-     "age": 59,
-     "age_as_printed": "59",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAEC BSC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-abia",
-     "page": 1,
-     "sn": 6
-    }
-   },
-   {
     "id": "jan-2027-senate-abia-abia-central-nrm",
     "race_id": "jan-2027-senate-abia-abia-central",
     "party": "NRM",
@@ -101150,6 +101124,32 @@
      "source_id": "senate-abia",
      "page": 1,
      "sn": 8
+    }
+   },
+   {
+    "id": "jan-2027-senate-abia-abia-central-pdp",
+    "race_id": "jan-2027-senate-abia-abia-central",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 9,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "OGU BOB",
+     "age": 64,
+     "age_as_printed": "64",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "CSLC WASC LLB BL",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-abia",
+     "page": 1,
+     "sn": 9
     }
    },
    {
@@ -101246,6 +101246,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-abia-abia-north-lp",
+    "race_id": "jan-2027-senate-abia-abia-north",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 9,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ONUOHA BOURDEX DAVID OGBA",
+     "age": 73,
+     "age_as_printed": "73",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC GCE BSC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-abia",
+     "page": 2,
+     "sn": 20
+    }
+   },
+   {
     "id": "jan-2027-senate-abia-abia-north-ndc",
     "race_id": "jan-2027-senate-abia-abia-north",
     "party": "NDC",
@@ -101269,32 +101295,6 @@
      "source_id": "senate-abia",
      "page": 2,
      "sn": 21
-    }
-   },
-   {
-    "id": "jan-2027-senate-abia-abia-north-pdp",
-    "race_id": "jan-2027-senate-abia-abia-north",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 13,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "UDEACHARA JUDE",
-     "age": 62,
-     "age_as_printed": "62",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FIRST LEAVING SC/GCE BSC. AND MSC.",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-abia",
-     "page": 3,
-     "sn": 24
     }
    },
    {
@@ -101480,32 +101480,6 @@
     }
    },
    {
-    "id": "jan-2027-senate-abia-abia-north-lp",
-    "race_id": "jan-2027-senate-abia-abia-north",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 9,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ONUOHA BOURDEX DAVID OGBA",
-     "age": 73,
-     "age_as_printed": "73",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC GCE BSC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-abia",
-     "page": 2,
-     "sn": 20
-    }
-   },
-   {
     "id": "jan-2027-senate-abia-abia-north-ndp",
     "race_id": "jan-2027-senate-abia-abia-north",
     "party": "NDP",
@@ -101555,6 +101529,32 @@
      "source_id": "senate-abia",
      "page": 2,
      "sn": 23
+    }
+   },
+   {
+    "id": "jan-2027-senate-abia-abia-north-pdp",
+    "race_id": "jan-2027-senate-abia-abia-north",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 13,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "UDEACHARA JUDE",
+     "age": 62,
+     "age_as_printed": "62",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FIRST LEAVING SC/GCE BSC. AND MSC.",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-abia",
+     "page": 3,
+     "sn": 24
     }
    },
    {
@@ -101677,6 +101677,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-abia-abia-south-lp",
+    "race_id": "jan-2027-senate-abia-abia-south",
+    "party": "LP",
+    "party_name": "Labour Party",
+    "ballot_position": 9,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ABARIBE ENYINNAYA HARCOURT",
+     "age": 71,
+     "age_as_printed": "71",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC BSC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-abia",
+     "page": 3,
+     "sn": 36
+    }
+   },
+   {
     "id": "jan-2027-senate-abia-abia-south-ndc",
     "race_id": "jan-2027-senate-abia-abia-south",
     "party": "NDC",
@@ -101700,32 +101726,6 @@
      "source_id": "senate-abia",
      "page": 3,
      "sn": 37
-    }
-   },
-   {
-    "id": "jan-2027-senate-abia-abia-south-pdp",
-    "race_id": "jan-2027-senate-abia-abia-south",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 11,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "ONUOHA ISHMAEL CHINYERE",
-     "age": 63,
-     "age_as_printed": "63",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WASC BSC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-abia",
-     "page": 3,
-     "sn": 38
     }
    },
    {
@@ -101911,20 +101911,20 @@
     }
    },
    {
-    "id": "jan-2027-senate-abia-abia-south-lp",
+    "id": "jan-2027-senate-abia-abia-south-pdp",
     "race_id": "jan-2027-senate-abia-abia-south",
-    "party": "LP",
-    "party_name": "Labour Party",
-    "ballot_position": 9,
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 11,
     "display_group": "rest",
     "remarks": "",
     "candidate": {
-     "name": "ABARIBE ENYINNAYA HARCOURT",
-     "age": 71,
-     "age_as_printed": "71",
+     "name": "ONUOHA ISHMAEL CHINYERE",
+     "age": 63,
+     "age_as_printed": "63",
      "gender": "M",
      "pwd": "None",
-     "qualifications": "FSLC WAEC BSC",
+     "qualifications": "FSLC WASC BSC",
      "position": "",
      "background": null
     },
@@ -101933,7 +101933,7 @@
     "provenance": {
      "source_id": "senate-abia",
      "page": 3,
-     "sn": 36
+     "sn": 38
     }
    },
    {
@@ -104105,6 +104105,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-anambra-anambra-central-apga",
+    "race_id": "jan-2027-senate-anambra-anambra-central",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 4,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "NWANKWO DOZIE FERDINAND",
+     "age": 51,
+     "age_as_printed": "51",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC WAEC B.SC ACCOUNTING",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-anambra",
+     "page": 1,
+     "sn": 4
+    }
+   },
+   {
     "id": "jan-2027-senate-anambra-anambra-central-ndc",
     "race_id": "jan-2027-senate-anambra-anambra-central",
     "party": "NDC",
@@ -104128,32 +104154,6 @@
      "source_id": "senate-anambra",
      "page": 1,
      "sn": 7
-    }
-   },
-   {
-    "id": "jan-2027-senate-anambra-anambra-central-pdp",
-    "race_id": "jan-2027-senate-anambra-anambra-central",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 10,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "UGHAMADU LAWRENCE CHIJIOKE",
-     "age": 48,
-     "age_as_printed": "48",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE B.SC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-anambra",
-     "page": 2,
-     "sn": 10
     }
    },
    {
@@ -104206,32 +104206,6 @@
      "source_id": "senate-anambra",
      "page": 1,
      "sn": 2
-    }
-   },
-   {
-    "id": "jan-2027-senate-anambra-anambra-central-apga",
-    "race_id": "jan-2027-senate-anambra-anambra-central",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 4,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "NWANKWO DOZIE FERDINAND",
-     "age": 51,
-     "age_as_printed": "51",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC WAEC B.SC ACCOUNTING",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-anambra",
-     "page": 1,
-     "sn": 4
     }
    },
    {
@@ -104336,6 +104310,32 @@
      "source_id": "senate-anambra",
      "page": 2,
      "sn": 9
+    }
+   },
+   {
+    "id": "jan-2027-senate-anambra-anambra-central-pdp",
+    "race_id": "jan-2027-senate-anambra-anambra-central",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 10,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "UGHAMADU LAWRENCE CHIJIOKE",
+     "age": 48,
+     "age_as_printed": "48",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE B.SC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-anambra",
+     "page": 2,
+     "sn": 10
     }
    },
    {
@@ -104458,6 +104458,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-anambra-anambra-north-apga",
+    "race_id": "jan-2027-senate-anambra-anambra-north",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 5,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "ODUAH STELLA ADAEZE",
+     "age": 64,
+     "age_as_printed": "64",
+     "gender": "F",
+     "pwd": "None",
+     "qualifications": "FSLC WASC B.Sc BUSINESS ADMINISTRATION",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-anambra",
+     "page": 2,
+     "sn": 18
+    }
+   },
+   {
     "id": "jan-2027-senate-anambra-anambra-north-ndc",
     "race_id": "jan-2027-senate-anambra-anambra-north",
     "party": "NDC",
@@ -104481,32 +104507,6 @@
      "source_id": "senate-anambra",
      "page": 3,
      "sn": 22
-    }
-   },
-   {
-    "id": "jan-2027-senate-anambra-anambra-north-pdp",
-    "race_id": "jan-2027-senate-anambra-anambra-north",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 12,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "OLIATA CHINENYE EDITH",
-     "age": 47,
-     "age_as_printed": "47",
-     "gender": "F",
-     "pwd": "None",
-     "qualifications": "FSLC O LEVEL OND",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-anambra",
-     "page": 3,
-     "sn": 25
     }
    },
    {
@@ -104585,32 +104585,6 @@
      "source_id": "senate-anambra",
      "page": 2,
      "sn": 16
-    }
-   },
-   {
-    "id": "jan-2027-senate-anambra-anambra-north-apga",
-    "race_id": "jan-2027-senate-anambra-anambra-north",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 5,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "ODUAH STELLA ADAEZE",
-     "age": 64,
-     "age_as_printed": "64",
-     "gender": "F",
-     "pwd": "None",
-     "qualifications": "FSLC WASC B.Sc BUSINESS ADMINISTRATION",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-anambra",
-     "page": 2,
-     "sn": 18
     }
    },
    {
@@ -104744,6 +104718,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-anambra-anambra-north-pdp",
+    "race_id": "jan-2027-senate-anambra-anambra-north",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 12,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "OLIATA CHINENYE EDITH",
+     "age": 47,
+     "age_as_printed": "47",
+     "gender": "F",
+     "pwd": "None",
+     "qualifications": "FSLC O LEVEL OND",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-anambra",
+     "page": 3,
+     "sn": 25
+    }
+   },
+   {
     "id": "jan-2027-senate-anambra-anambra-north-ypp",
     "race_id": "jan-2027-senate-anambra-anambra-north",
     "party": "YPP",
@@ -104863,6 +104863,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-anambra-anambra-south-apga",
+    "race_id": "jan-2027-senate-anambra-anambra-south",
+    "party": "APGA",
+    "party_name": "All Progressives Grand Alliance",
+    "ballot_position": 5,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "NWACHUKWU EMMANUEL",
+     "age": 63,
+     "age_as_printed": "63",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "HOUSING ESTATE PRIMARY SCHOOL NATIONAL GRAMMAR SCHOOL NIKE UNIVERSITY OF NIGERIA ENUGU CAMPUS B.Sc",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-anambra",
+     "page": 4,
+     "sn": 33
+    }
+   },
+   {
     "id": "jan-2027-senate-anambra-anambra-south-ndc",
     "race_id": "jan-2027-senate-anambra-anambra-south",
     "party": "NDC",
@@ -104886,32 +104912,6 @@
      "source_id": "senate-anambra",
      "page": 4,
      "sn": 36
-    }
-   },
-   {
-    "id": "jan-2027-senate-anambra-anambra-south-pdp",
-    "race_id": "jan-2027-senate-anambra-anambra-south",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 11,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "NWOSU IKECHUKWU SAMBEN",
-     "age": 53,
-     "age_as_printed": "53",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE SENIOR SCHOOL CERTIFICATE EDUCATION HIGHER NATIONAL DIPLOMA (ACCOUNTING)",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-anambra",
-     "page": 4,
-     "sn": 39
     }
    },
    {
@@ -104990,32 +104990,6 @@
      "source_id": "senate-anambra",
      "page": 3,
      "sn": 31
-    }
-   },
-   {
-    "id": "jan-2027-senate-anambra-anambra-south-apga",
-    "race_id": "jan-2027-senate-anambra-anambra-south",
-    "party": "APGA",
-    "party_name": "All Progressives Grand Alliance",
-    "ballot_position": 5,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "NWACHUKWU EMMANUEL",
-     "age": 63,
-     "age_as_printed": "63",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "HOUSING ESTATE PRIMARY SCHOOL NATIONAL GRAMMAR SCHOOL NIKE UNIVERSITY OF NIGERIA ENUGU CAMPUS B.Sc",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-anambra",
-     "page": 4,
-     "sn": 33
     }
    },
    {
@@ -105120,6 +105094,32 @@
      "source_id": "senate-anambra",
      "page": 4,
      "sn": 38
+    }
+   },
+   {
+    "id": "jan-2027-senate-anambra-anambra-south-pdp",
+    "race_id": "jan-2027-senate-anambra-anambra-south",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 11,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "NWOSU IKECHUKWU SAMBEN",
+     "age": 53,
+     "age_as_printed": "53",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FIRST SCHOOL LEAVING CERTIFICATE SENIOR SCHOOL CERTIFICATE EDUCATION HIGHER NATIONAL DIPLOMA (ACCOUNTING)",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-anambra",
+     "page": 4,
+     "sn": 39
     }
    },
    {
@@ -118818,32 +118818,6 @@
     }
    },
    {
-    "id": "jan-2027-senate-kano-kano-central-sdp",
-    "race_id": "jan-2027-senate-kano-kano-central",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 16,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "ADO MUSA CHEDI",
-     "age": 66,
-     "age_as_printed": "66",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FLSC SSCE kano poly",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-kano",
-     "page": 2,
-     "sn": 16
-    }
-   },
-   {
     "id": "jan-2027-senate-kano-kano-central-a",
     "race_id": "jan-2027-senate-kano-kano-central",
     "party": "A",
@@ -119130,6 +119104,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-kano-kano-central-sdp",
+    "race_id": "jan-2027-senate-kano-kano-central",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 16,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "ADO MUSA CHEDI",
+     "age": 66,
+     "age_as_printed": "66",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FLSC SSCE kano poly",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-kano",
+     "page": 2,
+     "sn": 16
+    }
+   },
+   {
     "id": "jan-2027-senate-kano-kano-central-ypp",
     "race_id": "jan-2027-senate-kano-kano-central",
     "party": "YPP",
@@ -119298,32 +119298,6 @@
      "source_id": "senate-kano",
      "page": 3,
      "sn": 29
-    }
-   },
-   {
-    "id": "jan-2027-senate-kano-kano-north-sdp",
-    "race_id": "jan-2027-senate-kano-kano-north",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 13,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "SANI MUHD DANBATTA",
-     "age": 64,
-     "age_as_printed": "64",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC NECO DIPLOMA EDU",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-kano",
-     "page": 3,
-     "sn": 31
     }
    },
    {
@@ -119535,6 +119509,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-kano-kano-north-sdp",
+    "race_id": "jan-2027-senate-kano-kano-north",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 13,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "SANI MUHD DANBATTA",
+     "age": 64,
+     "age_as_printed": "64",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC NECO DIPLOMA EDU",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-kano",
+     "page": 3,
+     "sn": 31
+    }
+   },
+   {
     "id": "jan-2027-senate-kano-kano-north-ypp",
     "race_id": "jan-2027-senate-kano-kano-north",
     "party": "YPP",
@@ -119703,32 +119703,6 @@
      "source_id": "senate-kano",
      "page": 4,
      "sn": 45
-    }
-   },
-   {
-    "id": "jan-2027-senate-kano-kano-south-sdp",
-    "race_id": "jan-2027-senate-kano-kano-south",
-    "party": "SDP",
-    "party_name": "Social Democratic Party",
-    "ballot_position": 13,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "ALIYU YAHAYA KULLUWA",
-     "age": 62,
-     "age_as_printed": "62",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FLSC SSCE",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-kano",
-     "page": 4,
-     "sn": 46
     }
    },
    {
@@ -119937,6 +119911,32 @@
      "source_id": "senate-kano",
      "page": 4,
      "sn": 44
+    }
+   },
+   {
+    "id": "jan-2027-senate-kano-kano-south-sdp",
+    "race_id": "jan-2027-senate-kano-kano-south",
+    "party": "SDP",
+    "party_name": "Social Democratic Party",
+    "ballot_position": 13,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "ALIYU YAHAYA KULLUWA",
+     "age": 62,
+     "age_as_printed": "62",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FLSC SSCE",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-kano",
+     "page": 4,
+     "sn": 46
     }
    },
    {
@@ -128455,6 +128455,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-senate-osun-osun-central-a",
+    "race_id": "jan-2027-senate-osun-osun-central",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "GANIYU AYOBAMI OLAOLUWA",
+     "age": 64,
+     "age_as_printed": "64",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE MSC (SOCIOLOGY)",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-osun",
+     "page": 1,
+     "sn": 1
+    }
+   },
+   {
     "id": "jan-2027-senate-osun-osun-central-adc",
     "race_id": "jan-2027-senate-osun-osun-central",
     "party": "ADC",
@@ -128533,32 +128559,6 @@
     }
    },
    {
-    "id": "jan-2027-senate-osun-osun-central-pdp",
-    "race_id": "jan-2027-senate-osun-osun-central",
-    "party": "PDP",
-    "party_name": "Peoples Democratic Party",
-    "ballot_position": 13,
-    "display_group": "first",
-    "remarks": "",
-    "candidate": {
-     "name": "FADEYI OLUBIYI OLUWOLE",
-     "age": 57,
-     "age_as_printed": "57",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "PRIMARY SCHOOL TESTIMONIAL WEST AFRICAN SCHOOL CERTIFICATE B.A. (HONS) ARCHEOLOGY",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-osun",
-     "page": 2,
-     "sn": 13
-    }
-   },
-   {
     "id": "jan-2027-senate-osun-osun-central-sdp",
     "race_id": "jan-2027-senate-osun-osun-central",
     "party": "SDP",
@@ -128582,32 +128582,6 @@
      "source_id": "senate-osun",
      "page": 2,
      "sn": 14
-    }
-   },
-   {
-    "id": "jan-2027-senate-osun-osun-central-a",
-    "race_id": "jan-2027-senate-osun-osun-central",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "GANIYU AYOBAMI OLAOLUWA",
-     "age": 64,
-     "age_as_printed": "64",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE MSC (SOCIOLOGY)",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-osun",
-     "page": 1,
-     "sn": 1
     }
    },
    {
@@ -128819,6 +128793,32 @@
     }
    },
    {
+    "id": "jan-2027-senate-osun-osun-central-pdp",
+    "race_id": "jan-2027-senate-osun-osun-central",
+    "party": "PDP",
+    "party_name": "Peoples Democratic Party",
+    "ballot_position": 13,
+    "display_group": "rest",
+    "remarks": "",
+    "candidate": {
+     "name": "FADEYI OLUBIYI OLUWOLE",
+     "age": 57,
+     "age_as_printed": "57",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "PRIMARY SCHOOL TESTIMONIAL WEST AFRICAN SCHOOL CERTIFICATE B.A. (HONS) ARCHEOLOGY",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-osun",
+     "page": 2,
+     "sn": 13
+    }
+   },
+   {
     "id": "jan-2027-senate-osun-osun-central-yp",
     "race_id": "jan-2027-senate-osun-osun-central",
     "party": "YP",
@@ -128885,6 +128885,32 @@
   ],
   "placement_notes": [],
   "candidates": [
+   {
+    "id": "jan-2027-senate-osun-osun-east-a",
+    "race_id": "jan-2027-senate-osun-osun-east",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "FADIPE IBUKUN ISOLA",
+     "age": 52,
+     "age_as_printed": "52",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE B.SC",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-osun",
+     "page": 2,
+     "sn": 17
+    }
+   },
    {
     "id": "jan-2027-senate-osun-osun-east-adc",
     "race_id": "jan-2027-senate-osun-osun-east",
@@ -128987,32 +129013,6 @@
      "source_id": "senate-osun",
      "page": 3,
      "sn": 25
-    }
-   },
-   {
-    "id": "jan-2027-senate-osun-osun-east-a",
-    "race_id": "jan-2027-senate-osun-osun-east",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "FADIPE IBUKUN ISOLA",
-     "age": 52,
-     "age_as_printed": "52",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE B.SC",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-osun",
-     "page": 2,
-     "sn": 17
     }
    },
    {
@@ -129135,6 +129135,32 @@
   "placement_notes": [],
   "candidates": [
    {
+    "id": "jan-2027-senate-osun-osun-west-a",
+    "race_id": "jan-2027-senate-osun-osun-west",
+    "party": "A",
+    "party_name": "Accord",
+    "ballot_position": 1,
+    "display_group": "first",
+    "remarks": "",
+    "candidate": {
+     "name": "OYEWUMI KAMORUDEEN OLALERE",
+     "age": 66,
+     "age_as_printed": "66",
+     "gender": "M",
+     "pwd": "None",
+     "qualifications": "FSLC SSCE B.SC, M.SC., PH.D",
+     "position": "",
+     "background": null
+    },
+    "running_mate": null,
+    "printing_notes": [],
+    "provenance": {
+     "source_id": "senate-osun",
+     "page": 3,
+     "sn": 26
+    }
+   },
+   {
     "id": "jan-2027-senate-osun-osun-west-adc",
     "race_id": "jan-2027-senate-osun-osun-west",
     "party": "ADC",
@@ -129236,32 +129262,6 @@
      "source_id": "senate-osun",
      "page": 3,
      "sn": 37
-    }
-   },
-   {
-    "id": "jan-2027-senate-osun-osun-west-a",
-    "race_id": "jan-2027-senate-osun-osun-west",
-    "party": "A",
-    "party_name": "Accord",
-    "ballot_position": 1,
-    "display_group": "rest",
-    "remarks": "",
-    "candidate": {
-     "name": "OYEWUMI KAMORUDEEN OLALERE",
-     "age": 66,
-     "age_as_printed": "66",
-     "gender": "M",
-     "pwd": "None",
-     "qualifications": "FSLC SSCE B.SC, M.SC., PH.D",
-     "position": "",
-     "background": null
-    },
-    "running_mate": null,
-    "printing_notes": [],
-    "provenance": {
-     "source_id": "senate-osun",
-     "page": 3,
-     "sn": 26
     }
    },
    {

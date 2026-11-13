@@ -111,6 +111,17 @@ test.describe('without JavaScript', () => {
   })
 })
 
+test('in Abia, the Senate tab labels its first group with the state rule, the Sources section cites the result, and nothing scrolls sideways', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.goto(ABA)
+  await page.getByRole('tab', { name: /Senate/ }).click()
+  const panel = page.getByRole('tabpanel')
+  await expect(panel.getByRole('heading', { name: 'Four of the five parties with the most candidates in 2027, and LP, which won Abia’s last governorship election' })).toBeVisible()
+  // the citation is with the page's other references, after the candidates (owner feedback, 13 Nov 2026)
+  await expect(page.getByRole('region', { name: 'Sources' }).getByRole('link', { name: /LP won Abia’s governorship election of 18 March 2023, as declared by INEC/ }).first()).toBeAttached()
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true)
+})
+
 test.describe('the grid', () => {
   test('two cards per row on a phone, names whole, the first group labelled, no sideways scroll', async ({ page }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' }) // the cards' entrance would offset them mid-way
@@ -178,7 +189,7 @@ async function fakeShareSheet(page: Page, files: boolean) {
   }, files)
 }
 
-/** The picture handed to the share menu, decoded in the page: its size, and whether the rows outside Status's safe area are plain. */
+/** The picture handed to the share menu, decoded in the page: its size, the plain edges, and where the words sit in each green band. */
 async function pictureCheck(page: Page, bytes: number[]) {
   return page.evaluate(async (bytes) => {
     const img = await createImageBitmap(new Blob([new Uint8Array(bytes)], { type: 'image/png' }))
@@ -195,14 +206,36 @@ async function pictureCheck(page: Page, bytes: number[]) {
       return true
     }
     const outside: number[] = []
-    for (let y = 0; y < 258; y += 4) if (!plain(y)) outside.push(y)
-    for (let y = 1724; y < 1920; y += 4) if (!plain(y)) outside.push(y)
-    return { w: img.width, h: img.height, outside }
+    for (let y = 0; y < 164; y += 2) if (!plain(y)) outside.push(y)
+    for (let y = 1920 - 2; y >= 1920 - 46; y -= 2) if (!plain(y)) outside.push(y)
+    // Each green band: the rows from the edge whose first pixel is the band's colour; the words' rows and columns inside it.
+    const same = (o: number, q: number) => [0, 1, 2].every(k => Math.abs(data[o + k] - data[q + k]) <= 12)
+    const inBand = (y: number) => same(y * c.width * 4, 0)
+    const words = (from: number, to: number) => {
+      let [y0, y1, x0, x1] = [Infinity, -1, Infinity, -1]
+      for (let y = from; y < to; y++) {
+        const o = y * c.width * 4
+        for (let x = 0; x < c.width; x++) {
+          if (!same(o + x * 4, o)) {
+            y0 = Math.min(y0, y)
+            y1 = Math.max(y1, y)
+            x0 = Math.min(x0, x)
+            x1 = Math.max(x1, x)
+          }
+        }
+      }
+      return { above: y0 - from, below: to - 1 - y1, left: x0, right: c.width - 1 - x1 }
+    }
+    let topEnd = 0
+    while (inBand(topEnd)) topEnd++
+    let footStart = c.height - 1
+    while (same((footStart - 1) * c.width * 4, (c.height - 1) * c.width * 4)) footStart--
+    return { w: img.width, h: img.height, outside, top: words(0, topEnd), foot: words(footStart, c.height) }
   }, bytes)
 }
 
 test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
-  test('on a phone that shares files, WhatsApp and Share send a 1080x1920 PNG inside Status’s safe area, with the caption and the home page', async ({ page }, info) => {
+  test('on a phone that shares files, WhatsApp and Share send a 1080x1920 PNG with the words centred in its bands, with the caption and the home page', async ({ page }, info) => {
     const full: string[] = []
     page.on('request', (r) => { if (/\/logos\/full\//.test(r.url())) full.push(r.url()) })
     await fakeShareSheet(page, true)
@@ -222,7 +255,11 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
       expect(s.text).toBe('Check who is on your ballot:\nhttps://whosonmyballot.ng/')
       const p = await pictureCheck(page, s.bytes)
       expect([p.w, p.h]).toEqual([1080, 1920])
-      expect(p.outside, 'rows outside the safe area must be plain').toEqual([])
+      expect(p.outside, 'the top 164 rows and the bottom 46 rows hold no words').toEqual([])
+      // the words in each band are centred in it, up and down (within the glyphs' own ascent and descent) and across
+      expect(Math.abs(p.top.above - p.top.below), JSON.stringify(p.top)).toBeLessThan(24)
+      expect(Math.abs(p.foot.above - p.foot.below), JSON.stringify(p.foot)).toBeLessThan(16)
+      expect(Math.abs(p.foot.left - p.foot.right), JSON.stringify(p.foot)).toBeLessThan(8)
     }
     fs.writeFileSync(info.outputPath('share-president.png'), Buffer.from(wa.bytes))
     await info.attach('share-president', { path: info.outputPath('share-president.png'), contentType: 'image/png' })

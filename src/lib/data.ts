@@ -138,9 +138,27 @@ export interface FirstGroup {
   parties: string[]
   measure_values: { acronym: string, value: number }[]
   sources: { title: string, url: string, retrieved: string }[]
+  /** D-070: the states whose last governorship winner joins the five, in every race there except President. */
+  states: Record<string, StateGroup>
+}
+export interface StateGroup {
+  parties: string[]
+  joins: string
+  replaces: string
+  label: string
+  state_name: string
+  election_date: string
+  counts: Record<string, number>
+  source: { title: string, url: string, retrieved: string, declared_by: string }
 }
 /** The five parties shown first in every race, and the published measure that picks them (D-042). */
 export const firstGroup = (): FirstGroup => read<FirstGroup>('first-group.json')
+/** A race's own first group: its state's (D-070) where the state's last governorship winner joins, else the national five. */
+export function groupOf(r: Pick<Race, 'office' | 'state'>): { label: string, parties: string[], state: StateGroup | null } {
+  const fg = firstGroup()
+  const st = r.office !== 'president' && r.state ? fg.states[r.state] ?? null : null
+  return st ? { label: st.label, parties: st.parties, state: st } : { label: fg.label, parties: fg.parties, state: null }
+}
 
 export interface Logo { png: string, full: string, full_width: number, full_height: number, source_url: string, retrieved_at: string }
 let logos: Record<string, Logo> | null = null

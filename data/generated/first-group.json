@@ -36,5 +36,119 @@
    "acronym": "SDP",
    "value": 1273
   }
- ]
+ ],
+ "states": {
+  "ABIA": {
+   "parties": [
+    "ADC",
+    "APC",
+    "LP",
+    "NDC",
+    "SDP"
+   ],
+   "joins": "LP",
+   "replaces": "PDP",
+   "label": "Four of the five parties with the most candidates in 2027, and LP, which won Abia’s last governorship election",
+   "state_name": "Abia",
+   "election_date": "2023-03-18",
+   "counts": {
+    "ADC": 36,
+    "APC": 36,
+    "LP": 36,
+    "NDC": 35,
+    "PDP": 33,
+    "SDP": 36
+   },
+   "source": {
+    "title": "INEC: Report of the 2023 General Election, Annexure 3, Results of the Governorship Election in 28 States (p. 419), archived copy",
+    "url": "http://web.archive.org/web/20260214132338/https://inecnigeria.org/wp-content/uploads/2024/02/2023-GENERAL-ELECTION-REPORT-1.pdf",
+    "retrieved": "2026-11-12",
+    "declared_by": "INEC"
+   }
+  },
+  "ANAMBRA": {
+   "parties": [
+    "ADC",
+    "APC",
+    "APGA",
+    "NDC",
+    "SDP"
+   ],
+   "joins": "APGA",
+   "replaces": "PDP",
+   "label": "Four of the five parties with the most candidates in 2027, and APGA, which won Anambra’s last governorship election",
+   "state_name": "Anambra",
+   "election_date": "2025-11-08",
+   "counts": {
+    "ADC": 44,
+    "APC": 44,
+    "APGA": 44,
+    "NDC": 44,
+    "PDP": 15,
+    "SDP": 27
+   },
+   "source": {
+    "title": "Premium Times: #AnambraDecides2025: It's official, INEC declares Soludo winner of governorship poll",
+    "url": "https://www.premiumtimesng.com/news/headlines/834040-anambradecides2025-its-official-inec-declares-soludo-winner-of-governorship-poll.html",
+    "retrieved": "2026-11-12",
+    "declared_by": "INEC’s returning officer and reported by Premium Times"
+   }
+  },
+  "KANO": {
+   "parties": [
+    "ADC",
+    "APC",
+    "NDC",
+    "NNPP",
+    "PDP"
+   ],
+   "joins": "NNPP",
+   "replaces": "SDP",
+   "label": "Four of the five parties with the most candidates in 2027, and NNPP, which won Kano’s last governorship election",
+   "state_name": "Kano",
+   "election_date": "2023-03-18",
+   "counts": {
+    "ADC": 62,
+    "APC": 68,
+    "NDC": 67,
+    "NNPP": 34,
+    "PDP": 61,
+    "SDP": 56
+   },
+   "source": {
+    "title": "INEC: Report of the 2023 General Election, Annexure 3, Results of the Governorship Election in 28 States (p. 419), archived copy",
+    "url": "http://web.archive.org/web/20260214132338/https://inecnigeria.org/wp-content/uploads/2024/02/2023-GENERAL-ELECTION-REPORT-1.pdf",
+    "retrieved": "2026-11-12",
+    "declared_by": "INEC"
+   }
+  },
+  "OSUN": {
+   "parties": [
+    "A",
+    "ADC",
+    "APC",
+    "NDC",
+    "SDP"
+   ],
+   "joins": "A",
+   "replaces": "PDP",
+   "label": "Four of the five parties with the most candidates in 2027, and A, which won Osun’s last governorship election",
+   "state_name": "Osun",
+   "election_date": "2026-08-15",
+   "counts": {
+    "A": 38,
+    "ADC": 38,
+    "APC": 38,
+    "NDC": 36,
+    "PDP": 1,
+    "SDP": 32
+   },
+   "source": {
+    "title": "Premium Times: #OsunDecides2026: INEC declares Accord's Ademola Adeleke winner of governorship election",
+    "url": "https://www.premiumtimesng.com/news/top-news/903305-updated-osundecides2026-inec-declares-accords-ademola-adeleke-winner-of-governorship-election.html",
+    "retrieved": "2026-11-12",
+    "declared_by": "INEC’s returning officer and reported by Premium Times"
+   }
+  }
+ }
 }

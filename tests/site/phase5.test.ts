@@ -182,3 +182,44 @@ describe('6 February candidate pages', () => {
     }
   })
 })
+
+describe('the state rule (D-070) on the built pages', () => {
+  const fg = JSON.parse(fs.readFileSync('data/generated/first-group.json', 'utf8')) as { label: string, states: Record<string, { label: string, state_name: string, joins: string, replaces: string, source: { url: string } }> }
+  const pages = [...walk(path.join(OUT, 'ballot'))].concat([...walk(path.join(OUT, 'ballot-feb'))]).filter(f => f.endsWith('index.html'))
+
+  it('every ballot page in Abia, Anambra, Kano and Osun labels its first group plainly and cites the governorship result; no other state does', () => {
+    let seen = 0
+    for (const f of pages) {
+      const st = path.relative(OUT, f).split(path.sep)[1].toUpperCase().replace(/-/g, ' ')
+      const page = fs.readFileSync(f, 'utf8')
+      const g = fg.states[st]
+      if (g) {
+        seen++
+        expect(page, f).toContain(`>${g.label}</h`)
+        expect(page, f).toContain(`href="${g.source.url}"`)
+      }
+      else {
+        expect(page, f).not.toContain('data-source="state-group"')
+      }
+    }
+    expect(seen).toBeGreaterThan(0)
+  })
+
+  it('the President race keeps the national label even in those states', () => {
+    const kano = pages.find(f => f.includes(`${path.sep}ballot${path.sep}kano${path.sep}`))!
+    const page = fs.readFileSync(kano, 'utf8')
+    const pres = page.slice(page.indexOf('data-race-id="jan-2027-president"'))
+    expect(pres.slice(0, pres.indexOf('</section>'))).toContain(`>${fg.label}</h`)
+  })
+
+  it('the About page explains the rule in one paragraph, names each changed state and cites each result', () => {
+    const about = html('about')
+    const para = about.slice(about.indexOf('<p id="order-states">'), about.indexOf('</p>', about.indexOf('<p id="order-states">')))
+    expect(para).toContain('the one with fewer candidates nationally goes')
+    expect(para).toContain('The FCT has no governorship election and keeps the five.')
+    for (const g of Object.values(fg.states)) {
+      expect(para).toContain(`${g.state_name} (${g.joins} replaces ${g.replaces})`)
+      expect(about).toContain(`href="${g.source.url}"`)
+    }
+  })
+})

@@ -131,14 +131,21 @@ def verify(res: BuildResult, write_audit: bool = True) -> int:
     )
     c.check(order_ok, "ballot_position runs 1..N in party-acronym order in every race")
     five = set(res.first_group.get("parties", []))
+    by_state = res.first_group.get("states", {})
+
+    def five_of(r) -> set[str]:
+        return set(by_state[r.state]["parties"]) if r.office != "president" and r.state in by_state else five
+
     display_ok = all(
-        [cd.party for cd in r.candidates] == sorted(cd.party for cd in r.candidates if cd.party in five)
-        + [cd.party for cd in ballot(r) if cd.party not in five]
-        and all((cd.display_group == "first") == (cd.party in five) for cd in r.candidates)
+        [cd.party for cd in r.candidates] == sorted(cd.party for cd in r.candidates if cd.party in five_of(r))
+        + [cd.party for cd in ballot(r) if cd.party not in five_of(r)]
+        and all((cd.display_group == "first") == (cd.party in five_of(r)) for cd in r.candidates)
         for r in races
     )
-    c.check(len(five) == 5 and display_ok, "display order (D-042): the same five parties first in every race, alphabetical, "
-            "then all other parties in ballot order", ", ".join(sorted(five)))
+    c.check(len(five) == 5 and all(len(v["parties"]) == 5 for v in by_state.values()) and display_ok,
+            "display order (D-042, D-070): the five parties first in every race, alphabetical, then all other parties in "
+            "ballot order; a state's own five where its last governorship winner joins",
+            ", ".join(sorted(five)) + "".join(f"; {st}: {', '.join(v['parties'])}" for st, v in sorted(by_state.items())))
     differ = sorted(sid for sid, ok in res.inec_order_matches.items() if not ok)
     c.note(f"INEC's own row order matches acronym order in {sum(res.inec_order_matches.values())} of "
            f"{len(res.inec_order_matches)} source files" + (f"; differs in: {', '.join(differ)}" if differ else "") + ".")

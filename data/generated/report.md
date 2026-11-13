@@ -38,7 +38,7 @@ INEC remarks, verbatim (count): `COURT ORDER` (13), `.` (2), `CONSTITUTENCY SWAP
 
 ## Ballot order (D-011)
 - [x] **PASS** ballot_position runs 1..N in party-acronym order in every race
-- [x] **PASS** display order (D-042): the same five parties first in every race, alphabetical, then all other parties in ballot order: ADC, APC, NDC, PDP, SDP
+- [x] **PASS** display order (D-042, D-070): the five parties first in every race, alphabetical, then all other parties in ballot order; a state's own five where its last governorship winner joins: ADC, APC, NDC, PDP, SDP; ABIA: ADC, APC, LP, NDC, SDP; ANAMBRA: ADC, APC, APGA, NDC, SDP; KANO: ADC, APC, NDC, NNPP, PDP; OSUN: A, ADC, APC, NDC, SDP
 INEC's own row order matches acronym order in 102 of 104 source files; differs in: house-2026-09-12-consolidated, sha-2026-10-10.
 
 ## Polling units
@@ -98,7 +98,7 @@ Researched 2026-11-09: 36 people, 26 office entries, 61 party entries, 142 citat
 - [x] **PASS** every election-day statement rests on a quote found on INEC's fetched page (build fails otherwise): 8 steps, 2 election dates
 
 ## 6 February races (Phase 5)
-- [x] **PASS** the 16 January data is unchanged (SHA-256 pinned in sources.yaml): 42b9864aafd80101
+- [x] **PASS** the 16 January data is unchanged (SHA-256 pinned in sources.yaml): 6170da3a6ed3e66e
 - [x] **PASS** 28 governorship races: every state except the 8 off-cycle states and the FCT: 28
 - [x] **PASS** every governorship ticket has exactly one deputy
 - [x] **PASS** State Assembly races in 35 states (no FCT assembly; Borno absent from INEC's list, OI-11): 35 states: missing ['BORNO']

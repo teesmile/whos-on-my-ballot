@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { badgeFor, RaceSection, RaceTabs, UnresolvedGroup } from '@/components/RaceSection'
+import { badgeFor, BallotSources, RaceSection, RaceTabs, UnresolvedGroup } from '@/components/RaceSection'
 import { ChooseFirst } from '@/components/ChooseFirst'
 import { SourceLine } from '@/components/SourceLine'
 import { ballots, janBallotTitle, presidentialRace, race } from '@/lib/data'
@@ -49,21 +49,23 @@ export default async function BallotPage({ params }: { params: Promise<{ state: 
         {' · '}
         Every race on this ballot, with every candidate as INEC listed them.
       </p>
-      <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
-      <SourceLine id="inec-constituencies-workbook" what="Which Senate district and House constituency each LGA is in" />
       <RaceTabs panels={[
-        { key: 'president', label: 'President', title: 'President', ...badgeFor([pres]), content: <RaceSection r={pres} pageUrl={b.path} /> },
+        { key: 'president', label: 'President', title: 'President', ...badgeFor([pres]), content: <RaceSection r={pres} pageUrl={b.path} linksAtEnd /> },
         {
           key: 'senate', label: 'Senate', title: 'Senate', ...badgeFor(senate),
-          content: senate.length === 1 ? <RaceSection r={senate[0]} pageUrl={b.path} /> : <UnresolvedGroup office="Senate" list={senate} path={b.path} />,
+          content: senate.length === 1 ? <RaceSection r={senate[0]} pageUrl={b.path} linksAtEnd /> : <UnresolvedGroup office="Senate" list={senate} path={b.path} linksAtEnd />,
         },
         {
           key: 'house', label: 'House', title: 'House of Representatives', ...badgeFor(house),
-          content: house.length === 1 ? <RaceSection r={house[0]} pageUrl={b.path} /> : <UnresolvedGroup office="House of Representatives" list={house} path={b.path} />,
+          content: house.length === 1 ? <RaceSection r={house[0]} pageUrl={b.path} linksAtEnd /> : <UnresolvedGroup office="House of Representatives" list={house} path={b.path} linksAtEnd />,
         },
       ]}
       />
       <p className="go"><a className="btn" href={`/state/${b.state.code}/`}>Not your polling unit? Search again</a></p>
+      <BallotSources races={[pres, ...senate, ...house]}>
+        <SourceLine id="inec-pu-locator" what="Polling units and their wards and LGAs" />
+        <SourceLine id="inec-constituencies-workbook" what="Which Senate district and House constituency each LGA is in" />
+      </BallotSources>
     </>
   )
 }

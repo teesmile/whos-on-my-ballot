@@ -14,3 +14,101 @@ parties:
   - {acronym: SDP, value: 1273}
 sources:
   - {title: "INEC: final lists of candidates for the 2027 general elections (President, Senate, House of Representatives, Governor, State Houses of Assembly)", url: "https://www.inecnigeria.org/elections/2027-general-elections-update", retrieved: "2026-11-10"}
+
+# Owner decision D-070: in every race except President, a state keeps the five above unless the party that won its last
+# governorship election, as declared by INEC, is not among them and fields candidates in that state. That party then
+# replaces whichever of the five fields the fewest candidates in the state (Senate, House, Governor and State Assembly,
+# named candidates only); on a tie, the one with the lower national count goes. The FCT has no governorship and keeps the
+# five. The pipeline recomputes this on every build and fails if the result differs from `changes` below.
+state_rule:
+  label: "Four of the five parties with the most candidates in 2027, and {party}, which won {state}’s last governorship election"
+  sources:
+    inec-2023-report:
+      title: "INEC: Report of the 2023 General Election, Annexure 3, Results of the Governorship Election in 28 States (p. 419), archived copy"
+      url: "http://web.archive.org/web/20260214132338/https://inecnigeria.org/wp-content/uploads/2024/02/2023-GENERAL-ELECTION-REPORT-1.pdf"
+      retrieved: "2026-11-12"
+      declared_by: "INEC"
+    pt-anambra-2025:
+      title: "Premium Times: #AnambraDecides2025: It's official, INEC declares Soludo winner of governorship poll"
+      url: "https://www.premiumtimesng.com/news/headlines/834040-anambradecides2025-its-official-inec-declares-soludo-winner-of-governorship-poll.html"
+      retrieved: "2026-11-12"
+      declared_by: "INEC’s returning officer and reported by Premium Times"
+    pt-osun-2026:
+      title: "Premium Times: #OsunDecides2026: INEC declares Accord's Ademola Adeleke winner of governorship election"
+      url: "https://www.premiumtimesng.com/news/top-news/903305-updated-osundecides2026-inec-declares-accords-ademola-adeleke-winner-of-governorship-election.html"
+      retrieved: "2026-11-12"
+      declared_by: "INEC’s returning officer and reported by Premium Times"
+    nairametrics-bayelsa-2023:
+      title: "Nairametrics: INEC announces PDP's Diri winner of Bayelsa governorship election"
+      url: "https://nairametrics.com/2023/11/13/inec-announces-pdp-diri-winner-of-bayelsa-governorship-election/"
+      retrieved: "2026-11-12"
+      declared_by: "INEC’s returning officer and reported by Nairametrics"
+    icir-imo-2023:
+      title: "ICIR: INEC declares APC's Uzodimma winner of Imo State governorship election"
+      url: "https://www.icirnigeria.org/inec-declares-apc-uzodimma-winner-of-imo-state-governorship-election/"
+      retrieved: "2026-11-12"
+      declared_by: "INEC’s returning officer and reported by ICIR"
+    icir-kogi-2023:
+      title: "ICIR: INEC declares Ododo winner of Kogi poll"
+      url: "https://www.icirnigeria.org/inec-declares-ododo-winner-of-kogi-poll/"
+      retrieved: "2026-11-12"
+      declared_by: "INEC’s returning officer and reported by ICIR"
+    pt-edo-2024:
+      title: "Premium Times: It's official: INEC declares APC candidate winner of Edo governorship election"
+      url: "https://www.premiumtimesng.com/regional/south-south-regional/737579-its-official-inec-declares-apc-candidate-winner-of-edo-governorship-election.html"
+      retrieved: "2026-11-12"
+      declared_by: "INEC’s returning officer and reported by Premium Times"
+    icir-ondo-2024:
+      title: "ICIR: Ondo poll: INEC declares APC's Lucky Aiyedatiwa winner"
+      url: "https://www.icirnigeria.org/ondo-poll-inec-declares-apcs-lucky-aiyedatiwa-winner/"
+      retrieved: "2026-11-12"
+      declared_by: "INEC’s returning officer and reported by ICIR"
+    dailytrust-ekiti-2026:
+      title: "Daily Trust: INEC declares Oyebanji winner of Ekiti governorship election"
+      url: "https://dailytrust.com/inec-declares-oyebanji-winner-of-ekiti-governorship-election"
+      retrieved: "2026-11-12"
+      declared_by: "INEC’s returning officer and reported by Daily Trust"
+  # The state's name as written on the page, the party INEC declared, the election date and the source.
+  winners:
+    ABIA: {name: Abia, party: LP, date: "2023-03-18", source: inec-2023-report}
+    ADAMAWA: {name: Adamawa, party: PDP, date: "2023-03-18", source: inec-2023-report, note: "concluded by a supplementary poll on 15 Apr 2023; the suspended REC's declaration for APC was voided by INEC"}
+    AKWA IBOM: {name: Akwa Ibom, party: PDP, date: "2023-03-18", source: inec-2023-report}
+    ANAMBRA: {name: Anambra, party: APGA, date: "2025-11-08", source: pt-anambra-2025}
+    BAUCHI: {name: Bauchi, party: PDP, date: "2023-03-18", source: inec-2023-report}
+    BAYELSA: {name: Bayelsa, party: PDP, date: "2023-11-11", source: nairametrics-bayelsa-2023}
+    BENUE: {name: Benue, party: APC, date: "2023-03-18", source: inec-2023-report}
+    BORNO: {name: Borno, party: APC, date: "2023-03-18", source: inec-2023-report}
+    CROSS RIVER: {name: Cross River, party: APC, date: "2023-03-18", source: inec-2023-report}
+    DELTA: {name: Delta, party: PDP, date: "2023-03-18", source: inec-2023-report}
+    EBONYI: {name: Ebonyi, party: APC, date: "2023-03-18", source: inec-2023-report}
+    EDO: {name: Edo, party: APC, date: "2024-09-21", source: pt-edo-2024}
+    EKITI: {name: Ekiti, party: APC, date: "2026-06-20", source: dailytrust-ekiti-2026}
+    ENUGU: {name: Enugu, party: PDP, date: "2023-03-18", source: inec-2023-report}
+    GOMBE: {name: Gombe, party: APC, date: "2023-03-18", source: inec-2023-report}
+    IMO: {name: Imo, party: APC, date: "2023-11-11", source: icir-imo-2023}
+    JIGAWA: {name: Jigawa, party: APC, date: "2023-03-18", source: inec-2023-report}
+    KADUNA: {name: Kaduna, party: APC, date: "2023-03-18", source: inec-2023-report}
+    KANO: {name: Kano, party: NNPP, date: "2023-03-18", source: inec-2023-report, note: "restored by the Supreme Court on 12 Jan 2024 after the tribunal and Court of Appeal ruled for APC"}
+    KATSINA: {name: Katsina, party: APC, date: "2023-03-18", source: inec-2023-report}
+    KEBBI: {name: Kebbi, party: APC, date: "2023-03-18", source: inec-2023-report, note: "concluded by a supplementary poll on 15 Apr 2023"}
+    KOGI: {name: Kogi, party: APC, date: "2023-11-11", source: icir-kogi-2023}
+    KWARA: {name: Kwara, party: APC, date: "2023-03-18", source: inec-2023-report}
+    LAGOS: {name: Lagos, party: APC, date: "2023-03-18", source: inec-2023-report}
+    NASARAWA: {name: Nasarawa, party: APC, date: "2023-03-18", source: inec-2023-report}
+    NIGER: {name: Niger, party: APC, date: "2023-03-18", source: inec-2023-report}
+    OGUN: {name: Ogun, party: APC, date: "2023-03-18", source: inec-2023-report}
+    ONDO: {name: Ondo, party: APC, date: "2024-11-16", source: icir-ondo-2024}
+    OSUN: {name: Osun, party: A, date: "2026-08-15", source: pt-osun-2026}
+    OYO: {name: Oyo, party: PDP, date: "2023-03-18", source: inec-2023-report}
+    PLATEAU: {name: Plateau, party: PDP, date: "2023-03-18", source: inec-2023-report, note: "INEC's report prints APC, against the Supreme Court's ruling of 12 Jan 2024 for PDP's candidate; both are in the five, so the state's five is the same either way"}
+    RIVERS: {name: Rivers, party: PDP, date: "2023-03-18", source: inec-2023-report}
+    SOKOTO: {name: Sokoto, party: APC, date: "2023-03-18", source: inec-2023-report}
+    TARABA: {name: Taraba, party: PDP, date: "2023-03-18", source: inec-2023-report}
+    YOBE: {name: Yobe, party: APC, date: "2023-03-18", source: inec-2023-report}
+    ZAMFARA: {name: Zamfara, party: PDP, date: "2023-03-18", source: inec-2023-report}
+  # What the rule gives today; a new INEC list that changes any of this fails the build until the owner reviews it.
+  changes:
+    ABIA: {joins: LP, replaces: PDP}
+    ANAMBRA: {joins: APGA, replaces: PDP}
+    KANO: {joins: NNPP, replaces: SDP}
+    OSUN: {joins: A, replaces: PDP}

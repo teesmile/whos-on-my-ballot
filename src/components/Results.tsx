@@ -1,4 +1,4 @@
-import { firstGroup, type Race } from '@/lib/data'
+import { groupOf, type Race } from '@/lib/data'
 import { ELECTION_DAY, noCandidateText } from '@/lib/share'
 
 import { CardPhoto, PartyLogo } from './Candidate'
@@ -14,7 +14,7 @@ export function waitingLine(r: Race) {
 }
 
 export function ResultsTable({ r, label }: { r: Race, label: string }) {
-  const fg = firstGroup()
+  const fg = groupOf(r)
   const groups = [[fg.label, r.candidates.filter(c => c.display_group === 'first')], [REST_LABEL, r.candidates.filter(c => c.display_group === 'rest')]] as const
   return (
     <table className="results-table">

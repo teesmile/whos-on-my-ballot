@@ -1,9 +1,9 @@
-import { firstGroup, type Race, sharePhoto, source } from '@/lib/data'
+import { groupOf, type Race, type StateGroup, sharePhoto, source } from '@/lib/data'
 import { slug } from '@/lib/core'
 import { caption, ELECTION_DAY, namedCount, picture, raceTitle } from '@/lib/share'
 import { raceCorrectionHref, shareLinks, SITE_URL } from '@/lib/site'
 
-import { CandidateCard } from './Candidate'
+import { CandidateCard, formatDate } from './Candidate'
 import { Share, WhatsAppGlyph } from './Share'
 import { SourceLine } from './SourceLine'
 
@@ -18,8 +18,10 @@ export const REST_LABEL = 'All other parties, in ballot order'
 export const TICKET_OFFICES: Race['office'][] = ['president', 'governor']
 export const mateLabel = (r: Race) => (r.office === 'governor' ? 'Deputy governor' : 'Running mate')
 
-function SourcesNote({ r }: { r: Race }) {
+/** The race's source links; on a ballot page (`linksAtEnd`) only the note stays here and the links go to the page's end. */
+function SourcesNote({ r, linksAtEnd }: { r: Race, linksAtEnd: boolean }) {
   const fallback = r.sources.includes('house-2026-09-12-consolidated')
+  if (linksAtEnd && !fallback) return null
   return (
     <div className="race-meta">
       {fallback && (
@@ -27,13 +29,29 @@ function SourcesNote({ r }: { r: Race }) {
           Latest INEC list for this state: 12 September 2026. INEC’s 31 October 2026 update did not include a House of Representatives list for Niger.
         </p>
       )}
-      {r.sources.map(id => <SourceLine key={id} id={id} what="Candidates" />)}
-      <SourceLine id="inec-parties" what="Full party names and logos" />
+      {!linksAtEnd && r.sources.map(id => <SourceLine key={id} id={id} what="Candidates" />)}
+      {!linksAtEnd && <SourceLine id="inec-parties" what="Full party names and logos" />}
     </div>
   )
 }
 
-function PlacementNotes({ r }: { r: Race }) {
+/**
+ * A ballot page's references for one race, in the page's closing "Sources" section (owner feedback, 13 Nov 2026: the
+ * voter sees the candidates first and the references last). The same links a race page shows beside the race.
+ */
+export function RaceSources({ r }: { r: Race }) {
+  const st = groupOf(r).state
+  return (
+    <div className="race-sources" data-sources-of={r.id}>
+      <h3>{raceTitle(r)}</h3>
+      {r.sources.map(id => <SourceLine key={id} id={id} what="Candidates" />)}
+      {st && <StateGroupCite st={st} />}
+      {r.placement_notes.map(n => <SourceLine key={n.lga} id={WORKBOOK} what={`INEC’s text for ${n.lga} LGA, row ${n.row}`} />)}
+    </div>
+  )
+}
+
+function PlacementNotes({ r, linksAtEnd }: { r: Race, linksAtEnd: boolean }) {
   if (!r.placement_notes.length) return null
   const wb = source(WORKBOOK)
   return (
@@ -53,7 +71,7 @@ function PlacementNotes({ r }: { r: Race }) {
             {' '}
             <q>{n.inec_text}</q>
           </p>
-          <SourceLine id={WORKBOOK} what={`INEC’s text, row ${n.row}`} />
+          {!linksAtEnd && <SourceLine id={WORKBOOK} what={`INEC’s text, row ${n.row}`} />}
         </div>
       ))}
     </div>
@@ -85,6 +103,18 @@ function ResultsStrip({ r }: { r: Race }) {
   )
 }
 
+/** Where a state's first group differs (D-070): who INEC declared at its last governorship election, with the source. */
+export function StateGroupCite({ st }: { st: StateGroup }) {
+  return (
+    <p className="cite" data-source="state-group">
+      <a href={st.source.url}>
+        {`${st.joins} won ${st.state_name}’s governorship election of ${formatDate(st.election_date)}, as declared by ${st.source.declared_by}. Source: ${st.source.title}, retrieved `}
+        <time dateTime={st.source.retrieved}>{formatDate(st.source.retrieved)}</time>
+      </a>
+    </p>
+  )
+}
+
 /** "Share on WhatsApp" as a tile in the grid, on phones only: in the empty slot beside an odd first group, or as a full row. */
 function WhatsAppTile({ r, url, row }: { r: Race, url: string, row: boolean }) {
   // No card or box: the words, and WhatsApp's glyph on a round button beneath them (owner feedback, 11 Nov 2026).
@@ -103,11 +133,11 @@ function WhatsAppTile({ r, url, row }: { r: Race, url: string, row: boolean }) {
  * runs in the browser, when its results will appear, the share block and a correction button. `pageUrl` is the page's
  * own path (never a polling unit), for "Copy link" and corrections.
  */
-export function RaceSection({ r, level = 2, pageUrl }: { r: Race, level?: 2 | 3, pageUrl: string }) {
+export function RaceSection({ r, level = 2, pageUrl, linksAtEnd = false }: { r: Race, level?: 2 | 3, pageUrl: string, linksAtEnd?: boolean }) {
   const H = level === 2 ? 'h2' : 'h3'
   const G = level === 2 ? 'h3' : 'h4'
   const titleId = `race-${r.id}`
-  const fg = firstGroup()
+  const fg = groupOf(r)
   const first = r.candidates.filter(c => c.display_group === 'first')
   const rest = r.candidates.filter(c => c.display_group === 'rest')
   const mate = TICKET_OFFICES.includes(r.office) ? mateLabel(r) : null
@@ -121,8 +151,8 @@ export function RaceSection({ r, level = 2, pageUrl }: { r: Race, level?: 2 | 3,
     <section className="race" data-race-id={r.id} aria-labelledby={titleId}>
       <H id={titleId} className="band">{raceTitle(r)}</H>
       <p className="race-count">{`${n} ${n === 1 ? 'candidate' : 'candidates'}`}</p>
-      <SourcesNote r={r} />
-      <PlacementNotes r={r} />
+      <SourcesNote r={r} linksAtEnd={linksAtEnd} />
+      <PlacementNotes r={r} linksAtEnd={linksAtEnd} />
       <div className="filter js-only" data-filter>
         <label htmlFor={`filter-${r.id}`}>Find a party or candidate in this race</label>
         <input id={`filter-${r.id}`} type="search" autoComplete="off" spellCheck={false} />
@@ -131,6 +161,7 @@ export function RaceSection({ r, level = 2, pageUrl }: { r: Race, level?: 2 | 3,
       {groups.map(([label, list, key]) => list.length > 0 && (
         <div className="group" key={key} data-group-of={key}>
           <G className="group-label">{label}</G>
+          {key === 'first' && fg.state && !linksAtEnd && <StateGroupCite st={fg.state} />}
           <ul className="cards" aria-label={`${label}: ${raceTitle(r)}`}>
             {list.map(c => <CandidateCard key={c.id} c={c} mateLabel={mate} />)}
             {key === tileAfter && list.length % 2 === 1 && <WhatsAppTile r={r} url={url} row={false} />}
@@ -158,7 +189,7 @@ export function RaceSection({ r, level = 2, pageUrl }: { r: Race, level?: 2 | 3,
 }
 
 /** Several races where INEC hasn't published which one applies to the voter's polling unit (owner ruling D-021). */
-export function UnresolvedGroup({ office, list, path }: { office: 'Senate' | 'House of Representatives' | 'State House of Assembly', list: Race[], path: string }) {
+export function UnresolvedGroup({ office, list, path, linksAtEnd = false }: { office: 'Senate' | 'House of Representatives' | 'State House of Assembly', list: Race[], path: string, linksAtEnd?: boolean }) {
   return (
     <section className="race-group unresolved" aria-labelledby={`group-${slugId(office)}`}>
       <h2 id={`group-${slugId(office)}`} className="band">
@@ -180,7 +211,7 @@ export function UnresolvedGroup({ office, list, path }: { office: 'Senate' | 'Ho
           <li><a href={INEC_2027}>INEC 2027 general elections page</a></li>
         </ul>
       </div>
-      {list.map(r => <RaceSection key={r.id} r={r} level={3} pageUrl={path} />)}
+      {list.map(r => <RaceSection key={r.id} r={r} level={3} pageUrl={path} linksAtEnd={linksAtEnd} />)}
     </section>
   )
 }
@@ -237,4 +268,16 @@ export function badgeFor(list: Race[]): { badge: string, badgeLong: string } {
     return { badge: String(n), badgeLong: n === 1 ? 'candidate' : 'candidates' }
   }
   return { badge: String(list.length), badgeLong: 'possible races, one is on your ballot' }
+}
+
+/** A ballot page's closing references: the page's own sources, then each race's, then the party register once. */
+export function BallotSources({ children, races }: { children?: React.ReactNode, races: Race[] }) {
+  return (
+    <section className="ballot-sources" aria-labelledby="sources">
+      <h2 id="sources">Sources</h2>
+      {children}
+      {races.map(r => <RaceSources key={r.id} r={r} />)}
+      <SourceLine id="inec-parties" what="Full party names and logos" />
+    </section>
+  )
 }

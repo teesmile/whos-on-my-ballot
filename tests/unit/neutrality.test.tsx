@@ -2,7 +2,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { describe, expect, it } from 'vitest'
 
 import { RaceSection } from '@/components/RaceSection'
-import { firstGroup, races, sprite } from '@/lib/data'
+import { allRaces, firstGroup, groupOf, races, sprite } from '@/lib/data'
 
 /** Replace every text node and attribute value with a placeholder, keeping tags and attribute names. */
 function skeleton(html: string): string {
@@ -59,8 +59,10 @@ describe('neutral rendering', () => {
   })
 
   it('renders the first group (D-042) alphabetically, then all other parties in ballot order, each group labelled', () => {
-    const fg = firstGroup()
-    for (const r of [pres, ...all.slice(0, 60)]) {
+    const changed = all.filter(r => groupOf(r).state)
+    expect(changed.length).toBeGreaterThan(0)
+    for (const r of [pres, ...all.slice(0, 60), ...changed]) {
+      const fg = groupOf(r)
       const html = renderToStaticMarkup(<RaceSection r={r} pageUrl="/x/" />)
       const ids = [...html.matchAll(/data-candidate-id="([^"]+)"/g)].map(m => m[1])
       const first = r.candidates.filter(c => fg.parties.includes(c.party)).sort((a, b) => a.party.localeCompare(b.party))
@@ -76,5 +78,33 @@ describe('neutral rendering', () => {
     expect(html).not.toMatch(/style="/)
     const classes = new Set([...html.matchAll(/class="([^"]+)"/g)].flatMap(m => m[1].split(' ')))
     for (const c of pres.candidates) expect(classes.has(c.party.toLowerCase())).toBe(false)
+  })
+})
+
+describe('the state rule (D-070)', () => {
+  const fg = firstGroup()
+  const all = allRaces()
+
+  it('changes exactly Abia, Anambra, Kano and Osun, each with its winner in and one of the five out', () => {
+    expect(Object.keys(fg.states).sort()).toEqual(['ABIA', 'ANAMBRA', 'KANO', 'OSUN'])
+    for (const st of Object.values(fg.states)) {
+      expect(fg.parties).not.toContain(st.joins)
+      expect(fg.parties).toContain(st.replaces)
+      expect(st.parties).toEqual([...fg.parties.filter(p => p !== st.replaces), st.joins].sort())
+    }
+  })
+
+  it('every race except President in those states uses the state five, with its label and citation; President and other states never do', () => {
+    for (const r of all) {
+      const st = r.office !== 'president' && r.state ? fg.states[r.state] : undefined
+      const first = r.candidates.filter(c => c.display_group === 'first').map(c => c.party)
+      const five = st ? st.parties : fg.parties
+      expect(first, r.id).toEqual(r.candidates.map(c => c.party).filter(p => five.includes(p)).sort())
+      if (!st || !first.length) continue
+      const html = renderToStaticMarkup(<RaceSection r={r} pageUrl="/x/" />)
+      expect(html, r.id).toContain(`>${st.label}</h`)
+      expect(html, r.id).toContain(`data-source="state-group"`)
+      expect(html, r.id).toContain(`href="${st.source.url}"`)
+    }
   })
 })

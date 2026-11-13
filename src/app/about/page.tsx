@@ -2,12 +2,16 @@ import type { Metadata } from 'next'
 
 import { formatDate, NOT_PROVIDED } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
+import { StateGroupCite } from '@/components/RaceSection'
 import { SourceLine } from '@/components/SourceLine'
 import { allPhotos, candidate, firstGroup } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { CORRECTIONS_EMAIL } from '@/lib/site'
 
 const TITLE = 'About: how this site reads INEC’s lists'
+
+/** "A", "A and B", "A, B and C". */
+const listJoin = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`)
 export const metadata: Metadata = pageMeta({
   title: 'How this site reads INEC’s candidate lists', path: '/about/',
   description: 'Where every fact on this site comes from, how INEC’s lists are shown, how candidates are ordered, corrections and privacy.',
@@ -15,6 +19,7 @@ export const metadata: Metadata = pageMeta({
 
 export default function About() {
   const fg = firstGroup()
+  const states = Object.entries(fg.states).sort(([a], [b]) => a.localeCompare(b))
   const photos = Object.entries(allPhotos())
   return (
     <div className="about-page">
@@ -51,7 +56,7 @@ export default function About() {
       <h2 id="order">The order of candidates</h2>
       <p>
         {`Each race shows two groups. First, the five parties with the most candidates in 2027 (${fg.parties.join(', ')}), alphabetical by acronym. `}
-        {'They come from one published measure, not a choice: how many candidates each party fields across all 2027 races, counted from INEC’s final lists. They are the same five in every race, and a party with no candidate in a race is simply absent from it. '}
+        {'They come from one published measure, not a choice: how many candidates each party fields across all 2027 races, counted from INEC’s final lists. A party with no candidate in a race is simply absent from it. '}
         {'Then all other parties, in ballot order. INEC has not published the 2027 ballot-paper order, so that is the order of INEC’s lists, alphabetical by acronym; if INEC publishes it, this site will follow it.'}
       </p>
       <p className="quiet">{`Candidates fielded: ${fg.measure_values.map(m => `${m.acronym} ${m.value.toLocaleString('en-GB')}`).join(', ')}.`}</p>
@@ -63,6 +68,12 @@ export default function About() {
           </a>
         </p>
       ))}
+      <p id="order-states">
+        {'One exception, in every race except President: where the party that won a state’s last governorship election, as declared by INEC, is not among the five and has candidates in that state, it joins the five there. '}
+        {'It replaces whichever of the five has the fewest candidates in that state; if two tie, the one with fewer candidates nationally goes. '}
+        {`This applies in ${states.length === 1 ? 'one state' : `${states.length} states`}: ${listJoin(states.map(([, st]) => `${st.state_name} (${st.joins} replaces ${st.replaces})`))}. The FCT has no governorship election and keeps the five.`}
+      </p>
+      {states.map(([key, st]) => <StateGroupCite key={key} st={st} />)}
 
       <h2>What this site never does</h2>
       <p>
