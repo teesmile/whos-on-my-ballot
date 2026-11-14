@@ -12,12 +12,16 @@ export function generateStaticParams() {
   return states().flatMap(s => stateGeo(s.code).lgas.map(l => ({ code: l.code.replace('/', '-') })))
 }
 
+/** Under 60 characters for every LGA: the place, then 2027 and our own words while they fit. */
+const lgaTitle = (lga: string, state: string) =>
+  [`${lga} LGA, ${state}: 2027 candidates by ward`, `${lga} LGA, ${state}: 2027 ballot`].find(t => t.length <= 60) ?? `${lga} LGA, ${state}, 2027`
+
 const lgaOf = async (params: Promise<{ code: string }>) => findLga((await params).code.replace('-', '/'))
 
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }): Promise<Metadata> {
   const { state, lga } = await lgaOf(params)
   return pageMeta({
-    title: `${lga.name} LGA, ${state.name}: wards`, suffix: true, path: `/lga/${lga.code.replace('/', '-')}/`,
+    title: lgaTitle(lga.name, state.name), suffix: true, path: `/lga/${lga.code.replace('/', '-')}/`,
     description: `The wards of ${lga.name} LGA, ${state.name}. Choose yours to find your polling unit and every candidate on your 2027 ballot.`,
   })
 }
@@ -27,7 +31,7 @@ export default async function LgaPage({ params }: { params: Promise<{ code: stri
   const path = `/lga/${lga.code.replace('/', '-')}/`
   return (
     <>
-      <JsonLd data={pageGraph(path, `${lga.name} LGA, ${state.name}: wards`, [['Home', '/'], [state.name, `/state/${state.code}/`], [lga.name, path]])} />
+      <JsonLd data={pageGraph(path, lgaTitle(lga.name, state.name), [['Home', '/'], [state.name, `/state/${state.code}/`], [lga.name, path]])} />
       <nav aria-label="Breadcrumb" className="crumbs">
         <a href="/">All states</a>
         <span aria-hidden="true"> / </span>

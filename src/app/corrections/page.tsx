@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 
 import { formatDate } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
+import { PhotoInvite } from '@/components/PhotoInvite'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { CORRECTIONS_EMAIL } from '@/lib/site'
 
@@ -27,6 +28,9 @@ export default function Corrections() {
         <a href={`mailto:${CORRECTIONS_EMAIL}`}>{CORRECTIONS_EMAIL}</a>
         .
       </p>
+      <h2>Candidate photos</h2>
+      <PhotoInvite />
+      <h2>Accepted corrections</h2>
       {log.length === 0
         ? <p>No corrections have been made yet.</p>
         : (

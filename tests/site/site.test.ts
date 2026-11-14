@@ -428,10 +428,16 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
     }
     for (const m of credits.matchAll(/<li id="credit-[^"]+">([\s\S]*?)<\/li>/g)) expect(m[1]).toMatch(/<a href="https?:\/\/[^"]+">[^<]+<\/a>[\s\S]*cropped to a square[\s\S]*Retrieved/)
   })
-  it('a race shows photos only once two of its first group have one; a held photo is not built, shown or credited (D-075)', () => {
+  it('a race shows photos with two of its first group, or one that is not the governing party\'s; a held photo is not built, shown or credited (D-075, D-076)', () => {
+    const governing = /^acronym: (\S+)$/m.exec(fs.readFileSync(path.resolve('data/overrides/governing-party.yaml'), 'utf8'))![1]
     for (const r of [presidentialRace(), ...races(), ...febRaces()]) {
-      const firstWith = r.candidates.filter(c => c.display_group === 'first' && approved.has(c.id)).length
-      if (r.candidates.some(c => approved.has(c.id))) expect(firstWith, r.id).toBeGreaterThanOrEqual(2)
+      const firstWith = r.candidates.filter(c => c.display_group === 'first' && approved.has(c.id))
+      if (r.candidates.some(c => approved.has(c.id))) expect(firstWith.length >= 2 || (firstWith.length === 1 && firstWith[0].party !== governing), r.id).toBe(true)
+    }
+    for (const [id, rid] of Object.entries(held)) {
+      const r = [presidentialRace(), ...races(), ...febRaces()].find(x => x.id === rid)!
+      const firstCleared = r.candidates.filter(c => c.display_group === 'first' && (approved.has(c.id) || c.id in held))
+      expect(firstCleared.length === 1 && firstCleared[0].party === governing || firstCleared.length === 0, id).toBe(true)
     }
     expect(Object.keys(held).length).toBeGreaterThan(0)
     const about = html('about')
@@ -450,9 +456,14 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
   it('the About page says where photos come from and that a candidate or party can send an official one', () => {
     const about = html('about')
     expect(about).toContain('<h2 id="photos">Photos</h2>')
-    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, or an official government or legislature page/)
+    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, an official government or legislature page, or the candidate’s own verified account\./)
     expect(about).toMatch(/checked\s+against the gender and age INEC printed for the candidate\. A photo from Wikimedia Commons, where anyone can upload a file,\s+is also approved by the site’s owner before it appears\./)
-    expect(about).toMatch(/a race shows photos only once at least two candidates\s+from its first group have one; until then, every candidate in that race shows the placeholder\./)
-    expect(about).toMatch(/A candidate or party can send an official photo to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Official%20photo">/)
+    expect(about).toMatch(/A request to change a photo goes to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Change%20a%20photo">/)
+    // a candidate or campaign sends a photo by email (no form), with a template; the About page never explains the per-race rule
+    for (const page of [about, html('corrections')]) {
+      expect(page).toMatch(/<a class="btn" href="mailto:corrections@anthonyugwuja\.dev\?subject=Candidate%20photo&amp;body=Candidate%20name%2C%20as%20INEC%20lists%20it%3A[^"]*Race[^"]*Link%20to%20an%20official%20page%20or%20verified%20account[^"]*">Send a candidate’s photo<\/a>/)
+      expect(page).toContain('Nothing sent this way appears by itself')
+    }
+    expect(about).not.toMatch(/first group have one|governing party|only once at least two/)
   })
 })

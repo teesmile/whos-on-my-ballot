@@ -19,9 +19,9 @@ export function generateStaticParams() {
 /** A race's page title: the same short office names as candidate pages' titles, the race as INEC names it, and its state. */
 const OFFICE_SHORT = { president: 'President', senate: 'Senate', house: 'House of Reps', governor: 'Governor', state_assembly: 'State Assembly' } as const
 function title(r: ReturnType<typeof race>) {
-  if (r.office === 'president') return 'President: every candidate'
-  if (r.office === 'governor') return `Governor: ${r.name}: every candidate`
-  return `${OFFICE_SHORT[r.office]}: ${r.name}, ${r.state}`
+  if (r.office === 'president') return 'President of Nigeria 2027: every candidate'
+  if (r.office === 'governor') return `Governor 2027: ${r.name}: every candidate`
+  return `${OFFICE_SHORT[r.office]} 2027: ${r.name}, ${r.state}`
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {

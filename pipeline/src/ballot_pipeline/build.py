@@ -572,7 +572,7 @@ def build(log=print) -> BuildResult:
     from .photos import check_photos
 
     errors.extend(check_photos({cd.id: r.office for r in races for cd in r.candidates if cd.candidate.name},
-                               {r.id: [(cd.id, cd.display_group) for cd in r.candidates] for r in races}))
+                               {r.id: [(cd.id, cd.display_group, cd.party) for cd in r.candidates] for r in races}))
     result = BuildResult(sources=sources, parties=parties, rows_by_source=rows_by_source, independent_sn=independent_sn, races=races,
                          quarantine=quarantine, workbook=workbook, geo=geo, unresolved_wards=unresolved_wards,
                          inec_order_matches=inec_order_matches, locator_counts=locator_counts, anomalies=anomalies,

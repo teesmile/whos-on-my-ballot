@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 import { formatDate, NOT_PROVIDED } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
+import { PhotoInvite } from '@/components/PhotoInvite'
 import { StateGroupCite } from '@/components/RaceSection'
 import { SourceLine } from '@/components/SourceLine'
 import { allPhotos, candidate, firstGroup } from '@/lib/data'
@@ -99,16 +100,16 @@ export default function About() {
       <h2 id="photos">Photos</h2>
       <p>
         A candidate has a photo only where a source that clearly names them has one: Wikimedia Commons, the candidate’s or party’s own
-        official website, or an official government or legislature page. Never a news site, an agency or an unverified account, and
+        official website, an official government or legislature page, or the candidate’s own verified account. Never a news site, an agency or an unverified account, and
         never a photo whose subject is in doubt. Every photo has the same head-and-shoulders crop and size, and each one is checked
         against the gender and age INEC printed for the candidate. A photo from Wikimedia Commons, where anyone can upload a file,
         is also approved by the site’s owner before it appears. Photos are being added race by race; their credits are listed at the end of this
-        page. Every candidate without one shows the same plain placeholder, and a race shows photos only once at least two candidates
-        from its first group have one; until then, every candidate in that race shows the placeholder. A candidate or party can send an official photo to
+        page. Any candidate shown without a photo has the same plain placeholder. A request to change a photo goes to
         {' '}
-        <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Official photo')}`}>{CORRECTIONS_EMAIL}</a>
-        ; the same address takes any request to change a photo.
+        <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Change a photo')}`}>{CORRECTIONS_EMAIL}</a>
+        .
       </p>
+      <PhotoInvite />
 
       <h2>When INEC’s documents don’t settle your race</h2>
       <p>

@@ -7,7 +7,7 @@ import { Steps } from '@/components/Steps'
 import { stateGeo, states } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 
-const titleOf = (name: string) => `${name}: find your polling unit`
+const titleOf = (name: string) => `${name}: 2027 candidates by polling unit`
 
 export const dynamicParams = false
 export function generateStaticParams() {

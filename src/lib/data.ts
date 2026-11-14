@@ -367,7 +367,7 @@ function janBallotPlace(b: BallotSpec): string {
 }
 
 export function janBallotTitle(b: BallotSpec): string {
-  return `16 Jan ballot: ${janBallotPlace(b)}`
+  return `16 Jan 2027 ballot: ${janBallotPlace(b)}`
 }
 
 /** A ballot page's search description names its place, as its title does, so no two ballots share one. */
@@ -382,7 +382,7 @@ export function janBallotDescription(b: BallotSpec): string {
 
 /** A 6 February ballot's title (D-032). */
 export function febBallotTitle(b: FebBallotSpec): string {
-  return b.sha.length ? `6 Feb ballot: ${b.sha.map(id => race(id).name).join(' or ')}, ${b.state.name}` : `6 Feb ballot, ${b.state.name}`
+  return b.sha.length ? `6 Feb 2027 ballot: ${b.sha.map(id => race(id).name).join(' or ')}, ${b.state.name}` : `6 Feb 2027 ballot, ${b.state.name}`
 }
 
 export function febBallotDescription(b: FebBallotSpec): string {

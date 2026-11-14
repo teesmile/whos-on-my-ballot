@@ -7,9 +7,9 @@ import { JsonLd } from '@/components/JsonLd'
 import { Steps } from '@/components/Steps'
 import { states } from '@/lib/data'
 import { homeGraph, pageMeta } from '@/lib/seo'
-import { CODE_EXAMPLE, SITE_DESCRIPTION, SITE_NAME } from '@/lib/site'
+import { CODE_EXAMPLE, HOME_TITLE, SITE_DESCRIPTION } from '@/lib/site'
 
-export const metadata: Metadata = pageMeta({ title: SITE_NAME, path: '/', description: SITE_DESCRIPTION })
+export const metadata: Metadata = pageMeta({ title: HOME_TITLE, path: '/', description: SITE_DESCRIPTION })
 
 export default function Home() {
   return (

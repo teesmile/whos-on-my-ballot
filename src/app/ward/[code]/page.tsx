@@ -9,9 +9,9 @@ import { findWard, stateGeo, states, wardBallotPath, wardFebBallotPath } from '@
 import { pageGraph, pageMeta } from '@/lib/seo'
 
 const pathOf = (code: string) => `/ward/${code.replaceAll('/', '-')}/`
-/** Under 60 characters where INEC's ward name allows: our own words go first, never INEC's. */
+/** Under 60 characters where INEC's ward name allows: our own words are dropped first, never INEC's; 2027 always stays. */
 function wardTitle(ward: string, lga: string) {
-  return [`${ward} ward, ${lga}: polling units`, `${ward} ward, ${lga}`, `${ward} ward`].find(t => t.length <= 60) ?? `${ward} ward`
+  return [`${ward} ward, ${lga}: 2027 polling units`, `${ward} ward, ${lga}, 2027`].find(t => t.length <= 60) ?? `${ward} ward, 2027`
 }
 /** Under 155 characters for every ward: the long form, else the same sentence without the LGA and state. */
 function wardDescription(ward: string, lga: string, state: string) {

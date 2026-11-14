@@ -66,11 +66,25 @@ describe('titles, descriptions and share tags', () => {
     // Names are shown exactly as INEC prints them (the working rules §1), so a page titled by a long INEC name may pass 60
     // characters (candidates, ballots, wards and races). Hand-written, state and LGA titles never may, and a long ward title is
     // the ward's name alone.
-    const fixed = long.filter(t => !/\([A-Z]{1,5}\), (?:President|Senate|House of Reps|Governor|State Assembly)(?:: .+)?$|^(?:16 Jan|6 Feb) ballot[:,] | ward(?:, [^:]+)?$|^(?:Senate|House of Reps|State Assembly): .+, [A-Z ]+$/.test(t.replace(/^\d+ /, '')))
+    const fixed = long.filter(t => !/\([A-Z]{1,5}\), (?:President|Senate|House of Reps|Governor|State Assembly)(?:: .+)?$|^(?:16 Jan|6 Feb) 2027 ballot[:,] | ward(?:, [^:]+)?, 2027$|^(?:Senate|House of Reps|State Assembly) 2027: .+, [A-Z ]+$/.test(t.replace(/^\d+ /, '')))
     expect(fixed, fixed.slice(0, 5).join('\n')).toEqual([])
-    for (const t of long.filter(x => / ward(?:, [^:]+)?$/.test(x))) expect(t, t).toMatch(/^\d+ [^,]+ ward$|^\d+ .+ ward$/) // the name alone
-    for (const t of long) expect(t, t).not.toMatch(/ ward, .+: polling units$/)
+    for (const t of long.filter(x => / ward(?:, [^:]+)?, 2027$/.test(x))) expect(t, t).toMatch(/^\d+ .+ ward, 2027$/) // the name alone, and the year
+    for (const t of long) expect(t, t).not.toMatch(/ ward, .+: 2027 polling units$/)
     expect(long.length, long.slice(0, 5).join('\n')).toBeLessThan(pages.length * 0.02)
+  })
+
+  it('the home title names the country and the year; every state, LGA, ward, ballot and race title names its place and 2027', () => {
+    const title = (p: string) => unescape(/<title>([^<]*)<\/title>/.exec(head(pages.find(([x]) => x === p)![1]))![1])
+    expect(title('/')).toBe('Who’s on my ballot? Nigeria 2027 candidates by polling unit')
+    expect(title('/state/24/')).toBe('LAGOS: 2027 candidates by polling unit · Who’s on my ballot?')
+    expect(title('/lga/01-01/')).toBe('ABA NORTH LGA, ABIA: 2027 candidates by ward')
+    expect(title('/ward/24-15-03/')).toBe('OLALEYE VILLAGE ward, LAGOS MAINLAND: 2027 polling units')
+    expect(title('/ballot/lagos/surulere-i-or-surulere-ii--lagos-central/')).toBe('16 Jan 2027 ballot: Surulere I or Surulere II, LAGOS')
+    expect(title('/ballot-feb/rivers/oyigbo-or-tai/')).toBe('6 Feb 2027 ballot: OYIGBO or TAI, RIVERS')
+    expect(title('/race/jan-2027-president/')).toBe('President of Nigeria 2027: every candidate')
+    expect(title('/race/feb-2027-governor-kano/')).toBe('Governor 2027: KANO: every candidate')
+    expect(title('/race/jan-2027-senate-lagos-lagos-central/')).toBe('Senate 2027: LAGOS CENTRAL, LAGOS')
+    for (const [p] of pages.filter(([x]) => /^\/(state|lga|ward|ballot|ballot-feb|race)\//.test(x))) expect(title(p), p).toContain('2027')
   })
 
   it('every page: Open Graph and X tags that match the page, with a described 1200x630 image on this site', () => {

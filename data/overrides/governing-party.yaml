@@ -1,0 +1,12 @@
+# Owner decision D-076: the governing party is the party that holds the presidency today. Official pages mostly show people
+# already in office, most of them from this party, so in each race its candidate's photo shows only when another candidate in
+# the race's first group has one too. This file is the only place the party is named for that rule.
+acronym: APC
+since: "2026-11-14"
+source:
+  title: "INEC: Report of the 2023 General Election, p. 164: the Certificate of Return to the winner of the 2023 Presidential Election, the candidate of the All Progressives Congress (APC), archived copy"
+  url: "http://web.archive.org/web/20260214132338/https://inecnigeria.org/wp-content/uploads/2024/02/2023-GENERAL-ELECTION-REPORT-1.pdf"
+  sha256: a1cd4a5538861faa73427836bf82df4a6cd9c5ea326c88d4136a4e6c3d10cdb1
+  page: 164
+  quote: "INEC Chairman, Prof. Mahmood Yakubu gives the Certificate of Return to the winner of the 2023 Presidential Election and Candidate of the All Progressives Congress (APC), Senator Bola Ahmed Tinubu at the National Collation Centre, Abuja on 1st March 2023"
+  retrieved: "2026-11-14"

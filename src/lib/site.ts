@@ -9,6 +9,8 @@ import { picture } from './share'
 export const SITE_URL = 'https://whosonmyballot.ng'
 export const SITE_HOST = new URL(SITE_URL).host
 export const SITE_NAME = 'Who’s on my ballot?'
+/** The home page's title tag: the site name and what people search for (the visible heading stays as it is). */
+export const HOME_TITLE = `${SITE_NAME} Nigeria 2027 candidates by polling unit`
 export const SITE_DESCRIPTION = 'Every candidate on your ballot in Nigeria’s 2027 elections, side by side, from INEC’s published lists.'
 /** The owner's credit (D-032): footer and about page only, never in structured data. */
 export const BUILT_BY = { name: 'Anthony Ugwuja', url: 'https://anthonyugwuja.dev' }
