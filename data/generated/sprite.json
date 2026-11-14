@@ -130,11 +130,11 @@
    }
   },
   "feb-2027-governor-jigawa": {
-   "file": "logos/sheet-a023688829.webp",
+   "file": "logos/sheet-648cfab912.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 41408,
-   "sha256": "a02368882989f6c0759163e6a311fb5e455642a2114dda85318b502c2dd83bec",
+   "bytes": 41240,
+   "sha256": "648cfab912dffeae1a20cc9451202a989da2c5368c920e455672117300614c92",
    "photos": {
     "feb-2027-governor-jigawa-adc": 0,
     "feb-2027-governor-jigawa-apc": 1
@@ -161,13 +161,14 @@
    }
   },
   "feb-2027-governor-kwara": {
-   "file": "logos/sheet-50e30cc2f2.webp",
+   "file": "logos/sheet-e657756c55.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 37482,
-   "sha256": "50e30cc2f28d7474025e9bed1e5a1c124a02e6a12f59712e6f21bd6cbc546469",
+   "bytes": 40332,
+   "sha256": "e657756c55d495bdcc2f8f84c105ec443ce46ae0339e9a1c04579c96d040b825",
    "photos": {
-    "feb-2027-governor-kwara-pdp": 0
+    "feb-2027-governor-kwara-apc": 0,
+    "feb-2027-governor-kwara-pdp": 1
    }
   },
   "feb-2027-governor-lagos": {
@@ -182,13 +183,14 @@
    }
   },
   "feb-2027-governor-niger": {
-   "file": "logos/sheet-c54f962815.webp",
+   "file": "logos/sheet-cecb77f088.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 37610,
-   "sha256": "c54f96281560f213f2213e9970643c195d841dd132d6b13b2dfcbe397a3cd9df",
+   "bytes": 40812,
+   "sha256": "cecb77f08877191d45eaced4d497fdad9d8f166f141fe1fd5ab39626627c8603",
    "photos": {
-    "feb-2027-governor-niger-sdp": 0
+    "feb-2027-governor-niger-apc": 0,
+    "feb-2027-governor-niger-sdp": 1
    }
   },
   "feb-2027-governor-ogun": {

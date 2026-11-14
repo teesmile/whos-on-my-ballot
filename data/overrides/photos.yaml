@@ -1777,3 +1777,587 @@ people:
     retrieved: '2026-11-14'
     crop: [70, 51, 260, 260]
     official_checked: '2026-11-14'  # House batch 1: profile names Aminu Jaji Kaura Namoda/Birnin Magaji; INEC M, 52, fits the photo
+  - candidate_id: feb-2027-governor-kwara-apc
+    source: "Kwara State House of Assembly website"
+    file_page: https://hoa.kw.gov.ng/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Kwara-Speaker-Portrait-picture.png
+    sha256: b6cda20abb7ac7a7e9fb42ca750da13eebd707a85e4c304c3ade324c911f9673
+    retrieved: '2026-11-14'
+    crop: [113, 36, 144, 144]
+    official_checked: '2026-11-14'  # INEC M, 41, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-governor-niger-apc
+    source: "Candidate's own official website (mohammedumarbago.com)"
+    file_page: https://mohammedumarbago.com/
+    file_url: https://mohammedumarbago.com/wp-content/uploads/2019/09/BAGO_MEXYGABRIEL-.png
+    sha256: 61665cef4c8f126397ea0c677273f63d5ab6e0054ca95ca6f7f481ea17583793
+    retrieved: '2026-11-14'
+    crop: [310, 37, 297, 297]
+    official_checked: '2026-11-14'  # INEC M, 52, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-anambra-aguata-ii-apga
+    source: "Anambra State Government website"
+    file_page: https://anambrastate.gov.ng/government/legislature/
+    file_url: https://anambrastate.gov.ng/wp-content/uploads/2026/09/images-5.jpg
+    sha256: e5718c89f38d95ef2ad86bf6ccca0a3cef5e2d9247bbaf257846936808150aec
+    retrieved: '2026-11-14'
+    crop: [118, 86, 201, 201]
+    official_checked: '2026-11-14'  # INEC M, 56, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-anambra-anambra-east-apga
+    source: "Anambra State Government website"
+    file_page: https://anambrastate.gov.ng/government/legislature/
+    file_url: https://anambrastate.gov.ng/wp-content/uploads/2026/09/images-7.jpg
+    sha256: 8437b5f323f2fa4fbbe846f2b4dc64464dad808b10eb0152eeb9b7cbabffeed2
+    retrieved: '2026-11-14'
+    crop: [27, 47, 352, 352]
+    official_checked: '2026-11-14'  # INEC M, 58, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-anambra-nnewi-south-ii-apga
+    source: "Anambra State Government website"
+    file_page: https://anambrastate.gov.ng/government/legislature/
+    file_url: https://anambrastate.gov.ng/wp-content/uploads/2026/09/images-10.jpg
+    sha256: 54637c48d629467e649f00521e2372286cfcc9713452302e30a5cc7fd639991d
+    retrieved: '2026-11-14'
+    crop: [123, 5, 194, 194]
+    official_checked: '2026-11-14'  # INEC M, 43, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-anambra-ogbaru-i-apga
+    source: "Anambra State Government website"
+    file_page: https://anambrastate.gov.ng/government/legislature/
+    file_url: https://anambrastate.gov.ng/wp-content/uploads/2026/09/images-8.jpg
+    sha256: f533329cd209b9c5e9a8f1601a4846a1bf6e6f602c76169f16e9c40b5bcd32f4
+    retrieved: '2026-11-14'
+    crop: [121, 33, 188, 188]
+    official_checked: '2026-11-14'  # INEC M, 48, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-benue-katsina-ala-west-apc
+    source: "Benue State Government website"
+    file_page: https://benuestate.gov.ng/state_assembly_mem/hon-peter-ipusu-bemdoo/
+    file_url: https://benuestate.gov.ng/wp-content/uploads/2026/08/peter-Ipusu-Bemdoo-Minority-Leader.jpg
+    sha256: a324df51614b46e07f8960c29da4fe5314c5717c2e4ce7b4c779c48cdf2f5aa3
+    retrieved: '2026-11-14'
+    crop: [129, 69, 289, 289]
+    official_checked: '2026-11-14'  # INEC M, 45, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-delta-bomadi-apc
+    source: "Delta State Government website"
+    file_page: https://deltastate.gov.ng/portfolio-item/barr-funyei-manager/
+    file_url: https://deltastate.gov.ng/wp-content/uploads/2024/02/Commissioner-official-portrait-fixed-eye-fotor-20240310203740.png
+    sha256: fb0ec3c914663fe0e9e45716c8bf5772a128e0ea29a84bcd676cc97c23eb3da2
+    retrieved: '2026-11-14'
+    crop: [800, 422, 1472, 1472]
+    official_checked: '2026-11-14'  # INEC M, 39, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-delta-warri-north-apc
+    source: "Delta State Government website"
+    file_page: https://deltastate.gov.ng/portfolio/commissioner/
+    file_url: https://deltastate.gov.ng/wp-content/uploads/2024/02/WhatsApp-Image-2024-03-07-at-2.55.15-PM-3-fotor-20240307151011.png
+    sha256: cb426182ffb2c25d218848f760a1a841eeb44afca34a2a92a9f5e642943dbea2
+    retrieved: '2026-11-14'
+    crop: [130, 166, 671, 671]
+    official_checked: '2026-11-14'  # INEC F, 37, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-delta-warri-south-west-apc
+    source: "Delta State Government website"
+    file_page: https://deltastate.gov.ng/portfolio-item/rt-hon-guwor-emomotimi-dennis-honourable-speaker-warri-south-west/
+    file_url: https://deltastate.gov.ng/wp-content/uploads/2024/02/sp.png
+    sha256: 8774c98e251de8d33e851ddbacc7748e8e38a4b57e5eeafd8cf074e49552c05e
+    retrieved: '2026-11-14'
+    crop: [299, 125, 330, 330]
+    official_checked: '2026-11-14'  # INEC M, 47, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-garki-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/garki.JPG
+    sha256: c642c16f51bcc76853bb8657d6cca3a9c61ca90662b19d3826b35ce986080451
+    retrieved: '2026-11-14'
+    crop: [46, 16, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 62, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-gumel-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/jgdeputyspeaker.jpg
+    sha256: a4dc1c257a4e6deabf601fa256a074bd54a51cf0cfe0e1a132eb9e316b1a162f
+    retrieved: '2026-11-14'
+    crop: [46, 16, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 61, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-guri-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/guri.JPG
+    sha256: c817bfb4ff23ba6c37b6d997bb1fbf6159a707ef634f0d2ca377bf8053637d4c
+    retrieved: '2026-11-14'
+    crop: [46, 22, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 63, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-gwaram-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/gwaram.JPG
+    sha256: 4e4db20ccb18b265a4d8f09e3465bf3293013e46e9ea2af6594e5fbee0763e23
+    retrieved: '2026-11-14'
+    crop: [0, 16, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 52, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-kanya-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/kanya.JPG
+    sha256: fae91b478d82c1e84fa1fa34d0cba10186cd8c08e6491d95393ede0d26f2c7a3
+    retrieved: '2026-11-14'
+    crop: [22, 22, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 64, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-mallam-madori-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/malammadori.JPG
+    sha256: ce9ae30693d64cbf3225ecb45d2b41661bab211880f13dac9430ab409ce4ded1
+    retrieved: '2026-11-14'
+    crop: [6, 16, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 60, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-miga-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/jgspeaker.jpg
+    sha256: d87fd8f1029eb617b64f3e34765d0663bf16da3b59a469806ca5d08b9401218c
+    retrieved: '2026-11-14'
+    crop: [46, 22, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 50, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-roni-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/jgmajority.jpg
+    sha256: bfbf40e2499d60b3343b0c17e7324c3d6f4fb8c3dfa98b6860c0703f266963ed
+    retrieved: '2026-11-14'
+    crop: [46, 16, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 66, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-jigawa-sule-tankarkar-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/suletankarkar.JPG
+    sha256: f17e9fc663bb72d3a2a3c3555c918a54845ac22e0343cbe8de08108877d94753
+    retrieved: '2026-11-14'
+    crop: [46, 28, 220, 220]
+    official_checked: '2026-11-14'  # INEC M, 58, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ogun-abeokuta-north-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members/6
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-031709737494-member.jpg
+    sha256: 586a50c1c3f8d87ff492c626e5a9f37cbd3e5a71f5187c47ab3f8652d2e16459
+    retrieved: '2026-11-14'
+    crop: [24, 58, 240, 240]
+    official_checked: '2026-11-14'  # INEC M, 61, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ogun-egbado-north-ii-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members/16
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-021707473889-member.jpg
+    sha256: 202017fa87409ed79bf540a2c8e2f429e6e64109cb406fbf8cc4ddbbac18c883
+    retrieved: '2026-11-14'
+    crop: [26, 28, 255, 255]
+    official_checked: '2026-11-14'  # INEC M, 42, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ogun-ifo-ii-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members/28
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-031709908849-member.jpeg
+    sha256: d9d31efaffa2de38f39a576ec02dd661c699dad3759d887e250988cf00545a85
+    retrieved: '2026-11-14'
+    crop: [14, 0, 304, 304]
+    official_checked: '2026-11-14'  # INEC M, 55, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ogun-ijebu-north-ii-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members/31
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-021707473837-member.jpg
+    sha256: c92cc638bd4a10f847d14e38581c33ff41950410c928f2862a1a9d50da4ccd6b
+    retrieved: '2026-11-14'
+    crop: [26, 47, 255, 255]
+    official_checked: '2026-11-14'  # INEC M, 54, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ogun-odogbolu-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members/4
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-021707473527-member.jpg
+    sha256: 39d10485bb8b93575bfaed64023d46aa678c26d3ed3acedabda10a3fb07f999a
+    retrieved: '2026-11-14'
+    crop: [34, 36, 225, 225]
+    official_checked: '2026-11-14'  # INEC M, 45, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ogun-ogun-waterside-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members/17
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-021707473915-member.jpg
+    sha256: 3eb0481945fe585227bbde3e7dbee8c7c9e8466aaa70c8ebb5728c7871432457
+    retrieved: '2026-11-14'
+    crop: [92, 12, 165, 165]
+    official_checked: '2026-11-14'  # INEC M, 50, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-osun-atakunmosa-east-and-west-a
+    source: "Osun State House of Assembly website"
+    file_page: https://osha.osunstate.gov.ng/
+    file_url: https://osha.osunstate.gov.ng/images/sanmiareoye.jpeg
+    sha256: 1a76520eaad1add3fdc5b5a1396bf11f1f0948c197d0486ee6bc0ea5a6a49f32
+    retrieved: '2026-11-14'
+    crop: [44, 60, 328, 328]
+    official_checked: '2026-11-14'  # INEC M, 51, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-osun-ede-north-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/team/hon-kofoworola-babajije-adewunmi/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon-Adewunmi-Babajide-Kofoworola-Representing-Ede-North-State-Constituency-Chairman-House-Committee-on-Rules-and-Business-of-the-House.jpg
+    sha256: 130851f07aad1d4f30ef0da24b2e1c6afc9084a8370645b8476bcdb5547f8369
+    retrieved: '2026-11-14'
+    crop: [101, 33, 897, 897]
+    official_checked: '2026-11-14'  # INEC M, 51, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-osun-ife-north-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/team/hon-akinyode-abidemi-oyewusi/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Deputy-Speaker-720x780-1.jpg
+    sha256: 50f50a6a81e29373be192034ff1e0f2ef54565eb2995ad0179c4e0a83d6cbfe3
+    retrieved: '2026-11-14'
+    crop: [94, 48, 518, 518]
+    official_checked: '2026-11-14'  # INEC M, 43, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-osun-ife-south-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/team/hon-lawrence-olalekan-adeoti/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon.-Lawrence-.jpg
+    sha256: 53d69bfdac3e2f7838dd26ecf0240e85da72b7e4f3f2382382d38bed8f1721fe
+    retrieved: '2026-11-14'
+    crop: [38, 9, 496, 496]
+    official_checked: '2026-11-14'  # INEC M, 44, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-osun-ilesa-east-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/team/hon-oladiran-oyewole-olatunbosun-2/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/12/Hon.Oladiran-oyewole-olatunbosun-honourable-member-representing-ilesa-east-state-constituency.Chairman-house-committee-on-agriculture-and-food-security.jpg
+    sha256: 80d6ba4b9d91abcf584da9b2749435adc683b5efd74d9c3079ec1f77060ff8ff
+    retrieved: '2026-11-14'
+    crop: [50, 40, 330, 330]
+    official_checked: '2026-11-14'  # INEC M, 54, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-osun-irewole-isokan-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/team/hon-abiola-waheed-ibrahim/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon-Abiola-Waheed-Ibrahim-Honourable-Representing-Irewole-Isokan-state-constituency-Chairman-House-committee-on-Public-Works-and-Transport.jpg
+    sha256: b013e610b220fd39f5c267a8bfaa925d99b6976a7f5e19e5801deda4b56c5704
+    retrieved: '2026-11-14'
+    crop: [148, 108, 405, 405]
+    official_checked: '2026-11-14'  # INEC M, 43, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-osun-obokun-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/team/hon-adewumi-adeyemi/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/12/WhatsApp-Image-2024-07-15-at-14.01.27_4ef3574b.jpg
+    sha256: 9c6e01349bdae73aa5636e4d628704e5da3d4cf50ca8a0bffb50f79ea369b17e
+    retrieved: '2026-11-14'
+    crop: [193, 119, 493, 493]
+    official_checked: '2026-11-14'  # INEC M, 42, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-yobe-jakusko-apc
+    source: "Yobe State House of Assembly website"
+    file_page: https://www.houseofassembly.yb.gov.ng/index.php/blog/current-members
+    file_url: https://www.houseofassembly.yb.gov.ng/images/423777820_692441433059850_7633306816828865905_n.jpg
+    sha256: 61671389f73ddbbc4478b3a1f50bfc173b100beee62d904493e81c660d658d91
+    retrieved: '2026-11-14'
+    crop: [563, 81, 881, 881]
+    official_checked: '2026-11-14'  # INEC M, 57, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-cross-river-ikom-ii-apc
+    source: "Cross River State Government website"
+    file_page: https://crossriverstate.gov.ng/legislative-government
+    file_url: https://crossriverstate.gov.ng/assets/ElvertAyambem-5cefe406.png
+    sha256: 5cefe406c8b8668475f8af54dc0d0a64556801f15a07043dad514b5ad894a83a
+    retrieved: '2026-11-14'
+    crop: [0, 27, 316, 316]
+    official_checked: '2026-11-14'  # INEC M, 48, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-cross-river-obudu-apc
+    source: "Cross River State Government website"
+    file_page: https://crossriverstate.gov.ng/legislative-government
+    file_url: https://crossriverstate.gov.ng/assets/Hon.SylvesterAgabii-db7c971d.jpg
+    sha256: db7c971d47ae44e1a4a0b65237fcaffbc97b7af337cc6ffaa68fdb5f9c9de188
+    retrieved: '2026-11-14'
+    crop: [0, 0, 725, 725]
+    official_checked: '2026-11-14'  # INEC M, 44, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-ajeromi-ifelodun-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-saad-lukman-olumoh/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/07/Olumoh.jpeg
+    sha256: 78319dacbe289dcd57d72a78c18b6bdff914e0b5eb31789c0061173722185dc9
+    retrieved: '2026-11-14'
+    crop: [0, 65, 960, 960]
+    official_checked: '2026-11-14'  # INEC M, 59, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-ajeromi-ifelodun-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-oluwa-sabur-akanbi/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/30-e1686222651293.jpg
+    sha256: 5d36d2405aaab8a2f245cff38b4d1f20d1d5a405215222932bcb5451a1d2ba66
+    retrieved: '2026-11-14'
+    crop: [86, 0, 320, 320]
+    official_checked: '2026-11-14'  # INEC M, 40, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-alimosho-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/jimoh-orelope-luqman-olatunji/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/22-e1686224261941.jpg
+    sha256: cc57bb107d1143cf5a684d792988d9f3ec74950c43777ef456e3d304789a119c
+    retrieved: '2026-11-14'
+    crop: [0, 16, 470, 470]
+    official_checked: '2026-11-14'  # INEC M, 54, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-alimosho-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-kehinde-o-joseph/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-35-1229x1536-1.jpg
+    sha256: c0df6d0e298229e97ec48a8d42acafae45d7aedc6f4b86ab9ea5ac48e2f044c9
+    retrieved: '2026-11-14'
+    crop: [0, 38, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 58, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-amuwo-odofin-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/our-team/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/08/LSHA-129-1-1.jpg
+    sha256: b9b9f59a9f3d9a35173d656796ce07fd781e4af518b1c7beb8beef2ee03cb9ed
+    retrieved: '2026-11-14'
+    crop: [360, 37, 1400, 1400]
+    official_checked: '2026-11-14'  # INEC M, 55, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-apapa-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-lawal-aina-musibau/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/40-683x1024-1-e1722615779850.jpeg
+    sha256: 9fcc3a062151829872162a7e6cef6ca1cf96b31df295fc650068cf5b71c21e58
+    retrieved: '2026-11-14'
+    crop: [1, 0, 554, 554]
+    official_checked: '2026-11-14'  # INEC M, 50, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-epe-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-tobun-abiodun/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-20.jpg
+    sha256: 37501d32a20d9498dcc34a34e2586e687ed1359fafc8662ab6e8da759b885d3d
+    retrieved: '2026-11-14'
+    crop: [0, 28, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 63, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-epe-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-sylvester-o-ogunkelu/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-39.jpg
+    sha256: b5d3f6ec899658f8f5be0c0a4a1cdf9f1896ddb2de22b7f80c01025f989c6929
+    retrieved: '2026-11-14'
+    crop: [0, 38, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 46, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-eti-osa-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-gbolahan-o-yishawu/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-31.jpg
+    sha256: ccaa19bde3efa79e9381a4ca77062d35a91c0373d931f3b9f6f5bc7f58a55ce8
+    retrieved: '2026-11-14'
+    crop: [0, 41, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 58, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-ibeju-lekki-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-ajayi-oladele-oluwadamilare/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/39-e1686221439128.jpg
+    sha256: 3be289d71c02b5c372cddbe73a3240748e0fc2f8ccd73519b847e1fe790ff897
+    retrieved: '2026-11-14'
+    crop: [77, 0, 881, 881]
+    official_checked: '2026-11-14'  # INEC M, 61, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-ifako-ijaiye-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-temitope-a-adewale/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-25.jpg
+    sha256: 76b91c834a75f10f19a0264c8268ce147c087706ec42dc5e77390a97570a04d6
+    retrieved: '2026-11-14'
+    crop: [0, 124, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 43, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-ikeja-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-adedamola-richard-kasunmu/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-17.jpg
+    sha256: 8932ea104b0d82b71e4a35b1c751ba2cc8ca077768caffbb2ad3d5501670c511
+    retrieved: '2026-11-14'
+    crop: [0, 60, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 43, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-ikorodu-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/aro-moshood-abiodun/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/33-e1686222247562.jpg
+    sha256: 63e662b7c0c2d94cc467aa55353468aad0995e20a26886b36a13cbe08c167b77
+    retrieved: '2026-11-14'
+    crop: [63, 17, 338, 338]
+    official_checked: '2026-11-14'  # INEC M, 42, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-kosofe-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-ganiyu-babatunde-sanni/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-27-1229x1536-1.jpg
+    sha256: bfa88eadf61a1b915d7d527b9e12e70652dfc9a35420017df8eaaa3bc9d811ff
+    retrieved: '2026-11-14'
+    crop: [0, 40, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 61, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-lagos-mainland-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-ibrahim-ajani-owolabi/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-37-1229x1536-1.jpg
+    sha256: 32c421d4d6892783fc04835d54d9061ccb2cc8666872c5ac3667bc40fcf6ec53
+    retrieved: '2026-11-14'
+    crop: [0, 5, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 41, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-lagos-mainland-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-shabi-rasheed-adebola-adekola/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/24-e1686226015624.jpg
+    sha256: 7bca1ca8a3bad3e1148b3867bc0257159797c94a400290aa3d228dc9707abd80
+    retrieved: '2026-11-14'
+    crop: [33, 0, 437, 437]
+    official_checked: '2026-11-14'  # INEC M, 66, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-mushin-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-nure-ayinde-akinsanya/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-43.jpg
+    sha256: a393b5417edb80838d46004870e749545a02f58fc5f5316b6f5697bd9e0d9f1e
+    retrieved: '2026-11-14'
+    crop: [117, 120, 922, 922]
+    official_checked: '2026-11-14'  # INEC M, 59, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-mushin-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-kazeem-olayinka-muyideen/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/MUSHIN-II.png
+    sha256: 66895b8a371b1840bd5c57cf23178cab25d68f8780aa59d70d854268ab87414d
+    retrieved: '2026-11-14'
+    crop: [212, 41, 530, 530]
+    official_checked: '2026-11-14'  # INEC M, 63, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-ojo-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-ege-olusegun-adebisi/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/25-1-e1722422494482.jpg
+    sha256: 7e11d01cd8651fd1d8a092178bbede0bdb46080c1dade4c5e796adff8b91e0b3
+    retrieved: '2026-11-14'
+    crop: [0, 51, 470, 470]
+    official_checked: '2026-11-14'  # INEC M, 43, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-ojo-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-tijani-surajudeen-olatunji/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/LSHA-33-1229x1536-1.jpg
+    sha256: 58916551bf9645cb7596ea3237d2f6d69eb2b26447fe66f96214f481dbdf7cbb
+    retrieved: '2026-11-14'
+    crop: [0, 77, 1229, 1229]
+    official_checked: '2026-11-14'  # INEC M, 49, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-oshodi-isolo-ii-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/oladipo-olayinka-ajomale/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/Oshod-iIsolo-II.png
+    sha256: 5b298525ef7b6eaea6fa1e633df13cffa9a32363d5c904c7eeb3e649aeeba747
+    retrieved: '2026-11-14'
+    crop: [153, 0, 600, 600]
+    official_checked: '2026-11-14'  # INEC M, 42, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-lagos-shomolu-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-orekoya-abiodun-abimbola/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/SOMOLU-1.png
+    sha256: 9b47fe3b6fc5170e69d2876eadc0586fcad4da209fee25a2857bebc4339079e9
+    retrieved: '2026-11-14'
+    crop: [160, 0, 613, 613]
+    official_checked: '2026-11-14'  # INEC M, 60, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-akoko-north-east-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20Japhet%20Victor%20Toyin%20%EF%80%A7%20Akoko%20North%20East%20%EF%80%A7%20Deputy%20Chief%20Whip.JPG.jpeg
+    sha256: f1b7fe1912bb654631a93a272aa00a9da4dd55ba644b177ab4e108c43c15608b
+    retrieved: '2026-11-14'
+    crop: [0, 88, 626, 626]
+    official_checked: '2026-11-14'  # INEC M, 56, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-akoko-north-west-i-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20Tiamiyu%20Fatai%20Atere%20%EF%80%A7%20Akoko%20South%20East%20%EF%80%A7%20Member.JPG%20%281%29.jpeg
+    sha256: a550aa8c817767a88f12150dd448300d3f7ac165ac1d54e2174ba33652f974ed
+    retrieved: '2026-11-14'
+    crop: [124, 173, 540, 540]
+    official_checked: '2026-11-14'  # INEC M, 49, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-akoko-south-west-i-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20Daodu%20OluwaToyin%20Raymond%20%EF%80%A7%20Akoko%20South%20West%201%20%EF%80%A7%20Member.JPG.jpeg
+    sha256: d1c603c743f43daa4440011faee3bd720c3474deb082676a92f17339640be10e
+    retrieved: '2026-11-14'
+    crop: [0, 107, 771, 771]
+    official_checked: '2026-11-14'  # INEC M, 44, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-akure-south-ii-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20%28Barr%29%20Abitogun%20Rotimi%20Stephen%20%EF%80%A7%20Akure%20South%20II%20%EF%80%A7%20Member.JPG.jpeg
+    sha256: 844342d2b9de3f2c9e71cfb0135a4774479671b06020d315f9fa6335e811496f
+    retrieved: '2026-11-14'
+    crop: [116, 205, 540, 540]
+    official_checked: '2026-11-14'  # INEC M, 60, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-ese-odo-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20Allen%20Messiah%20Oluwatoyin%20%EF%80%A7%20Ese-Odo%20%EF%80%A7%20Deputy%20Parliamentry%20Secretary.JPG.jpeg
+    sha256: 734389d9bebe818b0a3b2bc319056ff6bed5e7f653a2b95dd4da92ae10eca65e
+    retrieved: '2026-11-14'
+    crop: [0, 110, 771, 771]
+    official_checked: '2026-11-14'  # INEC M, 56, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-ifedore-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20%28Barr%29%20Akomolafe%20Temitope%20%EF%80%A7%20Ifedore%20%EF%80%A7%20Member.JPG.jpeg
+    sha256: 860ba925da8258768a16027c5fe451e1be1db71da6b901e0db52136b0c305bc5
+    retrieved: '2026-11-14'
+    crop: [0, 89, 771, 771]
+    official_checked: '2026-11-14'  # INEC M, 46, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-okitipupa-ii-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Rt.%20Hon.%20Gbegudu%20Ololade%20James%20%EF%80%A7%20Okitipupa%20II%20%EF%80%A7%20Deputy%20Speaker.jpg.jpeg
+    sha256: 24c8f5627dccc5ab092e31c2c8ee06d7f54e64a5705536f6a6636ce67cf06d95
+    retrieved: '2026-11-14'
+    crop: [0, 0, 452, 452]
+    official_checked: '2026-11-14'  # INEC M, 46, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-ondo-east-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Rt.%20Hon.%20%28Chief%29%20Oladiji%20Olamide%20Adesanmi%20Ondo%20East%20Speaker.JPG.jpeg
+    sha256: 8a5f03c2170148176bd256f98e01e76cb1a7f1ccbe66c73fed28c00aec041b7d
+    retrieved: '2026-11-14'
+    crop: [0, 0, 864, 864]
+    official_checked: '2026-11-14'  # INEC M, 59, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-ondo-west-i-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20Ogunwumiju%20Moyinolorun%20Taiwo%20%EF%80%A7%20Ondo%20West%201%20%EF%80%A7%20Parliamentry%20Sec..JPG.jpeg
+    sha256: 8b183bb56185956de142ebd782e6ba7b63abd3d3ff909ce504e861d7aa64d7f5
+    retrieved: '2026-11-14'
+    crop: [0, 78, 770, 770]
+    official_checked: '2026-11-14'  # INEC M, 37, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-ondo-west-ii-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20Oladapo%20John%20Biola%20%EF%80%A7%20Ondo%20West%20II%20%EF%80%A7%20Member.JPG.jpeg
+    sha256: 80a07197d3acda5a76e4565011c64dab5217a08f2a611cfdb96cadb55f06f980
+    retrieved: '2026-11-14'
+    crop: [62, 221, 632, 632]
+    official_checked: '2026-11-14'  # INEC M, 45, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-ondo-ose-apc
+    source: "Ondo State Government website"
+    file_page: https://ondostate.gov.ng/house_members
+    file_url: https://ondostate.gov.ng/assets/images/Hon.%20%28Chief%29%20Oshati%20Olatunji%20%EF%80%A7%20Ose%20%EF%80%A7%20House%20Leader.JPG.jpeg
+    sha256: 0252323aeedf3ade98b80b83cb55d8dd3161cb81ca982b3160665ed7967ea575
+    retrieved: '2026-11-14'
+    crop: [0, 99, 889, 889]
+    official_checked: '2026-11-14'  # INEC M, 61, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-rivers-abua-odual-pdp
+    source: "Rivers State Government website"
+    file_page: https://riversstate.gov.ng/government/legislature
+    file_url: https://riversstate.gov.ng/uploads/government/priorities/img_691179294a643.jpeg
+    sha256: b8a3b98a980b73833dd8d6a6093698f9f20691d5f2c18b3aed78d3b3a763916d
+    retrieved: '2026-11-14'
+    crop: [7, 8, 456, 456]
+    official_checked: '2026-11-14'  # INEC M, 54, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-rivers-asari-toru-i-apc
+    source: "Rivers State Government website"
+    file_page: https://riversstate.gov.ng/government/legislature
+    file_url: https://riversstate.gov.ng/uploads/government/priorities/img_69117e0599305.jpg
+    sha256: 2e7f1e23d7fd6a8b5e81fe892f2fe6f811a832a6965b52e4121931392a0ae382
+    retrieved: '2026-11-14'
+    crop: [0, 15, 202, 202]
+    official_checked: '2026-11-14'  # INEC M, 43, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-rivers-asari-toru-ii-apc
+    source: "Rivers State Government website"
+    file_page: https://riversstate.gov.ng/government/legislature
+    file_url: https://riversstate.gov.ng/uploads/government/priorities/img_69117e8bacc78.jpg
+    sha256: 38d1296019145d604a2fce650a445b66bd9779ff1edca5b69be824c23aed274a
+    retrieved: '2026-11-14'
+    crop: [0, 0, 223, 223]
+    official_checked: '2026-11-14'  # INEC M, 45, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-rivers-degema-apc
+    source: "Rivers State Government website"
+    file_page: https://riversstate.gov.ng/government/legislature
+    file_url: https://riversstate.gov.ng/uploads/government/priorities/img_69117f9254b22.jpeg
+    sha256: e139736f0bdf0c6981a704162f4d18cea61cfd4765034743b0f33687c204d84a
+    retrieved: '2026-11-14'
+    crop: [0, 92, 559, 559]
+    official_checked: '2026-11-14'  # INEC M, 51, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-sha-rivers-eleme-apc
+    source: "Rivers State Government website"
+    file_page: https://riversstate.gov.ng/government/legislature
+    file_url: https://riversstate.gov.ng/uploads/government/priorities/img_691180286d2ac.jpeg
+    sha256: 52da89c3d96675d384519b04bfdf91d2f40c010feb2516267365a618d0e6e827
+    retrieved: '2026-11-14'
+    crop: [0, 96, 428, 428]
+    official_checked: '2026-11-14'  # INEC M, 46, fits the photo; page names them as candidate's role/constituency

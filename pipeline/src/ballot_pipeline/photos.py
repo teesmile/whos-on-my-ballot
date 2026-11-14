@@ -40,6 +40,7 @@ def office_of(candidate_id: str) -> str:
     """'jan-2027-senate-lagos-lagos-central-apc' -> 'senate' (the third part of every race and candidate ID)."""
     return candidate_id.split("-")[2]
 SHARE = 720  # drawn into the 1080 x 1920 share picture
+FLAT = ["-background", "white", "-flatten"]  # a cut-out with a transparent background sits on white, never black
 FIELDS = ("candidate_id", "source", "file_page", "file_url", "sha256", "retrieved", "crop")
 OPTIONAL = ("author", "licence", "licence_url", "taken")
 
@@ -157,14 +158,14 @@ def build_photos(log=print) -> dict[str, Path]:
         page = PHOTO_DIR / f"{cid}.webp"
         share = PHOTO_DIR / f"{cid}-share.jpg"
         cell = PHOTO_DIR / f"_{cid}.png"
-        subprocess.run(["gm", "convert", str(raw), *crop, "-resize", f"{PAGE}x{PAGE}!", "-strip", "-quality", "78", f"webp:{page}"], check=True)
-        subprocess.run(["gm", "convert", str(raw), *crop, "-resize", f"{SHARE}x{SHARE}!", "-strip", "-quality", "92", f"jpeg:{share}"], check=True)
-        subprocess.run(["gm", "convert", str(raw), *crop, "-strip", f"png:{cell}"], check=True)
+        subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-resize", f"{PAGE}x{PAGE}!", "-strip", "-quality", "78", f"webp:{page}"], check=True)
+        subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-resize", f"{SHARE}x{SHARE}!", "-strip", "-quality", "92", f"jpeg:{share}"], check=True)
+        subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-strip", f"png:{cell}"], check=True)
         cells[cid] = cell
         extra = {}
         if office_of(cid) in ON_DEMAND:
             card = PHOTO_DIR / f"{cid}-card.webp"
-            subprocess.run(["gm", "convert", str(raw), *crop, "-resize", f"{CARD}x{CARD}!", "-strip", "-quality", str(CARD_QUALITY),
+            subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-resize", f"{CARD}x{CARD}!", "-strip", "-quality", str(CARD_QUALITY),
                             f"webp:{card}"], check=True)
             extra = {"card": f"photos/{card.name}", "card_sha256": _sha256(card.read_bytes()), "card_bytes": card.stat().st_size}
         people[cid] = {
