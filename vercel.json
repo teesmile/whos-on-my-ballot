@@ -80,29 +80,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "whos-on-my-ballot.vercel.app"
-        }
-      ],
-      "destination": "https://whosonmyballot.ng/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "whos-on-my-ballot-teesmiles-projects.vercel.app"
-        }
-      ],
-      "destination": "https://whosonmyballot.ng/:path*",
-      "permanent": true
-    }
   ]
 }
