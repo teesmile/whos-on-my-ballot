@@ -2369,3 +2369,107 @@ people:
     retrieved: '2026-11-14'
     crop: [0, 96, 428, 428]
     official_checked: '2026-11-14'  # INEC M, 46, fits the photo; page names them as candidate's role/constituency
+  - candidate_id: feb-2027-governor-cross-river-adc
+    source: "Candidate's own website (nkoyotoyo.ng)"
+    file_page: https://nkoyotoyo.ng/about
+    file_url: https://nkoyotoyo.ng/_next/static/media/burgundy-lace.3cmk3xczdlqdr.jpg
+    sha256: d5a0a0aa8eb70b188ed9f3b40109d25a9df98ed99e491e5ca41eaa4c48661556
+    retrieved: '2026-11-14'
+    crop: [179, 129, 559, 559]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: feb-2027-governor-ebonyi-pdp
+    source: "Candidate's own website (voteifeanyiodii.com.ng)"
+    file_page: https://voteifeanyiodii.com.ng/
+    file_url: https://voteifeanyiodii.com.ng/media/img/agbada-900.jpg
+    sha256: 63f861b275f273fffb4424596b473d4bcd09121fa6d71a04f7ccfe5711866f06
+    retrieved: '2026-11-14'
+    crop: [159, 10, 530, 530]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: feb-2027-governor-kaduna-adc
+    source: "Candidate's own website (isaashiru.org)"
+    file_page: http://isaashiru.org/
+    file_url: http://isaashiru.org/public/images/portrait_1.jpg
+    sha256: 069b42de588c649a5de6e6ed3a6977b3530bac445a23feae66696d1f9712322f
+    retrieved: '2026-11-14'
+    crop: [252, 201, 486, 486]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: feb-2027-governor-ogun-adc
+    source: "Candidate's own website (jimilawal.com)"
+    file_page: https://jimilawal.com/
+    file_url: https://jimilawal.com/assets/jal-hero-transparent.png
+    sha256: 8d786343b6c7fed537f62fcfac369f9733c8a63bcc23dfb90111017401f3326a
+    retrieved: '2026-11-14'
+    crop: [44, 0, 374, 374]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: jan-2027-senate-abia-abia-south-apc
+    source: "Candidate's own website (princepaulikonne.com)"
+    file_page: https://www.princepaulikonne.com/
+    file_url: https://media.princepaulikonne.com/ppi-hero-official.webp
+    sha256: ad484223c164dd5bad1f78da5f10e792a3d498badabfbc62c87957e9fb2e6a28
+    retrieved: '2026-11-14'
+    crop: [4, 0, 668, 668]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: jan-2027-senate-adamawa-adamawa-south-apc
+    source: "Adamawa State Government website"
+    file_page: https://adamawastate.gov.ng/the-executive-council/
+    file_url: https://adamawastate.gov.ng/wp-content/uploads/2024/01/Felix-Tagwami-1.jpeg
+    sha256: 69d107d3a452bb91b9bc0c1328fdd7462010b98045455329dbde5fd0884c1d82
+    retrieved: '2026-11-14'
+    crop: [0, 50, 659, 659]
+    official_checked: '2026-11-14'  # INEC M, 64, fits the photo; the state executive council page names him as Commissioner for Health
+  - candidate_id: jan-2027-senate-anambra-anambra-south-ndc
+    source: "Candidate's own website (ebukaonunkwo.org)"
+    file_page: https://ebukaonunkwo.org/
+    file_url: https://ebukaonunkwo.org/uploads/branding/1c88f1ce-d834-4987-9cca-c1cb3bb98f82.jpg
+    sha256: 3df0c99512e08336b6bdfc4a316249c03c054e9a8845cc528209f53296e91745
+    retrieved: '2026-11-14'
+    crop: [253, 186, 577, 577]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: jan-2027-senate-gombe-gombe-south-apc
+    source: "Candidate's own website (josephdamara.com)"
+    file_page: https://josephdamara.com/
+    file_url: https://josephdamara.com/assets/jjd-12-Cp3KGiSt.jpg
+    sha256: bede453018e4042cb629fc1dc711509b9e75377738585a8d8e1876af1fe3772c
+    retrieved: '2026-11-14'
+    crop: [77, 11, 263, 263]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: jan-2027-senate-kaduna-kaduna-central-apc
+    source: "Candidate's own X account (@ShehuSani)"
+    file_page: https://x.com/ShehuSani
+    file_url: https://pbs.twimg.com/profile_images/1991677265185214466/ROVrgQfM.jpg
+    sha256: 8a23f618037bbab8b9109b31419051148522cc2f0c4a86aace90e1df008a7d9b
+    retrieved: '2026-11-14'
+    crop: [0, 0, 400, 400]
+    owner_approved: '2026-11-14'  # photo sheet 3 (X's paid blue check; the APC campaign site names him as the Kaduna Central candidate)
+  - candidate_id: jan-2027-senate-lagos-lagos-central-ndc
+    source: "Candidate's own website (ladipojohnson.com.ng)"
+    file_page: https://ladipojohnson.com.ng/
+    file_url: https://ladipojohnson.com.ng/assets/j20-aGB1AEbq.png
+    sha256: 66511130cb6caf1c848a69762d3724b9e24824ce8f6bcbb59365580267c0d82f
+    retrieved: '2026-11-14'
+    crop: [129, 12, 723, 723]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-south-pdp
+    source: "Candidate's own website (mikeomeriforsenate.org)"
+    file_page: https://mikeomeriforsenate.org/
+    file_url: https://mikeomeriforsenate.org/images/candidate-1-nobg.png
+    sha256: 721784dbe9f5fe9584171c5dadb8cc5b6c18455eca5c640c5967ea16c8b0ae7b
+    retrieved: '2026-11-14'
+    crop: [0, 40, 720, 720]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: jan-2027-senate-ogun-ogun-central-pdp
+    source: "Candidate's own website (iyaboobasanjo.com)"
+    file_page: https://iyaboobasanjo.com/
+    file_url: https://iyaboobasanjo.com/wp-content/uploads/2026/03/SENATOR-IYABO-OBASANJO-01748-Daniel-Sync-2.webp
+    sha256: 9d2b18619ed269d858f06e070ee9c92fdf4452d97978648822ed64edd776602b
+    retrieved: '2026-11-14'
+    crop: [2, 0, 998, 998]
+    owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: jan-2027-senate-ondo-ondo-north-adc
+    source: "Candidate's own website (folusoadefemi.com)"
+    file_page: https://www.folusoadefemi.com/biography/
+    file_url: https://www.folusoadefemi.com/wp-content/uploads/2026/08/IMG_1432.png
+    sha256: 941d98ecac155539012318375e7ed5026fba63afea67a19e6d2c3e6cac2cea65
+    retrieved: '2026-11-14'
+    crop: [283, 158, 614, 614]
+    owner_approved: '2026-11-14'  # photo sheet 3

@@ -69,6 +69,28 @@
     "feb-2027-governor-benue-ndc": 1
    }
   },
+  "feb-2027-governor-cross-river": {
+   "file": "logos/sheet-7ef969a131.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 39828,
+   "sha256": "7ef969a131beebef2c1ab06c0d1d63204095b8bb9bd984254aa4bdb8bea1f61e",
+   "photos": {
+    "feb-2027-governor-cross-river-adc": 0,
+    "feb-2027-governor-cross-river-apc": 1
+   }
+  },
+  "feb-2027-governor-ebonyi": {
+   "file": "logos/sheet-4bbe10cbe9.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 40100,
+   "sha256": "4bbe10cbe9d8b9beb8e181555d3ebd34a10bd54945f4a0cc25483b722eb338b2",
+   "photos": {
+    "feb-2027-governor-ebonyi-apc": 0,
+    "feb-2027-governor-ebonyi-pdp": 1
+   }
+  },
   "feb-2027-governor-enugu": {
    "file": "logos/sheet-ece900b881.webp",
    "width": 2112,
@@ -89,6 +111,17 @@
    "photos": {
     "feb-2027-governor-jigawa-adc": 0,
     "feb-2027-governor-jigawa-apc": 1
+   }
+  },
+  "feb-2027-governor-kaduna": {
+   "file": "logos/sheet-23a9d1f8a6.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 40228,
+   "sha256": "23a9d1f8a6362d4f203d451c13a5b175a5b72a78ca040578a4104f5a8a2f9704",
+   "photos": {
+    "feb-2027-governor-kaduna-adc": 0,
+    "feb-2027-governor-kaduna-apc": 1
    }
   },
   "feb-2027-governor-kwara": {
@@ -122,6 +155,17 @@
    "photos": {
     "feb-2027-governor-niger-apc": 0,
     "feb-2027-governor-niger-sdp": 1
+   }
+  },
+  "feb-2027-governor-ogun": {
+   "file": "logos/sheet-7db33ca0cb.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 40570,
+   "sha256": "7db33ca0cb4da4283e4c666b3beafcab03b12efcb75eae57c53fbff00b2fd63c",
+   "photos": {
+    "feb-2027-governor-ogun-adc": 0,
+    "feb-2027-governor-ogun-apc": 1
    }
   },
   "feb-2027-governor-rivers": {

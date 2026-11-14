@@ -9,7 +9,11 @@ import { cardSourceCaption, SITE_HOST } from '@/lib/site'
 
 // One share card per race, rendered at build time to /cards/<race-id>.png (1200x630, the Open Graph size).
 // The same template for every race: white and the national green, the race's first group (D-042) with each party's logo
-// from INEC's register (D-043), then how many more candidates there are. Never a candidate photo.
+// from INEC's register (D-043), then how many more candidates there are. Never a candidate photo. Both election dates and
+// "Know every name on your ballot." on every card (owner, 14 Nov 2026), but never a countdown: apps keep a saved copy of a
+// card for days, so a number of days would go stale.
+const DATES = '16 January and 6 February 2027'
+const KNOW = 'Know every name on your ballot.'
 export const dynamic = 'force-static'
 export const dynamicParams = false
 
@@ -38,6 +42,12 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
   const nameSize = longest > 44 ? 18 : longest > 32 ? 20 : 23
   const rows = Math.ceil(n / 3)
   const tileH = rows === 1 ? 300 : 182
+  // The "and N more" tile takes the rest of its row (owner, 14 Nov 2026), so a race with fewer than five in its first group
+  // leaves no empty corner: two columns' width after four tiles, the full row after three.
+  const TILE_W = 357
+  const GAP = 14
+  const restCols = 3 - (p.tiles.length % 3)
+  const moreW = restCols * TILE_W + (restCols - 1) * GAP
   const caption = cardSourceCaption(r.sources)
 
   return new ImageResponse(
@@ -48,12 +58,13 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
             {/* eslint-disable-next-line @next/next/no-img-element -- rendered into a PNG at build time */}
             <img src={MARK} width={30} height={30} alt="" style={{ borderRadius: 15, border: '2px solid #fff' }} />
             Who’s on my ballot?
+            <div style={{ display: 'flex', marginLeft: 'auto', fontWeight: 700 }}>{DATES}</div>
           </div>
           <div style={{ display: 'flex', fontSize: titleSize, fontWeight: 700, lineHeight: 1.15, marginTop: 4 }}>{p.title}</div>
         </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, padding: '18px 48px 0' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: GAP, padding: '18px 48px 0' }}>
           {p.tiles.map(([party, name]) => (
-            <div key={party} style={{ display: 'flex', alignItems: 'center', gap: 14, width: 357, height: tileH, padding: '12px 14px', border: `2px solid ${LINE}`, borderRadius: 16 }}>
+            <div key={party} style={{ display: 'flex', alignItems: 'center', gap: 14, width: TILE_W, height: tileH, padding: '12px 14px', border: `2px solid ${LINE}`, borderRadius: 16 }}>
               {/* eslint-disable-next-line @next/next/no-img-element -- rendered into a PNG at build time */}
               <img src={logoPngDataUrl(party)} width={72} height={72} alt="" style={{ border: `1px solid ${LINE}`, borderRadius: 10, padding: 3, background: '#fff' }} />
               <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 }}>
@@ -63,7 +74,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
             </div>
           ))}
           {p.more > 0 && (
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: 357, height: tileH, background: BAND, borderRadius: 16, color: DEEP }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: moreW, height: tileH, background: BAND, borderRadius: 16, color: DEEP }}>
               <div style={{ display: 'flex', fontSize: 40, fontWeight: 700 }}>{`and ${p.more} more`}</div>
               <div style={{ display: 'flex', fontSize: 24 }}>{p.more === 1 ? 'candidate' : 'candidates'}</div>
             </div>
@@ -74,7 +85,10 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
             <div style={{ display: 'flex', fontSize: 36, fontWeight: 700, color: GREEN }}>{SITE_HOST}</div>
             <div style={{ display: 'flex', fontSize: 16, color: MUTED }}>{caption}</div>
           </div>
-          <div style={{ display: 'flex', fontSize: 20, color: MUTED }}>Not affiliated with INEC.</div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+            <div style={{ display: 'flex', fontSize: 24, fontWeight: 700, color: DEEP }}>{KNOW}</div>
+            <div style={{ display: 'flex', fontSize: 18, color: MUTED }}>Not affiliated with INEC.</div>
+          </div>
         </div>
       </div>
     ),
@@ -91,13 +105,14 @@ function siteCard() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 30 }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- rendered into a PNG at build time */}
             <img src={MARK} width={56} height={56} alt="" style={{ borderRadius: 28, border: '3px solid #fff' }} />
-            Nigeria’s 2027 elections · 16 January and 6 February
+            {`Nigeria’s elections · ${DATES}`}
           </div>
           <div style={{ display: 'flex', fontSize: 84, fontWeight: 700, marginTop: 16, lineHeight: 1.1 }}>Who’s on my ballot?</div>
         </div>
-        <div style={{ display: 'flex', fontSize: 40, lineHeight: 1.3, padding: '40px 72px 0' }}>
+        <div style={{ display: 'flex', fontSize: 38, lineHeight: 1.3, padding: '36px 72px 0' }}>
           Every candidate on your ballot, side by side, from INEC’s published lists.
         </div>
+        <div style={{ display: 'flex', fontSize: 46, fontWeight: 700, color: DEEP, padding: '14px 72px 0' }}>{KNOW}</div>
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginTop: 'auto', padding: '0 72px 40px' }}>
           <div style={{ display: 'flex', fontSize: 40, fontWeight: 700, color: GREEN }}>{SITE_HOST}</div>
           <div style={{ display: 'flex', fontSize: 22, color: MUTED }}>Not affiliated with INEC.</div>
