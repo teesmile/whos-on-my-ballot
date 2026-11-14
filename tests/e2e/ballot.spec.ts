@@ -318,11 +318,17 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
     await expect(tile).toBeHidden()
   })
 
-  test('race tabs are equal boxes with the count in a true circle, the same 8 px gap after every label, nothing outside its box', async ({ page }) => {
+  test('race tabs are equal boxes with the count in a true circle, the same 8 px gap after every label, nothing outside its box', async ({ browser }) => {
+    // The site uses each phone's own font (no web fonts), so widths differ by machine. Phones use Roboto or San Francisco;
+    // the test measures with Liberation Sans (Arial's widths, close to both, and installed on CI with Chrome), so every
+    // machine gets the same answer. The wider DejaVu Sans that a bare Linux falls back to is not a phone font.
+    const context = await browser.newContext({ bypassCSP: true })
+    const page = await context.newPage()
     for (const url of [ABA, '/ballot-feb/abia/umuahia-central-or-umuahia-east-or-umuahia-north/']) {
       for (const width of [320, 360, 390, 1280]) {
         await page.setViewportSize({ width, height: 800 })
         await page.goto(url)
+        await page.addStyleTag({ content: '.race-tabs a { font-family: "Liberation Sans", Arial, sans-serif !important }' })
         const boxes = await page.locator('.race-tabs a').evaluateAll(as => as.map((a) => {
           const r = a.getBoundingClientRect()
           const li = a.parentElement!.getBoundingClientRect()
@@ -346,6 +352,7 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
         }
       }
     }
+    await context.close()
   })
 })
 
