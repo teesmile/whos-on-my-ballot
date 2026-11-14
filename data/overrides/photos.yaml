@@ -2473,3 +2473,62 @@ people:
     retrieved: '2026-11-14'
     crop: [283, 158, 614, 614]
     owner_approved: '2026-11-14'  # photo sheet 3
+  - candidate_id: jan-2027-house-abia-isuikwuato-umu-nneochi-apc
+    source: "Candidate's own website (nkeirukaonyejeocha.com)"
+    file_page: https://nkeirukaonyejeocha.com/
+    file_url: https://res2.yourwebsite.life/res/67a862db7b939fa81681708d/67aa64bb9866cb02871df32d_optimized
+    sha256: bd4344bdc42105999b8355f44e430db47d81921dc0b71e3b8c8958ab58be02b1
+    retrieved: '2026-11-14'
+    crop: [263, 3, 1263, 1263]
+    owner_approved: '2026-11-14'  # photo sheet 4
+  - candidate_id: jan-2027-house-anambra-onitsha-north-onitsha-south-apc
+    source: "Candidate's own website (lyndaikpeazu.com)"
+    file_page: https://lyndaikpeazu.com/about
+    file_url: https://lyndaikpeazu.com/images/lynd5.jpeg
+    sha256: 6cfe6aeab26a34941825789d97f7e7a188e9c35d2e514f2c7bbe27740764f698
+    retrieved: '2026-11-14'
+    crop: [0, 101, 474, 474]
+    owner_approved: '2026-11-14'  # photo sheet 4
+  - candidate_id: jan-2027-house-cross-river-yakurr-abi-apc
+    source: "Candidate's own website (johngaul.ng)"
+    file_page: https://johngaul.ng/
+    file_url: https://johngaul.ng/personal/bg-removed.png
+    sha256: b72de645d7a998b3cb7b67ea5bf19e59d87f7c34d76070fe30e748089e51a6e6
+    retrieved: '2026-11-14'
+    crop: [188, 218, 850, 850]
+    owner_approved: '2026-11-14'  # photo sheet 4
+  - candidate_id: jan-2027-house-kaduna-makarfi-kudan-apc
+    source: "Candidate's own website (mukhtarladan.com)"
+    file_page: https://mukhtarladan.com/
+    file_url: https://mukhtarladan.com/images/ladan/mukhtar-portrait.jpg
+    sha256: 53a3b93ebfc24a64f924761935ec2658fd48ce0849691e541187549301fafec0
+    retrieved: '2026-11-14'
+    crop: [26, 8, 279, 279]
+    owner_approved: '2026-11-14'  # photo sheet 4
+  - candidate_id: jan-2027-house-lagos-ifako-ijaiye-adc
+    source: "Candidate's own website (honiderashodipo.com)"
+    file_page: https://honiderashodipo.com/
+    file_url: https://honiderashodipo.com/media/portraits/hero-0952.webp
+    sha256: a9a1e7dc50fd35451822702ed4da20e38bd4175f70a2ad2ac0034e862e649115
+    retrieved: '2026-11-14'
+    crop: [117, 0, 780, 780]
+    owner_approved: '2026-11-14'  # photo sheet 4
+  - candidate_id: jan-2027-house-ondo-eseodo-ilaje-adc
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Hon._Olugbenga_Edema.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/1/19/Hon._Olugbenga_Edema.jpg
+    sha256: 62c4a8b238aba25dff164436a6e0415652467093b3586fcd3a86a892fd9b1f85
+    retrieved: '2026-11-14'
+    crop: [76, 50, 880, 880]
+    author: "Otaligodspower (Wikimedia Commons user)"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0/
+    owner_approved: '2026-11-14'  # photo sheet 4
+  - candidate_id: jan-2027-house-osun-obokun-oriade-a
+    source: "Candidate's own website (pelumiolajengbesi.com)"
+    file_page: https://pelumiolajengbesi.com/about
+    file_url: https://pelumiolajengbesi.com/uploads/about-20260819-063634-a81fcf.webp
+    sha256: 19629708ae00720c00c976e6dc504331afeab9a2903a6aa56524bd1dc71d4cc1
+    retrieved: '2026-11-14'
+    crop: [200, 40, 820, 820]
+    owner_approved: '2026-11-14'  # photo sheet 4
