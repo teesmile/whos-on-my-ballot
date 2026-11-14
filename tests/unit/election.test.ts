@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest'
 
-import { describePhase, formatDay, formatDuration, formatTime, instant, phaseAt, type Schedule } from '@/lib/election'
+import { describePhase, formatDay, formatDuration, formatTime, instant, phaseAt, type Schedule, shareCountdown } from '@/lib/election'
 
 const S: Schedule = {
   open: '08:30',
@@ -83,4 +83,18 @@ describe('the device time zone changes nothing', () => {
       expect(formatDay('2027-02-06')).toBe('Saturday 6 February 2027')
     })
   }
+})
+
+describe('the share picture\'s countdown (owner, 14 Nov 2026)', () => {
+  const at = (iso: string) => new Date(iso)
+  it('counts whole days to the election in Nigeria\'s time, says so on the day, and says nothing after it', () => {
+    expect(shareCountdown('2027-01-16', at('2026-11-14T12:00:00+01:00'))).toBe('63 days to go')
+    expect(shareCountdown('2027-01-16', at('2027-01-15T09:00:00+01:00'))).toBe('1 day to go')
+    expect(shareCountdown('2027-01-16', at('2027-01-16T00:00:00+01:00'))).toBe('Election day is today')
+    expect(shareCountdown('2027-01-16', at('2027-01-16T23:59:00+01:00'))).toBe('Election day is today')
+    expect(shareCountdown('2027-01-16', at('2027-01-17T00:00:00+01:00'))).toBe('')
+    // 23:30 on the 15th in London is already the 16th in Lagos
+    expect(shareCountdown('2027-01-16', at('2027-01-15T23:30:00Z'))).toBe('Election day is today')
+    expect(shareCountdown('2027-02-06', at('2026-11-14T12:00:00+01:00'))).toBe('84 days to go')
+  })
 })

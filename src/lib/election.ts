@@ -119,3 +119,19 @@ export function describePhase(p: Phase, s: Schedule): PhaseText {
     }
   }
 }
+
+/** Today's date in Nigeria (WAT), as YYYY-MM-DD, so a countdown reads the same wherever the phone is. */
+export function watDate(now: Date): string {
+  return new Date(now.getTime() + 60 * 60 * 1000).toISOString().slice(0, 10)
+}
+
+/**
+ * The share picture's countdown (owner, 14 Nov 2026), worked out when someone shares: "63 days to go", "1 day to go",
+ * "Election day is today" on the day itself, and nothing once the day has passed. Whole days in WAT.
+ */
+export function shareCountdown(date: string, now: Date): string {
+  const days = Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${watDate(now)}T00:00:00Z`)) / 86_400_000)
+  if (days < 0) return ''
+  if (days === 0) return 'Election day is today'
+  return days === 1 ? '1 day to go' : `${days} days to go`
+}

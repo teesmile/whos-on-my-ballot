@@ -15,7 +15,7 @@
  * types is matched in memory, never sent, never stored, and never put in a URL (fragments aren't sent to servers).
  */
 import { motion, tapFeedback } from './motion'
-import { describePhase, formatDay, formatTime, phaseAt, type Schedule } from '../lib/election'
+import { describePhase, formatDay, formatTime, phaseAt, type Schedule, shareCountdown } from '../lib/election'
 import {
   cardCode,
   codeFromHash,
@@ -338,7 +338,7 @@ function setupFilter(box: HTMLElement) {
 }
 
 // ---- Share a race: a portrait picture for WhatsApp Status, drawn here only when someone starts to share.
-interface ShareInfo { text: string, url: string, title: string, office: string, place: string, date: string, tiles: [string, string, string, string][], more: number }
+interface ShareInfo { text: string, url: string, title: string, office: string, place: string, date: string, day: string, tiles: [string, string, string, string][], more: number }
 const GREEN = '#008751'
 const DEEP = '#00552f'
 const INK = '#161616'
@@ -417,6 +417,10 @@ const BAND = { top: '#00904f', bottom: '#005f36', shine: 'rgba(255, 255, 255, 0.
 // applies to Status pictures, the PNG source kept about 1.2 dB more detail, and the JPEG was only 7% smaller.
 const EXPORT = { type: 'image/png', quality: 1, name: 'whos-on-my-ballot.png' }
 const PLACEHOLDER = { bg: '#f4f4f4', line: '#c4c4c4', figure: '#cfcfcf' }
+// The countdown (owner, 14 Nov 2026): a sand pill on the date's own line, so the band, the tiles and the grid keep their
+// sizes. Sand is the site's countdown colour; a solid pill with deep-green words keeps a hard edge and strong contrast after
+// WhatsApp's JPEG re-encoding, where thin sand letters straight on the gradient would blur into it.
+const CHIP = { size: 34, h: 54, padX: 24, gap: 20, sand: '#f0d49e' }
 
 /** The same plain placeholder as the site's cards: a grey head-and-shoulders outline in a rounded square. */
 function placeholder(g: CanvasRenderingContext2D, x: number, y: number, s: number) {
@@ -450,7 +454,8 @@ function band(g: CanvasRenderingContext2D, W: number, y0: number, y1: number) {
 }
 
 /**
- * The share picture: exactly 1080 x 1920. A green band at the top (the office, where, and the date), a white middle holding
+ * The share picture: exactly 1080 x 1920. A green band at the top (the office, where, the date and, until election day, a
+ * countdown worked out when shared), a white middle holding
  * the card grid (two columns, three rows of equal square tiles), and a green band at the bottom with the site's address,
  * large, and the affiliation line, both in white. Each tile: the party's logo over its acronym at the left and the
  * candidate's photo (or the same plain placeholder as the site) at the right, the same height and the same padding from
@@ -517,7 +522,30 @@ async function drawPicture(d: ShareInfo): Promise<File> {
   place.lines.forEach((l, i) => g.fillText(l, W / 2, y + i * placeLh))
   y += place.lines.length * placeLh + (place.lines.length ? 6 : 0)
   g.font = `700 ${dateSize}px ${FONT}`
-  g.fillText(d.date, W / 2, y)
+  const left = shareCountdown(d.day, new Date())
+  if (!left) {
+    g.fillText(d.date, W / 2, y)
+  } else {
+    const dw = g.measureText(d.date).width
+    g.font = `800 ${CHIP.size}px ${FONT}`
+    const cw = g.measureText(left).width + 2 * CHIP.padX
+    const x0 = W / 2 - (dw + CHIP.gap + cw) / 2
+    g.textAlign = 'left'
+    g.font = `700 ${dateSize}px ${FONT}`
+    g.fillText(d.date, x0, y)
+    const cx = x0 + dw + CHIP.gap
+    const cy = y + dateSize / 2 - CHIP.h / 2
+    g.fillStyle = CHIP.sand
+    g.beginPath()
+    g.roundRect(cx, cy, cw, CHIP.h, CHIP.h / 2)
+    g.fill()
+    g.fillStyle = DEEP
+    g.font = `800 ${CHIP.size}px ${FONT}`
+    g.textBaseline = 'middle'
+    g.fillText(left, cx + CHIP.padX, cy + CHIP.h / 2 + 1)
+    g.textBaseline = 'top'
+    g.textAlign = 'center'
+  }
 
   // Bottom band: the address, large, and the affiliation line, in white, centred.
   band(g, W, foot, H)

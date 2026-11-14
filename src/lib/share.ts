@@ -5,6 +5,8 @@
 import type { Candidate, Race } from './data'
 
 export const ELECTION_DAY: Record<string, string> = { 'jan-2027': '16 January 2027', 'feb-2027': '6 February 2027' }
+/** The same days as YYYY-MM-DD, for the share picture's countdown, worked out when someone shares. */
+export const ELECTION_ISO: Record<string, string> = { 'jan-2027': '2027-01-16', 'feb-2027': '2027-02-06' }
 export const NO_CANDIDATE = 'No candidate named'
 
 export const OFFICE_TITLE: Record<Race['office'], string> = {
@@ -44,6 +46,8 @@ export interface Picture {
   office: string
   place: string
   date: string
+  /** The election day as YYYY-MM-DD, for the countdown drawn when someone shares. */
+  day: string
   /** [acronym, name as INEC prints it or the no-candidate text, candidate id, the photo's share copy or ''] */
   tiles: [string, string, string, string][]
   /** How many more candidates the race has beyond the tiles (0: every candidate is shown). */
@@ -56,7 +60,7 @@ export interface Picture {
  */
 export function picture(r: Race, slotOf: (c: Candidate) => string = () => ''): Picture {
   const title = `${raceTitle(r)} - ${ELECTION_DAY[r.election]}`
-  const top = { office: OFFICE_TITLE[r.office], place: racePlace(r), date: ELECTION_DAY[r.election] }
+  const top = { office: OFFICE_TITLE[r.office], place: racePlace(r), date: ELECTION_DAY[r.election], day: ELECTION_ISO[r.election] }
   const tile = (c: Candidate): [string, string, string, string] => [c.party, c.candidate.name || noCandidateText(c), c.id, slotOf(c)]
   if (r.candidates.length <= 6) return { title, ...top, tiles: r.candidates.map(tile), more: 0 }
   const shown = r.candidates.filter(c => c.display_group === 'first').slice(0, 5)

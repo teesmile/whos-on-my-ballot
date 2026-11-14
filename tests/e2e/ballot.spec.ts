@@ -268,6 +268,50 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
     await expect(page).toHaveURL(new RegExp(`${ABA}#pu-01-01-01-001`)) // still on the page
   })
 
+  test('the picture carries a countdown worked out when shared: a sand pill on the date line before the day, nothing after it (owner, 14 Nov 2026)', async ({ page }, info) => {
+    // sand pixels in the top green band: the pill (#f0d49e) and nothing else there is sand
+    const sandInTop = (bytes: number[]) => page.evaluate(async (bytes) => {
+      const img = await createImageBitmap(new Blob([new Uint8Array(bytes)], { type: 'image/png' }))
+      const c = document.createElement('canvas')
+      c.width = img.width
+      c.height = img.height
+      const g = c.getContext('2d')!
+      g.drawImage(img, 0, 0)
+      // only the band's own rows: from the top while the row's first pixel is green
+      const all = g.getImageData(0, 0, c.width, c.height).data
+      let end = 0
+      while (all[end * c.width * 4 + 1] > all[end * c.width * 4] + 40) end++
+      const d = all.subarray(0, end * c.width * 4)
+      let n = 0
+      for (let i = 0; i < d.length; i += 4) if (Math.abs(d[i] - 240) < 10 && Math.abs(d[i + 1] - 212) < 10 && Math.abs(d[i + 2] - 158) < 10) n++
+      return n
+    }, bytes)
+    const shareAt = async (when: string) => {
+      await page.clock.setFixedTime(new Date(when))
+      await page.goto('about:blank') // a fresh page each time, so the share record starts empty
+      await page.goto(`${ABA}#pu-01-01-01-001`)
+      const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
+      await share.getByRole('button', { name: 'Share', exact: true }).click()
+      await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(1)
+      const [s] = await page.evaluate(() => (window as unknown as { shared: { bytes: number[] }[] }).shared)
+      return s.bytes
+    }
+    await fakeShareSheet(page, true)
+    const before = await shareAt('2026-11-14T12:00:00+01:00') // 63 days to go
+    expect(await sandInTop(before)).toBeGreaterThan(5000)
+    const p = await pictureCheck(page, before)
+    expect([p.w, p.h]).toEqual([1080, 1920])
+    expect(Math.abs(p.top.above - p.top.below), JSON.stringify(p.top)).toBeLessThan(24)
+    fs.writeFileSync(info.outputPath('share-countdown.png'), Buffer.from(before))
+    await info.attach('share-countdown', { path: info.outputPath('share-countdown.png'), contentType: 'image/png' })
+    const today = await shareAt('2027-01-16T08:00:00+01:00') // election day is today
+    expect(await sandInTop(today)).toBeGreaterThan(5000)
+    fs.writeFileSync(info.outputPath('share-election-day.png'), Buffer.from(today))
+    await info.attach('share-election-day', { path: info.outputPath('share-election-day.png'), contentType: 'image/png' })
+    const after = await shareAt('2027-01-17T08:00:00+01:00') // passed: the date alone
+    expect(await sandInTop(after)).toBe(0)
+  })
+
   test('where files can’t be shared, WhatsApp opens with the caption and the home page; Copy link copies this page, without the polling unit', async ({ page, context }) => {
     await context.grantPermissions(['clipboard-read', 'clipboard-write'])
     await fakeShareSheet(page, false)
