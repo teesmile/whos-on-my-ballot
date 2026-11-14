@@ -120,10 +120,21 @@ def _size(path) -> tuple[int, int]:
     return int(w), int(h)
 
 
+PRESIDENT_RACE = "jan-2027-president"
+SHEET_OFFICES = ("president", "governor")  # races shown first on a ballot page: their photos share the page's one image
+
+
+def race_of(candidate_id: str) -> str:
+    """'feb-2027-governor-kano-apc' -> 'feb-2027-governor-kano' (a candidate's ID is its race's ID and its party)."""
+    return candidate_id.rsplit("-", 1)[0]
+
+
 def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
-    """One image holding every party logo in a row of SIZE-pixel square cells and, under them, every approved candidate photo
-    (D-064, D-065) in a row of PHOTO_SIZE-pixel cells, so a ballot page makes one image request instead of one per party.
-    Its name carries its hash, so it can be cached for a year and a change is never served stale."""
+    """One image per page (D-043, D-071): every party logo in a row of SIZE-pixel square cells and, under them, the approved
+    photos of the race a ballot page shows first, in a row of PHOTO_SIZE-pixel cells. A 16 January page uses the President
+    image (`file`); a 6 February page its state's governorship image (`sheets`), or the logos alone (`logo_file`) when that
+    race has no photo. So a ballot page's first view makes one image request, and a page never downloads photos it doesn't
+    show first. Each name carries its hash, so it can be cached for a year and a change is never served stale."""
     manifest = json.loads(MANIFEST.read_text())
     logos: list[tuple[str, Path]] = []
     for acronym, m in sorted(manifest.items()):
@@ -131,13 +142,13 @@ def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
         if _sha256(raw.read_bytes()) != m["source_sha256"]:
             raise ValueError(f"{acronym}: stored original changed since it was downloaded")
         logos.append((acronym, raw))
-    photos = sorted(photo_cells.items())
+    by_race: dict[str, list[tuple[str, object]]] = {}
+    for cid, cell in sorted(photo_cells.items()):
+        by_race.setdefault(race_of(cid), []).append((cid, cell))
     tmp = LOGO_DIR / "_cells"
     tmp.mkdir(exist_ok=True)
-    rows: list[str] = []
-    for kind, items in (("logo", logos), ("photo", photos)):
-        if not items:
-            continue
+
+    def row(kind: str, items: list) -> Path:
         parts = []
         for i, (_key, src) in enumerate(items):
             cell = tmp / f"{kind}-{i:03d}.png"
@@ -147,37 +158,53 @@ def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
             else:
                 _gm(str(src), "-resize", f"{PHOTO_SIZE}x{PHOTO_SIZE}!", "-strip", f"png:{cell}")
             parts.append(str(cell))
-        row = tmp / f"row-{kind}.png"
-        _gm(*parts, "+append", f"png:{row}")
-        rows.append(str(row))
+        out = tmp / f"row-{kind}-{len(list(tmp.glob('row-*')))}.png"
+        _gm(*parts, "+append", f"png:{out}")
         for c in parts:
             Path(c).unlink()
-    for old in [*LOGO_DIR.glob("sprite-*.webp"), *LOGO_DIR.glob("logos-*.webp")]:
+        return out
+
+    def write(rows: list[Path], prefix: str) -> tuple[Path, str]:
+        staging = LOGO_DIR / f"_{prefix}.webp"
+        if len(rows) == 1:
+            _gm(str(rows[0]), "-quality", str(QUALITY), f"webp:{staging}")
+        else:
+            _gm(*map(str, rows), "-background", "white", "-append", "-quality", str(QUALITY), f"webp:{staging}")
+        digest = _sha256(staging.read_bytes())
+        out = LOGO_DIR / f"{prefix}-{digest[:10]}.webp"
+        staging.rename(out)
+        return out, digest
+
+    for old in [*LOGO_DIR.glob("sprite-*.webp"), *LOGO_DIR.glob("logos-*.webp"), *LOGO_DIR.glob("sheet-*.webp")]:
         old.unlink()
-    staging = LOGO_DIR / "sprite.webp"
-    _gm(*rows, "-background", "white", "-append", "-quality", str(QUALITY), f"webp:{staging}")
-    # The logos row alone, the same geometry, for pages that show a logo but no photo card (a candidate page, whose own
-    # photo is a separate file), so they don't download every photo too.
-    logo_staging = LOGO_DIR / "logos.webp"
-    _gm(rows[0], "-quality", str(QUALITY), f"webp:{logo_staging}")
-    for r in rows:
-        Path(r).unlink()
+    logo_row = row("logo", logos)
+    # The logos alone, the same geometry: for a page whose first race has no photo, and for candidate pages (whose own
+    # photo is a separate file).
+    logo_out, _ = write([logo_row], "logos")
+    pres = by_race.pop(PRESIDENT_RACE, [])
+    main_rows = [logo_row] + ([row("photo", pres)] if pres else [])
+    main_out, digest = write(main_rows, "sprite")
+    sheets = {}
+    for race_id, items in sorted(by_race.items()):
+        f, d = write([logo_row, row("photo", items)], "sheet")
+        sheets[race_id] = {"file": f"logos/{f.name}", "width": max(SIZE * len(logos), PHOTO_SIZE * len(items)),
+                           "height": SIZE + PHOTO_SIZE, "bytes": f.stat().st_size, "sha256": d,
+                           "photos": {k: i for i, (k, _) in enumerate(items)}}
+    for r in tmp.glob("*"):
+        r.unlink()
     tmp.rmdir()
-    digest = _sha256(staging.read_bytes())
-    out = LOGO_DIR / f"sprite-{digest[:10]}.webp"
-    staging.rename(out)
-    logo_digest = _sha256(logo_staging.read_bytes())
-    logo_out = LOGO_DIR / f"logos-{logo_digest[:10]}.webp"
-    logo_staging.rename(logo_out)
-    width = max(SIZE * len(logos), PHOTO_SIZE * len(photos))
     sprite = {
-        "file": f"logos/{out.name}", "logo_file": f"logos/{logo_out.name}", "logo_width": SIZE * len(logos), "cell": SIZE, "photo_cell": PHOTO_SIZE, "photo_y": SIZE, "width": width,
-        "height": SIZE + (PHOTO_SIZE if photos else 0), "bytes": out.stat().st_size, "sha256": digest,
+        "file": f"logos/{main_out.name}", "logo_file": f"logos/{logo_out.name}", "logo_width": SIZE * len(logos),
+        "logo_bytes": logo_out.stat().st_size, "cell": SIZE, "photo_cell": PHOTO_SIZE, "photo_y": SIZE,
+        "width": max(SIZE * len(logos), PHOTO_SIZE * len(pres)), "height": SIZE + (PHOTO_SIZE if pres else 0),
+        "bytes": main_out.stat().st_size, "sha256": digest,
         "logos": {k: i for i, (k, _) in enumerate(logos)},
-        "photos": {k: i for i, (k, _) in enumerate(photos)},
+        "photos": {k: i for i, (k, _) in enumerate(pres)},
+        "sheets": sheets,
     }
     SPRITE.write_text(json.dumps(sprite, indent=1) + "\n")
-    log(f"sprite: {len(logos)} logos, {len(photos)} photos, {sprite['bytes']} bytes -> {out.name}")
+    log(f"sprite: {len(logos)} logos, {len(pres)} presidential photos, {sprite['bytes']} bytes -> {main_out.name}; "
+        f"{len(sheets)} race images, {sum(len(v['photos']) for v in sheets.values())} photos")
     return sprite
 
 
@@ -199,4 +226,8 @@ def check_logos(parties_on_ballots: set[str]) -> list[str]:
         errors.append("the logo sprite is missing or changed since it was built")
     if not (GENERATED_DIR / sprite.get("logo_file", "-")).exists():
         errors.append("the logos-only sprite is missing: run `ballot-pipeline assets`")
+    for race_id, sh in sprite.get("sheets", {}).items():
+        f = GENERATED_DIR / sh["file"]
+        if not f.exists() or _sha256(f.read_bytes()) != sh["sha256"]:
+            errors.append(f"the image for {race_id} is missing or changed since it was built")
     return errors

@@ -206,11 +206,13 @@ async function pictureCheck(page: Page, bytes: number[]) {
       return true
     }
     const outside: number[] = []
-    for (let y = 0; y < 164; y += 2) if (!plain(y)) outside.push(y)
-    for (let y = 1920 - 2; y >= 1920 - 46; y -= 2) if (!plain(y)) outside.push(y)
+    for (let y = 0; y < 80; y += 2) if (!plain(y)) outside.push(y)
+    for (let y = 1920 - 2; y >= 1920 - 80; y -= 2) if (!plain(y)) outside.push(y)
     // Each green band: the rows from the edge whose first pixel is the band's colour; the words' rows and columns inside it.
     const same = (o: number, q: number) => [0, 1, 2].every(k => Math.abs(data[o + k] - data[q + k]) <= 12)
-    const inBand = (y: number) => same(y * c.width * 4, 0)
+    // a band row starts with green (the bands are a gradient, so no one colour)
+    const green = (o: number) => data[o + 1] > data[o] + 40 && data[o + 1] > data[o + 2] + 10
+    const inBand = (y: number) => green(y * c.width * 4)
     const words = (from: number, to: number) => {
       let [y0, y1, x0, x1] = [Infinity, -1, Infinity, -1]
       for (let y = from; y < to; y++) {
@@ -229,7 +231,7 @@ async function pictureCheck(page: Page, bytes: number[]) {
     let topEnd = 0
     while (inBand(topEnd)) topEnd++
     let footStart = c.height - 1
-    while (same((footStart - 1) * c.width * 4, (c.height - 1) * c.width * 4)) footStart--
+    while (inBand(footStart - 1)) footStart--
     return { w: img.width, h: img.height, outside, top: words(0, topEnd), foot: words(footStart, c.height) }
   }, bytes)
 }
@@ -255,7 +257,7 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
       expect(s.text).toBe('Check who is on your ballot:\nhttps://whosonmyballot.ng/')
       const p = await pictureCheck(page, s.bytes)
       expect([p.w, p.h]).toEqual([1080, 1920])
-      expect(p.outside, 'the top 164 rows and the bottom 46 rows hold no words').toEqual([])
+      expect(p.outside, 'the top 80 rows and the bottom 80 rows hold no words').toEqual([])
       // the words in each band are centred in it, up and down (within the glyphs' own ascent and descent) and across
       expect(Math.abs(p.top.above - p.top.below), JSON.stringify(p.top)).toBeLessThan(24)
       expect(Math.abs(p.foot.above - p.foot.below), JSON.stringify(p.foot)).toBeLessThan(16)
@@ -316,20 +318,32 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
     await expect(tile).toBeHidden()
   })
 
-  test('race tabs are three equal boxes with the count in a true circle', async ({ page }) => {
-    for (const width of [360, 390, 1280]) {
-      await page.setViewportSize({ width, height: 800 })
-      await page.goto(ABA)
-      const boxes = await page.locator('.race-tabs a').evaluateAll(as => as.map((a) => {
-        const r = a.getBoundingClientRect()
-        const c = a.querySelector('.tab-count')!.getBoundingClientRect()
-        return { w: Math.round(r.width), h: Math.round(r.height), cw: Math.round(c.width), ch: Math.round(c.height), wraps: a.querySelector('.tab-name')!.getClientRects().length }
-      }))
-      for (const b of boxes) {
-        expect(b.w, `${width}`).toBe(boxes[0].w)
-        expect(b.h).toBe(boxes[0].h)
-        expect(b.cw).toBe(b.ch)
-        expect(b.wraps).toBe(1)
+  test('race tabs are equal boxes with the count in a true circle, the same 8 px gap after every label, nothing outside its box', async ({ page }) => {
+    for (const url of [ABA, '/ballot-feb/abia/umuahia-central-or-umuahia-east-or-umuahia-north/']) {
+      for (const width of [320, 360, 390, 1280]) {
+        await page.setViewportSize({ width, height: 800 })
+        await page.goto(url)
+        const boxes = await page.locator('.race-tabs a').evaluateAll(as => as.map((a) => {
+          const r = a.getBoundingClientRect()
+          const li = a.parentElement!.getBoundingClientRect()
+          const c = a.querySelector('.tab-count')!.getBoundingClientRect()
+          const range = document.createRange()
+          range.selectNodeContents(a.querySelector('.tab-name')!)
+          const t = range.getBoundingClientRect()
+          return {
+            w: Math.round(r.width), h: Math.round(r.height), cw: Math.round(c.width), ch: Math.round(c.height),
+            wraps: a.querySelector('.tab-name')!.getClientRects().length, gap: Math.round(c.left - t.right),
+            inside: t.left >= r.left && c.right <= r.right && r.width <= li.width + 0.5,
+          }
+        }))
+        for (const b of boxes) {
+          expect(b.w, `${url} ${width}`).toBe(boxes[0].w)
+          expect(b.h).toBe(boxes[0].h)
+          expect(b.cw).toBe(b.ch)
+          expect(b.wraps).toBe(1)
+          expect(b.gap, `${url} ${width}`).toBe(8)
+          expect(b.inside, `${url} ${width}`).toBe(true)
+        }
       }
     }
   })

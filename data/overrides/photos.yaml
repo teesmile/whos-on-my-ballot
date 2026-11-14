@@ -1,5 +1,6 @@
-# Candidate photos (owner decisions D-064 and D-065): presidential candidates only, from the candidate's own verified official
-# account, their campaign or party website, or Wikimedia Commons; never a news site or agency. Each entry: where it came from
+# Candidate photos (owner decisions D-064, D-065, D-069, D-071): any race, only from a source that clearly carries authority:
+# Wikimedia Commons where the file names the person, the candidate's or party's own official website, or an official government
+# or legislature page that names them; never a news site, agency or unverified account. Each entry: where it came from
 # in the source's own words (`source`), the page and the direct file, its SHA-256, the licence where one exists, when it was taken or posted, when we retrieved it, and a square crop box
 # [x, y, size, size] in source pixels, chosen so every face sits at the same size (a negative x or y is padded with the
 # picture's own edge colour).
@@ -108,3 +109,279 @@ people:
     retrieved: '2026-11-11'
     crop: [679, 386, 777, 777]
     owner_approved: '2026-11-11'  # contact sheet option ZLP
+  - candidate_id: feb-2027-governor-abia-lp
+    source: Candidate's own official website (alexotti.com)
+    file_page: https://www.alexotti.com/about-us/
+    file_url: https://www.alexotti.com/wp-content/uploads/2024/02/IMG-20240216-WA0001.jpg
+    sha256: 63aea0bd4d96a876fb0e4729f66e239f5c79a7e8cd9d238d9dc84faae9840cf1
+    retrieved: '2026-11-13'
+    crop: [204, 113, 528, 528]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-akwa-ibom-apc
+    source: Akwa Ibom State Government website
+    file_page: https://akwaibomstate.gov.ng/executive-council/pastor-umo-eno/
+    file_url: https://akwaibomstate.gov.ng/wp-content/uploads/2023/07/UE-2023-Official.webp
+    sha256: 43e9361739929fa418cdf5a11f423e5c26633c639b722fdcac38388f71b7646c
+    retrieved: '2026-11-13'
+    crop: [327, 59, 1068, 1068]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-benue-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Revd._Fr._Dr._Hyacinth_Alia_Ph.D.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/c/ce/Revd._Fr._Dr._Hyacinth_Alia_Ph.D.jpg
+    sha256: c76cf69bceb143900e534024041751b627ae1a732f58e6d105da8e1ac7b39deb
+    author: "Leon TRR"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2021'
+    retrieved: '2026-11-13'
+    crop: [140, 14, 396, 396]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-benue-ndc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Terhemba_Shija.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/2/29/Terhemba_Shija.jpg
+    sha256: bc2f33a475bc8f9a8225e78c285360a8344bbb4e9baa4e395be8ca9857cc91a0
+    author: "Fred Timbee"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2020'
+    retrieved: '2026-11-13'
+    crop: [113, 73, 548, 548]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-cross-river-apc
+    source: Cross River State Government website
+    file_page: https://crossriverstate.gov.ng/governor-profile
+    file_url: https://crossriverstate.gov.ng/assets/governor-f59eb953.png
+    sha256: f59eb9535ad98230bf96e03c820c412156ee2d022a1488fda9fc68024a28e84e
+    retrieved: '2026-11-13'
+    crop: [365, 67, 1217, 1217]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-delta-apc
+    source: Delta State Government website
+    file_page: https://deltastate.gov.ng/oborevwori-2/
+    file_url: https://deltastate.gov.ng/wp-content/uploads/2024/02/His_Excellency_Rt._Hon._Sherrif_Oborevwori29-May-2023-%E2%80%93-Date.jpg
+    sha256: 409eb6488d4fff27da2cc7a57c2dff5ebb4d4995bfdd6a57ada935d20bc4f9fe
+    retrieved: '2026-11-13'
+    crop: [405, 109, 1350, 1350]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-delta-ndc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Chris_Iyovwaye.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/1/19/Chris_Iyovwaye.jpg
+    sha256: 8ec9f92b586fb21b06c19e1c78294465b62cce13c07b2426e7a4cb4f05a8e39c
+    author: "Murpash1"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2023'
+    retrieved: '2026-11-13'
+    crop: [221, 0, 702, 702]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-ebonyi-apc
+    source: Ebonyi State Government website
+    file_page: https://ebonyistate.gov.ng/executive/governor
+    file_url: https://ebonyistate.gov.ng/assets/img/gov/ggg.png
+    sha256: fa2227f067f0c81724e506c8644d2a7cd43c2b872ae71253fa0d64426f37774a
+    retrieved: '2026-11-13'
+    crop: [0, 33, 290, 290]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-enugu-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Ndubuisi_Mbah.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/c/c0/Ndubuisi_Mbah.jpg
+    sha256: 27d9bac571381ab6e4e708c161e9594ab9cb52b282362f9c91229adc003eefb7
+    author: "Mba Joshua Chidiebere"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2022'
+    retrieved: '2026-11-13'
+    crop: [79, 28, 574, 574]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-enugu-ndc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Sir_Christian_Chinyeaka_Ohaa.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/b/ba/Sir_Christian_Chinyeaka_Ohaa.jpg
+    sha256: 0e05efb04822ca8654cbed5dc4ec28bf692c5ea753eff747c6f784514490b464
+    author: "Ccohaa"
+    licence: CC0 1.0
+    licence_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    taken: '2021'
+    retrieved: '2026-11-13'
+    crop: [154, 0, 614, 614]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-gombe-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Jamil_Isiyaku_Gwamna.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/9/9f/Jamil_Isiyaku_Gwamna.jpg
+    sha256: 2b97ba685660cd7fc96835f3666fbed0e6a32342e32762f48edb6b50f1fa2cda
+    author: "Jamilgwamna"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2022'
+    retrieved: '2026-11-13'
+    crop: [262, 2, 450, 450]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-jigawa-adc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Nakudu_2023.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Nakudu_2023.jpg
+    sha256: 153734a6f9782c42a269b4ae5d5d12e5642496f5fc8a01d2c2c690564e996c25
+    author: "Mohammedadu"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2023'
+    retrieved: '2026-11-13'
+    crop: [198, 167, 260, 260]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-jigawa-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Umar_Namadi.png
+    file_url: https://upload.wikimedia.org/wikipedia/commons/b/bf/Umar_Namadi.png
+    sha256: 29cdfef06a11fa5faaae65e213d3eb4c108c382c4ca6a60fcaafc8627fd04285
+    author: "Mgujungu"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2022'
+    retrieved: '2026-11-13'
+    crop: [43, 18, 308, 308]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-kaduna-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Mal_Uba_Sani.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/e/ec/Mal_Uba_Sani.jpg
+    sha256: 0e308fccdaf553eb0a236bf6fdb3a71bfdf117af19b00a49868431fb93f6e5d5
+    author: "Umar A Muhammad"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2023'
+    retrieved: '2026-11-13'
+    crop: [104, 28, 285, 285]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-kano-apc
+    source: Kano State Government website
+    file_page: https://kanostate.gov.ng/
+    file_url: https://kanostate.gov.ng/wp-content/uploads/2020/07/1-Kano_State_Governor.jpg
+    sha256: 92b829d96ba98143c8b68a7007f07fa201bd7aa26de28a045754fe16d15fb419
+    retrieved: '2026-11-13'
+    crop: [93, 17, 480, 480]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-kwara-pdp
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Sulaiman_Bolakale_Kawu.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Sulaiman_Bolakale_Kawu.jpg
+    sha256: dc39460212a2717f5ec37f8b973998eeab6d23f28fe71241b01dcbaaa77588b1
+    author: "Alayeomolomo"
+    licence: CC0 1.0
+    licence_url: http://creativecommons.org/publicdomain/zero/1.0/
+    taken: '2026'
+    retrieved: '2026-11-13'
+    crop: [1277, 653, 4742, 4742]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-lagos-apc
+    source: Lagos State Government website
+    file_page: https://lagosstate.gov.ng/elected_officials/deputy_governor/view
+    file_url: https://res.cloudinary.com/dirmxkznt/image/upload/v1738007047/dr.kadriobafemihamzat.jpg
+    sha256: 9a9850110f3aee562ef2d25cea58b0f8e64cfa68b912e02791df20979cec4e37
+    retrieved: '2026-11-13'
+    crop: [86, 169, 634, 634]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-lagos-ndc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Funso_Doherty.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/f/ff/Funso_Doherty.jpg
+    sha256: 0fc5fe1f72ef1e4cd1737bb826aacec42c48965b298e6ec5670a3cb0c53dae7c
+    author: "Itsmrtaiwo"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2022'
+    retrieved: '2026-11-13'
+    crop: [1107, 475, 2213, 2213]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-niger-sdp
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Mohammed_Ndarani_Mohammed.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/9/90/Mohammed_Ndarani_Mohammed.jpg
+    sha256: df9899ddf3a67f9004c597ddd73f53979905a30e92b6f31a1ddc4c30b8358470
+    author: "Mohammed Ndarani Mohammed (SAN)"
+    licence: CC0 1.0
+    licence_url: http://creativecommons.org/publicdomain/zero/1.0/
+    taken: '2026'
+    retrieved: '2026-11-13'
+    crop: [300, 432, 1800, 1800]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-ogun-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Solomo_Adeola.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/6/65/Solomo_Adeola.jpg
+    sha256: 7c4f2725d4b40279e825517b181aa0bd3f54ef3cc81a1b35b0711777a76ce061
+    author: "Kaizenify"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2016'
+    retrieved: '2026-11-13'
+    crop: [195, 8, 208, 208]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-oyo-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Sharafadeen_Alli.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/e/e3/Sharafadeen_Alli.jpg
+    sha256: 2ba2fb67173599b8623cf96805d65c1a532b039ea0e4e662ddd07c332f475f2b
+    author: "Allisay"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2025'
+    retrieved: '2026-11-13'
+    crop: [98, 57, 508, 508]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-plateau-apc
+    source: Candidate's own official website (calebmutfwang.org)
+    file_page: https://calebmutfwang.org/
+    file_url: https://calebmutfwang.org/wp-content/uploads/2023/08/DSC_5957.jpg
+    sha256: 09d5bc419e0b6ce84009c0c50e4ec9c3afcaac20f5cbef5742e30d0d1a5d3283
+    retrieved: '2026-11-13'
+    crop: [534, 436, 2335, 2335]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-rivers-adc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Gabriel_Baritulem_Pidompson.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/c/c4/Gabriel_Baritulem_Pidompson.jpg
+    sha256: 1c81f2771c8be6ba43c6a8c83037246896359df42b4852733e58a9f56d3752f9
+    author: "Presvilla"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2026'
+    retrieved: '2026-11-13'
+    crop: [190, 31, 518, 518]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-rivers-apc
+    source: National Assembly website
+    file_page: https://nass.gov.ng/mps/single/327
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/327.jpg
+    sha256: 7f05be69890232fd45538dd03c1fd0e0dc78f8ee619f2f7211b426ad42645448
+    retrieved: '2026-11-13'
+    crop: [96, 30, 224, 224]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-sokoto-apc
+    source: Sokoto State Government website
+    file_page: https://sokotostate.gov.ng/the-government/executives/governors-office/
+    file_url: https://sokotostate.gov.ng/wp-content/uploads/2023/05/WhatsApp-Image-2023-05-29-at-5.58.54-AM.jpeg
+    sha256: 623bfe6b1adb7915add69e8667867df26a46b26a48cc7aca14983b3fccce80cc
+    retrieved: '2026-11-13'
+    crop: [244, 154, 548, 548]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-taraba-apc
+    source: Taraba State Government website
+    file_page: https://www.tarabastate.gov.ng/government
+    file_url: https://www.tarabastate.gov.ng/assets/government/dr-agbu-kefas.jpg
+    sha256: f7ef060ff60d261ff010e85e42de835af3aa75beac76fc6862d0f204e9ca06ff
+    retrieved: '2026-11-13'
+    crop: [165, 61, 465, 465]
+    owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: feb-2027-governor-zamfara-apc
+    source: Zamfara State Government website
+    file_page: https://zamfara.gov.ng/office-of-the-governor/
+    file_url: https://zamfara.gov.ng/wp-content/uploads/2023/08/IMG-20230809-WA0009.jpg
+    sha256: 4862dc5a1458c51bfa7754e93899a3f10da538fa1ae831c6ef5bdbf6816f956e
+    retrieved: '2026-11-13'
+    crop: [194, 156, 635, 635]
+    owner_approved: '2026-11-13'  # governor contact sheet 1

@@ -383,24 +383,28 @@ describe('WhatsApp’s glyph (owner’s brand download, 11 Nov 2026)', () => {
   })
 })
 
-describe('candidate photos (owner decisions D-064, D-065)', () => {
+describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
   const approved = new Set(Object.keys(JSON.parse(fs.readFileSync(path.resolve('data/generated/photos.json'), 'utf8')).people as object))
-  it('a photo appears only for a presidential candidate whose face the owner approved', () => {
-    const pres = presidentialRace()
-    for (const c of pres.candidates) {
-      const page = html(`c/${c.id}`)
-      if (approved.has(c.id)) expect(page, c.id).toMatch(/<div class="profile-photo"><img src="\/photos\/[^"]+\.webp"/)
-      else expect(page, c.id).toContain('<div class="profile-photo"><span class="photo ph" aria-hidden="true"></span></div>')
-    }
-    for (const r of [...races().filter(x => x.office !== 'president').slice(0, 20), ...febRaces().slice(0, 20)]) {
-      const page = html(`c/${r.candidates[0].id}`)
-      expect(page, r.id).not.toContain('<div class="profile-photo"><img')
-      // everyone without a photo has the same placeholder
-      expect(page, r.id).toContain('<div class="profile-photo"><span class="photo ph" aria-hidden="true"></span></div>')
+  it('a photo appears only where the owner approved the face; everyone else has the same placeholder', () => {
+    for (const r of [presidentialRace(), ...races().filter(x => x.office !== 'president').slice(0, 20), ...febRaces()]) {
+      for (const c of r.candidates) {
+        const page = html(`c/${c.id}`)
+        if (approved.has(c.id)) expect(page, c.id).toMatch(/<div class="profile-photo"><img src="\/photos\/[^"]+\.webp"/)
+        else expect(page, c.id).toContain('<div class="profile-photo"><span class="photo ph" aria-hidden="true"></span></div>')
+      }
     }
   })
+  it('a ballot page draws its logos and its first race\'s photos from one image: the President\'s on 16 January, the state\'s governorship image on 6 February', () => {
+    const s = JSON.parse(fs.readFileSync(path.resolve('data/generated/sprite.json'), 'utf8')) as { file: string, logo_file: string, sheets: Record<string, { file: string }> }
+    const imgs = (page: string) => new Set([...page.matchAll(/<image href="([^"]+)"/g)].map(m => m[1]))
+    expect([...imgs(html('ballot/abia/aba-north-aba-south--abia-south'))]).toEqual([`/${s.file}`])
+    expect([...imgs(html('ballot-feb/kano/bichi'))]).toEqual([`/${s.sheets['feb-2027-governor-kano'].file}`])
+    expect([...imgs(html('ballot-feb/osun/ayedade'))]).toEqual([`/${s.logo_file}`]) // no governorship on 6 February
+    const kano = html('ballot-feb/kano/bichi')
+    expect(kano).toMatch(/data-candidate-id="feb-2027-governor-kano-apc"[\s\S]*?<svg class="photo"/)
+  })
   it('no credit on the candidate page; the full credit for each photo is in one list at the end of the About page', () => {
-    expect(approved.size).toBe(10)
+    expect(approved.size).toBe(37)
     const about = html('about')
     const credits = about.slice(about.indexOf('<h2 id="photo-credits">Photo credits</h2>'))
     expect(credits.match(/<h2/g)?.length, 'Photo credits is the last section').toBe(1)
@@ -421,7 +425,7 @@ describe('candidate photos (owner decisions D-064, D-065)', () => {
   it('the About page says where photos come from and that a candidate or party can send an official one', () => {
     const about = html('about')
     expect(about).toContain('<h2 id="photos">Photos</h2>')
-    expect(about).toMatch(/official account, their campaign or party website, or\s+Wikimedia Commons/)
-    expect(about).toMatch(/A candidate or party can send an official\s+photo to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Official%20photo">/)
+    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, or an official government or legislature page/)
+    expect(about).toMatch(/A candidate or party can send an official photo to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Official%20photo">/)
   })
 })

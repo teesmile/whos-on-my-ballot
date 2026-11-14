@@ -1,5 +1,6 @@
-"""Candidate photos (owner decisions D-064 and D-065): presidential candidates only, each taken from the candidate's own official
-account, their campaign or party website, or Wikimedia Commons, and credited with where it came from. A photo appears only
+"""Candidate photos (owner decisions D-064, D-065, D-069, D-071): any race, each from a source that clearly carries authority
+(Wikimedia Commons where the file names the person, the candidate's or party's own official website, or an official government
+or legislature page that names them), and credited with where it came from. A photo appears only
 after the owner has approved that face on a contact sheet (`owner_approved` in the yaml); everyone else shows the same
 neutral placeholder.
 
@@ -138,15 +139,20 @@ def build_photos(log=print) -> dict[str, Path]:
     return cells
 
 
-def check_photos(presidential: set[str]) -> list[str]:
-    """Only presidential candidates have photos, and only faces the owner approved (D-065)."""
+def check_photos(offices: dict[str, str]) -> list[str]:
+    """Only faces the owner approved (D-065, D-071), only of named candidates; for now only in the races a ballot page shows
+    first (President, Governor), whose photos share the page's one image. Senate, House and State Assembly photos need their
+    own on-demand files first (D-071), so the build refuses them until those exist. `offices` maps candidate ID to office."""
     if not PHOTOS_JSON.exists():
         return ["no photos.json: run `ballot-pipeline assets`"]
     people = json.loads(PHOTOS_JSON.read_text())["people"]
     errors = []
-    extra = set(people) - presidential
-    if extra:
-        errors.append(f"photos (D-065): only presidential candidates may have one; not {sorted(extra)}")
+    unknown = sorted(set(people) - set(offices))
+    if unknown:
+        errors.append(f"photos: no named candidate with these IDs: {unknown}")
+    later = sorted(c for c in people if c in offices and offices[c] not in ("president", "governor"))
+    if later:
+        errors.append(f"photos (D-071): Senate, House and State Assembly photos need their own on-demand files first: {later}")
     ok = {p["candidate_id"] for p in load()["people"] if approved(p)}
     if set(people) - ok:
         errors.append(f"photos (D-065): built without the owner's approval: {sorted(set(people) - ok)}")

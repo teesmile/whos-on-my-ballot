@@ -176,13 +176,30 @@ export const logoPngDataUrl = (party: string) => `data:image/png;base64,${fs.rea
 export const generatedBytes = (rel: string) => fs.readFileSync(path.join(DIR, rel))
 
 /**
- * One image holding every party logo (a row of `cell`-pixel squares) and every approved candidate photo (a row of
- * `photo_cell`-pixel squares at y = `photo_y`): one request per page, not one per party.
+ * The page's one image (D-043, D-071): every party logo (a row of `cell`-pixel squares) and, under it, the approved photos of
+ * the race the page shows first (a row of `photo_cell`-pixel squares at y = `photo_y`). `file` holds the President's photos,
+ * `sheets` one image per governorship race with photos, `logo_file` the logos alone.
  */
-export interface Sprite { file: string, logo_file: string, logo_width: number, cell: number, photo_cell: number, photo_y: number, width: number, height: number, bytes: number, logos: Record<string, number>, photos: Record<string, number> }
+export interface Sheet { file: string, width: number, height: number, bytes: number, photos: Record<string, number> }
+export interface Sprite extends Sheet { logo_file: string, logo_width: number, logo_bytes: number, cell: number, photo_cell: number, photo_y: number, logos: Record<string, number>, sheets: Record<string, Sheet> }
 export const sprite = (): Sprite => read<Sprite>('sprite.json')
+/** The logos alone, in the same geometry. */
+export function logosSheet(): Sheet {
+  const s = sprite()
+  return { file: s.logo_file, width: s.logo_width, height: s.cell, bytes: s.logo_bytes, photos: {} }
+}
+/**
+ * The image a race's cards draw from, the same one its ballot page shows first, so a page makes one image request: the
+ * President's for 16 January races; for 6 February races, the state's governorship image, or the logos alone without one.
+ */
+export function sheetFor(r: Pick<Race, 'office' | 'state'>): Sheet {
+  const s = sprite()
+  if (r.office === 'president' || r.office === 'senate' || r.office === 'house') return s
+  const gov = febRaces().find(x => x.office === 'governor' && x.state === r.state)
+  return (gov && s.sheets[gov.id]) || logosSheet()
+}
 
-/** A presidential candidate's photo, approved face by face by the owner (D-064, D-065), and where it came from. */
+/** A candidate's photo, approved face by face by the owner (D-065, D-071), and where it came from. */
 export interface Photo {
   page: string
   page_size: number
@@ -202,7 +219,7 @@ export function allPhotos(): Record<string, Photo> {
   photos ??= read<{ people: Record<string, Photo> }>('photos.json').people
   return photos
 }
-/** The candidate's photo, or null (the neutral placeholder): only presidential candidates, only approved faces (D-065). */
+/** The candidate's photo, or null (the neutral placeholder): only approved faces (D-065, D-071). */
 export const photo = (candidateId: string): Photo | null => allPhotos()[candidateId] ?? null
 /** For the share picture: the photo's larger copy (loaded only when someone shares), or '' for no photo. */
 export const sharePhoto = (c: Candidate): string => { const p = photo(c.id); return p ? `/${p.share}` : '' }

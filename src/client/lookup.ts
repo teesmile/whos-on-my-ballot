@@ -28,6 +28,7 @@ import {
   tabFromHash,
   hashWithTab,
 } from '../lib/core'
+import { NO_CANDIDATE } from '../lib/share'
 
 const cache = new Map<string, Promise<StateSearchData>>()
 
@@ -404,11 +405,14 @@ function contain(g: CanvasRenderingContext2D, img: HTMLImageElement, x: number, 
   g.drawImage(img, left ? x : x + (w - dw) / 2, y + (h - dh) / 2, dw, dh)
 }
 
-// The words in each green band are centred in it, up and down and across (owner feedback, 13 Nov 2026). The bands are sized
-// so that the words stay clear of WhatsApp Status's controls on phones taller than 16:9, where the picture is letterboxed:
-// nothing of the picture's top 170 or bottom 190 rows carries text. (On a 16:9 screen the progress bar, name and reply bar
-// overlay the picture's edges and may touch the band text; the grid, the site's name and its address stay clear.)
-const PICTURE = { W: 1080, H: 1920, bandPad: 170, foot: 190, side: 60 }
+// The words in each green band are centred in it, up and down and across (owner feedback, 13 Nov 2026). Each band keeps at
+// least `pad` rows of plain green between its words and the picture's edge, clear of WhatsApp Status's controls on phones
+// taller than 16:9, where the picture is letterboxed. (On a 16:9 screen the progress bar, name and reply bar overlay the
+// picture's edges and may touch the band words; the candidates stay clear.)
+const PICTURE = { W: 1080, H: 1920, pad: 84, side: 48, gap: 22, maxTile: 440 }
+// The bands' green (owner feedback, 13 Nov 2026): richer and deeper than the page's, a subtle top-to-bottom gradient within
+// Nigeria's green and a soft white highlight across the top of each band, so it stays vivid after WhatsApp re-encodes it.
+const BAND = { top: '#00904f', bottom: '#005f36', shine: 'rgba(255, 255, 255, 0.16)' }
 // PNG, exactly 1080 x 1920. Tested against a quality-95 JPEG on 11 Nov 2026 (D-060): after the kind of re-encoding WhatsApp
 // applies to Status pictures, the PNG source kept about 1.2 dB more detail, and the JPEG was only 7% smaller.
 const EXPORT = { type: 'image/png', quality: 1, name: 'whos-on-my-ballot.png' }
@@ -431,15 +435,30 @@ function placeholder(g: CanvasRenderingContext2D, x: number, y: number, s: numbe
   g.fill()
 }
 
+/** A green band from y0 to y1: a deep gradient, and a soft highlight fading out over its upper part. */
+function band(g: CanvasRenderingContext2D, W: number, y0: number, y1: number) {
+  const base = g.createLinearGradient(0, y0, 0, y1)
+  base.addColorStop(0, BAND.top)
+  base.addColorStop(1, BAND.bottom)
+  g.fillStyle = base
+  g.fillRect(0, y0, W, y1 - y0)
+  const shine = g.createLinearGradient(0, y0, 0, y0 + (y1 - y0) * 0.55)
+  shine.addColorStop(0, BAND.shine)
+  shine.addColorStop(1, 'rgba(255, 255, 255, 0)')
+  g.fillStyle = shine
+  g.fillRect(0, y0, W, (y1 - y0) * 0.55)
+}
+
 /**
  * The share picture: exactly 1080 x 1920. A green band at the top (the office, where, and the date), a white middle holding
- * the site's card grid (two columns, three rows), the site's name and its address, large, and a short green band hugging the
- * bottom edge with the affiliation line in white. Each tile: the party's logo over its acronym and the candidate's photo (or the
- * same plain placeholder as the site) side by side in the middle, and the name beneath. Drawn from the full-size
- * logos and photos (never the page's small sprite), loaded only now.
+ * the card grid (two columns, three rows of equal square tiles), and a green band at the bottom with the site's address,
+ * large, and the affiliation line, both in white. Each tile: the party's logo over its acronym at the left and the
+ * candidate's photo (or the same plain placeholder as the site) at the right, the same height and the same padding from
+ * their sides; the name centred beneath, one size for every name. Drawn from the full-size logos and photos (never the
+ * page's small sprite), loaded only now.
  */
 async function drawPicture(d: ShareInfo): Promise<File> {
-  const { W, H, bandPad, foot: footH, side } = PICTURE
+  const { W, H, pad, side, gap, maxTile } = PICTURE
   const canvas = el('canvas')
   canvas.width = W
   canvas.height = H
@@ -455,24 +474,34 @@ async function drawPicture(d: ShareInfo): Promise<File> {
   g.textBaseline = 'top'
   g.textAlign = 'center'
 
-  // Top band: the office (the site's mark beside it), then where (constituency and state) and the date, every line centred
-  // across the picture, and the block centred up and down in the band. Never cut off.
-  const markS = 68
-  const markGap = 24
-  const office = fit(g, d.office, 900, 66, 46, W - 2 * (side + markS + markGap), 1)
-  const place = d.place ? fit(g, d.place, 800, 46, 32, W - 2 * side, 2) : { size: 0, lines: [] as string[] }
+  // The words of each band, measured first, so the tiles take every row the bands leave.
+  const markS = 64
+  const markGap = 22
+  const office = fit(g, d.office, 900, 62, 44, W - 2 * (side + markS + markGap), 1)
+  const place = d.place ? fit(g, d.place, 800, 44, 30, W - 2 * side, 2) : { size: 0, lines: [] as string[] }
   const placeLh = Math.round(place.size * 1.15)
   const rowH = Math.max(markS, office.size)
-  const textH = rowH + 14 + place.lines.length * placeLh + (place.lines.length ? 8 : 0) + 42
-  const band = bandPad + textH + bandPad
-  let y = bandPad
-  const placeY = y + rowH + 14
-  const dateY = placeY + place.lines.length * placeLh + (place.lines.length ? 8 : 0)
-  g.fillStyle = GREEN
-  g.fillRect(0, 0, W, band)
+  const dateSize = 38
+  const topText = rowH + 12 + place.lines.length * placeLh + (place.lines.length ? 6 : 0) + dateSize
+  const addr = fit(g, 'whosonmyballot.ng', 900, 92, 60, W - 2 * side, 1)
+  const notSize = 42
+  const footText = addr.size + 16 + notSize
+  // Square tiles, as large as the rows allow (and never wider than two columns fit), with gap rows around the grid.
+  const around = 30
+  const free = H - (topText + 2 * pad) - (footText + 2 * pad) - 2 * around - 2 * gap
+  const s = Math.floor(Math.min(maxTile, free / 3, (W - 2 * side - gap) / 2))
+  // Whatever rows are left go to the bands, equally above and below each band's words.
+  const spare = Math.max(0, free - 3 * s) / 4
+  const topPad = pad + spare
+  const footPad = pad + spare
+  const bandH = topPad * 2 + topText
+  const foot = H - (footPad * 2 + footText)
+
+  // Top band: the office (the site's mark hanging to its left), then where and the date, each line centred.
+  band(g, W, 0, bandH)
+  let y = topPad
   g.font = `900 ${office.size}px ${FONT}`
   const ow = g.measureText(office.lines[0]).width
-  // The office is centred on its own; the mark hangs to its left, outside the centring.
   const markX = W / 2 - ow / 2 - markGap - markS
   if (mark) {
     g.fillStyle = '#fff'
@@ -483,53 +512,42 @@ async function drawPicture(d: ShareInfo): Promise<File> {
   }
   g.fillStyle = '#fff'
   g.fillText(office.lines[0], W / 2, y + (rowH - office.size) / 2 + 2)
+  y += rowH + 12
   g.font = `800 ${place.size}px ${FONT}`
-  place.lines.forEach((l, i) => g.fillText(l, W / 2, placeY + i * placeLh))
-  g.font = `700 42px ${FONT}`
-  g.fillText(d.date, W / 2, dateY)
+  place.lines.forEach((l, i) => g.fillText(l, W / 2, y + i * placeLh))
+  y += place.lines.length * placeLh + (place.lines.length ? 6 : 0)
+  g.font = `700 ${dateSize}px ${FONT}`
+  g.fillText(d.date, W / 2, y)
 
-  // Bottom: a short green band hugging the bottom edge, the affiliation line in white inside it, clear of the reply bar.
-  // Above it, with room around them, the site's name and its address, large (WhatsApp can drop the caption).
-  const foot = H - footH
-  g.fillStyle = GREEN
-  g.fillRect(0, foot, W, footH)
+  // Bottom band: the address, large, and the affiliation line, in white, centred.
+  band(g, W, foot, H)
   g.fillStyle = '#fff'
-  g.font = `700 46px ${FONT}`
-  g.textBaseline = 'middle'
-  g.fillText('Not affiliated with INEC.', W / 2, foot + footH / 2, W - 2 * side)
-  g.textBaseline = 'top'
-  g.fillStyle = GREEN
-  g.font = `900 96px ${FONT}`
-  const addrY = foot - 56 - 96
-  g.fillText('whosonmyballot.ng', W / 2, addrY, W - 2 * side)
-  g.fillStyle = INK
-  g.font = `800 50px ${FONT}`
-  const nameY = addrY - 18 - 50
-  g.fillText('Who’s on my ballot?', W / 2, nameY, W - 2 * side)
+  g.font = `900 ${addr.size}px ${FONT}`
+  g.fillText('whosonmyballot.ng', W / 2, foot + footPad, W - 2 * side)
+  g.font = `700 ${notSize}px ${FONT}`
+  g.fillText('Not affiliated with INEC.', W / 2, foot + footPad + addr.size + 16, W - 2 * side)
 
-  // Middle: the card grid, two by three, the same for every party. Each tile, with the same padding on every side: the
-  // logo over its acronym and the photo side by side as one group in the middle, an even gap between them, and the name
-  // below. One photo size, one name size and one vertical spacing for every tile.
-  const gap = 22
-  const gridTop = band + 30
-  const gridBottom = nameY - 42
-  const tw = (W - 2 * side - gap) / 2
-  const th = (gridBottom - gridTop - 2 * gap) / 3
-  const pad = 30
-  const inner = 22 // between the logo block and the photo, and between the group and the name
+  // The grid: two columns, three rows of equal squares, centred across the picture and between the bands.
+  const gridW = 2 * s + gap
+  const gridX = (W - gridW) / 2
+  const gridY = bandH + (foot - bandH - (3 * s + 2 * gap)) / 2
+  const p = Math.round(s * 0.085) // the padding inside every tile, the same on every side
+  const inner = s - 2 * p
+  // One name size for the whole picture: the largest at which the longest name fits in two lines. A ticket with no named
+  // candidate (INEC's remark instead) uses the same size and may take a third line.
+  const names = d.tiles.map(([, name]) => name).filter(t => !t.startsWith(NO_CANDIDATE))
+  const nameSize = Math.min(...(names.length ? names : d.tiles.map(([, t]) => t)).map(t => fit(g, t, 800, 40, 22, inner, 2).size))
+  const nlh = Math.round(nameSize * 1.16)
+  const nameBlock = 2 * nlh
+  // The logo block and the photo: the same height, each a square at its own side; the space left goes between them.
+  const h = Math.round(Math.min((inner - 24) / 2, inner - nameBlock - 2 * 18))
+  const acSize = Math.min(...d.tiles.map(([party]) => fit(g, party, 900, 40, 24, h, 1).size))
+  const logoH = h - 10 - acSize
   const n = d.tiles.length + (d.more ? 1 : 0)
-  const nameSize = Math.min(...d.tiles.map(([, name]) => fit(g, name, 800, 38, 28, tw - 2 * pad, 2).size))
-  g.font = `800 ${nameSize}px ${FONT}`
-  const nameLines = Math.max(...d.tiles.map(([, name]) => wrap(g, name, tw - 2 * pad).length))
-  const nlh = Math.round(nameSize * 1.14)
-  const ps = Math.min(Math.round(th - 2 * pad - inner - nameLines * nlh), Math.round((tw - 2 * pad - inner) * 0.55))
-  const contentH = ps + inner + nameLines * nlh
-  const acSize = Math.min(...d.tiles.map(([party]) => fit(g, party, 900, 44, 28, tw - 2 * pad - inner - ps, 1).size))
-  const logoH = ps - 10 - acSize
   for (let k = 0; k < n; k++) {
-    const x = side + (k % 2) * (tw + gap)
-    y = gridTop + Math.floor(k / 2) * (th + gap)
-    box(g, x, y, tw, th, 26)
+    const x = gridX + (k % 2) * (s + gap)
+    y = gridY + Math.floor(k / 2) * (s + gap)
+    box(g, x, y, s, s, 26)
     if (k < d.tiles.length) {
       const [party, name] = d.tiles[k]
       const [logo, pic] = [imgs[2 * k], imgs[2 * k + 1]]
@@ -538,41 +556,41 @@ async function drawPicture(d: ShareInfo): Promise<File> {
       g.lineWidth = 4
       g.strokeStyle = '#bdbdbd'
       g.stroke()
-      // The logo block: as wide as the logo (a wide logo may be up to 1.6 times its height) or the acronym, whichever is wider.
-      const maxLogoW = tw - 2 * pad - inner - ps
-      const lw = logo ? Math.min(maxLogoW, Math.round(logoH * Math.min(1.6, logo.naturalWidth / logo.naturalHeight))) : 0
-      g.font = `900 ${acSize}px ${FONT}`
-      const acW = Math.min(maxLogoW, g.measureText(party).width)
-      const blockW = Math.max(lw, acW)
-      const groupX = x + (tw - (blockW + inner + ps)) / 2
-      const top = y + (th - contentH) / 2
-      if (logo) contain(g, logo, groupX + (blockW - lw) / 2, top, lw, logoH)
+      const top = y + p
+      // Left: the logo, fitted in an h-wide box over its acronym.
+      if (logo) contain(g, logo, x + p, top, h, logoH)
       g.fillStyle = INK
-      g.fillText(party, groupX + blockW / 2, top + logoH + 10, maxLogoW)
-      const px = groupX + blockW + inner
+      g.font = `900 ${acSize}px ${FONT}`
+      g.fillText(party, x + p + h / 2, top + logoH + 10, h)
+      // Right: the photo, as a rounded square.
+      const px = x + s - p - h
       g.save()
-      box(g, px, top, ps, ps, 18)
+      box(g, px, top, h, h, 18)
       g.clip()
-      if (pic) g.drawImage(pic, px, top, ps, ps)
-      else placeholder(g, px, top, ps)
+      if (pic) g.drawImage(pic, px, top, h, h)
+      else placeholder(g, px, top, h)
       g.restore()
-      box(g, px, top, ps, ps, 18)
+      box(g, px, top, h, h, 18)
       g.lineWidth = 3
       g.strokeStyle = PLACEHOLDER.line
       g.stroke()
-      // The name across the tile below the group, centred, never cut off.
+      // The name, centred across the tile and in the space below the group: the same space above and below it.
       g.fillStyle = INK
       g.font = `800 ${nameSize}px ${FONT}`
-      wrap(g, name, tw - 2 * pad).forEach((l, i) => g.fillText(l, x + tw / 2, top + ps + inner + i * nlh))
+      const lines = wrap(g, name, inner)
+      const areaTop = top + h
+      const areaH = y + s - p - areaTop
+      const ny = areaTop + (areaH - lines.length * nlh) / 2
+      lines.forEach((l, i) => g.fillText(l, x + s / 2, ny + i * nlh))
     }
     else {
       g.fillStyle = '#f2f2f2'
       g.fill()
       g.fillStyle = DEEP
-      g.font = `900 120px ${FONT}`
-      g.fillText(`+${d.more}`, x + tw / 2, y + th / 2 - 100)
-      g.font = `800 48px ${FONT}`
-      g.fillText(d.more === 1 ? 'more candidate' : 'more candidates', x + tw / 2, y + th / 2 + 40, tw - 30)
+      g.font = `900 ${Math.round(s * 0.27)}px ${FONT}`
+      g.fillText(`+${d.more}`, x + s / 2, y + s / 2 - s * 0.24)
+      g.font = `800 ${Math.round(s * 0.105)}px ${FONT}`
+      g.fillText(d.more === 1 ? 'more candidate' : 'more candidates', x + s / 2, y + s / 2 + s * 0.1, s - 30)
     }
   }
   const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob(b => (b ? resolve(b) : reject(new Error('no picture'))), EXPORT.type, EXPORT.quality))

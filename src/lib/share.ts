@@ -7,7 +7,7 @@ import type { Candidate, Race } from './data'
 export const ELECTION_DAY: Record<string, string> = { 'jan-2027': '16 January 2027', 'feb-2027': '6 February 2027' }
 export const NO_CANDIDATE = 'No candidate named'
 
-const OFFICE_TITLE: Record<Race['office'], string> = {
+export const OFFICE_TITLE: Record<Race['office'], string> = {
   president: 'President',
   senate: 'Senate',
   house: 'House of Representatives',

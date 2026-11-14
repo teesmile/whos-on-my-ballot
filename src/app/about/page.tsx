@@ -6,9 +6,16 @@ import { StateGroupCite } from '@/components/RaceSection'
 import { SourceLine } from '@/components/SourceLine'
 import { allPhotos, candidate, firstGroup } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
+import { OFFICE_TITLE } from '@/lib/share'
 import { CORRECTIONS_EMAIL } from '@/lib/site'
 
 const TITLE = 'About: how this site reads INEC’s lists'
+
+/** "APC, President" or "APC, Governor, KANO": whose photo a credit is for. */
+function creditRace(id: string): string {
+  const { race: r, c } = candidate(id)
+  return r.office === 'president' ? `${c.party}, President` : `${c.party}, ${OFFICE_TITLE[r.office]}, ${r.state}`
+}
 
 /** "A", "A and B", "A, B and C". */
 const listJoin = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`)
@@ -77,7 +84,7 @@ export default function About() {
 
       <h2>What this site never does</h2>
       <p>
-        {'No rankings, predictions, polls, endorsements or opinions. Photos only for presidential candidates, as described below. '}
+        {'No rankings, predictions, polls, endorsements or opinions. Photos only from the sources described below. '}
         Party colours and marks appear only inside each
         party’s official logo from INEC’s register, the same size for every party, never in the site’s own design. No candidate is featured
         or given more space than another.
@@ -91,11 +98,11 @@ export default function About() {
       </p>
       <h2 id="photos">Photos</h2>
       <p>
-        Only presidential candidates have a photo, taken from the candidate’s own official account, their campaign or party website, or
-        Wikimedia Commons, never from a news site or agency, with the same head-and-shoulders crop and size for all, and each
-        one approved by the site’s owner before it appears. Their credits are listed at the end of this page. Every other candidate,
-        and any presidential candidate without a suitable photo, shows the same plain placeholder. A candidate or party can send an official
-        photo to
+        A candidate has a photo only where a source that clearly names them has one: Wikimedia Commons, the candidate’s or party’s own
+        official website, or an official government or legislature page. Never a news site, an agency or an unverified account, and
+        never a photo whose subject is in doubt. Every photo has the same head-and-shoulders crop and size, and each one is approved
+        by the site’s owner before it appears. Photos are being added race by race; their credits are listed at the end of this
+        page. Every candidate without one shows the same plain placeholder. A candidate or party can send an official photo to
         {' '}
         <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Official photo')}`}>{CORRECTIONS_EMAIL}</a>
         ; the same address takes any request to change a photo.
@@ -147,7 +154,7 @@ export default function About() {
             {photos.map(([id, p]) => (
               <li key={id} id={`credit-${id}`}>
                 <strong>{candidate(id).c.candidate.name}</strong>
-                {` (${candidate(id).c.party}): `}
+                {` (${creditRace(id)}): `}
                 <a href={p.file_page}>{p.source}</a>
                 {p.author && `, by ${p.author}`}
                 {p.licence && p.licence_url && (

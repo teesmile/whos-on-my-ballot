@@ -1,4 +1,4 @@
-import { groupOf, type Race } from '@/lib/data'
+import { groupOf, type Race, sheetFor } from '@/lib/data'
 import { ELECTION_DAY, noCandidateText } from '@/lib/share'
 
 import { CardPhoto, PartyLogo } from './Candidate'
@@ -33,7 +33,7 @@ export function ResultsTable({ r, label }: { r: Race, label: string }) {
             <tr key={c.id} data-candidate-id={c.id}>
               <th scope="row" className="rt-cand">
                 <span className="rt-pics">
-                  <PartyLogo party={c.party} size={40} />
+                  <PartyLogo party={c.party} size={40} sheet={sheetFor(r)} />
                   <CardPhoto c={c} size={40} />
                 </span>
                 <span className="rt-who">

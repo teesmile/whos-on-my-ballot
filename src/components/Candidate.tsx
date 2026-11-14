@@ -1,5 +1,5 @@
 import type { Candidate as C, Person, PrintingNote } from '@/lib/data'
-import { photo, sprite } from '@/lib/data'
+import { logosSheet, photo, race, type Sheet, sheetFor, sprite } from '@/lib/data'
 import { noCandidateText } from '@/lib/share'
 import { candidatePath } from '@/lib/site'
 
@@ -51,42 +51,41 @@ export function formatDate(iso: string): string {
 }
 
 /**
- * One square cell of the sprite (every logo and approved photo in one image, so a page makes one image request).
- * The 1-pixel inset keeps neighbouring cells from bleeding in when the browser scales the image.
+ * One square cell of the page's image (every logo and the first race's approved photos in one image, so a page makes one
+ * image request). The 1-pixel inset keeps neighbouring cells from bleeding in when the browser scales the image.
  */
-function SpriteCell({ x, y, cell, size, label, className, logosOnly = false }: { x: number, y: number, cell: number, size: number, label: string | null, className: string, logosOnly?: boolean }) {
-  const s = sprite()
+function SpriteCell({ x, y, cell, size, label, className, sheet }: { x: number, y: number, cell: number, size: number, label: string | null, className: string, sheet: Sheet }) {
   const a11y = label ? { 'role': 'img', 'aria-label': label } : { 'aria-hidden': true }
-  const img = logosOnly ? { href: `/${s.logo_file}`, width: s.logo_width, height: s.cell } : { href: `/${s.file}`, width: s.width, height: s.height }
   return (
     <svg className={className} width={size} height={size} viewBox={`${x + 1} ${y + 1} ${cell - 2} ${cell - 2}`} focusable="false" {...a11y}>
-      <image {...img} />
+      <image href={`/${sheet.file}`} width={sheet.width} height={sheet.height} />
     </svg>
   )
 }
 
 /**
  * A party's logo from INEC's register (D-043): the same size and treatment for every party, the acronym as its text.
- * `logosOnly` draws it from the logos-only sprite, for a page that shows no photo card (a candidate page).
+ * `sheet` is the image the page already loads (see `sheetFor`); `logosOnly` uses the logos alone (a candidate page).
  */
-export function PartyLogo({ party, size, logosOnly = false }: { party: string, size: number, logosOnly?: boolean }) {
+export function PartyLogo({ party, size, sheet, logosOnly = false }: { party: string, size: number, sheet?: Sheet, logosOnly?: boolean }) {
   const s = sprite()
   const i = s.logos[party]
   if (i === undefined) throw new Error(`no INEC logo for ${party} in the sprite`)
-  return <SpriteCell x={i * s.cell} y={0} cell={s.cell} size={size} label={party} className="logo" logosOnly={logosOnly} />
+  return <SpriteCell x={i * s.cell} y={0} cell={s.cell} size={size} label={party} className="logo" sheet={logosOnly ? logosSheet() : sheet ?? s} />
 }
 
 /**
- * The candidate's photo from the sprite (only presidential candidates, only faces the owner approved: D-065), or the same
- * plain placeholder for everyone else, in the same place and size. Beside the name it repeats, so screen readers skip it.
+ * The candidate's photo from the race's image (only faces the owner approved: D-065, D-071), or the same plain placeholder
+ * for everyone without one, in the same place and size. Beside the name it repeats, so screen readers skip it.
  */
 export function CardPhoto({ c, size }: { c: C, size: number }) {
   // sized by the stylesheet (the CSP allows no inline styles), the same as a photo of `size` pixels
   if (!photo(c.id)) return <span className="photo ph" aria-hidden="true" />
   const s = sprite()
-  const i = s.photos[c.id]
-  if (i === undefined) throw new Error(`no sprite cell for ${c.id}'s photo`)
-  return <SpriteCell x={i * s.photo_cell} y={s.photo_y} cell={s.photo_cell} size={size} label={null} className="photo" />
+  const sheet = sheetFor(race(c.race_id))
+  const i = sheet.photos[c.id]
+  if (i === undefined) throw new Error(`no cell for ${c.id}'s photo in its race's image`)
+  return <SpriteCell x={i * s.photo_cell} y={s.photo_y} cell={s.photo_cell} size={size} label={null} className="photo" sheet={sheet} />
 }
 
 /**
@@ -102,7 +101,7 @@ export function CandidateCard({ c, mateLabel }: { c: C, mateLabel: string | null
       <a href={candidatePath(c.id)}>
         <span className="card-top">
           <span className="card-id">
-            <PartyLogo party={c.party} size={48} />
+            <PartyLogo party={c.party} size={48} sheet={sheetFor(race(c.race_id))} />
             <span className="card-party" aria-hidden="true">{c.party}</span>
           </span>
           <CardPhoto c={c} size={76} />

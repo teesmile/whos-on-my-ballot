@@ -234,9 +234,10 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .race-tabs { position: sticky; top: var(--hdr); z-index: 15; background: var(--bg); padding: 0.4rem 0; margin: 1rem 0 0.25rem; box-shadow: 0 0 0 100vmax var(--bg), 0 1px 0 100vmax var(--line); clip-path: inset(0 -100vmax -1px); }
 .race-tabs ul { list-style: none; margin: 0; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 0.4rem; }
 .race-tabs li { display: flex; }
-/* Equal boxes: the same width and height for every tab, whatever its label. */
+/* Equal boxes: the same width and height for every tab, whatever its label, and the same small gap (8 px) between the label
+   and its count on every tab and every phone (owner feedback, 13 Nov 2026). */
 .race-tabs a {
-  flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.4rem; height: 48px; padding: 0 0.35rem;
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; height: 48px; padding: 0 0.35rem;
   border: 2px solid var(--green-strong); border-radius: var(--radius); background: var(--bg); color: var(--fg); font-weight: 700; text-align: center; line-height: 1.1;
 }
 .race-tabs a:visited { color: var(--fg); }
@@ -250,7 +251,8 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .tab-n { display: block; }
 @supports (text-box: trim-both cap alphabetic) { .tab-name, .tab-n { text-box: trim-both cap alphabetic; } }
 .race-tabs a[aria-selected="true"] .tab-count { background: #fff; color: var(--green-deep); border-color: #fff; }
-@media (max-width: 22.5rem) { .tab-name { font-size: 0.85rem; } .race-tabs a { gap: 0.3rem; } }
+@media (max-width: 26rem) { .tab-name { font-size: 0.85rem; } .race-tabs a { padding: 0; } }
+@media (max-width: 22.25rem) { .tab-name { font-size: 0.74rem; } .tab-count { width: 1.4rem; height: 1.4rem; } }
 .tab-panel:focus { outline: none; }
 .next { margin: 1.5rem 0 0.5rem; }
 .btn-next { width: 100%; }
@@ -384,7 +386,7 @@ input:focus, select:focus { border-color: var(--green-strong); }
 /* Room for the forms the script reveals, so nothing jumps; without JavaScript the same space holds the note. */
 .by-code { min-height: 17rem; }
 .by-search { min-height: 23rem; }
-main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result ul a, .card a, .wa-tile a) { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
+main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result ul a, .card a, .wa-tile a, .race-tabs a) { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
 
 /* Sharing */
 .share { margin-top: 1.5rem; border-top: 1px solid var(--line-soft); padding-top: 0.25rem; }
