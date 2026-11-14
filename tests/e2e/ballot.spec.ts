@@ -269,6 +269,7 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
   })
 
   test('the picture carries a countdown worked out when shared: a sand pill on the date line before the day, nothing after it (owner, 14 Nov 2026)', async ({ page }, info) => {
+    test.setTimeout(90_000) // three shares, each a 1080 x 1920 picture decoded in the page
     // sand pixels in the top green band: the pill (#f0d49e) and nothing else there is sand
     const sandInTop = (bytes: number[]) => page.evaluate(async (bytes) => {
       const img = await createImageBitmap(new Blob([new Uint8Array(bytes)], { type: 'image/png' }))
