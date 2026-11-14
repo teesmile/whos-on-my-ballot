@@ -4,8 +4,8 @@
  */
 export const CONTENT_DATES = {
   'home': '2026-11-11',
-  'about': '2026-11-11',
-  'results': '2026-11-11',
+  'about': '2026-11-13',
+  'results': '2026-11-13',
   'about/find-your-polling-unit': '2026-11-10',
   'about/state-assembly-wards': '2026-11-10',
   'election-day': '2026-11-11',

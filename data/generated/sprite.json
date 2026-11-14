@@ -89,14 +89,13 @@
    }
   },
   "feb-2027-governor-delta": {
-   "file": "logos/sheet-c72aca98c2.webp",
+   "file": "logos/sheet-408d8c68ba.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 39546,
-   "sha256": "c72aca98c2176251b5041a37068f85348641782360aff096998df222e1ca3c60",
+   "bytes": 37046,
+   "sha256": "408d8c68ba564ca6b4be3fe208d79cc4720bcabbbde2f20dbf03dfa4a0c9763f",
    "photos": {
-    "feb-2027-governor-delta-apc": 0,
-    "feb-2027-governor-delta-ndc": 1
+    "feb-2027-governor-delta-apc": 0
    }
   },
   "feb-2027-governor-ebonyi": {

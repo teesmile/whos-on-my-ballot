@@ -146,7 +146,7 @@ def apply_state_rule(races: list[Race], first_group: dict, errors: list[str]) ->
             src = rule["sources"][w["source"]]
             out[st] = {"parties": five, "joins": w["party"], "replaces": replaced,
                        "label": rule["label"].format(party=w["party"], state=w["name"]),
-                       "state_name": w["name"], "election_date": w["date"],
+                       "state_name": w["name"], "election_date": w["date"], "since": str(rule["since"]),
                        "counts": {p: in_state.get(p, 0) for p in sorted([*national, w["party"]])},
                        "source": {k: src[k] for k in ("title", "url", "retrieved", "declared_by")}}
     expected = rule.get("changes") or {}

@@ -21,6 +21,8 @@ sources:
 # named candidates only); on a tie, the one with the lower national count goes. The FCT has no governorship and keeps the
 # five. The pipeline recomputes this on every build and fails if the result differs from `changes` below.
 state_rule:
+  # The day the rule took effect on the site (the sitemap dates the pages it changed from here).
+  since: "2026-11-13"
   label: "Four of the five parties with the most candidates in 2027, and {party}, which won {state}’s last governorship election"
   sources:
     inec-2023-report:

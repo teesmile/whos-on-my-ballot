@@ -148,6 +148,7 @@ export interface StateGroup {
   label: string
   state_name: string
   election_date: string
+  since: string
   counts: Record<string, number>
   source: { title: string, url: string, retrieved: string, declared_by: string }
 }
@@ -213,6 +214,8 @@ export interface Photo {
   licence_url?: string
   taken?: string
   retrieved: string
+  /** The day the owner approved the face on a contact sheet. */
+  approved: string
 }
 let photos: Record<string, Photo> | null = null
 export function allPhotos(): Record<string, Photo> {
@@ -247,9 +250,12 @@ export const sourceContentDate = (id: string) => {
 }
 const latest = (dates: string[]) => [...dates].sort().at(-1)!
 /** A race's content date: its INEC list, or the background research for presidential tickets, whichever is later. */
+/** When a race's page last changed for a reader: its INEC sources, background research, approved photos (D-071) and the
+ *  day its state's first group changed (D-070). The sitemap's lastmod. */
 export const raceContentDate = (r: Race) => latest([
   ...r.sources.map(sourceContentDate),
-  ...r.candidates.flatMap(c => [c.candidate.background?.researched, c.running_mate?.background?.researched]).filter((d): d is string => !!d),
+  ...r.candidates.flatMap(c => [c.candidate.background?.researched, c.running_mate?.background?.researched, photo(c.id)?.approved]).filter((d): d is string => !!d),
+  ...(groupOf(r).state ? [groupOf(r).state!.since] : []),
 ])
 /** Geography pages show INEC's locator, and their 6 February links follow the IReV ward lists (D-030). */
 export const geographyContentDate = () => latest(['inec-pu-locator', 'inec-irev-2023-assembly'].map(sourceContentDate))

@@ -105,8 +105,12 @@ describe('sitemap and robots.txt', () => {
   it('dates each page by its content, not by the build', () => {
     for (const [u, d] of entries) expect(d, u).toMatch(/^2026-\d{2}-\d{2}$/)
     const date = (p: string) => entries.find(([u]) => u === `${SITE_URL}${p}`)![1]
-    expect(date('/c/jan-2027-house-abia-aba-north-aba-south-apc/')).toBe('2026-10-30') // INEC's PDF date
+    expect(date('/c/jan-2027-house-fct-municipal-bwari-apc/')).toBe('2026-10-30') // INEC's PDF date
     expect(date('/c/feb-2027-sha-lagos-lagos-island-i-apc/')).toBe('2026-10-10')
+    // a reader also sees the day a state's first group changed (D-070) and the day an approved photo appeared (D-071)
+    expect(date('/c/jan-2027-house-abia-aba-north-aba-south-apc/')).toBe('2026-11-13')
+    expect(date('/c/feb-2027-governor-kano-apc/')).toBe('2026-11-13')
+    expect(date('/c/jan-2027-president-ndc/')).toBe('2026-11-11')
   })
 
   it('robots.txt allows the site, keeps the search data out and links the sitemap', () => {

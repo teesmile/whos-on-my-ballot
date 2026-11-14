@@ -404,7 +404,7 @@ describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
     expect(kano).toMatch(/data-candidate-id="feb-2027-governor-kano-apc"[\s\S]*?<svg class="photo"/)
   })
   it('no credit on the candidate page; the full credit for each photo is in one list at the end of the About page', () => {
-    expect(approved.size).toBe(37)
+    expect(approved.size).toBe(36)
     const about = html('about')
     const credits = about.slice(about.indexOf('<h2 id="photo-credits">Photo credits</h2>'))
     expect(credits.match(/<h2/g)?.length, 'Photo credits is the last section').toBe(1)

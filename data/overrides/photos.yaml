@@ -165,18 +165,6 @@ people:
     retrieved: '2026-11-13'
     crop: [405, 109, 1350, 1350]
     owner_approved: '2026-11-13'  # governor contact sheet 1
-  - candidate_id: feb-2027-governor-delta-ndc
-    source: Wikimedia Commons
-    file_page: https://commons.wikimedia.org/wiki/File:Chris_Iyovwaye.jpg
-    file_url: https://upload.wikimedia.org/wikipedia/commons/1/19/Chris_Iyovwaye.jpg
-    sha256: 8ec9f92b586fb21b06c19e1c78294465b62cce13c07b2426e7a4cb4f05a8e39c
-    author: "Murpash1"
-    licence: CC BY-SA 4.0
-    licence_url: https://creativecommons.org/licenses/by-sa/4.0
-    taken: '2023'
-    retrieved: '2026-11-13'
-    crop: [221, 0, 702, 702]
-    owner_approved: '2026-11-13'  # governor contact sheet 1
   - candidate_id: feb-2027-governor-ebonyi-apc
     source: Ebonyi State Government website
     file_page: https://ebonyistate.gov.ng/executive/governor
