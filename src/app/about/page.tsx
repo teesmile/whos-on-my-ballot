@@ -103,7 +103,8 @@ export default function About() {
         never a photo whose subject is in doubt. Every photo has the same head-and-shoulders crop and size, and each one is checked
         against the gender and age INEC printed for the candidate. A photo from Wikimedia Commons, where anyone can upload a file,
         is also approved by the site’s owner before it appears. Photos are being added race by race; their credits are listed at the end of this
-        page. Every candidate without one shows the same plain placeholder. A candidate or party can send an official photo to
+        page. Every candidate without one shows the same plain placeholder, and a race shows photos only once at least two candidates
+        from its first group have one; until then, every candidate in that race shows the placeholder. A candidate or party can send an official photo to
         {' '}
         <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Official photo')}`}>{CORRECTIONS_EMAIL}</a>
         ; the same address takes any request to change a photo.

@@ -384,8 +384,10 @@ describe('WhatsApp’s glyph (owner’s brand download, 11 Nov 2026)', () => {
   })
 })
 
-describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
-  const approved = new Set(Object.keys(JSON.parse(fs.readFileSync(path.resolve('data/generated/photos.json'), 'utf8')).people as object))
+describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => {
+  const photosJson = JSON.parse(fs.readFileSync(path.resolve('data/generated/photos.json'), 'utf8')) as { people: object, held: Record<string, string> }
+  const approved = new Set(Object.keys(photosJson.people))
+  const held = photosJson.held
   it('a photo appears only where the owner approved the face; everyone else has the same placeholder', () => {
     for (const r of [presidentialRace(), ...races().filter(x => x.office !== 'president').slice(0, 20), ...febRaces()]) {
       for (const c of r.candidates) {
@@ -399,19 +401,21 @@ describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
     const s = JSON.parse(fs.readFileSync(path.resolve('data/generated/sprite.json'), 'utf8')) as { file: string, logo_file: string, sheets: Record<string, { file: string }> }
     const imgs = (page: string) => new Set([...page.matchAll(/<image href="([^"]+)"/g)].map(m => m[1]))
     expect([...imgs(html('ballot/abia/aba-north-aba-south--abia-south'))]).toEqual([`/${s.file}`])
-    expect([...imgs(html('ballot-feb/kano/bichi'))]).toEqual([`/${s.sheets['feb-2027-governor-kano'].file}`])
+    expect([...imgs(html('ballot-feb/lagos/alimosho-i'))]).toEqual([`/${s.sheets['feb-2027-governor-lagos'].file}`])
+    expect([...imgs(html('ballot-feb/kano/bichi'))]).toEqual([`/${s.logo_file}`]) // Kano's governorship race has one photo in its first group, so none shows (D-075)
     expect([...imgs(html('ballot-feb/osun/ayedade'))]).toEqual([`/${s.logo_file}`]) // no governorship on 6 February
-    const kano = html('ballot-feb/kano/bichi')
-    expect(kano).toMatch(/data-candidate-id="feb-2027-governor-kano-apc"[\s\S]*?<svg class="photo"/)
+    expect(html('ballot-feb/lagos/alimosho-i')).toMatch(/data-candidate-id="feb-2027-governor-lagos-apc"[\s\S]*?<svg class="photo"/)
+    expect(html('ballot-feb/kano/bichi')).toMatch(/data-candidate-id="feb-2027-governor-kano-apc"[\s\S]*?<span class="photo ph" aria-hidden="true"><\/span>/)
     // a Senate photo is the card's own small copy, loaded only when its race is shown
-    expect(html('ballot/abia/aba-north-aba-south--abia-south')).toMatch(/data-candidate-id="jan-2027-senate-abia-abia-south-lp"[\s\S]*?<img class="photo" src="\/photos\/jan-2027-senate-abia-abia-south-lp-card\.webp" width="76" height="76" alt="" loading="lazy"/)
+    expect(html('ballot/kwara/ilorin-west-asa--kwara-central')).toMatch(/data-candidate-id="jan-2027-senate-kwara-kwara-central-apc"[\s\S]*?<img class="photo" src="\/photos\/jan-2027-senate-kwara-kwara-central-apc-card\.webp" width="76" height="76" alt="" loading="lazy"/)
   })
   it('no credit on the candidate page; the full credit for each photo is in one list at the end of the About page', () => {
     // every built photo is a yaml entry with the owner's approval, or an official-page photo checked against INEC (D-074);
     // a Commons file never goes live on the official-page route
     const entries = fs.readFileSync(path.resolve('data/overrides/photos.yaml'), 'utf8').split(/\n  - /).slice(1)
     const cleared = entries.filter(e => /\n    (owner_approved|official_checked): '\d{4}-\d{2}-\d{2}'/.test(e)).map(e => /^candidate_id: (\S+)/.exec(e)![1])
-    expect([...approved].sort()).toEqual(cleared.sort())
+    // the per-race rule (D-075): cleared photos show only in races where at least two of the first group have one; the rest are held
+    expect([...approved, ...Object.keys(held)].sort()).toEqual(cleared.sort())
     for (const e of entries.filter(x => /\n    official_checked:/.test(x))) expect(e, e.slice(0, 80)).not.toMatch(/Wikimedia Commons|wikimedia\.org/)
     const about = html('about')
     const credits = about.slice(about.indexOf('<h2 id="photo-credits">Photo credits</h2>'))
@@ -424,6 +428,19 @@ describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
     }
     for (const m of credits.matchAll(/<li id="credit-[^"]+">([\s\S]*?)<\/li>/g)) expect(m[1]).toMatch(/<a href="https?:\/\/[^"]+">[^<]+<\/a>[\s\S]*cropped to a square[\s\S]*Retrieved/)
   })
+  it('a race shows photos only once two of its first group have one; a held photo is not built, shown or credited (D-075)', () => {
+    for (const r of [presidentialRace(), ...races(), ...febRaces()]) {
+      const firstWith = r.candidates.filter(c => c.display_group === 'first' && approved.has(c.id)).length
+      if (r.candidates.some(c => approved.has(c.id))) expect(firstWith, r.id).toBeGreaterThanOrEqual(2)
+    }
+    expect(Object.keys(held).length).toBeGreaterThan(0)
+    const about = html('about')
+    for (const id of Object.keys(held)) {
+      expect(about, id).not.toContain(`id="credit-${id}"`)
+      expect(fs.existsSync(path.join(OUT, 'photos', `${id}.webp`)), id).toBe(false)
+    }
+    for (const id of Object.keys(held).slice(0, 25)) expect(html(`c/${id}`), id).toContain('<div class="profile-photo"><span class="photo ph" aria-hidden="true"></span></div>')
+  })
   it('every card has the photo slot, a photo or the same placeholder, in the same place', () => {
     const ballot = html('ballot/abia/aba-north-aba-south--abia-south')
     const cards = ballot.match(/<li class="card[^"]*" [\s\S]*?<\/li>/g)!
@@ -435,6 +452,7 @@ describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
     expect(about).toContain('<h2 id="photos">Photos</h2>')
     expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, or an official government or legislature page/)
     expect(about).toMatch(/checked\s+against the gender and age INEC printed for the candidate\. A photo from Wikimedia Commons, where anyone can upload a file,\s+is also approved by the site’s owner before it appears\./)
+    expect(about).toMatch(/a race shows photos only once at least two candidates\s+from its first group have one; until then, every candidate in that race shows the placeholder\./)
     expect(about).toMatch(/A candidate or party can send an official photo to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Official%20photo">/)
   })
 })

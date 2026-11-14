@@ -29,3 +29,22 @@ def test_an_official_page_photo_goes_live_once_checked_but_a_public_upload_needs
     assert approval_date({**commons, "owner_approved": "2026-11-14"}) == "2026-11-14"
     # a Commons file disguised under another source name is still a public upload
     assert approval_date({**commons, "source": "National Assembly website", "official_checked": "2026-11-14"}) is None
+
+
+def test_a_race_shows_photos_only_once_two_of_its_first_group_have_one():
+    from ballot_pipeline.photos import race_photo_rule
+
+    groups = {"r1": [("r1-a", "first"), ("r1-b", "first"), ("r1-c", "first"), ("r1-x", "rest")],
+              "r2": [("r2-a", "first"), ("r2-b", "first"), ("r2-x", "rest")]}
+    # one of the first group in r1: held, placeholders for all; r2 has two, so its photos show, the rest group's too
+    shown, held = race_photo_rule({"r1-a", "r1-x", "r2-a", "r2-b", "r2-x"}, groups)
+    assert shown == {"r2-a", "r2-b", "r2-x"}
+    assert held == {"r1-a": "r1", "r1-x": "r1"}
+    # a photo outside the first group never counts towards the two
+    assert race_photo_rule({"r1-a", "r1-x"}, groups)[0] == set()
+    # the second photo switches the race on by itself
+    assert race_photo_rule({"r1-a", "r1-c", "r1-x"}, groups)[0] == {"r1-a", "r1-c", "r1-x"}
+    import pytest
+
+    with pytest.raises(ValueError):
+        race_photo_rule({"nobody"}, groups)

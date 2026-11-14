@@ -109,6 +109,14 @@ people:
     retrieved: '2026-11-11'
     crop: [679, 386, 777, 777]
     owner_approved: '2026-11-11'  # contact sheet option ZLP
+  - candidate_id: feb-2027-governor-abia-apc
+    source: "APC campaign website (diasporarha.com, linked from apc.com.ng)"
+    file_page: https://diasporarha.com/eric-opah
+    file_url: https://diasporarha.com/member/images/30d0733bd1be92c7eefa2a3f60a0cb6b-Eric.jpg
+    sha256: fc30f10e40a742b27609e5467c6c6f06374c07532c430e19c9039065f51911e3
+    retrieved: '2026-11-14'
+    crop: [310, 126, 634, 634]
+    official_checked: '2026-11-14'  # INEC M, 55, fits the photo; page names him as the APC 2027 Abia governorship candidate; counts as the party's site only because https://apc.com.ng links to it ("Join APC PCC Diaspora"), owner's condition; crop clear of the ring and logo
   - candidate_id: feb-2027-governor-abia-lp
     source: Candidate's own official website (alexotti.com)
     file_page: https://www.alexotti.com/about-us/

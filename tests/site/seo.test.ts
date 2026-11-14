@@ -113,7 +113,9 @@ describe('sitemap and robots.txt', () => {
     expect(date('/c/feb-2027-sha-lagos-lagos-island-i-apc/')).toBe('2026-10-10')
     // a reader also sees the day a state's first group changed (D-070) and the day an approved photo appeared (D-071)
     expect(date('/c/jan-2027-house-abia-aba-north-aba-south-apc/')).toBe('2026-11-13')
-    expect(date('/c/feb-2027-governor-kano-apc/')).toBe('2026-11-13')
+    expect(date('/c/feb-2027-governor-lagos-ndc/')).toBe('2026-11-13')
+    // and the day the per-race rule took a race's only photo off its pages (D-075)
+    expect(date('/c/feb-2027-governor-kano-apc/')).toBe('2026-11-14')
     expect(date('/c/jan-2027-president-ndc/')).toBe('2026-11-11')
   })
 
