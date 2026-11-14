@@ -681,6 +681,34 @@ function setupShare(section: HTMLElement) {
     })
   }
   sheet.addEventListener('click', () => (files ? void withPicture(linkOnly) : linkOnly()))
+  // Instagram takes no links from websites (owner, 14 Nov 2026): on a phone, the share menu with the race's picture; on a
+  // computer, the picture is saved and one line says what to do with it.
+  const ig = section.querySelector<HTMLButtonElement>('[data-share-ig]')
+  if (ig) {
+    ig.hidden = false
+    if (files) for (const type of ['pointerdown', 'focusin', 'touchstart']) ig.addEventListener(type, () => void getPicture().catch(() => {}), { once: true, passive: true })
+    ig.addEventListener('click', async () => {
+      try {
+        const file = await getPicture()
+        if (files && matchMedia('(pointer: coarse)').matches) {
+          await navigator.share({ files: [file] })
+          say('')
+          return
+        }
+        const a = el('a')
+        a.href = URL.createObjectURL(file)
+        a.download = file.name
+        document.body.append(a)
+        a.click()
+        a.remove()
+        setTimeout(() => URL.revokeObjectURL(a.href), 10_000)
+        say('Picture saved. Post it to your Instagram story.')
+      }
+      catch (e) {
+        if ((e as DOMException).name === 'NotAllowedError') say('Your picture is ready. Tap Instagram again to share it.')
+      }
+    })
+  }
 }
 
 // ---- Countdown to the next election day: four boxes, ticking each second, in Nigerian time.

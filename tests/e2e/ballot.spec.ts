@@ -245,7 +245,7 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
     const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
     await share.scrollIntoViewIfNeeded()
     expect(full).toEqual([]) // the full-size logos load only when someone shares
-    await share.getByRole('link', { name: 'Share on WhatsApp' }).click()
+    await share.locator('a[data-share-wa]').click()
     await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(1)
     await share.getByRole('button', { name: 'Share', exact: true }).click()
     await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(2)
@@ -313,12 +313,62 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
     expect(await sandInTop(after)).toBe(0)
   })
 
+  test('"Share on": four icons in one row at 320 px, the same size, no box on hover; WhatsApp, X and Facebook are plain links (owner, 14 Nov 2026)', async ({ page }, info) => {
+    await page.setViewportSize({ width: 320, height: 700 })
+    await page.goto(`${ABA}#pu-01-01-01-001`)
+    const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
+    const row = share.locator('.share-on')
+    await row.scrollIntoViewIfNeeded()
+    const icons = row.locator('.share-app')
+    await expect(icons).toHaveCount(4)
+    for (const name of ['Share on WhatsApp', 'Share on X', 'Share on Facebook', 'Share on Instagram']) await expect(row.getByRole(name === 'Share on Instagram' ? 'button' : 'link', { name, exact: true })).toBeVisible()
+    const boxes = await icons.evaluateAll(els => els.map(e => e.getBoundingClientRect()).map(r => ({ x: r.x, y: r.y, w: r.width, h: r.height })))
+    const glyphs = await row.locator('.glyph-icon').evaluateAll(els => els.map(e => [e.getBoundingClientRect().width, e.getBoundingClientRect().height]))
+    expect(new Set(glyphs.map(g => g.join('x')))).toEqual(new Set(['32x32'])) // the same size
+    // every glyph is drawn: an image behind each, none left blank
+    const images = await row.locator('.glyph-icon').evaluateAll(els => els.map(e => getComputedStyle(e).backgroundImage))
+    for (const [i, img] of images.entries()) expect(img, String(i)).toMatch(/^url\("data:image\/(svg\+xml|webp);base64,/)
+    expect(new Set(boxes.map(b => Math.round(b.y))).size, JSON.stringify(boxes)).toBe(1) // one row
+    for (const b of boxes) expect(b.w >= 44 && b.h >= 44 && b.x + b.w <= 320, JSON.stringify(b)).toBe(true) // tap size, on screen
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320)
+    // no border or box on hover
+    for (let i = 0; i < 4; i++) {
+      await icons.nth(i).hover()
+      const st = await icons.nth(i).evaluate(e => { const c = getComputedStyle(e); return [c.backgroundColor, c.borderTopWidth, c.boxShadow, c.outlineStyle] })
+      expect(st, String(i)).toEqual(['rgba(0, 0, 0, 0)', '0px', 'none', 'none'])
+    }
+    await page.mouse.move(0, 0)
+    await row.screenshot({ path: info.outputPath('share-row-320.png') })
+    await info.attach('share-row-320', { path: info.outputPath('share-row-320.png'), contentType: 'image/png' })
+  })
+
+  test('Instagram: on a phone, the share menu with the picture; on a computer, the picture is saved with one line (owner, 14 Nov 2026)', async ({ page, browser }) => {
+    await fakeShareSheet(page, true)
+    await page.goto(`${ABA}#pu-01-01-01-001`)
+    const ig = page.getByRole('tabpanel').getByRole('button', { name: 'Share on Instagram', exact: true })
+    await ig.click()
+    await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(1)
+    const [s] = await page.evaluate(() => (window as unknown as { shared: { name: string, type: string, text?: string, url?: string }[] }).shared)
+    expect([s.name, s.type, s.text, s.url]).toEqual(['whos-on-my-ballot.png', 'image/png', undefined, undefined])
+    // a laptop: a mouse, no touch; the browser could share files, but the picture is saved instead
+    const laptop = await browser.newContext({ viewport: { width: 1280, height: 800 }, hasTouch: false, isMobile: false })
+    const lp = await laptop.newPage()
+    await fakeShareSheet(lp, true)
+    await lp.goto(`${ABA}#pu-01-01-01-001`)
+    const download = lp.waitForEvent('download')
+    await lp.getByRole('tabpanel').getByRole('button', { name: 'Share on Instagram', exact: true }).click()
+    expect((await download).suggestedFilename()).toBe('whos-on-my-ballot.png')
+    await expect(lp.getByRole('tabpanel').locator('[data-share-status]')).toHaveText('Picture saved. Post it to your Instagram story.')
+    expect(await lp.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(0)
+    await laptop.close()
+  })
+
   test('where files can’t be shared, WhatsApp opens with the caption and the home page; Copy link copies this page, without the polling unit', async ({ page, context }) => {
     await context.grantPermissions(['clipboard-read', 'clipboard-write'])
     await fakeShareSheet(page, false)
     await page.goto(`${ABA}#pu-01-01-01-001`)
     const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
-    const wa = share.getByRole('link', { name: 'Share on WhatsApp' })
+    const wa = share.locator('a[data-share-wa]')
     expect(decodeURIComponent((await wa.getAttribute('href'))!)).toBe('https://wa.me/?text=Check who is on your ballot:\nhttps://whosonmyballot.ng/')
     await share.getByRole('button', { name: 'Share', exact: true }).click()
     const shared = await page.evaluate(() => (window as unknown as { shared: { text: string, url: string, type?: string }[] }).shared)

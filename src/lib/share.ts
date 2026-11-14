@@ -40,6 +40,9 @@ export function noCandidateText(c: Pick<Candidate, 'remarks'>): string {
 export const namedCount = (r: Race) => r.candidates.filter(c => c.candidate.name).length
 
 export interface Picture {
+  /** The race's ID and name ("Senate: LAGOS CENTRAL"), for the "Share on" row's message and link. */
+  race: string
+  name: string
   /** "President - 16 January 2027" (the link-preview card's one line) */
   title: string
   /** The share picture's top band: the office, where (the constituency and state, as INEC prints them; '' for President), the date. */
@@ -60,7 +63,7 @@ export interface Picture {
  */
 export function picture(r: Race, slotOf: (c: Candidate) => string = () => ''): Picture {
   const title = `${raceTitle(r)} - ${ELECTION_DAY[r.election]}`
-  const top = { office: OFFICE_TITLE[r.office], place: racePlace(r), date: ELECTION_DAY[r.election], day: ELECTION_ISO[r.election] }
+  const top = { race: r.id, name: raceTitle(r), office: OFFICE_TITLE[r.office], place: racePlace(r), date: ELECTION_DAY[r.election], day: ELECTION_ISO[r.election] }
   const tile = (c: Candidate): [string, string, string, string] => [c.party, c.candidate.name || noCandidateText(c), c.id, slotOf(c)]
   if (r.candidates.length <= 6) return { title, ...top, tiles: r.candidates.map(tile), more: 0 }
   const shown = r.candidates.filter(c => c.display_group === 'first').slice(0, 5)

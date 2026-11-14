@@ -41,6 +41,21 @@ export function shareLinks(text: string, url: string) {
   return { whatsapp: `https://wa.me/?text=${encodeURIComponent(`${text}\n${url}`)}` }
 }
 
+/** The "Share on" row's message (owner, 14 Nov 2026): the same words on every app, the race and its date; the race's own
+ *  page follows it. */
+export const appMessage = (raceName: string, date: string) => `${SITE_NAME} ${raceName}, ${date}. See every candidate:`
+
+/** Plain links into each app's own share page: no script from any of them is ever loaded. Facebook takes only the link (its
+ *  share window shows the link-preview card). */
+export function appLinks(message: string, url: string) {
+  const e = encodeURIComponent
+  return {
+    whatsapp: `https://wa.me/?text=${e(`${message}\n${url}`)}`,
+    x: `https://x.com/intent/post?text=${e(message)}&url=${e(url)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${e(url)}`,
+  }
+}
+
 /** A correction for a race as a whole (a missing or wrong candidate, a wrong party), pre-filled the same way (D-014). */
 export function raceCorrectionHref(raceId: string, pageUrl: string, title: string): string {
   const subject = `Correction: ${raceId}`
