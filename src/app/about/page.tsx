@@ -34,7 +34,12 @@ export default function About() {
       <JsonLd data={pageGraph('/about/', TITLE, [['Home', '/'], ['About', '/about/']])} />
       <h1>About this site</h1>
       <p className="lead">
-        A free, independent and non-partisan guide to Nigeria’s 2027 elections. Tell it where you will vote, and it shows every race on your
+        Most of us think only about the presidential vote. But a president cannot govern alone. Your governor, your senator, your House of
+        Representatives member and your State Assembly member decide the laws and budgets that reach your street. This site shows you
+        every one of them by name, before election day. Know who you are voting for, in every race.
+      </p>
+      <p>
+        A free and independent guide to Nigeria’s 2027 elections. Tell it where you will vote, and it shows every race on your
         ballot with every candidate side by side, from INEC’s published lists.
       </p>
 

@@ -467,3 +467,18 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
     expect(about).not.toMatch(/first group have one|governing party|only once at least two/)
   })
 })
+
+describe('why the site exists (owner wording, 14 Nov 2026)', () => {
+  it('no page says "non-partisan"; the About page opens with why, the home page says one line more', () => {
+    for (const b of ballots().filter((_, i) => i % 40 === 0).map(x => x.path.slice(1))) expect(html(b), b).not.toMatch(/non-?partisan/i)
+    for (const p of ['', 'about', 'corrections', 'election-day']) expect(html(p), p).not.toMatch(/non-?partisan/i)
+    const about = html('about')
+    expect(about).toMatch(/<p class="lead">\s*Most of us think only about the presidential vote\. But a president cannot govern alone\./)
+    expect(about).toContain('Know who you are voting for, in every race.')
+    expect(about).toContain('A free and independent guide to Nigeria’s 2027 elections.')
+    const home = html('')
+    expect(home).toContain('<span class="hero-why">Your vote for president is only one of them. Know every name on your ballot.</span>')
+    expect(home).toContain('<meta name="description" content="Every candidate on your ballot in Nigeria’s 2027 elections, for every office, from INEC’s published lists. Know who you are voting for."/>')
+    expect(home).toContain('Not affiliated with INEC.')
+  })
+})

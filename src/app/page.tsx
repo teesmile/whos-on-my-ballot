@@ -18,7 +18,10 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <h1 id="hero-title">Who’s on your ballot in 2027?</h1>
         <HeroArt />
-        <p className="hero-line">Every race and every candidate at your polling unit, from INEC’s official lists.</p>
+        <p className="hero-line">
+          Every race and every candidate at your polling unit, from INEC’s official lists.
+          <span className="hero-why">Your vote for president is only one of them. Know every name on your ballot.</span>
+        </p>
         <div className="hero-action">
           <h2 className="action-title">Where will you vote?</h2>
           <Steps current={1} />

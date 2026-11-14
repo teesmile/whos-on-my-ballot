@@ -153,6 +153,7 @@ main p > a.btn { margin: 0.25rem 0; }
 .hero > h1 { grid-area: title; margin: 0.25rem 0 0.5rem; font-size: 2.1rem; }
 .hero-art { grid-area: art; width: 5.5rem; height: 5.5rem; align-self: start; }
 .hero-line { grid-area: line; font-size: 1.12rem; color: var(--fg); margin: 0 0 1rem; max-width: 34rem; }
+.hero-why { display: block; margin-top: 0.35rem; }
 .hero-action { grid-area: action; }
 .hero .clock { grid-area: clock; }
 .hero .results-card { grid-area: results; margin: 0 0 1rem; }
