@@ -1,10 +1,11 @@
 import { allPhotos, generatedBytes } from '@/lib/data'
 
-// Approved candidate photos (D-048): the page copy, and the larger copy the share picture loads only when someone shares.
+// Approved candidate photos (D-048, D-071): the page copy, the larger copy the share picture loads only when someone shares, and
+// for Senate, House and State Assembly the card's small copy, loaded only when its race is shown.
 export const dynamic = 'force-static'
 export const dynamicParams = false
 
-const files = () => Object.values(allPhotos()).flatMap(p => [p.page, p.share])
+const files = () => Object.values(allPhotos()).flatMap(p => [p.page, p.share, ...(p.card ? [p.card] : [])])
 
 export function generateStaticParams() {
   // A static export needs at least one path; with no approved photos this placeholder is removed after the build.

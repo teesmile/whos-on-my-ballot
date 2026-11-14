@@ -25,7 +25,7 @@ describe('neutral rendering', () => {
     const html = renderToStaticMarkup(<RaceSection r={pres} pageUrl="/x/" />)
     const named = html.match(/<li class="card" [^>]*data-group="(first|rest)"[\s\S]*?<\/li>/g) ?? []
     expect(named.length).toBe(pres.candidates.filter(c => c.candidate.name).length)
-    const slot = (b: string) => b.replace(/<svg class="photo"[\s\S]*?<\/svg>|<span class="photo ph" aria-hidden="true"><\/span>/, 'PHOTO')
+    const slot = (b: string) => b.replace(/<svg class="photo"[\s\S]*?<\/svg>|<img class="photo"[^>]*\/>|<span class="photo ph" aria-hidden="true"><\/span>/, 'PHOTO')
     for (const b of named) expect(slot(b).match(/PHOTO/g)?.length, b.slice(0, 80)).toBe(1)
     expect(new Set(named.map(b => skeleton(slot(b)))).size).toBe(1)
   })

@@ -420,7 +420,7 @@ describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
     const ballot = html('ballot/abia/aba-north-aba-south--abia-south')
     const cards = ballot.match(/<li class="card[^"]*" [\s\S]*?<\/li>/g)!
     expect(cards.length).toBeGreaterThan(30)
-    for (const c of cards) expect(c, c.slice(0, 120)).toMatch(/<span class="card-top"><span class="card-id"><svg class="logo"[\s\S]*?<\/span><\/span>(<svg class="photo"|<span class="photo ph" aria-hidden="true"><\/span>)/)
+    for (const c of cards) expect(c, c.slice(0, 120)).toMatch(/<span class="card-top"><span class="card-id"><svg class="logo"[\s\S]*?<\/span><\/span>(<svg class="photo"|<img class="photo" src="\/photos\/[^"]+-card\.webp" width="76" height="76" alt="" loading="lazy"|<span class="photo ph" aria-hidden="true"><\/span>)/)
   })
   it('the About page says where photos come from and that a candidate or party can send an official one', () => {
     const about = html('about')

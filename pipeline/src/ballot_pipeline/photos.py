@@ -30,6 +30,14 @@ PHOTO_RAW_DIR = RAW_DIR / "photos"
 PHOTO_DIR = GENERATED_DIR / "photos"
 PHOTOS_JSON = GENERATED_DIR / "photos.json"
 PAGE = 320  # shown at up to 160 CSS pixels on the candidate page
+CARD = 128  # a card's own small copy, for races whose photos load on demand (D-071): shown at 76 CSS pixels
+CARD_QUALITY = 72
+ON_DEMAND = ("senate", "house", "sha")  # races a ballot page doesn't show first: their photos load only when shown
+
+
+def office_of(candidate_id: str) -> str:
+    """'jan-2027-senate-lagos-lagos-central-apc' -> 'senate' (the third part of every race and candidate ID)."""
+    return candidate_id.split("-")[2]
 SHARE = 720  # drawn into the 1080 x 1920 share picture
 FIELDS = ("candidate_id", "source", "file_page", "file_url", "sha256", "retrieved", "crop")
 OPTIONAL = ("author", "licence", "licence_url", "taken")
@@ -128,7 +136,14 @@ def build_photos(log=print) -> dict[str, Path]:
         subprocess.run(["gm", "convert", str(raw), *crop, "-resize", f"{SHARE}x{SHARE}!", "-strip", "-quality", "92", f"jpeg:{share}"], check=True)
         subprocess.run(["gm", "convert", str(raw), *crop, "-strip", f"png:{cell}"], check=True)
         cells[cid] = cell
+        extra = {}
+        if office_of(cid) in ON_DEMAND:
+            card = PHOTO_DIR / f"{cid}-card.webp"
+            subprocess.run(["gm", "convert", str(raw), *crop, "-resize", f"{CARD}x{CARD}!", "-strip", "-quality", str(CARD_QUALITY),
+                            f"webp:{card}"], check=True)
+            extra = {"card": f"photos/{card.name}", "card_sha256": _sha256(card.read_bytes()), "card_bytes": card.stat().st_size}
         people[cid] = {
+            **extra,
             "page": f"photos/{page.name}", "page_sha256": _sha256(page.read_bytes()), "page_size": PAGE,
             "share": f"photos/{share.name}", "share_sha256": _sha256(share.read_bytes()), "share_size": SHARE,
             **{k: p[k] for k in ("source", "file_page", "retrieved")}, "approved": str(p["owner_approved"]),
@@ -140,9 +155,9 @@ def build_photos(log=print) -> dict[str, Path]:
 
 
 def check_photos(offices: dict[str, str]) -> list[str]:
-    """Only faces the owner approved (D-065, D-071), only of named candidates; for now only in the races a ballot page shows
-    first (President, Governor), whose photos share the page's one image. Senate, House and State Assembly photos need their
-    own on-demand files first (D-071), so the build refuses them until those exist. `offices` maps candidate ID to office."""
+    """Only faces the owner approved (D-065, D-071), only of named candidates. President and Governor photos share the page's
+    one image; Senate, House and State Assembly photos each have a small card copy that loads on demand (D-071). `offices`
+    maps candidate ID to office."""
     if not PHOTOS_JSON.exists():
         return ["no photos.json: run `ballot-pipeline assets`"]
     people = json.loads(PHOTOS_JSON.read_text())["people"]
@@ -150,14 +165,14 @@ def check_photos(offices: dict[str, str]) -> list[str]:
     unknown = sorted(set(people) - set(offices))
     if unknown:
         errors.append(f"photos: no named candidate with these IDs: {unknown}")
-    later = sorted(c for c in people if c in offices and offices[c] not in ("president", "governor"))
-    if later:
-        errors.append(f"photos (D-071): Senate, House and State Assembly photos need their own on-demand files first: {later}")
+    no_card = sorted(c for c in people if office_of(c) in ON_DEMAND and "card" not in people[c])
+    if no_card:
+        errors.append(f"photos (D-071): no on-demand card copy for {no_card}")
     ok = {p["candidate_id"] for p in load()["people"] if approved(p)}
     if set(people) - ok:
         errors.append(f"photos (D-065): built without the owner's approval: {sorted(set(people) - ok)}")
     for cid, m in people.items():
-        for key in ("page", "share"):
+        for key in ("page", "share", *(("card",) if "card" in m else ())):
             f = GENERATED_DIR / m[key]
             if not f.exists() or _sha256(f.read_bytes()) != m[f"{key}_sha256"]:
                 errors.append(f"photo file {m[key]} is missing or changed since it was built")

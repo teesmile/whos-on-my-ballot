@@ -68,6 +68,11 @@ console.log(`Images on a page's first screen (logos and the first race's photos)
 // Each race's photos: its image less the logos it shares with every page.
 const sprite = JSON.parse(fs.readFileSync(path.resolve('data/generated/sprite.json'), 'utf8'))
 const races = [['jan-2027-president', sprite.bytes], ...Object.entries(sprite.sheets).map(([id, s]) => [id, s.bytes])].map(([id, b]) => [id, b - sprite.logo_bytes])
+// Senate, House and State Assembly: each race's on-demand card copies together (D-071).
+const people = JSON.parse(fs.readFileSync(path.resolve('data/generated/photos.json'), 'utf8')).people
+const onDemand = new Map()
+for (const [id, p] of Object.entries(people)) if (p.card) onDemand.set(id.split('-').slice(0, -1).join('-'), (onDemand.get(id.split('-').slice(0, -1).join('-')) ?? 0) + p.card_bytes)
+races.push(...onDemand)
 const worstRace = races.sort((a, b) => b[1] - a[1])[0]
 console.log(`Photos per race: largest ${(worstRace[1] / KB).toFixed(1)} KB (${worstRace[0]}, ${races.length} races with photos); budget 30 KB`)
 if (worstRace[1] > BUDGET.racePhotos) fails++

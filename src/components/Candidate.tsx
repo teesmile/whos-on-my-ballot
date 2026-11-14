@@ -80,7 +80,12 @@ export function PartyLogo({ party, size, sheet, logosOnly = false }: { party: st
  */
 export function CardPhoto({ c, size }: { c: C, size: number }) {
   // sized by the stylesheet (the CSP allows no inline styles), the same as a photo of `size` pixels
-  if (!photo(c.id)) return <span className="photo ph" aria-hidden="true" />
+  const p = photo(c.id)
+  if (!p) return <span className="photo ph" aria-hidden="true" />
+  // A race the page doesn't show first (Senate, House, State Assembly): its own small file, fetched only when the card is
+  // shown (a hidden tab, or far down the page without JavaScript, loads nothing), so the first view stays one image.
+  // eslint-disable-next-line @next/next/no-img-element -- static export: a pre-sized WebP from the pipeline, lazy by design
+  if (p.card) return <img className="photo" src={`/${p.card}`} width={size} height={size} alt="" loading="lazy" decoding="async" />
   const s = sprite()
   const sheet = sheetFor(race(c.race_id))
   const i = sheet.photos[c.id]

@@ -290,6 +290,7 @@ input:focus, select:focus { border-color: var(--green-strong); }
 .logo, .photo { display: block; flex: none; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
 .logo { padding: 3px; }
 .photo { border-radius: 12px; overflow: hidden; }
+img.photo { object-fit: cover; }
 .card .photo { width: 76px; height: 76px; }
 .rt-pics .photo { width: 40px; height: 40px; border-radius: 8px; }
 /* The placeholder: a plain head-and-shoulders outline in grey, drawn by the stylesheet, so it costs no request. */

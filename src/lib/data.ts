@@ -216,6 +216,9 @@ export interface Photo {
   retrieved: string
   /** The day the owner approved the face on a contact sheet. */
   approved: string
+  /** Senate, House and State Assembly (D-071): the card's own small copy, loaded only when its race is shown. */
+  card?: string
+  card_bytes?: number
 }
 let photos: Record<string, Photo> | null = null
 export function allPhotos(): Record<string, Photo> {

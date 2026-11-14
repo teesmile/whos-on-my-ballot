@@ -144,7 +144,8 @@ def build_sprite(photo_cells: dict[str, object], log=print) -> dict:
         logos.append((acronym, raw))
     by_race: dict[str, list[tuple[str, object]]] = {}
     for cid, cell in sorted(photo_cells.items()):
-        by_race.setdefault(race_of(cid), []).append((cid, cell))
+        if cid.split("-")[2] in ("president", "governor"):  # the races a page shows first; others load on demand (photos.py)
+            by_race.setdefault(race_of(cid), []).append((cid, cell))
     tmp = LOGO_DIR / "_cells"
     tmp.mkdir(exist_ok=True)
 
