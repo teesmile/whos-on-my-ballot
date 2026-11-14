@@ -100,8 +100,9 @@ export default function About() {
       <p>
         A candidate has a photo only where a source that clearly names them has one: Wikimedia Commons, the candidate’s or party’s own
         official website, or an official government or legislature page. Never a news site, an agency or an unverified account, and
-        never a photo whose subject is in doubt. Every photo has the same head-and-shoulders crop and size, and each one is approved
-        by the site’s owner before it appears. Photos are being added race by race; their credits are listed at the end of this
+        never a photo whose subject is in doubt. Every photo has the same head-and-shoulders crop and size, and each one is checked
+        against the gender and age INEC printed for the candidate. A photo from Wikimedia Commons, where anyone can upload a file,
+        is also approved by the site’s owner before it appears. Photos are being added race by race; their credits are listed at the end of this
         page. Every candidate without one shows the same plain placeholder. A candidate or party can send an official photo to
         {' '}
         <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Official photo')}`}>{CORRECTIONS_EMAIL}</a>

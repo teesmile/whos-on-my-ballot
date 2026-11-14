@@ -1,8 +1,9 @@
 """Candidate photos (owner decisions D-064, D-065, D-069, D-071): any race, each from a source that clearly carries authority
 (Wikimedia Commons where the file names the person, the candidate's or party's own official website, or an official government
-or legislature page that names them), and credited with where it came from. A photo appears only
-after the owner has approved that face on a contact sheet (`owner_approved` in the yaml); everyone else shows the same
-neutral placeholder.
+or legislature page that names them), and credited with where it came from. A photo from an official page that names the
+candidate appears once it has been checked against the gender and age INEC printed (`official_checked` in the yaml, D-074);
+a photo anyone could have uploaded, such as a Wikimedia Commons file, appears only after the owner has approved that face on a
+contact sheet (`owner_approved`). Everyone else shows the same neutral placeholder.
 
 Only images whose licence allows reuse (or that a party sends with written permission) are listed, in
 data/overrides/photos.yaml, each with its file page, author, licence and a crop box. `ballot-pipeline photos` downloads the
@@ -55,12 +56,36 @@ def load() -> dict:
         missing = [f for f in FIELDS if f not in p]
         if missing:
             raise ValueError(f"photos.yaml: {p.get('candidate_id')} lacks {missing}")
+        if p.get("official_checked") and public_upload(p):
+            raise ValueError(f"photos.yaml: {p['candidate_id']} is a public upload, so it needs owner_approved, not official_checked (D-074)")
     return {"people": data.get("people") or []}
 
 
+PUBLIC_UPLOAD_HOSTS = ("commons.wikimedia.org", "upload.wikimedia.org")
+
+
+def _date(v) -> str | None:
+    return str(v) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(v or "")) else None
+
+
+def public_upload(p: dict) -> bool:
+    """A file a member of the public uploaded (Wikimedia Commons): it always needs the owner's approval on a sheet (D-074)."""
+    hosts = {urllib.parse.urlsplit(p[k]).netloc.lower() for k in ("file_page", "file_url")}
+    return p["source"] == "Wikimedia Commons" or bool(hosts & set(PUBLIC_UPLOAD_HOSTS))
+
+
+def approval_date(p: dict) -> str | None:
+    """When this face was cleared to go live: the owner's approval on a contact sheet (D-065), or, for a photo from an
+    official page that names the candidate, the date it was checked against INEC's printed gender and age (D-074)."""
+    if _date(p.get("owner_approved")):
+        return _date(p.get("owner_approved"))
+    if _date(p.get("official_checked")) and not public_upload(p):
+        return _date(p.get("official_checked"))
+    return None
+
+
 def approved(p: dict) -> bool:
-    """The owner approved this face on a contact sheet (D-065): the date they did, as a string."""
-    return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(p.get("owner_approved") or "")))
+    return approval_date(p) is not None
 
 
 def _raw(p: dict) -> Path:
@@ -119,7 +144,7 @@ def build_photos(log=print) -> dict[str, Path]:
     people: dict[str, dict] = {}
     for p in listed:
         if not approved(p):
-            log(f"photo {p['candidate_id']}: waiting for the owner's approval, not built")
+            log(f"photo {p['candidate_id']}: not yet approved or checked, not built")
             continue
         raw = _raw(p)
         if not raw.exists() or _sha256(raw.read_bytes()) != p["sha256"]:
@@ -146,7 +171,7 @@ def build_photos(log=print) -> dict[str, Path]:
             **extra,
             "page": f"photos/{page.name}", "page_sha256": _sha256(page.read_bytes()), "page_size": PAGE,
             "share": f"photos/{share.name}", "share_sha256": _sha256(share.read_bytes()), "share_size": SHARE,
-            **{k: p[k] for k in ("source", "file_page", "retrieved")}, "approved": str(p["owner_approved"]),
+            **{k: p[k] for k in ("source", "file_page", "retrieved")}, "approved": approval_date(p),
             **{k: p[k] for k in OPTIONAL if p.get(k)},
         }
         log(f"photo {cid}: {page.stat().st_size} + {share.stat().st_size} bytes")
@@ -155,7 +180,7 @@ def build_photos(log=print) -> dict[str, Path]:
 
 
 def check_photos(offices: dict[str, str]) -> list[str]:
-    """Only faces the owner approved (D-065, D-071), only of named candidates. President and Governor photos share the page's
+    """Only faces the owner approved or, from an official page, checked against INEC (D-065, D-071, D-074), only of named candidates. President and Governor photos share the page's
     one image; Senate, House and State Assembly photos each have a small card copy that loads on demand (D-071). `offices`
     maps candidate ID to office."""
     if not PHOTOS_JSON.exists():
@@ -170,7 +195,7 @@ def check_photos(offices: dict[str, str]) -> list[str]:
         errors.append(f"photos (D-071): no on-demand card copy for {no_card}")
     ok = {p["candidate_id"] for p in load()["people"] if approved(p)}
     if set(people) - ok:
-        errors.append(f"photos (D-065): built without the owner's approval: {sorted(set(people) - ok)}")
+        errors.append(f"photos (D-065, D-074): built without approval or an official-source check: {sorted(set(people) - ok)}")
     for cid, m in people.items():
         for key in ("page", "share", *(("card",) if "card" in m else ())):
             f = GENERATED_DIR / m[key]

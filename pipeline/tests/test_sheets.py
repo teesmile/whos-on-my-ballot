@@ -14,3 +14,18 @@ def test_the_office_is_the_third_part_of_an_id():
     assert office_of("feb-2027-sha-lagos-lagos-island-i-apc") == "sha"
     assert office_of("feb-2027-governor-kano-apc") not in ON_DEMAND
     assert office_of("jan-2027-president-adc") not in ON_DEMAND
+
+
+def test_an_official_page_photo_goes_live_once_checked_but_a_public_upload_needs_the_owner():
+    from ballot_pipeline.photos import approval_date
+
+    nass = {"source": "National Assembly website", "file_page": "https://nass.gov.ng/mps/single/1",
+            "file_url": "https://nass.gov.ng/themes/newnass/images/mps/1.jpg"}
+    commons = {"source": "Wikimedia Commons", "file_page": "https://commons.wikimedia.org/wiki/File:X.jpg",
+               "file_url": "https://upload.wikimedia.org/wikipedia/commons/x/xx/X.jpg"}
+    assert approval_date({**nass, "official_checked": "2026-11-14"}) == "2026-11-14"
+    assert approval_date({**nass}) is None
+    assert approval_date({**commons, "official_checked": "2026-11-14"}) is None
+    assert approval_date({**commons, "owner_approved": "2026-11-14"}) == "2026-11-14"
+    # a Commons file disguised under another source name is still a public upload
+    assert approval_date({**commons, "source": "National Assembly website", "official_checked": "2026-11-14"}) is None

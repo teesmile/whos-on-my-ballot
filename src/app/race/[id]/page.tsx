@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const r = race((await params).id)
   return pageMeta({
     title: title(r), path: racePath(r.id),
-    description: `Every candidate for ${raceTitle(r)}, ${ELECTION_DAY[r.election]}, as listed by INEC.`,
+    description: `Every candidate for ${raceTitle(r)}${r.state && r.state !== r.name ? `, ${r.state}` : ''}, ${ELECTION_DAY[r.election]}, as listed by INEC.`,
     image: { url: cardPath(r.id), alt: cardAlt(r) },
   })
 }

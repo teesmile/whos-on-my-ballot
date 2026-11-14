@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { badgeFor, BallotSources, RaceSection, RaceTabs, UnresolvedGroup } from '@/components/RaceSection'
 import { ChooseFirst } from '@/components/ChooseFirst'
 import { SourceLine } from '@/components/SourceLine'
-import { ballots, janBallotTitle, presidentialRace, race } from '@/lib/data'
+import { ballots, janBallotDescription, janBallotTitle, presidentialRace, race } from '@/lib/data'
 import { JsonLd } from '@/components/JsonLd'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { ballotCardRace, cardAlt, cardPath } from '@/lib/site'
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ state: st
   const b = await ballotOf(params)
   const card = race(ballotCardRace(b.house, presidentialRace().id))
   return pageMeta({
-    title: janBallotTitle(b), path: b.path, description: 'Every race and every candidate on this ballot for 16 January 2027, as listed by INEC.',
+    title: janBallotTitle(b), path: b.path, description: janBallotDescription(b),
     image: { url: cardPath(card.id), alt: cardAlt(card) },
   })
 }

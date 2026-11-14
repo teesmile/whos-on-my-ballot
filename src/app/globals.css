@@ -387,7 +387,7 @@ img.photo { object-fit: cover; }
 /* Room for the forms the script reveals, so nothing jumps; without JavaScript the same space holds the note. */
 .by-code { min-height: 17rem; }
 .by-search { min-height: 23rem; }
-main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result ul a, .card a, .wa-tile a, .race-tabs a) { display: inline-block; min-height: 44px; padding: 0.65rem 0; }
+main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result ul a, .card a, .wa-tile a, .race-tabs a) { display: inline-block; min-height: 44px; min-width: 44px; padding: 0.65rem 0; }
 
 /* Sharing */
 .share { margin-top: 1.5rem; border-top: 1px solid var(--line-soft); padding-top: 0.25rem; }

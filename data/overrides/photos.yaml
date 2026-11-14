@@ -373,3 +373,1407 @@ people:
     retrieved: '2026-11-13'
     crop: [194, 156, 635, 635]
     owner_approved: '2026-11-13'  # governor contact sheet 1
+  - candidate_id: jan-2027-senate-abia-abia-central-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/523
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/523.jpg
+    sha256: 207e8472e1598665123883007bd48793def8ee5a7b43cacd40eb13b53c174c82
+    retrieved: '2026-11-13'
+    crop: [88, 47, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-abia-abia-north-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/97
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/97.jpg
+    sha256: 62b49c283b78d7c4c1a01b3c4d33022e21a1a0fc878e7e9f1bae5d58502a0396
+    retrieved: '2026-11-13'
+    crop: [26, 0, 340, 340]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-abia-abia-south-lp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/318
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/318.jpg
+    sha256: cec44eddcb106c6453cba0bac1fa76673b282d767b70b71ed68dcea8c84421c1
+    retrieved: '2026-11-13'
+    crop: [26, 45, 340, 340]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-adamawa-adamawa-south-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/87
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/87.jpg
+    sha256: b07f1eb9b3f23587d84bbefd803bebead5768072738165e34425d1d4f5963b78
+    retrieved: '2026-11-13'
+    crop: [58, 19, 260, 260]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-akwa-ibom-akwa-ibom-north-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/591
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/591.jpg
+    sha256: e6521111670cef3fd2441b4327b2d66f2ad13a9ac7c96a71ae56fc33867007dd
+    retrieved: '2026-11-13'
+    crop: [28, 29, 312, 312]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-akwa-ibom-akwa-ibom-north-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/513
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/513.jpg
+    sha256: 310627367559f8f729e8373df584b038fe72ce0290fcf7497283a90d964d6032
+    retrieved: '2026-11-13'
+    crop: [114, 68, 220, 220]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-anambra-anambra-central-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/603
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/603.jpg
+    sha256: bfcaf38e08e54393a783995e9b64ca017c907db6195eed4fba3892ecae2899b8
+    retrieved: '2026-11-13'
+    crop: [40, 46, 320, 320]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-anambra-anambra-north-apga
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Princess_Stella_Oduah-Ogiemwonyi.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/b/bd/Princess_Stella_Oduah-Ogiemwonyi.jpg
+    sha256: 620270d0f6a29990d32bc1e238733b3ad152274bf6f3038347101c08081f89b9
+    author: "Nnabros"
+    licence: "CC BY-SA 3.0"
+    licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    taken: '2011'
+    retrieved: '2026-11-13'
+    crop: [483, 104, 852, 852]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-anambra-anambra-south-apga
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Emma_Nwachukwu.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/9/93/Emma_Nwachukwu.jpg
+    sha256: ec9a5471450b28dc2e3e817282c42444a81ca552eed51fa39266b65fa1af5200
+    author: "Odikammadu"
+    licence: "CC BY 4.0"
+    licence_url: https://creativecommons.org/licenses/by/4.0
+    taken: '2025'
+    retrieved: '2026-11-13'
+    crop: [563, 1236, 2817, 2817]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-bauchi-bauchi-central-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/567
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/567.jpg
+    sha256: 370069fcae058207727e81c80910d6a054f53caf92cbb0dcde9f96f3b682f702
+    retrieved: '2026-11-13'
+    crop: [84, 79, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-bayelsa-bayelsa-west-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/493
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/493.jpg
+    sha256: 3f7f5a59fa7b3739c2af4ae7fc9a7c8c76dac95727b7ccedb0f509b48fa4d5f8
+    retrieved: '2026-11-13'
+    crop: [74, 88, 220, 220]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-benue-benue-south-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/356
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/356.jpg
+    sha256: a45263732fb859e14925155af291b83a5e9d6130dcd7fda738573baf5c3a174a
+    retrieved: '2026-11-13'
+    crop: [64, 23, 288, 288]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-borno-borno-central-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/587
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/587.jpg
+    sha256: debc1577d1a43f422bed6059ac9976f79536e11986ad4374e48ec05d58cfdcc1
+    retrieved: '2026-11-13'
+    crop: [92, 24, 200, 200]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-borno-borno-north-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/528
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/528.jpg
+    sha256: de06cdebe6932b6d216ec5245a1c31dccdf3e60327b4967c08c0af8754245d39
+    retrieved: '2026-11-13'
+    crop: [76, 79, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-borno-borno-south-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/412
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/412.jpg
+    sha256: 9d15137c6b9136a1820b4f07aaa9ac5d12197f7eaa2a5cf9656b29f33c76b247
+    retrieved: '2026-11-13'
+    crop: [46, 22, 300, 300]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-cross-river-cross-river-north-apc
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Jarigbe_Agom.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Jarigbe_Agom.jpg
+    sha256: c8a0294a199737142ef0d1c87ca5ce0fb4dd3e983f211e324506cfc3ff91048d
+    author: "Aysamiali"
+    licence: "CC BY-SA 4.0"
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2024'
+    retrieved: '2026-11-13'
+    crop: [1425, 974, 1406, 1406]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-cross-river-cross-river-south-apc
+    source: "Candidate's own official website (asuquoekpenyong.com)"
+    file_page: https://asuquoekpenyong.com/
+    file_url: https://asuquoekpenyong.com/wp-content/uploads/2026/03/DSA-Portrait.webp
+    sha256: 0e8c2e54cebafa006d606d6068e679db0fe1bebc334a5befdcc703b37fe2b408
+    retrieved: '2026-11-13'
+    crop: [812, 18, 458, 458]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-delta-delta-central-apc
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Senator_Ede_Dafinone,_Portrait.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Senator_Ede_Dafinone%2C_Portrait.jpg
+    sha256: cf5494bdf5e6e5d77f13a473b70ba6995b30ce086736efd3e78b5bba48a70b29
+    author: "Bemmax"
+    licence: "CC BY-SA 4.0"
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2023'
+    retrieved: '2026-11-13'
+    crop: [832, 779, 1595, 1595]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-ekiti-ekiti-central-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/158
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/158.jpg
+    sha256: 7d1fb6494fb5e949a830d977a1d4f0222e092db42be30d9259450d1d0c3d13c0
+    retrieved: '2026-11-13'
+    crop: [40, 54, 320, 320]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-enugu-enugu-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/518
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/518.jpg
+    sha256: 8812dbbe1b6dfebddba3972998ce7468d15165f84be0165c78561fc34f120d2a
+    retrieved: '2026-11-13'
+    crop: [28, 45, 312, 312]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-fct-federal-capital-territory-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/636
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/636.jpg
+    sha256: 8a2d8e01b5472e746780dcbf480c780d97fd76323ba19fc2845230db0cf50a77
+    retrieved: '2026-11-13'
+    crop: [80, 44, 248, 248]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-gombe-gombe-north-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/679
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/679.jpg
+    sha256: 690c2f3b88fcbe6d6730c111f26b00ab92d6f9824f2fa2aaa11375c738ee5dc2
+    retrieved: '2026-11-13'
+    crop: [80, 76, 248, 248]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-gombe-gombe-south-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/605
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/605.jpg
+    sha256: 1c35b75a9002e811dbd900ae550c7856b3cf3adb0a49ca7535a17ac15afb533f
+    retrieved: '2026-11-13'
+    crop: [32, 30, 328, 328]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-imo-imo-east-pdp
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Prince_Ezeakonobi_Madumere.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/2/27/Prince_Ezeakonobi_Madumere.jpg
+    sha256: bfba46acbeb049c16ac8dc23a591e6faf086a46773ea29b7be5265cfd93fac36
+    author: "Onwuchekwaogbonnaya"
+    licence: "CC BY-SA 4.0"
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2019'
+    retrieved: '2026-11-13'
+    crop: [235, 0, 435, 435]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-imo-imo-west-apc
+    source: "Imo State Government website"
+    file_page: https://imostate.gov.ng/Content/Government/Executive/Governor/
+    file_url: https://axxpoint-bucket.s3.us-west-2.amazonaws.com/images/IMSG_H.E_001.jpeg
+    sha256: 8b6ca99cf1a5dd686254bdbb451ccc4583d00a5db81cdf028342415917b99cb9
+    retrieved: '2026-11-13'
+    crop: [800, 180, 1000, 1000]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-jigawa-jigawa-north-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/533
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/533.jpg
+    sha256: 16f32fd4f2d4d0b5a537e69317a7fa2aa58d91881283e00e30088f889a3fc99d
+    retrieved: '2026-11-13'
+    crop: [56, 67, 288, 288]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-kaduna-kaduna-central-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/663
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/663.jpg
+    sha256: 929999422db167e6fe405710e414c05e51b7cd12b4d3e8b16a5dbebec196a0c5
+    retrieved: '2026-11-13'
+    crop: [86, 92, 220, 220]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-kano-kano-north-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/433
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/433.jpg
+    sha256: f73176e1bb1ba7fcea627d1936a41432589bda45b73128fd2995388aca12c962
+    retrieved: '2026-11-13'
+    crop: [40, 58, 320, 320]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-kebbi-kebbi-north-apc
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Senator_Yahaya_Abubakar_Abdullahi.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/3/32/Senator_Yahaya_Abubakar_Abdullahi.jpg
+    sha256: ce2beeb8ee82cbcf2ce1ba250614eb801b278d6a04877f9311e52e124f351b6c
+    author: "Ojifo's Raphael"
+    licence: "CC BY-SA 4.0"
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2020'
+    retrieved: '2026-11-13'
+    crop: [204, 134, 720, 720]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-kogi-kogi-central-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/624
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/624.jpg
+    sha256: 5acd872a80f440bf34a32da9246df667364391d1fef9899723a53354c9d0b9b9
+    retrieved: '2026-11-13'
+    crop: [80, 52, 248, 248]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-kogi-kogi-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/561
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/561.jpg
+    sha256: eb037b5a3850054d063993192749d202537cf9d8b4ad52af9acdbecf296c656e
+    retrieved: '2026-11-13'
+    crop: [78, 51, 260, 260]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-kwara-kwara-central-apc
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:AbdulRahman_AbdulRasaq_(cropped).jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/6/6b/AbdulRahman_AbdulRasaq_%28cropped%29.jpg
+    sha256: 743d07bbc70e432572bdc802a2b0cb72f18a06790d0a9bd11bece3874dc40174
+    author: "Cuttondigital"
+    licence: "CC BY-SA 4.0"
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2019'
+    retrieved: '2026-11-13'
+    crop: [134, 206, 1074, 1074]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-kwara-kwara-central-pdp
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Saliu_Mustapha.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/4/41/Saliu_Mustapha.jpg
+    sha256: 67dbcf59d520644ae9d28579f38b78bed0ed504dc6f9ad0410a10bb4d66bda4f
+    author: "Saliu Mustapha Foundation"
+    licence: "CC0"
+    licence_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    taken: '2019'
+    retrieved: '2026-11-13'
+    crop: [98, 84, 220, 220]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-lagos-lagos-central-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/559
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/559.jpg
+    sha256: 1c15259325707beaaa2d83314e61c73f3222b383fb3a57d9b6a17531660218e5
+    retrieved: '2026-11-13'
+    crop: [32, 48, 304, 304]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-lagos-lagos-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/492
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/492.jpg
+    sha256: af7636a4858282e8db12e512087557864c219a1f46788c74a776faa5ef06a145
+    retrieved: '2026-11-13'
+    crop: [106, 60, 180, 180]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-south-sdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/336
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/336.jpg
+    sha256: f61270314786fcd2d5445248ec6ac4febfef5e12fa1071888cfb383f561a0232
+    retrieved: '2026-11-13'
+    crop: [58, 42, 300, 300]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-niger-niger-east-apc
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Mr_Mohammed_Sani_Musa.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/e/e8/Mr_Mohammed_Sani_Musa.jpg
+    sha256: 4ba0d0b4ea881db2415e01f1c34708c0c9bd65279afcb85c5bc92b602065844b
+    author: "Mosani"
+    licence: "CC BY-SA 3.0"
+    licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    taken: '2014'
+    retrieved: '2026-11-13'
+    crop: [147, 89, 195, 195]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-niger-niger-north-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/590
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/590.jpg
+    sha256: 02016ce64008a4a9a719ebb93288bc683cc95fc5ae1e9001a59f5b2374dd4027
+    retrieved: '2026-11-13'
+    crop: [40, 46, 320, 320]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-niger-niger-south-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/637
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/637.jpg
+    sha256: 17566cc4632df224591a70b0def0ebd09b6303f4a816fa66b44753727beb86ef
+    retrieved: '2026-11-13'
+    crop: [80, 67, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-ogun-ogun-central-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/670
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/670.jpg
+    sha256: 609bc9c47ac1da813e6c59a1cfc5a3b3223b6cc7de5bccd2243a480f86f651ae
+    retrieved: '2026-11-13'
+    crop: [36, 34, 320, 320]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-ogun-ogun-east-apc
+    source: "Ogun State Government website"
+    file_page: https://ogunstate.gov.ng/
+    file_url: https://ogunstate.gov.ng/static/media/dapoo.814dd6e3df370ed3e331.png
+    sha256: 5a020540df37efa086c5462a50bd1f61be9c05acea77342c845e57acac937668
+    retrieved: '2026-11-13'
+    crop: [283, 89, 171, 171]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-ondo-ondo-central-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/672
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/672.jpg
+    sha256: ba2291dbe9a0fe68d66ed14ba270378d1ebd4da5dbc97e8bb779b89406914590
+    retrieved: '2026-11-13'
+    crop: [36, 46, 320, 320]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-ondo-ondo-north-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/623
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/623.jpg
+    sha256: 806b3537e651bc81a86c484a305b418d1d77fb60929102509f3942c518171140
+    retrieved: '2026-11-13'
+    crop: [0, 0, 400, 400]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-osun-osun-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/393
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/393.jpg
+    sha256: 631f3d293467e74b839e35813be541ea112629c0214a94d01761501532ce737c
+    retrieved: '2026-11-13'
+    crop: [60, 7, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-osun-osun-west-a
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/668
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/668.jpg
+    sha256: f34d2467e5753fd927dc8cf1bdff9e7421510661024ee10a16f87ab6a3da8b35
+    retrieved: '2026-11-13'
+    crop: [24, 66, 320, 320]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-oyo-oyo-south-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/675
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/675.jpg
+    sha256: dfc28292cb7fa73b26ad6b46cef272aec7c03403db0fac3a294863775254a5d2
+    retrieved: '2026-11-13'
+    crop: [22, 45, 340, 340]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-rivers-rivers-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/690
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/690.jpg
+    sha256: 0281afbb93afbaafdbc67c871576c9a87fb668d47114e80ecb975b841362091b
+    retrieved: '2026-11-13'
+    crop: [68, 99, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-rivers-rivers-south-east-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/61
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/61.jpg
+    sha256: b8337c5a1965859d14592a28bd4ac73f856d034124dc12cf2ba3f466a74a1a44
+    retrieved: '2026-11-13'
+    crop: [84, 55, 184, 184]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-sokoto-sokoto-north-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/404
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/404.jpg
+    sha256: 487d383e269bdfd41e4e2e1bb3d14ceda4896d1ce76fabf2a4feaed8f7dd8aed
+    retrieved: '2026-11-13'
+    crop: [180, 118, 120, 120]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-taraba-taraba-central-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/694
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/694.jpg
+    sha256: 0481685ffb21d952ebc36191806b6111124743fdb388962557612427ec5d0a20
+    retrieved: '2026-11-13'
+    crop: [54, 62, 300, 300]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-taraba-taraba-south-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/632
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/632.jpg
+    sha256: b9ba8df5b284c6026938c59d8f8d2eb55f477d71bdeb7eeb9f71532fc3d40540
+    retrieved: '2026-11-13'
+    crop: [72, 75, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-yobe-yobe-north-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/424
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/424.jpg
+    sha256: f7e06be738c3827369489b0704b60eebce8a0de99473ac3e92619a27ae4e0a3a
+    retrieved: '2026-11-13'
+    crop: [104, 67, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-zamfara-zamfara-central-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/662
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/662.jpg
+    sha256: 7882a931f087ded50eedb44daf1180a0c67b27f68411d96fc6ebbbbaa8792515
+    retrieved: '2026-11-13'
+    crop: [28, 46, 320, 320]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-senate-zamfara-zamfara-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/358
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/358.jpg
+    sha256: 30e232b5c2968791901356c490fd619fe3fc1e9ca49b13463b40710a874beadd
+    retrieved: '2026-11-13'
+    crop: [72, 7, 240, 240]
+    owner_approved: '2026-11-14'  # Senate contact sheet 1
+  - candidate_id: jan-2027-house-abia-bende-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/149
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/149.jpg
+    sha256: 421b3144fdbf95a90fed016825660df21de44f986cbf0f5c08d7608deffa0a5d
+    retrieved: '2026-11-14'
+    crop: [116, 40, 248, 248]
+    official_checked: '2026-11-14'  # House batch 1: profile names BENJAMIN KALU Bende Federal Constituency; INEC M, 55, fits the photo
+  - candidate_id: jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south-lp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/645
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/645.jpg
+    sha256: a9067cf0035f1533b1bb2da71847eba63f5c485dfd8d94d65573c0aa85d88c6c
+    retrieved: '2026-11-14'
+    crop: [30, 14, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names OBINNA ONWUSIBE Isiala Ngwa North/South; INEC M, 54, fits the photo
+  - candidate_id: jan-2027-house-abia-isuikwuato-umu-nneochi-lp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/628
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/628.jpg
+    sha256: 2f1fb1fa6a1cfdd079dbaefff3388ec67c664f2e1b3b0d858c3364594376e884
+    retrieved: '2026-11-14'
+    crop: [80, 31, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names AMOBI OGAH Isuikwato/Umunneochi; INEC M, 46, fits the photo
+  - candidate_id: jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-lp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/575
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/575.jpg
+    sha256: 4084e7d4bcf3404a73b3f33d02890599bbd0b9ab844dd7b3b0a4d6d031759d77
+    retrieved: '2026-11-14'
+    crop: [40, 6, 320, 320]
+    official_checked: '2026-11-14'  # House batch 1: profile names OBINNA AGUOCHA Ikwuano/Umuahia North/South; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-adamawa-demsa-numan-lamurde-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/347
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/347.jpg
+    sha256: e18444189d3e9ac40332b70b6e004e49a64b787e785d558efcdb2bb37eeed3f9
+    retrieved: '2026-11-14'
+    crop: [42, 0, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names KWAMOTI LAORI Demsa/Numan/Lamurde; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-adamawa-fufore-song-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/622
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/622.jpg
+    sha256: 4574d82a466ef22b6feb7eead3d413895e00d179265037b5e907087c79e12d04
+    retrieved: '2026-11-14'
+    crop: [60, 14, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names ALIYU BOYA Fufore/Song; INEC M, 48, fits the photo
+  - candidate_id: jan-2027-house-adamawa-gombi-hong-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/656
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/656.jpg
+    sha256: e952afab4e14b83acb0b783f4255465b22ab845791e9dad64ac5e96bf4a74181
+    retrieved: '2026-11-14'
+    crop: [48, 14, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names JAMES BARKA Hong/Gombi; INEC M, 64, fits the photo
+  - candidate_id: jan-2027-house-adamawa-madagali-michika-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/330
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/330.jpg
+    sha256: d1a4dfc982964c5f24b199ed2462e584b4098c05da877230b0fad9051e6f4278
+    retrieved: '2026-11-14'
+    crop: [80, 19, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names Zakaria Nyampa Michika/Madagali; INEC M, 52, fits the photo
+  - candidate_id: jan-2027-house-akwa-ibom-etinan-nsit-ibom-nsit-ubium-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/643
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/643.jpg
+    sha256: a3170652f0d3420c5d77b395b87dd05bb83d628f234ae02bca203eb3a0dbd034
+    retrieved: '2026-11-14'
+    crop: [60, 22, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names PAUL EKPO Etinan/Nsit Ibom/Nsit Ubium; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-akwa-ibom-ikono-ini-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/325
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/325.jpg
+    sha256: 92bfd428c0d9c6d035fee825b0d3ce6f2199088ee04c71ba0cddaf3bbd54003a
+    retrieved: '2026-11-14'
+    crop: [80, 31, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names EMMANUEL UKPONG-UDO Ikono/ Ini; INEC M, 50, fits the photo
+  - candidate_id: jan-2027-house-akwa-ibom-ukanafun-oruk-anam-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/226
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/226.jpg
+    sha256: cfc1bf510c690d2adc75250f7e21d719fc13bbbc47f7b23d520d5dcd392bc7d8
+    retrieved: '2026-11-14'
+    crop: [30, 23, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names UNYIME IDEM Ukanafun/Orukanam; INEC M, 51, fits the photo
+  - candidate_id: jan-2027-house-anambra-anambra-east-anambra-west-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/610
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/610.jpg
+    sha256: 3a5c5e41bf93457228c008dfd14fa284bae4b98fea86a01cce2a1b2405dccc49
+    retrieved: '2026-11-14'
+    crop: [60, 42, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names PETER ANIEKWE Anambra East/West; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/525
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/525.jpg
+    sha256: 3c3323d2b9c0465df9627920340cb817ed0d4de03e8685a05b324c5e2d4740fe
+    retrieved: '2026-11-14'
+    crop: [52, 84, 200, 200]
+    official_checked: '2026-11-14'  # House batch 1: profile names IFEANYI UZOKWE Nnewi North/South/Ekwusigo; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-anambra-onitsha-north-onitsha-south-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/573
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/573.jpg
+    sha256: e3ca111cdb3180017b8fcdf2a8e9e7d8f38ad49d37ec4ba36fc6392294c4cc35
+    retrieved: '2026-11-14'
+    crop: [70, 23, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names EMEKA IDU Onitsha North/South; INEC M, 65, fits the photo
+  - candidate_id: jan-2027-house-bauchi-gamawa-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/284
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/284.jpg
+    sha256: 9e2868e7f3451fd7c1574e8e5d60c862d479c37d3224c474a10f44688774fbf1
+    retrieved: '2026-11-14'
+    crop: [80, 19, 239, 239]
+    official_checked: '2026-11-14'  # House batch 1: profile names ADAMU GAMAWA Gamawa; INEC M, 57, fits the photo
+  - candidate_id: jan-2027-house-bayelsa-southern-ijaw-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/642
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/642.jpg
+    sha256: b62453f8aa019218828f3b2d33c411699827976bdf609d8ee2d88b54d078c707
+    retrieved: '2026-11-14'
+    crop: [84, 51, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names RODNEY AMBIOWEI Southern Ijaw; INEC M, 53, fits the photo
+  - candidate_id: jan-2027-house-benue-apa-agatu-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/614
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/614.jpg
+    sha256: 4e52b453c37507132637399cbb65dd873ed271d028f4159264353e3bddf5ff43
+    retrieved: '2026-11-14'
+    crop: [72, 19, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names OJEMA OJOTU Apa/Agatu; INEC M, 43, fits the photo
+  - candidate_id: jan-2027-house-benue-gwer-east-gwer-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/619
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/619.jpg
+    sha256: d5752c0288bb65a6ce599ffea3a6b4f48bbe9179399a4fd71ab9e901c27743c6
+    retrieved: '2026-11-14'
+    crop: [70, 23, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names AUSTIN ACHADO Gwer East/Gwer West; INEC M, 64, fits the photo
+  - candidate_id: jan-2027-house-benue-oju-obi-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/631
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/631.jpg
+    sha256: ee916804a35972fd55bf0bf7b826d64f413a4a396c333346adad8fa841860282
+    retrieved: '2026-11-14'
+    crop: [65, 29, 269, 269]
+    official_checked: '2026-11-14'  # House batch 1: profile names DAVID OGEWU Oju/Obi; INEC M, 40, fits the photo
+  - candidate_id: jan-2027-house-borno-biu-kwaya-kusar-shani-bayo-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/122
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/122.jpg
+    sha256: 9d6257fb404e63efbea4b92c3264ca1392e6a036213abd32a588669e407b199f
+    retrieved: '2026-11-14'
+    crop: [122, 24, 180, 180]
+    official_checked: '2026-11-14'  # House batch 1: profile names ALIYU MUKTAR Biu/Bayo/Shani/Kwaya Kusar; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-borno-damboa-gwoza-chibok-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/133
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/133.jpg
+    sha256: 8ff9b0adc440828d6a6f4812f8037cbd42e096c3dc96a2c84f33e396af149ace
+    retrieved: '2026-11-14'
+    crop: [80, 19, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names Ahmadu Jaha Damboa/Gwoza/Chibok; INEC M, 52, fits the photo
+  - candidate_id: jan-2027-house-borno-maiduguri-metropolitan-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/197
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/197.jpg
+    sha256: 794982a0bf280eba854ebd46a2bcc745c032793069a18e3c9fcfd8e7cb03d967
+    retrieved: '2026-11-14'
+    crop: [120, 48, 200, 200]
+    official_checked: '2026-11-14'  # House batch 1: profile names ABDULKADIR RAHIS Maiduguri (Metropolitan); INEC M, 58, fits the photo
+  - candidate_id: jan-2027-house-borno-monguno-nganzai-marte-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/647
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/647.jpg
+    sha256: b5029d88b1fddf8d769644d628dac68c27d5ab8da49b2a7f514ef38a4f613e68
+    retrieved: '2026-11-14'
+    crop: [90, 88, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names BUKAR TALBA Monguno/Marte/Nganzai; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-cross-river-calabar-south-akpabuyo-bakassi-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/630
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/630.jpg
+    sha256: ea7d3953f09cd9a38005e82d7e2eb71380d17d634d6eac25341230be64ca087c
+    retrieved: '2026-11-14'
+    crop: [90, 20, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names JOSEPH BASSEY Akpabuyo/Bakassi/Calabar South; INEC M, 52, fits the photo
+  - candidate_id: jan-2027-house-cross-river-yakurr-abi-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/34
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/34.jpg
+    sha256: 9bcf838ee102bfc6aca11dbe153d11554049690442c282c020d3134833d33b45
+    retrieved: '2026-11-14'
+    crop: [50, 14, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names ALEX EGBONA Yakurr/Abi; INEC M, 61, fits the photo
+  - candidate_id: jan-2027-house-delta-burutu-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/219
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/219.jpg
+    sha256: 959d0e945f43949be54599da6c8c9d5a6ec6dc9b3fb6c9b19e793991a0e52847
+    retrieved: '2026-11-14'
+    crop: [62, 14, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names Julius Pondi Burutu; INEC M, 47, fits the photo
+  - candidate_id: jan-2027-house-delta-ethiope-east-ethiope-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/689
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/689.jpg
+    sha256: ed8c3f2017d06461504efccf237561b167dfa16baeed1e1c4c565550e8dcd03d
+    retrieved: '2026-11-14'
+    crop: [70, 28, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names Erhiatake Ibori Suenu Ethiope; INEC F, 46, fits the photo
+  - candidate_id: jan-2027-house-delta-isoko-north-isoko-south-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/608
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/608.jpg
+    sha256: 0e5256df39fb9a0f90299b0827ac11f891d2966be6411d03d01dbf8bb460940f
+    retrieved: '2026-11-14'
+    crop: [80, 11, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names JONATHAN UKODHIKO Isoko North/South; INEC M, 51, fits the photo
+  - candidate_id: jan-2027-house-delta-ughelli-north-ughelli-south-udu-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/111
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/111.jpg
+    sha256: 736daefda867521ed4ecbb1c8620040d4fcd41c693d70834998961af27b517dd
+    retrieved: '2026-11-14'
+    crop: [98, 13, 140, 140]
+    official_checked: '2026-11-14'  # House batch 1: profile names FRANCIS WAIVE Ughelli North/South/Udu; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-delta-warri-north-warri-south-warri-south-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/171
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/171.jpg
+    sha256: 6445b7c769624adbf9bb153d2cfeffdac0d6bb5a65a7842cc32d49686c34a559
+    retrieved: '2026-11-14'
+    crop: [30, 26, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names EREYITOMI THOMAS Warri; INEC M, 61, fits the photo
+  - candidate_id: jan-2027-house-edo-etsako-east-etsako-west-etsako-central-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/616
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/616.jpg
+    sha256: ab81c20e60204db87e9bd7b161850660067ad9776ef5f5e0499f75eea20ffffa
+    retrieved: '2026-11-14'
+    crop: [77, 32, 245, 245]
+    official_checked: '2026-11-14'  # House batch 1: profile names SUNDAY DEKERI Etsako East/West/Central; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-ekiti-ado-ekiti-irepodun-ifelodun-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/85
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/85.jpg
+    sha256: 5d848e1bef7ba3d7e6291b9f802df7de28c486697e55e4360dd1d412856f32f8
+    retrieved: '2026-11-14'
+    crop: [10, 14, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names OLUSOLA FATOBA Ado Ekiti/Irepodun-Ifelodun; INEC M, 58, fits the photo
+  - candidate_id: jan-2027-house-ekiti-emure-gbonyin-ekiti-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/104
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/104.jpg
+    sha256: 76b13f58e948154ae21c7eb6a1693fb301778146d5881a4b8b37769ad8d4afd7
+    retrieved: '2026-11-14'
+    crop: [32, 10, 320, 320]
+    official_checked: '2026-11-14'  # House batch 1: profile names OLUFEMI BAMISILE Emure/Gbonyin/Ekiti East; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-enugu-aninri-awgu-oji-river-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/537
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/537.jpg
+    sha256: ee7c17064c4dd57bde901c1e59102e8b2e1c89a8f5cf769260a5c6e4a2596bd1
+    retrieved: '2026-11-14'
+    crop: [60, 14, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names BEFFORD ANAYO Aninri/Agwu/Oji River; INEC M, 65, fits the photo
+  - candidate_id: jan-2027-house-enugu-nkanu-east-nkanu-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/63
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/63.jpg
+    sha256: 14df80098c4c6eb7c860a24f195815d6e5725b8b028d7aeacd444287f5767b7e
+    retrieved: '2026-11-14'
+    crop: [50, 6, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names NNOLIM NNAJI Nkanu East/Nkanu West; INEC M, 55, fits the photo
+  - candidate_id: jan-2027-house-gombe-akko-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/416
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/416.jpg
+    sha256: 60167e4a0158b9c7ea38f426175b0326d765f83f1c5ba8104f61d9debf510f14
+    retrieved: '2026-11-14'
+    crop: [90, 40, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names Kumo Bello Akko; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-gombe-balanga-billiri-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/609
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/609.jpg
+    sha256: 48d41f663b2f712a9fb57fa46f1aa4b6295b3c0fe538cec33e2f2f0f950b1186
+    retrieved: '2026-11-14'
+    crop: [80, 31, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names ALI ISA Balanga/Billiri; INEC M, 51, fits the photo
+  - candidate_id: jan-2027-house-imo-ehime-mbano-ihite-uboma-obowo-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/531
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/531.jpg
+    sha256: e2d91a85a0d0c3f137c2534e88055b65a42f0edeb22995f2083f9efc2886170f
+    retrieved: '2026-11-14'
+    crop: [67, 44, 266, 266]
+    official_checked: '2026-11-14'  # House batch 1: profile names JONAS OKEKE Ehimembano/ihitte Uboma/Obowo; INEC M, 71, fits the photo
+  - candidate_id: jan-2027-house-jigawa-birnin-kudu-buji-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/597
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/597.jpg
+    sha256: 6dda119a9ccecacf4af2cac4bd8a5bb88807a58af387340328386a92edd891f9
+    retrieved: '2026-11-14'
+    crop: [70, 51, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names Yakubu Adamu Birnin-Kudu/Buji; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-jigawa-birniwa-guri-kirikasamma-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/320
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/320.jpg
+    sha256: 24b5de7147c8f6c9caa9d0b2411de1cfd23c29d217d0313b0c0fb60895d47ff6
+    retrieved: '2026-11-14'
+    crop: [38, 42, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names ABUBAKAR FULATA Birniwa/Guri/Kiri-Kasamma; INEC M, 67, fits the photo
+  - candidate_id: jan-2027-house-jigawa-gumel-maigatari-sule-tankarkar-gagarawa-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/183
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/183.jpg
+    sha256: 99ee7016ede36fbfb96ad5b11d0f093acb3a04fbb062e65a22ff8f7007e8f480
+    retrieved: '2026-11-14'
+    crop: [52, 42, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names NAZIFI SANI Gumel/Maigatari/Sule Tankarkar/Gagarawa; INEC M, 46, fits the photo
+  - candidate_id: jan-2027-house-jigawa-gwaram-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/497
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/497.jpg
+    sha256: 50e151c22e6cd86d85df647eb98c1b8ec8fb9a1d56da26b130a906c9d47649d3
+    retrieved: '2026-11-14'
+    crop: [100, 31, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names YUSUF GALAMBI Gwaram; INEC M, 62, fits the photo
+  - candidate_id: jan-2027-house-jigawa-mallam-madori-kaugama-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/12
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/12.jpg
+    sha256: 8850aa6137b660cf67feaddff88360746cc6ee7db0f9eca98c3f97bb64bb00cc
+    retrieved: '2026-11-14'
+    crop: [48, 51, 288, 288]
+    official_checked: '2026-11-14'  # House batch 1: profile names MAKKI ABUBAKAR Mallam Madori/Kaugama; INEC M, 57, fits the photo
+  - candidate_id: jan-2027-house-kaduna-birnin-gwari-giwa-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/598
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/598.jpg
+    sha256: 4c8f5ff54ab17ffa52afaec30e30edc488e097f84260a490fe059ddd642ef71c
+    retrieved: '2026-11-14'
+    crop: [46, 10, 308, 308]
+    official_checked: '2026-11-14'  # House batch 1: profile names Bashir Zubairu Birnin-Gwari/Giwa; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-kaduna-kaduna-south-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/638
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/638.jpg
+    sha256: 6629d056fa91b44db37db6cdead7d9a1d50560fdcc2fc30afc425d360721f8d6
+    retrieved: '2026-11-14'
+    crop: [63, 36, 274, 274]
+    official_checked: '2026-11-14'  # House batch 1: profile names HUSSAINI ABDULKARIM Kaduna South; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-kaduna-lere-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/500
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/500.jpg
+    sha256: 1728e44ef5384dfb4ac2af029548a0ed7a3cb33c384ad0fd4461a791d9cf56d8
+    retrieved: '2026-11-14'
+    crop: [90, 8, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names AHMED MUNIR Lere; INEC M, 45, fits the photo
+  - candidate_id: jan-2027-house-kaduna-makarfi-kudan-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/551
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/551.jpg
+    sha256: 1507a8f0118f15f3d2643f79adbeb5168b011c12f29deff0401c127d611edc1a
+    retrieved: '2026-11-14'
+    crop: [73, 57, 254, 254]
+    official_checked: '2026-11-14'  # House batch 1: profile names Ajilo Umar Makarfi/Kudan; INEC M, 49, fits the photo
+  - candidate_id: jan-2027-house-kaduna-soba-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/595
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/595.jpg
+    sha256: ba349322489e3ca216fc6f7029c9ef3679d6490c7642357bed9420aef5447bf2
+    retrieved: '2026-11-14'
+    crop: [81, 54, 237, 237]
+    official_checked: '2026-11-14'  # House batch 1: profile names Suleiman Yahaya Soba; INEC M, 67, fits the photo
+  - candidate_id: jan-2027-house-kaduna-zangon-kataf-jaba-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/154
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/154.jpg
+    sha256: 8ae13b030c281e2ff4d4c89c5e2526ef069a67aef859e89c970ed5d7f7b6633e
+    retrieved: '2026-11-14'
+    crop: [50, 34, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names AMOS MAGAJI Zangon Kataf/Jaba; INEC M, 55, fits the photo
+  - candidate_id: jan-2027-house-kaduna-zaria-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/92
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/92.jpg
+    sha256: b22dd2f42083d9aace6581dd161f5cf92be117f7491620b814717910ce5b0835
+    retrieved: '2026-11-14'
+    crop: [120, 57, 160, 160]
+    official_checked: '2026-11-14'  # House batch 1: profile names ABBAS TAJUDEEN Zaria Federal Constituency; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-kano-dawakin-tofa-tofa-rimin-gado-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/372
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/372.jpg
+    sha256: 81cac92781eed59aab886791cf1e0d7596f3e17d353c3685ef6bc9228861746d
+    retrieved: '2026-11-14'
+    crop: [100, 62, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names TIJJANI JOBE Dawakin-Tofa/Tofa/Rimin Gado; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-kano-doguwa-tudun-wada-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/488
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/488.jpg
+    sha256: 0124e6d47d20d6ef7bdf3c90bd818782cd4139838a58d9656d451160fcb561ca
+    retrieved: '2026-11-14'
+    crop: [60, 34, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names ALHASSAN GARBA Tudun-Wada/Doguwa; INEC M, 61, fits the photo
+  - candidate_id: jan-2027-house-kano-gezawa-gabasawa-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/530
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/530.jpg
+    sha256: 1400e3703e7ba94cc56af6ce4cdf9416196169ec76003537a43ce536ab9de01c
+    retrieved: '2026-11-14'
+    crop: [75, 51, 250, 250]
+    official_checked: '2026-11-14'  # House batch 1: profile names MOHAMMED CHIROMA Gezawa/Gabasawa; INEC M, 62, fits the photo
+  - candidate_id: jan-2027-house-kano-karaye-rogo-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/532
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/532.jpg
+    sha256: 888afa4fb5317fb7e6f7e3a0d9c4ea311debcbd243ec134d2634594d57591c0d
+    retrieved: '2026-11-14'
+    crop: [42, 26, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names ABDULLAHI SANI Karaye/Rogo; INEC M, 68, fits the photo
+  - candidate_id: jan-2027-house-kano-kura-madobi-garun-mallam-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/580
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/580.jpg
+    sha256: a9fd519c6e47cd0b16dbfa7d33b6f29677ffd074cb663f7d2b9c2cb5bd1f95ea
+    retrieved: '2026-11-14'
+    crop: [78, 36, 244, 244]
+    official_checked: '2026-11-14'  # House batch 1: profile names YUSUF DATTI Kura/Madobi/Garun Malam; INEC M, 41, fits the photo
+  - candidate_id: jan-2027-house-kano-minjibir-ungogo-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/582
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/582.jpg
+    sha256: 01846070d198665c698647223d3c44aa42a82ae7ed67e59e14e3bef4200f2831
+    retrieved: '2026-11-14'
+    crop: [60, 33, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names SANI ADAMU Minjibir/Ungogo; INEC M, 41, fits the photo
+  - candidate_id: jan-2027-house-kano-wudil-garko-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/676
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/676.jpg
+    sha256: dab3bd8cfd6554a4345bf0c1366fa398104a7d1f2c3475bf5dbe7516686441ac
+    retrieved: '2026-11-14'
+    crop: [60, 42, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names ABDULHAKEEM ADO Wudil/Garko; INEC M, 32, fits the photo
+  - candidate_id: jan-2027-house-katsina-bakori-danja-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/586
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/586.jpg
+    sha256: cdb124123c1e49d8f421fd97aedb751d96e63912ce91e16371de359980bbcaa2
+    retrieved: '2026-11-14'
+    crop: [70, 23, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names ABDULLAHI DABAI Bakori/Danja; INEC M, 66, fits the photo
+  - candidate_id: jan-2027-house-katsina-batagarawa-charanchi-rimi-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/541
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/541.jpg
+    sha256: 2d4c5b616b281619cce1ffecb8edcdbad72ed5c8a1a4c1be55e7f796d525f7f9
+    retrieved: '2026-11-14'
+    crop: [60, 14, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names USMAN MURTALA Rimi/Charanchi/Batagarawa; INEC M, 44, fits the photo
+  - candidate_id: jan-2027-house-katsina-dutsin-ma-kurfi-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/526
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/526.jpg
+    sha256: 02a89b739db3f9d34783c4128c5d80f428d6123678583adbe2ce8b0c3c132034
+    retrieved: '2026-11-14'
+    crop: [50, 14, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names Balele Aminu Dutsin-ma/Kurfi; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-katsina-jibia-kaita-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/57
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/57.jpg
+    sha256: a917ee0645a1cfd6ce4baef32ab8a013bce44abed88b86ea0e645e384a27e653
+    retrieved: '2026-11-14'
+    crop: [40, 31, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names SADA SOLI Kaita/Jibia; INEC M, 64, fits the photo
+  - candidate_id: jan-2027-house-katsina-mashi-dutsi-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/554
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/554.jpg
+    sha256: 3fde3cca402544ca146e525f3e155c1b1688bf031764ceb497caad592f18066a
+    retrieved: '2026-11-14'
+    crop: [52, 34, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names Salisu Yusuf Mashi/Dutsi; INEC M, 62, fits the photo
+  - candidate_id: jan-2027-house-katsina-matazu-musawa-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/687
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/687.jpg
+    sha256: d96717db43910581a28060c8fe78a6681481525c39136d1814efe5f3eb47cd87
+    retrieved: '2026-11-14'
+    crop: [60, 34, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names ALIYU AHMED Musawa/Matazu; INEC M, 50, fits the photo
+  - candidate_id: jan-2027-house-kebbi-aleiro-gwandu-jega-adc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/529
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/529.jpg
+    sha256: ebe5facf7b1c48aa3750bd59c5bc4b1502a5f05cb586010236c68eca49e36e7d
+    retrieved: '2026-11-14'
+    crop: [60, 22, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names MANSUR MUSA Gwandu/Aliero/Jega; INEC M, 44, fits the photo
+  - candidate_id: jan-2027-house-kebbi-bagudo-suru-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/19
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/19.jpg
+    sha256: 1458efa0b3a40889be1a134bc27debef78329e0ae941b02ca7d66823028a7b1a
+    retrieved: '2026-11-14'
+    crop: [52, 42, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names BELLO KAOJE Bagudo/Suru; INEC M, 55, fits the photo
+  - candidate_id: jan-2027-house-kogi-ajaokuta-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/515
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/515.jpg
+    sha256: 55d7287afbed493bb14024308b43613d2fd8a4ed9186ce2d1c8b11602b4bf77a
+    retrieved: '2026-11-14'
+    crop: [90, 48, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names SANNI ABDULRAHEEM Ajaokuta; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-kogi-idah-igalamela-odolu-ibaji-ofu-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/263
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/263.jpg
+    sha256: 36767f10f4f2c19422338d1a4513577e6a13098a3375dcd4917024bc0ed597a8
+    retrieved: '2026-11-14'
+    crop: [58, 43, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names DAVID ZACHARIAS Idah/Ibaji/Igalamela/Ofu; INEC M, 53, fits the photo
+  - candidate_id: jan-2027-house-kogi-yagba-east-yagba-west-mopamuro-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/269
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/269.jpg
+    sha256: f000dd5e3ac434fdb08953a1f1c6b38d39cb60df9bf0f2f6e1a3f7597a40727c
+    retrieved: '2026-11-14'
+    crop: [68, 28, 200, 200]
+    official_checked: '2026-11-14'  # House batch 1: profile names LEKE ABEJIDE Yagba East/Yagba West/Mopa-muro; INEC M, 51, fits the photo
+  - candidate_id: jan-2027-house-lagos-ajeromi-ifelodun-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/674
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/674.jpg
+    sha256: 295264aed6d14dd90ff060d3b0d2f6c993a10a6e93fe39fd73c33ddb2a433425
+    retrieved: '2026-11-14'
+    crop: [50, 0, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names ADEBOYE KALEJAIYE Ajeromi-Ifelodun; INEC M, 66, fits the photo
+  - candidate_id: jan-2027-house-lagos-amuwo-odofin-ndc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/565
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/565.jpg
+    sha256: 7a563b09c9fdfef94d94c5f414d260c107194f4777e6ec11144425f79d7432ff
+    retrieved: '2026-11-14'
+    crop: [52, 34, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names George Olawande Amuwo Odofin; INEC M, 40, fits the photo
+  - candidate_id: jan-2027-house-lagos-epe-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/315
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/315.jpg
+    sha256: 561269958b834ca135536a0ecaa670dc06c4bfaa17843dcee6ad98e13dee8253
+    retrieved: '2026-11-14'
+    crop: [44, 3, 311, 311]
+    official_checked: '2026-11-14'  # House batch 1: profile names Tasir Raji Epe; INEC M, 70, fits the photo
+  - candidate_id: jan-2027-house-lagos-ibeju-lekki-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/326
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/326.jpg
+    sha256: eb7dcb90a5e7e9e3deb1a0ceddb488a4783e026ae65f9aedbe8e69392f1839af
+    retrieved: '2026-11-14'
+    crop: [50, 34, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names Adebayo Balogun Ibeju-Lekki; INEC M, 58, fits the photo
+  - candidate_id: jan-2027-house-lagos-ifako-ijaiye-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/671
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/671.jpg
+    sha256: 71a48e824f7614472a1d8a4bcbefc371330ed268b0d8c49b67a2d9f8a0b1a2fb
+    retrieved: '2026-11-14'
+    crop: [62, 23, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names ADEYEMI OLABINJO Ifako-Ijaiye; INEC M, 67, fits the photo
+  - candidate_id: jan-2027-house-lagos-ikorodu-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/308
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/308.jpg
+    sha256: aafd0de437f05fe6adbe1757ada986aa879c26ad13a35e2b27b3685f5dba595c
+    retrieved: '2026-11-14'
+    crop: [52, 34, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names Babajimi BENSON Ikorodu; INEC M, 54, fits the photo
+  - candidate_id: jan-2027-house-lagos-lagos-island-i-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/371
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/371.jpg
+    sha256: ebbce15792610f12a16bd7ee179aec6ffe0c2bd862d9d7d80ec92d8d71268fb2
+    retrieved: '2026-11-14'
+    crop: [80, 19, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names AKANNI DOLAPO-BADRU Lagos Island I; INEC M, 73, fits the photo
+  - candidate_id: jan-2027-house-lagos-lagos-island-ii-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/203
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/203.jpg
+    sha256: e1c370ad93d652004fb3e9c8b9f90e7de75f5d0eeef91331f45e1a239189ad41
+    retrieved: '2026-11-14'
+    crop: [10, 26, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names MOSHOOD AKIOLU Lagos Island II; INEC M, 45, fits the photo
+  - candidate_id: jan-2027-house-lagos-surulere-ii-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/588
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/588.jpg
+    sha256: 6855e1a58e9fad0b90d6d27fb0a27d2e5bbea715bdbbd58307ac1e19a1cfaaae
+    retrieved: '2026-11-14'
+    crop: [90, 28, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names Lanre okunlola Surulere II; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-niger-agaie-lapai-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/238
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/238.jpg
+    sha256: 3750dec0f54ad265e8b2056d89ae3c59f261d0e413289322932087e43e214bb1
+    retrieved: '2026-11-14'
+    crop: [60, 34, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names ABDULLAHI MAMUDU Agaie/Lapai; INEC M, 64, fits the photo
+  - candidate_id: jan-2027-house-niger-agwara-borgu-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/217
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/217.jpg
+    sha256: 7193f5c2ccb633fcdbbaf7e1dba1865af53d09f8d463570e19294911e6eb7dce
+    retrieved: '2026-11-14'
+    crop: [52, 34, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names JAFARU MOHAMMED Agwara/Borgu; INEC M, 54, fits the photo
+  - candidate_id: jan-2027-house-niger-bida-gbako-katcha-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/172
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/172.jpg
+    sha256: 2547ac6befe31d39edd407098ce164bbc8f42a74417f51587c6bc18788c8e146
+    retrieved: '2026-11-14'
+    crop: [82, 68, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names SAIDU ABDULLAHI Bida/Gbako/Katcha; INEC M, 47, fits the photo
+  - candidate_id: jan-2027-house-niger-shiroro-rafi-munya-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/611
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/611.jpg
+    sha256: 47d366e3b54c77001f459c2fd884606b222cb745cad273de523f40237e08075a
+    retrieved: '2026-11-14'
+    crop: [61, 33, 278, 278]
+    official_checked: '2026-11-14'  # House batch 1: profile names ISMAIL MUSA Shiroro/Rafi/Munya; INEC M, 45, fits the photo
+  - candidate_id: jan-2027-house-ogun-abeokuta-north-obafemi-owode-odeda-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/131
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/131.jpg
+    sha256: 632d137f89ab755fc9858e921895023bcbb482b0dfd437a98902d0788517e4c9
+    retrieved: '2026-11-14'
+    crop: [48, 22, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names OLUMIDE OSOBA Abeokuta North/ Obafemi- Owode/Odeda; INEC M, 49, fits the photo
+  - candidate_id: jan-2027-house-ogun-abeokuta-south-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/655
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/655.jpg
+    sha256: dd624569850b2ee42b13c30fa53e2f8b60c7716e2ee247344758c117183e51d0
+    retrieved: '2026-11-14'
+    crop: [42, 26, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names AFOLABI AFUAPE Abeokuta South; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-ogun-ijebu-north-ijebu-east-ogun-waterside-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/683
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/683.jpg
+    sha256: d1003596f92cf8816c2a5a77130297f350524c029e9cd6c7c9cb8d751d972ad4
+    retrieved: '2026-11-14'
+    crop: [70, 31, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names JOSEPH ADEGBESAN Ijebu North/Ijebu East/Ogun Waterside; INEC M, 69, fits the photo
+  - candidate_id: jan-2027-house-ondo-akoko-south-east-akoko-south-west-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/669
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/669.jpg
+    sha256: 00ffef2b6b270aaa7dc001ed48401c49c0384b48c1f91a43d7eb549327826f6d
+    retrieved: '2026-11-14'
+    crop: [60, 2, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names ADEFARATI ADEGBOYEGA Akoko South East/South West; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-ondo-eseodo-ilaje-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/664
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/664.jpg
+    sha256: e24732ffbbb60534667ef6aa566fb92e1a64e4c43dee30ece39fcadb1cb24c98
+    retrieved: '2026-11-14'
+    crop: [50, 6, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names DONALD OJOGO Eseodo/Ilaje; INEC M, 57, fits the photo
+  - candidate_id: jan-2027-house-ondo-ileoluji-okeigbo-odigbo-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/666
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/666.jpg
+    sha256: 00cce83dbf9a59b7e1c142f5a7e68f61f8cdce9ec37477f71f8ad627ca4a916a
+    retrieved: '2026-11-14'
+    crop: [50, 6, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names AYODELE ADEFIRANYE Ileoluji-Okeibo/Odigbo; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-ondo-okitipupa-irele-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/615
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/615.jpg
+    sha256: 201c3017d4e88c6a3475dea7e44b57325e8d467140a40f37ed3ba073569b30aa
+    retrieved: '2026-11-14'
+    crop: [77, 42, 245, 245]
+    official_checked: '2026-11-14'  # House batch 1: profile names OKUNJIMI ODIMAYO Okitipupa/Irele; INEC M, 46, fits the photo
+  - candidate_id: jan-2027-house-ondo-owo-ose-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/184
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/184.jpg
+    sha256: 998cde8e39323d03a8e30adff0d634127a621512b90cba0c952d13845e60f5bb
+    retrieved: '2026-11-14'
+    crop: [30, 26, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names ADELEGBE OLUWATIMEHIN Owo/Ose; INEC M, 64, fits the photo
+  - candidate_id: jan-2027-house-osun-ayedire-iwo-ola-oluwa-a
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/660
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/660.jpg
+    sha256: 8066b4db36101942025aad862303c33283a748c29ac3a567a6d589e57569c714
+    retrieved: '2026-11-14'
+    crop: [40, 34, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names LUKMAN MUDASHIRU Ayedire/Iwo/Ola-Oluwa; INEC M, 57, fits the photo
+  - candidate_id: jan-2027-house-osun-ife-central-ife-north-ife-south-ife-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/91
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/91.jpg
+    sha256: 5d0e40c979a9dc59a0d10228eaac34ac73f0e6f70e000746a230f22f3f271c38
+    retrieved: '2026-11-14'
+    crop: [40, 46, 320, 320]
+    official_checked: '2026-11-14'  # House batch 1: profile names TAOFEEK AJILESORO Ife Central/East/North/South; INEC M, 48, fits the photo
+  - candidate_id: jan-2027-house-osun-obokun-oriade-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/428
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/428.jpg
+    sha256: 62477094bfa9842469d24a54e7bd772bc1abcf2e0e505d1cb205bcd3395cc5e6
+    retrieved: '2026-11-14'
+    crop: [48, 34, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names Oluwole Oke Obokon/Oriade; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-osun-odo-otin-ifelodun-boripe-a
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/607
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/607.jpg
+    sha256: d4e95e43e837bc10b24fb0f55cd62b1a94f7394888b320c3c3d541e99185b7c6
+    retrieved: '2026-11-14'
+    crop: [70, 39, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names ADETUNJI OLUSOJI Odo-Otin/Ifelodun/Boripe; INEC M, 51, fits the photo
+  - candidate_id: jan-2027-house-oyo-afijio-oyo-east-oyo-west-atiba-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/350
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/350.jpg
+    sha256: 08ecb4288050c94deda23ddab7c2a98b9d684ca4d70901c0e5ea3a3481eea1fd
+    retrieved: '2026-11-14'
+    crop: [82, 28, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names Akeem Adeyemi Afijio/Oyo East/Oyo West/ Atiba; INEC M, 49, fits the photo
+  - candidate_id: jan-2027-house-oyo-akinyele-lagelu-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/658
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/658.jpg
+    sha256: e8dfb6924ac4c9c0e4da01e515fbe874deb44f3226054f6629871decf2f7ce55
+    retrieved: '2026-11-14'
+    crop: [60, 14, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names OLAFISOYE AKINMOYEDE Lagelu/Akinyele; INEC M, 61, fits the photo
+  - candidate_id: jan-2027-house-oyo-egbeda-ona-ara-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/75
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/75.jpg
+    sha256: 07833429e8b5316594325083eed5474f3881b2ab75f267a99c3f200ce6036177
+    retrieved: '2026-11-14'
+    crop: [40, 14, 320, 320]
+    official_checked: '2026-11-14'  # House batch 1: profile names AKINOLA ALABI Ona-Ara/Egbeda; INEC M, 49, fits the photo
+  - candidate_id: jan-2027-house-oyo-oluyole-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/209
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/209.jpg
+    sha256: 6d329348fa879cf4ddfa6de2397e10b5d42c96354243b15c43eafe43f25b91cb
+    retrieved: '2026-11-14'
+    crop: [70, 51, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names TOLULOPE AKANDE-SADIPE Oluyole Local Govt.; INEC F, 60, fits the photo
+  - candidate_id: jan-2027-house-oyo-saki-east-saki-west-atisbo-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/677
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/677.jpg
+    sha256: 68d0453f166d047605d69a5c3b15cc52fc75166d7b139356e346f440f1470b15
+    retrieved: '2026-11-14'
+    crop: [78, 43, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names TAJUDEEN KAREEM Atigbo/Saki East/Saki West; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-plateau-jos-north-bassa-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/403
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/403.jpg
+    sha256: 06e34b9657db1ddb51108a613854a045def3a5bae12b8913ab914ff8c7c99ad3
+    retrieved: '2026-11-14'
+    crop: [90, 23, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names AGAH MUSA Bassa/Jos North; INEC M, 52, fits the photo
+  - candidate_id: jan-2027-house-plateau-jos-south-jos-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/136
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/136.jpg
+    sha256: 2acd70e02253eac75637717ef0e82063e59b3fafb3bf3402a8b6d8b8a923c44b
+    retrieved: '2026-11-14'
+    crop: [90, 20, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names DACHUNG BAGOS Jos South/East; INEC M, 49, fits the photo
+  - candidate_id: jan-2027-house-plateau-kanke-pankshin-kanam-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/64
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/64.jpg
+    sha256: fbc13f3d2188b08fe27950f94efcc44a61dd876ac732af7732c78423df3aeb98
+    retrieved: '2026-11-14'
+    crop: [49, 11, 302, 302]
+    official_checked: '2026-11-14'  # House batch 1: profile names Gagdi Yusuf Pankshin/Kanke/Kanam; INEC M, 45, fits the photo
+  - candidate_id: jan-2027-house-plateau-langtang-north-langtang-south-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/113
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/113.jpg
+    sha256: 46f87f47732e09b7cbd477a5e451606a84a3d822bfb08283b7c90a04e5ec8bfb
+    retrieved: '2026-11-14'
+    crop: [72, 19, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names BENI LAR Langtang North/South; INEC F, 58, fits the photo
+  - candidate_id: jan-2027-house-plateau-mikang-qua-an-pan-shedam-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/534
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/534.jpg
+    sha256: 0a550434886e7ebedfc8f0a78d6b3efa5d553b462c74faf73480118223ef01de
+    retrieved: '2026-11-14'
+    crop: [60, 22, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names ISAAC KWALLU Mikang/Quan.Pan/Shendam; INEC M, 52, fits the photo
+  - candidate_id: jan-2027-house-plateau-wase-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/360
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/360.jpg
+    sha256: c750d613579afe793dd84b349daa8ae27e45c268b9e9ebf709a611dfd35e4c5a
+    retrieved: '2026-11-14'
+    crop: [120, 59, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names Ahmed Wase Wase; INEC M, 62, fits the photo
+  - candidate_id: jan-2027-house-rivers-abua-odual-ahaoda-east-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/282
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/282.jpg
+    sha256: c115d1a1d387271912cc4cee770047312681bd00e835d9186d2a4316afafac85
+    retrieved: '2026-11-14'
+    crop: [80, 0, 240, 240]
+    official_checked: '2026-11-14'  # House batch 1: profile names SOLOMON BOB Ahoada-East/Abua/Odual; INEC M, 56, fits the photo
+  - candidate_id: jan-2027-house-rivers-khana-gokana-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/265
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/265.jpg
+    sha256: 87c2c0f7d917dcb386849c8a7640b6c07e78333e132673345f120da228fecf2c
+    retrieved: '2026-11-14'
+    crop: [50, 26, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names DUMNAMENE DEKOR Khana/Gokana; INEC M, 58, fits the photo
+  - candidate_id: jan-2027-house-sokoto-kware-wamakko-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/329
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/329.jpg
+    sha256: 32628b8039a46efb81aadbdf74e71991318ccc5e678e4363b655c8af98d65411
+    retrieved: '2026-11-14'
+    crop: [60, 42, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names AHMAD KALAMBAINA Kware/Wamakko; INEC M, 57, fits the photo
+  - candidate_id: jan-2027-house-sokoto-wurno-rabah-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/140
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/140.jpg
+    sha256: deda726728a6af96e0784af8472d921125b148aed78101b98be438e18df64358
+    retrieved: '2026-11-14'
+    crop: [50, 34, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names IBRAHIM ALIYU Wurno/Rabah; INEC M, 53, fits the photo
+  - candidate_id: jan-2027-house-taraba-karim-lamido-lau-ardo-kola-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/659
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/659.jpg
+    sha256: bdea0207785852d2502afc51f01039225c67918d2185d28e81e491ded458ec72
+    retrieved: '2026-11-14'
+    crop: [90, 60, 220, 220]
+    official_checked: '2026-11-14'  # House batch 1: profile names MOHAMMED AUDU Lau/K/Lamido/Ardo-Kola; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-taraba-sardauna-kurmi-gashaka-pdp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/32
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/32.jpg
+    sha256: 943503ea003d67cb328cb2817afe438a7c3ce26c1e463dfaea43ccf365f819a3
+    retrieved: '2026-11-14'
+    crop: [30, 9, 340, 340]
+    official_checked: '2026-11-14'  # House batch 1: profile names DAVID FUOH Gashaka/Kurmi/Sardauna; INEC M, 58, fits the photo
+  - candidate_id: jan-2027-house-yobe-bursari-geidam-yunusari-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/30
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/30.jpg
+    sha256: dfe1d23fe7ba2ffef05fc0d21a1044d900cc6834590482681368c91e7e8a0bac
+    retrieved: '2026-11-14'
+    crop: [50, 42, 300, 300]
+    official_checked: '2026-11-14'  # House batch 1: profile names LAWAN ALI Bursari/Geidam/Yunusari; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-yobe-fika-fune-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/657
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/657.jpg
+    sha256: 226567245692aad18ceb28eef67d0aef1552e4005afe841f59f1836e19b70781
+    retrieved: '2026-11-14'
+    crop: [60, 22, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names MUHAMMED JAJERE Fika/Fune; INEC M, 60, fits the photo
+  - candidate_id: jan-2027-house-yobe-machina-nguru-yusufari-karasuwa-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/257
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/257.jpg
+    sha256: 106fd2af77e5f370ef6ddf3c5379fb4e50dd0aabdcd1309f40f5f6cae26d1a30
+    retrieved: '2026-11-14'
+    crop: [40, 22, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names Tijjani Zakariya Machina/Nguru/Karasuwa/Yusufari; INEC M, 59, fits the photo
+  - candidate_id: jan-2027-house-yobe-nangere-potiskm-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/646
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/646.jpg
+    sha256: e548be49f44162a30709f4e092eccb6b5a4d3279e7be285d2d1f5539c9da14e4
+    retrieved: '2026-11-14'
+    crop: [60, 22, 280, 280]
+    official_checked: '2026-11-14'  # House batch 1: profile names FATIMA TALBA Nangere/Potiskum; INEC F, 67, fits the photo
+  - candidate_id: jan-2027-house-zamfara-bakura-maradun-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/681
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/681.jpg
+    sha256: e3f0dffc3a64612c58f92b4dd6d3b2136112921be42c1bbea05825c9eeea7403
+    retrieved: '2026-11-14'
+    crop: [64, 39, 288, 288]
+    official_checked: '2026-11-14'  # House batch 1: profile names SANI AHMAD Bakura/Maradun; INEC M, 35, fits the photo
+  - candidate_id: jan-2027-house-zamfara-bungudu-maru-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/558
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/558.jpg
+    sha256: f2e24149b16f5e9124ccda165f2e80d02b9e37666546da5b28c796a50c7cdc6d
+    retrieved: '2026-11-14'
+    crop: [70, 48, 259, 259]
+    official_checked: '2026-11-14'  # House batch 1: profile names Abdulmalik Zubairu Bungudu/Maru; INEC M, 47, fits the photo
+  - candidate_id: jan-2027-house-zamfara-kaura-namoda-birnin-magaji-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/516
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/516.jpg
+    sha256: f103a9c3bc8643d65d8cf3cf717ee058e1768419da2fb574bdfddba0c65b4c69
+    retrieved: '2026-11-14'
+    crop: [70, 51, 260, 260]
+    official_checked: '2026-11-14'  # House batch 1: profile names Aminu Jaji Kaura Namoda/Birnin Magaji; INEC M, 52, fits the photo

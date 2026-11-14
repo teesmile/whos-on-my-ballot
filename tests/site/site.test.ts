@@ -124,7 +124,8 @@ describe('ballot pages', () => {
     for (const b of all.filter((_, i) => i % 15 === 0)) {
       const page = html(b.path.slice(1))
       expect(new Set([...page.matchAll(/<image href="([^"]+)"/g)].map(m => m[1])), b.path).toEqual(new Set([`/${sprite.file}`]))
-      expect(page, b.path).not.toMatch(/<img /)
+      // logos never come as separate images; the only <img> is a Senate, House or Assembly card's own lazy photo (D-071)
+      for (const img of page.match(/<img [^>]*>/g) ?? []) expect(img, b.path).toMatch(/^<img class="photo" src="\/photos\/[^"]+-card\.webp" width="76" height="76" alt="" loading="lazy"/)
       for (const block of page.match(/<li class="card[^"]*"[\s\S]*?<\/li>/g)!) {
         const party = /data-party="([^"]+)"/.exec(block)![1]
         expect(block, b.path).toContain(`<svg class="logo" width="48" height="48" viewBox="${sprite.logos[party] * sprite.cell + 1} 1 94 94" focusable="false" role="img" aria-label="${party}">`)
@@ -402,9 +403,16 @@ describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
     expect([...imgs(html('ballot-feb/osun/ayedade'))]).toEqual([`/${s.logo_file}`]) // no governorship on 6 February
     const kano = html('ballot-feb/kano/bichi')
     expect(kano).toMatch(/data-candidate-id="feb-2027-governor-kano-apc"[\s\S]*?<svg class="photo"/)
+    // a Senate photo is the card's own small copy, loaded only when its race is shown
+    expect(html('ballot/abia/aba-north-aba-south--abia-south')).toMatch(/data-candidate-id="jan-2027-senate-abia-abia-south-lp"[\s\S]*?<img class="photo" src="\/photos\/jan-2027-senate-abia-abia-south-lp-card\.webp" width="76" height="76" alt="" loading="lazy"/)
   })
   it('no credit on the candidate page; the full credit for each photo is in one list at the end of the About page', () => {
-    expect(approved.size).toBe(36)
+    // every built photo is a yaml entry with the owner's approval, or an official-page photo checked against INEC (D-074);
+    // a Commons file never goes live on the official-page route
+    const entries = fs.readFileSync(path.resolve('data/overrides/photos.yaml'), 'utf8').split(/\n  - /).slice(1)
+    const cleared = entries.filter(e => /\n    (owner_approved|official_checked): '\d{4}-\d{2}-\d{2}'/.test(e)).map(e => /^candidate_id: (\S+)/.exec(e)![1])
+    expect([...approved].sort()).toEqual(cleared.sort())
+    for (const e of entries.filter(x => /\n    official_checked:/.test(x))) expect(e, e.slice(0, 80)).not.toMatch(/Wikimedia Commons|wikimedia\.org/)
     const about = html('about')
     const credits = about.slice(about.indexOf('<h2 id="photo-credits">Photo credits</h2>'))
     expect(credits.match(/<h2/g)?.length, 'Photo credits is the last section').toBe(1)
@@ -426,6 +434,7 @@ describe('candidate photos (owner decisions D-064, D-065, D-071)', () => {
     const about = html('about')
     expect(about).toContain('<h2 id="photos">Photos</h2>')
     expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, or an official government or legislature page/)
+    expect(about).toMatch(/checked\s+against the gender and age INEC printed for the candidate\. A photo from Wikimedia Commons, where anyone can upload a file,\s+is also approved by the site’s owner before it appears\./)
     expect(about).toMatch(/A candidate or party can send an official photo to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Official%20photo">/)
   })
 })

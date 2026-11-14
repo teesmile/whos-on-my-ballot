@@ -358,15 +358,33 @@ export function ballots(): BallotSpec[] {
 }
 
 /** A 16 January ballot's title (D-032): its House race(s), and its Senate race(s) where another ballot shares the House race. */
-export function janBallotTitle(b: BallotSpec): string {
+function janBallotPlace(b: BallotSpec): string {
   const shared = ballots().filter(x => x.state.code === b.state.code && x.house.join() === b.house.join()).length > 1
   const senate = shared ? ` (${b.senate.map(id => race(id).name).join(' or ')})` : ''
-  return `16 Jan ballot: ${b.house.map(id => race(id).name).join(' or ')}${senate}, ${b.state.name}`
+  return `${b.house.map(id => race(id).name).join(' or ')}${senate}, ${b.state.name}`
+}
+
+export function janBallotTitle(b: BallotSpec): string {
+  return `16 Jan ballot: ${janBallotPlace(b)}`
+}
+
+/** A ballot page's search description names its place, as its title does, so no two ballots share one. */
+function ballotDescription(day: string, place: string): string {
+  const full = `Every race and candidate on the ${day} ballot for ${place}, as listed by INEC.`
+  return full.length <= 155 ? full : `${place}: every race and candidate on the ${day} ballot.`
+}
+
+export function janBallotDescription(b: BallotSpec): string {
+  return ballotDescription('16 January 2027', janBallotPlace(b))
 }
 
 /** A 6 February ballot's title (D-032). */
 export function febBallotTitle(b: FebBallotSpec): string {
   return b.sha.length ? `6 Feb ballot: ${b.sha.map(id => race(id).name).join(' or ')}, ${b.state.name}` : `6 Feb ballot, ${b.state.name}`
+}
+
+export function febBallotDescription(b: FebBallotSpec): string {
+  return ballotDescription('6 February 2027', b.sha.length ? `${b.sha.map(id => race(id).name).join(' or ')}, ${b.state.name}` : b.state.name)
 }
 
 /** The ward -> State Assembly figures for the explainer page, computed from the published data (D-028, D-030). */

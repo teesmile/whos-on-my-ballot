@@ -14,18 +14,20 @@ describe('neutral rendering', () => {
   const pres = all.find(r => r.office === 'president')!
 
   it('every candidate card has the same structure, whatever the party', () => {
+    // one photo slot per card, in the same place: an approved photo or the same placeholder; nothing else differs
+    const slot = (b: string) => b.replace(/<svg class="photo"[\s\S]*?<\/svg>|<img class="photo"[^>]*\/>|<span class="photo ph" aria-hidden="true"><\/span>/, 'PHOTO')
     for (const r of all.filter(x => x.office === 'house').slice(0, 40)) {
       const html = renderToStaticMarkup(<RaceSection r={r} pageUrl="/x/" />)
       const blocks = html.match(/<li class="card[^"]*"[\s\S]*?<\/li>/g) ?? []
       expect(blocks.length, r.id).toBe(r.candidates.length)
-      expect(new Set(blocks.map(skeleton)).size, r.id).toBe(1)
+      for (const b of blocks) expect(slot(b).match(/PHOTO/g)?.length, b.slice(0, 80)).toBe(1)
+      expect(new Set(blocks.map(b => skeleton(slot(b)))).size, r.id).toBe(1)
     }
     // tickets: candidate and running mate on every card. Every card has one photo slot in the same place: an approved photo
     // (presidential candidates only, D-065) or the same placeholder; nothing else differs.
     const html = renderToStaticMarkup(<RaceSection r={pres} pageUrl="/x/" />)
     const named = html.match(/<li class="card" [^>]*data-group="(first|rest)"[\s\S]*?<\/li>/g) ?? []
     expect(named.length).toBe(pres.candidates.filter(c => c.candidate.name).length)
-    const slot = (b: string) => b.replace(/<svg class="photo"[\s\S]*?<\/svg>|<img class="photo"[^>]*\/>|<span class="photo ph" aria-hidden="true"><\/span>/, 'PHOTO')
     for (const b of named) expect(slot(b).match(/PHOTO/g)?.length, b.slice(0, 80)).toBe(1)
     expect(new Set(named.map(b => skeleton(slot(b)))).size).toBe(1)
   })

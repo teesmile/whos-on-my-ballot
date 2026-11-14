@@ -47,8 +47,9 @@ describe('one address, canonical everywhere', () => {
 })
 
 describe('titles, descriptions and share tags', () => {
-  it('every page: a unique title under 60 characters and a description under 155', () => {
+  it('every page: a unique title under 60 characters and a unique description under 155', () => {
     const seen = new Map<string, string>()
+    const seenDescription = new Map<string, string>()
     const long: string[] = []
     for (const [p, h] of pages) {
       const title = unescape(/<title>([^<]*)<\/title>/.exec(head(h))![1])
@@ -58,6 +59,9 @@ describe('titles, descriptions and share tags', () => {
       seen.set(title, p)
       expect(description.length, p).toBeGreaterThan(30)
       expect(description.length, `${p}: ${description}`).toBeLessThanOrEqual(155)
+      // each ballot and race description names its place, so none is shared
+      expect(seenDescription.get(description), `${p} repeats the description of ${seenDescription.get(description)}`).toBeUndefined()
+      seenDescription.set(description, p)
     }
     // Names are shown exactly as INEC prints them (the working rules §1), so a page titled by a long INEC name may pass 60
     // characters (candidates, ballots, wards and races). Hand-written, state and LGA titles never may, and a long ward title is
