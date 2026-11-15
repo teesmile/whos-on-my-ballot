@@ -259,6 +259,20 @@ describe('citations beyond candidate blocks', () => {
 describe('every page', () => {
   const pages = [...walk(OUT)].filter(f => f.endsWith('.html'))
 
+  it('the faint map of Nigeria (owner, 15 Nov 2026): a small one in every footer, a larger one at the top of the home page; decorative, inline, a line only', () => {
+    const mark = /<svg class="ng-mark (ng-mark-hero|ng-mark-foot)" viewBox="-2 -2 204 167" aria-hidden="true" focusable="false"><path d="M[^"]+z"(?:\/>|><\/path>)<\/svg>/g
+    for (const f of pages) {
+      const s = fs.readFileSync(f, 'utf8')
+      if (!s.includes('<footer')) continue
+      const found = [...s.matchAll(mark)].map(m => m[1])
+      expect(found, f).toEqual(f === path.join(OUT, 'index.html') ? ['ng-mark-hero', 'ng-mark-foot'] : ['ng-mark-foot'])
+    }
+    // never the flag or the coat of arms: one outline path, no fill colour of its own
+    const css = fs.readFileSync(path.resolve('src/app/globals.css'), 'utf8')
+    expect(css).toMatch(/\.ng-mark path \{ fill: none; stroke: var\(--green\);/)
+    expect(css).toMatch(/\.ng-mark \{ position: absolute; z-index: -1;/)
+  })
+
   it('carries the INEC non-affiliation notice, loads no framework JS and no third-party resource', () => {
     expect(pages.length).toBeGreaterThan(10_000)
     for (const f of pages) {

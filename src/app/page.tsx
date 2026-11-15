@@ -4,6 +4,7 @@ import { CivicNote } from '@/components/CivicNote'
 import { Countdown } from '@/components/Countdown'
 import { HeroArt } from '@/components/HeroArt'
 import { JsonLd } from '@/components/JsonLd'
+import { NigeriaMark } from '@/components/NigeriaMark'
 import { Steps } from '@/components/Steps'
 import { states } from '@/lib/data'
 import { homeGraph, pageMeta } from '@/lib/seo'
@@ -15,7 +16,8 @@ export default function Home() {
   return (
     <>
       <JsonLd data={homeGraph()} />
-      <section className="hero" aria-labelledby="hero-title">
+      <section className="hero hero-home" aria-labelledby="hero-title">
+        <NigeriaMark className="ng-mark-hero" />
         <h1 id="hero-title">Who’s on your ballot in 2027?</h1>
         <HeroArt />
         <p className="hero-line">

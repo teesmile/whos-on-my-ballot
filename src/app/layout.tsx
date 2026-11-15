@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 
 import { Credit } from '@/components/Credit'
+import { NigeriaMark } from '@/components/NigeriaMark'
 import { SourceLine } from '@/components/SourceLine'
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main id="main">{children}</main>
         <footer className="site-footer">
+          <NigeriaMark className="ng-mark-foot" />
           <p className="affiliation">
             Not affiliated with INEC.
           </p>
