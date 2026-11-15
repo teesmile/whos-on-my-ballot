@@ -4048,3 +4048,79 @@ people:
     retrieved: '2026-11-15'
     crop: [62, 0, 284, 284]
     official_checked: '2026-11-15'  # INEC M, 60, fits the photo (ninth Senate portrait, 2019); the profile page for id 342 named him "Sen. SANDY ONOR, Senate, PDP" (search-engine copy; the page now shows "Page Not Found"); same face as the PDP presidential candidate in New Telegraph, 26 May 2026; crop clear of the flag and the Senate seal (owner, 15 Nov 2026)
+  - candidate_id: jan-2027-senate-kano-kano-central-pdp
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/2027-elections-inec-confirms-sankara-as-pdp-candidate-for-kano-central/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/09/IMG-20260915-WA0012.jpg
+    sha256: 699181cd7dda93f1aa30cd3dcaea3e1afc846fd8ff04a08f732c7d181aac4b99
+    credit: "none shown"
+    taken: '2026-09-15'
+    retrieved: '2026-11-15'
+    crop: [75, 85, 560, 560]
+    owner_approved: '2026-11-15'  # launch photo sheet (news report, D-084)
+  - candidate_id: feb-2027-governor-cross-river-pdp
+    source: "Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/cross-river-guber-pdps-archibong-demands-issue-based-campaign-ahead-of-2027/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/09/Arthur-Jarvis-Archibong.jpg
+    sha256: 2ea60ca6c83d923b9f8962e7c874f008f46761e8f3be95488c20b6e096818a8f
+    credit: "none shown"
+    taken: '2026-09-17'
+    retrieved: '2026-11-15'
+    crop: [190, 0, 340, 340]
+    owner_approved: '2026-11-15'  # launch photo sheet (news report, D-084)
+  - candidate_id: feb-2027-governor-abia-adc
+    source: "Arise News (arise.tv)"
+    file_page: https://www.arise.tv/kalu-alex-otti-has-failed-abia-in-all-sectors-ill-run-abia-with-zero-tolerance-for-corruption/
+    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/10/Kalu-Kalu-Agu.jpg
+    sha256: 9636c67bd7208d153b1144577a930386571800f263e3c4f229d734f6121df881
+    credit: "Screenshot"
+    taken: '2026-10-02'
+    retrieved: '2026-11-15'
+    crop: [705, 10, 680, 680]
+    owner_approved: '2026-11-15'  # launch photo sheet (news report, D-084)
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-south-ndc
+    source: "Newsblast (newsblast.ng)"
+    file_page: https://www.newsblast.ng/human-rights-lawyer-ayiwulu-raises-alarm-remove-criminal-camps-in-kadarko-kwara/
+    file_url: https://www.newsblast.ng/wp-content/uploads/2026/08/Human-Rights-Lawyer-Ayiwulu-BabaAyiwulu.jpg
+    sha256: 66e6fbd0bcc3ca3b48b15f1cdc2b7755df28bbb03c348918fef7eb544f3383ff
+    credit: "none shown"
+    taken: '2026-08-22'
+    retrieved: '2026-11-15'
+    crop: [53, 35, 250, 250]
+    owner_approved: '2026-11-15'  # launch photo sheet (news report, D-084)
+  - candidate_id: jan-2027-senate-cross-river-cross-river-central-adc
+    source: "BusinessDay (businessday.ng)"
+    file_page: https://businessday.ng/news/article/2023-ricketts-promises-effective-representation-in-senate/
+    file_url: https://cdn.businessday.ng/2022/04/Akin-Ricketts.png
+    sha256: 44716c1210b594ae2b02474766a12d6e5f17bc22d01e2a8bad5946176bf40ed1
+    credit: "none shown"
+    taken: '2022-04-25'
+    retrieved: '2026-11-15'
+    crop: [70, 0, 400, 400]
+    owner_approved: '2026-11-15'  # launch photo sheet (news report, D-084)
+  - candidate_id: feb-2027-governor-cross-river-ndc
+    source: "CrossRiverWatch (crossriverwatch.com)"
+    file_page: https://crossriverwatch.com/2026/08/a-government-must-never-be-afraid-of-its-people-by-john-upan-odey/
+    file_url: https://crossriverwatch.com/wp-content/uploads/2026/08/IMG_20260815_022301.jpg
+    credit: "none shown"
+    taken: '2026-08-15'
+    sha256: e58099f7a9154822bf65503cf450afa6790799efd000af14a5a99493f85d9959
+    retrieved: '2026-11-15'
+    crop: [150, -20, 430, 430]
+    owner_approved: '2026-11-15'  # the owner's own find, CrossRiverWatch 15 Aug 2026 ("John Upan Odey is a Cross Riverian, and Governorship Candidate of NDC."); file a-government-must-never-be-afraid-of-its-people-by-john-upan-odey.jpg); INEC M, 48, fits; same face as the portrait on his campaign site votejohnupanodey.com
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-south-adc
+    source: "Photo supplied by the site's owner, from a news report; his ADC candidacy for Nasarawa South as reported by Blueprint Manhaja (manhaja.blueprint.ng)"
+    file_page: https://manhaja.blueprint.ng/2027-ishaq-elayo-zai-ceto-nasarawa-ta-kudu-ibrahim-osabwa/
+    file_url: owner-supplied:elayo-pledges-transformational-representation-vows-to-redefine-politics-in-nasar.jpeg
+    sha256: 41ca7517d22416b6142e28511aece37b3b445f36b52cd0d616a82f84d4ef1317
+    retrieved: '2026-11-15'
+    crop: [130, 292, 206, 206]
+    owner_approved: '2026-11-15'  # the owner's own find; the article (title from the file name) not found online yet (leadership.ng blocks fetches); file elayo-pledges-transformational-representation-vows-to-redefine-politics-in-nasar.jpeg); INEC M, 58, fits; a campaign poster, cropped clear of the ADC logo and the lettering
+  - candidate_id: jan-2027-house-ekiti-ikole-oye-pdp
+    source: "Photo supplied by the site's owner"
+    file_page: https://whosonmyballot.ng/c/jan-2027-house-ekiti-ikole-oye-pdp/
+    file_url: owner-supplied:olu-famotibe.jpeg
+    sha256: 6c8bca879d8b09f5229a7590811fbc135cd93728fab717efa67fb6e533e30d15
+    retrieved: '2026-11-15'
+    crop: [14, 22, 340, 340]
+    owner_approved: '2026-11-15'  # the owner's own find (file "olu famotibe.jpeg"); not found online by name search; INEC M, 53, fits

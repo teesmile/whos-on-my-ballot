@@ -43,14 +43,15 @@
  },
  "sheets": {
   "feb-2027-governor-abia": {
-   "file": "logos/sheet-bf84131c7d.webp",
+   "file": "logos/sheet-5c7afdc06b.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 39522,
-   "sha256": "bf84131c7da198ea6026a697483c7d50a06d3c6e4906911378b8019c58e3f0c3",
+   "bytes": 42866,
+   "sha256": "5c7afdc06b6ff2cbceee249a251b4c3ee4e1a0130a35a50bb69720df759a2673",
    "photos": {
-    "feb-2027-governor-abia-apc": 0,
-    "feb-2027-governor-abia-lp": 1
+    "feb-2027-governor-abia-adc": 0,
+    "feb-2027-governor-abia-apc": 1,
+    "feb-2027-governor-abia-lp": 2
    }
   },
   "feb-2027-governor-akwa-ibom": {
@@ -75,14 +76,16 @@
    }
   },
   "feb-2027-governor-cross-river": {
-   "file": "logos/sheet-7ef969a131.webp",
+   "file": "logos/sheet-f3bdcb9e0a.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 39828,
-   "sha256": "7ef969a131beebef2c1ab06c0d1d63204095b8bb9bd984254aa4bdb8bea1f61e",
+   "bytes": 44098,
+   "sha256": "f3bdcb9e0ada38a55fa8803957c6609d9c9bc89034d5ed5e6dc905779e1f6858",
    "photos": {
     "feb-2027-governor-cross-river-adc": 0,
-    "feb-2027-governor-cross-river-apc": 1
+    "feb-2027-governor-cross-river-apc": 1,
+    "feb-2027-governor-cross-river-ndc": 2,
+    "feb-2027-governor-cross-river-pdp": 3
    }
   },
   "feb-2027-governor-delta": {
