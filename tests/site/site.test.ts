@@ -496,7 +496,7 @@ describe('why the site exists (owner wording, 14 Nov 2026)', () => {
 describe('"Share on" WhatsApp, X, Facebook and Instagram (owner, 14 Nov 2026)', () => {
   const rowOf = (block: string) => /<div class="share-on">([\s\S]*?)<\/div>/.exec(block)?.[1] ?? ''
   const blocks = (page: string) => [...page.matchAll(/<section class="share"[^>]*data-share="([^"]*)"[^>]*>([\s\S]*?)<\/section>/g)]
-    .map(m => ({ data: JSON.parse(m[1].replaceAll('&quot;', '"').replaceAll('&amp;', '&')) as { race: string, name: string, date: string }, html: m[2] }))
+    .map(m => ({ data: JSON.parse(m[1].replaceAll('&quot;', '"').replaceAll('&amp;', '&')) as { race: string, name: string, date: string, appText: string }, html: m[2] }))
   const pages = ['ballot/abia/aba-north-aba-south--abia-south', 'ballot-feb/lagos/alimosho-i', 'race/jan-2027-president', 'c/jan-2027-senate-lagos-lagos-central-apc']
   it('every share block has the words and four icons: three plain links with the race\'s message and page, and Instagram for the page script', () => {
     let n = 0
@@ -507,10 +507,15 @@ describe('"Share on" WhatsApp, X, Facebook and Instagram (owner, 14 Nov 2026)', 
         const url = `https://whosonmyballot.ng/race/${b.data.race}/`
         const message = `Who’s on my ballot? ${b.data.name}, ${b.data.date}. See every candidate:`
         expect(row, p).toContain('<span class="share-on-label" aria-hidden="true">Share on</span>')
-        expect(row, p).toContain(`href="https://wa.me/?text=${encodeURIComponent(`${message}\n${url}`)}" aria-label="Share on WhatsApp"`)
+        expect(row, p).toContain(`href="https://wa.me/?text=${encodeURIComponent(`${message}\n${url}`)}" target="_blank" rel="noopener" aria-label="Share on WhatsApp"`)
         expect(row, p).toContain(`href="https://x.com/intent/post?text=${encodeURIComponent(message)}&url=${encodeURIComponent(url)}" target="_blank" rel="noopener" aria-label="Share on X"`)
         expect(row, p).toContain(`href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank" rel="noopener" aria-label="Share on Facebook"`)
-        expect(row, p).toMatch(/<button type="button" class="share-app" aria-label="Share on Instagram" data-app="instagram" data-share-ig="true" hidden="">/)
+        expect(row, p).toMatch(/<button type="button" class="share-app" aria-label="Share on Instagram" data-app="instagram" data-share-ig="true" aria-expanded="false" hidden="">/)
+        // the caption the pictures carry: the same message and the race's own page
+        expect(b.data.appText, p).toBe(`${message}\n${url}`)
+        // Instagram asks Story or Post; "Save picture" offers tall or square; both wait for the page script
+        expect(b.html, p).toMatch(/<div class="share-pick" data-ig-pick="true" hidden=""><span class="share-pick-label">Share to Instagram as<\/span><button[^>]*data-ig="tall">[\s\S]*?Story<\/button><button[^>]*data-ig="square">[\s\S]*?Post<\/button><\/div>/)
+        expect(b.html, p).toMatch(/<div class="share-save" data-save="true" hidden=""><button type="button" class="btn-quiet" data-save-toggle="true" aria-expanded="false">Save picture<\/button><div class="share-pick" data-save-pick="true" hidden=""><button[^>]*data-save-shape="tall">[\s\S]*?Tall<\/button><button[^>]*data-save-shape="square">[\s\S]*?Square<\/button><\/div><\/div>/)
         // four icons, one glyph each, never the visitor's place: the race's own page, not the ballot
         expect(row.match(/class="share-app"/g)?.length, p).toBe(4)
         expect(row, p).not.toContain('/ballot')

@@ -3,15 +3,17 @@ import path from 'node:path'
 
 import { ImageResponse } from 'next/og'
 
-import { allRaces, logoPngDataUrl, race } from '@/lib/data'
+import { allRaces, generatedBytes, logoPngDataUrl, race, sharePhoto } from '@/lib/data'
 import { picture } from '@/lib/share'
 import { cardSourceCaption, SITE_HOST } from '@/lib/site'
 
 // One share card per race, rendered at build time to /cards/<race-id>.png (1200x630, the Open Graph size).
-// The same template for every race: white and the national green, the race's first group (D-042) with each party's logo
-// from INEC's register (D-043), then how many more candidates there are. Never a candidate photo. Both election dates and
-// "Know every name on your ballot." on every card (owner, 14 Nov 2026), but never a countdown: apps keep a saved copy of a
-// card for days, so a number of days would go stale.
+// The same template for every race: white and the national green, the race's first group (D-042), then how many more
+// candidates there are. Each tile is the share picture's (owner, 14 Nov 2026): the party's logo from INEC's register (D-043)
+// over its acronym at the left, the candidate's approved photo at the right where the race's photo rule allows it (the
+// same plain placeholder otherwise), and the name centred beneath. Both election dates and "Know every name on your
+// ballot." on every card (owner, 14 Nov 2026), but never a countdown: apps keep a saved copy of a card for days, so a
+// number of days would go stale.
 const DATES = '16 January and 6 February 2027'
 const KNOW = 'Know every name on your ballot.'
 export const dynamic = 'force-static'
@@ -30,18 +32,31 @@ const PAPER = '#ffffff'
 const GREEN = '#008751'
 const DEEP = '#00552f'
 const BAND = '#e8f5ee'
+const TILE_LINE = '#bdbdbd'
+const PHOTO_LINE = '#c4c4c4'
+// The site's plain placeholder: a grey head-and-shoulders outline, the same drawing as the share picture's.
+const PLACEHOLDER = `data:image/svg+xml;base64,${Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#f4f4f4"/><circle cx="32" cy="25" r="11" fill="#cfcfcf"/><path d="M10 64C10 51 20 41 32 41S54 51 54 64Z" fill="#cfcfcf"/></svg>').toString('base64')}`
+/** The photo the race's share picture uses (already through the photo rule), embedded; '' for none. */
+const photoDataUrl = (slot: string) => (slot ? `data:image/${slot.endsWith('.png') ? 'png' : 'jpeg'};base64,${generatedBytes(slot.replace(/^\//, '')).toString('base64')}` : '')
 
 export async function GET(_req: Request, { params }: { params: Promise<{ file: string }> }) {
   const { file } = await params
   if (file === 'site.png') return siteCard()
   const r = race(file.replace(/\.png$/, ''))
-  const p = picture(r)
+  const p = picture(r, sharePhoto)
   const n = p.tiles.length + (p.more ? 1 : 0)
   const titleSize = p.title.length > 70 ? 28 : p.title.length > 48 ? 34 : 42
   const longest = Math.max(...p.tiles.map(([, name]) => name.length))
-  const nameSize = longest > 44 ? 18 : longest > 32 ? 20 : 23
+  const nameSize = longest > 44 ? 17 : longest > 32 ? 19 : 22
   const rows = Math.ceil(n / 3)
-  const tileH = rows === 1 ? 300 : 182
+  // A title on two lines takes a row's worth of room from the tiles, so the footer keeps its space.
+  const tileH = rows === 1 ? 300 : p.title.length > 70 ? 174 : 186
+  // Inside a tile, as in the share picture: the logo block and the photo the same height (h), the name's two lines beneath.
+  const PAD = 12
+  const innerW = 357 - 2 * PAD - 4
+  const nameBlock = Math.ceil(2 * nameSize * 1.16)
+  const h = Math.floor(Math.min((innerW - 24) / 2, tileH - 2 * PAD - 4 - nameBlock - 10))
+  const acSize = 22
   // The "and N more" tile takes the rest of its row (owner, 14 Nov 2026), so a race with fewer than five in its first group
   // leaves no empty corner: two columns' width after four tiles, the full row after three.
   const TILE_W = 357
@@ -63,14 +78,20 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
           <div style={{ display: 'flex', fontSize: titleSize, fontWeight: 700, lineHeight: 1.15, marginTop: 4 }}>{p.title}</div>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: GAP, padding: '18px 48px 0' }}>
-          {p.tiles.map(([party, name]) => (
-            <div key={party} style={{ display: 'flex', alignItems: 'center', gap: 14, width: TILE_W, height: tileH, padding: '12px 14px', border: `2px solid ${LINE}`, borderRadius: 16 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element -- rendered into a PNG at build time */}
-              <img src={logoPngDataUrl(party)} width={72} height={72} alt="" style={{ border: `1px solid ${LINE}`, borderRadius: 10, padding: 3, background: '#fff' }} />
-              <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 }}>
-                <div style={{ display: 'flex', fontSize: 24, fontWeight: 700 }}>{party}</div>
-                <div style={{ display: 'flex', fontSize: nameSize, lineHeight: 1.2, marginTop: 2 }}>{name}</div>
+          {p.tiles.map(([party, name, , slot]) => (
+            <div key={party} style={{ display: 'flex', flexDirection: 'column', width: TILE_W, height: tileH, padding: PAD, border: `2px solid ${TILE_LINE}`, borderRadius: 16, background: '#fff' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', height: h }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: h, height: h }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element -- rendered into a PNG at build time */}
+                  <img src={logoPngDataUrl(party)} width={h - acSize - 6} height={h - acSize - 6} alt="" style={{ objectFit: 'contain' }} />
+                  <div style={{ display: 'flex', fontSize: acSize, fontWeight: 700, lineHeight: 1, marginTop: 6 }}>{party}</div>
+                </div>
+                <div style={{ display: 'flex', width: h, height: h, borderRadius: 12, border: `2px solid ${PHOTO_LINE}`, overflow: 'hidden' }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element -- rendered into a PNG at build time */}
+                  <img src={photoDataUrl(slot) || PLACEHOLDER} width={h - 4} height={h - 4} alt="" />
+                </div>
               </div>
+              <div style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center', textAlign: 'center', fontSize: nameSize, fontWeight: 700, lineHeight: 1.16 }}>{name}</div>
             </div>
           ))}
           {p.more > 0 && (

@@ -144,6 +144,8 @@ describe('share cards', () => {
       expect(h === null || (h >= 140 && h <= 170), `rgb(${c})`).toBe(true)
     }
     expect(src).toContain('logoPngDataUrl(party)')
+    // photos only through the share picture's own choice, which already applies the race's photo rule (D-081)
+    expect(src).toContain('picture(r, sharePhoto)')
     expect(src).not.toMatch(/data-party|candidate\.image|photo_url/)
   })
 

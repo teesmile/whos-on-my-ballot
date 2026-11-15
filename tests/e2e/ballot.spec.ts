@@ -207,7 +207,7 @@ async function pictureCheck(page: Page, bytes: number[]) {
     }
     const outside: number[] = []
     for (let y = 0; y < 80; y += 2) if (!plain(y)) outside.push(y)
-    for (let y = 1920 - 2; y >= 1920 - 80; y -= 2) if (!plain(y)) outside.push(y)
+    for (let y = c.height - 2; y >= c.height - 80; y -= 2) if (!plain(y)) outside.push(y)
     // Each green band: the rows from the edge whose first pixel is the band's colour; the words' rows and columns inside it.
     const same = (o: number, q: number) => [0, 1, 2].every(k => Math.abs(data[o + k] - data[q + k]) <= 12)
     // a band row starts with green (the bands are a gradient, so no one colour)
@@ -340,27 +340,160 @@ test.describe('sharing (D-046; owner feedback 11 Nov 2026)', () => {
     await page.mouse.move(0, 0)
     await row.screenshot({ path: info.outputPath('share-row-320.png') })
     await info.attach('share-row-320', { path: info.outputPath('share-row-320.png'), contentType: 'image/png' })
+    // Instagram's Story or Post and "Save picture", open: every choice a full tap target, on screen, nothing sideways
+    await row.getByRole('button', { name: 'Share on Instagram', exact: true }).click()
+    await share.getByRole('button', { name: 'Save picture', exact: true }).click()
+    for (const name of ['Story', 'Post', 'Tall', 'Square', 'Save picture']) {
+      const b = (await share.getByRole('button', { name, exact: true }).boundingBox())!
+      expect(b.height >= 44 && b.width >= 44 && b.x >= 0 && b.x + b.width <= 320, `${name} ${JSON.stringify(b)}`).toBe(true)
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320)
+    await share.screenshot({ path: info.outputPath('share-block-320.png') })
+    await info.attach('share-block-320', { path: info.outputPath('share-block-320.png'), contentType: 'image/png' })
   })
 
-  test('Instagram: on a phone, the share menu with the picture; on a computer, the picture is saved with one line (owner, 14 Nov 2026)', async ({ page, browser }) => {
+  test('"Share on", on a phone that shares files: each icon opens the menu with its picture, the message and the race page, and names the app to pick; Instagram asks Story or Post first (owner, 14 Nov 2026)', async ({ page }) => {
+    test.setTimeout(120_000) // five pictures, each decoded in the page
+    const offSite: string[] = []
+    page.on('request', (r) => { if (!r.url().startsWith('http://localhost:4322/') && !r.url().startsWith('data:') && !r.url().startsWith('blob:')) offSite.push(r.url()) })
     await fakeShareSheet(page, true)
     await page.goto(`${ABA}#pu-01-01-01-001`)
-    const ig = page.getByRole('tabpanel').getByRole('button', { name: 'Share on Instagram', exact: true })
+    const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
+    const row = share.locator('.share-on')
+    const status = share.locator('[data-share-status]')
+    const message = 'Who’s on my ballot? President, 16 January 2027. See every candidate:\nhttps://whosonmyballot.ng/race/jan-2027-president/'
+    // the count alone while waiting; one picture at a time after (each is a few hundred KB)
+    const count = () => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)
+    const item = (i: number) => page.evaluate(i => (window as unknown as { shared: { text: string, type: string, name: string, bytes: number[] }[] }).shared[i], i)
+    const check = async (i: number, file: string, h: number) => {
+      await expect.poll(count, { timeout: 30_000 }).toBe(i + 1)
+      const s = await item(i)
+      expect([s.name, s.type, s.text]).toEqual([file, 'image/png', message])
+      const p = await pictureCheck(page, s.bytes)
+      expect([p.w, p.h]).toEqual([1080, h])
+      expect(Math.abs(p.top.above - p.top.below), JSON.stringify(p.top)).toBeLessThan(24)
+      expect(Math.abs(p.foot.left - p.foot.right), JSON.stringify(p.foot)).toBeLessThan(8)
+    }
+    const apps = [['WhatsApp', 'whos-on-my-ballot.png', 1920], ['X', 'whos-on-my-ballot-square.png', 1080], ['Facebook', 'whos-on-my-ballot-square.png', 1080]] as const
+    for (const [i, [app, file, h]] of apps.entries()) {
+      await row.getByRole('link', { name: `Share on ${app}`, exact: true }).click()
+      await expect(status).toHaveText(`Choose ${app} in the menu.`)
+      await check(i, file, h)
+    }
+    await expect(page).toHaveURL(new RegExp(`${ABA}#pu-01-01-01-001`)) // still here: no app page opened
+    expect(page.context().pages().length).toBe(1)
+    const ig = row.getByRole('button', { name: 'Share on Instagram', exact: true })
+    const pick = share.locator('[data-ig-pick]')
+    await expect(pick).toBeHidden()
+    await expect(ig).toHaveAttribute('aria-expanded', 'false')
     await ig.click()
-    await expect.poll(() => page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(1)
-    const [s] = await page.evaluate(() => (window as unknown as { shared: { name: string, type: string, text?: string, url?: string }[] }).shared)
-    expect([s.name, s.type, s.text, s.url]).toEqual(['whos-on-my-ballot.png', 'image/png', undefined, undefined])
-    // a laptop: a mouse, no touch; the browser could share files, but the picture is saved instead
+    await expect(ig).toHaveAttribute('aria-expanded', 'true')
+    await expect(pick).toBeVisible()
+    await expect(pick).toContainText('Share to Instagram as')
+    expect(await count()).toBe(3) // nothing shared until Story or Post is chosen
+    await pick.getByRole('button', { name: 'Story', exact: true }).click()
+    await expect(status).toHaveText('Choose Instagram in the menu.')
+    await check(3, 'whos-on-my-ballot.png', 1920)
+    await pick.getByRole('button', { name: 'Post', exact: true }).click()
+    await check(4, 'whos-on-my-ballot-square.png', 1080)
+    expect(offSite, 'nothing from WhatsApp, X, Facebook, Instagram or anyone else is loaded').toEqual([])
+  })
+
+  test('"Share on", on a computer: the right picture is saved, the app’s post window opens with the message and link, and one line says to attach it; Instagram saves Story or Post (owner, 14 Nov 2026)', async ({ browser }) => {
+    test.setTimeout(90_000)
     const laptop = await browser.newContext({ viewport: { width: 1280, height: 800 }, hasTouch: false, isMobile: false })
+    // the apps' own pages are never fetched in tests
+    await laptop.route(/^https:\/\/(wa\.me|x\.com|www\.facebook\.com)\//, r => r.fulfill({ body: 'app', contentType: 'text/plain' }))
     const lp = await laptop.newPage()
-    await fakeShareSheet(lp, true)
+    await fakeShareSheet(lp, true) // this browser could share files; a computer saves the picture instead (owner)
     await lp.goto(`${ABA}#pu-01-01-01-001`)
-    const download = lp.waitForEvent('download')
-    await lp.getByRole('tabpanel').getByRole('button', { name: 'Share on Instagram', exact: true }).click()
-    expect((await download).suggestedFilename()).toBe('whos-on-my-ballot.png')
-    await expect(lp.getByRole('tabpanel').locator('[data-share-status]')).toHaveText('Picture saved. Post it to your Instagram story.')
+    const share = lp.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
+    const row = share.locator('.share-on')
+    const status = share.locator('[data-share-status]')
+    const size = async (d: import('@playwright/test').Download) => { const png = PNG.sync.read(fs.readFileSync((await d.path())!)); return [png.width, png.height] }
+    const apps = [['WhatsApp', 'whos-on-my-ballot.png', 1920], ['X', 'whos-on-my-ballot-square.png', 1080], ['Facebook', 'whos-on-my-ballot-square.png', 1080]] as const
+    for (const [app, file, h] of apps) {
+      const link = row.getByRole('link', { name: `Share on ${app}`, exact: true })
+      const href = (await link.getAttribute('href'))!
+      const popup = laptop.waitForEvent('page')
+      const download = lp.waitForEvent('download')
+      await link.click()
+      const d = await download
+      expect(d.suggestedFilename()).toBe(file)
+      expect(await size(d)).toEqual([1080, h])
+      const w = await popup
+      expect(w.url()).toBe(href)
+      await w.close()
+      await expect(status).toHaveText('Picture saved. Attach it to your post.')
+    }
+    const ig = row.getByRole('button', { name: 'Share on Instagram', exact: true })
+    await ig.click()
+    const pick = share.locator('[data-ig-pick]')
+    for (const [choice, file, h] of [['Story', 'whos-on-my-ballot.png', 1920], ['Post', 'whos-on-my-ballot-square.png', 1080]] as const) {
+      const download = lp.waitForEvent('download')
+      await pick.getByRole('button', { name: choice, exact: true }).click()
+      const d = await download
+      expect(d.suggestedFilename()).toBe(file)
+      expect(await size(d)).toEqual([1080, h])
+      await expect(status).toHaveText('Picture saved. Post it on Instagram.')
+    }
     expect(await lp.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(0)
+    expect(laptop.pages().length).toBe(1)
     await laptop.close()
+  })
+
+  test('"Share on", on a phone that can’t share files: WhatsApp, X and Facebook open their link share, Instagram saves the picture; and if the phone refuses the file, the link opens (owner, 14 Nov 2026)', async ({ page, context }) => {
+    await context.route(/^https:\/\/(wa\.me|x\.com|www\.facebook\.com)\//, r => r.fulfill({ body: 'app', contentType: 'text/plain' }))
+    await fakeShareSheet(page, false)
+    await page.goto(`${ABA}#pu-01-01-01-001`)
+    const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
+    const row = share.locator('.share-on')
+    for (const app of ['WhatsApp', 'X', 'Facebook']) {
+      const link = row.getByRole('link', { name: `Share on ${app}`, exact: true })
+      const popup = context.waitForEvent('page')
+      await link.click()
+      const w = await popup
+      expect(w.url(), app).toBe(await link.getAttribute('href'))
+      await w.close()
+    }
+    expect(await page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(0)
+    await row.getByRole('button', { name: 'Share on Instagram', exact: true }).click()
+    const download = page.waitForEvent('download')
+    await share.locator('[data-ig-pick]').getByRole('button', { name: 'Story', exact: true }).click()
+    expect((await download).suggestedFilename()).toBe('whos-on-my-ballot.png')
+    await expect(share.locator('[data-share-status]')).toHaveText('Picture saved. Post it on Instagram.')
+    // a phone that says it can share files but then refuses this one: the plain link, so the icon never does nothing
+    const p2 = await context.newPage()
+    await p2.addInitScript(() => {
+      Object.defineProperty(navigator, 'canShare', { value: () => true })
+      Object.defineProperty(navigator, 'share', { value: async () => { throw new DOMException('no', 'DataError') } })
+    })
+    await p2.goto(`${ABA}#pu-01-01-01-001`)
+    const x = p2.getByRole('tabpanel').locator('.share-on').getByRole('link', { name: 'Share on X', exact: true })
+    const href = (await x.getAttribute('href'))!
+    await x.click()
+    await expect(p2).toHaveURL(href)
+  })
+
+  test('"Save picture": tall or square, saved as a file (owner, 14 Nov 2026)', async ({ page }) => {
+    await fakeShareSheet(page, true)
+    await page.goto(`${ABA}#pu-01-01-01-001`)
+    const share = page.getByRole('tabpanel').getByRole('region', { name: /Share this race/ })
+    const save = share.getByRole('button', { name: 'Save picture', exact: true })
+    await expect(save).toHaveAttribute('aria-expanded', 'false')
+    await expect(share.getByRole('button', { name: 'Tall', exact: true })).toBeHidden()
+    await save.click()
+    await expect(save).toHaveAttribute('aria-expanded', 'true')
+    for (const [choice, file, h] of [['Tall', 'whos-on-my-ballot.png', 1920], ['Square', 'whos-on-my-ballot-square.png', 1080]] as const) {
+      const download = page.waitForEvent('download')
+      await share.getByRole('button', { name: choice, exact: true }).click()
+      const d = await download
+      expect(d.suggestedFilename()).toBe(file)
+      const png = PNG.sync.read(fs.readFileSync((await d.path())!))
+      expect([png.width, png.height]).toEqual([1080, h])
+      await expect(share.locator('[data-share-status]')).toHaveText('Picture saved.')
+    }
+    expect(await page.evaluate(() => (window as unknown as { shared: unknown[] }).shared.length)).toBe(0)
   })
 
   test('where files can’t be shared, WhatsApp opens with the caption and the home page; Copy link copies this page, without the polling unit', async ({ page, context }) => {
