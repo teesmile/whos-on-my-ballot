@@ -1,5 +1,5 @@
 {
- "file": "logos/sprite-d541efb506.webp",
+ "file": "logos/sprite-08d380b5d7.webp",
  "logo_file": "logos/logos-d2af74f63f.webp",
  "logo_width": 2112,
  "logo_bytes": 34824,
@@ -8,8 +8,8 @@
  "photo_y": 96,
  "width": 2112,
  "height": 224,
- "bytes": 58692,
- "sha256": "d541efb506877cecb8bd0324a043fd42990fa57a3a545eaf0eaeeac468d2f510",
+ "bytes": 44898,
+ "sha256": "08d380b5d7c1885606cb6e1a01d3296917cf6293826f0bf1e7cfa6cf71b01032",
  "logos": {
   "A": 0,
   "AA": 1,
@@ -35,16 +35,10 @@
   "ZLP": 21
  },
  "photos": {
-  "jan-2027-president-aac": 0,
-  "jan-2027-president-adc": 1,
-  "jan-2027-president-adp": 2,
-  "jan-2027-president-apc": 3,
-  "jan-2027-president-apm": 4,
-  "jan-2027-president-bp": 5,
-  "jan-2027-president-ndc": 6,
-  "jan-2027-president-nrm": 7,
-  "jan-2027-president-sdp": 8,
-  "jan-2027-president-zlp": 9
+  "jan-2027-president-adc": 0,
+  "jan-2027-president-apc": 1,
+  "jan-2027-president-ndc": 2,
+  "jan-2027-president-sdp": 3
  },
  "sheets": {
   "feb-2027-governor-abia": {

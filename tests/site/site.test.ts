@@ -124,7 +124,8 @@ describe('ballot pages', () => {
     for (const b of all.filter((_, i) => i % 15 === 0)) {
       const page = html(b.path.slice(1))
       expect(new Set([...page.matchAll(/<image href="([^"]+)"/g)].map(m => m[1])), b.path).toEqual(new Set([`/${sprite.file}`]))
-      // logos never come as separate images; the only <img> is a Senate, House or Assembly card's own lazy photo (D-071)
+      // logos never come as separate images; the only <img> is a card's own lazy photo: Senate, House and Assembly (D-071), and
+      // any candidate outside the first five (D-081)
       for (const img of page.match(/<img [^>]*>/g) ?? []) expect(img, b.path).toMatch(/^<img class="photo" src="\/photos\/[^"]+-card\.webp" width="76" height="76" alt="" loading="lazy"/)
       for (const block of page.match(/<li class="card[^"]*"[\s\S]*?<\/li>/g)!) {
         const party = /data-party="([^"]+)"/.exec(block)![1]
@@ -428,17 +429,26 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
     }
     for (const m of credits.matchAll(/<li id="credit-[^"]+">([\s\S]*?)<\/li>/g)) expect(m[1]).toMatch(/<a href="https?:\/\/[^"]+">[^<]+<\/a>[\s\S]*cropped to a square[\s\S]*Retrieved/)
   })
-  it('a race shows photos with two of its first group, or one that is not the governing party\'s; a held photo is not built, shown or credited (D-075, D-076)', () => {
+  it('a race shows photos once any candidate but the governing party\'s has one, first five or not; a held photo is not built, shown or credited (D-075, D-076, D-081)', () => {
     const governing = /^acronym: (\S+)$/m.exec(fs.readFileSync(path.resolve('data/overrides/governing-party.yaml'), 'utf8'))![1]
     for (const r of [presidentialRace(), ...races(), ...febRaces()]) {
-      const firstWith = r.candidates.filter(c => c.display_group === 'first' && approved.has(c.id))
-      if (r.candidates.some(c => approved.has(c.id))) expect(firstWith.length >= 2 || (firstWith.length === 1 && firstWith[0].party !== governing), r.id).toBe(true)
+      const shown = r.candidates.filter(c => approved.has(c.id))
+      if (shown.length) expect(shown.some(c => c.party !== governing), r.id).toBe(true)
+      // in a race that is on, every cleared photo shows; none is held
+      if (shown.length) expect(r.candidates.filter(c => c.id in held), r.id).toEqual([])
     }
     for (const [id, rid] of Object.entries(held)) {
       const r = [presidentialRace(), ...races(), ...febRaces()].find(x => x.id === rid)!
-      const firstCleared = r.candidates.filter(c => c.display_group === 'first' && (approved.has(c.id) || c.id in held))
-      expect(firstCleared.length === 1 && firstCleared[0].party === governing || firstCleared.length === 0, id).toBe(true)
+      const cleared = r.candidates.filter(c => approved.has(c.id) || c.id in held)
+      expect(cleared.map(c => c.party), id).toEqual([governing])
     }
+    // a photo outside the first five is the card's own lazy copy, never part of the image a page loads first (D-081)
+    const pj = photosJson.people as Record<string, { card?: string }>
+    for (const r of [presidentialRace(), ...races(), ...febRaces()]) for (const c of r.candidates) if (c.display_group === 'rest' && pj[c.id]) expect(pj[c.id].card, c.id).toBeTruthy()
+    const sprite = JSON.parse(fs.readFileSync(path.resolve('data/generated/sprite.json'), 'utf8')) as { photos: Record<string, number>, sheets: Record<string, { photos: Record<string, number> }> }
+    const inImage = [...Object.keys(sprite.photos), ...Object.values(sprite.sheets).flatMap(sh => Object.keys(sh.photos))]
+    const restIds = new Set([presidentialRace(), ...febRaces()].flatMap(r => r.candidates.filter(c => c.display_group === 'rest').map(c => c.id)))
+    expect(inImage.filter(id => restIds.has(id))).toEqual([])
     expect(Object.keys(held).length).toBeGreaterThan(0)
     const about = html('about')
     for (const id of Object.keys(held)) {

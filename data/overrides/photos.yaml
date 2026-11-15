@@ -2532,3 +2532,107 @@ people:
     retrieved: '2026-11-14'
     crop: [200, 40, 820, 820]
     owner_approved: '2026-11-14'  # photo sheet 4
+  - candidate_id: feb-2027-governor-adamawa-lp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/303
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/303.jpg
+    sha256: f3ae332257df7b95458a0d6f75dcccde618371e79110afd5d0a6df1e33c76312
+    retrieved: '2026-11-14'
+    crop: [70, 4, 260, 260]
+    official_checked: '2026-11-14'  # INEC M, 46, fits the photo; NASS lists Ishaku Elisha cliff Abbo (Adamawa North); outside the first five (D-081)
+  - candidate_id: feb-2027-governor-bauchi-prp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/652
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/652.jpg
+    sha256: 7d4ef590ed0ba77dba47a51924080c3012456fbc0eb236834a3775fce7c81db4
+    retrieved: '2026-11-14'
+    crop: [53, 2, 293, 293]
+    official_checked: '2026-11-14'  # INEC M, 50, fits the photo; NASS lists Umar Shehu Buba (Bauchi South); outside the first five (D-081)
+  - candidate_id: jan-2027-house-bauchi-bauchi-apm
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/649
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/649.jpg
+    sha256: fdc44b8e9565005bd5c48d82da3bf4e220709e03d2db638e4d599df1497f1a27
+    retrieved: '2026-11-14'
+    crop: [58, 2, 282, 282]
+    official_checked: '2026-11-14'  # INEC M, 63, fits the photo; NASS lists Aminu Garu Alyi (Bauchi); outside the first five (D-081)
+  - candidate_id: jan-2027-house-bauchi-misau-damban-apm
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/548
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/548.jpg
+    sha256: d16ed8ed65c4e1d3cb4114f368fa2a9b02b380e733275acaebab7334400bc7c9
+    retrieved: '2026-11-14'
+    crop: [31, 2, 337, 337]
+    official_checked: '2026-11-14'  # INEC M, 65, fits the photo; NASS lists Aliyu  Bappa misau (Misau/Dambam); outside the first five (D-081)
+  - candidate_id: jan-2027-house-bauchi-ningi-warji-prp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/654
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/654.jpg
+    sha256: 4bf76387a7d737f70f56750cf41f1e2b6acfa1791ab5443d806268d8e1e30ef7
+    retrieved: '2026-11-14'
+    crop: [32, 2, 335, 335]
+    official_checked: '2026-11-14'  # INEC M, 60, fits the photo; NASS lists Adamu  Hashimu (Ningi/Warji); outside the first five (D-081)
+  - candidate_id: jan-2027-house-bauchi-shira-giade-apm
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/648
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/648.jpg
+    sha256: 61346d015621482b8417735ebdf562fa692d94201a5b946ca2e21fb194023f7f
+    retrieved: '2026-11-14'
+    crop: [58, 2, 283, 283]
+    official_checked: '2026-11-14'  # INEC M, 40, fits the photo; NASS lists Sani Ibrahim Tanko (Shira/Giade); outside the first five (D-081)
+  - candidate_id: jan-2027-house-imo-ahiazu-mbaise-ezinihitte-ypp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/118
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/118.jpg
+    sha256: d3118b142a412da05aac97a1ddc4f567df71568939edf64911ec4e610ce9b45d
+    retrieved: '2026-11-14'
+    crop: [46, 46, 306, 306]
+    official_checked: '2026-11-14'  # INEC M, 61, fits the photo; NASS lists Emeka Martins Chinedu (Ahiazu Mbaise/Ezinihitte); outside the first five (D-081)
+  - candidate_id: jan-2027-house-oyo-ibadan-north-east-ibadan-south-east-apm
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/351
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/351.jpg
+    sha256: 204e95e7219efed71f9cfbcb7627877f69e35caf72a189d5e64aa8ea48c6a9f8
+    retrieved: '2026-11-14'
+    crop: [40, 20, 330, 330]
+    official_checked: '2026-11-14'  # INEC M, 56, fits the photo; NASS lists Abass Adekunle Adigun (Ibadan North- East/South- East); outside the first five (D-081)
+  - candidate_id: jan-2027-house-oyo-ogo-oluwa-surulere-apm
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/633
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/633.jpg
+    sha256: 12aab4794c6067e771e48062469864ac8e80b7279b10e459640940981d4425c9
+    retrieved: '2026-11-14'
+    crop: [2, 4, 390, 390]
+    official_checked: '2026-11-14'  # INEC M, 51, fits the photo; NASS lists Sunday Makanjuola Ojo (Ogo-Oluwa/Surulere); outside the first five (D-081)
+  - candidate_id: jan-2027-senate-bauchi-bauchi-north-prp
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/651
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/651.jpg
+    sha256: 7521ec158033a3b85a0817e97f81382c34780262b2b21f01ac29d6197e498ba4
+    retrieved: '2026-11-14'
+    crop: [13, 2, 373, 373]
+    official_checked: '2026-11-14'  # INEC M, 64, fits the photo; NASS lists Samaila Dahuwa Kaila (Bauchi North); outside the first five (D-081)
+  - candidate_id: jan-2027-senate-oyo-oyo-south-apm
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/38
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/38.jpg
+    sha256: d146fe365146a07d0757c87d9c2038d30bcdbce5d8c2552dab727207d5dae660
+    retrieved: '2026-11-14'
+    crop: [45, 20, 310, 310]
+    official_checked: '2026-11-14'  # INEC M, 61, fits the photo; NASS lists Adedeji Stanley Olajide (Ibadan North West/South West); outside the first five (D-081)
+  - candidate_id: jan-2027-senate-bauchi-bauchi-north-apm
+    source: "Bauchi State Government website"
+    file_page: https://home.bauchistate.gov.ng/executive/
+    file_url: https://home.bauchistate.gov.ng/wp-content/uploads/2025/01/bauchi_dep_gov_executive.jpg
+    sha256: cb83642975b60f5e4f6e6e2f1ff341d26defefbdaba9180a44e7fea1ad7dbdb0
+    retrieved: '2026-11-14'
+    crop: [47, 53, 520, 520]
+    official_checked: '2026-11-14'  # INEC M, 58, fits the photo; the state profile names him Deputy Governor, born in Zaki LGA (Bauchi North); outside the first five (D-081)
+  - candidate_id: feb-2027-sha-oyo-ibarapa-east-apm
+    source: "Oyo State Government website"
+    file_page: https://oyostate.gov.ng/my-legislator/
+    file_url: https://oyostate.gov.ng/wp-content/uploads/2020/07/OGUNDOYIN-ADEBO-EDWARD.jpg
+    sha256: e71b7a70bdd983a815c9b4c4edaacd5de01cc911c3ba2745ee80e228c0d1c74a
+    retrieved: '2026-11-14'
+    crop: [36, 32, 244, 244]
+    official_checked: '2026-11-14'  # INEC M, 39, fits the photo; the Assembly names him Speaker, member for Ibarapa East; outside the first five (D-081)

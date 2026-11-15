@@ -5,10 +5,11 @@ candidate appears once it has been checked against the gender and age INEC print
 a photo anyone could have uploaded, such as a Wikimedia Commons file, appears only after the owner has approved that face on a
 contact sheet (`owner_approved`). Everyone else shows the same neutral placeholder.
 
-Per-race rule (owner decisions D-075, D-076): a race shows its photos when at least two of its first group (the five parties,
-with the state rule) have a cleared photo, or when exactly one has and that one is not the governing party's candidate (the
-party holding the presidency, named once in data/overrides/governing-party.yaml with its source). Otherwise every candidate in
-that race shows the placeholder. Cleared photos in a race that is not on stay listed in the yaml and are reported as held, so
+Per-race rule (owner decisions D-075, D-076, D-081): a race shows its photos when any candidate in it, first five or not,
+other than the governing party's has a cleared photo (the party holding the presidency, named once in
+data/overrides/governing-party.yaml with its source). A race whose only cleared photo is the governing party's candidate's
+shows the placeholder for everyone. A photo of a candidate outside the first five always has its own small card copy, loaded
+only when that card is shown, and never joins the image a ballot page loads first (D-081). Cleared photos in a race that is not on stay listed in the yaml and are reported as held, so
 the race switches on by itself when its next photo is cleared.
 
 Only images whose licence allows reuse (or that a party sends with written permission) are listed, in
@@ -38,7 +39,6 @@ PHOTO_DIR = GENERATED_DIR / "photos"
 PHOTOS_JSON = GENERATED_DIR / "photos.json"
 RACES_DIR = GENERATED_DIR / "races"
 GOVERNING_YAML = DATA_DIR / "overrides" / "governing-party.yaml"
-MIN_PER_RACE = 2  # D-075: photos show in a race only once this many of its first group have one
 RULE_SINCE = "2026-11-14"  # the day D-075 and D-076 took held photos off their races' pages (a sitemap date)
 PAGE = 320  # shown at up to 160 CSS pixels on the candidate page
 CARD = 128  # a card's own small copy, for races whose photos load on demand (D-071): shown at 76 CSS pixels
@@ -118,17 +118,16 @@ def race_groups_from_disk() -> dict[str, Group]:
 
 
 def race_photo_rule(cleared: set[str], groups: dict[str, Group], governing: str) -> tuple[set[str], dict[str, str]]:
-    """D-075, D-076: returns (photos shown, {held candidate ID: its race ID}). A race is on when at least MIN_PER_RACE of its
-    first group have a cleared photo, or exactly one has and it is not the governing party's candidate; then every cleared
-    photo in it shows, and in any other race none does."""
+    """D-075, D-076, D-081: returns (photos shown, {held candidate ID: its race ID}). A race is on when any candidate in it, in
+    either group, other than the governing party's has a cleared photo; then every cleared photo in it shows, and in any other
+    race none does."""
     race_of = {cid: rid for rid, cands in groups.items() for cid, _, _ in cands}
     unknown = sorted(cleared - set(race_of))
     if unknown:
         raise ValueError(f"photos.yaml: no named candidate with these IDs: {unknown}")
 
     def on(cands: Group) -> bool:
-        with_photo = [party for cid, g, party in cands if g == "first" and cid in cleared]
-        return len(with_photo) >= MIN_PER_RACE or (len(with_photo) == 1 and with_photo[0] != governing)
+        return any(cid in cleared and party != governing for cid, _, party in cands)
 
     races_on = {rid for rid, cands in groups.items() if on(cands)}
     shown = {cid for cid in cleared if race_of[cid] in races_on}
@@ -184,7 +183,9 @@ def fetch(log=print) -> None:
 def build_photos(log=print) -> dict[str, Path]:
     """Writes the cropped copies and photos.json; returns the square crops for the sprite (cleared photos in races that are on)."""
     listed = load()["people"]
-    shown, held = race_photo_rule({p["candidate_id"] for p in listed if approved(p)}, race_groups_from_disk(), governing_party()["acronym"])
+    groups = race_groups_from_disk()
+    shown, held = race_photo_rule({p["candidate_id"] for p in listed if approved(p)}, groups, governing_party()["acronym"])
+    rest = {cid for cands in groups.values() for cid, g, _ in cands if g == "rest"}
     for old in PHOTO_DIR.glob("*"):
         old.unlink()
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)
@@ -209,14 +210,15 @@ def build_photos(log=print) -> dict[str, Path]:
         cell = PHOTO_DIR / f"_{cid}.png"
         subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-resize", f"{PAGE}x{PAGE}!", "-strip", "-quality", "78", f"webp:{page}"], check=True)
         subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-resize", f"{SHARE}x{SHARE}!", "-strip", "-quality", "92", f"jpeg:{share}"], check=True)
-        subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-strip", f"png:{cell}"], check=True)
-        cells[cid] = cell
         extra = {}
-        if office_of(cid) in ON_DEMAND:
+        if office_of(cid) in ON_DEMAND or cid in rest:
             card = PHOTO_DIR / f"{cid}-card.webp"
             subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-resize", f"{CARD}x{CARD}!", "-strip", "-quality", str(CARD_QUALITY),
                             f"webp:{card}"], check=True)
             extra = {"card": f"photos/{card.name}", "card_sha256": _sha256(card.read_bytes()), "card_bytes": card.stat().st_size}
+        else:  # a first-five photo of the race a ballot page shows first: a cell of that page's one image
+            subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-strip", f"png:{cell}"], check=True)
+            cells[cid] = cell
         people[cid] = {
             **extra,
             "page": f"photos/{page.name}", "page_sha256": _sha256(page.read_bytes()), "page_size": PAGE,
@@ -225,7 +227,7 @@ def build_photos(log=print) -> dict[str, Path]:
             **{k: p[k] for k in OPTIONAL if p.get(k)},
         }
         log(f"photo {cid}: {page.stat().st_size} + {share.stat().st_size} bytes")
-    log(f"photos: {len(people)} shown; {len(held)} cleared but held (D-075, D-076)")
+    log(f"photos: {len(people)} shown; {len(held)} cleared but held (D-075, D-076, D-081)")
     PHOTOS_JSON.write_text(json.dumps({"people": people, "held": held, "held_since": RULE_SINCE}, indent=1, ensure_ascii=False) + "\n")
     return cells
 
@@ -241,9 +243,10 @@ def check_photos(offices: dict[str, str], groups: dict[str, Group]) -> list[str]
     unknown = sorted(set(people) - set(offices))
     if unknown:
         errors.append(f"photos: no named candidate with these IDs: {unknown}")
-    no_card = sorted(c for c in people if office_of(c) in ON_DEMAND and "card" not in people[c])
+    rest = {cid for cands in groups.values() for cid, g, _ in cands if g == "rest"}
+    no_card = sorted(c for c in people if (office_of(c) in ON_DEMAND or c in rest) and "card" not in people[c])
     if no_card:
-        errors.append(f"photos (D-071): no on-demand card copy for {no_card}")
+        errors.append(f"photos (D-071, D-081): no on-demand card copy for {no_card}")
     ok = {p["candidate_id"] for p in load()["people"] if approved(p)}
     if set(people) - ok:
         errors.append(f"photos (D-065, D-074): built without approval or an official-source check: {sorted(set(people) - ok)}")
@@ -255,7 +258,7 @@ def check_photos(offices: dict[str, str], groups: dict[str, Group]) -> list[str]
     except ValueError as e:
         return [*errors, str(e)]
     if set(people) != shown:
-        errors.append(f"photos (D-075, D-076): the per-race rule gives {len(shown)} photos, photos.json has {len(people)}; run `ballot-pipeline assets`"
+        errors.append(f"photos (D-075, D-076, D-081): the per-race rule gives {len(shown)} photos, photos.json has {len(people)}; run `ballot-pipeline assets`"
                       f" (extra: {sorted(set(people) - shown)[:5]}, missing: {sorted(shown - set(people))[:5]})")
     for cid, m in people.items():
         for key in ("page", "share", *(("card",) if "card" in m else ())):

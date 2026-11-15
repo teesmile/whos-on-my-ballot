@@ -26,11 +26,15 @@ describe('photos in races a ballot page does not show first (D-071)', () => {
     expect(html).not.toContain('<svg class="photo"')
   })
 
-  it('a Senate card without one keeps the same placeholder; President cards still draw from the page image', () => {
+  it('a Senate card without one keeps the same placeholder; President cards in the first five draw from the page image, the rest load their own copy lazily (D-081)', () => {
     expect(renderToStaticMarkup(<CandidateCard c={senate.candidates[1]} mateLabel={null} />)).toContain('<span class="photo ph" aria-hidden="true"></span>')
     const pres = races().find(r => r.office === 'president')!
-    const withPhoto = pres.candidates.map(c => renderToStaticMarkup(<CandidateCard c={c} mateLabel={null} />)).filter(h => h.includes('class="photo"') && !h.includes('photo ph'))
-    expect(withPhoto.length).toBeGreaterThan(0)
-    for (const h of withPhoto) expect(h).toContain('<svg class="photo"')
+    const cards = pres.candidates.map(c => ({ c, h: renderToStaticMarkup(<CandidateCard c={c} mateLabel={null} />) })).filter(x => x.h.includes('class="photo"') && !x.h.includes('photo ph'))
+    const first = cards.filter(x => x.c.display_group === 'first')
+    const rest = cards.filter(x => x.c.display_group === 'rest')
+    expect(first.length).toBeGreaterThan(0)
+    expect(rest.length).toBeGreaterThan(0)
+    for (const x of first) expect(x.h, x.c.id).toContain('<svg class="photo"')
+    for (const x of rest) expect(x.h, x.c.id).toMatch(/<img class="photo" src="\/photos\/[^"]+-card\.webp" width="76" height="76" alt="" loading="lazy"/)
   })
 })

@@ -31,23 +31,23 @@ def test_an_official_page_photo_goes_live_once_checked_but_a_public_upload_needs
     assert approval_date({**commons, "source": "National Assembly website", "official_checked": "2026-11-14"}) is None
 
 
-def test_a_race_shows_photos_with_two_of_its_first_group_or_one_that_is_not_the_governing_partys():
+def test_a_race_shows_photos_once_any_candidate_but_the_governing_partys_has_one_first_five_or_not():
     import pytest
 
     from ballot_pipeline.photos import governing_party, race_photo_rule
 
-    groups = {"r1": [("r1-gov", "first", "GOV"), ("r1-b", "first", "B"), ("r1-c", "first", "C"), ("r1-x", "rest", "X")],
+    groups = {"r1": [("r1-gov", "first", "GOV"), ("r1-b", "first", "B"), ("r1-x", "rest", "X")],
               "r2": [("r2-gov", "first", "GOV"), ("r2-b", "first", "B"), ("r2-x", "rest", "X")],
-              "r3": [("r3-gov", "first", "GOV"), ("r3-b", "first", "B")]}
-    shown, held = race_photo_rule({"r1-gov", "r1-x", "r2-b", "r3-gov", "r3-b"}, groups, "GOV")
-    # r1: the governing party's lone photo is held, and the race shows placeholders (the rest group's photo too)
-    assert held == {"r1-gov": "r1", "r1-x": "r1"}
-    # r2: a lone photo of another party shows; r3: two photos show, the governing party's included
-    assert shown == {"r2-b", "r3-gov", "r3-b"}
-    # a photo outside the first group never counts towards the two
-    assert race_photo_rule({"r1-gov", "r1-x"}, groups, "GOV")[0] == set()
-    # the next photo switches the race on by itself
-    assert race_photo_rule({"r1-gov", "r1-c"}, groups, "GOV")[0] == {"r1-gov", "r1-c"}
+              "r3": [("r3-gov", "first", "GOV"), ("r3-x", "rest", "X")],
+              "r4": [("r4-b", "first", "B"), ("r4-x", "rest", "X")]}
+    shown, held = race_photo_rule({"r1-gov", "r2-gov", "r2-x", "r3-x", "r4-x"}, groups, "GOV")
+    # r1: the governing party's photo alone is held, and the race shows placeholders
+    assert held == {"r1-gov": "r1"}
+    # r2: a photo outside the first five switches the race on, and every photo in it shows, the governing party's included;
+    # r3 and r4: a photo outside the first five alone is enough
+    assert shown == {"r2-gov", "r2-x", "r3-x", "r4-x"}
+    # the next photo of any other party switches a held race on by itself
+    assert race_photo_rule({"r1-gov", "r1-x"}, groups, "GOV")[0] == {"r1-gov", "r1-x"}
     with pytest.raises(ValueError):
         race_photo_rule({"nobody"}, groups, "GOV")
     # one setting, with its source
