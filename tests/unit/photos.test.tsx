@@ -2,7 +2,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { describe, expect, it, vi } from 'vitest'
 
 import { CandidateCard } from '@/components/Candidate'
-import { races } from '@/lib/data'
+import { photo, races } from '@/lib/data'
 
 // One Senate candidate is given an approved photo with an on-demand card copy (D-071); everything else is the real data.
 const fake = vi.hoisted(() => ({ id: '' }))
@@ -27,7 +27,9 @@ describe('photos in races a ballot page does not show first (D-071)', () => {
   })
 
   it('a Senate card without one keeps the same placeholder; President cards in the first five draw from the page image, the rest load their own copy lazily (D-081)', () => {
-    expect(renderToStaticMarkup(<CandidateCard c={senate.candidates[1]} mateLabel={null} />)).toContain('<span class="photo ph" aria-hidden="true"></span>')
+    // any Senate candidate without an approved photo (D-090 shows every approved one, so pick by the data)
+    const without = races().filter(r => r.office === 'senate').flatMap(r => r.candidates).find(c => c.id !== fake.id && !photo(c.id))!
+    expect(renderToStaticMarkup(<CandidateCard c={without} mateLabel={null} />)).toContain('<span class="photo ph" aria-hidden="true"></span>')
     const pres = races().find(r => r.office === 'president')!
     const cards = pres.candidates.map(c => ({ c, h: renderToStaticMarkup(<CandidateCard c={c} mateLabel={null} />) })).filter(x => x.h.includes('class="photo"') && !x.h.includes('photo ph'))
     const first = cards.filter(x => x.c.display_group === 'first')

@@ -58,25 +58,15 @@ def test_a_news_photo_goes_live_once_checked_and_never_from_an_agency(tmp_path, 
             photos.load()
 
 
-def test_a_race_shows_photos_once_any_candidate_but_the_governing_partys_has_one_first_five_or_not():
+def test_every_cleared_photo_shows_for_every_party_in_every_race():
+    """D-090 (owner, 15 Nov 2026): no governing-party rule; every cleared photo shows, first five or not."""
     import pytest
 
-    from ballot_pipeline.photos import governing_party, race_photo_rule
+    from ballot_pipeline import photos
 
     groups = {"r1": [("r1-gov", "first", "GOV"), ("r1-b", "first", "B"), ("r1-x", "rest", "X")],
-              "r2": [("r2-gov", "first", "GOV"), ("r2-b", "first", "B"), ("r2-x", "rest", "X")],
-              "r3": [("r3-gov", "first", "GOV"), ("r3-x", "rest", "X")],
-              "r4": [("r4-b", "first", "B"), ("r4-x", "rest", "X")]}
-    shown, held = race_photo_rule({"r1-gov", "r2-gov", "r2-x", "r3-x", "r4-x"}, groups, "GOV")
-    # r1: the governing party's photo alone is held, and the race shows placeholders
-    assert held == {"r1-gov": "r1"}
-    # r2: a photo outside the first five switches the race on, and every photo in it shows, the governing party's included;
-    # r3 and r4: a photo outside the first five alone is enough
-    assert shown == {"r2-gov", "r2-x", "r3-x", "r4-x"}
-    # the next photo of any other party switches a held race on by itself
-    assert race_photo_rule({"r1-gov", "r1-x"}, groups, "GOV")[0] == {"r1-gov", "r1-x"}
+              "r2": [("r2-gov", "first", "GOV")]}
+    assert photos.shown_photos({"r1-gov", "r2-gov", "r1-x"}, groups) == {"r1-gov", "r2-gov", "r1-x"}
     with pytest.raises(ValueError):
-        race_photo_rule({"nobody"}, groups, "GOV")
-    # one setting, with its source
-    g = governing_party()
-    assert g["acronym"] == "APC" and g["source"]["url"].startswith("http") and g["source"]["quote"]
+        photos.shown_photos({"nobody"}, groups)
+    assert not hasattr(photos, "race_photo_rule") and not hasattr(photos, "governing_party")

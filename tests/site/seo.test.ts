@@ -128,7 +128,7 @@ describe('sitemap and robots.txt', () => {
     expect(date('/c/jan-2027-house-lagos-eti-osa-apc/')).toBe('2026-11-15') // sheet 5 switched the race's photos on
     // the day another candidate's official photo switched the race's photos on (D-081)
     expect(date('/c/jan-2027-house-fct-municipal-bwari-apc/')).toBe('2026-11-15')
-    expect(date('/c/feb-2027-sha-lagos-lagos-island-i-apc/')).toBe('2026-10-10')
+    expect(date('/c/feb-2027-sha-lagos-agege-i-apc/')).toBe('2026-10-10')
     // a reader also sees the day a state's first group changed (D-070) and the day an approved photo appeared (D-071)
     expect(date('/c/jan-2027-house-abia-ukwa-east-ukwa-west-apc/')).toBe('2026-11-13')
     expect(date('/c/jan-2027-house-abia-aba-north-aba-south-apc/')).toBe('2026-11-15') // a second photo, 15 Nov (D-081)

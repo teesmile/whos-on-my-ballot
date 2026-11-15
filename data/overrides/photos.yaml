@@ -367,8 +367,7 @@ people:
     sha256: 623bfe6b1adb7915add69e8667867df26a46b26a48cc7aca14983b3fccce80cc
     retrieved: '2026-11-13'
     crop: [244, 154, 548, 548]
-    # owner_approved on governor contact sheet 1 (13 Nov), withheld 15 Nov until the owner decides: no square crop of the head
-    # leaves out the flag and the coat of arms or state seal beside it (held until now, so never shown)
+    owner_approved: '2026-11-13'  # governor contact sheet 1; withheld 15 Nov for the flag and seal, restored the same day when the owner relaxed framing (D-089)
   - candidate_id: feb-2027-governor-taraba-apc
     source: Taraba State Government website
     file_page: https://www.tarabastate.gov.ng/government
@@ -376,8 +375,7 @@ people:
     sha256: f7ef060ff60d261ff010e85e42de835af3aa75beac76fc6862d0f204e9ca06ff
     retrieved: '2026-11-13'
     crop: [165, 61, 465, 465]
-    # owner_approved on governor contact sheet 1 (13 Nov), withheld 15 Nov until the owner decides: no square crop of the head
-    # leaves out the flag and the coat of arms or state seal beside it (held until now, so never shown)
+    owner_approved: '2026-11-13'  # governor contact sheet 1; withheld 15 Nov for the flag and seal, restored the same day when the owner relaxed framing (D-089)
   - candidate_id: feb-2027-governor-zamfara-apc
     source: Zamfara State Government website
     file_page: https://zamfara.gov.ng/office-of-the-governor/
@@ -4815,3 +4813,1006 @@ people:
     retrieved: '2026-11-15'
     crop: [215, 240, 1500, 1500]
     official_checked: '2026-11-15'  # INEC M, 58, fits the photo; the page names them; seat and name checked (night round)
+  # Recovered under the relaxed framing rule (D-089, owner, 15 Nov 2026)
+  - candidate_id: jan-2027-senate-kano-kano-central-adc
+    source: "Photo supplied by the site's owner: his ADC campaign poster for Kano Central Senate"
+    file_page: https://whosonmyballot.ng/c/jan-2027-senate-kano-kano-central-adc/
+    file_url: owner-supplied:mukhatar.jpeg
+    sha256: 071395d52494f7df3f2059b22422e4765468330811a2fb8be895d814f8ae3721
+    retrieved: '2026-11-15'
+    crop: [65, 40, 190, 190]
+    owner_approved: '2026-11-15'  # the owner's own file (mukhatar.jpeg); the poster names "Barrister Sama'ila Abdullahi Mukhatar", ADC, "for Senator, Kano Central 2027"; INEC M, 41, fits; face cropped from the poster (D-089)
+  # Recovered under the relaxed framing rule (D-089): set aside since 13 Nov only for framing; re-checked 15 Nov
+  - candidate_id: feb-2027-governor-borno-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/mustafa-gubio-eng
+    file_url: https://diasporarha.com/member/images/e8a14591f70859e025904a146588b396-Mustafa.jpg
+    sha256: 9503a42e5e4ec81397b159b1ed485e1aba87b812a34376940104aab8a003753f
+    retrieved: '2026-11-15'
+    crop: [255, 95, 487, 487]
+    official_checked: '2026-11-15'  # INEC M, 52, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-governor-kebbi-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/nasir-idris-gov
+    file_url: https://diasporarha.com/member/images/469f5a3c356b0c80f2d5f91e80e45efa-Idris.jpg
+    sha256: 7ea2106c8efdf30f08e12cf236a28a8adaf1cf4c8696baa3eed63bb37ef3d5eb
+    retrieved: '2026-11-15'
+    crop: [168, 84, 711, 711]
+    official_checked: '2026-11-15'  # INEC M, 61, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-anambra-anambra-south-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/chibuogwu-benson-oraelosi-maryanne
+    file_url: https://diasporarha.com/member/images/e1fb276ac1256e8c4344b27f197571ac-benson%20chibu.jpg
+    sha256: c247f0b7c0535f07d70944de89d36c1c35251b79b019944d33ed3104c0e541ac
+    retrieved: '2026-11-15'
+    crop: [39, 4, 159, 159]
+    official_checked: '2026-11-15'  # INEC F, 53, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-abia-abia-central-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/emeka-atuma
+    file_url: https://diasporarha.com/member/images/9dcef75e86c405f3d322b529ae5e9832-Emeka.jpg
+    sha256: f4532affde80e9d81c765b328bd5f802b4399c9dd46ebdc3a94c4665cc7f8d39
+    retrieved: '2026-11-15'
+    crop: [127, 40, 795, 795]
+    official_checked: '2026-11-15'  # INEC M, 57, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-bayelsa-bayelsa-west-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/fidelis-agbiki-sen
+    file_url: https://diasporarha.com/member/images/3a6e86e72ff88cf1a77d318879a954fa-Fidelis.jpg
+    sha256: 1d08bd75850a6d6693b842e973c0870a37b12fbf58633f8d41d09c16cc61cd25
+    retrieved: '2026-11-15'
+    crop: [256, 122, 512, 512]
+    official_checked: '2026-11-15'  # INEC M, 75, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-benue-benue-south-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/francis-ottah-agbo-hon
+    file_url: https://diasporarha.com/member/images/4a44cda0e9bd77d30984014d901a9d66-Francis.jpg
+    sha256: df03186096ca8cad5c1d4afdab14f3f7d417574c88d746357d562cbb63836ef6
+    retrieved: '2026-11-15'
+    crop: [129, 70, 774, 774]
+    official_checked: '2026-11-15'  # INEC M, 52, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-bauchi-bauchi-central-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/isah-hamma-misau-sen
+    file_url: https://diasporarha.com/member/images/13f21dd10dae9a75aec5edd108adc88f-misau.jpg
+    sha256: 46c99f555e31373ad804442fe4cdc980a90a5f0eb8292cf4d41af9520d3c03db
+    retrieved: '2026-11-15'
+    crop: [176, 138, 646, 646]
+    official_checked: '2026-11-15'  # INEC M, 52, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-anambra-anambra-north-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/kingsley-nnalue-chief
+    file_url: https://diasporarha.com/member/images/4a57b5de800d4803d336c476bafafbcf-Kingsley.jpg
+    sha256: 09db84e624780e0a822b2c6954608bd1300ec4b9a6025477cb411f6cf4ce6558
+    retrieved: '2026-11-15'
+    crop: [96, 34, 814, 814]
+    official_checked: '2026-11-15'  # INEC M, 48, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-gombe-gombe-north-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/muhammad-inuwa-yahaya
+    file_url: https://diasporarha.com/member/images/e4664222fb4dd426965f706e01d084a9-yahana.jpg
+    sha256: fbf52f460ea7bea4930bf09197a425d3c42280d64990f9a68295aef35dc5ec67
+    retrieved: '2026-11-15'
+    crop: [170, 136, 661, 661]
+    official_checked: '2026-11-15'  # INEC M, 64, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-imo-imo-east-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/prince-alex-mbata
+    file_url: https://diasporarha.com/member/images/74c54152813b3943cf907ed4a650410a-prince.jpg
+    sha256: 6280fa781316acfbf6aab014523b914f6b813acb78bb76973440271e1c51d2b8
+    retrieved: '2026-11-15'
+    crop: [162, 108, 751, 751]
+    official_checked: '2026-11-15'  # INEC M, 55, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-fct-federal-capital-territory-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/tanimu-philip-aduda-sen
+    file_url: https://diasporarha.com/member/images/542c3518544fd144ebe5627039c75054-phill.jpg
+    sha256: 0fda86209214384530b0fd7ade442d3d8634fd09741322697a71bcee7ccf521b
+    retrieved: '2026-11-15'
+    crop: [119, 90, 732, 732]
+    official_checked: '2026-11-15'  # INEC M, 57, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-anambra-anambra-central-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/uche-lilian-ekwunife
+    file_url: https://diasporarha.com/member/images/5af383ba68c49914d9ca7f9636d3069d-lilian.jpg
+    sha256: 9bf1988f4db4f328951ca32d280f8569918bb611f10dc82d46da0370346510b6
+    retrieved: '2026-11-15'
+    crop: [209, 76, 684, 684]
+    official_checked: '2026-11-15'  # INEC F, 55, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-niger-niger-south-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/sani-idris-legbo-kutigi-hon
+    file_url: https://diasporarha.com/member/images/af8626f920753fa8a0b98b0d3b77d388-sani%20id.jpg
+    sha256: 30ef0485e51a2252d6a0b23d6f6df2f2df55a3775737163a7ad4d6a7ed53a690
+    retrieved: '2026-11-15'
+    crop: [151, 77, 777, 777]
+    official_checked: '2026-11-15'  # INEC M, 53, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-osun-osun-west-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/akinade-akanmu-sen
+    file_url: https://diasporarha.com/member/images/c015af25a4ae30a3a83deb321b2b75b6-akinade.jpg
+    sha256: 314b32f8e7c5b53406a3af8b402ca3880a5356d94af992e74c5614317f426179
+    retrieved: '2026-11-15'
+    crop: [189, 103, 707, 707]
+    official_checked: '2026-11-15'  # INEC M, 63, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kano-minjibir-ungogo-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/abdul-abdulhamid-minjibir-hon
+    file_url: https://diasporarha.com/member/images/8e3d63bf7878d071fc58d1fd23df57c3-abdel.jpg
+    sha256: cb0e3a0379fa17b38cceb2584a991732418e6036f73ba0cec6bec078d1bf7641
+    retrieved: '2026-11-15'
+    crop: [120, 0, 777, 777]
+    official_checked: '2026-11-15'  # INEC M, 66, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-plateau-jos-north-bassa-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/abubakar-shuaibu-hon
+    file_url: https://diasporarha.com/member/images/841cb84148077b37eabf66f8848733f1-ABUBAKAR%20SHUAIBU.png
+    sha256: 8bba9cd11728288342bba0959dec638058674aee4b141e2b8d7c8a6b2e73ab1d
+    retrieved: '2026-11-15'
+    crop: [62, 84, 844, 844]
+    official_checked: '2026-11-15'  # INEC M, 50, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kano-wudil-garko-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/adamu-yahaya-garinali-hon
+    file_url: https://diasporarha.com/member/images/7f752b7fde783f678fcdeb2126416ae8-adamu.jpg
+    sha256: a3e7363f0228ec74e65bd2085fd51b9f5a593cd89f086085352517b4c915db7a
+    retrieved: '2026-11-15'
+    crop: [135, 98, 766, 766]
+    official_checked: '2026-11-15'  # INEC M, 58, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-lagos-amuwo-odofin-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/moses-olanrewaju-hon
+    file_url: https://diasporarha.com/member/images/0a272cc227ed6f034b540b2842de8563-moses.jpg
+    sha256: 07c96918f50d0355c103fc94e5910d5d3bc248d185c3aef1b9a2b875a895436f
+    retrieved: '2026-11-15'
+    crop: [242, 18, 594, 594]
+    official_checked: '2026-11-15'  # INEC M, 45, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kogi-idah-igalamela-odolu-ibaji-ofu-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/uchola-ojogbane-omale-hon
+    file_url: https://diasporarha.com/member/images/c7353b99fdd52ee10088637989c7fbbe-uchola.jpg
+    sha256: 23d30e56566cd65826e70615959e874b49838aea56887127e2a9de53d445213a
+    retrieved: '2026-11-15'
+    crop: [176, 99, 621, 621]
+    official_checked: '2026-11-15'  # INEC M, 47, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-osun-ayedire-iwo-ola-oluwa-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/adedapo-abeeb-ademola-hon
+    file_url: https://diasporarha.com/member/images/820c64f84ae5069829eba250640f17e5-ADEDAPO%20ABEEB%20ADEMOLA.png
+    sha256: a1e628e8b79d134c5b5001a4b2398150cc0e0207db1381cbc67b62b473802979
+    retrieved: '2026-11-15'
+    crop: [40, 0, 875, 875]
+    official_checked: '2026-11-15'  # INEC M, 54, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-plateau-mikang-qua-an-pan-shedam-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/dading-joseph-dashe-hon
+    file_url: https://diasporarha.com/member/images/0568b481a7e2c5c9ae7f94f69d5f07af-DADING%20JOSEPH%20DASHE.png
+    sha256: 0c0ee7c6e19fc8833403d2434d438b8045d13424c961e1dfa6b5c4403ec05d05
+    retrieved: '2026-11-15'
+    crop: [359, 62, 424, 424]
+    official_checked: '2026-11-15'  # INEC M, 56, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-osun-odo-otin-ifelodun-boripe-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/eniade-francis-moyosore-oluwadamilare-hon
+    file_url: https://diasporarha.com/member/images/c41955dfeddab452a8fd07486685ced1-ENIADE%20FRANCIS%20MOYOSORE.png
+    sha256: 16d55aa4e1ba3773a7f20dc9121b2aae8cb88e34e864701a7ea3b75c1c9f733b
+    retrieved: '2026-11-15'
+    crop: [200, 60, 630, 630]
+    official_checked: '2026-11-15'  # INEC M, 39, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kano-kura-madobi-garun-mallam-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/ishaq-sulaiman-muktar-hon
+    file_url: https://diasporarha.com/member/images/6d3ec1ac951768d273ff86a56c0a607d-ishaq.jpg
+    sha256: 10eabfb5b24b39416baf92bf2872969969d20fbf8dd4ddabf759313846730d79
+    retrieved: '2026-11-15'
+    crop: [176, 119, 672, 672]
+    official_checked: '2026-11-15'  # INEC M, 48, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-abia-isiala-ngwa-north-isiala-ngwa-south-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/uzo-ihuka
+    file_url: https://diasporarha.com/member/images/fc5dbeed82c796b03fc78feda70cde6a-ihuka.jpg
+    sha256: d7e27675be02beb28c4c3a298fdca15932812bd91e131ea92b33f27ed01f75a2
+    retrieved: '2026-11-15'
+    crop: [118, 75, 737, 737]
+    official_checked: '2026-11-15'  # INEC M, 56, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-anambra-anambra-east-anambra-west-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/ifeoma-chukwuma-hon
+    file_url: https://diasporarha.com/member/images/00206eaf6a7e8cf898bfddcde0682a03-ho.jpg
+    sha256: e1e2fde42520100df33e995dde214df325185918c8f14ab4b20c93d7253a3490
+    retrieved: '2026-11-15'
+    crop: [267, 5, 462, 462]
+    official_checked: '2026-11-15'  # INEC F, 42, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-anambra-nnewi-north-nnewi-south-ekwusigo-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/nwafor-orizu-esomeju-nwamaka-princess
+    file_url: https://diasporarha.com/member/images/de4097595aa2c6ed098788314bfcf0ac-Nwafor-Orizu
+    sha256: f6a760413f29621350884ba0d045eb86a6515a3ca330cf7f135c6f69167c30be
+    retrieved: '2026-11-15'
+    crop: [90, 100, 884, 884]
+    official_checked: '2026-11-15'  # INEC F, 65, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-jigawa-birnin-kudu-buji-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/aliyu-suleiman-da-u-hon
+    file_url: https://diasporarha.com/member/images/15314570c5a775bd40783c60186e2f06-aliy.jpg
+    sha256: 5f39de09b161e1f693157a4fa8bc4acacdd660b85e8363687bda7e6b7128d235
+    retrieved: '2026-11-15'
+    crop: [177, 107, 663, 663]
+    official_checked: '2026-11-15'  # INEC M, 53, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kaduna-birnin-gwari-giwa-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/abubakar-shehu-giwa
+    file_url: https://diasporarha.com/member/images/036cd5072ea327f2e8862d3f0b285895-giwa.jpg
+    sha256: cb654d5b37b33aa19af0e6edcb8eb568c84b3128ad71036a73c5836796aba48c
+    retrieved: '2026-11-15'
+    crop: [182, 163, 682, 682]
+    official_checked: '2026-11-15'  # INEC M, 45, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kaduna-soba-apc
+    source: "APC Presidential Campaign diaspora directorate"
+    file_page: https://diasporarha.com/hamza-ibrahim
+    file_url: https://diasporarha.com/member/images/f8f4104231603e651143a1bab49d25ca-hamza.jpg
+    sha256: 28890feb800e5a52d9c08a1df22489b2bd488bf03d4b8332e80bb80e4ca19247
+    retrieved: '2026-11-15'
+    crop: [196, 74, 632, 632]
+    official_checked: '2026-11-15'  # INEC M, 52, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-governor-rivers-pdp
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/wikes-ally-emerges-pdp-govship-candidate-in-rivers/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/05/Ejekwu.jpg
+    sha256: 731d747224112aa145de0b7f1bbbfc3bcab1e3efe768e95c4d8262e1ae9d3051
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [204, 128, 674, 674]
+    news_checked: '2026-11-15'  # INEC M, 60, fits; the article names them with party and seat; set aside for framing (Daily Trust lead: lettered "RENEWED HOPE" cap and another ma), recovered (D-089)
+  - candidate_id: feb-2027-governor-delta-adc
+    source: "Premium Times (premiumtimesng.com)"
+    file_page: https://www.premiumtimesng.com/news/top-news/882895-2027-ogboru-clinches-adc-governorship-ticket-in-delta.html
+    file_url: https://media.premiumtimesng.com/wp-content/files/2026/05/599952258_1363258121924948_751232631119700425_n-e1779797422184.jpg
+    sha256: 1dd68e79bd185ab775e8c927290fd35dc7092ad90f7641f665dc652f314d9f0d
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [215, 0, 770, 770]
+    news_checked: '2026-11-15'  # INEC M, 68, fits; the article names them with party and seat; set aside for framing (Premium Times lead (caption "Great Ogboru"): microphone at h), recovered (D-089)
+  - candidate_id: jan-2027-senate-edo-edo-north-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Adams-Oshiomole.png
+    sha256: cffb3f5acad1bb6e52ee505839f5b07b960e77e0f1c0777159979696d9f2a030
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 75, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-oyo-oyo-south-ndc
+    source: "Candidate's own website"
+    file_page: https://pauladoyi.com/
+    file_url: https://pauladoyi.com/images/adoyi-portrait.jpg
+    sha256: 84b47c1a8c367fa76a8879b8d1446b9a5918f3c84e7499975ffee96267024da6
+    retrieved: '2026-11-15'
+    crop: [236, 280, 512, 512]
+    official_checked: '2026-11-15'  # INEC M, 53, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-benue-benue-north-west-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Titus-Zam.png
+    sha256: 730bdfb526b851efb2bfe617d0090ec3a1056691dbd54e1183fa44ca65b81459
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 57, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-ebonyi-ebonyi-central-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Eze-Kenneth.png
+    sha256: 4319aa41a8233296e85ef9482ab039ff588e0e0f54cbee757e1c249fa0dae9e7
+    retrieved: '2026-11-15'
+    crop: [0, 22, 518, 518]
+    official_checked: '2026-11-15'  # INEC M, 56, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-oyo-oyo-central-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Akintunde-Abiodun.png
+    sha256: bcc150b72cecf7a2cb08e95c89a250440eecf65f562cbc0d17ca9f4214302b4b
+    retrieved: '2026-11-15'
+    crop: [105, 73, 287, 287]
+    official_checked: '2026-11-15'  # INEC M, 64, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-senate-plateau-plateau-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Simon-Lalong.png
+    sha256: e8e0683a8abc031472fbac6925615200ececaa175e84bc02134f489f3b4dca50
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 63, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kebbi-ngaski-shanga-yauri-apc
+    source: "APC website"
+    file_page: https://apc.com.ng/members/yusuf-tanko-sununu
+    file_url: https://apc.com.ng/members/member/images/9ce7c15ea5c7120ccf91179f3c617e05-Hon.%20Sununu%20Tanko%20Yusuf.jpg
+    sha256: 3e91470ba4278b64d8916f074e8012a53f43d55e9d401290dced6b362f4663f3
+    retrieved: '2026-11-15'
+    crop: [180, 40, 640, 640]
+    official_checked: '2026-11-15'  # INEC M, 59, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-edo-orhionmwon-uhunmwonde-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Osawaru-Billy-Famous-Adesuwa.jpg
+    sha256: 4fb07fc2d07f36cf419b8644c041ab63bae1bf5965cb12fff2d5919f74f34dab
+    retrieved: '2026-11-15'
+    crop: [0, 0, 492, 492]
+    official_checked: '2026-11-15'  # INEC M, 55, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kogi-adavi-okehi-apc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/apc-primaries-engr-mohammed-ahovi-yusuf-emerges-adavi-okehi-reps-candidate/
+    file_url: https://kogireports.com/wp-content/uploads/2024/09/Ahovi-Mohammed-Yusuf-4.jpg
+    sha256: f9402adc09ecda09b625f99c5d0215acf43f2eaaa0bb4c8ba025f20ca082d800
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [182, 0, 466, 466]
+    news_checked: '2026-11-15'  # INEC M, 49, fits; the article names them with party and seat; set aside for framing (Kogi Reports 16 May 2026: green-and-white drapes behind him ), recovered (D-089)
+  - candidate_id: jan-2027-house-kogi-bassa-dekina-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Haruwa-Paul-Gowon-1.jpg
+    sha256: e69397deb39513c709c0f42331116c51a4d0009f86e28802b79a646a975047ac
+    retrieved: '2026-11-15'
+    crop: [48, 36, 380, 380]
+    official_checked: '2026-11-15'  # INEC M, 55, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kebbi-argungu-augie-apc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/augie-wins-apc-rerun-primary-in-kebbi/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/10/Umar-Hassan-Augie.jpg
+    sha256: f81e506c5ab31f5c552d2e877bda1e8a30154807905185143554d86abfa7d359
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [204, 0, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 60, fits; the article names them with party and seat; set aside for framing (Daily Trust 26 Oct 2026: cap reads TURAKI 4 REPS ARG/AUG (), recovered (D-089)
+  - candidate_id: jan-2027-house-osun-ayedire-iwo-ola-oluwa-adc
+    source: "OsunDefender (osundefender.com)"
+    file_page: https://osundefender.com/osun-35-ogunkanmi-felicitates-residents-urges-prioritisation-of-youth-development/
+    file_url: https://osundefender.com/wp-content/uploads/2026/08/83a37191-88a1-490f-a863-76411be08a94.jpeg
+    sha256: 5e445d997013cd0dafa677d93ba122bffb48c40c1382df56e3a3837244f430fe
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [75, 105, 480, 480]
+    news_checked: '2026-11-15'  # INEC M, 53, fits; the article names them with party and seat; set aside for framing (OsunDefender 27 Aug 2026: GT Photography watermark beside ), recovered (D-089)
+  - candidate_id: jan-2027-house-oyo-ibarapa-central-ibarapa-north-apc
+    source: "Inside Oyo (insideoyo.com)"
+    file_page: https://insideoyo.com/this-mandate-belongs-to-the-people-sarafa-olaoniye-calls-for-unity-after-apc-primary/
+    file_url: https://insideoyo.com/wp-content/uploads/2026/07/IMG-20260701-WA0001.jpg
+    sha256: 7885189d7dd29bc6ace173e50e408de21354170d85f27c3a6f319bd7e755f63c
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [166, 120, 235, 235]
+    news_checked: '2026-11-15'  # INEC M, 63, fits; the article names them with party and seat; set aside for framing (InsideOyo 1 Jul 2026: two men shaking hands), recovered (D-089)
+  - candidate_id: jan-2027-house-ondo-akure-north-akure-south-apc
+    source: "Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/2027-apc-candidate-olatunji-ohwovoriole-meets-amg-in-akure/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/07/support-group.jpg
+    sha256: aa4b9c9259d9fd82b80770a52e30b893f57ddc79bfefdf14c87a148702af3b82
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [726, 201, 474, 474]
+    news_checked: '2026-11-15'  # INEC F, 53, fits; the article names them with party and seat; set aside for framing (Tribune 29 Jul 2026: support-group photo), recovered (D-089)
+  - candidate_id: jan-2027-house-lagos-ikeja-pdp
+    source: "Candidate's own website"
+    file_page: https://www.yaaqubdaranijo.com.ng/
+    file_url: https://www.yaaqubdaranijo.com.ng/wp-content/uploads/2026/08/cropped-honyaaqub.jpg
+    sha256: b7137d73ec7c2cfffbafd9fe3179ced5749dfc6fe7a4ebb02e81c55487878561
+    retrieved: '2026-11-15'
+    crop: [0, 0, 512, 512]
+    official_checked: '2026-11-15'  # INEC M, 56, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-ebonyi-ivo-ohaozara-onicha-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/697
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/697.jpg
+    sha256: 92de63b723887281e5a475963e86c59a336e6e23f20d8709a4d24d8a753d0066
+    retrieved: '2026-11-15'
+    crop: [40, 59, 321, 321]
+    official_checked: '2026-11-15'  # INEC M, 51, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kano-nassarawa-apc
+    source: "National Assembly website"
+    file_page: https://nass.gov.ng/mps/single/620
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/620.jpg
+    sha256: 2e295262567297dd6fc3700787f71c3c0e6dd5658629303adb413b8971dd3eaa
+    retrieved: '2026-11-15'
+    crop: [0, 0, 400, 400]
+    official_checked: '2026-11-15'  # INEC M, 46, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-akwa-ibom-uyo-uruan-nsit-atai-ibesikpo-asutan-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Esset-Mark-Udo.jpg
+    sha256: 75c17d238d768cbaa730f01b14a167a923da981cd6aff439371884b934d47f65
+    retrieved: '2026-11-15'
+    crop: [19, 49, 468, 468]
+    official_checked: '2026-11-15'  # INEC M, 52, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-benue-guma-makurdi-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Tarkighir-Dickson-Dominic.jpg
+    sha256: ab9ea0600b287b48225a8278eba3b2503822d3e87c88bad82a47b387f2f4d506
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 56, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-ebonyi-ebonyi-ohaukwu-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Eze-Nwachuwku-Eze.jpg
+    sha256: 0ffd0ece6d4742ba7925ccdcab5954e98eb9b653bc5e31c2c9a127c74789fdde
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 55, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-imo-oru-east-orsu-orlu-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Nwachukwu-Canice-Moore-Chukwugozie.jpg
+    sha256: 8568458705dcb5b8768e475d43b1202adabcc07efc135b7a0df3a59b0c7c6225
+    retrieved: '2026-11-15'
+    crop: [127, 0, 373, 373]
+    official_checked: '2026-11-15'  # INEC M, 59, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kaduna-kachia-kagarko-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Saleh-Gabriel-Zock.jpg
+    sha256: c10163421abc92011056a3a01ed55360637ed8fe3b6ed8bcbac23a760659869f
+    retrieved: '2026-11-15'
+    crop: [39, 0, 348, 348]
+    official_checked: '2026-11-15'  # INEC M, 40, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kano-bichi-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Kabir-Abubakar-Abubakar.jpg
+    sha256: 09dbdc688be6dcc61fc6b91c5d6cddf1ac4eb99c15a570f1dfa18407b22992ad
+    retrieved: '2026-11-15'
+    crop: [35, 18, 445, 445]
+    official_checked: '2026-11-15'  # INEC M, 44, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-niger-kontagora-wushishi-mariga-mashegu-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Garba-Idris-Abdullahi.jpg
+    sha256: 630c6dbe2f7ae1972bc18cea3739d3c7cb8877b1d3be0e608eb2d147c18d6879
+    retrieved: '2026-11-15'
+    crop: [64, 18, 403, 403]
+    official_checked: '2026-11-15'  # INEC M, 50, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-rivers-eleme-tai-oyigbo-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Nwaeke-Felix-Uche.jpg
+    sha256: 56330338344a3720306230b570af3dcbd19713dc51906004082289bd359be404
+    retrieved: '2026-11-15'
+    crop: [53, 42, 403, 403]
+    official_checked: '2026-11-15'  # INEC M, 63, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-sokoto-sokoto-north-sokoto-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Hassan-Bala-Abubakar.jpg
+    sha256: 2e8e8cde14d956a457e60f42317122baae5bdf249202c2bc813463be763730cb
+    retrieved: '2026-11-15'
+    crop: [10, 43, 497, 497]
+    official_checked: '2026-11-15'  # INEC M, 70, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-sokoto-tangaza-gudu-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Yakubu-Sani-Alhaji.jpg
+    sha256: 76046c6fa905dc3d674dd4ec53cc6b7fa78c839aada702fc525370c9b5512584
+    retrieved: '2026-11-15'
+    crop: [47, 68, 472, 472]
+    official_checked: '2026-11-15'  # INEC M, 54, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kogi-ijumu-kabba-bunu-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Idris-Salman-1.jpg
+    sha256: 2673bb0922cf48af41d29ce005361ea3211164e9187ec8b0356b98e8197b0723
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 55, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-benue-otukpo-ohimini-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Onuh-Onyeche-Blessing.jpg
+    sha256: 3ba8f527ec64349be82ad7661eadd772f5956f0fe34626ead2916f2fff739549
+    retrieved: '2026-11-15'
+    crop: [161, 0, 340, 340]
+    official_checked: '2026-11-15'  # INEC F, 50, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-jigawa-babura-garki-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/10/Hon-Rabiu-Mukhtar-of-Garki-Babura-Federal-Constituency.jpg
+    sha256: 8b6a102622b4f6caddb9c618a43b618a470b7677ebff3be5d9c8ec786892306c
+    retrieved: '2026-11-15'
+    crop: [0, 0, 507, 507]
+    official_checked: '2026-11-15'  # INEC M, 60, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kaduna-igabi-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Jallo-Hassaini-Mohammed-1.jpg
+    sha256: 4c9b7e8651c65b2cc0e9c8f9241bde238e45fe95908dab951209fc7833e547d1
+    retrieved: '2026-11-15'
+    crop: [11, 8, 512, 512]
+    official_checked: '2026-11-15'  # INEC M, 62, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-kogi-kogi-lokoja-kogi-k-k-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Aguye-sulieman-Danladi.jpg
+    sha256: ceabd8f5a539bbc88b51cb8786ce0b82a177a8c047f3b1b0aca1b7eb056cae84
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 48, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Omirin-Emmanuel-Olusany.jpg
+    sha256: 5ffd4623b707efec06de16cca5b03d34cfab510066eba8dce39a366713b033a8
+    retrieved: '2026-11-15'
+    crop: [70, 34, 346, 346]
+    official_checked: '2026-11-15'  # INEC M, 62, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-oyo-ogbomoso-north-ogbomoso-south-orire-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Alao-Olamijuwonlo-Ayodeji.jpg
+    sha256: 554a634c97b72f2c002eff42470413b7fd1cc65ba9b0b0b3553783adbd001c48
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 40, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-lagos-ikeja-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Faleke-James-Abiodun.jpg
+    sha256: a7cd81a6ad446b30ace2d0ee870fcf65ef72d1f19ba2bb31c1977126154c1aa7
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 66, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-bauchi-katagum-apm
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Auwalu-Abdu-Gwalabe.jpg
+    sha256: 95a0eb80689c7512a88ea4cd6e7aa5a813f9938d59f35ea976145a7937127df0
+    retrieved: '2026-11-15'
+    crop: [0, 47, 462, 462]
+    official_checked: '2026-11-15'  # INEC M, 66, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-edo-egor-ikpoba-okha-ndc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Omoruyi-Murphy-Osaro.jpg
+    sha256: 372c45dd30260b7ada249932adb7f62d17bce4659a8ed4bbf6834713c96ddf8d
+    retrieved: '2026-11-15'
+    crop: [68, 70, 422, 422]
+    official_checked: '2026-11-15'  # INEC M, 57, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-katsina-faskari-kankara-sabuwa-pdp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Dalhatu-Shehu-Tafoki.jpg
+    sha256: d4cb0e5c704e9c72a5e5fa79cab24249a07edacbe2cd2d728e0f50ac2bde643d
+    retrieved: '2026-11-15'
+    crop: [72, 49, 378, 378]
+    official_checked: '2026-11-15'  # INEC M, 47, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-rivers-etche-omuma-pdp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Nwogu-Kelechi-Godspower.jpg
+    sha256: 0a45edd746788758644befd33d8290610c15bea1ee7010f12360d854f18eaa95
+    retrieved: '2026-11-15'
+    crop: [100, 86, 298, 298]
+    official_checked: '2026-11-15'  # INEC M, 47, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: jan-2027-house-katsina-batsari-safana-danmusa-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Iliyasu-Aliyu-Abubakar.jpg
+    sha256: 0035947cc781ed69c40d67813bdcb418598ff961219ccfa3bc4ba613e415bbcf
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 62, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-benue-makurdi-i-north-apc
+    source: "Leadership (leadership.ng)"
+    file_page: https://leadership.ng/apc-primaries-benue-speaker-secures-return-ticket-for-makurdi-north-2/
+    file_url: https://leadership.ng/wp-content/uploads/2026/05/Berger-Alfred-Emberga.jpg
+    sha256: cbc89c2a33c31337a9006eb5db160c9178a5f730e0725925585257210f29b02f
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [145, 0, 360, 360]
+    news_checked: '2026-11-15'  # INEC M, 39, fits; the article names them with party and seat; set aside for framing (Leadership 21 May 2026: framed portrait with lettering behin), recovered (D-089)
+  - candidate_id: feb-2027-sha-anambra-aguata-i-apga
+    source: "Anambra State Government website"
+    file_page: https://anambrastate.gov.ng/government/legislature/
+    file_url: https://anambrastate.gov.ng/wp-content/uploads/2026/09/images-4.jpg
+    sha256: e5de9fec28d2aa450b827cd2ff5ff3736e9ab8f769217e23e3cb6d065bd3cf2f
+    retrieved: '2026-11-15'
+    crop: [101, 44, 186, 186]
+    official_checked: '2026-11-15'  # INEC M, 45, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-osun-oriade-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/team/hon-michael-olakanmi-ajibola/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon-Kanmi-Ajibola.jpg
+    sha256: 9beb7c4dd90e7695073e1660d06a622b06116d34dcb0e688220cecb934ea8a80
+    retrieved: '2026-11-15'
+    crop: [0, 121, 750, 750]
+    official_checked: '2026-11-15'  # INEC M, 59, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-osun-ilesa-west-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/team/hon-olawale-oladipupo-akerele/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon.Olawale-Oladipupo-Akerele-Chief-whip-Honourable-Representing-Ilesha-West-State-ConstituencyChairman-House-Committee-on-House-Service-Matters-Ethics-and-Privileges-1-scaled.jpg
+    sha256: 481e778c957f2224c5164c49455c6ff0ee2698cce7b1ea91047cb1296ec69206
+    retrieved: '2026-11-15'
+    crop: [0, 0, 1931, 1931]
+    official_checked: '2026-11-15'  # INEC M, 42, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-lagos-lagos-island-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/hon-princess-omolara-oyekan-olumegbon/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/03/27-e1686223101781.jpg
+    sha256: 4ed12a95e0d4fb314166dea660459e8e2dbecccdbb5b721454bdf44b867ce457
+    retrieved: '2026-11-15'
+    crop: [60, 47, 268, 268]
+    official_checked: '2026-11-15'  # INEC F, 38, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-ogun-idiroko-ipokia-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members/18
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-021707473952-member.jpg
+    sha256: 0356b9dd58266879b0de0e2756223243959037b956565379ecdc3d20a5a21025
+    retrieved: '2026-11-15'
+    crop: [0, 0, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 45, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-ogun-imeko-afon-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members/29
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-021707473615-member.jpg
+    sha256: d2ecdcedf427baff4629b4b42d24ff82925987274078a64a200d307918c2efd6
+    retrieved: '2026-11-15'
+    crop: [31, 0, 174, 174]
+    official_checked: '2026-11-15'  # INEC M, 67, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-jigawa-buji-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/buji.JPG
+    sha256: 7865d8cf92e0df25f19c0129f28b45e72dae9d60a053db27d867cd8ca6d09e69
+    retrieved: '2026-11-15'
+    crop: [40, 0, 228, 228]
+    official_checked: '2026-11-15'  # INEC M, 47, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-jigawa-gwiwa-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/gwiwa.JPG
+    sha256: 5fba6c9a5e915f214f0c457fd230b2ac1b5389b0b9c8318dc8a9813e76c6bb7c
+    retrieved: '2026-11-15'
+    crop: [0, 36, 239, 239]
+    official_checked: '2026-11-15'  # INEC M, 64, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-jigawa-maigatari-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/maigatari.JPG
+    sha256: bcb3237658dc07a08d4e820a46997fc252c6334aec4f929c84d369cc5a9f6ab2
+    retrieved: '2026-11-15'
+    crop: [0, 0, 277, 277]
+    official_checked: '2026-11-15'  # INEC M, 68, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-jama-are-apc
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Mubarak%20Haruna.PNG
+    sha256: e469dd79d2b00f75bdc16005090635b3a746c1a553a94e13ee6816d117f937f2
+    retrieved: '2026-11-15'
+    crop: [88, 37, 348, 348]
+    official_checked: '2026-11-15'  # INEC M, 37, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-sade-darazo-ii-apc
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Lawan%20Dauda.PNG
+    sha256: be57185283ad7d1b7b5b6804549742c0846603eba5e439619f0f9ed63827b460
+    retrieved: '2026-11-15'
+    crop: [123, 40, 361, 361]
+    official_checked: '2026-11-15'  # INEC M, 48, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-katagum-katagum-i-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20%20Bello%20Mohammed%20Maiwa.PNG
+    sha256: a362d4cf58cde73d6ba65074b7dc030a9653e18510bbad27c369799b4fb85e0a
+    retrieved: '2026-11-15'
+    crop: [98, 74, 218, 218]
+    official_checked: '2026-11-15'  # INEC M, 46, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-kirfi-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Barr.%20Umar%20Habibu.PNG
+    sha256: 13eff44540a33e0a4dbd5b49cbf4ea03643d92a1abc049add712b37dbee45c74
+    retrieved: '2026-11-15'
+    crop: [160, 33, 361, 361]
+    official_checked: '2026-11-15'  # INEC M, 43, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-warji-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Lawal%20Garba.PNG
+    sha256: 178cf3201a597b786120b6bc7d207b324f6ccb76a7d8d2483f942eb741806b71
+    retrieved: '2026-11-15'
+    crop: [150, 64, 264, 264]
+    official_checked: '2026-11-15'  # INEC M, 49, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-lere-bula-tafawa-balewa-apc
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Abdulrasheed%20Adamu%20Mu%27azu.PNG
+    sha256: b00e57b2988622ae3ab5d1130ae9c0b7ed08f108f22d447b528482195cf72b09
+    retrieved: '2026-11-15'
+    crop: [106, 64, 333, 333]
+    official_checked: '2026-11-15'  # INEC M, 49, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-ganjuwa-west-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Adamu%20Garba%20Kawu.PNG
+    sha256: eaa7597b988fb4f804b6f3ed2cf48a3ddd043e38f53db300bc38d8a3d2c834b1
+    retrieved: '2026-11-15'
+    crop: [79, 0, 374, 374]
+    official_checked: '2026-11-15'  # INEC M, 50, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-darazo-darazo-i-apc
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Engr.%20Suleiman%20Sa%27idu%20Darazo.PNG
+    sha256: 64e2e55508e9515d2eeee499fbc24e64619be3039d0dd523d33b52cbac89cbf5
+    retrieved: '2026-11-15'
+    crop: [91, 7, 289, 289]
+    official_checked: '2026-11-15'  # INEC M, 54, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-lame-toro-i-apc
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20%20Bala%20Abdu%20Rishi.PNG
+    sha256: 7a5816c59ae01cc7a39f72556b0f67d42a53d09e727d7ae728465e4e93851d3f
+    retrieved: '2026-11-15'
+    crop: [58, 28, 252, 252]
+    official_checked: '2026-11-15'  # INEC M, 63, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-zungur-galambi-bauchi-ii-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Yusuf%20Sai%27du%20Ahmed.PNG
+    sha256: 03f54cba7b5a33b5a8c798009b797757e16d329dbb74d0c26239c348c521b43b
+    retrieved: '2026-11-15'
+    crop: [139, 30, 237, 237]
+    official_checked: '2026-11-15'  # INEC M, 38, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-bauchi-bauchi-bauchi-i-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Rt.%20Hon.%20Jamilu%20Umaru%20Dahiru.PNG
+    sha256: d265a73d0855cadb3e614d602825520cd3cc085cfc41e0d1b4da2809fba3ce8e
+    retrieved: '2026-11-15'
+    crop: [86, 0, 362, 362]
+    official_checked: '2026-11-15'  # INEC M, 45, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  - candidate_id: feb-2027-sha-ekiti-ado-ii-apc
+    source: "Ekiti State House of Assembly website"
+    file_page: https://hoa.ek.gov.ng/
+    file_url: https://hoa.ek.gov.ng/assets/image/team/Rt.%20Hon.%20Bolaji%20Olagbaju%20%28Deputy%20Speaker%29.jpg
+    sha256: 4b5c0d9a84d61e5f7ccd1e6638a5036954fd4d7fb8e38f524cf5b8b0822b3a82
+    retrieved: '2026-11-15'
+    crop: [45, 75, 415, 415]
+    official_checked: '2026-11-15'  # INEC F, 51, fits; the page names them; seat and name checked; set aside for framing, recovered (D-089)
+  # Night round, official pages (15 Nov 2026): checked against INEC gender and age; framing per D-089
+  - candidate_id: feb-2027-sha-benue-adoka-ugboju-apc
+    source: "Benue State Government website"
+    file_page: https://benuestate.gov.ng/state-assembly-members/
+    file_url: https://benuestate.gov.ng/wp-content/uploads/2026/07/Rt.-Hon.-Michael-Audu.png
+    sha256: 7e377d45d5e5110fc867b991d8625959237426351e4e196f504146a75359c9c6
+    retrieved: '2026-11-15'
+    crop: [40, 0, 220, 220]
+    official_checked: '2026-11-15'  # INEC M, 46, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-benue-kwande-west-pdp
+    source: "Benue State Government website"
+    file_page: https://benuestate.gov.ng/hon-thomas-dugeri/
+    file_url: https://benuestate.gov.ng/wp-content/uploads/2026/07/Hon.-Thomas-Dugeri.jpg
+    sha256: 6f7de204fce6944152bd7400453620d2c36c9ab39b9e09ba3900834da23618a8
+    retrieved: '2026-11-15'
+    crop: [160, 85, 420, 420]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-benue-mbagwa-ushongo-ii-a
+    source: "Benue State Government website"
+    file_page: https://benuestate.gov.ng/?attachment_id=1226
+    file_url: https://benuestate.gov.ng/wp-content/uploads/2026/07/Hon.-Saater-Tiseer.png
+    sha256: e6537bd57c675667a136ef4206a31324d3145d902420d93717c3f5e5e3a5d54e
+    retrieved: '2026-11-15'
+    crop: [40, 0, 220, 220]
+    official_checked: '2026-11-15'  # INEC M, 50, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-house-benue-ado-ogbadigbo-okpokwu-lp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/u-s-troop-deployment-a-strategic-win-for-nigeria-says-rep-agbese/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2026/02/Phillip-Agbese.jpeg
+    sha256: 0983590fafadbe926d4fc705f7357cd0bb3a5635de5d4262ac226f26096e7ccd
+    retrieved: '2026-11-15'
+    crop: [380, 20, 400, 400]
+    official_checked: '2026-11-15'  # INEC M, 39, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-senate-imo-imo-north-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-president-akpabio-urges-strict-adherence-to-senate-rules-during-plenary-debates/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2026/07/Sen-Patrick-Ndubueze.webp
+    sha256: 1c82c95d1697ea1f7aebbfaae2a63abccd5eadd01a0ea9d19c8bcd4c1cc7bbae
+    retrieved: '2026-11-15'
+    crop: [275, 0, 220, 220]
+    official_checked: '2026-11-15'  # INEC M, 63, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-house-rivers-degema-bonny-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/reps-probe-oil-companies-over-non-remittance-of-lng-funds-3-hostcom-allocations/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/11/Cyril-Hart.png
+    sha256: f3622f5b09cf5a123d8438f35ce2cf39b26892d8a98c410c61cb90adc9876f24
+    retrieved: '2026-11-15'
+    crop: [100, 20, 220, 220]
+    official_checked: '2026-11-15'  # INEC M, 48, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-imo-owerri-west-apc
+    source: "Imo State House of Assembly website"
+    file_page: https://imha.imostate.gov.ng/team/hon-chief-kanayo-onyemaechi/
+    file_url: https://imha.imostate.gov.ng/wp-content/uploads/2022/03/Hon-Chief-Kanayo-Onyemaechi.jpg
+    sha256: dc125cd7c39111566b6a1db82e9c20e1eaa6aa6ee977168fb79069405d897449
+    retrieved: '2026-11-15'
+    crop: [35, 20, 320, 320]
+    official_checked: '2026-11-15'  # INEC M, 57, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-ayedade-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon-Ogundare-Folorunso-Yemi--720x780.jpg
+    sha256: eaef66eba49bea0a7cb42f9558605849593cb3cc58c0ade66e63acc05599982c
+    retrieved: '2026-11-16'
+    crop: [250, 0, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 50, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-ayedire-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/12/Hon.-Oderinwale-Elisha-Akinyemi.-Aiyedire-state-Constituency-Chairman-House-committee-on-Rural-Development-and-Community-affairs-540x600.jpg
+    sha256: 51eef0421c9c1f92063e175651bead8ce1de538fb3116f0ac13248e7b7a275a7
+    retrieved: '2026-11-16'
+    crop: [150, 0, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 34, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-ede-south-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon-Olayiwola-Taofik-Olalekan.-MHA-representing-Ede-South-State-Constituency.-Chairman-House-Committee-on-Human-resources-Industrial-Relations-and-Capacity-Building-540x600.jpg
+    sha256: 1189961ec4cf61a7e1eb3fabf5bdaa53d276039f9cc4f89fed324c27c499815c
+    retrieved: '2026-11-16'
+    crop: [70, 20, 320, 320]
+    official_checked: '2026-11-15'  # INEC M, 65, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-egbedore-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/WhatsApp-Image-2024-07-15-at-14.11.36_047645bd-540x600.jpg
+    sha256: 99c06f172cd91218b21ee8eb97b204dafd4fb2ffd664fc4fb417d20de3c25e02
+    retrieved: '2026-11-16'
+    crop: [130, 0, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-ejigbo-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/HON.-OLUJINMI-ASAGADE-A.-MHA-Representing-Ejigbo-state-constituency.-Chairman-house-committee-on-local-Government-and-Chieftaincy-matters-540x600.jpg
+    sha256: 7e289dbec92831fdb42b00bda632de86b4f9a92686117f1e2d2e54a7271f5fef
+    retrieved: '2026-11-16'
+    crop: [80, 20, 320, 320]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-ife-central-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon.-Engr.-Abiola-Jeremiah-AwoyeyeMember-representing-Ife-Central-State-ConstituencyChairman-House-Committee-Youths-Sports-and-Special-Needs-540x600.jpg
+    sha256: 807101c571e777c26dffbbe029ca072566ae449edcb1504d7d122b0feeb6862d
+    retrieved: '2026-11-16'
+    crop: [120, 30, 320, 320]
+    official_checked: '2026-11-15'  # INEC M, 31, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-ife-east-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon.-Prince-Olumide-Saheed-FatunmiseMember-representing-Ife-East-State-ConstituencyChairman-House-Committee-on-Finance-and-Appropriation-540x600.jpg
+    sha256: 7ef07f6102e400efd2e829ec099f8efdafeda6ea6a5dbb6b170eca8c63ebc8be
+    retrieved: '2026-11-16'
+    crop: [80, 40, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 41, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-ifelodun-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon.-Adeyemi-Tajudeen-Akinlolu-Ifelodun-State-Constituency-Chairman-House-Committee-on-Security-and-Inter-parliamentary-Relations-540x600.jpg
+    sha256: ea4dac74ad717992f67d785a69f2301aeda7f8ce5388f8c9f2e283258e8facf8
+    retrieved: '2026-11-16'
+    crop: [150, 0, 280, 280]
+    official_checked: '2026-11-15'  # INEC M, 61, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-ila-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/12/WhatsApp-Image-2024-07-12-at-12.54.20_f035ec59-540x600.jpg
+    sha256: 7af62aefbed18f978c4771d12ccaa07fc306bd9ae22180d36b8571550606699d
+    retrieved: '2026-11-16'
+    crop: [80, 0, 360, 360]
+    official_checked: '2026-11-15'  # INEC M, 62, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-odo-otin-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/speaker-720x780-1-720x780.jpg
+    sha256: 72c19927c078452ef99579ada3546e0a460304107ac02982c35b16495ee5f316
+    retrieved: '2026-11-16'
+    crop: [210, 40, 330, 330]
+    official_checked: '2026-11-15'  # INEC M, 41, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-olorunda-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/12/Hon-Ajibola-Olaide-kolawole-540x600.jpg
+    sha256: bf0967bf6267d8ae6b1c5bbb3eae45f106e3826f52620da974ceb176571b3d5e
+    retrieved: '2026-11-16'
+    crop: [110, 20, 340, 340]
+    official_checked: '2026-11-15'  # INEC M, 57, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-osun-osogbo-a
+    source: "Osun State Government website"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/12/Hon.-Lawal-Bamidele-Rasheed-Member-representing-Osogbo-State-Constituency-Chairman-House-Committee-on-Public-Accounts-540x600.jpg
+    sha256: 1807ed56760bf339e0377f938f01cc926f07216cea788fe8fe92de8c133e72cf
+    retrieved: '2026-11-16'
+    crop: [130, 40, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 41, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-bauchi-azare-zaki-ii-apc
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon. Zakariyya Saleh.PNG
+    sha256: 157eaa0fafbc2ee59d7f71125d6d8f3de84ebaffbc7facd3dcfd674568c056f6
+    retrieved: '2026-11-16'
+    crop: [115, 8, 248, 248]
+    official_checked: '2026-11-15'  # INEC M, 46, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-bauchi-burra-ningi-ii-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon. Tanko Ibrahim Burra.PNG
+    sha256: fe69186e11095d5680c3ad5c2ecf0cadeb36eec3953cddc71acea57de1ed40c4
+    retrieved: '2026-11-16'
+    crop: [171, 6, 212, 212]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-bauchi-jama-a-toro-toro-ii-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon. Saidu Hamzaq.PNG
+    sha256: 85ac9cb1f951094f6a4bb1ec5d2825d375511d242899835981d44e058ed43a58
+    retrieved: '2026-11-16'
+    crop: [109, 6, 215, 215]
+    official_checked: '2026-11-15'  # INEC M, 41, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-bauchi-shira-ii-shira-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon. Auwal Hassasn.PNG
+    sha256: d340f92459d3e982d2ab24c84aa08aa4b030eff856587239fcae559a578fd7a4
+    retrieved: '2026-11-16'
+    crop: [117, 7, 235, 235]
+    official_checked: '2026-11-15'  # INEC M, 49, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-delta-sapele-ii-apc
+    source: "Delta State Government website"
+    file_page: https://deltastate.gov.ng/portfolio/commissioner/
+    file_url: https://deltastate.gov.ng/wp-content/uploads/2024/02/IMG-20231021-WA0021-fotor-202403110383.png
+    sha256: e3d3c18dadc889afbcc718283c33ffd073ae1973001e6a8d2dabbeff5b428359
+    retrieved: '2026-11-16'
+    crop: [238, 195, 420, 420]
+    official_checked: '2026-11-15'  # INEC M, 41, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-imo-ehime-mbano-apc
+    source: "Imo State House of Assembly website"
+    file_page: https://imha.imostate.gov.ng/house-members/
+    file_url: https://imha.imostate.gov.ng/wp-content/uploads/2022/05/Hon-Bernard-Ndubuisi-Ozoemelam-member-Ehime-Mbano-constituency.jpeg
+    sha256: d47d46bd64cbf70ab9f4007b405a6919b0760f34c01c6c41ae3653498c560b5c
+    retrieved: '2026-11-16'
+    crop: [80, 8, 260, 260]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-jigawa-birniwa-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/birniwa.JPG
+    sha256: f48cae613349d751dce95ac1259807cd12057fffd436bf3113fd79a2a3762396
+    retrieved: '2026-11-16'
+    crop: [107, 6, 186, 186]
+    official_checked: '2026-11-15'  # INEC M, 73, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-jigawa-yankwashi-apc
+    source: "Jigawa State Government website"
+    file_page: https://jigawastate.gov.ng/housemembers
+    file_url: https://jigawastate.gov.ng/img/members/yankwashi.JPG
+    sha256: 19722571911f144d5612f5157f7a0682930ef00f08fa1692ed38dc3bd88fc424
+    retrieved: '2026-11-16'
+    crop: [107, 6, 186, 186]
+    official_checked: '2026-11-15'  # INEC M, 63, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-lagos-ikeja-i-apc
+    source: "Lagos State House of Assembly website"
+    file_page: https://lagoshouseofassembly.gov.ng/home/our-team/
+    file_url: https://lagoshouseofassembly.gov.ng/home/wp-content/uploads/2024/08/hon_seyi-e1722958264895.png
+    sha256: 5f090f8c182adad65c89dd4ac59a195c714ed49077a576fc6c8f077642f2675f
+    retrieved: '2026-11-16'
+    crop: [127, 17, 412, 412]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-ogun-obafemi-owode-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members
+    file_url: https://ogha.og.gov.ng/public/images/members/2025-031741870294-member.jpg
+    sha256: 8adfec8927de18cd402e2e983251f2db0d3bd6217cf58986230c3ceaa723496d
+    retrieved: '2026-11-16'
+    crop: [363, 16, 505, 505]
+    official_checked: '2026-11-15'  # INEC M, 46, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-sha-ogun-sagamu-i-offin-apc
+    source: "Ogun State House of Assembly website"
+    file_page: https://ogha.og.gov.ng/members
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-021707474090-member.jpg
+    sha256: fb5411a963d534ca7815fae447e972adb38266b826a166b371eb97b46e55ff84
+    retrieved: '2026-11-16'
+    crop: [51, 58, 200, 200]
+    official_checked: '2026-11-15'  # INEC M, 47, fits the photo; the page names them; seat and name checked (night round)

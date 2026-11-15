@@ -399,10 +399,9 @@ describe('WhatsApp’s glyph (owner’s brand download, 11 Nov 2026)', () => {
   })
 })
 
-describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => {
-  const photosJson = JSON.parse(fs.readFileSync(path.resolve('data/generated/photos.json'), 'utf8')) as { people: object, held: Record<string, string> }
+describe('candidate photos (owner decisions D-064, D-065, D-071, D-090)', () => {
+  const photosJson = JSON.parse(fs.readFileSync(path.resolve('data/generated/photos.json'), 'utf8')) as { people: object }
   const approved = new Set(Object.keys(photosJson.people))
-  const held = photosJson.held
   it('a photo appears only where the owner approved the face; everyone else has the same placeholder', () => {
     for (const r of [presidentialRace(), ...races().filter(x => x.office !== 'president').slice(0, 20), ...febRaces()]) {
       for (const c of r.candidates) {
@@ -417,10 +416,10 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
     const imgs = (page: string) => new Set([...page.matchAll(/<image href="([^"]+)"/g)].map(m => m[1]))
     expect([...imgs(html('ballot/abia/aba-north-aba-south--abia-south'))]).toEqual([`/${s.file}`])
     expect([...imgs(html('ballot-feb/lagos/alimosho-i'))]).toEqual([`/${s.sheets['feb-2027-governor-lagos'].file}`])
-    expect([...imgs(html('ballot-feb/yobe/bade-east'))]).toEqual([`/${s.logo_file}`]) // Yobe's governorship race has only the governing party's photo, so none shows (D-075, D-081)
+    expect([...imgs(html('ballot-feb/yobe/bade-east'))]).toEqual([`/${s.sheets['feb-2027-governor-yobe'].file}`]) // one party's photo alone now shows (D-090)
     expect([...imgs(html('ballot-feb/osun/ayedade'))]).toEqual([`/${s.logo_file}`]) // no governorship on 6 February
     expect(html('ballot-feb/lagos/alimosho-i')).toMatch(/data-candidate-id="feb-2027-governor-lagos-apc"[\s\S]*?<svg class="photo"/)
-    expect(html('ballot-feb/yobe/bade-east')).toMatch(/data-candidate-id="feb-2027-governor-yobe-apc"[\s\S]*?<span class="photo ph" aria-hidden="true"><\/span>/)
+    expect(html('ballot-feb/yobe/bade-east')).toMatch(/data-candidate-id="feb-2027-governor-yobe-apc"[\s\S]*?<svg class="photo"/)
     // a Senate photo is the card's own small copy, loaded only when its race is shown
     expect(html('ballot/kwara/ilorin-west-asa--kwara-central')).toMatch(/data-candidate-id="jan-2027-senate-kwara-kwara-central-apc"[\s\S]*?<img class="photo" src="\/photos\/jan-2027-senate-kwara-kwara-central-apc-card\.webp" width="76" height="76" alt="" loading="lazy"/)
   })
@@ -429,8 +428,8 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
     // a Commons file never goes live on the official-page route
     const entries = fs.readFileSync(path.resolve('data/overrides/photos.yaml'), 'utf8').split(/\n  - /).slice(1)
     const cleared = entries.filter(e => /\n    (owner_approved|official_checked|news_checked): '\d{4}-\d{2}-\d{2}'/.test(e)).map(e => /^candidate_id: (\S+)/.exec(e)![1])
-    // the per-race rule (D-075): cleared photos show only in races where at least two of the first group have one; the rest are held
-    expect([...approved, ...Object.keys(held)].sort()).toEqual(cleared.sort())
+    // every cleared photo shows, for every party (D-090: no per-race rule)
+    expect([...approved].sort()).toEqual(cleared.sort())
     for (const e of entries.filter(x => /\n    official_checked:/.test(x))) expect(e, e.slice(0, 80)).not.toMatch(/Wikimedia Commons|wikimedia\.org/)
     const about = html('about')
     const credits = about.slice(about.indexOf('<h2 id="photo-credits">Photo credits</h2>'))
@@ -443,19 +442,12 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
     }
     for (const m of credits.matchAll(/<li id="credit-[^"]+">([\s\S]*?)<\/li>/g)) expect(m[1]).toMatch(/<a href="https?:\/\/[^"]+">[^<]+<\/a>[\s\S]*cropped to a square[\s\S]*Retrieved/)
   })
-  it('a race shows photos once any candidate but the governing party\'s has one, first five or not; a held photo is not built, shown or credited (D-075, D-076, D-081)', () => {
-    const governing = /^acronym: (\S+)$/m.exec(fs.readFileSync(path.resolve('data/overrides/governing-party.yaml'), 'utf8'))![1]
-    for (const r of [presidentialRace(), ...races(), ...febRaces()]) {
-      const shown = r.candidates.filter(c => approved.has(c.id))
-      if (shown.length) expect(shown.some(c => c.party !== governing), r.id).toBe(true)
-      // in a race that is on, every cleared photo shows; none is held
-      if (shown.length) expect(r.candidates.filter(c => c.id in held), r.id).toEqual([])
-    }
-    for (const [id, rid] of Object.entries(held)) {
-      const r = [presidentialRace(), ...races(), ...febRaces()].find(x => x.id === rid)!
-      const cleared = r.candidates.filter(c => approved.has(c.id) || c.id in held)
-      expect(cleared.map(c => c.party), id).toEqual([governing])
-    }
+  it('every approved photo shows, for every party, first five or not; no race is held back (D-090)', () => {
+    expect(fs.existsSync(path.resolve('data/overrides/governing-party.yaml'))).toBe(false)
+    expect(Object.keys(photosJson)).toEqual(['people'])
+    // a race whose only photo is one party's still shows it: the governing party's included
+    expect(approved.has('feb-2027-governor-yobe-apc')).toBe(true)
+    expect(html('c/feb-2027-governor-yobe-apc')).toMatch(/<div class="profile-photo"><img src="\/photos\/feb-2027-governor-yobe-apc\.webp"/)
     // a photo outside the first five is the card's own lazy copy, never part of the image a page loads first (D-081)
     const pj = photosJson.people as Record<string, { card?: string }>
     for (const r of [presidentialRace(), ...races(), ...febRaces()]) for (const c of r.candidates) if (c.display_group === 'rest' && pj[c.id]) expect(pj[c.id].card, c.id).toBeTruthy()
@@ -463,13 +455,6 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
     const inImage = [...Object.keys(sprite.photos), ...Object.values(sprite.sheets).flatMap(sh => Object.keys(sh.photos))]
     const restIds = new Set([presidentialRace(), ...febRaces()].flatMap(r => r.candidates.filter(c => c.display_group === 'rest').map(c => c.id)))
     expect(inImage.filter(id => restIds.has(id))).toEqual([])
-    expect(Object.keys(held).length).toBeGreaterThan(0)
-    const about = html('about')
-    for (const id of Object.keys(held)) {
-      expect(about, id).not.toContain(`id="credit-${id}"`)
-      expect(fs.existsSync(path.join(OUT, 'photos', `${id}.webp`)), id).toBe(false)
-    }
-    for (const id of Object.keys(held).slice(0, 25)) expect(html(`c/${id}`), id).toContain('<div class="profile-photo"><span class="photo ph" aria-hidden="true"></span></div>')
   })
   it('every card has the photo slot, a photo or the same placeholder, in the same place', () => {
     const ballot = html('ballot/abia/aba-north-aba-south--abia-south')
@@ -480,11 +465,14 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
   it('the About page says where photos come from and that a candidate or party can send an official one', () => {
     const about = html('about')
     expect(about).toContain('<h2 id="photos">Photos</h2>')
-    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, an official government or legislature page, or a news report or social media account that names the candidate\s+with their party and their seat or state \(an account only when it is clearly the candidate’s own\)\. Never a photo from a picture\s+agency or stock library/)
+    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, an official government or legislature page, or a news report or social media account that names the candidate\s+with their party and their seat or state \(an account only when it is clearly the candidate’s own\), or a photo the site’s owner\s+supplied\. A photo may be from an event, a television interview or a campaign poster\. Never a photo from a picture agency or stock\s+library/)
+    // framing relaxed (owner, 15 Nov 2026): a square around the face, the same size for all; no promise of a plain head-and-shoulders crop
+    expect(about).toMatch(/Every photo is cropped to a square around\s+the candidate’s face and shown at the same size/)
+    expect(about).not.toMatch(/head-and-shoulders/)
     expect(about).not.toMatch(/Never a news site/)
     // the photo's owner can have it taken down (owner, 15 Nov 2026)
     expect(about).toMatch(/The owner of any photo can ask for it to be removed by writing to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Remove%20a%20photo">corrections@anthonyugwuja\.dev<\/a>\s*, and it comes down within a day\./)
-    expect(about).toMatch(/checked\s+against the gender and age INEC printed for the candidate\. A photo from Wikimedia Commons, where anyone can upload a file,\s+is also approved by the site’s owner before it appears\./)
+    expect(about).toMatch(/checked against the gender and age INEC printed for the candidate\.\s+A photo from Wikimedia Commons, where anyone can upload a file,\s+is also approved by the site’s owner before it appears\./)
     expect(about).toMatch(/A request to change a photo goes to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Change%20a%20photo">/)
     // a candidate or campaign sends a photo by email (no form), with a template; the About page never explains the per-race rule
     for (const page of [about, html('corrections')]) {

@@ -102,6 +102,16 @@
     "feb-2027-governor-benue-sdp": 3
    }
   },
+  "feb-2027-governor-borno": {
+   "file": "logos/sheet-c57caac1d4.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 37928,
+   "sha256": "c57caac1d45779b0be15c7a669cf0e0b84e26d5a655d5eebb98533598aba84ef",
+   "photos": {
+    "feb-2027-governor-borno-apc": 0
+   }
+  },
   "feb-2027-governor-cross-river": {
    "file": "logos/sheet-f3bdcb9e0a.webp",
    "width": 2112,
@@ -116,13 +126,14 @@
    }
   },
   "feb-2027-governor-delta": {
-   "file": "logos/sheet-408d8c68ba.webp",
+   "file": "logos/sheet-518a8e182d.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 37046,
-   "sha256": "408d8c68ba564ca6b4be3fe208d79cc4720bcabbbde2f20dbf03dfa4a0c9763f",
+   "bytes": 40984,
+   "sha256": "518a8e182d4db1743122ff13c1609185ef34ec92cc5123b18cd661ab25f66819",
    "photos": {
-    "feb-2027-governor-delta-apc": 0
+    "feb-2027-governor-delta-adc": 0,
+    "feb-2027-governor-delta-apc": 1
    }
   },
   "feb-2027-governor-ebonyi": {
@@ -210,13 +221,14 @@
    }
   },
   "feb-2027-governor-kebbi": {
-   "file": "logos/sheet-e24fd5608c.webp",
+   "file": "logos/sheet-5ce32c6a68.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 37570,
-   "sha256": "e24fd5608c15ad1f8de48d644fc62b33a56098ac538203c2aac1b06df974ee3a",
+   "bytes": 41196,
+   "sha256": "5ce32c6a68c6ab64725f7e33e47fa37cfa903afd21c48d598f9a74071965b82c",
    "photos": {
-    "feb-2027-governor-kebbi-adc": 0
+    "feb-2027-governor-kebbi-adc": 0,
+    "feb-2027-governor-kebbi-apc": 1
    }
   },
   "feb-2027-governor-kwara": {
@@ -307,34 +319,47 @@
    }
   },
   "feb-2027-governor-rivers": {
-   "file": "logos/sheet-20fbf6af62.webp",
+   "file": "logos/sheet-394b763266.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 41512,
-   "sha256": "20fbf6af625d05d32b683fc2b0f36f0aacad095e33408dd4746732618322a694",
+   "bytes": 45016,
+   "sha256": "394b763266fc456023b020e87ba00e4d91f0e33c09a4677edcff60e4352721ab",
    "photos": {
     "feb-2027-governor-rivers-adc": 0,
-    "feb-2027-governor-rivers-apc": 1
+    "feb-2027-governor-rivers-apc": 1,
+    "feb-2027-governor-rivers-pdp": 2
    }
   },
   "feb-2027-governor-sokoto": {
-   "file": "logos/sheet-fa524c0381.webp",
+   "file": "logos/sheet-2986697b64.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 39420,
-   "sha256": "fa524c0381cfbb86d02617d34a0d5f6c3d4c1aeb5813269dd1fc6ed5002001ac",
+   "bytes": 43802,
+   "sha256": "2986697b6428112564168b309c6665034f2340bbf92ab4f46e6d04ddf05f7436",
    "photos": {
-    "feb-2027-governor-sokoto-adc": 0
+    "feb-2027-governor-sokoto-adc": 0,
+    "feb-2027-governor-sokoto-apc": 1
    }
   },
   "feb-2027-governor-taraba": {
-   "file": "logos/sheet-662ad23730.webp",
+   "file": "logos/sheet-6b8b616e0a.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 37392,
-   "sha256": "662ad2373043e8fb0e093793d24b6c41f2658ab9a536a5efecd059f8a36acbf1",
+   "bytes": 40178,
+   "sha256": "6b8b616e0a9c671089eece17052103065d1769d7180a43af11d21c227592439d",
    "photos": {
-    "feb-2027-governor-taraba-pdp": 0
+    "feb-2027-governor-taraba-apc": 0,
+    "feb-2027-governor-taraba-pdp": 1
+   }
+  },
+  "feb-2027-governor-yobe": {
+   "file": "logos/sheet-41af9cb457.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 38082,
+   "sha256": "41af9cb45710da277c12832a05fdb8bddf80943f96639bd036d7b5a5e233c694",
+   "photos": {
+    "feb-2027-governor-yobe-apc": 0
    }
   },
   "feb-2027-governor-zamfara": {

@@ -220,12 +220,10 @@ export interface Photo {
   card?: string
   card_bytes?: number
 }
-let photos: { people: Record<string, Photo>, held: Record<string, string>, held_since: string } | null = null
+let photos: { people: Record<string, Photo> } | null = null
 const photosFile = () => (photos ??= read<NonNullable<typeof photos>>('photos.json'))
 export const allPhotos = (): Record<string, Photo> => photosFile().people
-/** The race IDs whose cleared photos are held until a second one in the first group is cleared (D-075). */
-const heldRaces = () => new Set(Object.values(photosFile().held))
-/** The candidate's photo, or null (the neutral placeholder): only approved faces (D-065, D-071). */
+/** The candidate's photo, or null (the neutral placeholder): every approved face, for every party (D-065, D-071, D-090). */
 export const photo = (candidateId: string): Photo | null => allPhotos()[candidateId] ?? null
 /** For the share picture: the photo's larger copy (loaded only when someone shares), or '' for no photo. */
 export const sharePhoto = (c: Candidate): string => { const p = photo(c.id); return p ? `/${p.share}` : '' }
@@ -254,13 +252,12 @@ export const sourceContentDate = (id: string) => {
 const latest = (dates: string[]) => [...dates].sort().at(-1)!
 /** A race's content date: its INEC list, or the background research for presidential tickets, whichever is later. */
 /** When a race's page last changed for a reader: its INEC sources, background research, approved photos (D-071), the
- *  day its state's first group changed (D-070) and, where a photo is held, the day the per-race rule took it off (D-075).
+ *  and the day its state's first group changed (D-070).
  *  The sitemap's lastmod. */
 export const raceContentDate = (r: Race) => latest([
   ...r.sources.map(sourceContentDate),
   ...r.candidates.flatMap(c => [c.candidate.background?.researched, c.running_mate?.background?.researched, photo(c.id)?.approved]).filter((d): d is string => !!d),
   ...(groupOf(r).state ? [groupOf(r).state!.since] : []),
-  ...(heldRaces().has(r.id) ? [photosFile().held_since] : []),
 ])
 /** Geography pages show INEC's locator, and their 6 February links follow the IReV ward lists (D-030). */
 export const geographyContentDate = () => latest(['inec-pu-locator', 'inec-irev-2023-assembly'].map(sourceContentDate))

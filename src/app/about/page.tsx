@@ -106,9 +106,10 @@ export default function About() {
       <p>
         A candidate has a photo only where a source that clearly names them has one: Wikimedia Commons, the candidate’s or party’s own
         official website, an official government or legislature page, or a news report or social media account that names the candidate
-        with their party and their seat or state (an account only when it is clearly the candidate’s own). Never a photo from a picture
-        agency or stock library, or a photo whose subject is in doubt. The same sources are used for every party. Every photo has the same head-and-shoulders crop and size, and each one is checked
-        against the gender and age INEC printed for the candidate. A photo from Wikimedia Commons, where anyone can upload a file,
+        with their party and their seat or state (an account only when it is clearly the candidate’s own), or a photo the site’s owner
+        supplied. A photo may be from an event, a television interview or a campaign poster. Never a photo from a picture agency or stock
+        library, or a photo whose subject is in doubt. The same sources are used for every party. Every photo is cropped to a square around
+        the candidate’s face and shown at the same size, and each one is checked against the gender and age INEC printed for the candidate. A photo from Wikimedia Commons, where anyone can upload a file,
         is also approved by the site’s owner before it appears. Photos are being added race by race; the source of each is listed at the end of this
         page. Any candidate shown without a photo has the same plain placeholder. A request to change a photo goes to
         {' '}
