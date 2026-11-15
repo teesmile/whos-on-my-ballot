@@ -471,14 +471,15 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-090)', () => 
   it('the About page says where photos come from and that a candidate or party can send an official one', () => {
     const about = html('about')
     expect(about).toContain('<h2 id="photos">Photos</h2>')
-    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, an official government or legislature page, or a news report or social media account that names the candidate\s+with their party and their seat or state \(an account only when it is clearly the candidate’s own\), or a photo the site’s owner\s+supplied\. A photo may be from an event, a television interview or a campaign poster\. Never a photo from a picture agency or stock\s+library/)
+    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website or campaign directory, an official government or legislature page, a public civic database of elected\s+officials, or a news report or social media account that names the candidate with their party and their seat or state \(an account\s+only when it is clearly the candidate’s own\), or a photo the site’s owner supplied\. A photo is matched to a candidate only when the\s+source gives their full name with their seat, or with their state and office\. A photo may be from an event, a television interview or a campaign poster\. Never a photo from a picture agency or stock\s+library/)
     // framing relaxed (owner, 15 Nov 2026): a square around the face, the same size for all; no promise of a plain head-and-shoulders crop
     expect(about).toMatch(/Every photo is cropped to a square around\s+the candidate’s face and shown at the same size/)
     expect(about).not.toMatch(/head-and-shoulders/)
     expect(about).not.toMatch(/Never a news site/)
     // the photo's owner can have it taken down (owner, 15 Nov 2026)
     expect(about).toMatch(/The owner of any photo can ask for it to be removed by writing to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Remove%20a%20photo">corrections@anthonyugwuja\.dev<\/a>\s*, and it comes down within a day\./)
-    expect(about).toMatch(/checked against the gender and age INEC printed for the candidate\.\s+A photo from Wikimedia Commons, where anyone can upload a file,\s+is also approved by the site’s owner before it appears\./)
+    expect(about).toMatch(/checked against the gender and age INEC printed for the candidate\.\s+A photo from Wikimedia Commons, where anyone can upload a file,\s+is used only when the file’s description, or the Wikipedia article that carries it, names the candidate’s state and office or race\.\s+Photos are being added race by race; the source of each is listed on the photo credits pages\./)
+    expect(about).not.toMatch(/approved by the site’s owner before it appears|listed at the end of this/)
     expect(about).toMatch(/A request to change a photo goes to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Change%20a%20photo">/)
     // a candidate or campaign sends a photo by email (no form), with a template; the About page never explains the per-race rule
     for (const page of [about, html('corrections')]) {

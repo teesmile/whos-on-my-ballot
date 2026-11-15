@@ -99,13 +99,14 @@ export default function About() {
       <h2 id="photos">Photos</h2>
       <p>
         A candidate has a photo only where a source that clearly names them has one: Wikimedia Commons, the candidate’s or party’s own
-        official website, an official government or legislature page, or a news report or social media account that names the candidate
-        with their party and their seat or state (an account only when it is clearly the candidate’s own), or a photo the site’s owner
-        supplied. A photo may be from an event, a television interview or a campaign poster. Never a photo from a picture agency or stock
+        official website or campaign directory, an official government or legislature page, a public civic database of elected
+        officials, or a news report or social media account that names the candidate with their party and their seat or state (an account
+        only when it is clearly the candidate’s own), or a photo the site’s owner supplied. A photo is matched to a candidate only when the
+        source gives their full name with their seat, or with their state and office. A photo may be from an event, a television interview or a campaign poster. Never a photo from a picture agency or stock
         library, or a photo whose subject is in doubt. The same sources are used for every party. Every photo is cropped to a square around
         the candidate’s face and shown at the same size, and each one is checked against the gender and age INEC printed for the candidate. A photo from Wikimedia Commons, where anyone can upload a file,
-        is also approved by the site’s owner before it appears. Photos are being added race by race; the source of each is listed at the end of this
-        page. Any candidate shown without a photo has the same plain placeholder. A request to change a photo goes to
+        is used only when the file’s description, or the Wikipedia article that carries it, names the candidate’s state and office or race.
+        Photos are being added race by race; the source of each is listed on the photo credits pages. Any candidate shown without a photo has the same plain placeholder. A request to change a photo goes to
         {' '}
         <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Change a photo')}`}>{CORRECTIONS_EMAIL}</a>
         .
