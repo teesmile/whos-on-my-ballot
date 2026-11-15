@@ -354,19 +354,27 @@ function loadImage(src: string): Promise<HTMLImageElement | null> {
   })
 }
 
-/** Lines of `text` no wider than `max`; a word too long for a line is broken, so nothing is ever cut off. */
+/**
+ * The places a line may break: after a space, and after a hyphen or slash inside a word (AKIN-TAYLOR, Uyo/Uruan). Each piece
+ * keeps the space before it, if any.
+ */
+function pieces(text: string): string[] {
+  return text.split(/\s+/).flatMap((w, i) => w.split(/(?<=[-/])/).map((p, j) => (i > 0 && j === 0 ? ` ${p}` : p)))
+}
+
+/** Lines of `text` no wider than `max`; a piece too long for a line is broken, so nothing is ever cut off. */
 function wrap(g: CanvasRenderingContext2D, text: string, max: number): string[] {
   const lines: string[] = []
   let line = ''
-  for (const word of text.split(/\s+/)) {
-    const tryLine = line ? `${line} ${word}` : word
+  for (const piece of pieces(text)) {
+    const tryLine = line ? line + piece : piece.trimStart()
     if (g.measureText(tryLine).width <= max) {
       line = tryLine
       continue
     }
     if (line) lines.push(line)
     line = ''
-    for (const ch of word) {
+    for (const ch of piece.trimStart()) {
       if (g.measureText(line + ch).width > max && line) {
         lines.push(line)
         line = ''
@@ -405,30 +413,27 @@ function contain(g: CanvasRenderingContext2D, img: HTMLImageElement, x: number, 
   g.drawImage(img, left ? x : x + (w - dw) / 2, y + (h - dh) / 2, dw, dh)
 }
 
-// The words in each green band are centred in it, up and down and across (owner feedback, 13 Nov 2026). Each band keeps at
-// least `pad` rows of plain green between its words and the picture's edge, clear of WhatsApp Status's controls on phones
-// taller than 16:9, where the picture is letterboxed. (On a 16:9 screen the progress bar, name and reply bar overlay the
-// picture's edges and may touch the band words; the candidates stay clear.)
-// Two shapes (owner, 14 Nov 2026): tall for WhatsApp Status and Instagram Stories, square for feed posts. The same bands,
-// tiles and words; the square's grid is three tiles across and its type is scaled by `k`, so nothing is cramped or cut off.
-// `name` is the largest and smallest name size; the square's smallest stays above the tall's share of its width, so names
-// stay readable after an app recompresses the picture.
-type Shape = 'tall' | 'square'
-const SHAPES = {
-  tall: { W: 1080, H: 1920, cols: 2, rows: 3, pad: 84, side: 48, gap: 22, around: 30, maxTile: 440, k: 1, name: [40, 22], file: 'whos-on-my-ballot.png' },
-  square: { W: 1080, H: 1080, cols: 3, rows: 2, pad: 30, side: 40, gap: 18, around: 14, maxTile: 360, k: 0.72, name: [36, 24], file: 'whos-on-my-ballot-square.png' },
-} as const
+// One picture, square, 1080 x 1080 (owner, 15 Nov 2026, D-087): clearer than a tall one on WhatsApp Status and everywhere
+// else, and the only picture every button sends or saves. The words in each green band are centred in it, up and down and
+// across (owner feedback, 13 Nov 2026), with at least `pad` rows of plain green to the picture's edge. Three tiles across and
+// two down; each tile as large as the width allows, and inside it the names and party labels as large as the tile allows,
+// checked after WhatsApp-style recompression. `k` scales the band words from the sizes first set for a 1080-wide picture.
+const SQUARE = { W: 1080, H: 1080, cols: 3, rows: 2, pad: 24, side: 28, gap: 14, around: 12, k: 0.72, file: 'whos-on-my-ballot.png' } as const
+// Names: one size for the whole picture, the largest at which every name fits the space under the logo and photo, in up to
+// four lines, between these two sizes. Party labels: the largest at which every acronym fits under its logo.
+const NAME = { max: 54, min: 24, lines: 4, lh: 1.12 }
+const ACRONYM = { max: 44, min: 24 }
 // The bands' green (owner feedback, 13 Nov 2026): richer and deeper than the page's, a subtle top-to-bottom gradient within
 // Nigeria's green and a soft white highlight across the top of each band, so it stays vivid after WhatsApp re-encodes it.
 const BAND = { top: '#00904f', bottom: '#005f36', shine: 'rgba(255, 255, 255, 0.16)' }
-// PNG, exactly 1080 x 1920. Tested against a quality-95 JPEG on 11 Nov 2026 (D-060): after the kind of re-encoding WhatsApp
+// PNG. Tested against a quality-95 JPEG on 11 Nov 2026 (D-060): after the kind of re-encoding WhatsApp
 // applies to Status pictures, the PNG source kept about 1.2 dB more detail, and the JPEG was only 7% smaller.
 const EXPORT = { type: 'image/png', quality: 1 }
 const PLACEHOLDER = { bg: '#f4f4f4', line: '#c4c4c4', figure: '#cfcfcf' }
 // The countdown (owner, 14 Nov 2026): a sand pill on the date's own line, so the band, the tiles and the grid keep their
 // sizes. Sand is the site's countdown colour; a solid pill with deep-green words keeps a hard edge and strong contrast after
 // WhatsApp's JPEG re-encoding, where thin sand letters straight on the gradient would blur into it.
-const CHIP = { size: 34, h: 54, padX: 24, gap: 20, sand: '#f0d49e' }
+const CHIP = { size: 38, h: 58, padX: 24, gap: 20, sand: '#f0d49e' }
 
 /** The same plain placeholder as the site's cards: a grey head-and-shoulders outline in a rounded square. */
 function placeholder(g: CanvasRenderingContext2D, x: number, y: number, s: number) {
@@ -462,16 +467,15 @@ function band(g: CanvasRenderingContext2D, W: number, y0: number, y1: number) {
 }
 
 /**
- * The share picture, tall (1080 x 1920) or square (1080 x 1080). A green band at the top (the office, where, the date and,
- * until election day, a countdown worked out when shared), a white middle holding the card grid (equal square tiles: two
- * across and three down in the tall picture, three across and two down in the square one), and a green band at the bottom
- * with the site's address, large, and the affiliation line, both in white. Each tile: the party's logo over its acronym at
- * the left and the candidate's photo (or the same plain placeholder as the site) at the right, the same height and the same
- * padding from their sides; the name centred beneath, one size for every name. Drawn from the full-size logos and photos
- * (never the page's small sprite), loaded only now.
+ * The share picture, 1080 x 1080. A green band at the top (the office, where, the date and, until election day, a countdown
+ * worked out when shared), a white middle holding the card grid (equal square tiles, three across and two down), and a green
+ * band at the bottom with the site's address, large, and the affiliation line, both in white. Each tile: the party's logo over
+ * its acronym at the left and the candidate's photo (or the same plain placeholder as the site) at the right, the same height
+ * and the same padding from their sides; the name centred beneath, one size for every name. Drawn from the full-size logos
+ * and photos (never the page's small sprite), loaded only now.
  */
-async function drawPicture(d: ShareInfo, shape: Shape = 'tall'): Promise<File> {
-  const { W, H, cols, rows, pad, side, gap, around, maxTile, k: scale, name: [nameMax, nameMin], file } = SHAPES[shape]
+async function drawPicture(d: ShareInfo): Promise<File> {
+  const { W, H, cols, rows, pad, side, gap, around, k: scale, file } = SQUARE
   const z = (n: number) => Math.round(n * scale)
   const canvas = el('canvas')
   canvas.width = W
@@ -495,14 +499,14 @@ async function drawPicture(d: ShareInfo, shape: Shape = 'tall'): Promise<File> {
   const place = d.place ? fit(g, d.place, 800, z(44), z(30), W - 2 * side, 2) : { size: 0, lines: [] as string[] }
   const placeLh = Math.round(place.size * 1.15)
   const rowH = Math.max(markS, office.size)
-  const dateSize = z(38)
+  const dateSize = z(42)
   const topText = rowH + z(12) + place.lines.length * placeLh + (place.lines.length ? z(6) : 0) + dateSize
-  const addr = fit(g, 'whosonmyballot.ng', 900, z(92), z(60), W - 2 * side, 1)
-  const notSize = z(42)
-  const footText = addr.size + z(16) + notSize
-  // Square tiles, as large as the rows allow (and never wider than the columns fit), with gap rows around the grid.
+  const addr = fit(g, 'whosonmyballot.ng', 900, z(88), z(60), W - 2 * side, 1)
+  const notSize = z(44)
+  const footText = addr.size + z(14) + notSize
+  // Square tiles, as large as the width allows (or the rows, if the bands need more), with gap rows around the grid.
   const free = H - (topText + 2 * pad) - (footText + 2 * pad) - 2 * around - (rows - 1) * gap
-  const s = Math.floor(Math.min(maxTile, free / rows, (W - 2 * side - (cols - 1) * gap) / cols))
+  const s = Math.floor(Math.min(free / rows, (W - 2 * side - (cols - 1) * gap) / cols))
   // Whatever rows are left go to the bands, equally above and below each band's words.
   const spare = Math.max(0, free - rows * s) / 4
   const topPad = pad + spare
@@ -562,28 +566,44 @@ async function drawPicture(d: ShareInfo, shape: Shape = 'tall'): Promise<File> {
   g.font = `900 ${addr.size}px ${FONT}`
   g.fillText('whosonmyballot.ng', W / 2, foot + footPad, W - 2 * side)
   g.font = `700 ${notSize}px ${FONT}`
-  g.fillText('Not affiliated with INEC.', W / 2, foot + footPad + addr.size + z(16), W - 2 * side)
+  g.fillText('Not affiliated with INEC.', W / 2, foot + footPad + addr.size + z(14), W - 2 * side)
 
-  // The grid: equal squares, centred across the picture and between the bands. The tall picture keeps its three rows; the
-  // square one centres the rows it uses, and a part-filled last row is centred under the one above it.
+  // The grid: equal squares, centred across the picture and between the bands; the rows it uses are centred, and a
+  // part-filled last row is centred under the one above it.
   const n = d.tiles.length + (d.more ? 1 : 0)
-  const used = shape === 'tall' ? rows : Math.ceil(n / cols)
+  const used = Math.ceil(n / cols)
   const gridW = cols * s + (cols - 1) * gap
   const gridX = (W - gridW) / 2
   const gridY = bandH + (foot - bandH - (used * s + (used - 1) * gap)) / 2
   const lastRow = Math.floor((n - 1) / cols)
-  const lastShift = shape === 'square' ? (cols - (n - lastRow * cols)) * (s + gap) / 2 : 0
-  const p = Math.round(s * 0.085) // the padding inside every tile, the same on every side
+  const lastShift = (cols - (n - lastRow * cols)) * (s + gap) / 2
+  const p = Math.round(s * 0.07) // the padding inside every tile, the same on every side
   const inner = s - 2 * p
-  // One name size for the whole picture: the largest at which the longest name fits in two lines. A ticket with no named
-  // candidate (INEC's remark instead) uses the same size and may take a third line.
+  // The logo block and the photo: the same height, each a square at its own side, a narrow gap between them. The name gets
+  // the rest of the tile beneath them.
+  const h = Math.floor((inner - z(22)) / 2)
+  const nameGap = z(22) // clear of the party label above
+  const areaH = inner - h - nameGap
+  // One name size for the whole picture (NAME). A ticket with no named candidate (INEC's remark instead) is not a name: it
+  // takes the same size if it fits, or the largest that fits.
+  const fitsArea = (t: string, size: number, maxLines: number) => {
+    g.font = `800 ${size}px ${FONT}`
+    const lines = wrap(g, t, inner)
+    // never a name broken inside a piece: each must fit a line whole
+    return lines.length <= maxLines && lines.length * Math.round(size * NAME.lh) <= areaH && pieces(t).every(w => g.measureText(w.trim()).width <= inner)
+  }
+  const largest = (ok: (size: number) => boolean, max: number, min: number) => {
+    let size = max
+    while (size > min && !ok(size)) size--
+    return size
+  }
   const names = d.tiles.map(([, name]) => name).filter(t => !t.startsWith(NO_CANDIDATE))
-  const nameSize = Math.min(...(names.length ? names : d.tiles.map(([, t]) => t)).map(t => fit(g, t, 800, nameMax, nameMin, inner, 2).size))
-  const nlh = Math.round(nameSize * 1.16)
-  const nameBlock = 2 * nlh
-  // The logo block and the photo: the same height, each a square at its own side; the space left goes between them.
-  const h = Math.round(Math.min((inner - z(24)) / 2, inner - nameBlock - 2 * z(18)))
-  const acSize = Math.min(...d.tiles.map(([party]) => fit(g, party, 900, z(40), z(24), h, 1).size))
+  const nameSize = largest(size => names.every(t => fitsArea(t, size, NAME.lines)), NAME.max, NAME.min)
+  // Party labels: one size, the largest at which every acronym fits the logo block's width (ACRONYM).
+  const acSize = largest((size) => {
+    g.font = `900 ${size}px ${FONT}`
+    return d.tiles.every(([party]) => g.measureText(party).width <= h)
+  }, ACRONYM.max, ACRONYM.min)
   const logoH = h - z(10) - acSize
   for (let k = 0; k < n; k++) {
     const row = Math.floor(k / cols)
@@ -617,12 +637,12 @@ async function drawPicture(d: ShareInfo, shape: Shape = 'tall'): Promise<File> {
       g.strokeStyle = PLACEHOLDER.line
       g.stroke()
       // The name, centred across the tile and in the space below the group: the same space above and below it.
+      const size = name.startsWith(NO_CANDIDATE) ? largest(sz => fitsArea(name, sz, 6), nameSize, 16) : nameSize
+      const nlh = Math.round(size * NAME.lh)
       g.fillStyle = INK
-      g.font = `800 ${nameSize}px ${FONT}`
+      g.font = `800 ${size}px ${FONT}`
       const lines = wrap(g, name, inner)
-      const areaTop = top + h
-      const areaH = y + s - p - areaTop
-      const ny = areaTop + (areaH - lines.length * nlh) / 2
+      const ny = top + h + nameGap + (areaH - lines.length * nlh) / 2
       lines.forEach((l, i) => g.fillText(l, x + s / 2, ny + i * nlh))
     }
     else {
@@ -659,15 +679,13 @@ function saveFile(file: File) {
   setTimeout(() => URL.revokeObjectURL(a.href), 10_000)
 }
 
-// The "Share on" row (owner, 14 and 15 Nov 2026): each icon shares the race's picture, in the shape its app shows best.
-// Facebook and Instagram ask first: Story (tall) or Post (square).
-const APPS: Record<string, { name: string, shape: Shape }> = {
-  whatsapp: { name: 'WhatsApp', shape: 'tall' },
-  x: { name: 'X', shape: 'square' },
-}
-const PICKS: Record<string, { name: string, saved: Record<Shape, string> }> = {
-  facebook: { name: 'Facebook', saved: { tall: 'Picture saved. Add it to your Facebook story.', square: 'Picture saved. Attach it to your post.' } },
-  instagram: { name: 'Instagram', saved: { tall: 'Picture saved. Post it on Instagram.', square: 'Picture saved. Post it on Instagram.' } },
+// The "Share on" row (owner, 14 and 15 Nov 2026): each icon shares the race's picture, the one square picture (D-087), and
+// goes straight to the share menu. On a computer, or where the menu can't take it, the line says what was saved.
+const APPS: Record<string, { name: string, saved: string }> = {
+  whatsapp: { name: 'WhatsApp', saved: 'Picture saved. Attach it to your post.' },
+  x: { name: 'X', saved: 'Picture saved. Attach it to your post.' },
+  facebook: { name: 'Facebook', saved: 'Picture saved. Attach it to your post.' },
+  instagram: { name: 'Instagram', saved: 'Picture saved. Post it on Instagram.' },
 }
 // Some apps drop the words when a picture is shared, so an icon also copies them (owner, 15 Nov 2026).
 const CAPTION_COPIED = 'Caption copied. Paste it in your post.'
@@ -681,19 +699,19 @@ function setupShare(section: HTMLElement) {
   const status = section.querySelector<HTMLElement>('[data-share-status]')
   const files = canShareFiles()
   const message = `${d.text}\n${d.url}`
-  const pictures: Partial<Record<Shape, Promise<File>>> = {}
-  const getPicture = (shape: Shape = 'tall') => (pictures[shape] ??= drawPicture(d, shape).catch((e) => {
-    delete pictures[shape]
+  let picture: Promise<File> | null = null
+  const getPicture = () => (picture ??= drawPicture(d).catch((e) => {
+    picture = null
     throw e
   }))
-  const warmOn = (targets: EventTarget[], shapes: Shape[]) => {
-    const warm = () => { for (const shape of shapes) void getPicture(shape).catch(() => {}) }
+  const warmOn = (targets: EventTarget[]) => {
+    const warm = () => void getPicture().catch(() => {})
     for (const target of targets) {
       for (const type of ['pointerdown', 'focusin', 'mouseenter', 'touchstart']) target.addEventListener(type, warm, { once: true, passive: true })
     }
   }
   // Start drawing as soon as someone reaches for a share button, so the tap shares at once.
-  if (files) warmOn([section, ...was], ['tall'])
+  if (files) warmOn([section, ...was])
   // One line for what happened, and a second once the caption is on the clipboard.
   let line = ''
   let copied = false
@@ -751,118 +769,64 @@ function setupShare(section: HTMLElement) {
     else linkOnly()
   })
 
-  // "Share on": the menu with `shape` attached and the row's message and the race's page as the caption. A website can't pick
-  // the app inside the menu, so one line names it. `fallback` runs if the phone refuses the file.
-  const shareMenu = async (shape: Shape, app: string, tap: string, fallback: () => void) => {
+  // "Share on": the menu with the picture attached and the row's message and the race's page as the caption. A website can't
+  // pick the app inside the menu, so one line names it. `fallback` runs if the phone refuses the file.
+  const shareMenu = async (app: string, fallback: () => void) => {
     say(`Choose ${app} in the menu.`)
     try {
-      await navigator.share({ files: [await getPicture(shape)], text: d.appText })
+      await navigator.share({ files: [await getPicture()], text: d.appText })
     }
     catch (e) {
       const name = (e as DOMException).name
-      if (name === 'NotAllowedError') say(`Your picture is ready. Tap ${tap} again to share it.`)
+      if (name === 'NotAllowedError') say(`Your picture is ready. Tap ${app} again to share it.`)
       else if (name !== 'AbortError') {
         say('')
         fallback()
       }
     }
   }
-  const save = async (shape: Shape, done: string) => {
+  const save = async (done: string) => {
     try {
-      saveFile(await getPicture(shape))
+      saveFile(await getPicture())
       say(done)
     }
     catch {
       say('The picture could not be made. Please try again.')
     }
   }
-  // WhatsApp and X. On a phone that can share files: the menu with the picture. On a computer: the link's own action opens
-  // the app's post window in a new tab with the message and link, and the picture is saved to attach. On a phone that can't
-  // share files: the plain link, as without JavaScript, so an icon never does nothing. A picture shared or saved copies the
-  // caption too.
-  for (const a of section.querySelectorAll<HTMLAnchorElement>('a[data-app]')) {
+  // The four icons. On a phone that can share files: the menu with the picture, at once; if the phone refuses the file, the
+  // icon's plain link (Instagram, which has no link share, saves the picture). On a computer: WhatsApp's, X's and Facebook's
+  // links open the app's post window in a new tab with the message and link, and the picture is saved to attach; Instagram
+  // saves it. On a phone that can't share files: WhatsApp, X and Facebook are plain links, as without JavaScript, and
+  // Instagram saves the picture, so an icon never does nothing. A picture shared or saved copies the caption too.
+  for (const a of section.querySelectorAll<HTMLElement>('[data-app]')) {
     const app = APPS[a.dataset.app!]
     if (!app) continue
-    warmOn([a], [app.shape])
+    a.hidden = false // Instagram's button needs the script
+    const link = a instanceof HTMLAnchorElement ? a.href : null
+    const saveIt = () => void save(app.saved)
+    warmOn([a])
     a.addEventListener('click', (ev) => {
-      if (phone()) {
-        if (!files) return
+      if (phone() && files) {
         ev.preventDefault()
         copyCaption()
-        void shareMenu(app.shape, app.name, app.name, () => { location.href = a.href })
+        void shareMenu(app.name, link ? () => { location.href = link } : saveIt)
         return
       }
+      if (phone() && link) return // the plain link: no picture to attach
       copyCaption()
-      void save(app.shape, 'Picture saved. Attach it to your post.')
+      saveIt()
     })
   }
-  // Facebook and Instagram ask first, Story (tall) or Post (square), in a row of two under the icons; one row open at a time.
-  // Then, on a phone that can share files, the menu with that picture. Otherwise Facebook's Post opens its link share (and, on
-  // a computer, saves the square picture to attach), and every other choice saves the picture.
-  const toggles = [...section.querySelectorAll<HTMLElement>('[data-pick-app]')]
-  const rowOf = (t: HTMLElement) => section.querySelector<HTMLElement>(`[data-pick="${t.dataset.pickApp}"]`)
-  const close = (t: HTMLElement) => {
-    rowOf(t)!.hidden = true
-    t.setAttribute('aria-expanded', 'false')
-  }
-  for (const toggle of toggles) {
-    const app = PICKS[toggle.dataset.pickApp!]
-    const pick = rowOf(toggle)
-    if (!app || !pick) continue
-    toggle.hidden = false
-    toggle.setAttribute('aria-expanded', 'false')
-    toggle.addEventListener('click', (ev) => {
-      ev.preventDefault() // Facebook's icon is a link without the script
-      const open = pick.hidden
-      for (const other of toggles) if (other !== toggle && rowOf(other)) close(other)
-      pick.hidden = !open
-      toggle.setAttribute('aria-expanded', String(open))
-      if (open) {
-        for (const shape of ['tall', 'square'] as Shape[]) void getPicture(shape).catch(() => {})
-        pick.querySelector<HTMLButtonElement>('button')?.focus()
-      }
+  // "Save picture": the same picture, saved as a file.
+  const saveButton = section.querySelector<HTMLButtonElement>('[data-save]')
+  if (saveButton) {
+    saveButton.hidden = false
+    warmOn([saveButton])
+    saveButton.addEventListener('click', () => {
+      noCaption()
+      void save('Picture saved.')
     })
-    const link = toggle instanceof HTMLAnchorElement ? toggle.href : null
-    for (const b of pick.querySelectorAll<HTMLButtonElement>('button[data-pick-shape]')) {
-      b.addEventListener('click', () => {
-        const shape = b.dataset.pickShape as Shape
-        const saveIt = () => void save(shape, app.saved[shape])
-        if (phone() && files) {
-          copyCaption()
-          void shareMenu(shape, app.name, b.textContent!.trim(), link && shape === 'square' ? () => { location.href = link } : saveIt)
-          return
-        }
-        if (link && shape === 'square') {
-          window.open(link, '_blank', 'noopener')
-          if (phone()) { // the link share alone: no picture to attach
-            noCaption()
-            say('')
-            return
-          }
-        }
-        copyCaption()
-        saveIt()
-      })
-    }
-  }
-  // "Save picture", tall or square.
-  const saveBox = section.querySelector<HTMLElement>('[data-save]')
-  const saveToggle = saveBox?.querySelector<HTMLButtonElement>('[data-save-toggle]')
-  const savePick = saveBox?.querySelector<HTMLElement>('[data-save-pick]')
-  if (saveBox && saveToggle && savePick) {
-    saveBox.hidden = false
-    saveToggle.addEventListener('click', () => {
-      const open = savePick.hidden
-      savePick.hidden = !open
-      saveToggle.setAttribute('aria-expanded', String(open))
-      if (open) for (const shape of ['tall', 'square'] as Shape[]) void getPicture(shape).catch(() => {})
-    })
-    for (const b of savePick.querySelectorAll<HTMLButtonElement>('button[data-save-shape]')) {
-      b.addEventListener('click', () => {
-        noCaption()
-        void save(b.dataset.saveShape as Shape, 'Picture saved.')
-      })
-    }
   }
 }
 

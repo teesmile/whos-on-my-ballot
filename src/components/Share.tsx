@@ -15,10 +15,11 @@ export function WhatsAppGlyph({ on = 'green' }: { on?: 'green' | 'white' }) {
  * shares itself. "Copy link" copies the page's own address. Never the visitor's polling unit or anything they typed.
  *
  * Under it, "Share on" and four icons (owner, 14 Nov 2026), each the app's official glyph in its own brand colour, the same
- * size, with no box. Each shares the race's picture, tall for WhatsApp and square for X; Facebook and Instagram ask Story
- * (tall) or Post (square) first (owner, 15 Nov 2026), and the caption is copied too, since some apps drop it. Without JavaScript, WhatsApp, X and Facebook are plain links into each app's own share page
- * with the same short message and the race's own page (never the ballot, which would carry the visitor's place); the page
- * script adds the pictures (see lookup.ts). Then "Save picture", tall or square. No script from any of these companies.
+ * size, with no box. Each shares the race's one picture, square (owner, 15 Nov 2026, D-087), straight to the share menu, and
+ * the caption is copied too, since some apps drop it. Without JavaScript, WhatsApp, X and Facebook are plain links into each
+ * app's own share page with the same short message and the race's own page (never the ballot, which would carry the
+ * visitor's place); the page script adds the picture (see lookup.ts). Then "Save picture", the same picture. No script from
+ * any of these companies.
  */
 export function Share({ url, copyUrl = url, label, picture, level = 2 }: { url: string, copyUrl?: string, label: string, picture: Picture, level?: 2 | 3 | 4 }) {
   const text = caption()
@@ -37,46 +38,10 @@ export function Share({ url, copyUrl = url, label, picture, level = 2 }: { url: 
         <button type="button" className="btn-quiet" data-copy={copyUrl} hidden>Copy link</button>
       </div>
       <AppRow picture={picture} />
-      <Pick app="facebook" name="Facebook" />
-      <Pick app="instagram" name="Instagram" />
-      <div className="share-save" data-save hidden>
-        <button type="button" className="btn-quiet" data-save-toggle aria-expanded="false">Save picture</button>
-        <div className="share-pick" data-save-pick hidden>
-          <button type="button" className="btn-quiet share-shape" data-save-shape="tall">
-            <Shape tall />
-            Tall
-          </button>
-          <button type="button" className="btn-quiet share-shape" data-save-shape="square">
-            <Shape />
-            Square
-          </button>
-        </div>
-      </div>
+      <button type="button" className="btn-quiet share-save" data-save hidden>Save picture</button>
       <p className="share-status" role="status" data-share-status />
     </section>
   )
-}
-
-/** Facebook and Instagram ask first: Story (the tall picture) or Post (the square one). Shown by the page script. */
-function Pick({ app, name }: { app: string, name: string }) {
-  return (
-    <div className="share-pick" data-pick={app} hidden>
-      <span className="share-pick-label">{`Share to ${name} as`}</span>
-      <button type="button" className="btn-quiet share-shape" data-pick-shape="tall">
-        <Shape tall />
-        Story
-      </button>
-      <button type="button" className="btn-quiet share-shape" data-pick-shape="square">
-        <Shape />
-        Post
-      </button>
-    </div>
-  )
-}
-
-/** A small outline of the picture's shape beside its choice. Decorative: the word says it. */
-function Shape({ tall = false }: { tall?: boolean }) {
-  return <span className={tall ? 'shape shape-tall' : 'shape shape-square'} aria-hidden="true" />
 }
 
 /** "Share on" and the four apps. The words are for sighted readers; each icon carries its own full name for screen readers. */
@@ -92,10 +57,10 @@ function AppRow({ picture }: { picture: Picture }) {
       <a className="share-app" href={l.x} target="_blank" rel="noopener" aria-label="Share on X" data-app="x">
         <span className="glyph-icon glyph-x" aria-hidden="true" />
       </a>
-      <a className="share-app" href={l.facebook} target="_blank" rel="noopener" aria-label="Share on Facebook" data-app="facebook" data-pick-app="facebook">
+      <a className="share-app" href={l.facebook} target="_blank" rel="noopener" aria-label="Share on Facebook" data-app="facebook">
         <span className="glyph-icon glyph-facebook" aria-hidden="true" />
       </a>
-      <button type="button" className="share-app" aria-label="Share on Instagram" data-pick-app="instagram" aria-expanded="false" hidden>
+      <button type="button" className="share-app" aria-label="Share on Instagram" data-app="instagram" hidden>
         <span className="glyph-icon glyph-instagram" aria-hidden="true" />
       </button>
     </div>

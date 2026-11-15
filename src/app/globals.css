@@ -397,14 +397,8 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
 .share-buttons > * { flex: 1 1 10rem; min-height: 52px; }
 .share-status { margin: 0.5rem 0 0; font-weight: 650; min-height: 1.4em; white-space: pre-line; }
 .share-status:empty { min-height: 0; margin: 0; }
-/* Instagram's Story or Post, and "Save picture", tall or square (owner, 14 Nov 2026): plain choices the script reveals. */
-.share-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.6rem; }
-.share-pick-label { flex-basis: 100%; font-weight: 650; }
-.share-save { margin-top: 0.7rem; }
-.share-shape { min-width: 7.5rem; }
-.shape { display: inline-block; flex: none; border: 2px solid currentColor; border-radius: 3px; }
-.shape-tall { width: 0.8em; height: 1.4em; }
-.shape-square { width: 1.1em; height: 1.1em; }
+/* "Save picture" (owner, 14 Nov 2026): the one square picture as a file (D-087); the script reveals it. */
+.share-save { display: block; margin-top: 0.7rem; }
 
 /* WhatsApp's official glyph (src/assets/brand/whatsapp), unaltered: white on green, green on white. Embedded byte for byte. */
 .wa-glyph { display: inline-block; flex: none; width: 1.35em; height: 1.35em; background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgNzIwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNjAsMEMxNjEuMTgsMCwwLDE2MS4xOCwwLDM2MGMwLDY1LjQxLDE3LjQ1LDEyNi43NSw0Ny45NCwxNzkuNjFMMCw3MjBsMTg3LjAyLTQ0LjIxYzUxLjM0LDI4LjE4LDExMC4yOCw0NC4yMSwxNzIuOTgsNDQuMjEsMTk4LjgyLDAsMzYwLTE2MS4xOCwzNjAtMzYwUzU1OC44MiwwLDM2MCwwWk0zNjAsNjU1LjUyYy02MC4xNywwLTExNi4xMy0xNy45OC0xNjIuODItNDguODdsLTExMC40OSwyOC4xNCwzMC45OS0xMDUuNjFjLTMzLjUzLTQ3LjkzLTUzLjItMTA2LjI2LTUzLjItMTY5LjE5LDAtMTYzLjIxLDEzMi4zMS0yOTUuNTIsMjk1LjUyLTI5NS41MnMyOTUuNTIsMTMyLjMxLDI5NS41MiwyOTUuNTItMTMyLjMxLDI5NS41Mi0yOTUuNTIsMjk1LjUyWiIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQ0NC4zNSw0MDcuNTJsODcuMSw0MS4wNmM0LDEuODgsNi41Niw1Ljk0LDYuMiwxMC4zNC0uOTQsMTEuNDYtNS41NCwzNC40My0yNi4xMyw1NS4wMi01OC4xMiw1OC4xMi0xNjIuNDktNy42NC0xNjYuNzQtMTAuMTgtMjUuNjctMTMuNzktNTAuMDYtMzIuMjQtNzMuMTktNTUuMzZzLTQxLjU4LTQ3LjUyLTU1LjM3LTczLjE5Yy0yLjU1LTQuMjQtNjguMzEtMTA4LjYxLTEwLjE4LTE2Ni43NCwyMC41OS0yMC41OSw0My41Ni0yNS4xOSw1NS4wMi0yNi4xMyw0LjQxLS4zNiw4LjQ2LDIuMiwxMC4zNCw2LjJsNDEuMDcsODcuMWMxLjk0LDQuMTIsMS4wOSw5LjAyLTIuMTMsMTIuMjRsLTMwLjYxLDMwLjYxYy02LjYyLDYuNjItOC41NiwxNi45My00LDI1LjExLDExLjE3LDIwLjAzLDI2LjE5LDM5LjMyLDQzLjU5LDU3LjA3LDE3Ljc1LDE3LjQsMzcuMDQsMzIuNDMsNTcuMDcsNDMuNTksOC4xOCw0LjU2LDE4LjQ4LDIuNjIsMjUuMTEtNGwzMC42MS0zMC42MWMzLjIyLTMuMjIsOC4xMi00LjA4LDEyLjI0LTIuMTNaIi8+Cjwvc3ZnPg==") center / contain no-repeat; }
