@@ -2636,3 +2636,1043 @@ people:
     retrieved: '2026-11-14'
     crop: [36, 32, 244, 244]
     official_checked: '2026-11-14'  # INEC M, 39, fits the photo; the Assembly names him Speaker, member for Ibarapa East; outside the first five (D-081)
+  - candidate_id: jan-2027-senate-kano-kano-central-ndc
+    source: "Federal Mortgage Bank of Nigeria website"
+    file_page: https://fmbn.gov.ng/about/directors/019cfc62-88ed-730b-81a1-1bacf7057c8f
+    file_url: https://fmbn.gov.ng/images/chairman_fmbn.jpg
+    sha256: 6ac02cc939b220f8d252d471c491d1cfb7ba91664f98de37a8c08b0048c05ac9
+    retrieved: '2026-11-14'
+    crop: [230, 0, 623, 623]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the board page names him, former Kano Deputy Governor; seat and name checked (overnight round)
+  - candidate_id: feb-2027-governor-kebbi-adc
+    source: "Presidential Advisory Committee Against Corruption website"
+    file_page: https://pacac.gov.ng/speaker/abubakar-malami-san-2/
+    file_url: https://pacac.gov.ng/pac/wp-content/uploads/2017/03/ABUBAKAR-MALAMI-SAN.png
+    sha256: 82de2c6ec5e5dd66e3b9188e2a73c1b64505167e748cc9b304ed81b1766c3062
+    retrieved: '2026-11-14'
+    crop: [185, 20, 583, 583]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the page names him, born in Birnin Kebbi; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-north-lp
+    source: "Nigerian Communications Commission website"
+    file_page: https://ncc.gov.ng/ministers-communication
+    file_url: https://ncc.gov.ng/sites/default/files/2024-12/D1C3_1.jpg
+    sha256: 0154c00d1a8177b005fcbb3dd1fdd056c91b0f9019d37a2edec816b9eba1bced
+    retrieved: '2026-11-14'
+    crop: [140, 20, 500, 500]
+    official_checked: '2026-11-15'  # INEC M, 64, fits the photo; the past-ministers page names him, from Nasarawa; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-abia-umuahia-east-lp
+    source: "Abia State House of Assembly website"
+    file_page: https://hoa.ab.gov.ng/office-of-the-deputy-speaker/
+    file_url: https://hoa.ab.gov.ng/wp-content/uploads/2025/12/RT.-HON.-AUGUSTINE-OKEZIE-MEREGINI.png
+    sha256: b8f30362e752edbe63caf4cbc04a4de43072c9202dc97a3722011a3c3ad3cd6d
+    retrieved: '2026-11-15'
+    crop: [54, 0, 525, 525]
+    official_checked: '2026-11-15'  # INEC M, 50, fits the photo; the Assembly names them Deputy Speaker, member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-governor-nasarawa-lp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Gbefwi-Gaza-Jonathan.jpg
+    sha256: 8f90555aaae915e322c96a470daeda8376658cc891c184b09dcbcf35bb9e2bba
+    retrieved: '2026-11-15'
+    crop: [2, 1, 535, 535]
+    official_checked: '2026-11-15'  # INEC M, 51, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-abia-aba-north-aba-south-lp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Ikwechegh-Alexander-mascot.jpg
+    sha256: c1952fffe0201a1d3b469b402db3016e687110f4d71d5c62235df9e33c15adac
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 46, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-abia-arochukwu-ohafia-lp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Osonwa-Okwara-Ibe.jpg
+    sha256: 741d6d21e16ef267e372096c3a140bd50ca58917a49ee3da4018b0ce18ffbbba
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 51, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-abia-obingwa-ugwunagbo-osisioma-app
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2026/06/No-2-HOUSE-OF-REP.jpg
+    sha256: 215e1065db3043cdb57ba5d1880b991f06ead47675944a21ac18d21d25620d9b
+    retrieved: '2026-11-15'
+    crop: [0, 0, 1000, 1000]
+    official_checked: '2026-11-15'  # INEC M, 65, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-adamawa-maiha-mubi-north-mubi-south-lp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Magaji-Jaafar-Abubakar.jpg
+    sha256: 19cd8f19421c3f7e2d79676d66f3bbbb2e105930380f201a3706b625a11f0868
+    retrieved: '2026-11-15'
+    crop: [0, 0, 520, 520]
+    official_checked: '2026-11-15'  # INEC M, 46, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-anambra-awka-north-awka-south-ndc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Orugbo-Obiageli.jpg
+    sha256: 145c92baadae256e21569628220698aed00ca6545edbfb2b024dfaecb4a00707
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC F, 53, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-anambra-ogbaru-ndc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Ogene-Victor-Afamefuna.jpg
+    sha256: 7d4a5771648d3ca9898223cb73613dfb1019ac9cf40777479e6d9a53318b8b24
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-anambra-oyi-ayamelum-apga
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Gwacham-Maureen-Chinwe.jpg
+    sha256: 4f2ea28fae54975d08473b4feec743c825d19a1e3bc7a8884e016812e3c56ebb
+    retrieved: '2026-11-15'
+    crop: [98, 0, 388, 388]
+    official_checked: '2026-11-15'  # INEC F, 51, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-bauchi-jama-are-itas-gadau-prp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Rabilu-Bala.jpg
+    sha256: 9746e4e6d3b838562e947489b7ed08003dccf22163cedbc29a817faa017e3f2a
+    retrieved: '2026-11-15'
+    crop: [79, 26, 470, 470]
+    official_checked: '2026-11-15'  # INEC M, 52, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-borno-askira-uba-hawul-a
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Midala-Usman-Balami.jpg
+    sha256: c848772c3307af4666e6b165cdff964cf1ff984b27c46663649e31a65f3d5285
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-cross-river-calabar-municipal-odukpani-pdp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Akiba-Bassey-Ekpenyong.jpg
+    sha256: b6e08f8010fcfb9ba9a676b951d6627d5945c1c98496bf3862bcdf93c9e2cea9
+    retrieved: '2026-11-15'
+    crop: [0, 0, 535, 535]
+    official_checked: '2026-11-15'  # INEC M, 56, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-fct-municipal-bwari-a
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Obika-Joshua-Chinedu.jpg
+    sha256: e2d0287db3661ea99215165192110fdde56244a8039a85f6f74361c182a713be
+    retrieved: '2026-11-15'
+    crop: [50, 0, 390, 390]
+    official_checked: '2026-11-15'  # INEC M, 52, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-gombe-kaltungo-shongom-pdp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Shehu-Obed-Paul.jpg
+    sha256: 79a8609d4924f0cc3c674ce7c2d2eb803ab31d1683974bd2342f201bbabf8441
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 58, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-imo-ideato-north-ideato-south-app
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Ikeagwuonu-Onyinye-Ugochinyere-Michael.jpg
+    sha256: ccf8a647852794ea7021bac418713b739cafa787fdf12ad6a97d330ccfa372d3
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kaduna-ikara-kubau-adc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Aliyu-Mustapha-Abdullahi.jpg
+    sha256: 87b5ab589322cbf4244aa1fba08778adbca57540f4eaf66d210f7a9335a7285f
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 42, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kaduna-kaduna-north-adc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Bello-Mohammed-El-Rufai.jpg
+    sha256: 5e65785cecc32246199a6f6771d4fe7b498df2f729df2120a264018be82a2599
+    retrieved: '2026-11-15'
+    crop: [102, 14, 273, 273]
+    official_checked: '2026-11-15'  # INEC M, 38, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kebbi-argungu-augie-adc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Sani-Yakubu-Noma.jpg
+    sha256: 72145a984ef6d36b62e5ec48989e76bedfb768106059588852fa9e1d7306f8c6
+    retrieved: '2026-11-15'
+    crop: [29, 12, 511, 511]
+    official_checked: '2026-11-15'  # INEC M, 55, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-lagos-ojo-ndc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Oluwaseyi-Ayopo-Sowunmi.jpg
+    sha256: 48fb0326c90b2aabc8a1c2558e629ebc10e1b01999c53d4caf044fe7ce47c09a
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 53, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-lagos-oshodi-isolo-ii-ndc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Jesse-Okeyjoe-Onuakalusi-1.jpg
+    sha256: 64886141990a879ca12f3f8148f5b0a174049e384e123a420999394ab81275fd
+    retrieved: '2026-11-15'
+    crop: [60, 0, 405, 405]
+    official_checked: '2026-11-15'  # INEC M, 54, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-osun-ayedaade-irewole-isokan-a
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Oladebo-Lanre-Olomololaye.jpg
+    sha256: c171f3128a17dee03bad5436726272527c3b775e327a82afed5739f7ebb7952d
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 48, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-osun-boluwaduro-ifedayo-ila-a
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Akanni-Clement-Ademole.jpg
+    sha256: 240486ac8f61e9b6199e1bcf5db038692500337a85b3b13ed91d625a7b81832a
+    retrieved: '2026-11-15'
+    crop: [33, 0, 494, 494]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-osun-irepodun-olorunda-osogbo-orolu-a
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Adewale-Morufu-Adebayo.jpg
+    sha256: b8c977ccbe3c7e78e49bddc0e05599cff02c25a7b123e53785080a497b79df57
+    retrieved: '2026-11-15'
+    crop: [95, 30, 360, 360]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-oyo-ibarapa-central-ibarapa-north-apm
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Adepoju-Anthony-Adebayo.jpg
+    sha256: 3b271977c5fde7c24a42fb849e36bcbd81cd95f97bc7fa3f17ec306a3c333d75
+    retrieved: '2026-11-15'
+    crop: [20, 35, 410, 410]
+    official_checked: '2026-11-15'  # INEC M, 49, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-oyo-iseyin-itesiwaju-kajola-iwajowa-apm
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Oyedeji-Najimdeen-Oyeshina.jpg
+    sha256: 9094c98fda706f94574b5b68bcfc0b60dc6218c8ecf3bc98dcf247670c0eaf05
+    retrieved: '2026-11-15'
+    crop: [0, 0, 501, 501]
+    official_checked: '2026-11-15'  # INEC M, 55, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-rivers-akuku-toru-asari-toru-app
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Goodhead-Boma.jpg
+    sha256: 537477fd23a69f0998982ed112f74beaec55c84f1c8267e4ed5e51db1979d7c3
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC F, 55, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-rivers-port-harcourt-i-ndc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Umezuruike-Manuchim.jpg
+    sha256: d4f250c3dbbd9472550d219c5d49ad14546df2ac809ab7766c5a2be7e1f051d2
+    retrieved: '2026-11-15'
+    crop: [40, 0, 460, 460]
+    official_checked: '2026-11-15'  # INEC M, 51, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-sokoto-goronyo-gada-adc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Bashir-Usman-Gorau.jpg
+    sha256: cd6edee69113deade57ae97ea07c3ceb51e60bf4bfe1de4cd3887d0cf247119d
+    retrieved: '2026-11-15'
+    crop: [110, 43, 321, 321]
+    official_checked: '2026-11-15'  # INEC M, 37, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-sokoto-yabo-shagari-adc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Yusuf-Umar-Yabo.jpg
+    sha256: c722fa362ffef6e66fdcf73c6f26e9667a54748ef3bf355393bdeb48c4dafde7
+    retrieved: '2026-11-15'
+    crop: [67, 26, 417, 417]
+    official_checked: '2026-11-15'  # INEC M, 40, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-anambra-anambra-north-ndc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Tony-Nwoye.png
+    sha256: 675e55e85b4ecec48ce7c0306c9769023c4caa8bc0e815eb507813f2ba76d33c
+    retrieved: '2026-11-15'
+    crop: [0, 0, 480, 480]
+    official_checked: '2026-11-15'  # INEC M, 51, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-akwa-ibom-abak-etim-ekpo-ika-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Inemesit-Clement.jpg
+    sha256: b073f31385b738f4785c9f042d247652670808fa1d76e291649b0ac621c78545
+    retrieved: '2026-11-15'
+    crop: [60, 6, 429, 429]
+    official_checked: '2026-11-15'  # INEC M, 47, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-akwa-ibom-ikot-abasi-mkpat-enin-eastern-obolo-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Odudoh-Uduak-Alphosus.jpg
+    sha256: 19e8ccdd90443625d6a3000272416cab639773561e6361e641a315e8fee598a9
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 50, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-akwa-ibom-ikot-ekpene-essien-udim-obot-akara-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Patrick-Umoh.jpg
+    sha256: 84fc58b6c56e549a56bbf7c5c6e3585519be64f7b0c7d1f137009657710330f2
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-akwa-ibom-itu-ibiono-ibom-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Okon-Ime-Bassey.jpg
+    sha256: c6b9b5ced1ed73d775d625a09d137db385f388961d504df02009e190c7b027b2
+    retrieved: '2026-11-15'
+    crop: [84, 0, 386, 386]
+    official_checked: '2026-11-15'  # INEC M, 66, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-akwa-ibom-oron-mbo-okobo-udung-uko-urue-offong-oruko-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2026/06/NO-19-HOUSE-OF-REP.jpg
+    sha256: dbe7a66cec71557a9be64dd7fdb3d94a3b7b7200651ad0c0896709d8c5e0c7a7
+    retrieved: '2026-11-15'
+    crop: [173, 46, 744, 744]
+    official_checked: '2026-11-15'  # INEC M, 40, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-bauchi-alkaleri-kerfi-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Kabiru-Yusuf-Alhaji-1.jpg
+    sha256: acc07bdf1db12d1c49f7680375d7d5129239bc87fef2471718d5af8cc8ed307f
+    retrieved: '2026-11-15'
+    crop: [12, 0, 528, 528]
+    official_checked: '2026-11-15'  # INEC M, 43, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-bauchi-bogoro-dass-tafawa-balewa-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Leko-Jafaru-Gambo.jpg
+    sha256: e3ece240663c9692804f15343efb083f72fa19ce474d533c247c63ec4ba503f3
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 50, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-bauchi-toro-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Dabo-Ismalia-Haruna.jpg
+    sha256: aa68499bef736a60ea47db1683759eec977bae7ea2c2c15f0507421170146517
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-bayelsa-yenagoa-kolokuna-opokuma-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Obuku-Abonsizibe-Oforji.jpg
+    sha256: 3f0c10717627fa6341efead03f5a78d407434dfa8a64256a2259c79dfbc332e8
+    retrieved: '2026-11-15'
+    crop: [69, 4, 355, 355]
+    official_checked: '2026-11-15'  # INEC M, 48, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-benue-buruku-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-SekavDzua-Iyortyom.jpg
+    sha256: 11df62692675d970983b597c1d18b7cf3127580b50cccb8e52a441acf96653b3
+    retrieved: '2026-11-15'
+    crop: [70, 20, 320, 320]
+    official_checked: '2026-11-15'  # INEC M, 62, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-benue-gboko-tarka-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Regina-Akume.jpg
+    sha256: 01897a0b09579b00c17e4af6d47f1dd33f2b890bd0ad6c4a9aa08557c67b6cfb
+    retrieved: '2026-11-15'
+    crop: [46, 46, 494, 494]
+    official_checked: '2026-11-15'  # INEC F, 71, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-benue-katsina-ala-ukum-logo-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Prince-Solomon-Wombo.jpg
+    sha256: 2bce47d5d83c44222d86683c7047e1c3f8ed014694d759f80a929bdea3e268b3
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 61, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-benue-konshisha-vandeikya-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Sesoo-Gboko-Ikpagher.jpg
+    sha256: 53c98516da6e48652636d914a4871f40c1377ad6623d522639f204b4c2a35a2a
+    retrieved: '2026-11-15'
+    crop: [4, 0, 403, 403]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-benue-kwande-ushongo-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Ugbor-Terseer.jpg
+    sha256: b114f74ad109e7f8f21d1e2b169e8665e984f94b49c00f55831989fa8679665a
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 45, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-borno-jere-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Satomi-Alhaji-Ahmad.jpg
+    sha256: 1d7413f0ace3efaab83045b65dffdf493d8ac70a0072cfad019a7cfb10f32989
+    retrieved: '2026-11-15'
+    crop: [20, 0, 338, 338]
+    official_checked: '2026-11-15'  # INEC M, 45, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-cross-river-boki-ikom-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Abang-Victor-Bisong.jpg
+    sha256: 258bb430bc29a9bb3b34a070f7d2320f534b06419e6856fb9e967bbace205065
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-cross-river-obanliku-obudu-bekwarra-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Peter-Akpanke-Atianashie.jpg
+    sha256: 89abc4fbc5c803671a33d6c03d28ffc1fac7569c7a7e17bb26c99c914b722f3b
+    retrieved: '2026-11-15'
+    crop: [170, 0, 365, 365]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-ebonyi-abakaliki-izzi-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Uguru-Emmanuel.jpg
+    sha256: c65e510a82ee18e10a795314a3d4f35271f26be32e63dcd4df9bb8f894d51e47
+    retrieved: '2026-11-15'
+    crop: [0, 0, 479, 479]
+    official_checked: '2026-11-15'  # INEC M, 66, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-edo-esan-north-east-esan-south-east-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Okojie-Henry-Odianosen.jpg
+    sha256: 2d80366c3a6b82c69eb6000e103a197d09075a5ce49816362e28b7cd648dd673
+    retrieved: '2026-11-15'
+    crop: [111, 67, 316, 316]
+    official_checked: '2026-11-15'  # INEC M, 47, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-edo-ovia-north-east-ovia-south-west-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/10/Hon-Omosede-Gabriella-Igbinedion1.jpg
+    sha256: cdb74b15b142096233c29e245800766a85bfad0dfb6d307920ad83138a3bc9df
+    retrieved: '2026-11-15'
+    crop: [4, 0, 614, 614]
+    official_checked: '2026-11-15'  # INEC F, 45, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-ekiti-ikole-oye-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Akintunde-Rotimi-Jr.jpg
+    sha256: 5ab5551614a87c1d95d4a583aca105e77497382a25e0976b7e965ed2c3955a04
+    retrieved: '2026-11-15'
+    crop: [44, 0, 456, 456]
+    official_checked: '2026-11-15'  # INEC M, 45, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-enugu-enugu-north-enugu-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Atu-Chimaobi-Sam.jpg
+    sha256: 9508c52c6d4a44f78ae9af9c18f88495a4853a8a85150caa12b927651310472d
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 44, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-enugu-nsukka-igbo-eze-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Obetta-Mark-Chidi.jpg
+    sha256: 222dcac1f188e47eb0bb3c4ad4936389aae6cb1d192bb1ed0fdba0b12786015f
+    retrieved: '2026-11-15'
+    crop: [80, 0, 386, 386]
+    official_checked: '2026-11-15'  # INEC M, 48, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-gombe-yamaltu-deba-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Garba-Inuwa-Yamaltu.jpg
+    sha256: ed6a0b789a336ebf1db9ac3a7c23fdbe7f2a88f7b612d1345372265459ed2ff6
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 57, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-imo-ikeduru-mbaitoli-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon.-Amadi-Akarachi.jpg
+    sha256: dc7a5cda9e37dfd355e0ce1f5014e75cabbb9e79b48199dd8a9512d999cacd4f
+    retrieved: '2026-11-15'
+    crop: [113, 0, 321, 321]
+    official_checked: '2026-11-15'  # INEC M, 31, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-imo-oguta-ohaji-egbema-oru-west-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Dibiagwu-Eugene-Okechukwu.jpg
+    sha256: 5c01048dbcd8739d6f75e767cf562b0c7ea6ed6f0cc539055761c1211aae4dd9
+    retrieved: '2026-11-15'
+    crop: [8, 0, 463, 463]
+    official_checked: '2026-11-15'  # INEC M, 54, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-imo-owerri-municipal-owerri-north-owerri-west-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Okere-Tochukwu-Chinedu.jpg
+    sha256: 8261d0fc072b05a4b86bbfd542ef4d75313d55f05d45de228d353631c9aa4597
+    retrieved: '2026-11-15'
+    crop: [37, 0, 501, 501]
+    official_checked: '2026-11-15'  # INEC M, 51, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kaduna-chikun-kajuru-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/10/Hon-Felix-Chikun-Kajuru-1.jpg
+    sha256: 6d53773b4313007017a694ca9345f6559d2489ecc251c0e4f2c36423ab169f5d
+    retrieved: '2026-11-15'
+    crop: [32, 0, 352, 352]
+    official_checked: '2026-11-15'  # INEC M, 38, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kaduna-jema-a-sanga-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Amos-Daniel.jpg
+    sha256: ed1bbb7f613f512e38efc6efad304f073a9c66a45d807c63201b0af8fdc485c5
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 56, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kaduna-kauru-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Chawai-Mukhtar-Zakari.jpg
+    sha256: 58cdf518d5eab5f6e5576e3a160cc30da4e5005098adf0b0d34fce7209f2bc25
+    retrieved: '2026-11-15'
+    crop: [46, 8, 427, 427]
+    official_checked: '2026-11-15'  # INEC M, 48, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kaduna-sabon-gari-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Abdullahi-Sadiq-Ango.jpg
+    sha256: 309b6792b0397fe48545c0bcc8f21c975863d327162a127ccb6282b866d14810
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 43, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-albasu-gaya-ajingi-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Mustapha-Tijjani-Ghali.jpg
+    sha256: 284dd1e6cebf6defe0c0adbc25a3ec5811b9e91426e8351f89938d392168f197
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 46, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-bebeji-kiru-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/representative-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Jibrin-Abdulmumin.jpg
+    sha256: d178a6613385d651697ac472c4344069a0fe8dc7ee81f124983cd22bee3a46b2
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 49, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-dala-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Madaki-Aliyu-Sani.jpg
+    sha256: 777e0b71dda299404934bbc1f6a9df14a218b0da84b0559c31df3505071e1edf
+    retrieved: '2026-11-15'
+    crop: [99, 27, 388, 388]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-dambatta-makoda-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Ibrahim-Hamisu-Chidari-Engr-1.jpg
+    sha256: 0c217558a4281a17e6c0137519e3dd2988780b2911b38fa1fa71a249692e1665
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 65, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-fagge-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Shehu-Muhammed-Bello.jpg
+    sha256: 3c29f0bc722ca6c4aa2c3beee294c111e12beb90fe05b60d28828c07638c6b5d
+    retrieved: '2026-11-15'
+    crop: [0, 0, 653, 653]
+    official_checked: '2026-11-15'  # INEC M, 42, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-gwale-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Mohammed-Garba-Ibrahim.jpg
+    sha256: 76a148aa7171e3752e8d82a6dda9d5daac86e41957fa2b26c3d036c06ae6a0b0
+    retrieved: '2026-11-15'
+    crop: [22, 0, 439, 439]
+    official_checked: '2026-11-15'  # INEC M, 68, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-kumbotso-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Dankawu-Idris.jpg
+    sha256: e0229657d0ca3863d37d5a274828506cfc72686b799752167337949ba67311ff
+    retrieved: '2026-11-15'
+    crop: [119, 20, 326, 326]
+    official_checked: '2026-11-15'  # INEC M, 48, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-municipal-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Koki-Sagir-Ibrahim.jpg
+    sha256: f9e969deba38f9e2041fb76e8c44951a7627733c7908f9b4818de7a717c46aba
+    retrieved: '2026-11-15'
+    crop: [0, 0, 725, 725]
+    official_checked: '2026-11-15'  # INEC M, 63, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-rano-bunkure-kibiya-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Alhassan-Kabiru-Usman-Rurum.jpg
+    sha256: ef21d00d9f3ebb533613b8bdec5da2e8cdc934dcc433967181d3fb7c072463f7
+    retrieved: '2026-11-15'
+    crop: [47, 11, 379, 379]
+    official_checked: '2026-11-15'  # INEC M, 56, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kano-sumaila-takai-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Yusuf-Rabiu.jpg
+    sha256: 8f7cc6d84cb5b4543cc8b65adaf0d6d889ff3e4fa39bc6ef88acc074694174cd
+    retrieved: '2026-11-15'
+    crop: [33, 0, 355, 355]
+    official_checked: '2026-11-15'  # INEC M, 50, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-katsina-malumfashi-kafur-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Muhammad-Aminu-Ibrahim.jpg
+    sha256: f08f6471d893f76c5b1338471d00fec197465ff7ebf509966f2bddeba8536ef1
+    retrieved: '2026-11-15'
+    crop: [100, 10, 330, 330]
+    official_checked: '2026-11-15'  # INEC M, 58, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kebbi-koko-besse-maiyama-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Garba-Salisu-Koko.jpg
+    sha256: 6fb8dd6ea93c293d854578d00df9cf83f8be2823d6651bd0d69efeabdeb4ac0f
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 62, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-kogi-ankpa-omala-olamaboro-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Abdullahi-Ali-Ibrahim.jpg
+    sha256: 869a0cf6ead21653f64216d0ab5420ec4ea03e4a62787f82167084f7f5ef5f56
+    retrieved: '2026-11-15'
+    crop: [88, 29, 312, 312]
+    official_checked: '2026-11-15'  # INEC M, 62, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-lagos-mushin-ii-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Fayinka-Moses-Oluwatoyin.jpg
+    sha256: cb3cd7c524c52d7c53e25a3ae9273bcee0943d7bbf604a4b907a8ed0c9b50c68
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-lagos-surulere-i-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Fuad-Kayode-Laguda.jpg
+    sha256: 199f0b09bb298c73e3ccbad891ca3b5b8ddcfb1733f66b061e5e6b01b49f22ce
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 49, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-ogun-egbado-north-imeko-afon-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Isiaka-Nasiru-Adeboyega.jpg
+    sha256: a634bc4948ca2e024011b5829476b617da4f8cfc2492202b9a7a857bdf249ffb
+    retrieved: '2026-11-15'
+    crop: [5, 5, 535, 535]
+    official_checked: '2026-11-15'  # INEC M, 64, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-ondo-akoko-north-east-akoko-north-west-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Ifeoluwa-Babajide-Ehindero.jpg
+    sha256: f38018e3d4c1334762b0aa0743f07f83dfb9ddc9d248ba85e0c25cb31d39d309
+    retrieved: '2026-11-15'
+    crop: [150, 0, 390, 390]
+    official_checked: '2026-11-15'  # INEC M, 40, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-plateau-barkin-ladi-riyom-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Fom-Daiyop-Chollom.jpg
+    sha256: 123b5ac71ebd589112e7640b4823de89e1c75819605eee268d31ebd1d8b9dd25
+    retrieved: '2026-11-15'
+    crop: [91, 49, 338, 338]
+    official_checked: '2026-11-15'  # INEC M, 63, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-plateau-bokkos-mangu-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Lalu-Ishaya-David.jpg
+    sha256: 6151168b21fb69d163e31d5eff5f1f0984299cda826e056ab9479ed2ea195ee2
+    retrieved: '2026-11-15'
+    crop: [35, 97, 410, 410]
+    official_checked: '2026-11-15'  # INEC M, 43, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-rivers-ahoada-west-ogba-egbema-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Obuzor-Victor-Chukwuemuele-Amadi.jpg
+    sha256: 23c2d63023eb87e69ac530440374f9088ef7b249899bc721dc248742e6f6a782
+    retrieved: '2026-11-15'
+    crop: [33, 0, 470, 470]
+    official_checked: '2026-11-15'  # INEC M, 49, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-sokoto-dange-shuni-bodinga-tureta-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Nasiru-Shehu-Bodinga.jpg
+    sha256: 5bb01b5d4c877a48bb06086f89a32c85c0cf5a5cd173ed79e34f081acca951fd
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 46, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-sokoto-isa-sabon-birni-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Mohammed-Saidu.jpg
+    sha256: f56681b3c28af0be5dd3554c69283037ed7cac8741c3a1f663b805280a7df9fc
+    retrieved: '2026-11-15'
+    crop: [133, 72, 295, 295]
+    official_checked: '2026-11-15'  # INEC M, 63, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-taraba-bali-gassol-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Jaafaru-Chiroma-Yakubu.jpg
+    sha256: da4ee9f499d94a5756a06460329ada3a9ff9d732b125717f5f034b429c502dae
+    retrieved: '2026-11-15'
+    crop: [200, 40, 340, 340]
+    official_checked: '2026-11-15'  # INEC M, 49, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-taraba-ibi-wukari-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Zaku-Ayuba-Aboki-Dampar.jpg
+    sha256: fb427b3db062190ed2477c2849f649eaae4033438bdb04374eff74e9225f6abf
+    retrieved: '2026-11-15'
+    crop: [69, 60, 424, 424]
+    official_checked: '2026-11-15'  # INEC M, 68, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-taraba-jalingo-yorro-zing-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Sadiq-Abbas-Tafida.jpg
+    sha256: ad1dc7b877dca87a0cefef2978aecce6bb2c33e91377eaba7970025a2b744fdc
+    retrieved: '2026-11-15'
+    crop: [97, 11, 338, 338]
+    official_checked: '2026-11-15'  # INEC M, 35, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-taraba-takum-donga-ussa-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Useni-Mark-Bako.jpg
+    sha256: 36172a9b39808faf68bc3f184395f25040d1b20415e62b7f89630332b1148b6a
+    retrieved: '2026-11-15'
+    crop: [26, 0, 460, 460]
+    official_checked: '2026-11-15'  # INEC M, 57, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-yobe-bade-jakusko-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Jakduwa-Hassan-Kaikaku.jpg
+    sha256: f130027d43186bc6fd7f83b34f99a68ebdc11c9ed9136eb80c732c44e436aedf
+    retrieved: '2026-11-15'
+    crop: [27, 0, 513, 513]
+    official_checked: '2026-11-15'  # INEC M, 66, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-zamfara-anka-talata-mafara-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Mohammed-Isa-Anka.jpg
+    sha256: b3091f50475df8830ea395f3008bca7f20c3d3da2e9f20f5cc0bc9b6a43c8b05
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 66, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-zamfara-gummi-bukkuyum-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Abubakar-Suleiman-Gummi.jpg
+    sha256: 97aa60c0f0d4c51d91f3fe3275af6f56a74917cc783abbcd14530fa4cd2e2c52
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 52, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-zamfara-gusau-tsafe-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Amadu-Kabiru.jpg
+    sha256: a58d2e9f671f941510a7ef9d51dca06c4540daf1fb8f5375203579e79fb01349
+    retrieved: '2026-11-15'
+    crop: [0, 0, 511, 511]
+    official_checked: '2026-11-15'  # INEC M, 42, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-house-zamfara-shinkafi-zurmi-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Hassan-Bello-Shinkafi.jpg
+    sha256: fe91083524aff55e84526e8f4f28b15efaad7cbf7892b5192556f7d70afd1b7d
+    retrieved: '2026-11-15'
+    crop: [128, 40, 357, 357]
+    official_checked: '2026-11-15'  # INEC M, 56, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-akwa-ibom-akwa-ibom-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Akpan-Ekpong.png
+    sha256: fd6d864c76f2cf197abf5475217080c7eef2e1f070f1f6352706a0e34cec2d8e
+    retrieved: '2026-11-15'
+    crop: [76, 0, 427, 427]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-bayelsa-bayelsa-central-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Benson-Konbowei.png
+    sha256: d2b3816dce3bf802e2856c8011b1b43bacc13e445cfed952ea58e4b5ab893148
+    retrieved: '2026-11-15'
+    crop: [48, 0, 379, 379]
+    official_checked: '2026-11-15'  # INEC M, 64, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-benue-benue-north-east-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Udende-Emmanuel.png
+    sha256: eee110ba8b3be0ddc3d865664a120af2be53e18e7c78f4f3d1d53565becd5906
+    retrieved: '2026-11-15'
+    crop: [120, 20, 380, 380]
+    official_checked: '2026-11-15'  # INEC M, 65, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-delta-delta-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Joel-Onowakpo-Ewomazino.png
+    sha256: c0df713f8fd4cad366f6b084ed702374db4f995ced9b6d5caa0d4d7fe1a73639
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 59, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-ebonyi-ebonyi-north-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Nwebonyi-Onyeka.png
+    sha256: fc885c5e6b3912862bcdb6153ac01b97b49321c9ced7327830d8cd3dfd1ede8e
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 45, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-ebonyi-ebonyi-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Anthony-Okorie.png
+    sha256: 8dddf714ea2fcc5b47a65040c4eaa147a73c0fb696193cf18ba4f9acb15760b6
+    retrieved: '2026-11-15'
+    crop: [47, 45, 487, 487]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-edo-edo-central-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/10/Senator-Joseph-Ikpea1.jpg
+    sha256: 2c07ab1ede0576fff6b11a1de11336b0148c09228c44c6612a28a49b41a1b9b9
+    retrieved: '2026-11-15'
+    crop: [0, 0, 681, 681]
+    official_checked: '2026-11-15'  # INEC M, 64, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-ekiti-ekiti-north-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/members-of-the-senate/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Fasuyi-Oluwole.png
+    sha256: db26215d6e5d28c16725299f7812f227211c0a2a33c28721c056b1995a82f92d
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 61, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Nalaraba-Abubakar-Hassan.jpg
+    sha256: f7c31c54bc448974cd32127c87861458da3668dc2d2c78364c7ebcc021dda7e1
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 50, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-dambam-dagauda-jalam-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Ahmed%20Mohammed%20Garba.PNG
+    sha256: f0465852dd2cb0e156bd1f0871ed235b5822a38644abd07dabc66aaf8e50f72e
+    retrieved: '2026-11-15'
+    crop: [71, 14, 297, 297]
+    official_checked: '2026-11-15'  # INEC M, 53, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-duguri-gwana-alkaleri-ii-pdp
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Bala%20Abdullahi%20Dan.PNG
+    sha256: 2045347288b809c28283bf7200eee6514ff1d8a1a0a1c1a04c5d74fa5d1da2d9
+    retrieved: '2026-11-15'
+    crop: [110, 20, 400, 400]
+    official_checked: '2026-11-15'  # INEC M, 53, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-gamawa-gamawa-ii-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Bello%20Sarkin%20Jadori.PNG
+    sha256: 23484683fcc68e231f43c4e8280f87535d7cebc711fe36162c1eba02b330bb59
+    retrieved: '2026-11-15'
+    crop: [115, 18, 266, 266]
+    official_checked: '2026-11-15'  # INEC M, 61, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-giade-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Adamu%20Salihu%20Abubakar.png
+    sha256: e69d40999326643a1a507e349a4aa10c1a5f8eda21143a6e1d83d93a788a3adb
+    retrieved: '2026-11-15'
+    crop: [156, 11, 602, 602]
+    official_checked: '2026-11-15'  # INEC M, 49, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-hardawa-misau-ii-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Babayo%20Mohammed%20Akuyam.PNG
+    sha256: a3a5a315813d9f658548d18b042fe21cae9a87cba169ac8487e5fcba65ededf9
+    retrieved: '2026-11-15'
+    crop: [90, 0, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 69, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-madara-chinade-katagum-ii-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Ala%20Nasiru%20Ahmed.PNG
+    sha256: fb34b2bb7b05b72e32087f127f6770d3403852551a391d6dfd596df4633c5d0d
+    retrieved: '2026-11-15'
+    crop: [83, 0, 343, 343]
+    official_checked: '2026-11-15'  # INEC M, 47, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-pali-alkaleri-i-apc
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Garba%20Aminu.PNG
+    sha256: 7ddc21123a585f0546f202ccdd65f46b41591df1d6c160b3731f0e6ff3f99134
+    retrieved: '2026-11-15'
+    crop: [113, 27, 288, 288]
+    official_checked: '2026-11-15'  # INEC M, 43, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-sakwa-zaki-i-apm
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Wanzam%20Mohammed.PNG
+    sha256: 1711a8fd321cc432dc11fe2f467da242cc3e309d986f1d4dd1fed04ac74032e8
+    retrieved: '2026-11-15'
+    crop: [36, 0, 447, 447]
+    official_checked: '2026-11-15'  # INEC M, 63, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-bauchi-udubo-gamawa-i-apc
+    source: "Bauchi State House of Assembly website"
+    file_page: https://www.hoa.bu.gov.ng/
+    file_url: https://www.hoa.bu.gov.ng/img/members/10thassembly/Hon.%20Ahmed%20Mohammed%20Lele.PNG
+    sha256: 376f4adb26861bb5a90f5942d9237d8545149e61cef355d721fa66f6310e2bbb
+    retrieved: '2026-11-15'
+    crop: [96, 0, 399, 399]
+    official_checked: '2026-11-15'  # INEC M, 43, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-ekiti-efon-apc
+    source: "Ekiti State House of Assembly website"
+    file_page: https://hoa.ek.gov.ng/members
+    file_url: https://hoa.ek.gov.ng/assets/image/team/HON%20OLOWOOKERE%20BOSEDE%20YINKA.jpg
+    sha256: 1f59f5b7200c5b98b0071b38484bcbaf457c92dd6692513209a5d388373c82f7
+    retrieved: '2026-11-15'
+    crop: [110, 0, 480, 480]
+    official_checked: '2026-11-15'  # INEC F, 48, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-ekiti-ekiti-east-i-apc
+    source: "Ekiti State House of Assembly website"
+    file_page: https://hoa.ek.gov.ng/members
+    file_url: https://hoa.ek.gov.ng/assets/image/team/HON%20OGUNSAKIN%20OLADELE%20OLAOYE.jpg
+    sha256: 937d87686e490f64018d070aa8e5a8a27e3a934b74540b90e3eeb5d8398b5c08
+    retrieved: '2026-11-15'
+    crop: [100, 0, 480, 480]
+    official_checked: '2026-11-15'  # INEC M, 52, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-ekiti-ekiti-west-ii-apc
+    source: "Ekiti State House of Assembly website"
+    file_page: https://hoa.ek.gov.ng/members
+    file_url: https://hoa.ek.gov.ng/assets/image/team/HON%20BODE-ADEOYE%20OYEKOLA%20JOHNSON.jpg
+    sha256: af920e72e15dc6f82336b5ad9248e1141a2c3744287ce786ce85420a51b903e0
+    retrieved: '2026-11-15'
+    crop: [90, 40, 480, 480]
+    official_checked: '2026-11-15'  # INEC M, 47, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-ekiti-ido-osi-ii-apc
+    source: "Ekiti State House of Assembly website"
+    file_page: https://hoa.ek.gov.ng/members
+    file_url: https://hoa.ek.gov.ng/assets/image/team/HON-AYORINDE-EBENEZER-OLUWAYOMI.jpg
+    sha256: dbdf26b5bf05b237d9fc5649ddc5d9e6e01b6462e341d12d168e8f66cf6d3492
+    retrieved: '2026-11-15'
+    crop: [0, 0, 3600, 3600]
+    official_checked: '2026-11-15'  # INEC M, 55, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-sha-ekiti-ise-orun-apc
+    source: "Ekiti State House of Assembly website"
+    file_page: https://hoa.ek.gov.ng/members
+    file_url: https://hoa.ek.gov.ng/assets/image/team/HON%20OMOTAYO%20BABATUNDE%20EMMANUEL.jpg
+    sha256: 523bbff398983863567c1d1af54a700e511d46af3ab18969b77ce5e1c19afbbf
+    retrieved: '2026-11-15'
+    crop: [100, 0, 480, 480]
+    official_checked: '2026-11-15'  # INEC M, 38, fits the photo; the Assembly names them as the member for this seat; seat and name checked (overnight round)
+  - candidate_id: feb-2027-governor-nasarawa-apm
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Onawo-Mohammed.png
+    sha256: dba8a0925d22fcb513e7c2fdedcce8073bc33626eedfde8f404829bf5ee4eabf
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 74, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-kaduna-kaduna-north-adc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Khalid-Ibrahim.png
+    sha256: ba2b02401053ff1a10a75a9f592434e347553525dae5d26a4ba0882d6190b83a
+    retrieved: '2026-11-15'
+    crop: [128, 14, 391, 391]
+    official_checked: '2026-11-15'  # INEC M, 61, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-kebbi-kebbi-south-adc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Musa-Maidoki.png
+    sha256: 07415b83603c742bfff01f1d3b09bb4dfb66f2845e98fd252d2350d9f8a1434f
+    retrieved: '2026-11-15'
+    crop: [56, 0, 458, 458]
+    official_checked: '2026-11-15'  # INEC M, 65, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-osun-osun-central-pdp
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Fadeyi-Oluwole.png
+    sha256: bfe548ae5206c058cf0111d41666e4efb9f5b429e818bd92b3d5b5610365476d
+    retrieved: '2026-11-15'
+    crop: [180, 0, 330, 330]
+    official_checked: '2026-11-15'  # INEC M, 57, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-enugu-enugu-west-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Ngwu-Osita.png
+    sha256: 9d2663f60871d5ef78c5b31185de64014cad7dbd2b78ea2909d7def1b3eb9bf4
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 48, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-jigawa-jigawa-north-east-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/SSen-Abdulhamid-Ahmed.png
+    sha256: e94d882050a97c38eee7b554e7fd217db7b25cfa3945350db6eef95274b441a5
+    retrieved: '2026-11-15'
+    crop: [29, 0, 453, 453]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-kaduna-kaduna-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Katung-Marshal.png
+    sha256: 073106c187239329773a108c62d5c6372ab7fbf4f8dedda94590127a2d22230d
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 65, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-kano-kano-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Kawu-Abdurrahaman.png
+    sha256: 663ae055a3f1c3793bb67234dba3ffb7a085c544f0745abac540f9e319ebdada
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 58, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-lagos-lagos-west-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Adebule-Oluranti.png
+    sha256: 7dfb1f1da90cbfc421e174493187428c084a4a7c44df58983d2b4c71791709d0
+    retrieved: '2026-11-15'
+    crop: [38, 46, 494, 494]
+    official_checked: '2026-11-15'  # INEC F, 55, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-taraba-taraba-north-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Isa-Shuaibu.png
+    sha256: 6860cf28bf88c2b1a95d9210cb9ecae71d92c0a81f7c72be33324ac74dbd8d71
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 65, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-yobe-yobe-south-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Ibrahim-Bomai.png
+    sha256: aa9161eaabee0c90de39ec331fb4726ea445422469477959391f832a450011db
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 66, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-zamfara-zamfara-north-apc
+    source: "National Assembly Library Trust Fund website"
+    file_page: https://naltf.gov.ng/senate-page/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Sen-Yau-Alhaji.png
+    sha256: fc9372dc157f96f918a92f5dbbbe61ba44d63a2b836a6cc6f46c546950532320
+    retrieved: '2026-11-15'
+    crop: [0, 0, 540, 540]
+    official_checked: '2026-11-15'  # INEC M, 70, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
