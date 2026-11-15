@@ -466,7 +466,7 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
   it('the About page says where photos come from and that a candidate or party can send an official one', () => {
     const about = html('about')
     expect(about).toContain('<h2 id="photos">Photos</h2>')
-    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, an official government or legislature page, the candidate’s own verified account, or a news report that names\s+the candidate with their party and their seat or state\. Never a photo from a picture agency or stock library/)
+    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, an official government or legislature page, or a news report or social media account that names the candidate\s+with their party and their seat or state \(an account only when it is clearly the candidate’s own\)\. Never a photo from a picture\s+agency or stock library/)
     expect(about).not.toMatch(/Never a news site/)
     // the photo's owner can have it taken down (owner, 15 Nov 2026)
     expect(about).toMatch(/The owner of any photo can ask for it to be removed by writing to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Remove%20a%20photo">corrections@anthonyugwuja\.dev<\/a>\s*, and it comes down within a day\./)
