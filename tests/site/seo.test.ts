@@ -124,7 +124,8 @@ describe('sitemap and robots.txt', () => {
   it('dates each page by its content, not by the build', () => {
     for (const [u, d] of entries) expect(d, u).toMatch(/^2026-\d{2}-\d{2}$/)
     const date = (p: string) => entries.find(([u]) => u === `${SITE_URL}${p}`)![1]
-    expect(date('/c/jan-2027-house-lagos-eti-osa-apc/')).toBe('2026-10-30') // INEC's PDF date
+    expect(date('/c/jan-2027-house-lagos-agege-apc/')).toBe('2026-10-30') // INEC's PDF date
+    expect(date('/c/jan-2027-house-lagos-eti-osa-apc/')).toBe('2026-11-15') // sheet 5 switched the race's photos on
     // the day another candidate's official photo switched the race's photos on (D-081)
     expect(date('/c/jan-2027-house-fct-municipal-bwari-apc/')).toBe('2026-11-15')
     expect(date('/c/feb-2027-sha-lagos-lagos-island-i-apc/')).toBe('2026-10-10')
@@ -134,7 +135,7 @@ describe('sitemap and robots.txt', () => {
     expect(date('/c/feb-2027-governor-lagos-ndc/')).toBe('2026-11-13')
     // and the day the per-race rule took a race's only photo off its pages (D-075)
     expect(date('/c/feb-2027-governor-kano-apc/')).toBe('2026-11-14')
-    expect(date('/c/jan-2027-president-ndc/')).toBe('2026-11-11')
+    expect(date('/c/jan-2027-president-ndc/')).toBe('2026-11-15') // the PDP candidate's official photo, 15 Nov
   })
 
   it('robots.txt allows the site, keeps the search data out and links the sitemap', () => {

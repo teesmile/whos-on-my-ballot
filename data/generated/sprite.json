@@ -1,5 +1,5 @@
 {
- "file": "logos/sprite-08d380b5d7.webp",
+ "file": "logos/sprite-93f35e47da.webp",
  "logo_file": "logos/logos-d2af74f63f.webp",
  "logo_width": 2112,
  "logo_bytes": 34824,
@@ -8,8 +8,8 @@
  "photo_y": 96,
  "width": 2112,
  "height": 224,
- "bytes": 44898,
- "sha256": "08d380b5d7c1885606cb6e1a01d3296917cf6293826f0bf1e7cfa6cf71b01032",
+ "bytes": 46902,
+ "sha256": "93f35e47da0341982d84ec0a5a82c0b3ac743bb76a709b09bf0399ccb0f277ed",
  "logos": {
   "A": 0,
   "AA": 1,
@@ -38,7 +38,8 @@
   "jan-2027-president-adc": 0,
   "jan-2027-president-apc": 1,
   "jan-2027-president-ndc": 2,
-  "jan-2027-president-sdp": 3
+  "jan-2027-president-pdp": 3,
+  "jan-2027-president-sdp": 4
  },
  "sheets": {
   "feb-2027-governor-abia": {
@@ -50,6 +51,16 @@
    "photos": {
     "feb-2027-governor-abia-apc": 0,
     "feb-2027-governor-abia-lp": 1
+   }
+  },
+  "feb-2027-governor-akwa-ibom": {
+   "file": "logos/sheet-4c1c782195.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 37302,
+   "sha256": "4c1c78219568eb767372fd8d3a0f0ea04c9b757d1c267ad8cd04671889e4fd11",
+   "photos": {
+    "feb-2027-governor-akwa-ibom-apc": 0
    }
   },
   "feb-2027-governor-benue": {
@@ -72,6 +83,16 @@
    "photos": {
     "feb-2027-governor-cross-river-adc": 0,
     "feb-2027-governor-cross-river-apc": 1
+   }
+  },
+  "feb-2027-governor-delta": {
+   "file": "logos/sheet-408d8c68ba.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 37046,
+   "sha256": "408d8c68ba564ca6b4be3fe208d79cc4720bcabbbde2f20dbf03dfa4a0c9763f",
+   "photos": {
+    "feb-2027-governor-delta-apc": 0
    }
   },
   "feb-2027-governor-ebonyi": {
@@ -170,6 +191,16 @@
    "photos": {
     "feb-2027-governor-ogun-adc": 0,
     "feb-2027-governor-ogun-apc": 1
+   }
+  },
+  "feb-2027-governor-oyo": {
+   "file": "logos/sheet-5bd778256a.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 38236,
+   "sha256": "5bd778256a050b104c494c2b3731bb96eb1997e765d58f59d30ed5fc108c6b36",
+   "photos": {
+    "feb-2027-governor-oyo-apc": 0
    }
   },
   "feb-2027-governor-rivers": {

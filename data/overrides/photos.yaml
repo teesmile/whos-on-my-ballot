@@ -1,10 +1,13 @@
-# Candidate photos (owner decisions D-064, D-065, D-069, D-071): any race, only from a source that clearly carries authority:
-# Wikimedia Commons where the file names the person, the candidate's or party's own official website, or an official government
-# or legislature page that names them; never a news site, agency or unverified account. Each entry: where it came from
+# Candidate photos (owner decisions D-064, D-065, D-069, D-071, D-084): any race, only from a source that clearly names the
+# person: Wikimedia Commons where the file names them, the candidate's or party's own official website, an official government
+# or legislature page that names them, or (D-084, owner, 15 Nov 2026) a news report that names the candidate with their party
+# and seat or state; never a picture agency or stock library, or an unverified account. Each entry: where it came from
 # in the source's own words (`source`), the page and the direct file, its SHA-256, the licence where one exists, when it was taken or posted, when we retrieved it, and a square crop box
 # [x, y, size, size] in source pixels, chosen so every face sits at the same size (a negative x or y is padded with the
 # picture's own edge colour).
-# Nothing is built until the owner has approved the face on a contact sheet: `owner_approved: 'YYYY-MM-DD'`.
+# Nothing is built until it is cleared: the owner's approval on a contact sheet (`owner_approved: 'YYYY-MM-DD'`), or, for an
+# official page or a news report, the date it was checked against INEC's printed gender and age (`official_checked`,
+# `news_checked`). A news entry also records the article's credit line (`credit`), which must not name an agency.
 people:
   - candidate_id: jan-2027-president-adc
     source: Wikimedia Commons
@@ -3676,3 +3679,372 @@ people:
     retrieved: '2026-11-15'
     crop: [0, 0, 540, 540]
     official_checked: '2026-11-15'  # INEC M, 70, fits the photo; the page names them as a sitting member of the National Assembly; seat and name checked (overnight round)
+  - candidate_id: jan-2027-senate-cross-river-cross-river-central-pdp
+    source: "Candidate's own website (johnifere.com.ng)"
+    file_page: https://www.johnifere.com.ng/about
+    file_url: https://www.johnifere.com.ng/__l5e/assets-v1/13dac33d-68f1-4a0c-a907-e6747114248f/ifere-navy-suit.jpeg
+    sha256: b1f8174febddfce63cf3602b73c857593a385b4277dfa98edc5b10a8d9ce2337
+    retrieved: '2026-11-14'
+    crop: [194, 0, 530, 530]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-governor-akwa-ibom-dla
+    source: "Candidate's own website (jeremiahakpan.com)"
+    file_page: https://jeremiahakpan.com/
+    file_url: https://jeremiahakpan.com/slide2.jpg
+    sha256: dca0da13234f376a20324d3a88427d0191ace95fbfddc6f27aafc5d6ae6b36c4
+    retrieved: '2026-11-14'
+    crop: [90, 15, 340, 340]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-governor-delta-nnpp
+    source: "Candidate's own website (henryofubu.com)"
+    file_page: https://henryofubu.com/
+    file_url: https://henryofubu.com/images/henry-portrait-dark.jpg
+    sha256: 4479ebd7354b50d58407a55395195927cc33758459424c9c824cd56c5922a28d
+    retrieved: '2026-11-14'
+    crop: [175, 0, 451, 451]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-governor-oyo-adp
+    source: "Candidate's own website (kunleolatunji.com)"
+    file_page: https://www.kunleolatunji.com/about
+    file_url: https://www.kunleolatunji.com/assets/ktj-portrait.jpg
+    sha256: 6b56bd3338043785390d8d10c934312a5a13afdab2844536aef811a2dbeb6ed7
+    retrieved: '2026-11-14'
+    crop: [302, 39, 568, 568]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-governor-katsina-apc
+    source: "Candidate's own website (dikkoradda.ng)"
+    file_page: https://dikkoradda.ng/
+    file_url: https://dikkoradda.ng/media/seed/radda-campaign-portrait.webp
+    sha256: c0abe58e055be48ecce3d6841a0070f128e9ba958bcdab9ecf3fe9254eef9a9b
+    retrieved: '2026-11-14'
+    crop: [0, 136, 564, 564]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-enugu-enugu-north-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Chief_Ikeje_Asogwa_Israel.JPG
+    file_url: https://upload.wikimedia.org/wikipedia/commons/f/f6/Chief_Ikeje_Asogwa_Israel.JPG
+    sha256: 5c8344d77c40bacf10580bd43312cc85f4b3c053b4f0ac86ebb785b1bd18c973
+    author: "Ikeje"
+    licence: CC BY-SA 3.0
+    licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    taken: '2014-05-25'
+    retrieved: '2026-11-14'
+    crop: [2, 0, 332, 332]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-akwa-ibom-akwa-ibom-south-pdp
+    source: "Candidate's own website (etimisong.com.ng)"
+    file_page: https://etimisong.com.ng/
+    file_url: https://etimisong.com.ng/ (first image, embedded in the page as data, alt 'Prince Etim Isong')
+    sha256: 38bfa5a1d8c065028d8de371826c6bb71885230fe169a87ed322318d4a64d205
+    retrieved: '2026-11-14'
+    crop: [42, 105, 566, 566]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-ondo-idanre-ifedore-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Festus_Akingbaso.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/3/38/Festus_Akingbaso.jpg
+    sha256: e78f7b596c4ec8f10d7f39aff1e2ec226e2bd45f3f99c821ac3c9e4713b5c90a
+    author: "CODENAMESRO"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2021-12-16'
+    retrieved: '2026-11-14'
+    crop: [87, 20, 228, 228]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-bayelsa-bayelsa-central-ndc
+    source: "Candidate's own website (reubenokoya.com)"
+    file_page: https://reubenokoya.com/
+    file_url: https://www.rok.org.ng/wp-content/uploads/2019/04/3.png
+    sha256: ec37b0d286146714ab4c06108d175605cef881893223ab4083a0a52cf288941a
+    retrieved: '2026-11-14'
+    crop: [480, 0, 1000, 1000]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-cross-river-cross-river-central-apc
+    source: "Candidate's own website (odenewa.com.ng)"
+    file_page: https://odenewa.com.ng/
+    file_url: https://odenewa.com.ng/wp-content/uploads/2026/10/oden-ewa-official-photo.jpg
+    sha256: 48afb9d0faa77207aacbd8d7f08c4f574baa3ab65fec28d2cc4ae90e59f07513
+    retrieved: '2026-11-14'
+    crop: [345, 0, 880, 880]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-akwa-ibom-etinan-apm
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Uduak_Ekpo-Ufot.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/1/18/Uduak_Ekpo-Ufot.jpg
+    sha256: f9ce9e16149919f56b264ecb32ea1939bd18fae70e51352d096d4b04a059fc0c
+    author: "J.I. Solomon"
+    licence: CC BY 4.0
+    licence_url: https://creativecommons.org/licenses/by/4.0
+    taken: '2025-10-14'
+    retrieved: '2026-11-14'
+    crop: [250, 40, 330, 330]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-taraba-gashaka-apc
+    source: Wikimedia Commons
+    file_page: https://commons.wikimedia.org/wiki/File:Batulu_k_Muhammad_(BKM).jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/e/e7/Batulu_k_Muhammad_%28BKM%29.jpg
+    sha256: 33c8a1c7a6c41435cca5f6044a8fc96e30363e6b8b4e42260f0bb7a8d96b3be8
+    author: "Bashiru abdulganiyu"
+    licence: CC BY-SA 4.0
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    taken: '2022-02-18'
+    retrieved: '2026-11-14'
+    crop: [0, 0, 712, 712]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-enugu-enugu-east-lp
+    source: "Candidate's own website (votechibudom.com)"
+    file_page: https://votechibudom.com/chibudom_new/welcome.html
+    file_url: https://votechibudom.com/chibudom_new/assets/portrait-hero.png
+    sha256: 3ad44e9be621fcc5231974b7616a27dc12f72e9f2035343a2cb765ee8b44aaf9
+    retrieved: '2026-11-14'
+    crop: [0, 0, 432, 432]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-katsina-katsina-south-apc
+    source: "Candidate's own website (dandutse.com)"
+    file_page: https://www.dandutse.com/
+    file_url: https://www.dandutse.com/Him.jpg
+    sha256: 20ff0b45c7c14af125f4593b8815e329e3609dad1a156edbc349a23ee94eb774
+    retrieved: '2026-11-14'
+    crop: [139, 108, 885, 885]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-enugu-igbo-eze-north-udenu-lp
+    source: "Candidate's own website (chinedueya.com)"
+    file_page: https://chinedueya.com/
+    file_url: https://chinedueya.com/images/chinedu-eya-seated.jpg
+    sha256: 4f6a29a8cb0f8d08bfbae9e06dfc8d103ab3af8194b9aac45541b94fa23e5a23
+    retrieved: '2026-11-14'
+    crop: [0, 0, 768, 768]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-akwa-ibom-uyo-uruan-nsit-atai-ibesikpo-asutan-lp
+    source: "Candidate's own website (ikakkebassey.org)"
+    file_page: https://ikakkebassey.org/
+    file_url: https://ikakkebassey.org/assets/images/ikakke/img1.jpg
+    sha256: 7b1812fdcff6d561105254a31d110bfa26c1cdf80824e569f59e006001554e74
+    retrieved: '2026-11-14'
+    crop: [450, 0, 1100, 1100]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-anambra-orumba-north-orumba-south-apga
+    source: "Candidate's own website (odiraanwankwor.org)"
+    file_page: https://odiraanwankwor.org/
+    file_url: https://odiraanwankwor.org/images/odiraa-approved-hero.webp?v=1
+    sha256: 8a29d6a8c07fbbbd2abf978ce4dcca0df8bd4c150af08548c9e8f631c55fef54
+    retrieved: '2026-11-14'
+    crop: [0, 31, 981, 981]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-bayelsa-brass-nembe-apc
+    source: "Candidate's own website (jonathanobuebite.com)"
+    file_page: https://jonathanobuebite.com/
+    file_url: https://jonathanobuebite.com/assets/hero-cutout.webp
+    sha256: ddc2a75fddc5fada98f41b314f896c3da474270b7f7867bdbdca7096ac821f79
+    retrieved: '2026-11-14'
+    crop: [114, 0, 535, 535]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-ekiti-ikole-oye-ndc
+    source: "Candidate's own website (davidadesua.org)"
+    file_page: https://www.davidadesua.org/
+    file_url: https://www.davidadesua.org/brand_assests/imole-3.jpeg
+    sha256: 1e197504af6d2b7012d1d88a932fc0b0afae9ccc1dfb3985fdc23ce7a17fd7c6
+    retrieved: '2026-11-14'
+    crop: [154, 0, 228, 228]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-ekiti-ikole-oye-adc
+    source: "Candidate's own website (stephenoribamise.com)"
+    file_page: https://www.stephenoribamise.com/about
+    file_url: https://www.stephenoribamise.com/about (portrait embedded in the page as data, alt 'Sir Stephen Oribamise')
+    sha256: 8703e5ed8c5480aaabd407afb61edc16aecd0d163ed3ea6370d5f4e2eca6cc1c
+    retrieved: '2026-11-14'
+    crop: [284, 186, 1017, 1017]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-edo-oredo-apc
+    source: "Candidate's own website (paddyiyamu.com)"
+    file_page: https://paddyiyamu.com/
+    file_url: https://paddyiyamu.com/img/p-17.webp
+    sha256: 665658e7ffc741157a7fa69242a320f671737a11184383d3c2fc3d1330a1219a
+    retrieved: '2026-11-14'
+    crop: [177, 21, 900, 900]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-delta-ndokwa-east-ndokwa-west-ukwuani-apc
+    source: "Candidate's own website (nnamdiezechi.com.ng)"
+    file_page: https://nnamdiezechi.com.ng/
+    file_url: https://nnamdiezechi.com.ng/images/rep-ezechi.jpg
+    sha256: aa2130795dc5c4b247beea4ef1db803c348be5656a7ddb413918bafc0d5b2181
+    retrieved: '2026-11-14'
+    crop: [40, 0, 280, 280]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-ondo-akure-north-akure-south-pdp
+    source: "Candidate's own website (babatundefaro.com)"
+    file_page: https://babatundefaro.com/
+    file_url: https://babatundefaro.com/__l5e/assets-v1/8c16bff4-9280-45f7-8a7e-dbfbc0338721/suit.jpg
+    sha256: 614415d0abec2d9e14cd161533d596a4a5f3ccc6401c8903792a608e7ffaf74d
+    retrieved: '2026-11-14'
+    crop: [384, 0, 931, 931]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-osun-ayedaade-irewole-isokan-apc
+    source: "Candidate's own website (taiwooluga.com)"
+    file_page: https://taiwooluga.com/
+    file_url: https://taiwooluga.com/images/portraits/official.jpg
+    sha256: 041eea2d72a88784d74d4b4ccc84aba4ecf780b13a37834162cfc58c1baf3d6d
+    retrieved: '2026-11-14'
+    crop: [99, 207, 1008, 1008]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-lagos-eti-osa-adc
+    source: "Candidate's own website (azeezrasaki.com)"
+    file_page: https://azeezrasaki.com/
+    file_url: https://azeezrasaki.com/wp-content/uploads/2026/08/rasaki-adc-700x1024.png
+    sha256: 8ff981179d7e173359f662ab164263f5a2fabde1f0378104eb933303d279b0fd
+    retrieved: '2026-11-14'
+    crop: [240, 20, 460, 460]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-abia-arochukwu-ohafia-apc
+    source: "Candidate's own website (ikennaukwa.com)"
+    file_page: https://ikennaukwa.com/
+    file_url: https://ikennaukwa.com/assets/images/hero-portrait2.jpg
+    sha256: ef9e16d9b597d456e39c0399a0502d982287835febe290179ab736da5d36e940
+    retrieved: '2026-11-14'
+    crop: [13, 0, 693, 693]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-ebonyi-ebonyi-central-adc
+    source: "Candidate's own website (ugomagnus.com)"
+    file_page: https://ugomagnus.com/
+    file_url: https://ugomagnus.com/photo-formal-stripe.png
+    sha256: a20501b7487cf8c6812180f6438c27918f331f66b44e2661b4b3cbfaf091767f
+    retrieved: '2026-11-14'
+    crop: [180, 30, 450, 450]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-oyo-oyo-central-pdp
+    source: "Candidate's own website (ayobamiolunloyo.com)"
+    file_page: https://www.ayobamiolunloyo.com/
+    file_url: https://www.ayobamiolunloyo.com/assets/hero.webp
+    sha256: ffbcb7c4bab8ad1adfc0e881945cc6cc0e1b01d2a1e6cc6c14f8c0b2545d80f5
+    retrieved: '2026-11-14'
+    crop: [100, 0, 460, 460]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-senate-kano-kano-central-apc
+    source: "Candidate's own website (shekarau.org)"
+    file_page: https://shekarau.org/
+    file_url: https://shekarau.org/images/shekarau/39718.jpg
+    sha256: 8f9ce4ef733ab957dd46bf0333041098f0d4032cff8d686b750a72293ed5ec99
+    retrieved: '2026-11-14'
+    crop: [0, 11, 750, 750]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-benue-konshisha-vandeikya-pdp
+    source: "Candidate's own website (terwaseato.ng)"
+    file_page: https://terwaseato.ng/
+    file_url: https://terwaseato.ng/assets/atotr2-D3dYaKXy.jpg
+    sha256: 9c9cfd8ae9c958e98c3181bb5f686e714eedbc3148d2cd44cc8f10354b1a04bc
+    retrieved: '2026-11-14'
+    crop: [133, 127, 1190, 1190]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-adamawa-gombi-hong-lp
+    source: "Candidate's own website (hassanbarguma.com)"
+    file_page: https://hassanbarguma.com/
+    file_url: https://hassanbarguma.com/barguma.jpg
+    sha256: faa5f0557a9160a268fbf74b61297a704a8b8885e9228e6013c79d57f5745581
+    retrieved: '2026-11-14'
+    crop: [102, 0, 456, 456]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-kano-sumaila-takai-ndc
+    source: "Candidate's own website (abbassaraki.com)"
+    file_page: https://abbassaraki.com/
+    file_url: https://abbassaraki.com/wp-content/uploads/2026/03/Abbas-Saraki-Image-01-1-1-1024x983.webp
+    sha256: f21061184726e21d820c35ef0faa0d39df10a1028d28f5e2732c6b2f2803f9fb
+    retrieved: '2026-11-15'
+    crop: [269, 36, 535, 535]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-enugu-ezeagu-udi-ndc
+    source: "Candidate's own website (ifeanyiezeh.com)"
+    file_page: https://ifeanyiezeh.com/
+    file_url: https://media.base44.com/images/public/6aa5f8443cd0a93534b579b4/4e8a9c588_ifeanyiezeh1.jpeg
+    sha256: 56db0e985a1977eb34521d4efa5046d881e3ddf3122840bf1c0d06c6e084b4fc
+    retrieved: '2026-11-15'
+    crop: [134, 11, 770, 770]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-imo-aboh-mbaise-ngor-okpala-pdp
+    source: "Candidate's own website (arthurugochukwu.com)"
+    file_page: https://arthurugochukwu.com/
+    file_url: https://arthurugochukwu.com/media/portraits/studio-alt.jpg
+    sha256: 5f77419bc652b4b34215df9aa5b7a74541269ad5e63a34c91001b43cbf21ac29
+    retrieved: '2026-11-15'
+    crop: [256, 0, 1080, 1080]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-house-ebonyi-ezza-south-ikwo-apc
+    source: "Candidate's own website (chineduogah.com)"
+    file_page: https://chineduogah.com/
+    file_url: https://chineduogah.com/assets/images/hero-cutout-sm.png
+    sha256: 9f3328d042149f6c9f47227dff550e7585a373e27d5887f2ba21387fbaa5fbcd
+    retrieved: '2026-11-15'
+    crop: [0, 0, 482, 482]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-adamawa-song-adc
+    source: "Candidate's own website (gamanjohn.com.ng)"
+    file_page: https://www.gamanjohn.com.ng/
+    file_url: https://www.gamanjohn.com.ng/assets/images/candidate.JPEG
+    sha256: 6ca8caf5e35c3c9729334198b3dd068e2affa2f8db7decca4f921d42c4199f01
+    retrieved: '2026-11-15'
+    crop: [0, 0, 1066, 1066]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-abia-ikwuano-apc
+    source: "Candidate's own website (chikaishionwu.com)"
+    file_page: https://chikaishionwu.com/
+    file_url: https://chikaishionwu.com/assets/img/chika-grey-suit.jpeg
+    sha256: 6c99549dad1db7db7021ccdd0a55630c954df53e4f0c0cd444fd78b7519d464a
+    retrieved: '2026-11-15'
+    crop: [0, 0, 1096, 1096]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-abia-isiala-ngwa-south-apc
+    source: "Candidate's own website (chibuzoesihe.com)"
+    file_page: https://chibuzoesihe.com/
+    file_url: https://chibuzoesihe.com/uploads/portrait-grey2.jpg
+    sha256: 3af6ce29c9bf6c403b64f9281f93d8c528e75b71cb157b964be6519026219208
+    retrieved: '2026-11-15'
+    crop: [0, 0, 825, 825]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-benue-nyamatsor-buruku-adc
+    source: "Candidate's own website (sewuesetofi.ng)"
+    file_page: https://sewuesetofi.ng/
+    file_url: https://sewuesetofi.ng/images/260/27872313/Sewe1-jDmOUM_zVfI0uaGfVkwVIA.png
+    sha256: 24b10304fee29a8d347fc0ae69b33688c363f114bd97d2d1c808cf0959327b20
+    retrieved: '2026-11-15'
+    crop: [18, 96, 235, 235]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-ogun-ado-odo-ota-i-pdp
+    source: "Candidate's own website (abayomiomoroga.com.ng)"
+    file_page: https://abayomiomoroga.com.ng/
+    file_url: https://abayomiomoroga.com.ng/omoroga-traditional-portrait.png
+    sha256: b32d060eea4046dc190609b286955e3d7fb53c81e4c74ebbe625dd6948d32a1d
+    retrieved: '2026-11-15'
+    crop: [136, 0, 1776, 1776]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-imo-oru-east-apc
+    source: "Candidate's own website (ucheobiozor.com)"
+    file_page: https://ucheobiozor.com/
+    file_url: https://ucheobiozor.com/__l5e/assets-v1/633ce6b7-c895-4449-9625-f53e3473a3ab/uche-hero-sharp.png
+    sha256: 03155fff6a6601694c7aab4238e9f91668c1b01a4e3a4379bd68298c21f66e0a
+    retrieved: '2026-11-15'
+    crop: [0, 0, 849, 849]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-plateau-riyom-adc
+    source: "Candidate's own website (johndadu.com)"
+    file_page: https://johndadu.com/
+    file_url: https://johndadu.com/ (hero image embedded in the page's stylesheet as data, variable --h1)
+    sha256: 1c6f5cb7fe8483ff408f91694779b58571c4aef1b91a9face66a8407098d22f3
+    retrieved: '2026-11-15'
+    crop: [330, 150, 650, 650]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: feb-2027-sha-rivers-ikwere-i-yp
+    source: "Candidate's own website (fortunealeraa.com)"
+    file_page: https://fortunealeraa.com/
+    file_url: https://fortunealeraa.com/ (image embedded in the page as data, alt 'Fortune Aleraa, Vision 2027 contestant')
+    sha256: f6b7d224647956b83db802969dc8afa53854849a3c3f3b8ca3b3afbaab9cd78f
+    retrieved: '2026-11-15'
+    crop: [100, 220, 420, 420]
+    owner_approved: '2026-11-15'  # photo sheet 5
+  - candidate_id: jan-2027-president-pdp
+    source: National Assembly website
+    file_page: https://nass.gov.ng/mps/single/342
+    file_url: https://nass.gov.ng/themes/newnass/images/mps/342.jpg
+    sha256: c52fb99b3a094c0156bb7c7714604dccfe2f900c605bac10aa4400993fd1c216
+    taken: '2019-07-09'
+    retrieved: '2026-11-15'
+    crop: [62, 0, 284, 284]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo (ninth Senate portrait, 2019); the profile page for id 342 named him "Sen. SANDY ONOR, Senate, PDP" (search-engine copy; the page now shows "Page Not Found"); same face as the PDP presidential candidate in New Telegraph, 26 May 2026; crop clear of the flag and the Senate seal (owner, 15 Nov 2026)
