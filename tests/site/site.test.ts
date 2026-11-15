@@ -423,7 +423,7 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-090)', () => 
     // a Senate photo is the card's own small copy, loaded only when its race is shown
     expect(html('ballot/kwara/ilorin-west-asa--kwara-central')).toMatch(/data-candidate-id="jan-2027-senate-kwara-kwara-central-apc"[\s\S]*?<img class="photo" src="\/photos\/jan-2027-senate-kwara-kwara-central-apc-card\.webp" width="76" height="76" alt="" loading="lazy"/)
   })
-  it('no credit on the candidate page; the full credit for each photo is in one list at the end of the About page', () => {
+  it('no credit on the candidate page; the full credit for each photo is on its state\'s photo credits page, listed from an index linked from About (D-094)', () => {
     // every built photo is a yaml entry with the owner's approval, or an official-page or news photo checked against INEC (D-074, D-084);
     // a Commons file never goes live on the official-page route
     const entries = fs.readFileSync(path.resolve('data/overrides/photos.yaml'), 'utf8').split(/\n  - /).slice(1)
@@ -432,15 +432,21 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-090)', () => 
     expect([...approved].sort()).toEqual(cleared.sort())
     for (const e of entries.filter(x => /\n    official_checked:/.test(x))) expect(e, e.slice(0, 80)).not.toMatch(/Wikimedia Commons|wikimedia\.org/)
     const about = html('about')
-    const credits = about.slice(about.indexOf('<h2 id="photo-credits">Photo credits</h2>'))
-    expect(credits.match(/<h2/g)?.length, 'Photo credits is the last section').toBe(1)
+    expect(about).toMatch(/<h2 id="photo-credits">Photo credits<\/h2>[\s\S]*?<a href="\/about\/photo-credits\/">the photo credits pages<\/a>/)
+    expect(about).not.toContain('<li id="credit-')
+    const index = html('about/photo-credits')
+    const groups = [...index.matchAll(/<a href="\/about\/photo-credits\/([a-z0-9-]+)\/">/g)].map(m => m[1])
+    expect(groups[0]).toBe('president')
+    expect(groups.length).toBeGreaterThan(30)
+    const all = groups.map(g => html(`about/photo-credits/${g}`)).join('\n')
     for (const id of approved) {
       const page = html(`c/${id}`)
       expect(page, id).toMatch(/<div class="profile-photo"><img src="\/photos\/[^"]+\.webp" width="160" height="160" alt="Photo of [^"]+"\/><\/div>/)
       expect(page, id).not.toMatch(/figcaption|CC BY|CC0|Wikimedia|Photo: /)
-      expect(credits, id).toContain(`<li id="credit-${id}">`)
+      expect(all, id).toContain(`<li id="credit-${id}">`)
     }
-    for (const m of credits.matchAll(/<li id="credit-[^"]+">([\s\S]*?)<\/li>/g)) expect(m[1]).toMatch(/<a href="https?:\/\/[^"]+">[^<]+<\/a>[\s\S]*cropped to a square[\s\S]*Retrieved/)
+    expect([...all.matchAll(/<li id="credit-/g)].length).toBe(approved.size) // each credit once
+    for (const m of all.matchAll(/<li id="credit-[^"]+">([\s\S]*?)<\/li>/g)) expect(m[1]).toMatch(/<a href="https?:\/\/[^"]+">[^<]+<\/a>[\s\S]*cropped to a square[\s\S]*Retrieved/)
   })
   it('every approved photo shows, for every party, first five or not; no race is held back (D-090)', () => {
     expect(fs.existsSync(path.resolve('data/overrides/governing-party.yaml'))).toBe(false)

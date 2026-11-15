@@ -6583,14 +6583,6 @@ people:
     retrieved: '2026-11-15'
     crop: [130, 70, 440, 440]
     official_checked: '2026-11-15'  # INEC M, 44, fits; the page names them with party and seat (night batch 3)
-  - candidate_id: feb-2027-sha-niger-kontagora-i-apc
-    source: "Niger State Government (nigerstate.gov.ng)"
-    file_page: https://nigerstate.gov.ng/executives/
-    file_url: https://nigerstate.gov.ng/wp-content/uploads/357539601_799148335351431_1324166101159988260_n.jpg
-    sha256: 0cd825c57a10ec577f503937513d6a4a591cf2e84974fb18f7be7e9e2ebe5c6a
-    retrieved: '2026-11-15'
-    crop: [145, 80, 310, 310]
-    official_checked: '2026-11-15'  # INEC M, 44, fits; the page names them with party and seat (night batch 3)
   - candidate_id: feb-2027-sha-yobe-karasuwa-apc
     source: "Yobe State House of Assembly (houseofassembly.yb.gov.ng)"
     file_page: https://www.houseofassembly.yb.gov.ng/index.php/blog/current-members
@@ -6663,3 +6655,36 @@ people:
     retrieved: '2026-11-15'
     crop: [365, 100, 420, 420]
     official_checked: '2026-11-15'  # INEC M, 32, fits; the page names them with party and seat (night batch 3)
+  # Owner, 15 Nov 2026 (after night batch 3): Commons finds go live when the file description or the Wikipedia article ties them to the state and office; an old photo of a named candidate is fine
+  - candidate_id: feb-2027-governor-nasarawa-a
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Shuaibu_Umaru_Kubi_%E2%80%93_Nasarawa_State_politician.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/7/79/Shuaibu_Umaru_Kubi_%E2%80%93_Nasarawa_State_politician.jpg
+    sha256: e482cbd687558a8fb01d2c3f1bd11e74e9c0221849c67e6da49ca1ded7ee6565
+    author: "Suk4gov2027"
+    licence: "CC BY 4.0"
+    licence_url: https://creativecommons.org/licenses/by/4.0/
+    retrieved: '2026-11-15'
+    crop: [350, 30, 800, 800]
+    owner_approved: '2026-11-15'  # Commons description: "Accord Party gubernatorial candidate in Nasarawa State"; INEC M, 39, fits; licence re-read 15 Nov
+  - candidate_id: feb-2027-sha-sokoto-bodinga-south-apc
+    source: "Wikimedia Commons"
+    file_page: https://commons.wikimedia.org/wiki/File:Tukur_Bala_Bodinga.jpg
+    file_url: https://upload.wikimedia.org/wikipedia/commons/2/2a/Tukur_Bala_Bodinga.jpg
+    sha256: cd0fca73b4a7ee09ac40286e771dae5e955f54abe9121136db9b93a91a527eab
+    author: "Gwanki"
+    licence: "CC0 1.0"
+    licence_url: https://creativecommons.org/publicdomain/zero/1.0/
+    retrieved: '2026-11-15'
+    crop: [150, 40, 2150, 2150]
+    owner_approved: '2026-11-15'  # Wikidata Q136514491: Speaker of the Sokoto State House of Assembly; Commons file 'Tukur Bala Bodinga'; INEC M, 50, fits; a photo of a printed photo, clear at card size
+  - candidate_id: jan-2027-senate-abia-abia-north-lp
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/abia-north-orji-kalus-political-inheritance-over-lps-bourdex-declares/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/08/Untitled-design_20260819_234031_0000.png
+    sha256: f83de9bb92d6509676058ec96068f960e5c63b0f5a4ffa4a42c0c299cb2f2f61
+    credit: "none shown"
+    taken: '2026-08-19'
+    retrieved: '2026-11-15'
+    crop: [165, 10, 200, 200]
+    news_checked: '2026-11-15'  # the article names him the Labour Party senatorial candidate for Abia North; left panel of a captioned two-panel picture (the other is Orji Kalu), Labour Party badge; INEC M, 73, an older photo

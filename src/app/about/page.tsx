@@ -12,12 +12,6 @@ import { CORRECTIONS_EMAIL } from '@/lib/site'
 
 const TITLE = 'About: how this site reads INEC’s lists'
 
-/** "APC, President" or "APC, Governor, KANO": whose photo a credit is for. */
-function creditRace(id: string): string {
-  const { race: r, c } = candidate(id)
-  return r.office === 'president' ? `${c.party}, President` : `${c.party}, ${OFFICE_TITLE[r.office]}, ${r.state}`
-}
-
 /** "A", "A and B", "A, B and C". */
 const listJoin = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`)
 export const metadata: Metadata = pageMeta({
@@ -163,28 +157,12 @@ export default function About() {
       <h2>Independence</h2>
       <p>Not affiliated with INEC.</p>
 
-      {photos.length > 0 && (
-        <>
-          <h2 id="photo-credits">Photo credits</h2>
-          <ul className="photo-credits">
-            {photos.map(([id, p]) => (
-              <li key={id} id={`credit-${id}`}>
-                <strong>{candidate(id).c.candidate.name}</strong>
-                {` (${creditRace(id)}): `}
-                <a href={p.file_page}>{p.source}</a>
-                {p.author && `, by ${p.author}`}
-                {p.licence && p.licence_url && (
-                  <>
-                    {', licensed under '}
-                    <a href={p.licence_url}>{p.licence}</a>
-                  </>
-                )}
-                {`; cropped to a square for this site. Retrieved ${formatDate(p.retrieved)}.`}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+      <h2 id="photo-credits">Photo credits</h2>
+      <p>
+        {`The source of each of the ${photos.length.toLocaleString('en-NG')} candidate photos, with its author and licence where there is one, is listed by state on `}
+        <a href="/about/photo-credits/">the photo credits pages</a>
+        .
+      </p>
     </div>
   )
 }

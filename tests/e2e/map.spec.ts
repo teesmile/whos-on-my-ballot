@@ -49,7 +49,7 @@ for (const width of [320, 360, 768, 1024, 1440, 1920]) {
 }
 
 // Header on phones (owner, 15 Nov 2026): at least 8 px of clear space between the site name's text and the first button, with
-// the name and the three buttons in one row. Measured with Liberation Sans (Arial's widths) and with a wider fallback font.
+// the name and the three buttons in one row, and the name on one line from 360 px up. Measured with Liberation Sans (Arial's widths) and with a wider fallback font.
 for (const width of [320, 360, 390, 412]) {
   for (const font of ['"Liberation Sans", Arial, sans-serif', '"DejaVu Sans", Verdana, sans-serif']) {
     test(`header at ${width} px (${font.split(',')[0]}): name clear of the buttons, one row`, async ({ browser }) => {
@@ -64,9 +64,10 @@ for (const width of [320, 360, 390, 412]) {
         const text = [...range.getClientRects()].filter(r => r.width > 0)
         const spans = [...document.querySelectorAll('.site-nav > span')].map(s => s.getBoundingClientRect())
         const head = document.querySelector('.site-header-in')!.getBoundingClientRect()
-        return { textRight: Math.max(...text.map(r => r.right)), firstButton: spans[0].left, tops: spans.map(s => Math.round(s.top)), head: [head.top, head.bottom], textBottom: Math.max(...text.map(r => r.bottom)), sw: document.documentElement.scrollWidth }
+        return { lines: new Set(text.filter(r => r.width > 24).map(r => Math.round(r.top))).size, textRight: Math.max(...text.map(r => r.right)), firstButton: spans[0].left, tops: spans.map(s => Math.round(s.top)), head: [head.top, head.bottom], textBottom: Math.max(...text.map(r => r.bottom)), sw: document.documentElement.scrollWidth }
       })
       expect(m.firstButton - m.textRight, JSON.stringify(m)).toBeGreaterThanOrEqual(8)
+      if (width >= 360) expect(m.lines, JSON.stringify(m)).toBe(1)
       expect(new Set(m.tops).size, JSON.stringify(m)).toBe(1) // one row of buttons
       expect(m.textBottom).toBeLessThanOrEqual(m.head[1]) // the name fits inside the header bar
       expect(m.sw).toBeLessThanOrEqual(width)

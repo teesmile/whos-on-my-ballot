@@ -4,6 +4,7 @@ import { CONTENT_DATES } from '@/lib/content-dates'
 import { allCandidates, allRaces, ballots, febBallots, febRaces, geographyContentDate, presidentialRace, race, raceContentDate, stateGeo, states } from '@/lib/data'
 import { slug } from '@/lib/core'
 import { absolute } from '@/lib/seo'
+import { creditGroups, groupDate } from '@/components/PhotoCredits'
 import { candidatePath, racePath } from '@/lib/site'
 
 // Every indexable page with its content date (D-032). Share cards, data files and the 404 page are left out.
@@ -18,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/about/', CONTENT_DATES.about),
     entry('/about/find-your-polling-unit/', CONTENT_DATES['about/find-your-polling-unit']),
     entry('/about/state-assembly-wards/', CONTENT_DATES['about/state-assembly-wards']),
+    entry('/about/photo-credits/', latest(creditGroups().map(groupDate))),
+    ...creditGroups().map(g => entry(`/about/photo-credits/${g.key}/`, groupDate(g))),
     entry('/election-day/', CONTENT_DATES['election-day']),
     entry('/corrections/', CONTENT_DATES.corrections),
     entry('/results/', CONTENT_DATES.results),

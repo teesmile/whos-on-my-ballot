@@ -69,15 +69,17 @@ a:hover, a:focus, a:active { text-decoration: none; }
    phone has (Roboto, Helvetica, Arial), sized with the screen. */
 @media (max-width: 30rem) {
   :root { --hdr: 3.25rem; --hfont: Roboto, "Helvetica Neue", Arial, "Liberation Sans", sans-serif; }
-  /* At least 8 px of clear space between the name and the first button (owner, 15 Nov 2026). The name may break onto a
-     second line inside its own box when a phone's font is too wide for one, so it never runs under the buttons; the
-     name and the buttons stay in one row. */
-  .site-header-in { padding: 0 0.5rem; gap: 8px; }
-  .site-name { font-size: clamp(12px, 3.4vw, 16px); white-space: normal; line-height: 1.1; text-wrap: balance; }
-  .site-mark { width: 21px; height: 24px; margin-right: 0.3rem; }
-  .site-nav-list { gap: 0.25rem; }
-  .site-nav { font-size: clamp(11.5px, 3.3vw, 14px); }
-  .site-nav > span { height: 26px; padding: 0 0.42rem; border-radius: 6px; }
+  /* The name on one line from 360 px up, with at least 8 px of clear space before the first button (owner, 15 Nov 2026):
+     the buttons' side padding and the gaps are trimmed first, the button words go down to 11 px and the name to 12 px at
+     360 px (never smaller), both growing with the screen. Below 360 px, or with a font wider than Arial and DejaVu Sans,
+     the name breaks onto a second line inside its own box rather than running under the buttons. Each link keeps a 44 px
+     tap area around its smaller box. */
+  .site-header-in { padding: 0 0.3rem; gap: 8px; }
+  .site-name { font-size: clamp(12px, 3.33vw, 16px); white-space: normal; line-height: 1.1; letter-spacing: -0.015em; text-wrap: balance; }
+  .site-mark { width: 21px; height: 24px; margin-right: 0.25rem; }
+  .site-nav-list { gap: 0.1rem; }
+  .site-nav { font-size: clamp(11px, 3.05vw, 14px); min-width: 44px; justify-content: center; }
+  .site-nav > span { height: 26px; padding: 0 0.16rem; border-radius: 6px; }
 }
 
 .site-footer {
@@ -402,6 +404,7 @@ img.photo { object-fit: cover; }
 .src-n { flex: none; margin-top: 0.05rem; display: inline-grid; place-items: center; min-width: 1.55rem; height: 1.55rem; border-radius: 999px; background: var(--green-strong); color: #fff; font-size: 0.76rem; font-weight: 800; }
 .correct .correct-row { margin: 0.75rem 0; }
 .photo-credits { padding-left: 1.2rem; }
+.credit-count { color: var(--muted); }
 .src-label { font-weight: 700; }
 .sources-general { margin-bottom: 0.6rem; }
 .choose-first { border-left-color: var(--accent-ink); }

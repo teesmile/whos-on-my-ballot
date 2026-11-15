@@ -11565,21 +11565,6 @@
    "retrieved": "2026-11-15",
    "approved": "2026-11-15"
   },
-  "feb-2027-sha-niger-kontagora-i-apc": {
-   "card": "photos/feb-2027-sha-niger-kontagora-i-apc-card.webp",
-   "card_sha256": "a5216b8cd317067f772b839f53a8e85546c03542b598f68de6dde90c5c34c26e",
-   "card_bytes": 3274,
-   "page": "photos/feb-2027-sha-niger-kontagora-i-apc.webp",
-   "page_sha256": "55966136aa888c4c242889283d1924f95d98e39625ce2bced8899bdf255a9d0b",
-   "page_size": 320,
-   "share": "photos/feb-2027-sha-niger-kontagora-i-apc-share.jpg",
-   "share_sha256": "5f4c2da49725ffed180ff2dd465718baebe30cf4a597a6461d36948d839972aa",
-   "share_size": 720,
-   "source": "Niger State Government (nigerstate.gov.ng)",
-   "file_page": "https://nigerstate.gov.ng/executives/",
-   "retrieved": "2026-11-15",
-   "approved": "2026-11-15"
-  },
   "feb-2027-sha-yobe-karasuwa-apc": {
    "card": "photos/feb-2027-sha-yobe-karasuwa-apc-card.webp",
    "card_sha256": "0931a644104d7cf3598922a2ee7abd17c132eab45e1c7ee769d9adaac374365b",
@@ -11714,6 +11699,58 @@
    "file_page": "https://iniobonguko.org/",
    "retrieved": "2026-11-15",
    "approved": "2026-11-15"
+  },
+  "feb-2027-governor-nasarawa-a": {
+   "card": "photos/feb-2027-governor-nasarawa-a-card.webp",
+   "card_sha256": "a78a4481f4dc5dfb218688c88ef8a937d698e516c9fef5eec46c7bc8abd1ac86",
+   "card_bytes": 2350,
+   "page": "photos/feb-2027-governor-nasarawa-a.webp",
+   "page_sha256": "d474df0bea4150d69252307bb8eadf12bbf7dd77d5ccc6a65f8db6a12df78c20",
+   "page_size": 320,
+   "share": "photos/feb-2027-governor-nasarawa-a-share.jpg",
+   "share_sha256": "03d959a3e446051933b10cac2a44ba4a593f2b3688479a99b60723861af7a50a",
+   "share_size": 720,
+   "source": "Wikimedia Commons",
+   "file_page": "https://commons.wikimedia.org/wiki/File:Shuaibu_Umaru_Kubi_%E2%80%93_Nasarawa_State_politician.jpg",
+   "retrieved": "2026-11-15",
+   "approved": "2026-11-15",
+   "author": "Suk4gov2027",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "feb-2027-sha-sokoto-bodinga-south-apc": {
+   "card": "photos/feb-2027-sha-sokoto-bodinga-south-apc-card.webp",
+   "card_sha256": "b8a27624f3c3c108176df29a5401e1a55c34ddeb49869161732819d356589dba",
+   "card_bytes": 1820,
+   "page": "photos/feb-2027-sha-sokoto-bodinga-south-apc.webp",
+   "page_sha256": "5d8a8b268f48e0df97df49ab5aa5574ae052ccf287717961c45441d622ae05a5",
+   "page_size": 320,
+   "share": "photos/feb-2027-sha-sokoto-bodinga-south-apc-share.jpg",
+   "share_sha256": "fcf60d91e97a1682cfea051cf20e214b250714126e504e787debe1b607777b80",
+   "share_size": 720,
+   "source": "Wikimedia Commons",
+   "file_page": "https://commons.wikimedia.org/wiki/File:Tukur_Bala_Bodinga.jpg",
+   "retrieved": "2026-11-15",
+   "approved": "2026-11-15",
+   "author": "Gwanki",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "jan-2027-senate-abia-abia-north-lp": {
+   "card": "photos/jan-2027-senate-abia-abia-north-lp-card.webp",
+   "card_sha256": "116971aaf8cffdce9a376dde81f8d29250c3fd7b34d8ddf748856fcd56ec63ea",
+   "card_bytes": 1922,
+   "page": "photos/jan-2027-senate-abia-abia-north-lp.webp",
+   "page_sha256": "079160e369fc634c7484d4b96f6a2e61d89d7a8dca8a241cb077cffea39525fa",
+   "page_size": 320,
+   "share": "photos/jan-2027-senate-abia-abia-north-lp-share.jpg",
+   "share_sha256": "79821be2a78a497a5adbfa6cec289e6f2cd44a346432c09c304a28311d42bce4",
+   "share_size": 720,
+   "source": "The Whistler (thewhistler.ng)",
+   "file_page": "https://thewhistler.ng/abia-north-orji-kalus-political-inheritance-over-lps-bourdex-declares/",
+   "retrieved": "2026-11-15",
+   "approved": "2026-11-15",
+   "taken": "2026-08-19"
   }
  }
 }
