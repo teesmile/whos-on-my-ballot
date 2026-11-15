@@ -395,7 +395,7 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
 .share-title { font-size: 1.05rem; margin: 0.75rem 0 0.6rem; }
 .share-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .share-buttons > * { flex: 1 1 10rem; min-height: 52px; }
-.share-status { margin: 0.5rem 0 0; font-weight: 650; min-height: 1.4em; }
+.share-status { margin: 0.5rem 0 0; font-weight: 650; min-height: 1.4em; white-space: pre-line; }
 .share-status:empty { min-height: 0; margin: 0; }
 /* Instagram's Story or Post, and "Save picture", tall or square (owner, 14 Nov 2026): plain choices the script reveals. */
 .share-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.6rem; }

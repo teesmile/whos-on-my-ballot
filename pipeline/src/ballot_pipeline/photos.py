@@ -1,9 +1,11 @@
-"""Candidate photos (owner decisions D-064, D-065, D-069, D-071): any race, each from a source that clearly carries authority
-(Wikimedia Commons where the file names the person, the candidate's or party's own official website, or an official government
-or legislature page that names them), and credited with where it came from. A photo from an official page that names the
-candidate appears once it has been checked against the gender and age INEC printed (`official_checked` in the yaml, D-074);
-a photo anyone could have uploaded, such as a Wikimedia Commons file, appears only after the owner has approved that face on a
-contact sheet (`owner_approved`). Everyone else shows the same neutral placeholder.
+"""Candidate photos (owner decisions D-064, D-065, D-069, D-071, D-084): any race, each from a source that clearly names the
+person (Wikimedia Commons where the file names them, the candidate's or party's own official website, an official government
+or legislature page, or, since D-084, a news report that names the candidate with their party and seat or state; never a
+picture agency or stock library), and credited with where it came from. A photo from an official page that names the
+candidate appears once it has been checked against the gender and age INEC printed (`official_checked` in the yaml, D-074),
+and a news photo once it has been checked the same way and for agency credits (`news_checked`, D-084); a photo anyone could
+have uploaded, such as a Wikimedia Commons file, appears only after the owner has approved that face on a contact sheet
+(`owner_approved`). Everyone else shows the same neutral placeholder.
 
 Per-race rule (owner decisions D-075, D-076, D-081): a race shows its photos when any candidate in it, first five or not,
 other than the governing party's has a cleared photo (the party holding the presidency, named once in
@@ -67,12 +69,23 @@ def load() -> dict:
         missing = [f for f in FIELDS if f not in p]
         if missing:
             raise ValueError(f"photos.yaml: {p.get('candidate_id')} lacks {missing}")
-        if p.get("official_checked") and public_upload(p):
-            raise ValueError(f"photos.yaml: {p['candidate_id']} is a public upload, so it needs owner_approved, not official_checked (D-074)")
+        if (p.get("official_checked") or p.get("news_checked")) and public_upload(p):
+            raise ValueError(f"photos.yaml: {p['candidate_id']} is a public upload, so it needs owner_approved, not a checked date (D-074)")
+        if p.get("news_checked") and p.get("official_checked"):
+            raise ValueError(f"photos.yaml: {p['candidate_id']} is either an official page or a news report, not both (D-084)")
+        if _agency(p):
+            raise ValueError(f"photos.yaml: {p['candidate_id']} names a picture agency or stock library, never used (D-084)")
     return {"people": data.get("people") or []}
 
 
 PUBLIC_UPLOAD_HOSTS = ("commons.wikimedia.org", "upload.wikimedia.org")
+# Picture agencies and stock libraries (D-084): a photo credited to one is never used, whatever the page it is on.
+AGENCIES = re.compile(r"\b(getty|afp|agence france|reuters|associated press|\bap photo|shutterstock|alamy|epa\b|istock|dreamstime|"
+                      r"123rf|depositphotos|adobe stock|xinhua|anadolu|sipa|bloomberg|news agency of nigeria|\bnan\b)", re.I)
+
+
+def _agency(p: dict) -> bool:
+    return bool(AGENCIES.search(" ".join(str(p.get(k) or "") for k in ("source", "author", "file_url", "credit"))))
 
 
 def _date(v) -> str | None:
@@ -87,11 +100,14 @@ def public_upload(p: dict) -> bool:
 
 def approval_date(p: dict) -> str | None:
     """When this face was cleared to go live: the owner's approval on a contact sheet (D-065), or, for a photo from an
-    official page that names the candidate, the date it was checked against INEC's printed gender and age (D-074)."""
+    official page or a news report that names the candidate, the date it was checked against INEC's printed gender and age
+    (D-074, D-084)."""
     if _date(p.get("owner_approved")):
         return _date(p.get("owner_approved"))
     if _date(p.get("official_checked")) and not public_upload(p):
         return _date(p.get("official_checked"))
+    if _date(p.get("news_checked")) and not public_upload(p):
+        return _date(p.get("news_checked"))
     return None
 
 

@@ -659,12 +659,18 @@ function saveFile(file: File) {
   setTimeout(() => URL.revokeObjectURL(a.href), 10_000)
 }
 
-// The "Share on" row (owner, 14 Nov 2026): each icon shares the race's picture, in the shape its app shows best.
+// The "Share on" row (owner, 14 and 15 Nov 2026): each icon shares the race's picture, in the shape its app shows best.
+// Facebook and Instagram ask first: Story (tall) or Post (square).
 const APPS: Record<string, { name: string, shape: Shape }> = {
   whatsapp: { name: 'WhatsApp', shape: 'tall' },
   x: { name: 'X', shape: 'square' },
-  facebook: { name: 'Facebook', shape: 'square' },
 }
+const PICKS: Record<string, { name: string, saved: Record<Shape, string> }> = {
+  facebook: { name: 'Facebook', saved: { tall: 'Picture saved. Add it to your Facebook story.', square: 'Picture saved. Attach it to your post.' } },
+  instagram: { name: 'Instagram', saved: { tall: 'Picture saved. Post it on Instagram.', square: 'Picture saved. Post it on Instagram.' } },
+}
+// Some apps drop the words when a picture is shared, so an icon also copies them (owner, 15 Nov 2026).
+const CAPTION_COPIED = 'Caption copied. Paste it in your post.'
 
 function setupShare(section: HTMLElement) {
   const d = JSON.parse(section.dataset.share!) as ShareInfo
@@ -688,8 +694,31 @@ function setupShare(section: HTMLElement) {
   }
   // Start drawing as soon as someone reaches for a share button, so the tap shares at once.
   if (files) warmOn([section, ...was], ['tall'])
+  // One line for what happened, and a second once the caption is on the clipboard.
+  let line = ''
+  let copied = false
+  let lastCopy: object | null = null
+  const render = () => {
+    if (status) status.textContent = copied && line ? `${line}\n${CAPTION_COPIED}` : line
+  }
   const say = (text: string) => {
-    if (status) status.textContent = text
+    line = text
+    render()
+  }
+  // Called first thing in an icon's tap, while the browser still counts it as the visitor's own action.
+  const copyCaption = () => {
+    copied = false
+    const mine = {}
+    lastCopy = mine
+    navigator.clipboard?.writeText(d.appText).then(() => {
+      if (lastCopy !== mine) return
+      copied = true
+      render()
+    }, () => {})
+  }
+  const noCaption = () => {
+    lastCopy = null
+    copied = false
   }
   // A phone: a coarse pointer. A computer has no share menu to speak of (owner), whatever its browser offers.
   const phone = () => matchMedia('(pointer: coarse)').matches
@@ -712,10 +741,15 @@ function setupShare(section: HTMLElement) {
     wa.addEventListener('click', (ev) => {
       if (!files) return // the plain link: WhatsApp with the caption and the address
       ev.preventDefault()
+      noCaption()
       void withPicture(() => { location.href = wa.href })
     })
   }
-  sheet.addEventListener('click', () => (files ? void withPicture(linkOnly) : linkOnly()))
+  sheet.addEventListener('click', () => {
+    noCaption()
+    if (files) void withPicture(linkOnly)
+    else linkOnly()
+  })
 
   // "Share on": the menu with `shape` attached and the row's message and the race's page as the caption. A website can't pick
   // the app inside the menu, so one line names it. `fallback` runs if the phone refuses the file.
@@ -742,9 +776,10 @@ function setupShare(section: HTMLElement) {
       say('The picture could not be made. Please try again.')
     }
   }
-  // WhatsApp, X and Facebook. On a phone that can share files: the menu with the picture. On a computer: the link's own action
-  // opens the app's post window in a new tab with the message and link, and the picture is saved to attach. On a phone that
-  // can't share files: the plain link, as without JavaScript, so an icon never does nothing.
+  // WhatsApp and X. On a phone that can share files: the menu with the picture. On a computer: the link's own action opens
+  // the app's post window in a new tab with the message and link, and the picture is saved to attach. On a phone that can't
+  // share files: the plain link, as without JavaScript, so an icon never does nothing. A picture shared or saved copies the
+  // caption too.
   for (const a of section.querySelectorAll<HTMLAnchorElement>('a[data-app]')) {
     const app = APPS[a.dataset.app!]
     if (!app) continue
@@ -753,32 +788,60 @@ function setupShare(section: HTMLElement) {
       if (phone()) {
         if (!files) return
         ev.preventDefault()
+        copyCaption()
         void shareMenu(app.shape, app.name, app.name, () => { location.href = a.href })
         return
       }
+      copyCaption()
       void save(app.shape, 'Picture saved. Attach it to your post.')
     })
   }
-  // Instagram takes no links from websites: ask first, Story (tall) or Post (square), then the menu with that picture on a
-  // phone, or save it everywhere else.
-  const ig = section.querySelector<HTMLButtonElement>('[data-share-ig]')
-  const igPick = section.querySelector<HTMLElement>('[data-ig-pick]')
-  if (ig && igPick) {
-    ig.hidden = false
-    ig.addEventListener('click', () => {
-      const open = igPick.hidden
-      igPick.hidden = !open
-      ig.setAttribute('aria-expanded', String(open))
+  // Facebook and Instagram ask first, Story (tall) or Post (square), in a row of two under the icons; one row open at a time.
+  // Then, on a phone that can share files, the menu with that picture. Otherwise Facebook's Post opens its link share (and, on
+  // a computer, saves the square picture to attach), and every other choice saves the picture.
+  const toggles = [...section.querySelectorAll<HTMLElement>('[data-pick-app]')]
+  const rowOf = (t: HTMLElement) => section.querySelector<HTMLElement>(`[data-pick="${t.dataset.pickApp}"]`)
+  const close = (t: HTMLElement) => {
+    rowOf(t)!.hidden = true
+    t.setAttribute('aria-expanded', 'false')
+  }
+  for (const toggle of toggles) {
+    const app = PICKS[toggle.dataset.pickApp!]
+    const pick = rowOf(toggle)
+    if (!app || !pick) continue
+    toggle.hidden = false
+    toggle.setAttribute('aria-expanded', 'false')
+    toggle.addEventListener('click', (ev) => {
+      ev.preventDefault() // Facebook's icon is a link without the script
+      const open = pick.hidden
+      for (const other of toggles) if (other !== toggle && rowOf(other)) close(other)
+      pick.hidden = !open
+      toggle.setAttribute('aria-expanded', String(open))
       if (open) {
         for (const shape of ['tall', 'square'] as Shape[]) void getPicture(shape).catch(() => {})
-        igPick.querySelector<HTMLButtonElement>('button')?.focus()
+        pick.querySelector<HTMLButtonElement>('button')?.focus()
       }
     })
-    for (const b of igPick.querySelectorAll<HTMLButtonElement>('button[data-ig]')) {
+    const link = toggle instanceof HTMLAnchorElement ? toggle.href : null
+    for (const b of pick.querySelectorAll<HTMLButtonElement>('button[data-pick-shape]')) {
       b.addEventListener('click', () => {
-        const shape = b.dataset.ig as Shape
-        if (phone() && files) void shareMenu(shape, 'Instagram', b.textContent!.trim(), () => void save(shape, 'Picture saved. Post it on Instagram.'))
-        else void save(shape, 'Picture saved. Post it on Instagram.')
+        const shape = b.dataset.pickShape as Shape
+        const saveIt = () => void save(shape, app.saved[shape])
+        if (phone() && files) {
+          copyCaption()
+          void shareMenu(shape, app.name, b.textContent!.trim(), link && shape === 'square' ? () => { location.href = link } : saveIt)
+          return
+        }
+        if (link && shape === 'square') {
+          window.open(link, '_blank', 'noopener')
+          if (phone()) { // the link share alone: no picture to attach
+            noCaption()
+            say('')
+            return
+          }
+        }
+        copyCaption()
+        saveIt()
       })
     }
   }
@@ -795,7 +858,10 @@ function setupShare(section: HTMLElement) {
       if (open) for (const shape of ['tall', 'square'] as Shape[]) void getPicture(shape).catch(() => {})
     })
     for (const b of savePick.querySelectorAll<HTMLButtonElement>('button[data-save-shape]')) {
-      b.addEventListener('click', () => void save(b.dataset.saveShape as Shape, 'Picture saved.'))
+      b.addEventListener('click', () => {
+        noCaption()
+        void save(b.dataset.saveShape as Shape, 'Picture saved.')
+      })
     }
   }
 }

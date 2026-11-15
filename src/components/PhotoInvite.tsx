@@ -22,7 +22,7 @@ export function PhotoInvite() {
       <p>
         A candidate or their campaign can send an official photo by email, with a link to an official page or verified account
         that shows it is theirs. Nothing sent this way appears by itself: each photo is checked like any other and approved by
-        the site’s owner first. A photo sent by anyone else is used only as a lead to an official source.
+        the site’s owner first. A photo sent by anyone else is used only as a lead to one of the sources described on the About page.
       </p>
       <p className="go"><a className="btn" href={photoMailto}>Send a candidate’s photo</a></p>
     </>

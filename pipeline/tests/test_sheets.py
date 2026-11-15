@@ -31,6 +31,33 @@ def test_an_official_page_photo_goes_live_once_checked_but_a_public_upload_needs
     assert approval_date({**commons, "source": "National Assembly website", "official_checked": "2026-11-14"}) is None
 
 
+def test_a_news_photo_goes_live_once_checked_and_never_from_an_agency(tmp_path, monkeypatch):
+    """D-084 (owner, 15 Nov 2026): a news report naming the candidate with party and seat is a source, checked like an
+    official page; a picture agency or stock library never is, and a public upload still needs the owner."""
+    import pytest
+    import yaml
+
+    from ballot_pipeline import photos
+
+    news = {"candidate_id": "jan-2027-house-x-y-pdp", "source": "Punch (punchng.com)", "file_page": "https://punchng.com/a/",
+            "file_url": "https://cdn.punchng.com/a.jpg", "sha256": "0" * 64, "retrieved": "2026-11-15", "crop": [0, 0, 9, 9]}
+    assert photos.approval_date({**news, "news_checked": "2026-11-15"}) == "2026-11-15"
+    assert photos.approval_date(news) is None
+    commons = {"file_page": "https://commons.wikimedia.org/wiki/File:X.jpg", "file_url": "https://upload.wikimedia.org/x/X.jpg"}
+    assert photos.approval_date({**news, **commons, "news_checked": "2026-11-15"}) is None
+    for credit in ("Photo: AFP", "Getty Images", "REUTERS/Someone", "Shutterstock", "Photo: NAN"):
+        assert photos._agency({**news, "credit": credit}), credit
+    assert not photos._agency({**news, "credit": "none shown"})
+
+    for bad in ({**news, "news_checked": "2026-11-15", "credit": "Photo: AFP"},
+                {**news, "news_checked": "2026-11-15", "official_checked": "2026-11-15"}):
+        f = tmp_path / "photos.yaml"
+        f.write_text(yaml.safe_dump({"people": [bad]}))
+        monkeypatch.setattr(photos, "PHOTOS_YAML", f)
+        with pytest.raises(ValueError):
+            photos.load()
+
+
 def test_a_race_shows_photos_once_any_candidate_but_the_governing_partys_has_one_first_five_or_not():
     import pytest
 

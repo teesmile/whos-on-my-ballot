@@ -466,7 +466,10 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
   it('the About page says where photos come from and that a candidate or party can send an official one', () => {
     const about = html('about')
     expect(about).toContain('<h2 id="photos">Photos</h2>')
-    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, an official government or legislature page, or the candidate’s own verified account\./)
+    expect(about).toMatch(/Wikimedia Commons, the candidate’s or party’s own\s+official website, an official government or legislature page, the candidate’s own verified account, or a news report that names\s+the candidate with their party and their seat or state\. Never a photo from a picture agency or stock library/)
+    expect(about).not.toMatch(/Never a news site/)
+    // the photo's owner can have it taken down (owner, 15 Nov 2026)
+    expect(about).toMatch(/The owner of any photo can ask for it to be removed by writing to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Remove%20a%20photo">corrections@anthonyugwuja\.dev<\/a>\s*, and it comes down within a day\./)
     expect(about).toMatch(/checked\s+against the gender and age INEC printed for the candidate\. A photo from Wikimedia Commons, where anyone can upload a file,\s+is also approved by the site’s owner before it appears\./)
     expect(about).toMatch(/A request to change a photo goes to\s*<a href="mailto:corrections@anthonyugwuja\.dev\?subject=Change%20a%20photo">/)
     // a candidate or campaign sends a photo by email (no form), with a template; the About page never explains the per-race rule
@@ -509,12 +512,15 @@ describe('"Share on" WhatsApp, X, Facebook and Instagram (owner, 14 Nov 2026)', 
         expect(row, p).toContain('<span class="share-on-label" aria-hidden="true">Share on</span>')
         expect(row, p).toContain(`href="https://wa.me/?text=${encodeURIComponent(`${message}\n${url}`)}" target="_blank" rel="noopener" aria-label="Share on WhatsApp"`)
         expect(row, p).toContain(`href="https://x.com/intent/post?text=${encodeURIComponent(message)}&url=${encodeURIComponent(url)}" target="_blank" rel="noopener" aria-label="Share on X"`)
-        expect(row, p).toContain(`href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank" rel="noopener" aria-label="Share on Facebook"`)
-        expect(row, p).toMatch(/<button type="button" class="share-app" aria-label="Share on Instagram" data-app="instagram" data-share-ig="true" aria-expanded="false" hidden="">/)
+        expect(row, p).toContain(`href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank" rel="noopener" aria-label="Share on Facebook" data-app="facebook" data-pick-app="facebook">`)
+        expect(row, p).toMatch(/<button type="button" class="share-app" aria-label="Share on Instagram" data-pick-app="instagram" aria-expanded="false" hidden="">/)
         // the caption the pictures carry: the same message and the race's own page
         expect(b.data.appText, p).toBe(`${message}\n${url}`)
-        // Instagram asks Story or Post; "Save picture" offers tall or square; both wait for the page script
-        expect(b.html, p).toMatch(/<div class="share-pick" data-ig-pick="true" hidden=""><span class="share-pick-label">Share to Instagram as<\/span><button[^>]*data-ig="tall">[\s\S]*?Story<\/button><button[^>]*data-ig="square">[\s\S]*?Post<\/button><\/div>/)
+        // Facebook and Instagram ask Story or Post (owner, 15 Nov 2026); "Save picture" offers tall or square; all wait for the page script
+        for (const app of ['facebook', 'instagram']) {
+          const name = app === 'facebook' ? 'Facebook' : 'Instagram'
+          expect(b.html, p).toMatch(new RegExp(`<div class="share-pick" data-pick="${app}" hidden=""><span class="share-pick-label">Share to ${name} as</span><button[^>]*data-pick-shape="tall">[\\s\\S]*?Story</button><button[^>]*data-pick-shape="square">[\\s\\S]*?Post</button></div>`))
+        }
         expect(b.html, p).toMatch(/<div class="share-save" data-save="true" hidden=""><button type="button" class="btn-quiet" data-save-toggle="true" aria-expanded="false">Save picture<\/button><div class="share-pick" data-save-pick="true" hidden=""><button[^>]*data-save-shape="tall">[\s\S]*?Tall<\/button><button[^>]*data-save-shape="square">[\s\S]*?Square<\/button><\/div><\/div>/)
         // four icons, one glyph each, never the visitor's place: the race's own page, not the ballot
         expect(row.match(/class="share-app"/g)?.length, p).toBe(4)

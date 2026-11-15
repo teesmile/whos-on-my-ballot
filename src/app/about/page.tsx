@@ -105,14 +105,21 @@ export default function About() {
       <h2 id="photos">Photos</h2>
       <p>
         A candidate has a photo only where a source that clearly names them has one: Wikimedia Commons, the candidate’s or party’s own
-        official website, an official government or legislature page, or the candidate’s own verified account. Never a news site, an agency or an unverified account, and
-        never a photo whose subject is in doubt. Every photo has the same head-and-shoulders crop and size, and each one is checked
+        official website, an official government or legislature page, the candidate’s own verified account, or a news report that names
+        the candidate with their party and their seat or state. Never a photo from a picture agency or stock library, an unverified account,
+        or a photo whose subject is in doubt. The same sources are used for every party. Every photo has the same head-and-shoulders crop and size, and each one is checked
         against the gender and age INEC printed for the candidate. A photo from Wikimedia Commons, where anyone can upload a file,
-        is also approved by the site’s owner before it appears. Photos are being added race by race; their credits are listed at the end of this
+        is also approved by the site’s owner before it appears. Photos are being added race by race; the source of each is listed at the end of this
         page. Any candidate shown without a photo has the same plain placeholder. A request to change a photo goes to
         {' '}
         <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Change a photo')}`}>{CORRECTIONS_EMAIL}</a>
         .
+      </p>
+      <p>
+        The owner of any photo can ask for it to be removed by writing to
+        {' '}
+        <a href={`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent('Remove a photo')}`}>{CORRECTIONS_EMAIL}</a>
+        , and it comes down within a day.
       </p>
       <PhotoInvite />
 
