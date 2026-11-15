@@ -319,15 +319,16 @@
    }
   },
   "feb-2027-governor-rivers": {
-   "file": "logos/sheet-394b763266.webp",
+   "file": "logos/sheet-d199b4c8a4.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 45016,
-   "sha256": "394b763266fc456023b020e87ba00e4d91f0e33c09a4677edcff60e4352721ab",
+   "bytes": 47914,
+   "sha256": "d199b4c8a441ad40569cbaeeee17a9f17299c73e54114fdde63d1639b5d43a4d",
    "photos": {
     "feb-2027-governor-rivers-adc": 0,
     "feb-2027-governor-rivers-apc": 1,
-    "feb-2027-governor-rivers-pdp": 2
+    "feb-2027-governor-rivers-ndc": 2,
+    "feb-2027-governor-rivers-pdp": 3
    }
   },
   "feb-2027-governor-sokoto": {
@@ -353,24 +354,26 @@
    }
   },
   "feb-2027-governor-yobe": {
-   "file": "logos/sheet-41af9cb457.webp",
+   "file": "logos/sheet-5c8f590a63.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 38082,
-   "sha256": "41af9cb45710da277c12832a05fdb8bddf80943f96639bd036d7b5a5e233c694",
+   "bytes": 42242,
+   "sha256": "5c8f590a639114a21ba6647239d559ed4cc1daaf8b9412f7b1717e65d75f3d5d",
    "photos": {
-    "feb-2027-governor-yobe-apc": 0
+    "feb-2027-governor-yobe-adc": 0,
+    "feb-2027-governor-yobe-apc": 1
    }
   },
   "feb-2027-governor-zamfara": {
-   "file": "logos/sheet-df52dfb26a.webp",
+   "file": "logos/sheet-c65429640d.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 40910,
-   "sha256": "df52dfb26a29afcfb229b85479abcb9ef545b995106292353dd30098371f5055",
+   "bytes": 44462,
+   "sha256": "c65429640d98f9fc41fdadf26a7435e51557b5b2b15d0b2ab9e16a50aa3bea5f",
    "photos": {
-    "feb-2027-governor-zamfara-apc": 0,
-    "feb-2027-governor-zamfara-ndc": 1
+    "feb-2027-governor-zamfara-adc": 0,
+    "feb-2027-governor-zamfara-apc": 1,
+    "feb-2027-governor-zamfara-ndc": 2
    }
   }
  }
