@@ -124,7 +124,7 @@ describe('sitemap and robots.txt', () => {
   it('dates each page by its content, not by the build', () => {
     for (const [u, d] of entries) expect(d, u).toMatch(/^2026-\d{2}-\d{2}$/)
     const date = (p: string) => entries.find(([u]) => u === `${SITE_URL}${p}`)![1]
-    expect(date('/c/jan-2027-house-lagos-agege-apc/')).toBe('2026-10-30') // INEC's PDF date
+    expect(date('/c/jan-2027-house-lagos-alimosho-apc/')).toBe('2026-10-30') // INEC's PDF date
     expect(date('/c/jan-2027-house-lagos-eti-osa-apc/')).toBe('2026-11-15') // sheet 5 switched the race's photos on
     // the day another candidate's official photo switched the race's photos on (D-081)
     expect(date('/c/jan-2027-house-fct-municipal-bwari-apc/')).toBe('2026-11-15')

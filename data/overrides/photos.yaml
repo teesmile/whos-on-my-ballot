@@ -1548,14 +1548,6 @@ people:
     retrieved: '2026-11-14'
     crop: [50, 6, 300, 300]
     official_checked: '2026-11-14'  # House batch 1: profile names AYODELE ADEFIRANYE Ileoluji-Okeibo/Odigbo; INEC M, 56, fits the photo
-  - candidate_id: jan-2027-house-ondo-okitipupa-irele-apc
-    source: "National Assembly website"
-    file_page: https://nass.gov.ng/mps/single/615
-    file_url: https://nass.gov.ng/themes/newnass/images/mps/615.jpg
-    sha256: 201c3017d4e88c6a3475dea7e44b57325e8d467140a40f37ed3ba073569b30aa
-    retrieved: '2026-11-14'
-    crop: [77, 42, 245, 245]
-    official_checked: '2026-11-14'  # House batch 1: profile names OKUNJIMI ODIMAYO Okitipupa/Irele; INEC M, 46, fits the photo
   - candidate_id: jan-2027-house-ondo-owo-ose-apc
     source: "National Assembly website"
     file_page: https://nass.gov.ng/mps/single/184
@@ -5816,3 +5808,673 @@ people:
     retrieved: '2026-11-16'
     crop: [51, 58, 200, 200]
     official_checked: '2026-11-15'  # INEC M, 47, fits the photo; the page names them; seat and name checked (night round)
+  # Night batch 2 (15 Nov 2026): news reports, framing per D-089; checked against INEC gender and age
+  - candidate_id: jan-2027-house-ondo-okitipupa-irele-apc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/ondo-guber-odimayo-picks-apc-nomination-expression-of-interest-form/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2024/03/Odimayo.jpg
+    sha256: c170e77631600a8bcec52916846f4eba273303f7c47d002a5d718457215c060a
+    credit: "none shown"
+    taken: '2024-03-28'
+    retrieved: '2026-11-15'
+    crop: [290, 0, 280, 280]
+    news_checked: '2026-11-15'  # INEC M, 46, fits; names them with party and seat or state (night batch 2) (replaces a blurred photo, owner 15 Nov)
+  - candidate_id: jan-2027-house-abia-bende-lp
+    source: "National Ambassador (nationalambassadorngr.com)"
+    file_page: https://nationalambassadorngr.com/2027-why-anyaso-is-labour-partys-top-choice-for-bende-reps-seat/
+    file_url: https://nationalambassadorngr.com/wp-content/uploads/2026/04/IMG-20260411-WA0004.jpg
+    sha256: b1765e9e3938cfdcb337636136a36405d26e41b2e8cb1e3c9463a3e91e7f9526
+    credit: "Dr. Chimaobi Desmond Anyaso"
+    taken: '2026-04-14'
+    retrieved: '2026-11-15'
+    crop: [70, 160, 520, 520]
+    news_checked: '2026-11-15'  # INEC M, 45, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-anambra-anambra-east-anambra-west-apga
+    source: "The Sun Nigeria (thesun.ng)"
+    file_page: https://thesun.ng/nigeria-decides-2023-peoplell-vote-for-candidates-not-parties-obidigwe/
+    file_url: https://d1jcea4y7xhp7l.cloudfront.net/2023/02/WPEaRyRv-56.jpg
+    sha256: 6cd698a0d2842b37decefae81495fc5fe43671be9b9bde4d2cc044a8963aade5
+    credit: "Obidigwe"
+    taken: '2023-02-02'
+    retrieved: '2026-11-15'
+    crop: [18, 0, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 46, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-anambra-ihiala-apga
+    source: "Independent Newspaper Nigeria (independent.ng)"
+    file_page: https://independent.ng/2023-elections-anambra-deputy-speaker-humbles-incumbent-others/
+    file_url: https://independent.ng/wp-content/uploads/Rt.-Hon.-Dr.-Paschal-Arinzechukwu-Agbodike.jpg
+    sha256: 56010f49e1b3514c64ba75e0620613618ac40d35ec4cecdceaf6b1d31d5f568c
+    credit: "none shown"
+    taken: '2023-02-27'
+    retrieved: '2026-11-15'
+    crop: [245, 80, 250, 250]
+    news_checked: '2026-11-15'  # INEC M, 46, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-delta-warri-north-warri-south-warri-south-west-ndc
+    source: "PENGlobal (penglobalinc.com)"
+    file_page: https://penglobalinc.com/2027-bekenawei-joins-house-of-reps-race-promises-real-positive-change-in-warri-federal-constituency
+    file_url: https://www.penglobalinc.com/media/IMG-20260516-WA0035_1778953582.jpg
+    sha256: 5140415481e06a48a9d3e8305150a5c0e858f0196e1ae1f8e65445b8b3ab701e
+    credit: "Chief Pedro Bekenawei)L) being presented his NDC Expression of Interest Form in Abuja"
+    taken: '2026-05-16'
+    retrieved: '2026-11-15'
+    crop: [222, 0, 210, 210]
+    news_checked: '2026-11-15'  # INEC M, 46, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-anambra-idemili-north-idemili-south-ndc
+    source: "Voice of Nigeria (von.gov.ng)"
+    file_page: https://von.gov.ng/2027-polls-ndc-candidate-calls-for-accountable-governance/
+    file_url: https://von.gov.ng/wp-content/uploads/2026/10/754223.jpg
+    sha256: 19a610b82fe9e390680e9161430867fca86383463af5ede71460e798009210cb
+    credit: "none shown"
+    taken: '2026-10-26'
+    retrieved: '2026-11-15'
+    crop: [362, 200, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 49, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-kogi-kogi-lokoja-kogi-k-k-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/beyond-politics-beyond-promises-real-leadership-for-lokoja-kogi-federal-constituency/
+    file_url: https://kogireports.com/wp-content/uploads/2026/08/Kadir-Abdulkadir-Ibrahim-1.jpeg
+    sha256: 903a1ef35b64b5e8ea6a09cd4319332e4c2e15c6b346aa6d846f5b0cedfff849
+    credit: "none shown"
+    taken: '2026-09-07'
+    retrieved: '2026-11-15'
+    crop: [105, 0, 470, 470]
+    news_checked: '2026-11-15'  # INEC M, 41, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-oyo-ibadan-north-east-ibadan-south-east-pdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/2023-political-parties-sidelining-women-in-politics-says-reps-aspirant/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2022/04/WhatsApp-Image-2022-04-14-at-6.06.07-PM.jpeg
+    sha256: c652067194292a7481ae0794e985975e42e9e1b521a94c545b142c8260767113
+    credit: "Dr Adejoke Adekanmbi-Akinseye"
+    taken: '2022-04-14'
+    retrieved: '2026-11-15'
+    crop: [175, 45, 300, 300]
+    news_checked: '2026-11-15'  # INEC F, 58, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-taraba-ibi-wukari-pdp
+    source: "Voice of Nigeria (von.gov.ng)"
+    file_page: https://von.gov.ng/galadima-commends-military-over-taraba-kidnap-rescue/
+    file_url: https://von.gov.ng/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-16.52.55.jpeg
+    sha256: 15882913619264ad0425a43d3fa490a899910e2c6f831a389a1c505171ec141b
+    credit: "none shown"
+    taken: '2026-08-21'
+    retrieved: '2026-11-15'
+    crop: [140, 0, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, 59, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-kwara-ilorin-east-ilorin-south-pdp
+    source: "Voice of Nigeria (von.gov.ng)"
+    file_page: https://von.gov.ng/eletu-emerges-pdp-consensus-candidate-for-ilorin-east-south-reps-seat/
+    file_url: https://von.gov.ng/wp-content/uploads/2026/05/609474.jpg
+    sha256: 590edd893eccb932918914afcf9f90e6acaf33de629b8598e6a91448d94af8bc
+    credit: "none shown; the poster itself reads 'YUSUF ELETU SAKA PhD PDP candidate Ilorin East/Ilorin South Federal Constituency'"
+    taken: '2026-05-18'
+    retrieved: '2026-11-15'
+    crop: [20, 450, 660, 660]
+    news_checked: '2026-11-15'  # INEC M, 37, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-sokoto-yabo-shagari-apc
+    source: "Voice of Nigeria (von.gov.ng)"
+    file_page: https://von.gov.ng/apc-candidate-distributes-grains-n10m-in-sokoto/
+    file_url: https://von.gov.ng/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-19-at-18.33.32.jpeg
+    sha256: 582a5b1171509da26f29367fc324cb12a947cdfafb3a75d2439104328fbbe36d
+    credit: "none shown"
+    taken: '2026-09-19'
+    retrieved: '2026-11-15'
+    crop: [39, 60, 580, 580]
+    news_checked: '2026-11-15'  # INEC M, 66, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-osun-ife-central-ife-north-ife-south-ife-east-adc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/house-of-reps-ife-deserves-better-my-contract-is-with-the-people-ayedun/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/10/House-Of-Reps-Ife-Deserves-Better-My-Contract-Is-With-The-People-%E2%80%93Ayedun.png
+    sha256: 1a9f1e2c6dca80f4bbb160470ba6618283fb4a1631789f13ead823c86c22fa97
+    credit: "House Of Reps: Ife Deserves Better, My Contract Is With The People -Ayedun"
+    taken: '2026-10-31'
+    retrieved: '2026-11-15'
+    crop: [15, 35, 250, 250]
+    news_checked: '2026-11-15'  # INEC M, 59, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-lagos-ikeja-adc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/ikeja-needs-change-purposeful-representation-says-akinde/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/10/Mr.-Oluwaseyi-A-Akinde.png
+    sha256: 13c5070b461e62fb7741f7f00826133f901bdd7ad9c01eb0be5646d48fcf95f1
+    credit: "Ikeja Needs Change, Purposeful Representation, Says Akinde"
+    taken: '2026-10-17'
+    retrieved: '2026-11-15'
+    crop: [0, 105, 227, 227]
+    news_checked: '2026-11-15'  # INEC M, 42, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-niger-bida-gbako-katcha-pdp
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/my-plans-for-bida-gbako-katcha-federal-constituency-by-tsado/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/09/TSADO.jpg
+    sha256: 4aefde96dd649bc7e36c43d02af5671416ea43af6b456f1ffb3e2b9a18b31503
+    credit: "Tsado"
+    taken: '2026-09-18'
+    retrieved: '2026-11-15'
+    crop: [95, 10, 230, 230]
+    news_checked: '2026-11-15'  # INEC M, 49, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-ebonyi-abakaliki-izzi-pdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/ebonyi-pdps-chinazum-says-no-man-can-intimidate-her-out-of-2027-race/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/10/unnamed-11-1.jpg
+    sha256: ac1fb0aa851ada1be97242e9e73de8cf16c070eeaa4528b1881270282a2155fe
+    credit: "none shown"
+    taken: '2026-10-26'
+    retrieved: '2026-11-15'
+    crop: [525, 0, 400, 400]
+    news_checked: '2026-11-15'  # INEC F, 41, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-imo-isiala-mbano-okigwe-onuimo-ndc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/2027-anyanwu-clinches-ndc-reps-ticket-in-imo/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/05/Chidi-Mike-Anyanwu.jpg
+    sha256: 2d7514e81cabc6537ef14a7c62ce3d4c203dace5c9cae285a1b00c20dc61af7e
+    credit: "none shown"
+    taken: '2026-05-31'
+    retrieved: '2026-11-15'
+    crop: [545, 0, 440, 440]
+    news_checked: '2026-11-15'  # INEC M, 43, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-imo-ehime-mbano-ihite-uboma-obowo-ndc
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/imo-ndc-affirms-duruibe-as-okigwe-south-house-of-representatives-candidate/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/06/IMG-20260623-WA0027.jpg
+    sha256: ba26bb321935e02b70a87f3bdc32443dab9ea316c47ef40e4864821ddad21eb2
+    credit: "none shown"
+    taken: '2026-06-23'
+    retrieved: '2026-11-15'
+    crop: [320, 45, 440, 440]
+    news_checked: '2026-11-15'  # INEC F, 40, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-kaduna-jema-a-sanga-adc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/youth-empowerment-remains-the-best-weapon-against-insecurity-adc-candidate/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/08/Adamu-Isah-Tanko-Jemaa-Mambo.jpg
+    sha256: 0482b66df1f9facb4e89c2344d4992f30e66703262e77da57a8acbb34a451707
+    credit: "none shown"
+    taken: '2026-08-15'
+    retrieved: '2026-11-15'
+    crop: [368, 60, 560, 560]
+    news_checked: '2026-11-15'  # INEC M, 33, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-gombe-kaltungo-shongom-apc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/high-cost-of-politics-cultural-barriers-violence-stifling-womens-voices-binta-bello/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/06/Binta-Bello.jpg
+    sha256: cabe0bbeff251ea1c7830af6127d36a86ae449cc18ee55c5c32184a4edfa8c68
+    credit: "Umar Sani"
+    taken: '2026-06-28'
+    retrieved: '2026-11-15'
+    crop: [100, 0, 1000, 1000]
+    news_checked: '2026-11-15'  # INEC F, 55, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-lagos-agege-apc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/obasa-secures-apc-ticket-for-agege-reps-seat/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/05/Mudashiru-Obasa-1.jpg
+    sha256: 3009033c0e8ff71e715a598c86c001880a14e911678da3c8543a12aa5895c360
+    credit: "none shown"
+    taken: '2026-05-16'
+    retrieved: '2026-11-15'
+    crop: [570, 35, 440, 440]
+    news_checked: '2026-11-15'  # INEC M, 53, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-katsina-daura-sandamu-mai-adua-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/2027-buhari-declares-campaign-for-reps-seat/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/08/Yusuf-Buhari.jpg
+    sha256: 0b9e17f371f393ef09070b45192a58556b182a1a26a1d58d29765b685165c95f
+    credit: "none shown"
+    taken: '2026-08-22'
+    retrieved: '2026-11-15'
+    crop: [80, 40, 600, 600]
+    news_checked: '2026-11-15'  # INEC M, 33, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-anambra-aguata-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/anambra-apc-nass-candidate-onunkwo-targets-200000-voters/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/06/IMG-20260622-WA0056.jpg
+    sha256: e973c7608e70c093bdf053bac8e6c154c2f64ab40da64b8f7354b691e26a3b7b
+    credit: "none shown"
+    taken: '2026-06-22'
+    retrieved: '2026-11-15'
+    crop: [0, 150, 709, 709]
+    news_checked: '2026-11-15'  # INEC M, 50, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-house-kwara-ilorin-east-ilorin-south-apc
+    source: "ThisDay (thisdaylive.com)"
+    file_page: https://www.thisdaylive.com/2026/09/12/kwara-apc-reps-candidate-olododo-distributes-back-to-school-packs-to-students/
+    file_url: https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/Abdulquawiy-Olododo.jpg
+    sha256: d30a212c32fef2042f04282ae4995f1c18ab272b8f00a89b8cdeca2cbf90d69a
+    credit: "none shown"
+    taken: '2026-09-12'
+    retrieved: '2026-11-15'
+    crop: [126, 0, 370, 370]
+    news_checked: '2026-11-15'  # INEC M, 31, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-bauchi-bauchi-north-pdp
+    source: "Prime Time News (primetimenews.ng)"
+    file_page: https://primetimenews.ng/pdp-primary-isawa-defeats-opponent-clinches-bauchi-north-ticket/
+    file_url: https://primetimenews.ng/wp-content/uploads/2026/05/IMG-20260521-WA0071-1.jpg
+    sha256: c902f827483aa7f1c2c64626d80324d914b413afa7ba05a1f21c3f8b6d745377
+    credit: "none shown"
+    taken: '2026-05-21'
+    retrieved: '2026-11-15'
+    crop: [440, 80, 820, 820]
+    news_checked: '2026-11-15'  # INEC M, 56, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-bauchi-bauchi-north-apc
+    source: "The Guardian Nigeria (guardian.ng)"
+    file_page: https://guardian.ng/news/2027-baba-clinches-bauchi-north-apc-senate-ticket/
+    file_url: https://cdn.guardian.ng/wp-content/uploads/2026/05/fast2010.webp
+    sha256: ad1fa6c3a54bf1227e586de16676af7c8bea2f7bc73c72a4b6b0a137e420c895
+    credit: "Hon. Ibrahim Mohammed Baba"
+    taken: '2026-05-20'
+    retrieved: '2026-11-15'
+    crop: [805, 85, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 50, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-jigawa-jigawa-south-west-pdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/2027-dont-tamper-with-my-election-results-ex-igp-abba-warns/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/08/Suleiman-Abba-e1787230555774.jpg
+    sha256: fb750d3321206ab52b1c77cba810c141c3f24f953c9e48a681b9cd835c8a8bdf
+    credit: "none shown"
+    taken: '2026-08-20'
+    retrieved: '2026-11-15'
+    crop: [390, 0, 470, 470]
+    news_checked: '2026-11-15'  # INEC M, 67, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-osun-osun-central-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/why-i-dumped-governorship-ambition-for-senate-rasheed/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/11/Mr-Kunle-Rasheed-Adegoke.jpg
+    sha256: 6042916bb8de6856713c2681fd7f7d794022d41ff0fba4a18d2dfbea9bde3a37
+    credit: "media title: Why I Dumped Governorship Ambition For Senate -Rasheed"
+    taken: '2026-11-14'
+    retrieved: '2026-11-15'
+    crop: [100, 10, 270, 270]
+    news_checked: '2026-11-15'  # INEC M, 56, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-benue-benue-north-east-sdp
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/2027-elections-sdp-senatorial-candidate-promises-to-tackle-insecurity-in-north-east/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/11/IMG-20261104-WA0040.jpg
+    sha256: f255323fa8f5994f98eccaa3556402cdf11dee5b0d4cee61adabe33ba58e4836
+    credit: "none shown"
+    taken: '2026-11-04'
+    retrieved: '2026-11-15'
+    crop: [345, 40, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 60, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-imo-imo-north-pdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/2027-mike-duru-ejiogu-constitutes-13-member-campaign-organisation-in-imo-north/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/08/IMG-20260709-WA0168-1.jpg
+    sha256: 03b28d05bfd6723b07c50fca5303fd57ffce3c5f91fb40beb2b71105685314ca
+    credit: "media alt text: Chief Mike Duru Ejiogu- PDP Senatorial candidate for Imo North"
+    taken: '2026-08-25'
+    retrieved: '2026-11-15'
+    crop: [280, 40, 700, 700]
+    news_checked: '2026-11-15'  # INEC M, 52, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-kaduna-kaduna-south-adc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/tinubu-apc-have-failed-nigerians-and-should-be-kicked-out-gaiya/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/09/Godfrey-Ali-Gaiya-new.jpg
+    sha256: f93ce7eaf8be06ea993fd2bf482a3abebf9595db81fd752558bf2b86b8b015df
+    credit: "Honourable Godfrey Ali Gaiya"
+    taken: '2026-09-15'
+    retrieved: '2026-11-15'
+    crop: [300, 0, 600, 600]
+    news_checked: '2026-11-15'  # INEC M, 61, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-plateau-plateau-central-pdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/politics-in-nigeria-has-changed-no-longer-about-party-golu/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/09/Golu.jpg
+    sha256: e17715387b6920c5e088a007b160c447377ef44d59df2b4b418d7bdf0a2e8e19
+    credit: "none shown"
+    taken: '2026-09-13'
+    retrieved: '2026-11-15'
+    crop: [260, 30, 760, 760]
+    news_checked: '2026-11-15'  # INEC M, 53, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-plateau-plateau-north-pdp
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/2027-plateau-north-voters-will-resist-rigging-says-gwottson/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/11/Plateau-North-.jpg
+    sha256: 11217a0e1777e58d3385c1bb8740bc5039777f15c08c479cbd36aa4b3c23cd28
+    credit: "none shown"
+    taken: '2026-11-13'
+    retrieved: '2026-11-15'
+    crop: [150, 200, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, 59, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ebonyi-ebonyi-south-pdp
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/2027-elections-i-will-use-senate-seat-to-create-wealth-empower-women-ebonyi-south-pdp-candidate/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/10/IMG-20261027-WA0035.jpg
+    sha256: c7f18370594574be597ecc072b1dc8b8b1fbcc8b83afa81d8c56250c337fedf2
+    credit: "none shown"
+    taken: '2026-10-27'
+    retrieved: '2026-11-15'
+    crop: [170, 75, 700, 700]
+    news_checked: '2026-11-15'  # INEC F, 55, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-anambra-anambra-central-apga
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/anambra-central-deserves-the-best-says-nwankwo/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/07/Anambra-Central-Deserves-The-Best-Says-Nwankwo.jpeg
+    sha256: a05671dcc34943b87664108394fe9e162a8afa31ec3899d9da99df2305777b05
+    credit: "media title: Anambra Central Deserves The Best, Says Nwankwo"
+    taken: '2026-07-12'
+    retrieved: '2026-11-15'
+    crop: [230, 10, 500, 500]
+    news_checked: '2026-11-15'  # INEC M, 51, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ekiti-ekiti-north-sdp
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/2027-sdp-candidate-unveils-agenda-for-ekiti-north-senate-seat/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/10/Peter-Obafemi.jpeg
+    sha256: c011b65db38ccf546dc1589bc72efeda50a5b455ee14fa222f2e83fd9fcdcde3
+    credit: "none shown"
+    taken: '2026-10-03'
+    retrieved: '2026-11-15'
+    crop: [150, 20, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 69, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ebonyi-ebonyi-central-ndc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/2027-election-is-crucial-for-nigerias-survival-says-odoh/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2024/11/Benard-Odoh.jpg
+    sha256: 6aa9738e95be464f1c5548ee465060d3827285e97dcf7007f723c97ed18827aa
+    credit: "none shown"
+    taken: '2026-09-29'
+    retrieved: '2026-11-15'
+    crop: [140, 50, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 51, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-kogi-kogi-central-adc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/im-returning-to-move-kogi-central-towards-development-ahmed-ogembe/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/09/Ahmed-Ogembe.jpg
+    sha256: 9ae7f9ac95af26f2789044b0a7b6e7baea01055ce95f8bdc91fdbc7326a97b1e
+    credit: "media title: I'm Returning To Move Kogi Central Towards Development -Ahmed Ogembe"
+    taken: '2026-09-26'
+    retrieved: '2026-11-15'
+    crop: [210, 10, 260, 260]
+    news_checked: '2026-11-15'  # INEC M, 62, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-delta-delta-central-ndc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/omo-agege-condemns-disruption-of-ndc-march-in-delta/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/09/Omo-Agege-Condemns-Disruption-Of-NDC-March-In-Delta.jpg
+    sha256: 1514f4c4b8fdfddcdb0c44abe0a285b2038464f72241f30a6c5638c3c2cb973d
+    credit: "media title: Omo-Agege Condemns Disruption Of NDC March In Delta"
+    taken: '2026-09-20'
+    retrieved: '2026-11-15'
+    crop: [140, 40, 340, 340]
+    news_checked: '2026-11-15'  # INEC M, 63, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ebonyi-ebonyi-south-adc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/adc-senatorial-candidate-explains-how-regions-would-influence-2027-presidency/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/10/19-2.png
+    sha256: cb9ddee7852ca1824b3b3a5b3e2a0b4d24df51bb7ab470c0f3c3265d326abfcc
+    credit: "Barr Onu"
+    taken: '2026-11-01'
+    retrieved: '2026-11-15'
+    crop: [348, 0, 220, 220]
+    news_checked: '2026-11-15'  # INEC M, 45, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-imo-imo-west-pdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/imo-west-pdp-senatorial-candidate-begins-tour-of-12-lgas/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/10/Dr-Jones-Onyereri.jpg
+    sha256: 1ac997619c7204cb1e5f28295d51efb0dc20dca176c635cff6379150135968b4
+    credit: "media alt text: Dr-Jones-Onyereri"
+    taken: '2026-10-16'
+    retrieved: '2026-11-15'
+    crop: [83, 0, 220, 220]
+    news_checked: '2026-11-15'  # INEC M, 60, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-edo-edo-south-ndc
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/2027-elections-osayuki-remains-edo-south-senatorial-candidate-ndc/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/08/IMG-20260805-WA0011.jpg
+    sha256: 8eacf42c464ed860e2836d4817e3cd4c560358b374a9600dc32c3570a2e2c0d0
+    credit: "none shown"
+    taken: '2026-08-05'
+    retrieved: '2026-11-15'
+    crop: [300, 150, 450, 450]
+    news_checked: '2026-11-15'  # INEC F, 62, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ekiti-ekiti-north-pdp
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/osinkolu-emergence-as-pdp-senatorial-candidate-boosts-oluyedes-chances-reinforces-support-for-tinubu/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/05/Osinkolu.jpg
+    sha256: f099bbde42834d4042307dbe714bd94dfc2f4c3a1ae06baaeb62383ec0da99cb
+    credit: "none shown"
+    taken: '2026-05-21'
+    retrieved: '2026-11-15'
+    crop: [155, 5, 230, 230]
+    news_checked: '2026-11-15'  # INEC M, 61, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-kwara-kwara-south-pdp
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/2027-polls-i-will-lobby-to-attract-projects-to-my-constituency-pdp-senatorial-candidate/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/11/IMG-20261113-WA0202.jpg
+    sha256: 6bdde1609abaff8fc7139b002a0fed05c7b0c62f9023cbfae319ce0cee333c33
+    credit: "none shown"
+    taken: '2026-11-14'
+    retrieved: '2026-11-15'
+    crop: [390, 30, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 55, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-lagos-lagos-west-ndc
+    source: "BusinessDay (businessday.ng)"
+    file_page: https://businessday.ng/politics/article/ndcs-salvador-pledges-legislative-action-to-protect-nigerians-abroad/
+    file_url: https://cdn.businessday.ng/2021/10/Moshood-Salvador.png
+    sha256: 8990ac1ef1b7a80b8851dcacf2340f940869343c8316909e192b123acbbedba0
+    credit: "media caption: Moshood Salvador, Nigerian Democratic Congress"
+    taken: '2026-10-20'
+    retrieved: '2026-11-15'
+    crop: [172, 30, 240, 240]
+    news_checked: '2026-11-15'  # INEC M, 70, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ondo-ondo-south-adc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/sen-tofowomo-osun-election-should-signpost-electorates-action-in-2027/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/08/Screenshot-2026-08-22-204806.png
+    sha256: 5bd6317beb2873b0f5ae4ba41e454e8f4d09bab6662e3fd3afa3b8c129026320
+    credit: "media title: Sen. Tofowomo: Osun Election Should Signpost Electorate's Action In 2027"
+    taken: '2026-08-23'
+    retrieved: '2026-11-15'
+    crop: [90, 20, 320, 320]
+    news_checked: '2026-11-15'  # INEC M, 66, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-kwara-kwara-south-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/2027-kwara-south-apc-senatorial-candidate-constitutes-campaign-council/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/10/Kwara-South-.jpg
+    sha256: 03abc049fc74e15bd616b46930d2979ff88485f72b73765e014346e711b0c5aa
+    credit: "none shown"
+    taken: '2026-10-16'
+    retrieved: '2026-11-15'
+    crop: [167, 110, 440, 440]
+    news_checked: '2026-11-15'  # INEC M, 55, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ondo-ondo-central-adc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/no-political-pact-with-aiyedatiwa-akinyelure-clarifies-adc-move/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/09/Ayo-Akinyelure.jpg
+    sha256: 696684cb2bb85a42be5aa834cd02cde2d3801c054ce591a5c0689e35f4b57de6
+    credit: "none shown"
+    taken: '2026-09-30'
+    retrieved: '2026-11-15'
+    crop: [200, 30, 420, 420]
+    news_checked: '2026-11-15'  # INEC M, 70, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ondo-ondo-south-apc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/kekemeke-hails-tinubu-security-agencies-over-rescue-of-abducted-oyo-pupils-teachers/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/04/kekemeke-e1776548617656-1.webp
+    sha256: 28e7afb4e43e52b247359e514f949f24f51044dd00c61b9ad0515845ce2c8fde
+    credit: "none shown"
+    taken: '2026-07-11'
+    retrieved: '2026-11-15'
+    crop: [180, 40, 760, 760]
+    news_checked: '2026-11-15'  # INEC M, 63, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-abia-abia-north-ndc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/2027-ndc-senatorial-candidate-predicts-obis-victory-seeks-kalus-support/
+    file_url: https://thewhistler.ng/wp-content/uploads/2018/04/Uko-nkole2-1.jpg
+    sha256: 30e2bc8e81e57e81e2d68c59d64ab11d3e5331e56135bc0acaab7259c2c05b7f
+    credit: "Hon. Uko Nkole"
+    taken: '2026-11-09'
+    retrieved: '2026-11-15'
+    crop: [405, 20, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, 50, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-ebonyi-ebonyi-south-ndc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/2027-ndcs-linus-okorie-flags-off-ebonyi-south-senate-bid/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/10/Linus-Okorie-NDC.jpg
+    sha256: f750db6ea238addfa2137330d03dac6b718dcc5224504a7617c8c708a2f8f033
+    credit: "none shown"
+    taken: '2026-10-05'
+    retrieved: '2026-11-15'
+    crop: [410, 0, 360, 360]
+    news_checked: '2026-11-15'  # INEC M, 60, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-benue-benue-south-adc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/2027-benue-south-adc-senatorial-candidate-vows-not-to-pocket-mandate/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/10/ADC-CANDIDATE-.jpg
+    sha256: 6bcb4de011ddd7bf73747ff30d8605b8facbfd02a8cbb084d56ba3b96aefd69a
+    credit: "none shown"
+    taken: '2026-10-06'
+    retrieved: '2026-11-15'
+    crop: [130, 60, 460, 460]
+    news_checked: '2026-11-15'  # INEC M, 57, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-fct-federal-capital-territory-sdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/why-sdp-cant-be-part-of-rainbow-coalition-senatorial-candidate/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/10/Olanrewaju-Osho-NEW.jpeg
+    sha256: 5ffccda14c0f7d1549b07d3e0636289c2f2594c8f554f055e1cf980493911884
+    credit: "none shown"
+    taken: '2026-10-31'
+    retrieved: '2026-11-15'
+    crop: [280, 30, 560, 560]
+    news_checked: '2026-11-15'  # INEC M, 59, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-west-apc
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/shuaib-ex-nphcda-boss-emerges-apc-candidate-for-nasarawa-west-senatorial-district/
+    file_url: https://blueprint.ng/wp-content/uploads/2023/11/Faisal-shuaib-1.jpg
+    sha256: 1bdfa444b581598a933e5dcb076b1395f507bd6cd31b0a137ec03eea7e343a62
+    credit: "none shown"
+    taken: '2026-05-20'
+    retrieved: '2026-11-15'
+    crop: [30, 0, 250, 250]
+    news_checked: '2026-11-15'  # INEC M, 57, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-sokoto-sokoto-south-adc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/insecurity-nigerians-are-worried-about-the-direction-of-the-country-yabo-sokoto-adc-senatorial-candidate/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/07/Yabo-Sokoto-ADC-senatorial-candiate.jpg
+    sha256: ec6d8b0b76c7f5141bc9ee603e663f2d5af588ffe0010a508bdbcbd99a927e6d
+    credit: "none shown; file name: Yabo-Sokoto-ADC-senatorial-candiate"
+    taken: '2026-07-11'
+    retrieved: '2026-11-15'
+    crop: [330, 240, 560, 560]
+    news_checked: '2026-11-15'  # INEC M, 56, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-bauchi-bogoro-apc
+    source: "BusinessDay (businessday.ng)"
+    file_page: https://businessday.ng/life/article/bauchi-apcs-bulus-backs-tinubus-re-election-bid/
+    file_url: https://cdn.businessday.ng/wp-content/uploads/2026/11/Bulus-Iliya.jpg
+    sha256: d6845cd0ab8dba09edc2fef4ae3fd7eab4559ad9d25341cf1e973ed04634e14d
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [220, 100, 450, 450]
+    news_checked: '2026-11-15'  # INEC M, 43, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-ekiti-oye-i-apc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/prioritise-better-governance-in-your-second-term-apcs-eyitayo-urges-oyebanji/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/10/Fabunmi-Eyitayo.jpeg
+    sha256: 4831e389a3b12b8e757703c1195b46513fd72d96b055a2ce56318da4b72cd75e
+    credit: "none shown"
+    taken: '2026-10-21'
+    retrieved: '2026-11-15'
+    crop: [338, 50, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 46, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-plateau-jos-east-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/plateau-deputy-speaker-secures-historic-second-term-ticket-for-jos-east-promises-transformative-leadership/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/11/Plateau-Deputy-Speaker.jpg
+    sha256: 014856760e270d52e504a5364dfe53ff696ae95ee118f0da83386830f5344012
+    credit: "none shown"
+    taken: '2026-11-04'
+    retrieved: '2026-11-15'
+    crop: [150, 120, 560, 560]
+    news_checked: '2026-11-15'  # INEC M, 43, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-kaduna-chikun-i-ndc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/why-i-want-to-represent-chikun-constituency-in-kaduna-assembly-by-moses/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/08/Moses.jpg
+    sha256: 80d09a874a0edca15044be9913b6010ba31ac91ae216bea1091cda48e5c5f82e
+    credit: "Moses"
+    taken: '2026-08-27'
+    retrieved: '2026-11-15'
+    crop: [35, 5, 230, 230]
+    news_checked: '2026-11-15'  # INEC M, 40, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-edo-egor-ndc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/2babas-wife-natasha-osawaru-emerges-edo-assembly-minority-leader/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/08/7e86ce7d808d4062811f101c980cb2d2-1.webp
+    sha256: 7d873cce2c582e2fa95f0116fb101b60aec33667c64a3d835ce6b66d421677f5
+    credit: "none shown"
+    taken: '2026-08-18'
+    retrieved: '2026-11-15'
+    crop: [180, 80, 660, 660]
+    news_checked: '2026-11-15'  # INEC F, 32, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-kwara-onire-owode-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/youngest-nigerian-lawmaker-rukayat-shittu-wins-kwara-apc-primary/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/05/images-1.webp
+    sha256: 3897d9099f695aca13c430ebd4b68d9f84f154ca9d624822e9743f8337c1c132
+    credit: "none shown"
+    taken: '2026-05-21'
+    retrieved: '2026-11-15'
+    crop: [110, 10, 290, 290]
+    news_checked: '2026-11-15'  # INEC F, 30, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-anambra-ihiala-i-ndc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/my-vision-for-ihiala-constituency-onyia-ndc-assembly-candidate/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/08/ONIYA.jpg
+    sha256: 7012257d58780d28c11155fd2ddead787d3d28c38383cf397123148135dc1bfa
+    credit: "Onyia"
+    taken: '2026-08-04'
+    retrieved: '2026-11-15'
+    crop: [112, 0, 240, 240]
+    news_checked: '2026-11-15'  # INEC M, 50, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-abia-umuahia-north-lp
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/abia-assembly-lawmaker-dumps-apc-joins-lp/
+    file_url: https://thewhistler.ng/wp-content/uploads/2025/09/Member-Representing-the-Umuahia-North-State-Constituency-and-Chairman-of-the-Committee-on-Judiciary-and-Public-Complaints-the-Abia-State-House-of-Assembly-Hon.-Akaliro-Kelechi-Anderson.jpg
+    sha256: e214c39f961bc8de0ddc5fc5fad3a675726a7ffecc31ff54811d3b470c538416
+    credit: "Member Representing the Umuahia North State Constituency and Chairman of the Committee on Judiciary and Public Complaints, the Abia State House of Assembly, Hon. Akaliro Kelechi Anderson"
+    taken: '2025-09-16'
+    retrieved: '2026-11-15'
+    crop: [250, 10, 420, 420]
+    news_checked: '2026-11-15'  # INEC M, 46, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-abia-ukwa-east-lp
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/abia-pdp-lawmaker-others-defect-to-labour-party/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/01/Untitled-design-1-18.jpg
+    sha256: c981710f3b494a1012ab0980bfef3d40c463a63d01962969b6a6a7bd3df95e0f
+    credit: "Hon. Lewis Obianyi"
+    taken: '2026-01-25'
+    retrieved: '2026-11-15'
+    crop: [290, 0, 230, 230]
+    news_checked: '2026-11-15'  # INEC M, 48, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-rivers-rivers-south-east-pdp
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/rivers-bye-election-pdps-olaka-nwogu-wins-seast-senatorial-district/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/06/images-82.jpeg
+    sha256: 137c2b42ce5c85958931e96eee56769640a1e5c9791227a3dc1cf57cd0c09052
+    credit: "none shown"
+    taken: '2026-06-21'
+    retrieved: '2026-11-15'
+    crop: [20, 0, 370, 370]
+    news_checked: '2026-11-15'  # INEC M, 61, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: jan-2027-senate-kogi-kogi-east-ndc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/ok-movement-crisis-deepens-as-dg-peter-ameh-resigns/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/08/Peter-Ameh.webp
+    sha256: f076b6e5ee056fdd3074745a7434173514070788bb5a809977d119af272ea6ea
+    credit: "none shown"
+    taken: '2026-08-18'
+    retrieved: '2026-11-15'
+    crop: [125, 0, 490, 490]
+    news_checked: '2026-11-15'  # INEC M, 49, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-plateau-mikang-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/plateau-speaker-clinches-apc-ticket-in-mikang-constituency/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/05/images-6.jpeg
+    sha256: 5d8dfcf73d96b65ba77c85670866d6f33ea8c43c15e131519c595bc1248122cc
+    credit: "none shown"
+    taken: '2026-05-21'
+    retrieved: '2026-11-15'
+    crop: [215, 45, 270, 270]
+    news_checked: '2026-11-15'  # INEC M, 48, fits; names them with party and seat or state (night batch 2)
+  - candidate_id: feb-2027-sha-kebbi-zuru-apc
+    source: "National Accord (nationalaccordnewspaper.com)"
+    file_page: https://nationalaccordnewspaper.com/apcs-rabiu-aiki-wins-kebbi-assembly-by-election-with-landslide-victory/
+    file_url: https://nationalaccordnewspaper.com/wp-content/uploads/2026/06/APC-candidate-Rabiu-Garba-Aiki-win-by-election-in-Kebbi.jpg
+    sha256: 4d5b4182a06f1ed959e7a756aa43c8010d8698023e79611ce8cc0a025f4b6163
+    credit: "Hon. Rabiu Aiki"
+    taken: '2026-06-21'
+    retrieved: '2026-11-15'
+    crop: [130, 0, 345, 345]
+    news_checked: '2026-11-15'  # INEC M, 56, fits; names them with party and seat or state (night batch 2)
