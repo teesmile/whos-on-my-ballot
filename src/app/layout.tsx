@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <footer className="site-footer">
           <div className="footer-main">
-            <NigeriaMark className="ng-mark-foot" />
+            <NigeriaMark className="ng-mark-foot" large />
             <p className="affiliation">
               Not affiliated with INEC.
             </p>

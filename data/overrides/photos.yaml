@@ -6009,16 +6009,6 @@ people:
     retrieved: '2026-11-15'
     crop: [570, 35, 440, 440]
     news_checked: '2026-11-15'  # INEC M, 53, fits; names them with party and seat or state (night batch 2)
-  - candidate_id: jan-2027-house-katsina-daura-sandamu-mai-adua-apc
-    source: "New Telegraph (newtelegraphng.com)"
-    file_page: https://newtelegraphng.com/2027-buhari-declares-campaign-for-reps-seat/
-    file_url: https://newtelegraphng.com/wp-content/uploads/2026/08/Yusuf-Buhari.jpg
-    sha256: 0b9e17f371f393ef09070b45192a58556b182a1a26a1d58d29765b685165c95f
-    credit: "none shown"
-    taken: '2026-08-22'
-    retrieved: '2026-11-15'
-    crop: [80, 40, 600, 600]
-    news_checked: '2026-11-15'  # INEC M, 33, fits; names them with party and seat or state (night batch 2)
   - candidate_id: jan-2027-house-anambra-aguata-apc
     source: "New Telegraph (newtelegraphng.com)"
     file_page: https://newtelegraphng.com/anambra-apc-nass-candidate-onunkwo-targets-200000-voters/
@@ -6478,3 +6468,198 @@ people:
     retrieved: '2026-11-15'
     crop: [130, 0, 345, 345]
     news_checked: '2026-11-15'  # INEC M, 56, fits; names them with party and seat or state (night batch 2)
+  # Night batch 3 (15 Nov 2026): swap list and framing recoveries (D-089); checked against INEC gender and age
+  - candidate_id: jan-2027-house-katsina-daura-sandamu-mai-adua-apc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/2027-apcs-buhari-opens-campaign-for-daura-federal-seat/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/05/Yusuf-Buhari-son-of-the-immediate-former-president.jpeg
+    sha256: ce6f2c4e9f6d5b11ad4af9dda0b03b03a1de735a7902f75aaec95652fad40a7d
+    credit: "Yusuf Buhari, son of the immediate former president"
+    taken: '2026-08-22'
+    retrieved: '2026-11-15'
+    crop: [345, 0, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 33, fits; the page names them with party and seat (night batch 3) (replaces a side-view photo, owner 15 Nov)
+  - candidate_id: feb-2027-sha-kwara-afon-apc
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon-bello-Yinusa-Afon-Constituency.png
+    sha256: 077e5e0e3fa197c2f77dedb893d56b6e7e7835bfc63b2c281060a96b756b6384
+    retrieved: '2026-11-15'
+    crop: [55, 28, 230, 230]
+    official_checked: '2026-11-15'  # INEC M, 58, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-ilorin-central-ilorin-west-i-apc
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon.-Oba-Abdulkadir-Magaji-Ilorin-Central.png
+    sha256: 34d4587265c82dcd2a1979a70bc1a1a4a5158772e0d0b399ceb7b25ea6697e3b
+    retrieved: '2026-11-15'
+    crop: [65, 22, 230, 230]
+    official_checked: '2026-11-15'  # INEC M, 57, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-ilorin-east-apc
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon.-Lawal-Arinola-Fatimah-Ilorin-East.png
+    sha256: a494341d97d9378447c1454f285f2c97163053644855e0ed5e8c2adbde6ac884
+    retrieved: '2026-11-15'
+    crop: [55, 25, 230, 230]
+    official_checked: '2026-11-15'  # INEC F, 56, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-ilorin-south-apc
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon.-Yusuf-Maryam-Aladi-Ilorin-South.png
+    sha256: 7abd6405b2d8537a74d9afafb789e983f567bb1f13764d4235540299140d901f
+    retrieved: '2026-11-15'
+    crop: [55, 45, 230, 230]
+    official_checked: '2026-11-15'  # INEC F, 52, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-irepodun-pdp
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon.-Odetundun-Olushola.jpg
+    sha256: 5290d13d9dcb5a48f71153af6a92ee5c3ca560171ed8e21d7206ede4d404ad66
+    retrieved: '2026-11-15'
+    crop: [65, 25, 230, 230]
+    official_checked: '2026-11-15'  # INEC M, 45, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-lafiagi-edu-pdp
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon.-Saba-Yisa-Gideon-Edu.png
+    sha256: 27d09030b1cb415bff4a3a962d2ca87b12e9591219d7f8c809f5f5ed0bb8ab9b
+    retrieved: '2026-11-15'
+    crop: [40, 25, 230, 230]
+    official_checked: '2026-11-15'  # INEC M, 40, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-lanwa-ejidongari-moro-i-apc
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon.-Abdulraheem-Medinat-Motunrayo-Lanwa-Ejidongari.png
+    sha256: 6c1d4f6fc6e1aebf93a45579d92369d1b2ee2892e9fde6ffd688369f50f4d420
+    retrieved: '2026-11-15'
+    crop: [55, 30, 230, 230]
+    official_checked: '2026-11-15'  # INEC F, 36, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-odo-ogun-oyun-i-apc
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/a6-1.jpg
+    sha256: 11c156afcd5d42e2ee5e9806afdc94098e73f4415a0008e01e050b683ab7a70d
+    retrieved: '2026-11-15'
+    crop: [0, 0, 208, 208]
+    official_checked: '2026-11-15'  # INEC M, 49, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-oke-ogun-oyun-ii-apc
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon.-Ojo-Olayiwola-Oyebode-Oke-Ogun.png
+    sha256: 5ffddba5d37d272693cae45b5b04804ca0ac48aec41c95c4a65d43fc94acd7c1
+    retrieved: '2026-11-15'
+    crop: [75, 22, 230, 230]
+    official_checked: '2026-11-15'  # INEC M, 51, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-kwara-oloru-malete-ipaiye-moro-ii-apc
+    source: "Kwara State House of Assembly (hoa.kw.gov.ng)"
+    file_page: https://hoa.kw.gov.ng/10th-assembly-members/
+    file_url: https://hoa.kw.gov.ng/wp-content/uploads/2023/09/Hon.-Lawal-Ayanshola-Saliu-Oloru-Malete-Ipaiye.png
+    sha256: ec0d949c5bee71cc1c3b5527758641a317fd42209acfdd2317d3d9a1f3bdf8e9
+    retrieved: '2026-11-15'
+    crop: [60, 35, 230, 230]
+    official_checked: '2026-11-15'  # INEC M, 46, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-ogun-odeda-area-apc
+    source: "Ogun State House of Assembly (ogha.og.gov.ng)"
+    file_page: https://ogha.og.gov.ng/members/24
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-031709813700-member.jpg
+    sha256: f080089c6bf3ec4502590e1e586bac22904f08389082dd199eb40c7b4f1f1c72
+    retrieved: '2026-11-15'
+    crop: [50, 40, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 63, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-ogun-abeokuta-south-i-apc
+    source: "Ogun State House of Assembly (ogha.og.gov.ng)"
+    file_page: https://ogha.og.gov.ng/members/7
+    file_url: https://ogha.og.gov.ng/public/images/members/2024-021707473665-member.jpg
+    sha256: 01b8606e8e14e093c72183713cbc5823ad35fcd550f10077bbeb5e61165d5144
+    retrieved: '2026-11-15'
+    crop: [0, 45, 250, 250]
+    official_checked: '2026-11-15'  # INEC M, 47, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-niger-mariga-apc
+    source: "Niger State Government (nigerstate.gov.ng)"
+    file_page: https://nigerstate.gov.ng/executives/
+    file_url: https://nigerstate.gov.ng/wp-content/uploads/Speaker.jpg
+    sha256: 66fb2806d4ba3b80aca861573025b43815289a2be83f6153c9179ce0c38a2ac0
+    retrieved: '2026-11-15'
+    crop: [130, 70, 440, 440]
+    official_checked: '2026-11-15'  # INEC M, 44, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-niger-kontagora-i-apc
+    source: "Niger State Government (nigerstate.gov.ng)"
+    file_page: https://nigerstate.gov.ng/executives/
+    file_url: https://nigerstate.gov.ng/wp-content/uploads/357539601_799148335351431_1324166101159988260_n.jpg
+    sha256: 0cd825c57a10ec577f503937513d6a4a591cf2e84974fb18f7be7e9e2ebe5c6a
+    retrieved: '2026-11-15'
+    crop: [145, 80, 310, 310]
+    official_checked: '2026-11-15'  # INEC M, 44, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-yobe-karasuwa-apc
+    source: "Yobe State House of Assembly (houseofassembly.yb.gov.ng)"
+    file_page: https://www.houseofassembly.yb.gov.ng/index.php/blog/current-members
+    file_url: https://www.houseofassembly.yb.gov.ng/images/IMG-20240426-WA0005.jpg
+    sha256: 356fd06e3f5c9b82cded2d8d2643a7d59d79bb42fbb20030d11e5492bc1752a1
+    retrieved: '2026-11-15'
+    crop: [212, 60, 262, 262]
+    official_checked: '2026-11-15'  # INEC M, 63, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-taraba-zing-apc
+    source: "Taraba State Government (tarabastate.gov.ng)"
+    file_page: https://www.tarabastate.gov.ng/government
+    file_url: https://www.tarabastate.gov.ng/assets/government/john-kizito-bonzena.jpg
+    sha256: abadb116c70d0f9ed252e41e4088132dce0fd0ebadad9e253c0d9897f96ad39b
+    retrieved: '2026-11-15'
+    crop: [130, 110, 700, 700]
+    official_checked: '2026-11-15'  # INEC M, 66, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-imo-nwangele-apc
+    source: "Imo State House of Assembly (imha.imostate.gov.ng)"
+    file_page: https://imha.imostate.gov.ng/house-members/
+    file_url: https://imha.imostate.gov.ng/wp-content/uploads/2022/04/Deputy-Speaker-Rt-Hon-Amara-Iwuanyanwu.jpg
+    sha256: e1e2b0a15b4cc00590fac13f479357cbf4d9bf68019ba91fca07a7317138439b
+    retrieved: '2026-11-15'
+    crop: [72, 30, 260, 260]
+    official_checked: '2026-11-15'  # INEC M, 42, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-osun-ifedayo-a
+    source: "Osun State Government (osunstate.gov.ng)"
+    file_page: https://www.osunstate.gov.ng/legislative/
+    file_url: https://www.osunstate.gov.ng/wp-content/uploads/2023/07/Hon-Dr.-Kasope-Abolarin-Ifedayo-State-Constituency-Chairman-House-committee-on-Health-Osun-Central-Senatorial-Whip.jpg
+    sha256: 85ecad0552fa5e1d3fe4ca6cd3fb72b63c48b5b63af943d35febe8d28ee7f17e
+    retrieved: '2026-11-15'
+    crop: [195, 100, 450, 450]
+    official_checked: '2026-11-15'  # INEC M, 31, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: jan-2027-senate-bauchi-bauchi-south-apm
+    source: "Bauchi State Government (home.bauchistate.gov.ng)"
+    file_page: https://home.bauchistate.gov.ng/executive/
+    file_url: https://home.bauchistate.gov.ng/wp-content/uploads/2025/01/gov_executive.jpg
+    sha256: 5c63f2544e3b5c388d19471e7503f3733c4b8036b5650426a138ddee3b322508
+    retrieved: '2026-11-15'
+    crop: [80, 50, 420, 420]
+    official_checked: '2026-11-15'  # INEC M, 67, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: jan-2027-house-ogun-ijebu-ode-odogbolu-ijebu-north-east-apc
+    source: "Hon. Rasak Oluwakemi Daddah campaign site (daddahrasak.ng)"
+    file_page: https://daddahrasak.ng/
+    file_url: https://daddahrasak.ng/images/candidate-portrait.png
+    sha256: f7134012aced7b58e9b7422f9c86a4b5c9a55f56f1e67a29fb368094ee74b303
+    retrieved: '2026-11-15'
+    crop: [590, 0, 420, 420]
+    official_checked: '2026-11-15'  # INEC M, 53, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: jan-2027-house-taraba-sardauna-kurmi-gashaka-apc
+    source: "diasporarha.com (diasporarha.com)"
+    file_page: https://diasporarha.com/diah-peter-abel-rt-hon
+    file_url: https://diasporarha.com/member/images/fc4736f388277c3631538a20f13d22e7-DIAH%20PETER%20ABEL.png
+    sha256: d421eeec0d8ae08fe26353156b0ef21d26a252fac6ad3a25b716735e63012198
+    retrieved: '2026-11-15'
+    crop: [260, 90, 620, 620]
+    official_checked: '2026-11-15'  # INEC M, 55, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-akwa-ibom-nsit-ubium-apc
+    source: "Hon. Barr. Otobong Bob official website (otobongbob.ng)"
+    file_page: https://otobongbob.ng/
+    file_url: https://otobongbob.ng/wp-content/uploads/2019/10/Honorable-member-rep-Nsit-Ubium-1.jpeg
+    sha256: 05980842d6350fa6f3dad9adf2914c70867705fe6a5232d91f6f3833c0bec133
+    retrieved: '2026-11-15'
+    crop: [280, 80, 230, 230]
+    official_checked: '2026-11-15'  # INEC M, 34, fits; the page names them with party and seat (night batch 3)
+  - candidate_id: feb-2027-sha-akwa-ibom-uyo-apm
+    source: "Ini-obong Uko campaign site (iniobonguko.org)"
+    file_page: https://iniobonguko.org/
+    file_url: https://iniobonguko.org/__l5e/assets-v1/36a74d31-f222-4b56-a7a1-7994b2707d26/ini-uko-hero.jpeg
+    sha256: df30c4aee8acaaf462828b79d617ec87b80fb531009b127afbfa13da2d4d69bb
+    retrieved: '2026-11-15'
+    crop: [365, 100, 420, 420]
+    official_checked: '2026-11-15'  # INEC M, 32, fits; the page names them with party and seat (night batch 3)

@@ -260,7 +260,7 @@ describe('every page', () => {
   const pages = [...walk(OUT)].filter(f => f.endsWith('.html'))
 
   it('the faint map of Nigeria (owner, 15 Nov 2026): a small one in every footer, a larger one at the top of the home page; decorative, inline, a line only', () => {
-    const mark = /<svg class="ng-mark (ng-mark-hero|ng-mark-foot)" viewBox="-2 -2 204 167" aria-hidden="true" focusable="false"><path d="M[^"]+z"(?:\/>|><\/path>)<\/svg>/g
+    const mark = /<svg class="ng-mark (ng-mark-hero|ng-mark-foot)" viewBox="(?:-2 -2 204 167|-7 -7 714 584)" aria-hidden="true" focusable="false"><path d="M[^"]+z"(?:\/>|><\/path>)<\/svg>/g
     for (const f of pages) {
       const s = fs.readFileSync(f, 'utf8')
       if (!s.includes('<footer')) continue
