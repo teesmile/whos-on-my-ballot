@@ -149,9 +149,19 @@ main p > a.btn { margin: 0.25rem 0; }
    only, in the national green at low strength, under everything else; it takes no space, so nothing moves. */
 .ng-mark { position: absolute; z-index: -1; height: auto; pointer-events: none; }
 .ng-mark path { fill: none; stroke: var(--green); stroke-width: 1.5px; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-.hero-home, .site-footer { position: relative; isolation: isolate; }
+.hero-home, .footer-main { position: relative; isolation: isolate; }
 .ng-mark-hero { top: 0.5rem; right: 0; width: clamp(8.5rem, 40vw, 18rem); opacity: 0.22; }
-.ng-mark-foot { top: 1rem; right: 1rem; width: 4rem; opacity: 0.3; }
+/* The footer's map (owner, 15 Nov 2026): a large backdrop behind the footer's main part, never behind the credit line. The
+   drawing keeps its shape inside the box (preserveAspectRatio "meet"), so it is as large as the box allows with the whole
+   country in view, centred: edge to edge on a phone, top to bottom on a wide screen. Lighter than the home page's (0.16, not
+   0.22) because text runs over it: where the thin line crosses a link, the link keeps at least 4.5:1. */
+.ng-mark-foot { top: 0; bottom: 0; left: -1rem; width: calc(100% + 2rem); height: 100%; opacity: 0.16; }
+@media (min-width: 64rem) {
+  /* tall enough that the map is at least 480 px wide (about 393 px tall); the text sits in the middle of that height */
+  .footer-main { min-height: 26rem; display: flex; flex-direction: column; justify-content: center; }
+  .ng-mark-foot { left: 0; width: 100%; }
+}
+@media print { .ng-mark { display: none !important; } }
 
 /* Home and election-day hero */
 .hero {

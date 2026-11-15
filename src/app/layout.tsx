@@ -44,17 +44,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main id="main">{children}</main>
         <footer className="site-footer">
-          <NigeriaMark className="ng-mark-foot" />
-          <p className="affiliation">
-            Not affiliated with INEC.
-          </p>
-          <SourceLine id="president" what="Candidates (INEC final lists, updated 31 October 2026)" />
-          <SourceLine id="inec-pu-locator" what="Polling units" />
-          <SourceLine id="inec-constituencies-workbook" what="Constituencies" />
-          <SourceLine id="inec-parties" what="Parties" />
-          <div className="footer-row">
-            <p className="footer-printed">Shown exactly as INEC printed them.</p>
-            <p className="footer-correct"><a className="btn" href="/corrections/">Report a correction</a></p>
+          <div className="footer-main">
+            <NigeriaMark className="ng-mark-foot" />
+            <p className="affiliation">
+              Not affiliated with INEC.
+            </p>
+            <SourceLine id="president" what="Candidates (INEC final lists, updated 31 October 2026)" />
+            <SourceLine id="inec-pu-locator" what="Polling units" />
+            <SourceLine id="inec-constituencies-workbook" what="Constituencies" />
+            <SourceLine id="inec-parties" what="Parties" />
+            <div className="footer-row">
+              <p className="footer-printed">Shown exactly as INEC printed them.</p>
+              <p className="footer-correct"><a className="btn" href="/corrections/">Report a correction</a></p>
+            </div>
           </div>
           <Credit />
         </footer>
