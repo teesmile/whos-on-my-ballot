@@ -367,7 +367,8 @@ people:
     sha256: 623bfe6b1adb7915add69e8667867df26a46b26a48cc7aca14983b3fccce80cc
     retrieved: '2026-11-13'
     crop: [244, 154, 548, 548]
-    owner_approved: '2026-11-13'  # governor contact sheet 1
+    # owner_approved on governor contact sheet 1 (13 Nov), withheld 15 Nov until the owner decides: no square crop of the head
+    # leaves out the flag and the coat of arms or state seal beside it (held until now, so never shown)
   - candidate_id: feb-2027-governor-taraba-apc
     source: Taraba State Government website
     file_page: https://www.tarabastate.gov.ng/government
@@ -375,7 +376,8 @@ people:
     sha256: f7ef060ff60d261ff010e85e42de835af3aa75beac76fc6862d0f204e9ca06ff
     retrieved: '2026-11-13'
     crop: [165, 61, 465, 465]
-    owner_approved: '2026-11-13'  # governor contact sheet 1
+    # owner_approved on governor contact sheet 1 (13 Nov), withheld 15 Nov until the owner decides: no square crop of the head
+    # leaves out the flag and the coat of arms or state seal beside it (held until now, so never shown)
   - candidate_id: feb-2027-governor-zamfara-apc
     source: Zamfara State Government website
     file_page: https://zamfara.gov.ng/office-of-the-governor/
@@ -4124,3 +4126,692 @@ people:
     retrieved: '2026-11-15'
     crop: [14, 22, 340, 340]
     owner_approved: '2026-11-15'  # the owner's own find (file "olu famotibe.jpeg"); not found online by name search; INEC M, 53, fits
+  # Night round, 15-16 Nov 2026: news reports (D-084) and official pages, each checked against INEC's gender and age
+  - candidate_id: feb-2027-governor-adamawa-pdp
+    source: "WithinNigeria (withinnigeria.com)"
+    file_page: https://www.withinnigeria.com/2026/10/18/2027-six-candidates-eye-adamawa-governorship-amid-political-realignments/
+    file_url: https://www.withinnigeria.com/wp-content/uploads/2026/10/IMG_2610-1.jpeg
+    sha256: b1b607bdc2438c76a00f62ecece3b9739b6e90729a8316bb8ac3bf2e823c4f59
+    credit: "Maurice Vunobolki"
+    taken: '2026-10-18'
+    retrieved: '2026-11-15'
+    crop: [50, 30, 700, 700]
+    news_checked: '2026-11-15'  # INEC M, 54, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-adamawa-apc
+    source: "Blueprint Newspapers (blueprint.ng)"
+    file_page: https://blueprint.ng/adamawa-the-ahmed-galadima-formula/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/08/download-90.jpeg
+    sha256: 5e9d784efd4f82355d7f1c4941766f773d5316ec1319dcbfe6bd6ef450a16499
+    credit: "none shown"
+    taken: '2026-08-26'
+    retrieved: '2026-11-15'
+    crop: [3, 8, 190, 190]
+    news_checked: '2026-11-15'  # INEC M, 62, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-adamawa-ndc
+    source: "21st Century Chronicle (21stcenturychronicle.com)"
+    file_page: https://21stcenturychronicle.com/adamawa-why-i-defected-from-adc-to-ndc-binani/
+    file_url: https://21stcenturychronicle.com/wp-content/uploads/2023/04/aisha-binani-1-KOKO-TV-NG.jpg
+    sha256: 7ebf41054252639724a04a8c1c9363779d7b994c3012546bf1d103d35e38f1a0
+    credit: "none shown; the file name carries 'KOKO-TV-NG'"
+    taken: '2026-05-02'
+    retrieved: '2026-11-15'
+    crop: [10, 10, 320, 320]
+    news_checked: '2026-11-15'  # INEC F, 55, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-akwa-ibom-adc
+    source: "Premium Times (premiumtimesng.com)"
+    file_page: https://www.premiumtimesng.com/news/top-news/899659-adc-governorship-candidate-alleges-plot-to-substitute-partys-candidates.html
+    file_url: https://media.premiumtimesng.com/wp-content/files/2026/05/John-Akpanudoedehe.jpg
+    sha256: 1499f5ac628efc272f5f459f9a7c2301d33aac33e36d9d9b693a2ff7ee7cb865
+    credit: "none shown"
+    taken: '2026-07-31'
+    retrieved: '2026-11-15'
+    crop: [140, 0, 480, 480]
+    news_checked: '2026-11-15'  # INEC M, 62, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-bauchi-adc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/2027-adc-affirms-jika-other-candidates-in-bauchi/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/05/IMG-20260522-WA0014-1.jpg
+    sha256: cd1438dccd912077c50596c98d63bc27e4c0725d2078e37785d1fd64f461e4d8
+    credit: "ADC Bauchi State Gubernatorial Candidate, Senator Halliru Dauda Jika,"
+    taken: '2026-05-22'
+    retrieved: '2026-11-15'
+    crop: [48, 0, 409, 409]
+    news_checked: '2026-11-15'  # INEC M, 50, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-bauchi-apc
+    source: "Premium Times (premiumtimesng.com)"
+    file_page: https://www.premiumtimesng.com/news/top-news/882136-former-governor-clinches-bauchi-apc-ticket-defeats-ex-minister-others.html
+    file_url: https://media.premiumtimesng.com/wp-content/files/2026/05/Untitled-design-4-5.jpg
+    sha256: 6dcf4e3ee38ec9d7292b6d20f1d7bb9903cbf5875ebdbe8261513827e4465526
+    credit: "Former Governor Mohammed Abubakar"
+    taken: '2026-05-23'
+    retrieved: '2026-11-15'
+    crop: [395, 0, 560, 560]
+    news_checked: '2026-11-15'  # INEC M, 69, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-bauchi-ndc
+    source: "The Guardian (guardian.ng)"
+    file_page: https://guardian.ng/politics/bala-mohammeds-ex-ssg-emerges-ndc-governorship-candidate/
+    file_url: https://cdn.guardian.ng/wp-content/uploads/2026/05/Barrister-Ibrahim-Kashim.webp
+    sha256: 2b53e1cdc2600258e0e81d6d98585752eb4cbd1d0b2d17d22d5ff4f4b6a49462
+    credit: "NDC governorship candidate in Bauchi State, Barrister Ibrahim Kashim"
+    taken: '2026-05-30'
+    retrieved: '2026-11-15'
+    crop: [635, 50, 620, 620]
+    news_checked: '2026-11-15'  # INEC M, 65, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-benue-adc
+    source: "Premium Times (premiumtimesng.com)"
+    file_page: https://www.premiumtimesng.com/news/top-news/882891-ex-mp-wins-benue-adc-governorship-ticket.html
+    file_url: https://media.premiumtimesng.com/wp-content/files/2026/05/409554-e1779796267459.jpg
+    sha256: 12c654722f8e94df8ee8fd9b2f46bcdc23cbad755bd933e3dca8ffdc99673de5
+    credit: "Former House of Representatives member, Iorwase Hembe."
+    taken: '2026-05-26'
+    retrieved: '2026-11-15'
+    crop: [158, 0, 430, 430]
+    news_checked: '2026-11-15'  # INEC M, 51, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-benue-sdp
+    source: "BusinessDay (businessday.ng)"
+    file_page: https://businessday.ng/news/article/2027-sdp-clears-prof-hon-to-unseat-alia-in-benue-guber-race/
+    file_url: https://cdn.businessday.ng/wp-content/uploads/2026/05/Sebastine-Hon-1.png
+    sha256: 2a54d370d21aa43c7e5d6aec3257f3df9eb07a4018c33a4bb981ca86bff409ce
+    credit: "none shown"
+    taken: '2026-05-21'
+    retrieved: '2026-11-15'
+    crop: [475, 0, 340, 340]
+    news_checked: '2026-11-15'  # INEC M, 58, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-ebonyi-ndc
+    source: "THISDAY (thisdaylive.com)"
+    file_page: https://www.thisdaylive.com/2026/10/24/ebonyi-ndc-guber-candidate-senator-nwagu-rejects-zoning/
+    file_url: https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/Paulinus-Igwe-Nwagu.webp
+    sha256: 86bf902a89baec5da02a462ef04d4b07820d8b081e7bf0b0e85d644bc0cc4184
+    credit: "none shown"
+    taken: '2026-10-24'
+    retrieved: '2026-11-15'
+    crop: [0, 10, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 67, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-enugu-adc
+    source: "Sahara Reporters (saharareporters.com)"
+    file_page: https://saharareporters.com/2026/08/18/2027-adc-affirms-obodoeze-enugu-governorship-candidate-names-uploaded-inec-portal
+    file_url: https://saharareporters.com/sites/default/files/styles/focal_point_1300x650/public/2026-08/IMG_7278.jpeg?h=2bd29e91&itok=saQBw3jf
+    sha256: 5816e27d1234905bee1417c5c884ae80f5f9ae7daee20a388da98cb9eeafc665
+    credit: "none shown"
+    taken: '2026-08-18'
+    retrieved: '2026-11-15'
+    crop: [420, 0, 560, 560]
+    news_checked: '2026-11-15'  # INEC M, 53, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-enugu-pdp
+    source: "BusinessDay (businessday.ng)"
+    file_page: https://businessday.ng/news/article/uche-nnaji-ex-technology-minister-who-resigned-over-certificate-secures-enugu-guber-ticket/
+    file_url: https://cdn.businessday.ng/2023/08/Uche-Nnaji-1.png
+    sha256: 513c846894426856ca3d97571c872a06d78387a702b764f2f08098510be0dd42
+    credit: "none shown"
+    taken: '2026-05-26'
+    retrieved: '2026-11-15'
+    crop: [112, 0, 380, 380]
+    news_checked: '2026-11-15'  # INEC M, 63, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-gombe-pdp
+    source: "Premium Times (premiumtimesng.com)"
+    file_page: https://www.premiumtimesng.com/news/top-news/913483-pantami-re-emerges-as-pdp-governorship-candidate-in-gombe.html
+    file_url: https://media.premiumtimesng.com/wp-content/files/2026/05/250880720_428048202101899_5453222683694379590_n-1-e1779883609481.jpg
+    sha256: bd9e29504c60367233938071f5f8c186c8de26fcac7fff6b3cd5714175980179
+    credit: "Former Minister of Communications and Digital Economy, Isa Pantami"
+    taken: '2026-09-30'
+    retrieved: '2026-11-15'
+    crop: [245, 0, 470, 470]
+    news_checked: '2026-11-15'  # INEC M, 53, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-gombe-adc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/bala-tinka-clinches-adc-govship-ticket-in-gombe/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/05/Tinka.jpg
+    sha256: d4727132c0b4f60afcfcc44ef84bdc8f25f388bab9dce46090b54c0ae1a3a75d
+    credit: "none shown"
+    taken: '2026-05-25'
+    retrieved: '2026-11-15'
+    crop: [10, 0, 460, 460]
+    news_checked: '2026-11-15'  # INEC M, 58, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-jigawa-pdp
+    source: "Arise News (arise.tv)"
+    file_page: https://www.arise.tv/lamido-emerges-unopposed-as-pdp-governorship-candidate-in-jigawa/
+    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/05/Mustapha-Sule-Lamido.jpg
+    sha256: d62db2368a233982b3ab256e04bdea8d5bb9e80efe97e7b0cc884ab3fc9b3e7c
+    credit: "none shown"
+    taken: '2026-05-25'
+    retrieved: '2026-11-15'
+    crop: [157, 0, 340, 340]
+    news_checked: '2026-11-15'  # INEC M, 43, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-kano-adc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/ibrahim-little-the-man-fit-for-the-job
+    file_url: https://dailytrust.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-28-at-9.27.58-PM.jpeg
+    sha256: f71f756feeff0fbd40e97798ebe69dbd24965dbef9692c4f9607dfdb173d1120
+    credit: "Ibrahim Little"
+    taken: '2025-10-29'
+    retrieved: '2026-11-15'
+    crop: [84, 0, 420, 420]
+    news_checked: '2026-11-15'  # INEC M, 62, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-kano-pdp
+    source: "Arise News (arise.tv)"
+    file_page: https://www.arise.tv/sani-abachas-son-replaces-dalha-as-pdp-governorship-candidate-in-kano/
+    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/09/Muhammad-Sani-Abacha.jpg
+    sha256: 00c3f8418ab906b36ef8db310f6bce558fb60f0d815055979315639240058029
+    credit: "none shown"
+    taken: '2026-09-17'
+    retrieved: '2026-11-15'
+    crop: [174, 10, 480, 480]
+    news_checked: '2026-11-15'  # INEC M, 59, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-sha-lagos-eti-osa-ii-adc
+    source: "THISDAYLIVE (thisdaylive.com)"
+    file_page: https://www.thisdaylive.com/2026/04/14/ayodele-adio-keeping-governance-accountability-democratic-credibility-at-the-centre-of-public-discourse/
+    file_url: https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/unnamed-1097.jpg
+    sha256: 337e8afa5659a1d660f521d7f791660362ca6a209eda87824953817679d4ded9
+    credit: "none shown"
+    taken: '2026-04-14'
+    retrieved: '2026-11-15'
+    crop: [130, 0, 390, 390]
+    news_checked: '2026-11-15'  # INEC M, 38, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-sha-akwa-ibom-abak-apc
+    source: "Premium Times (premiumtimesng.com)"
+    file_page: https://www.premiumtimesng.com/news/top-news/843463-2027-election-already-concluded-26-assembly-tickets-in-my-pocket-akwa-ibom-speaker.html
+    file_url: https://media.premiumtimesng.com/wp-content/files/2025/12/Udeme-Otong-speaker-Akwa-Ibom-House-of-Assembly.jpg
+    sha256: f517a7f9dfde096c973025ab1da3826e1a29e00b99a49608365b8f06a175086d
+    credit: "Udeme Otong, speaker, Akwa Ibom House of Assembly"
+    taken: '2025-12-16'
+    retrieved: '2026-11-15'
+    crop: [355, 140, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 62, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-sha-ebonyi-ikwo-south-apc
+    source: "Tribune Online (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/odunwa-emerges-new-ebonyi-speaker/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2023/06/Odunwa.jpg
+    sha256: 91cf8a50b459c0528380d37127102a5b04a2e8c1d12e826baec1f26ab11f854c
+    credit: "none shown"
+    taken: '2023-06-13'
+    retrieved: '2026-11-15'
+    crop: [105, 5, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, 62, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-sha-kaduna-makera-apc
+    source: "The Guardian Nigeria (guardian.ng)"
+    file_page: https://guardian.ng/politics/apc-consensus-primaries-return-kaduna-speaker-others-unopposed/
+    file_url: https://cdn.guardian.ng/wp-content/uploads/2026/05/Yusuf-Dahiru-Liman.webp
+    sha256: 8f6d082b7d3a8ba9df15e5de63d5c703516580d3ae5b8bd85e6c653890b63a43
+    credit: "Kaduna State House of Assembly Speaker, Yusuf Dahiru Liman"
+    taken: '2026-05-21'
+    retrieved: '2026-11-15'
+    crop: [680, 165, 520, 520]
+    news_checked: '2026-11-15'  # INEC M, 46, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-sha-lagos-ikorodu-i-adc
+    source: "The Guardian Nigeria (guardian.ng)"
+    file_page: https://guardian.ng/politics/adcs-oyefusi-pledges-grassroots-development-for-ikorodu-constituency/
+    file_url: https://cdn.guardian.ng/wp-content/uploads/2026/09/Kehinde-Oyefusi.webp
+    sha256: c552402ca3debb647e20c90845d7b60a653e034166faf7ac784d10c2c3675857
+    credit: "The ADC candidate for Ikorodu Constituency I in the Lagos State House of Assembly, Prince Kehinde Oyefusi"
+    taken: '2026-09-18'
+    retrieved: '2026-11-15'
+    crop: [675, 30, 600, 600]
+    news_checked: '2026-11-15'  # INEC M, 55, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-sha-abia-aba-south-lp
+    source: "Peoples Gazette (gazettengr.com)"
+    file_page: https://gazettengr.com/labour-party-lawmaker-emeruwa-becomes-abias-eighth-assembly-speaker/
+    file_url: https://gazettengr.com/wp-content/uploads/Screenshot_20230615-084222_Chrome.jpg
+    sha256: 780c0ae163fa83233769bde53594f541b911ccbe74a0069f1081c21731167db2
+    credit: "Emmanuel Emeruwa"
+    taken: '2023-06-15'
+    retrieved: '2026-11-15'
+    crop: [280, 5, 590, 590]
+    news_checked: '2026-11-15'  # INEC M, 59, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-sha-abia-arochukwu-lp
+    source: "The Whistler Newspaper (thewhistler.ng)"
+    file_page: https://thewhistler.ng/uchenna-okoro-picks-lp-nomination-forms-for-2027-re-election-bid/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/05/Untitled-design-1-7.jpg
+    sha256: 82f807563103be3bf81e8317425e3269e8dc8fa00c6c0a8d844202effc4a22eb
+    credit: "Hon. Okoro Uchenna Kalu"
+    taken: '2026-05-16'
+    retrieved: '2026-11-15'
+    crop: [325, 0, 345, 345]
+    news_checked: '2026-11-15'  # INEC M, 36, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-benue-konshisha-vandeikya-adc
+    source: "Legit.ng (legit.ng)"
+    file_page: https://www.legit.ng/politics/1711323-breaking-orduen-wins-adc-ticket-house-representatives-vandeikyakonshisha/
+    file_url: https://cdn.legit.ng/images/1200x675/f04d64556bfb4891.jpeg?v=1
+    sha256: 9cf64173d01d0e5bac63edf8add29dc139fa88373f5979ade8169ad505843929
+    credit: "Orduen Wins  ADC Ticket for House of Representatives in Vandeikya/Konshisha  Source: Twitter"
+    taken: '2026-05-22'
+    retrieved: '2026-11-15'
+    crop: [124, 70, 440, 440]
+    news_checked: '2026-11-15'  # INEC M, 32, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-adc
+    source: "City Times Online (citytimesonline.com)"
+    file_page: https://citytimesonline.com/emeka-ndubuisi-bahadur-emerges-adc-consensus-candidate-for-ikwuano-umuahia/
+    file_url: https://citytimesonline.com/wp-content/uploads/2026/05/IMG-20260521-WA0049.jpg
+    sha256: d084d10b591858667b5e5ccc3b3c51efa06da0708f7482ee80bb5b1f5595cbf6
+    credit: "none shown"
+    taken: '2026-05-21'
+    retrieved: '2026-11-15'
+    crop: [120, 170, 1040, 1040]
+    news_checked: '2026-11-15'  # INEC M, 45, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-abia-umuahia-north-umuahia-south-ikwuano-apc
+    source: "Peoples Gazette (gazettengr.com)"
+    file_page: https://gazettengr.com/alleged-n47-billion-fraud-abians-petition-apc-to-disqualify-ex-gov-orjis-son-from-primary-election/
+    file_url: https://gazettengr.com/wp-content/uploads/Untitled-1-2378.png
+    sha256: 7128dba17c434b78a3d0abeebc37c530fcd9bcbf0a7a11fc875d4762f742acc0
+    credit: "Chinedum Enyinnaya Orji"
+    taken: '2026-05-12'
+    retrieved: '2026-11-15'
+    crop: [180, 12, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 55, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-bauchi-bogoro-dass-tafawa-balewa-pdp
+    source: "The Sun (thesun.ng)"
+    file_page: https://thesun.ng/pdp-primaries-bagel-wins-ticket-for-dass-tafawa-balewa-bogoro/
+    file_url: https://d1jcea4y7xhp7l.cloudfront.net/wp-content/uploads/2026/05/173475556_1633714613504956_8031383682417889811_n.jpg
+    sha256: 96717c1930e17a0cc2fd18270cf63c8a183b75ecee8dc8fb6d1dedba39c1762c
+    credit: "Maryam Garba Bagel"
+    taken: '2026-05-18'
+    retrieved: '2026-11-15'
+    crop: [95, 0, 580, 580]
+    news_checked: '2026-11-15'  # INEC F, 51, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-cross-river-calabar-south-akpabuyo-bakassi-ndc
+    source: "Leadership (leadership.ng)"
+    file_page: https://leadership.ng/i-will-take-voice-of-bakassi-people-to-national-assembly-ndc-reps-candidate/
+    file_url: https://leadership.ng/wp-content/uploads/2026/10/IMG-20261016-WA04412.jpg
+    sha256: c4d4461233d880bcd081dccb8153dc4e8e925a577c9f3095bf6ff6fddffd8477
+    credit: "none shown"
+    taken: '2026-10-17'
+    retrieved: '2026-11-15'
+    crop: [55, 0, 360, 360]
+    news_checked: '2026-11-15'  # INEC M, 52, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-borno-askira-uba-hawul-pdp
+    source: "Blueprint Newspapers (blueprint.ng)"
+    file_page: https://blueprint.ng/will-prioritise-security-to-enable-farmers-return-to-farms-haske/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/09/IMG-20260912-WA0158.jpg
+    sha256: 851bfcc96a8bc784d508699969dc3a5336af18ced79f5833201ba374c94768fe
+    credit: "none shown"
+    taken: '2026-09-12'
+    retrieved: '2026-11-15'
+    crop: [0, 0, 965, 965]
+    news_checked: '2026-11-15'  # INEC M, 56, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-benue-gboko-tarka-pdp
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/interview-ill-amplify-voices-of-gboko-tarka-in-national-assembly-ikyur/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/02/Mr-Nathaniel-Ikyur.jpeg
+    sha256: 6ec6c93d0793bc24e41991ad7ff9e2857d0fcad0414f3d00a7c47fc3de51744c
+    credit: "Mr Nathaniel Ikyur"
+    taken: '2026-02-22'
+    retrieved: '2026-11-15'
+    crop: [255, 0, 480, 480]
+    news_checked: '2026-11-15'  # INEC M, 61, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-benue-kwande-ushongo-adc
+    source: "BusinessDay (businessday.ng)"
+    file_page: https://businessday.ng/politics/article/2027-atsar-emerges-adc-consensus-candidate-for-kwande-ushongo-house-of-representatives-seat/
+    file_url: https://cdn.businessday.ng/wp-content/uploads/2026/03/Terver-Shirsha-Atsar.png
+    sha256: 7ff842f19990fbbc5a4b540f1b366b9f984ca2b518a1df0cd33ec0dd2c26d016
+    credit: "image alt 'Terver Shirsha Atsar'; no credit shown"
+    taken: '2026-05-10'
+    retrieved: '2026-11-15'
+    crop: [145, 0, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, 55, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-ebonyi-ezza-north-ishielu-ndc
+    source: "Voice of Nigeria (von.gov.ng)"
+    file_page: https://von.gov.ng/ndc-reps-candidate-promises-quality-education-for-constituents/
+    file_url: https://von.gov.ng/wp-content/uploads/2026/10/IMG-20261030-WA0007.jpg
+    sha256: 176bcc92e04f50917b1fc6f500787b6ffeaefc4eef61a34d95fbe690c63d71e6
+    credit: "none shown"
+    taken: '2026-10-30'
+    retrieved: '2026-11-15'
+    crop: [0, 0, 602, 602]
+    news_checked: '2026-11-15'  # INEC M, 50, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-enugu-enugu-east-isi-uzo-apc
+    source: "The Pacesetter Frontier Magazine (news.pacesetterfrontier.com)"
+    file_page: https://news.pacesetterfrontier.com/2026/05/17/edeoga-emerges-apc-flagbearer-for-enugu-east-isi-uzo-federal-constituency/
+    file_url: https://news.pacesetterfrontier.com/wp-content/uploads/2021/11/HEZ_1088.jpg
+    sha256: ac08c4ae25502c4a9b5aca370609276883bbb487c17c7b06836d1c21dcadd56b
+    credit: "none shown"
+    taken: '2026-05-17'
+    retrieved: '2026-11-15'
+    crop: [360, 0, 700, 700]
+    news_checked: '2026-11-15'  # INEC M, 61, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-lagos-ajeromi-ifelodun-pdp
+    source: "Leadership (leadership.ng)"
+    file_page: https://leadership.ng/pdp-adopts-diriwari-as-consensus-candidate-for-ajeromi-ifelodun-reps-seat-in-lagos/
+    file_url: https://leadership.ng/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-18-at-4.54.12-PM.jpeg
+    sha256: c29d385f772d969690e114a43572d6d56481f0491fa03931fe39834f31c729be
+    credit: "none shown"
+    taken: '2026-05-18'
+    retrieved: '2026-11-15'
+    crop: [70, 0, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 56, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-kano-fagge-ndc
+    source: "Prime Time News (primetimenews.ng)"
+    file_page: https://primetimenews.ng/2027-i-will-never-abandon-kwankwaso-goro/
+    file_url: https://primetimenews.ng/wp-content/uploads/2026/05/IMG-20260527-WA0074.jpg
+    sha256: 2ecfee9cbe557dcad53f41c2cb170379a502e96b9bb3a21457ddfbd9b42c08ed
+    credit: "none shown"
+    taken: '2026-05-27'
+    retrieved: '2026-11-15'
+    crop: [20, 0, 600, 600]
+    news_checked: '2026-11-15'  # INEC M, 61, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-kebbi-aleiro-gwandu-jega-apc
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/from-correctional-to-legislative-service-ahmeds-reformative-leadership/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/11/IMG-20261030-WA0007.jpg
+    sha256: 77dbd6c51c19720f6c28731837caa6f6cc172de158ba6234d9b4cec9865e316e
+    credit: "none shown"
+    taken: '2026-11-01'
+    retrieved: '2026-11-15'
+    crop: [40, 10, 600, 600]
+    news_checked: '2026-11-15'  # INEC M, 67, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-oyo-ibarapa-central-ibarapa-north-pdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/oyo-ex-lawmaker-murainas-purported-expulsion-from-apc-came-too-late-aide/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/09/images-2026-09-30T204801.004.jpg
+    sha256: 2671326ae74f05c2f4197d9cf2d1134b2c814712500b9aca0ecfe9d1288eb537
+    credit: "none shown"
+    taken: '2026-09-30'
+    retrieved: '2026-11-15'
+    crop: [65, 30, 380, 380]
+    news_checked: '2026-11-15'  # INEC M, 62, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-ondo-okitipupa-irele-ndc
+    source: "THISDAY (thisdaylive.com)"
+    file_page: https://www.thisdaylive.com/2026/07/14/ondo-2027-prince-adekanmi-emerges-as-ndc-house-of-representatives-candidate-forokitipupa-irele/
+    file_url: https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/Prince-Kenny-Adekanmi.jpeg
+    sha256: b4888ec46daac6ae11b6a5ee470048cc150e74d64e2d8f85ec8d9014214665d7
+    credit: "none shown"
+    taken: '2026-07-14'
+    retrieved: '2026-11-15'
+    crop: [15, 0, 195, 195]
+    news_checked: '2026-11-15'  # INEC M, 41, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-kogi-okene-ogori-magogo-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/ame-meet-hon-adomu-muhammed-etudaiye/
+    file_url: https://kogireports.com/wp-content/uploads/2026/04/Etudaiye-Adomu-Mohammed-2.jpeg
+    sha256: e311e423fb431ea10f94f27bdad0bd974eb69a4850f961983e83be360f06160a
+    credit: "none shown"
+    taken: '2026-06-21'
+    retrieved: '2026-11-15'
+    crop: [52, 0, 537, 537]
+    news_checked: '2026-11-15'  # INEC M, 47, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-kwara-ifelodun-offa-oyun-apc
+    source: "THISDAY (thisdaylive.com)"
+    file_page: https://www.thisdaylive.com/2026/09/05/2027-i-will-be-accessible-if-given-chance-to-represent-ifelodun-offa-oyun-federal-constituency-says-ajakaye/
+    file_url: https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/Rafiu-Ajakaye.jpg
+    sha256: 415e63d7e4c7496904a2c6d98a36ae130c806556bde927edd995aea82455a98c
+    credit: "none shown"
+    taken: '2026-09-05'
+    retrieved: '2026-11-15'
+    crop: [155, 0, 500, 500]
+    news_checked: '2026-11-15'  # INEC M, 42, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-oyo-ibadan-south-west-ibadan-north-west-sdp
+    source: "Inside Oyo (insideoyo.com)"
+    file_page: https://insideoyo.com/womens-rights-advocate-oluwatoyin-falade-joins-ibadan-northwest-southwest-race-on-sdp-ticket/
+    file_url: https://insideoyo.com/wp-content/uploads/2026/08/IMG-20260822-WA0060.jpg
+    sha256: 5fdee9c9eb08d0b6d05ab689767db7bcb553c8036c6104a220d10fc18999806a
+    credit: "none shown"
+    taken: '2026-08-22'
+    retrieved: '2026-11-15'
+    crop: [239, 0, 440, 440]
+    news_checked: '2026-11-15'  # INEC F, 61, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-katsina-adc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/katsina39-pray-against-insecurity-adc-guber-candidate-urges-citizens/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/09/Sen.-Ahmad-Babba-Kaita.jpg
+    sha256: 84dd15c0fe0ad5fcea7075c3eeae5cb7265f55fffa5e9a2f27a7b3435e6877a0
+    credit: "none shown"
+    taken: '2026-09-24'
+    retrieved: '2026-11-15'
+    crop: [80, 0, 520, 520]
+    news_checked: '2026-11-15'  # INEC M, 58, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-katsina-pdp
+    source: "Leadership (leadership.ng)"
+    file_page: https://leadership.ng/2027-lado-danmarke-emerges-katsina-pdp-governorship-candidate/
+    file_url: https://leadership.ng/wp-content/uploads/2026/05/IMG-20260524-WA0064.jpg
+    sha256: f24a54b6325b6ccb517b20f10f793c865efed2b9a41dc65378e4a78eb70dfe60
+    credit: "none shown"
+    taken: '2026-05-24'
+    retrieved: '2026-11-15'
+    crop: [112, 0, 340, 340]
+    news_checked: '2026-11-15'  # INEC M, 64, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-lagos-pdp
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/ill-use-madness-to-secure-lagos-doherty/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/06/Screenshot-2026-06-27-201737.png
+    sha256: 943d7c401d1fcfa2606f122f489d2f7e7f59429096dbb4b9afab5d792ec6135d
+    credit: "none shown"
+    taken: '2026-06-28'
+    retrieved: '2026-11-15'
+    crop: [92, 0, 320, 320]
+    news_checked: '2026-11-15'  # INEC M, 64, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-lagos-adc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/lagos-2027-expect-rail-network-in-30-months-rhodes-vivour-tells-voters/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/09/Untitled-design-75.png
+    sha256: f1ee2c58565fc257520ca40c0e474f7bd7ef6a704ae584b9e81db230f01f949d
+    credit: "Gbadebo Rhodes-Vivour"
+    taken: '2026-11-09'
+    retrieved: '2026-11-15'
+    crop: [300, 15, 460, 460]
+    news_checked: '2026-11-15'  # INEC M, 43, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-lagos-sdp
+    source: "Arise News (arise.tv)"
+    file_page: https://www.arise.tv/femi-olaniyi-apc-has-failed-lagos-by-denying-governors-free-hands-to-govern/
+    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/10/Femi-Olaniyi2.png
+    sha256: 76d0d9941ae76d3b48c068fde79b33523d451086e78b176f9d8bf4130cd82406
+    credit: "On-screen lower third: 'FEMI OLANIYI / SDP Governorship candidate, Lagos State'"
+    taken: '2026-10-04'
+    retrieved: '2026-11-15'
+    crop: [211, 26, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 52, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-nasarawa-pdp
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/nasarawa-pdp-affirms-ombugadu-as-guber-candidate/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/05/images-11.jpeg
+    sha256: 08930402612e400efaa2a5191b14c8be3fe8de7d1116fe9d90492ebc23e78a16
+    credit: "none shown"
+    taken: '2026-05-25'
+    retrieved: '2026-11-15'
+    crop: [44, 10, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, 48, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-nasarawa-apc
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/only-enemies-would-wish-tinubus-administration-away-wadada/
+    file_url: https://blueprint.ng/wp-content/uploads/2025/05/fb_img_17274485360003691617604547422232.jpg
+    sha256: 80609763612d66780a9974cff8b03592c38f5d88dc6ca947288cccdc03db65ab
+    credit: "Senator Ahmed Wadada Aliyu"
+    taken: '2026-07-31'
+    retrieved: '2026-11-15'
+    crop: [60, 0, 420, 420]
+    news_checked: '2026-11-15'  # INEC M, 61, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-nasarawa-sdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/ex-igp-adamu-emerges-sdp-guber-candidate-in-nasarawa/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/09/Mohammed-Abubakar-Adamu.jpg
+    sha256: de2e2e72cede517538fa80b6fe3401ba8090d5c3c536941588da9fabcead05f6
+    credit: "Mohammed Adamu"
+    taken: '2026-09-06'
+    retrieved: '2026-11-15'
+    crop: [281, 20, 620, 620]
+    news_checked: '2026-11-15'  # INEC M, 65, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-niger-pdp
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/ill-take-over-as-niger-state-governor-in-2027-pdp-candidate-nami-boasts/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/09/IMG-20260906-WA0016.jpg
+    sha256: 89231c25380db666662106f33f78cd21d59e51ffdf1582e27f6a0923d88b349b
+    credit: "none shown"
+    taken: '2026-09-06'
+    retrieved: '2026-11-15'
+    crop: [168, 5, 520, 520]
+    news_checked: '2026-11-15'  # INEC M, 58, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-niger-adc
+    source: "Channels Television (channelstv.com)"
+    file_page: https://www.channelstv.com/2026/05/26/2027-niger-adc-announces-kpautagi-as-governorship-candidate/
+    file_url: https://www.channelstv.com/wp-content/uploads/2026/05/Mohammed-Kpautagi-ADC-niger.jpg
+    sha256: 8934feafa788b44130e9ce935730ee291cd4478587d4e3ee2b17fd9104d11548
+    credit: "Mohammed Kpautagi. Photo: Facebook@Dr. MK Mohammed ADC Grassroots Network-2027"
+    taken: '2026-05-26'
+    retrieved: '2026-11-15'
+    crop: [256, 0, 250, 250]
+    news_checked: '2026-11-15'  # INEC M, 62, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-plateau-pdp
+    source: "Arise News (arise.tv)"
+    file_page: https://www.arise.tv/inec-lists-kefas-ropshik-as-plateau-pdp-governorship-candidate-for-2027-election/
+    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/09/Kefas-Wungak-Ropshik.jpg
+    sha256: e988de51df3724b1d3205f125af7ffaa30acf83a908d3021d79c8567ece6e166
+    credit: "none shown"
+    taken: '2026-09-03'
+    retrieved: '2026-11-15'
+    crop: [294, 5, 440, 440]
+    news_checked: '2026-11-15'  # INEC M, 50, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-oyo-adc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/inec-confirms-adegoke-oyo-adc-guber-candidate/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/08/Adegoke.jpg
+    sha256: 287008a6753764a5df5c8a60e55132a0051c1e42fe9386b68744c74739aff3b7
+    credit: "none shown"
+    taken: '2026-08-29'
+    retrieved: '2026-11-15'
+    crop: [20, 15, 760, 760]
+    news_checked: '2026-11-15'  # INEC M, 62, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-oyo-pdp
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/oyo-2027-pdps-gbolarumi-backs-lg-autonomy-questions-makindes-n100bn-loan/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/10/fba6436b-4281-4d60-9609-1ea348e1.jpg
+    sha256: 3101ea6bd12fc71acf0ae93a566d6d7fe6428ee559a25e26e3884497ec043f87
+    credit: "none shown"
+    taken: '2026-10-31'
+    retrieved: '2026-11-15'
+    crop: [290, 0, 620, 620]
+    news_checked: '2026-11-15'  # INEC M, 69, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-oyo-ndc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/i-will-not-step-down-for-any-other-candidates-oyo-ndc-guber-candidate-hakeem-adebola/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/10/Hakeem-Adebola.jpg
+    sha256: 1a2e0756a58f09706ce982a71aa24ad8b48fb7441473f70bfa7cce8d03b1b7b0
+    credit: "Hakeem"
+    taken: '2026-10-21'
+    retrieved: '2026-11-15'
+    crop: [230, 15, 700, 700]
+    news_checked: '2026-11-15'  # INEC M, 57, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-plateau-ndc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/plateau-ndc-moves-to-reconcile-factions/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2026/10/Da-Jonathan-Sunday-Akuns.jpg
+    sha256: 051633ae22e60495235e7481534a1a3d604ae4b4d2ccb4d42154a4bb08f4b82d
+    credit: "none shown"
+    taken: '2026-10-11'
+    retrieved: '2026-11-15'
+    crop: [312, 72, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 64, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-plateau-adc
+    source: "Nigerian Tribune (tribuneonlineng.com)"
+    file_page: https://tribuneonlineng.com/adc-credible-alternative-for-nigerians-plateau-gov-candidate/
+    file_url: https://tribuneonlineng.com/wp-content/uploads/2023/01/General-Suraj-Rtd.jpg
+    sha256: 64e20fa484c5fc31f6abef1dbfdb7d1adc8175ba8fc1cfe90eb026c48ee370bd
+    credit: "none shown"
+    taken: '2026-07-22'
+    retrieved: '2026-11-15'
+    crop: [50, 10, 500, 500]
+    news_checked: '2026-11-15'  # INEC M, 61, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-taraba-pdp
+    source: "Leadership (leadership.ng)"
+    file_page: https://leadership.ng/2027-bwacha-targets-healthcare-education-reforms-in-taraba/
+    file_url: https://leadership.ng/wp-content/uploads/2022/11/Senator-Emmanuel-Bwacha.jpg
+    sha256: 9e460c483f83a59df95c8502ee86bfad536667e0460367b8ef16510c729d1493
+    credit: "none shown"
+    taken: '2026-10-16'
+    retrieved: '2026-11-15'
+    crop: [312, 92, 410, 410]
+    news_checked: '2026-11-15'  # INEC M, 63, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: feb-2027-governor-zamfara-ndc
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/zamfara-marafa-promises-to-end-insecurity-reform-education-if-elected-governor/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/04/Kabiru-Marafa.webp
+    sha256: 99f35161ccab3b7d702570bf215eb0699fdcf46dff9cbcd4f34eba75a9e6ddc6
+    credit: "none shown"
+    taken: '2026-09-16'
+    retrieved: '2026-11-15'
+    crop: [420, 20, 680, 680]
+    news_checked: '2026-11-15'  # INEC M, 66, fits the photo; the article names them with party and seat or state (night round, D-084)
+  - candidate_id: jan-2027-house-rivers-port-harcourt-ii-apc
+    source: "National Assembly Library Trust Fund (naltf.gov.ng)"
+    file_page: https://naltf.gov.ng/honorable-members/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/05/Hon-Amadi-Blessing-Chigeru.jpg
+    sha256: b5e1b8a626ba38c6c4db5a6ce6e977e40e8176210d8206655139b12536697187
+    retrieved: '2026-11-15'
+    crop: [145, 55, 270, 270]
+    official_checked: '2026-11-15'  # INEC F, 72, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-house-osun-ede-north-ede-south-egbedore-ejigbo-a
+    source: "National Assembly Library Trust Fund (naltf.gov.ng)"
+    file_page: https://naltf.gov.ng/house-committee-investigates-n802bn-financial-breaches-in-nnpcl-and-inec/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2026/04/Salam-Bamidele.jpg
+    sha256: 4a58fa414a2ea359a536d730c3b270dfc5d4c8d714c36eb7ede8a63389170310
+    retrieved: '2026-11-15'
+    crop: [460, 368, 470, 470]
+    official_checked: '2026-11-15'  # INEC M, 56, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-house-kwara-ilorin-west-asa-apc
+    source: "National Assembly Library Trust Fund (naltf.gov.ng)"
+    file_page: https://naltf.gov.ng/house-of-reps-probes-incessant-arbitrary-bank-charges-on-customers/
+    file_url: https://naltf.gov.ng/wp-content/uploads/2025/10/Hon.Tolani-Shagaya.webp
+    sha256: ea77615069caec5625e93b63479dde91dd29163bd8b289979241bf345964c329
+    retrieved: '2026-11-15'
+    crop: [17, 0, 520, 520]
+    official_checked: '2026-11-15'  # INEC M, 36, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-governor-yobe-apc
+    source: "Yobe State Government (yobestate.gov.ng)"
+    file_page: https://yobestate.gov.ng/?attachment_id=1408
+    file_url: https://yobestate.gov.ng/wp-content/uploads/2023/11/Alhaji-Baba-Malam-Wali.png
+    sha256: d31d5850a5966098add33408ef55e87662ad7b48698fbb4490648fca08f26f04
+    retrieved: '2026-11-15'
+    crop: [120, 0, 680, 680]
+    official_checked: '2026-11-15'  # INEC M, 67, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: feb-2027-governor-sokoto-adc
+    source: "Sokoto State Government (sokotostate.gov.ng)"
+    file_page: https://sokotostate.gov.ng/muniru-muhammad-daniya/
+    file_url: https://sokotostate.gov.ng/wp-content/uploads/2022/01/Muniru-Muhammad-Daniya.jpg
+    sha256: e0bc24409a7db19eca57fd7ffb9c153d66a0f9428ca16017a89168456a3ebb11
+    retrieved: '2026-11-15'
+    crop: [110, 20, 420, 420]
+    official_checked: '2026-11-15'  # INEC M, 56, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-house-imo-ikeduru-mbaitoli-pdp
+    source: "Imo State House of Assembly (imha.imostate.gov.ng)"
+    file_page: https://imha.imostate.gov.ng/uche-steve-ogbuagu-imha/
+    file_url: https://imha.imostate.gov.ng/wp-content/uploads/2022/04/UCHE-STEVE-OGBUAGU-imha.jpg
+    sha256: 807d36417c4ef3d69dc71c1e8f934e6e88dc4545b6ffe718e1982e15273c9102
+    retrieved: '2026-11-15'
+    crop: [0, 0, 420, 420]
+    official_checked: '2026-11-15'  # INEC M, 54, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-senate-delta-delta-north-apc
+    source: "Delta State Government (deltastate.gov.ng)"
+    file_page: https://deltastate.gov.ng/okowa/
+    file_url: https://deltastate.gov.ng/wp-content/uploads/2024/02/Ifeanyi-A.-Okowa.jpg
+    sha256: da846df2e37c8fae675d8b14df5d29f3eb444faf7dc96cf5913f44aa14e63032
+    retrieved: '2026-11-15'
+    crop: [180, 12, 318, 318]
+    official_checked: '2026-11-15'  # INEC M, 67, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-senate-kogi-kogi-central-apc
+    source: "Kogi State Government (kogistate.gov.ng)"
+    file_page: https://kogistate.gov.ng/governor-yahaya-bello-approves-the-establishment-of-kogi-state-council-of-information/
+    file_url: https://kogistate.gov.ng/wp-content/uploads/yahaya-bello-kogi-state.jpg
+    sha256: 6812ae5d0fcdc360b584aca6eb3446ba27bb323b9c3f33d3a3eaa7a7952ac028
+    retrieved: '2026-11-15'
+    crop: [190, 0, 520, 520]
+    official_checked: '2026-11-15'  # INEC M, 51, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-senate-oyo-oyo-central-adc
+    source: "Oyo State Government (oyostate.gov.ng)"
+    file_page: https://oyostate.gov.ng/oyo-names-ex-rep-member-akinlabi-chairman-road-maintenance-agency-2/
+    file_url: https://oyostate.gov.ng/wp-content/uploads/2019/09/kamil-Akinlabi.jpg
+    sha256: 9abdb260648ea314061ad22ae13d966bfcee228b488ee2914ba46b62a8e05539
+    retrieved: '2026-11-15'
+    crop: [5, 0, 480, 480]
+    official_checked: '2026-11-15'  # INEC M, 60, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-house-adamawa-mayo-belwa-ganye-jada-toungo-adc
+    source: "Adamawa State Government (adamawastate.gov.ng)"
+    file_page: https://adamawastate.gov.ng/the-executive-council/
+    file_url: https://adamawastate.gov.ng/wp-content/uploads/2024/01/Adamu-Atiku.jpg
+    sha256: bf43c51e46bf13872543e02775b9d564cd1820811de8dc1255e2cdd97e6a4c51
+    retrieved: '2026-11-15'
+    crop: [108, 15, 300, 300]
+    official_checked: '2026-11-15'  # INEC M, 51, fits the photo; the page names them; seat and name checked (night round)
+  - candidate_id: jan-2027-senate-yobe-yobe-east-apc
+    source: "Yobe State Government (yobestate.gov.ng)"
+    file_page: https://yobestate.gov.ng/yobe-state-to-revolutionize-agriculture-gov-buni/
+    file_url: https://yobestate.gov.ng/wp-content/uploads/2024/12/Buni-Official-Picture.jpeg
+    sha256: b2770041a3d179b1fb206e09b9da5c014a87052d43ee32912a7cace25511dcc3
+    retrieved: '2026-11-15'
+    crop: [215, 240, 1500, 1500]
+    official_checked: '2026-11-15'  # INEC M, 58, fits the photo; the page names them; seat and name checked (night round)

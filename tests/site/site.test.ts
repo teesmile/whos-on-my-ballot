@@ -403,18 +403,18 @@ describe('candidate photos (owner decisions D-064, D-065, D-071, D-075)', () => 
     const imgs = (page: string) => new Set([...page.matchAll(/<image href="([^"]+)"/g)].map(m => m[1]))
     expect([...imgs(html('ballot/abia/aba-north-aba-south--abia-south'))]).toEqual([`/${s.file}`])
     expect([...imgs(html('ballot-feb/lagos/alimosho-i'))]).toEqual([`/${s.sheets['feb-2027-governor-lagos'].file}`])
-    expect([...imgs(html('ballot-feb/kano/bichi'))]).toEqual([`/${s.logo_file}`]) // Kano's governorship race has one photo in its first group, so none shows (D-075)
+    expect([...imgs(html('ballot-feb/yobe/bade-east'))]).toEqual([`/${s.logo_file}`]) // Yobe's governorship race has only the governing party's photo, so none shows (D-075, D-081)
     expect([...imgs(html('ballot-feb/osun/ayedade'))]).toEqual([`/${s.logo_file}`]) // no governorship on 6 February
     expect(html('ballot-feb/lagos/alimosho-i')).toMatch(/data-candidate-id="feb-2027-governor-lagos-apc"[\s\S]*?<svg class="photo"/)
-    expect(html('ballot-feb/kano/bichi')).toMatch(/data-candidate-id="feb-2027-governor-kano-apc"[\s\S]*?<span class="photo ph" aria-hidden="true"><\/span>/)
+    expect(html('ballot-feb/yobe/bade-east')).toMatch(/data-candidate-id="feb-2027-governor-yobe-apc"[\s\S]*?<span class="photo ph" aria-hidden="true"><\/span>/)
     // a Senate photo is the card's own small copy, loaded only when its race is shown
     expect(html('ballot/kwara/ilorin-west-asa--kwara-central')).toMatch(/data-candidate-id="jan-2027-senate-kwara-kwara-central-apc"[\s\S]*?<img class="photo" src="\/photos\/jan-2027-senate-kwara-kwara-central-apc-card\.webp" width="76" height="76" alt="" loading="lazy"/)
   })
   it('no credit on the candidate page; the full credit for each photo is in one list at the end of the About page', () => {
-    // every built photo is a yaml entry with the owner's approval, or an official-page photo checked against INEC (D-074);
+    // every built photo is a yaml entry with the owner's approval, or an official-page or news photo checked against INEC (D-074, D-084);
     // a Commons file never goes live on the official-page route
     const entries = fs.readFileSync(path.resolve('data/overrides/photos.yaml'), 'utf8').split(/\n  - /).slice(1)
-    const cleared = entries.filter(e => /\n    (owner_approved|official_checked): '\d{4}-\d{2}-\d{2}'/.test(e)).map(e => /^candidate_id: (\S+)/.exec(e)![1])
+    const cleared = entries.filter(e => /\n    (owner_approved|official_checked|news_checked): '\d{4}-\d{2}-\d{2}'/.test(e)).map(e => /^candidate_id: (\S+)/.exec(e)![1])
     // the per-race rule (D-075): cleared photos show only in races where at least two of the first group have one; the rest are held
     expect([...approved, ...Object.keys(held)].sort()).toEqual(cleared.sort())
     for (const e of entries.filter(x => /\n    official_checked:/.test(x))) expect(e, e.slice(0, 80)).not.toMatch(/Wikimedia Commons|wikimedia\.org/)

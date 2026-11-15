@@ -54,25 +54,52 @@
     "feb-2027-governor-abia-lp": 2
    }
   },
-  "feb-2027-governor-akwa-ibom": {
-   "file": "logos/sheet-4c1c782195.webp",
+  "feb-2027-governor-adamawa": {
+   "file": "logos/sheet-5737406f12.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 37302,
-   "sha256": "4c1c78219568eb767372fd8d3a0f0ea04c9b757d1c267ad8cd04671889e4fd11",
+   "bytes": 43918,
+   "sha256": "5737406f12bf098487333e9e751a71338fcf51a8683c9c7d246e2ef5de2bbc97",
    "photos": {
-    "feb-2027-governor-akwa-ibom-apc": 0
+    "feb-2027-governor-adamawa-apc": 0,
+    "feb-2027-governor-adamawa-ndc": 1,
+    "feb-2027-governor-adamawa-pdp": 2
+   }
+  },
+  "feb-2027-governor-akwa-ibom": {
+   "file": "logos/sheet-93602f32c7.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 39830,
+   "sha256": "93602f32c75c0e6abd4c7de368518f0a88bb5d47c07c3799cf7339393fb736fe",
+   "photos": {
+    "feb-2027-governor-akwa-ibom-adc": 0,
+    "feb-2027-governor-akwa-ibom-apc": 1
+   }
+  },
+  "feb-2027-governor-bauchi": {
+   "file": "logos/sheet-78f544a803.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 46050,
+   "sha256": "78f544a803c0a2a8d8f6da041e68ff46eff8db28fd4e513993d7a41cee6f797c",
+   "photos": {
+    "feb-2027-governor-bauchi-adc": 0,
+    "feb-2027-governor-bauchi-apc": 1,
+    "feb-2027-governor-bauchi-ndc": 2
    }
   },
   "feb-2027-governor-benue": {
-   "file": "logos/sheet-3876458618.webp",
+   "file": "logos/sheet-b171ca4f46.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 38694,
-   "sha256": "3876458618a2e38bb3b74675ca13a100e49a3d1abbbee47d64edfb06942617b4",
+   "bytes": 43408,
+   "sha256": "b171ca4f46338a73e916f974eef59ecbfc277e5e0eb832f2f01783d39f5ada69",
    "photos": {
-    "feb-2027-governor-benue-apc": 0,
-    "feb-2027-governor-benue-ndc": 1
+    "feb-2027-governor-benue-adc": 0,
+    "feb-2027-governor-benue-apc": 1,
+    "feb-2027-governor-benue-ndc": 2,
+    "feb-2027-governor-benue-sdp": 3
    }
   },
   "feb-2027-governor-cross-river": {
@@ -99,36 +126,52 @@
    }
   },
   "feb-2027-governor-ebonyi": {
-   "file": "logos/sheet-4bbe10cbe9.webp",
+   "file": "logos/sheet-767aaec6cb.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 40100,
-   "sha256": "4bbe10cbe9d8b9beb8e181555d3ebd34a10bd54945f4a0cc25483b722eb338b2",
+   "bytes": 42930,
+   "sha256": "767aaec6cb6db0269f84d4bd20a66722a8d86ef683d9f262a360dad6e78d2b28",
    "photos": {
     "feb-2027-governor-ebonyi-apc": 0,
-    "feb-2027-governor-ebonyi-pdp": 1
+    "feb-2027-governor-ebonyi-ndc": 1,
+    "feb-2027-governor-ebonyi-pdp": 2
    }
   },
   "feb-2027-governor-enugu": {
-   "file": "logos/sheet-ece900b881.webp",
+   "file": "logos/sheet-826137a9ea.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 39132,
-   "sha256": "ece900b881984babdafd23040459124e51bd5e464ec26afd496aa39a27f49e64",
+   "bytes": 43398,
+   "sha256": "826137a9ea2adb40c648773d272edc30ef13c0b34be7a274a2c25bbe9570b2cb",
    "photos": {
-    "feb-2027-governor-enugu-apc": 0,
-    "feb-2027-governor-enugu-ndc": 1
+    "feb-2027-governor-enugu-adc": 0,
+    "feb-2027-governor-enugu-apc": 1,
+    "feb-2027-governor-enugu-ndc": 2,
+    "feb-2027-governor-enugu-pdp": 3
+   }
+  },
+  "feb-2027-governor-gombe": {
+   "file": "logos/sheet-989882b54c.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 42310,
+   "sha256": "989882b54c22dc08b4767b59691331b932494daa61d523570d43c7369c8f30e7",
+   "photos": {
+    "feb-2027-governor-gombe-adc": 0,
+    "feb-2027-governor-gombe-apc": 1,
+    "feb-2027-governor-gombe-pdp": 2
    }
   },
   "feb-2027-governor-jigawa": {
-   "file": "logos/sheet-648cfab912.webp",
+   "file": "logos/sheet-f57b0538c9.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 41240,
-   "sha256": "648cfab912dffeae1a20cc9451202a989da2c5368c920e455672117300614c92",
+   "bytes": 44946,
+   "sha256": "f57b0538c90565413233495b8bff59f6eaf169f2c681321952195518e0099288",
    "photos": {
     "feb-2027-governor-jigawa-adc": 0,
-    "feb-2027-governor-jigawa-apc": 1
+    "feb-2027-governor-jigawa-apc": 1,
+    "feb-2027-governor-jigawa-pdp": 2
    }
   },
   "feb-2027-governor-kaduna": {
@@ -140,6 +183,30 @@
    "photos": {
     "feb-2027-governor-kaduna-adc": 0,
     "feb-2027-governor-kaduna-apc": 1
+   }
+  },
+  "feb-2027-governor-kano": {
+   "file": "logos/sheet-d63167e58d.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 41476,
+   "sha256": "d63167e58dddb899633c3edd6c15211c4b6df140acfcee51de07be19dc89fb6a",
+   "photos": {
+    "feb-2027-governor-kano-adc": 0,
+    "feb-2027-governor-kano-apc": 1,
+    "feb-2027-governor-kano-pdp": 2
+   }
+  },
+  "feb-2027-governor-katsina": {
+   "file": "logos/sheet-67d4ec3e38.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 42270,
+   "sha256": "67d4ec3e38b9301badf7ce0a00d5c1983f4fe8c55cac96a4d3680bffb8c8a008",
+   "photos": {
+    "feb-2027-governor-katsina-adc": 0,
+    "feb-2027-governor-katsina-apc": 1,
+    "feb-2027-governor-katsina-pdp": 2
    }
   },
   "feb-2027-governor-kebbi": {
@@ -164,25 +231,42 @@
    }
   },
   "feb-2027-governor-lagos": {
-   "file": "logos/sheet-3d2b7e8baf.webp",
+   "file": "logos/sheet-6e69e7dfcf.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 40416,
-   "sha256": "3d2b7e8bafe223b48c8d3504a6713abe9363764c25f79de81227c49805360be3",
+   "bytes": 49052,
+   "sha256": "6e69e7dfcf10a7d512f6b051106549615c686fbd24811d0fc99699226f91b6ca",
    "photos": {
-    "feb-2027-governor-lagos-apc": 0,
-    "feb-2027-governor-lagos-ndc": 1
+    "feb-2027-governor-lagos-adc": 0,
+    "feb-2027-governor-lagos-apc": 1,
+    "feb-2027-governor-lagos-ndc": 2,
+    "feb-2027-governor-lagos-pdp": 3,
+    "feb-2027-governor-lagos-sdp": 4
+   }
+  },
+  "feb-2027-governor-nasarawa": {
+   "file": "logos/sheet-d8336c43c3.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 42698,
+   "sha256": "d8336c43c3d7c93b5352d6492126ea1de40c4ad8920ea460e8e1b5b9bf3737ee",
+   "photos": {
+    "feb-2027-governor-nasarawa-apc": 0,
+    "feb-2027-governor-nasarawa-pdp": 1,
+    "feb-2027-governor-nasarawa-sdp": 2
    }
   },
   "feb-2027-governor-niger": {
-   "file": "logos/sheet-cecb77f088.webp",
+   "file": "logos/sheet-4167d97f54.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 40812,
-   "sha256": "cecb77f08877191d45eaced4d497fdad9d8f166f141fe1fd5ab39626627c8603",
+   "bytes": 46574,
+   "sha256": "4167d97f54aa6f674bbd33e02d256643a553b4e1c7f4334d8fe9aa94e85367c2",
    "photos": {
-    "feb-2027-governor-niger-apc": 0,
-    "feb-2027-governor-niger-sdp": 1
+    "feb-2027-governor-niger-adc": 0,
+    "feb-2027-governor-niger-apc": 1,
+    "feb-2027-governor-niger-pdp": 2,
+    "feb-2027-governor-niger-sdp": 3
    }
   },
   "feb-2027-governor-ogun": {
@@ -197,13 +281,29 @@
    }
   },
   "feb-2027-governor-oyo": {
-   "file": "logos/sheet-5bd778256a.webp",
+   "file": "logos/sheet-6f6012da39.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 38236,
-   "sha256": "5bd778256a050b104c494c2b3731bb96eb1997e765d58f59d30ed5fc108c6b36",
+   "bytes": 46212,
+   "sha256": "6f6012da39266ccd360a87da8231c46d4f251d3f86da12b6d29ffaea36bafea4",
    "photos": {
-    "feb-2027-governor-oyo-apc": 0
+    "feb-2027-governor-oyo-adc": 0,
+    "feb-2027-governor-oyo-apc": 1,
+    "feb-2027-governor-oyo-ndc": 2,
+    "feb-2027-governor-oyo-pdp": 3
+   }
+  },
+  "feb-2027-governor-plateau": {
+   "file": "logos/sheet-9fbb393699.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 44120,
+   "sha256": "9fbb393699bdc3a77cde6cac36fe5a7cb47a31b47c233658418b4ea85d00e820",
+   "photos": {
+    "feb-2027-governor-plateau-adc": 0,
+    "feb-2027-governor-plateau-apc": 1,
+    "feb-2027-governor-plateau-ndc": 2,
+    "feb-2027-governor-plateau-pdp": 3
    }
   },
   "feb-2027-governor-rivers": {
@@ -215,6 +315,37 @@
    "photos": {
     "feb-2027-governor-rivers-adc": 0,
     "feb-2027-governor-rivers-apc": 1
+   }
+  },
+  "feb-2027-governor-sokoto": {
+   "file": "logos/sheet-fa524c0381.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 39420,
+   "sha256": "fa524c0381cfbb86d02617d34a0d5f6c3d4c1aeb5813269dd1fc6ed5002001ac",
+   "photos": {
+    "feb-2027-governor-sokoto-adc": 0
+   }
+  },
+  "feb-2027-governor-taraba": {
+   "file": "logos/sheet-662ad23730.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 37392,
+   "sha256": "662ad2373043e8fb0e093793d24b6c41f2658ab9a536a5efecd059f8a36acbf1",
+   "photos": {
+    "feb-2027-governor-taraba-pdp": 0
+   }
+  },
+  "feb-2027-governor-zamfara": {
+   "file": "logos/sheet-df52dfb26a.webp",
+   "width": 2112,
+   "height": 224,
+   "bytes": 40910,
+   "sha256": "df52dfb26a29afcfb229b85479abcb9ef545b995106292353dd30098371f5055",
+   "photos": {
+    "feb-2027-governor-zamfara-apc": 0,
+    "feb-2027-governor-zamfara-ndc": 1
    }
   }
  }
