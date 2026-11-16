@@ -10537,3 +10537,202 @@ people:
     retrieved: '2026-11-16'
     crop: [590, 10, 540, 540]
     news_checked: '2026-11-16'  # INEC F, 48, fits; the page names them with the seat or race (batch 9)
+  # Batch 10 (16 Nov 2026, 9pm Lagos): search lane, first-five places (House and State Assembly); checked against INEC
+  - candidate_id: jan-2027-house-imo-oru-east-orsu-orlu-adc
+    source: "Blueprint Newspapers Limited (blueprint.ng)"
+    file_page: https://blueprint.ng/2027-philanthropist-onyeaji-picks-ndc-house-of-representatives-form/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/05/IMG-20260517-WA0005.jpg
+    sha256: 4ef6903eee4a9b6eb5cbe7d540f01134dc9de294b0dfa91364910d6602bfd03c
+    credit: "none shown"
+    taken: '2026-05-17'
+    retrieved: '2026-11-16'
+    crop: [320, 0, 340, 340]
+    news_checked: '2026-11-16'  # INEC M, 41, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-jigawa-kazaure-roni-gwiwa-yankwashi-adc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/ex-rep-kazaure-laments-neglect-despite-exposing-corruption-aligns-with-atiku/
+    file_url: https://dailytrust.com/wp-content/uploads/2025/03/fb_img_1742797612456.jpg
+    sha256: bd8afc7b3208aef944e744843c80582cfa30e90f64564420b172e38c030e3abb
+    credit: "none shown"
+    taken: '2025-03-24'
+    retrieved: '2026-11-16'
+    crop: [108, 45, 230, 230]
+    news_checked: '2026-11-16'  # INEC M, 53, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-kogi-idah-igalamela-odolu-ibaji-ofu-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/catalyst-movement-congratulates-chief-peter-yakubu-iduh-on-adc-primary-victory/
+    file_url: https://kogireports.com/wp-content/uploads/2026/05/Peter-Iduh-Yalubu.jpg
+    sha256: d519e9a50f28760f63af1ac2cadf04e6d31d20a8241041f9b01e18aff587ee2e
+    credit: "none shown"
+    taken: '2026-05-18'
+    retrieved: '2026-11-16'
+    crop: [145, 15, 300, 300]
+    news_checked: '2026-11-16'  # INEC M, 52, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-kogi-yagba-east-yagba-west-mopamuro-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/pdp-reps-candidate-petitions-inec-over-alleged-voter-register-inflation-in-yagba-east/
+    file_url: https://kogireports.com/wp-content/uploads/2026/05/Ibigbemi-Seun-1.jpeg
+    sha256: 00bbd7c2434acbdae5efcbdfe512a3d592e10dc2e7fc1d97945e4287060320da
+    credit: "none shown"
+    taken: '2026-10-29'
+    retrieved: '2026-11-16'
+    crop: [130, 0, 330, 330]
+    news_checked: '2026-11-16'  # INEC M, 41, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-kwara-baruten-kaiama-pdp
+    source: "City Post (citypost.ng)"
+    file_page: https://www.citypost.ng/former-lg-chairman-hon-sadiq-declares-for-house-of-reps/
+    file_url: https://www.citypost.ng/wp-content/uploads/2026/04/IMG-20260426-WA0085.jpg
+    sha256: 63a5c2679408cea7b8c6521510accdc69633a3a9d8a93f080b3e98ddd3d0ea94
+    credit: "none shown"
+    taken: '2026-04-26'
+    retrieved: '2026-11-16'
+    crop: [288, 272, 310, 310]
+    news_checked: '2026-11-16'  # INEC M, 48, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-niger-kontagora-wushishi-mariga-mashegu-adc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/adc-candidate-mohammed-sani-bello-promises-inclusive-representation-development-for-kontagora-federal-constituency/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/07/Cert.jpg
+    sha256: 15f363312b5c7869bf1230936d9618859b4fc310627414c1a1bec273fcefd8b0
+    credit: "none shown"
+    taken: '2026-07-04'
+    retrieved: '2026-11-16'
+    crop: [280, 170, 400, 400]
+    news_checked: '2026-11-16'  # INEC M, 34, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-ogun-ijebu-north-ijebu-east-ogun-waterside-pdp
+    source: "City Post (citypost.ng)"
+    file_page: https://www.citypost.ng/why-i-wont-defect-to-apc-ex-reps-deputy-minority-whip-adekoya/
+    file_url: https://www.citypost.ng/wp-content/uploads/2025/08/IMG-20250802-WA0092.jpg
+    sha256: 9690a84250229a897abe676738df82e5ed63aab465d056ba57b24231b237dc69
+    credit: "none shown"
+    taken: '2025-08-02'
+    retrieved: '2026-11-16'
+    crop: [180, 5, 220, 220]
+    news_checked: '2026-11-16'  # INEC M, 65, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-rivers-eleme-tai-oyigbo-ndc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/why-fubara-signed-abuja-peace-accord-gbali/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2023/12/Screenshot-2023-12-28-at-10.53.19.png
+    sha256: 289b3c155f99a08493406081aff5f01c87ef5f65a60d3fc3dce1570656e15765
+    credit: "none shown"
+    taken: '2023-12-28'
+    retrieved: '2026-11-16'
+    crop: [220, 0, 240, 240]
+    news_checked: '2026-11-16'  # INEC M, 45, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-adamawa-yola-north-yola-south-girei-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/ahmad-embarks-on-thank-you-tour-to-yola-federal-constituency/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/07/Ahmad-Salihijo-Ahmad.jpg
+    sha256: 2d1b54f204f9760926d77b1448fd070172c05245b1e4cb810528550f8e519e9c
+    credit: "none shown"
+    taken: '2026-07-13'
+    retrieved: '2026-11-16'
+    crop: [320, 40, 540, 540]
+    news_checked: '2026-11-16'  # INEC M, 42, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-borno-dikwa-mafa-konduga-apc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/apc-reps-primaries-biggest-winners-top-losers-so-far/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/05/Zulum-2.jpg
+    sha256: 57f0c33fc88fdde0c6b23802107c12c8d3f92e91148ab6f805159448deaa40d9
+    credit: "none shown"
+    taken: '2026-05-17'
+    retrieved: '2026-11-16'
+    crop: [32, 120, 440, 440]
+    news_checked: '2026-11-16'  # INEC M, 45, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-niger-chanchaga-apc
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/chanchaga-apc-reps-candidate-promises-financial-access-employment-for-niger-women-youth/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/09/IMG-20260916-WA0013.jpg
+    sha256: 603ebb79c1415039f5384b9a6f34f62735e8087700f23dd41db4165e6d466950
+    credit: "none shown"
+    taken: '2026-09-16'
+    retrieved: '2026-11-16'
+    crop: [5, 60, 340, 340]
+    news_checked: '2026-11-16'  # INEC M, 43, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: jan-2027-house-osun-atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west-a
+    source: "OsunDefender (osundefender.com)"
+    file_page: https://osundefender.com/hor-race-alabama-not-an-ijesa-he-is-from-ogbomoso-osun-apc-treasurer/
+    file_url: https://osundefender.com/wp-content/uploads/2026/10/IMG_1237.jpeg
+    sha256: c6321086c2a92393cd49e651c155fa3affb2aec58dd48cedbb29ec54a04c2734
+    credit: "none shown"
+    taken: '2026-10-09'
+    retrieved: '2026-11-16'
+    crop: [80, 40, 240, 240]
+    news_checked: '2026-11-16'  # INEC M, 44, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-anambra-idemili-north-ndc
+    source: "Anambra State Government (anambrastate.gov.ng)"
+    file_page: https://anambrastate.gov.ng/mothering-sunday-igboebisi-onubogu-laud-mothers/
+    file_url: https://anambrastate.gov.ng/wp-content/uploads/image_2026-04-20_162543222.png
+    sha256: 12b732950744d9f07bdb50ce31248f9dab2ed9ff6112b8fc6a46f2d810dae01d
+    retrieved: '2026-11-16'
+    crop: [230, 120, 250, 250]
+    official_checked: '2026-11-16'  # INEC M, 45, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-cross-river-obudu-ndc
+    source: "City Post (citypost.ng)"
+    file_page: https://www.citypost.ng/2027-is-coming-the-political-narrative-will-change-agaba/
+    file_url: https://www.citypost.ng/wp-content/uploads/2026/09/IMG-20260918-WA00961.jpg
+    sha256: 301109e37d5b57728225bfe0a32df3fad470a4a7bc22ed7b9233515d51d035f4
+    credit: "none shown"
+    taken: '2026-09-18'
+    retrieved: '2026-11-16'
+    crop: [160, 0, 440, 440]
+    news_checked: '2026-11-16'  # INEC M, 37, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-delta-ughelli-north-ii-pdp
+    source: "Asaba Metro (asabametro.com)"
+    file_page: https://www.asabametro.com/ughelli-north-constituency-ii-oke-umurhohwo-emerges-pdp-candidate-for-2027-delta-assembly-election/
+    file_url: https://www.asabametro.com/wp-content/uploads/2026/05/Oke-Umurhohwo.jpg
+    sha256: 007ba0d4b69263fb00f88efa4e5838ff70ca164651c704a57db1f2baa19d58c9
+    credit: "none shown"
+    taken: '2026-05-23'
+    retrieved: '2026-11-16'
+    crop: [210, 10, 600, 600]
+    news_checked: '2026-11-16'  # INEC M, 36, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-imo-aboh-mbaise-adc
+    source: "Inno News (innonews.com.ng)"
+    file_page: https://innonews.com.ng/2026/09/07/2027-adc-aboh-mbaise-house-of-assembly-candidate-okereafor-promises-effective-representation-for-constituents/
+    file_url: https://innonews.com.ng/wp-content/uploads/IMG-20260905-WA0151.jpg
+    sha256: fe14466dba90ef8e597b773cc568173ed173acb9b4907ef9a157d9bd70154750
+    credit: "none shown"
+    taken: '2026-09-07'
+    retrieved: '2026-11-16'
+    crop: [140, 110, 560, 560]
+    news_checked: '2026-11-16'  # INEC M, 31, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-imo-owerri-north-ndc
+    source: "Inno News (innonews.com.ng)"
+    file_page: https://innonews.com.ng/2026/04/27/uche-banna-declares-for-owerri-north-state-assembly-seat-promises-effective-representation/
+    file_url: https://innonews.com.ng/wp-content/uploads/IMG-20260427-WA0029.jpg
+    sha256: f83c281091eebe8a25b9f218e0d5d6f879c72ef5ccf7f00e5e989f700ef4b479
+    credit: "none shown"
+    taken: '2026-04-27'
+    retrieved: '2026-11-16'
+    crop: [330, 90, 520, 520]
+    news_checked: '2026-11-16'  # INEC M, 50, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-kogi-kabba-bunu-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/2027-adc-chieftain-bao-officially-declares-for-kabba-bunu-state-constituency/
+    file_url: https://kogireports.com/wp-content/uploads/2026/03/BAO-Benjamin-Ayodele-Olobayo-2.jpeg
+    sha256: f346d5e3723b2f1d07bf065df30a96f30a60981e4650a443da092be04df097c5
+    credit: "none shown"
+    taken: '2026-03-07'
+    retrieved: '2026-11-16'
+    crop: [109, 20, 400, 400]
+    news_checked: '2026-11-16'  # INEC M, 42, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-kogi-yagba-west-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/bandit-attack-akure-commiserates-with-ere-community-calls-for-improved-security/
+    file_url: https://kogireports.com/wp-content/uploads/2025/07/Akure-Toyosi.jpg
+    sha256: 8bd3a35aef6281d42e623f13e36252cd4967a855bfcdc5b6a2562ddb982f0e00
+    credit: "none shown"
+    taken: '2026-06-09'
+    retrieved: '2026-11-16'
+    crop: [32, 0, 380, 380]
+    news_checked: '2026-11-16'  # INEC M, 36, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-kogi-ogugu-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/kogi-at-35-pdps-michael-idoko-calls-for-accountability-better-governance-renewed-development/
+    file_url: https://kogireports.com/wp-content/uploads/2026/08/Michael-Idoko-Samuel-1.jpeg
+    sha256: 8bea2de3c18a509f5b610675442a46bf866dd5e48190e05ba32afa36b8825bef
+    credit: "none shown"
+    taken: '2026-08-27'
+    retrieved: '2026-11-16'
+    crop: [118, 10, 420, 420]
+    news_checked: '2026-11-16'  # INEC M, 38, fits; named with the seat, or the state and office (batch 10)
