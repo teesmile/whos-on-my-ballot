@@ -9955,16 +9955,6 @@ people:
     retrieved: '2026-11-16'
     crop: [260, 0, 270, 270]
     news_checked: '2026-11-15'  # INEC M, 52, fits; the article names them with party and seat or race (night batch 6)
-  - candidate_id: feb-2027-governor-oyo-aac
-    source: "Arise News (arise.tv)"
-    file_page: https://www.arise.tv/saheed-oladele-oyo-governor-has-performed-far-below-expectations-in-education/
-    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/10/Saheed-Oladele.jpg
-    sha256: d92babad393aa5ebcd41c52a5c95ed18dfbd13827d82ed74165fa31a1b57ab3b
-    credit: "none shown"
-    taken: '2026-10-25'
-    retrieved: '2026-11-16'
-    crop: [740, 60, 620, 620]
-    news_checked: '2026-11-15'  # INEC M, 44, fits; the article names them with party and seat or race (night batch 6)
   - candidate_id: feb-2027-sha-abia-isiala-ngwa-north-pdp
     source: "Peoples Daily (peoplesdaily.ng)"
     file_page: https://peoplesdaily.ng/pdp-candidate-princewill-onwumere-unveils-10-point-agenda-to-transform-isiala-ngwa-north-constituency/
@@ -10295,3 +10285,124 @@ people:
     retrieved: '2026-11-15'
     crop: [190, 20, 310, 310]
     news_checked: '2026-11-15'  # INEC M, 48, fits; the article names them with party and seat or race (night batch 7)
+  # Night batch 8 (15 Nov 2026): first-five lane (Governor and Senate), news reports; checked against INEC
+  - candidate_id: feb-2027-governor-oyo-aac
+    source: "Legit.ng (legit.ng)"
+    file_page: https://www.legit.ng/politics/1714770-adelabus-2027-oyo-ambition-faces-fresh-trouble-sdp-candidate-fires-warning/
+    file_url: https://cdn.legit.ng/images/1120/cb090ff7de8b2112.jpeg?v=1
+    sha256: 006c5a26a2220c56687a60837768ee98daf02172b9af5d46bf82757753259f2f
+    credit: "none shown"
+    taken: '2026-06-16'
+    retrieved: '2026-11-16'
+    crop: [584, 30, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 44, fits; the article names them with the race (party may differ where the seat matches) (night batch 8) (replaces a soft still, owner 15 Nov)
+  - candidate_id: feb-2027-governor-adamawa-sdp
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/adamawa-sdp-candidate-pledges-policies-to-improve-living-conditions-of-citizens-if-elected/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/09/Christopher-Nathaniel.png
+    sha256: 47b9b9263480efc7b270e6f7daade23f94db3f8033a1b4aa6e545bc2cd6f9250
+    credit: "none shown"
+    taken: '2026-09-21'
+    retrieved: '2026-11-16'
+    crop: [170, 70, 440, 440]
+    news_checked: '2026-11-15'  # INEC M, 64, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: feb-2027-governor-kwara-ndc
+    source: "Voice of Nigeria (von.gov.ng)"
+    file_page: https://von.gov.ng/kwara-2027-ndc-governorship-candidate-promises-%e2%82%a6120000-wage/
+    file_url: https://von.gov.ng/wp-content/uploads/2026/11/1001005228.jpg
+    sha256: 51be6fe91eb82d9151b70ab463498132d568a92b907c879003adac72c8e4b657
+    credit: "none shown"
+    taken: '2026-11-11'
+    retrieved: '2026-11-16'
+    crop: [475, 100, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 51, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: feb-2027-governor-kaduna-pdp
+    source: "Blueprint Newspapers (blueprint.ng)"
+    file_page: https://blueprint.ng/maulud-kaduna-pdp-gov-candidate-abg-seeks-prayers-for-peace-economic-relief/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/08/IMG-20260825-WA0009.jpg
+    sha256: 22e30004e60292881d0cbd124fc992705efac41f13b4ada9fcf362d5d1aec2c4
+    credit: "none shown"
+    taken: '2026-08-25'
+    retrieved: '2026-11-16'
+    crop: [196, 175, 620, 620]
+    news_checked: '2026-11-15'  # INEC M, 53, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: jan-2027-senate-sokoto-sokoto-east-apc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/ex-nnpc-chief-finance-director-emerges-sokoto-east-apc-senatorial-candidate/
+    file_url: https://thewhistler.ng/wp-content/uploads/2024/11/Former-Chief-Financial-Officer-of-NNPCL-Mr.-Umar-Ajiya.jpg
+    sha256: 52cd304ee275f0065fcfd7bf814f3384f29be5f6e359bdf2d682cc182b30930a
+    credit: "none shown"
+    taken: '2026-05-18'
+    retrieved: '2026-11-16'
+    crop: [275, 5, 370, 370]
+    news_checked: '2026-11-15'  # INEC M, 61, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: jan-2027-senate-kebbi-kebbi-central-apc
+    source: "Voice of Nigeria (von.gov.ng)"
+    file_page: https://von.gov.ng/senator-aliero-reviews-11-years-of-service-in-national-assembly/
+    file_url: https://von.gov.ng/wp-content/uploads/2026/06/1001109674.jpg
+    sha256: 842fcaf9a4d3762dbd4528bec95d365687036f569cb73b395663fccce1118922
+    credit: "none shown"
+    taken: '2026-06-14'
+    retrieved: '2026-11-16'
+    crop: [165, 5, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 69, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: jan-2027-senate-adamawa-adamawa-north-apc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/fintiri-emerges-apc-adamawa-north-senatorial-candidate/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2024/07/Adamawa-State-Governor-Ahmadu-Umaru-Fintiri.png
+    sha256: 487e6afb5cad473e96d2e1a878156e039758d55d84b6caaefbf5391d15eb9ca2
+    credit: "none shown"
+    taken: '2026-05-19'
+    retrieved: '2026-11-16'
+    crop: [395, 25, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 58, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: jan-2027-senate-benue-benue-south-ndc
+    source: "Idoma Voice Newspaper (idomavoice.com)"
+    file_page: https://idomavoice.com/attack-on-peter-obis-convoy-dan-onjeh-exonerates-benue-youths/
+    file_url: https://idomavoice.com/wp-content/uploads/2024/03/dan-onjeh.png
+    sha256: 954b00bb33cb59e8b4ecb99bba29de7460928c4417e7fc0a69e612458b11b7ce
+    credit: "none shown"
+    taken: '2026-09-11'
+    retrieved: '2026-11-16'
+    crop: [250, 140, 560, 560]
+    news_checked: '2026-11-15'  # INEC M, 52, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: jan-2027-senate-edo-edo-south-apc
+    source: "The Nigerian Observer (nigerianobservernews.com)"
+    file_page: https://nigerianobservernews.com/2026/05/ogbeide-ihama-wins-apc-edo-south-senatorial-ticket-defeats-imasuen-ize-iyamu/
+    file_url: https://nigerianobservernews.com/wp-content/uploads/2026/05/Omoregie-Ogbeide-Ihama.jpg
+    sha256: d55c150f929080db2c88ed7fc75ec0a095ce9067f20ad22ac583c79f3ec8c26b
+    credit: "none shown"
+    taken: '2026-05-19'
+    retrieved: '2026-11-16'
+    crop: [225, 30, 660, 660]
+    news_checked: '2026-11-15'  # INEC M, 52, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: jan-2027-senate-kogi-kogi-east-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/adc-kogi-east-senatorial-candidate-urges-massive-voter-registration-as-inec-extends-cvr/
+    file_url: https://kogireports.com/wp-content/uploads/2026/07/AAS-Aminu-Suleiman-1.jpeg
+    sha256: 0aa28c2bb60d176206ceede7591f9794aaf2e46a9fe7bf0c135ceacd353086f1
+    credit: "none shown"
+    taken: '2026-07-07'
+    retrieved: '2026-11-16'
+    crop: [105, 30, 340, 340]
+    news_checked: '2026-11-15'  # INEC M, 52, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: jan-2027-senate-kogi-kogi-east-sdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/progress-promised-idris-husseini-kashim-set-for-official-declaration-for-kogi-east-senate-seat-in-idah/
+    file_url: https://kogireports.com/wp-content/uploads/2026/02/HK-Idris-3.jpeg
+    sha256: 6bd159e83494c530c88651bb3cc1b4ef0a4f073eb8b961f30cd0199fbf41a315
+    credit: "none shown"
+    taken: '2026-04-24'
+    retrieved: '2026-11-16'
+    crop: [105, 0, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, 48, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-north-sdp
+    source: "City Post (citypost.ng)"
+    file_page: https://www.citypost.ng/nigeria-needs-capable-leaders-says-ndc-senate-aspirant-dodo-as-he-seeks-nasarawa-north-seat/
+    file_url: https://www.citypost.ng/wp-content/uploads/2026/05/IMG-20260517-WA0079.jpg
+    sha256: dd5bcd9a81dd1c74505928956543553561eeac5915bdefa15a736260ab134851
+    credit: "none shown"
+    taken: '2026-05-17'
+    retrieved: '2026-11-16'
+    crop: [375, 55, 580, 580]
+    news_checked: '2026-11-15'  # INEC M, 40, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)

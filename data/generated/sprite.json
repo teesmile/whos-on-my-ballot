@@ -55,15 +55,16 @@
    }
   },
   "feb-2027-governor-adamawa": {
-   "file": "logos/sheet-5737406f12.webp",
+   "file": "logos/sheet-d58c5e1810.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 43918,
-   "sha256": "5737406f12bf098487333e9e751a71338fcf51a8683c9c7d246e2ef5de2bbc97",
+   "bytes": 46714,
+   "sha256": "d58c5e1810914c523a9a0ef7e4277bcd041aa22f87e949ea1005526399b43c66",
    "photos": {
     "feb-2027-governor-adamawa-apc": 0,
     "feb-2027-governor-adamawa-ndc": 1,
-    "feb-2027-governor-adamawa-pdp": 2
+    "feb-2027-governor-adamawa-pdp": 2,
+    "feb-2027-governor-adamawa-sdp": 3
    }
   },
   "feb-2027-governor-akwa-ibom": {
@@ -186,14 +187,15 @@
    }
   },
   "feb-2027-governor-kaduna": {
-   "file": "logos/sheet-23a9d1f8a6.webp",
+   "file": "logos/sheet-424d9663e1.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 40228,
-   "sha256": "23a9d1f8a6362d4f203d451c13a5b175a5b72a78ca040578a4104f5a8a2f9704",
+   "bytes": 42884,
+   "sha256": "424d9663e18c10fc77fae26c1f2213610ffa4c57e11b86dd2c7f348a91a105c4",
    "photos": {
     "feb-2027-governor-kaduna-adc": 0,
-    "feb-2027-governor-kaduna-apc": 1
+    "feb-2027-governor-kaduna-apc": 1,
+    "feb-2027-governor-kaduna-pdp": 2
    }
   },
   "feb-2027-governor-kano": {
@@ -232,15 +234,16 @@
    }
   },
   "feb-2027-governor-kwara": {
-   "file": "logos/sheet-06e6d6fe75.webp",
+   "file": "logos/sheet-c7e4676e1e.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 44588,
-   "sha256": "06e6d6fe75d040ac35ceb56d1b084ef82057d9b2a1fc04ae025bcb6096f1a824",
+   "bytes": 47380,
+   "sha256": "c7e4676e1e8ebb0ca2f136d1567533bb9710f24e65bc09cf1a4c7ec8b6041d21",
    "photos": {
     "feb-2027-governor-kwara-adc": 0,
     "feb-2027-governor-kwara-apc": 1,
-    "feb-2027-governor-kwara-pdp": 2
+    "feb-2027-governor-kwara-ndc": 2,
+    "feb-2027-governor-kwara-pdp": 3
    }
   },
   "feb-2027-governor-lagos": {
