@@ -10005,3 +10005,293 @@ people:
     retrieved: '2026-11-16'
     crop: [285, 120, 340, 340]
     news_checked: '2026-11-15'  # INEC M, 44, fits; the article names them with party and seat or race (night batch 6)
+  # Night batch 7 (15 Nov 2026): balance lane, other parties' first-five candidates in races where APC was the only face; news reports; checked against INEC
+  - candidate_id: jan-2027-house-lagos-surulere-i-ndc
+    source: "PoliticsNigeria (politicsnigeria.com)"
+    file_page: https://politicsnigeria.com/2026/10/17/lagos-reps-candidate-alleges-plot-to-block-ndc-from-2027-race/
+    file_url: https://politicsnigeria.com/wp-content/uploads/2026/10/incollage_20261017_2036483833094441835332010533-1200x675.jpg
+    sha256: 7bc1cd11936fe65a55d16827901bc8a0538691d0bceba1adb655fb4037d35e03
+    credit: "none shown"
+    taken: '2026-10-17'
+    retrieved: '2026-11-15'
+    crop: [20, 0, 580, 580]
+    news_checked: '2026-11-15'  # INEC F, 53, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-kano-dawakin-kudu-warawa-ndc
+    source: "Premium Times (premiumtimesng.com)"
+    file_page: https://www.premiumtimesng.com/news/more-news/882733-apc-national-chairmans-top-aide-joins-ndc-after-losing-kano-primary.html
+    file_url: https://media.premiumtimesng.com/wp-content/files/2026/05/WhatsApp-Image-2026-05-25-at-19.48.32.jpeg
+    sha256: e1c857fa014e6fdce8f6f0b697ff3d3086181fec2384b5ed3fd42aad5bb6990a
+    credit: "none shown"
+    taken: '2026-05-25'
+    retrieved: '2026-11-15'
+    crop: [300, 60, 250, 250]
+    news_checked: '2026-11-15'  # INEC M, 57, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: feb-2027-sha-ebonyi-ezza-south-ndc
+    source: "PoliticsNigeria (politicsnigeria.com)"
+    file_page: https://politicsnigeria.com/2026/10/23/two-killed-as-ndc-candidates-convoy-escapes-attack-in-ebonyi/
+    file_url: https://politicsnigeria.com/wp-content/uploads/2026/10/incollage_20261023_1259559972342625176908534930-1200x675.jpg
+    sha256: 39abc2e3368057cd231a3ba3d19510ad6513be09762431f3170c7cd33604016e
+    credit: "none shown"
+    taken: '2026-10-23'
+    retrieved: '2026-11-15'
+    crop: [110, 20, 270, 270]
+    news_checked: '2026-11-15'  # INEC M, 37, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: feb-2027-sha-kogi-ijumu-arin-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/we-know-you-will-revive-the-lost-glory-of-ijumu-state-constituency-adc-to-musa-yakubu/
+    file_url: https://kogireports.com/wp-content/uploads/2026/05/Olumayowa-Musa-Yakubu-MOY-1.jpeg
+    sha256: c370d936565a336f32eccee11f855fc278701cf2fed0221e079792602f9443ea
+    credit: "none shown"
+    taken: '2026-05-21'
+    retrieved: '2026-11-15'
+    crop: [135, 0, 270, 270]
+    news_checked: '2026-11-15'  # INEC M, 49, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-kogi-ijumu-kabba-bunu-sdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/house-of-reps-race-sdp-stalwarts-youth-women-groups-endorse-omoluabi-abayomi-bello-for-kabba-bunu-ijumu/
+    file_url: https://kogireports.com/wp-content/uploads/2026/06/Abayomi-Bello-1.jpeg
+    sha256: 89f7b2e8cad96b6c04ab58da677f6b0de052160a65b6e036abdd97721a4dc7f7
+    credit: "none shown"
+    taken: '2026-06-02'
+    retrieved: '2026-11-15'
+    crop: [185, 10, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 47, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-senate-kogi-kogi-west-ndc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/kogi-west-gloria-funto-omoyele-throws-weight-behind-ndcs-muyiwa-fatosa-declares-him-best-candidate-for-transformational-representation/
+    file_url: https://kogireports.com/wp-content/uploads/2026/07/Fatosa-Muyiwa-4.jpeg
+    sha256: 0c18f42db732e0c11701eda3d1232507b499424d628232e0a8e9aecc061ab484
+    credit: "none shown"
+    taken: '2026-10-30'
+    retrieved: '2026-11-15'
+    crop: [205, 0, 310, 310]
+    news_checked: '2026-11-15'  # INEC M, 43, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-benue-otukpo-ohimini-adc
+    source: "Daily Post (dailypost.ng)"
+    file_page: https://dailypost.ng/2026/05/22/otukpo-ohimini-gunmen-attack-adc-reps-candidate-omudu-in-benue/
+    file_url: https://dailypost.ng/wp-content/uploads/2026/05/Omudu-.jpg
+    sha256: 1854cf20dc77db3e28b0e711c027904103642dc2c741ed6939acb6f6f6b23048
+    credit: "none shown"
+    taken: '2026-05-22'
+    retrieved: '2026-11-15'
+    crop: [260, 60, 820, 820]
+    news_checked: '2026-11-15'  # INEC M, 43, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-senate-delta-delta-north-ndc
+    source: "THEWILL (thewillnews.com)"
+    file_page: https://thewillnews.com/delta-north-senatorial-election-ochei-gets-apga-endorsement/
+    file_url: https://thewillnews.com/wp-content/uploads/2015/01/OCHEI-ACCORD.png
+    sha256: d45d19933ca0fe1ba1f58ed49ca2defa3bfcae10416bd97832b1ea0a5832e283
+    credit: "none shown"
+    taken: '2015-02-02'
+    retrieved: '2026-11-15'
+    crop: [100, 25, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 57, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-senate-benue-benue-north-west-pdp
+    source: "CityPost (citypost.ng)"
+    file_page: https://www.citypost.ng/benue-pdp-stakeholders-back-eunice-ortom-for-2027-senate-race-reject-criticism-zone-b-pdp-leaders-defend-eunice-ortoms/
+    file_url: https://www.citypost.ng/wp-content/uploads/2026/06/IMG-20260604-WA0118-720x600.jpg
+    sha256: 295512eb89b22edbdd74ccd9d86f47df294cf921e24773ca25ca40e056556345
+    credit: "none shown"
+    taken: '2026-06-05'
+    retrieved: '2026-11-15'
+    crop: [300, 0, 290, 290]
+    news_checked: '2026-11-15'  # INEC F, 54, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-senate-osun-osun-east-adc
+    source: "OsunDefender (osundefender.com)"
+    file_page: https://osundefender.com/federal-high-court-judgement-a-sign-adc-will-win-upcoming-elections-loye/
+    file_url: https://osundefender.com/wp-content/uploads/2026/06/298609bf-f8e0-4377-b676-1daa922e02a4.jpeg
+    sha256: 07780d7723f110a1c98490dd42670b9e1a949a0dadcc3051eeaa2e7c74fb260f
+    credit: "none shown"
+    taken: '2026-06-16'
+    retrieved: '2026-11-15'
+    crop: [290, 250, 520, 520]
+    news_checked: '2026-11-15'  # INEC M, 55, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-jigawa-ringim-taura-adc
+    source: "Daily Post (dailypost.ng)"
+    file_page: https://dailypost.ng/2026/05/16/2027-ex-apc-council-chairman-picks-adc-reps-nomination-form-in-jigawa/
+    file_url: https://dailypost.ng/wp-content/uploads/2026/05/Shehu-Sule-Udi.jpg
+    sha256: b2d5e9cd6be4298ffcf80252823edaa539225a5de5899a5d5bf736ab01cfb5e8
+    credit: "none shown"
+    taken: '2026-05-16'
+    retrieved: '2026-11-15'
+    crop: [270, 125, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 46, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: feb-2027-sha-cross-river-yakurr-i-pdp
+    source: "CrossRiverWatch (crossriverwatch.com)"
+    file_page: http://crossriverwatch.com/2026/05/2027-elections-human-right-lawyer-james-ibor-emerges-yakurr-1-state-constituency-pdp-candidate/
+    file_url: http://crossriverwatch.com/wp-content/uploads/2020/12/IMG_20201205_084511.jpg
+    sha256: 0f3209c0c37c9c09e527d14a2269a1b1798725f652f27c599434cdb900bd30ea
+    credit: "none shown"
+    taken: '2026-05-22'
+    retrieved: '2026-11-15'
+    crop: [270, 0, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 48, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-benue-otukpo-ohimini-pdp
+    source: "Daily Post (dailypost.ng)"
+    file_page: https://dailypost.ng/2026/08/24/benue-adc-nass-aspirant-lilian-adoyi-ofiebor-dumps-party-for-pdp/
+    file_url: https://dailypost.ng/wp-content/uploads/2026/08/Lilian-Adoyi-Ofiebor.jpg
+    sha256: b2535809a98cb6ba9723179d05f754cb9f088153ecb38bf5469dbe1a5334cc90
+    credit: "none shown"
+    taken: '2026-08-24'
+    retrieved: '2026-11-15'
+    crop: [410, 260, 600, 600]
+    news_checked: '2026-11-15'  # INEC F, 42, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-senate-akwa-ibom-akwa-ibom-north-west-ndc
+    source: "Premium Times (premiumtimesng.com)"
+    file_page: https://www.premiumtimesng.com/regional/south-south-regional/877402-2027-ex-aide-to-contest-against-akpabio-defects-to-ndc.html
+    file_url: https://media.premiumtimesng.com/wp-content/files/2026/05/Untitled-design-2-1.jpg
+    sha256: baa9e09cdcfb169ab1a727c372aac5e94e7cdc2a35f5488e82b538ddd750f59b
+    credit: "none shown"
+    taken: '2026-05-06'
+    retrieved: '2026-11-15'
+    crop: [120, 130, 470, 470]
+    news_checked: '2026-11-15'  # INEC M, 55, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: feb-2027-sha-kogi-lokoja-i-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/2027-adc-picks-bambu-tanko-ali-as-consensus-candidate-for-lokoja-i-assembly-race/
+    file_url: https://kogireports.com/wp-content/uploads/2026/05/Bambu-Ali-Tanko-1.png
+    sha256: 243f0392aed0ed1aab2bb26ce6762ef63064e30deb9fa3390217292488331d95
+    credit: "none shown"
+    taken: '2026-05-06'
+    retrieved: '2026-11-15'
+    crop: [95, 20, 390, 390]
+    news_checked: '2026-11-15'  # INEC M, 55, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-kogi-ijumu-kabba-bunu-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/idrufem-food-bank-distributes-relief-items-to-muslim-faithful-widows-across-kabba-bunu-ijumu-federal-constituency/
+    file_url: https://kogireports.com/wp-content/uploads/2022/05/Idris-Rufus-Oluwafemi-IDRUFEM-1.jpg
+    sha256: bcf8bf1b7ecc900b370e78e69c466267c9bfafab7387d1818a4d00af55ee9053
+    credit: "none shown"
+    taken: '2026-05-28'
+    retrieved: '2026-11-15'
+    crop: [125, 30, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 45, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-benue-apa-agatu-pdp
+    source: "Idoma Voice (idomavoice.com)"
+    file_page: https://idomavoice.com/apa-agatu-adama-otalaka-emerges-victorious-as-court-throws-out-godday-adagboyis-objection/
+    file_url: https://idomavoice.com/wp-content/uploads/2020/09/Adama-J-Adama.jpg
+    sha256: 5e0c7bd3a8e329e1abfff8eb3b55b188efdada52cc2b7cc12427de461eb820f2
+    credit: "none shown"
+    taken: '2022-11-01'
+    retrieved: '2026-11-15'
+    crop: [150, 10, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 41, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-kogi-ankpa-omala-olamaboro-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/pdp-reps-candidate-abubakar-usman-donates-n1m-cow-to-ejeh-of-ankpa-for-5th-anniversary-celebration/
+    file_url: https://kogireports.com/wp-content/uploads/2026/10/Abubakar-Usman-PDP.jpeg
+    sha256: a645ced0718def05c9e749baff3c52a27541c35cde640aca8f399cd6da9914aa
+    credit: "none shown"
+    taken: '2026-10-23'
+    retrieved: '2026-11-15'
+    crop: [120, 0, 380, 380]
+    news_checked: '2026-11-15'  # INEC M, 43, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-kano-gwale-ndc
+    source: "PoliticsNigeria (politicsnigeria.com)"
+    file_page: https://politicsnigeria.com/2026/05/22/kano-assembly-lawmaker-dumps-apc-for-ndc-after-losing-re-election-ticket/
+    file_url: https://politicsnigeria.com/wp-content/uploads/2026/05/617148729_891473386975364_1225191382878829424_n-pn-discover-1200x675.jpg
+    sha256: ccdff7bcc5d856ca79c5dba7f5f6a003e0462ac98caadada864fbdf693ae0d4b
+    credit: "none shown"
+    taken: '2026-05-22'
+    retrieved: '2026-11-15'
+    crop: [420, 20, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, None, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-kogi-adavi-okehi-ndc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/ceo-jcasuals-sen-boa-joins-race-for-adavi-okehi-federal-constituency-seat/
+    file_url: https://kogireports.com/wp-content/uploads/2026/05/Otaru-Bello-Jafar.jpeg
+    sha256: 21d71b04f040215746426a37a1841cb1fdf1fa7db2045a4e0cc7964f93963e95
+    credit: "none shown"
+    taken: '2026-05-12'
+    retrieved: '2026-11-15'
+    crop: [160, 0, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 34, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-ondo-akoko-north-east-akoko-north-west-adc
+    source: "Blueprint (blueprint.ng)"
+    file_page: https://blueprint.ng/amuda-declares-house-of-reps-bid-unveils-development-agenda-for-akoko-constituency/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/03/IMG-20260304-WA0002.jpg
+    sha256: 181b9862c94bc0f338e1982e2cf8afbbfdc02ce5c20a5d99bf93ed1e7911250d
+    credit: "none shown"
+    taken: '2026-03-03'
+    retrieved: '2026-11-15'
+    crop: [170, 260, 580, 580]
+    news_checked: '2026-11-15'  # INEC M, 44, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-senate-enugu-enugu-north-pdp
+    source: "CrispNG (crispng.com)"
+    file_page: https://crispng.com/bye-election-ill-deliver-inside-nestor-ezemes-drive-to-give-enugu-north-quality-representation/
+    file_url: https://crispng.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-25-at-22.36.17-1-e1779782167347.jpeg
+    sha256: 7afa5bea4495233f6a9216063ed2f976c236f8af765894d0f364c0594339b83b
+    credit: "none shown"
+    taken: '2026-05-26'
+    retrieved: '2026-11-15'
+    crop: [60, 40, 460, 460]
+    news_checked: '2026-11-15'  # INEC M, 55, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-senate-yobe-yobe-north-adc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/2027-ill-unseat-ahmad-lawan-says-adc-candidate/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/09/Talba.jpg
+    sha256: e7a16b5e5fdd606f42958f2b7d7eef359574516158d8cb975ff035b7969204ed
+    credit: "none shown"
+    retrieved: '2026-11-15'
+    crop: [190, 240, 540, 540]
+    news_checked: '2026-11-15'  # INEC M, 67, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-imo-oru-east-orsu-orlu-pdp
+    source: "Peoples Daily (peoplesdaily.ng)"
+    file_page: https://peoplesdaily.ng/what-nassembly-must-do-to-make-independence-meaningful-to-nigerians-pdp-reps-candidate-okechukwu/
+    file_url: https://peoplesdaily.ng/wp-content/uploads/2026/09/IMG-20260930-WA0075.jpg
+    sha256: 41ce371d5243e2dadecb4524e9b8306787e5e88e9f772b2d8a6aad66b8a076d7
+    credit: "none shown"
+    taken: '2026-09-30'
+    retrieved: '2026-11-15'
+    crop: [175, 20, 400, 400]
+    news_checked: '2026-11-15'  # INEC M, 43, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: feb-2027-sha-kogi-ankpa-i-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/kogi-ministerial-nominee-apc-govts-continued-marginalization-of-ankpa-height-of-injustice-abdulmumini/
+    file_url: https://kogireports.com/wp-content/uploads/2023/08/Abdulmumini-Ibrahim-Kogi-APDA-Chairman-3b.jpg
+    sha256: 3543ec4dc33866c98be162020585c045c46bfe8b45fa86fb7771ba200213e127
+    credit: "none shown"
+    taken: '2023-08-03'
+    retrieved: '2026-11-15'
+    crop: [200, 0, 320, 320]
+    news_checked: '2026-11-15'  # INEC M, 52, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-senate-kogi-kogi-west-sdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/araba-rufus-aiyenigba-hails-senator-ogbeha-at-79-celebrates-elder-statesmans-legacy-of-service/
+    file_url: https://kogireports.com/wp-content/uploads/2026/09/Rufus-Aiyenigba-Mix-Tunde-Ogbeha.jpe
+    sha256: beac86ee79010804c56617c59cac1760f121883e498a56ad8ddc348af8cdb7d1
+    credit: "none shown"
+    taken: '2026-09-02'
+    retrieved: '2026-11-15'
+    crop: [40, 10, 250, 250]
+    news_checked: '2026-11-15'  # INEC M, 58, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-kogi-bassa-dekina-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/2023-i-will-amplify-your-voice-sheik-ibrahim-jibril-concludes-consultations-with-constituents/
+    file_url: https://kogireports.com/wp-content/uploads/2022/03/Sheik-Ibrahim-Jibril.jpg
+    sha256: 0536bd1fd676219d0067c9ff7e23051007c6df00527fecaea52e40bcb230d2b4
+    credit: "none shown"
+    taken: '2022-04-13'
+    retrieved: '2026-11-15'
+    crop: [125, 0, 330, 330]
+    news_checked: '2026-11-15'  # INEC M, 49, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: feb-2027-sha-kogi-okene-ii-south-adc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/2023-former-miss-kogi-declares-for-okene-2-house-of-assembly-seat/
+    file_url: https://kogireports.com/wp-content/uploads/2022/04/Aliyu-Oyiza-Precious.jpg
+    sha256: 156ebaf92b3b8fb1a0ea29d8df852a81848b59c32f132d8c4a85829327a572ea
+    credit: "none shown"
+    taken: '2022-04-25'
+    retrieved: '2026-11-15'
+    crop: [145, 20, 380, 380]
+    news_checked: '2026-11-15'  # INEC F, 32, fits; the article names them with party and seat or race (night batch 7)
+  - candidate_id: jan-2027-house-kogi-ijumu-kabba-bunu-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/2027-victor-femi-olubiyo-unfailing-leadership-and-patriotism-at-its-best/
+    file_url: https://kogireports.com/wp-content/uploads/2026/05/Olubiyo-Femi-Victor-3.png
+    sha256: 54705b101324a05ad44a62ba5c7907fc55270100bceb7970f033b341efd9b420
+    credit: "none shown"
+    taken: '2026-05-11'
+    retrieved: '2026-11-15'
+    crop: [190, 20, 310, 310]
+    news_checked: '2026-11-15'  # INEC M, 48, fits; the article names them with party and seat or race (night batch 7)
