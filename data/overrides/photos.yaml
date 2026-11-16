@@ -10406,3 +10406,134 @@ people:
     retrieved: '2026-11-16'
     crop: [375, 55, 580, 580]
     news_checked: '2026-11-15'  # INEC M, 40, fits; the article names them with the race (party may differ where the seat matches) (night batch 8)
+  # Batch 9 (16 Nov 2026, noon Lagos): search lane, one candidate at a time, first-five places; checked against INEC
+  - candidate_id: feb-2027-governor-benue-pdp
+    source: "Idoma Voice Newspaper (idomavoice.com)"
+    file_page: https://idomavoice.com/aondoakaa-urges-benue-pdp-supporters-to-shun-violence-over-burning-of-campaign-materials/
+    file_url: https://idomavoice.com/wp-content/uploads/2026/01/Chief-Michael-Aondoakaa-1280x720-1.webp
+    sha256: b9882d767cc960a7f11fcd306df6ccaee2ea60b1cbed976c4a91bf875084826e
+    credit: "none shown"
+    taken: '2026-09-26'
+    retrieved: '2026-11-16'
+    crop: [380, 40, 500, 500]
+    news_checked: '2026-11-16'  # INEC M, 64, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: feb-2027-governor-sokoto-pdp
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/at-66-sokoto-pdp-guber-candidate-urges-renewed-commitment-to-national-unity/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/10/IMG-20261003-WA0009.jpg
+    sha256: c84f1ee6f25ffc3e2e0d331612362ca936d8dacc62cd70433df2136442eb0013
+    credit: "none shown"
+    taken: '2026-10-03'
+    retrieved: '2026-11-16'
+    crop: [430, 70, 380, 380]
+    news_checked: '2026-11-16'  # INEC M, 67, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-senate-abia-abia-central-ndc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/2027-five-heavyweights-battle-for-abia-central-senate-seat/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/10/2027-Five-Heavyweights-Battle-For-Abia-Central-Senate-Seat.png
+    sha256: 701c220bdec1e5f4901dc417b1e01422b0d7bb24ab3c81678c8016098811fbc2
+    credit: "none shown"
+    taken: '2026-11-01'
+    retrieved: '2026-11-16'
+    crop: [397, 155, 184, 184]
+    news_checked: '2026-11-16'  # INEC F, 61, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-senate-abia-abia-south-ndc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/abia-south-well-establish-digital-centre-empowerment-for-youths-enyinna/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2026/10/Enyinna.jpg
+    sha256: 7eda0efd0dc1123699f90650714d783a7e836aae929a62d139652df7d1a8b087
+    credit: "none shown"
+    taken: '2026-10-23'
+    retrieved: '2026-11-16'
+    crop: [160, 255, 440, 440]
+    news_checked: '2026-11-16'  # INEC M, 48, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-senate-kogi-kogi-west-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/2027-kogi-west-senatorial-contest-is-hon-tajudeen-yusuf-a-match-for-senator-sunday-steve-karimi/
+    file_url: https://kogireports.com/wp-content/uploads/2026/10/Teejay-Yusuf-Tajudeen-Sunday-Steve-Karimi.jpg
+    sha256: deb8da87f92e049415285bc4b659e578f48f03358eafcd33cc818b5a86c450dd
+    credit: "none shown"
+    taken: '2026-10-25'
+    retrieved: '2026-11-16'
+    crop: [362, 48, 210, 210]
+    news_checked: '2026-11-16'  # INEC M, 58, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-senate-osun-osun-central-sdp
+    source: "OsunDefender (osundefender.com)"
+    file_page: https://osundefender.com/osignage-a-den-of-corruption-omigbodun-alleges/
+    file_url: https://osundefender.com/wp-content/uploads/2026/10/IMG_1352.jpeg
+    sha256: 175be3da2410ebfea3104de786bf85e0319b4ce401f2ffd52be738fef41d54d4
+    credit: "none shown"
+    taken: '2026-10-27'
+    retrieved: '2026-11-16'
+    crop: [195, 0, 210, 210]
+    news_checked: '2026-11-16'  # INEC M, 62, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-senate-nasarawa-nassarawa-north-adc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/nasarawa-north-gov-sule-maku-battle-10-candidates/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/10/Nasarawa-North.jpg
+    sha256: 799c011a11d2d09ea1d0574e9fdb26e2d685025633aded6c1e07fa7d5b632135
+    credit: "none shown"
+    taken: '2026-10-29'
+    retrieved: '2026-11-16'
+    crop: [40, 20, 330, 330]
+    news_checked: '2026-11-16'  # INEC M, 64, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-house-benue-buruku-ndc
+    source: "Blueprint Newspapers Limited (blueprint.ng)"
+    file_page: https://blueprint.ng/2027-polls-ex-benue-rep-seeks-nass-return/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/09/Kpam-Jimin-Sokpo.png
+    sha256: 7f7cc6b7d06c9af9a9e7184d5879ccf68c0d1f97128349ea5cc77e3ebb304a12
+    credit: "none shown"
+    taken: '2026-09-26'
+    retrieved: '2026-11-16'
+    crop: [200, 10, 260, 260]
+    news_checked: '2026-11-16'  # INEC M, 47, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-house-benue-apa-agatu-ndc
+    source: "Idoma Voice Newspaper (idomavoice.com)"
+    file_page: https://idomavoice.com/apa-agatu-2027-we-need-leaders-who-understand-the-pain-of-our-people-apochi-nelson-interview/
+    file_url: https://idomavoice.com/wp-content/uploads/2026/05/ZO_00349-scaled.jpg
+    sha256: 37c9532f0909a61c394e4455560a736a1d6d0ea6864f3fd88d9aaa0a62646dc1
+    credit: "none shown"
+    taken: '2026-05-10'
+    retrieved: '2026-11-16'
+    crop: [390, 100, 500, 500]
+    news_checked: '2026-11-16'  # INEC M, 40, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-house-benue-kwande-ushongo-pdp
+    source: "City Post (citypost.ng)"
+    file_page: https://www.citypost.ng/alias-former-aide-mkeenem-eyes-house-of-reps-pledges-youth-empowerment-others/
+    file_url: https://www.citypost.ng/wp-content/uploads/2026/05/IMG-20260509-WA0032.jpg
+    sha256: ab8882b32686194ab91a31baa2dd8388f4150bd8ac3479abb20be7c22c64b6d7
+    credit: "none shown"
+    taken: '2026-05-09'
+    retrieved: '2026-11-16'
+    crop: [640, 30, 330, 330]
+    news_checked: '2026-11-16'  # INEC M, 37, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-house-borno-askira-uba-hawul-ndc
+    source: "Blueprint Newspapers Limited (blueprint.ng)"
+    file_page: https://blueprint.ng/2027-elections-amaza-emerges-ndc-candidate-for-askira-uba-hawul-reps-seat-in-borno/
+    file_url: https://blueprint.ng/wp-content/uploads/2026/09/IMG-20260925-WA0006.jpg
+    sha256: 645a460f74f37bacb599eac832adcfcd1322c1ed3706ba1ed8f5a8fdce4b1ecc
+    credit: "none shown"
+    taken: '2026-09-25'
+    retrieved: '2026-11-16'
+    crop: [295, 195, 440, 440]
+    news_checked: '2026-11-16'  # INEC M, 33, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-house-delta-aniocha-north-aniocha-south-oshimili-north-south-ndc
+    source: "Asaba Metro News (asabametro.com)"
+    file_page: https://www.asabametro.com/isioma-theodora-ndah-emerges-aniocha-oshimili-reps-candidate-for-apga/
+    file_url: https://www.asabametro.com/wp-content/uploads/2022/03/Isioma-Theodora-Ndah.jpg
+    sha256: d5e2556c2cdf08f03e6b3b45b21f013aace6adac3ca59762a124865176c31c65
+    credit: "none shown"
+    taken: '2022-07-13'
+    retrieved: '2026-11-16'
+    crop: [200, 30, 380, 380]
+    news_checked: '2026-11-16'  # INEC F, 50, fits; the page names them with the seat or race (batch 9)
+  - candidate_id: jan-2027-house-delta-ndokwa-east-ndokwa-west-ukwuani-adc
+    source: "Ndokwa Reporters (ndokwareporters.com)"
+    file_page: https://www.ndokwareporters.com/why-i-decided-to-contest-ndokwa-ukwuani-house-of-reps-seat-mabel-magbulu/
+    file_url: https://www.ndokwareporters.com/wp-content/uploads/2026/09/Mabel-Ma.png
+    sha256: 62ae7effca3c34a1f902a91416fdd5026e8fafba5391dad79303ac351cdd9369
+    credit: "none shown"
+    taken: '2026-09-15'
+    retrieved: '2026-11-16'
+    crop: [590, 10, 540, 540]
+    news_checked: '2026-11-16'  # INEC F, 48, fits; the page names them with the seat or race (batch 9)

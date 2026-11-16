@@ -91,16 +91,17 @@
    }
   },
   "feb-2027-governor-benue": {
-   "file": "logos/sheet-b171ca4f46.webp",
+   "file": "logos/sheet-62b074983d.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 43408,
-   "sha256": "b171ca4f46338a73e916f974eef59ecbfc277e5e0eb832f2f01783d39f5ada69",
+   "bytes": 46906,
+   "sha256": "62b074983d80355bb3ebf87e09d007b2c6225084e6409a1a493f74fd602d3507",
    "photos": {
     "feb-2027-governor-benue-adc": 0,
     "feb-2027-governor-benue-apc": 1,
     "feb-2027-governor-benue-ndc": 2,
-    "feb-2027-governor-benue-sdp": 3
+    "feb-2027-governor-benue-pdp": 3,
+    "feb-2027-governor-benue-sdp": 4
    }
   },
   "feb-2027-governor-borno": {
@@ -336,14 +337,15 @@
    }
   },
   "feb-2027-governor-sokoto": {
-   "file": "logos/sheet-2986697b64.webp",
+   "file": "logos/sheet-6370c45871.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 43802,
-   "sha256": "2986697b6428112564168b309c6665034f2340bbf92ab4f46e6d04ddf05f7436",
+   "bytes": 46678,
+   "sha256": "6370c45871d9a83e5d22f1b312e40c593c21266b85f4acbd3b6d6074684a30e7",
    "photos": {
     "feb-2027-governor-sokoto-adc": 0,
-    "feb-2027-governor-sokoto-apc": 1
+    "feb-2027-governor-sokoto-apc": 1,
+    "feb-2027-governor-sokoto-pdp": 2
    }
   },
   "feb-2027-governor-taraba": {
