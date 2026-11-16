@@ -7,6 +7,8 @@ import { JsonLd } from '@/components/JsonLd'
 import { NigeriaMark } from '@/components/NigeriaMark'
 import { Steps } from '@/components/Steps'
 import { states } from '@/lib/data'
+import { updatePath, updates } from '@/lib/updates'
+import { formatDate } from '@/components/Candidate'
 import { homeGraph, pageMeta } from '@/lib/seo'
 import { CODE_EXAMPLE, HOME_TITLE, SITE_DESCRIPTION } from '@/lib/site'
 
@@ -95,6 +97,19 @@ export default function Home() {
         <noscript>
           <p>Finding by code needs JavaScript. Pick your state above and go through your LGA and ward instead.</p>
         </noscript>
+      </section>
+
+      <section aria-labelledby="updates" className="panel updates-card">
+        <h2 id="updates">Updates</h2>
+        <ul className="updates-latest">
+          {updates().slice(0, 2).map(u => (
+            <li key={u.slug}>
+              <time dateTime={u.date}>{formatDate(u.date)}</time>
+              <a href={updatePath(u)}>{u.headline}</a>
+            </li>
+          ))}
+        </ul>
+        <p className="action-buttons"><a className="btn" href="/updates/">All updates</a></p>
       </section>
 
       <p className="quiet">We never ask for your name or any personal details, and we don’t look you up anywhere.</p>

@@ -542,3 +542,13 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
 }
 :is(.link-list a, .pu-list a, .result a:not(.btn), button.btn-share, button.btn-quiet, .race-tabs a):is(:active, .tapped) :is(*, .code) { color: #fff; }
 :is(.race-tabs a):is(:active, .tapped) .tab-count { background: #fff; color: var(--green-deep); border-color: #fff; }
+
+/* Updates (owner, 15 Nov 2026): a dated list, one page per entry, and a home-page card with the latest two. */
+.updates { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 0.5rem; }
+.updates > li { border-top: 1px solid var(--line-soft); padding-top: 0.75rem; }
+.updates h2 { font-size: 1.15rem; margin: 0.15rem 0 0.35rem; }
+.update-date { margin: 0; color: var(--muted); font-size: 0.92rem; font-weight: 600; }
+.updates-latest { list-style: none; padding: 0; margin: 0.25rem 0 0.75rem; display: grid; gap: 0.6rem; }
+.updates-latest li { display: grid; gap: 0.1rem; }
+.updates-latest time { color: var(--muted); font-size: 0.9rem; font-weight: 600; }
+.updates-latest a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }

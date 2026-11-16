@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "candidate-photos-1199",
+    "date": "2026-11-16",
+    "headline": "1,199 candidates now have a photo on the site",
+    "body": [
+      "On 16 November 2026, 1,199 of the 15,137 named candidates on this site have a photo, in 908 of the 1,489 races.",
+      "Each photo comes from a source that names the candidate, and each is checked against the gender and age INEC printed for them.",
+      "Every candidate without a photo shows the same plain placeholder.",
+      "Candidates and their campaigns can send a photo from the About page; nothing sent that way appears until it has been checked."
+    ],
+    "source": { "label": "This site’s photo credits, listed by state", "href": "/about/photo-credits/" },
+    "links": [
+      { "label": "How photos are chosen, and how to send one", "href": "/about/#photos" },
+      { "label": "Photo credits", "href": "/about/photo-credits/" }
+    ]
+  },
+  {
+    "slug": "site-live-2027",
+    "date": "2026-11-16",
+    "headline": "Who’s on my ballot? is live for the 2027 elections",
+    "body": [
+      "This site shows every race on the ballot at each polling unit in Nigeria’s 2027 general elections, with every candidate side by side.",
+      "The candidates are those on INEC’s final lists, updated on 31 October 2026: 15,137 named candidates for President, Governor, the Senate, the House of Representatives and the State Houses of Assembly.",
+      "Voting is on 16 January 2027 for President, the Senate and the House of Representatives, and on 6 February 2027 for Governor in 28 states and for the State Houses of Assembly.",
+      "You can find your ballot by state, LGA, ward and polling unit, by the code on your voter’s card, or by searching for a landmark near where you vote."
+    ],
+    "source": { "inec": "president", "label": "Candidates (INEC final lists, updated 31 October 2026)" },
+    "links": [
+      { "label": "Find your ballot", "href": "/" },
+      { "label": "Presidential candidates", "href": "/race/jan-2027-president/" },
+      { "label": "Election day: dates and times", "href": "/election-day/" }
+    ]
+  }
+]

@@ -3,7 +3,7 @@
  * Bump a date only for such a change, never for a rebuild.
  */
 export const CONTENT_DATES = {
-  'home': '2026-11-11',
+  'home': '2026-11-16',
   'about': '2026-11-15',
   'results': '2026-11-13',
   'about/find-your-polling-unit': '2026-11-10',

@@ -5,6 +5,7 @@ import { allCandidates, allRaces, ballots, febBallots, febRaces, geographyConten
 import { slug } from '@/lib/core'
 import { absolute } from '@/lib/seo'
 import { creditGroups, groupDate } from '@/components/PhotoCredits'
+import { updatePath, updates } from '@/lib/updates'
 import { candidatePath, racePath } from '@/lib/site'
 
 // Every indexable page with its content date (D-032). Share cards, data files and the 404 page are left out.
@@ -21,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/about/state-assembly-wards/', CONTENT_DATES['about/state-assembly-wards']),
     entry('/about/photo-credits/', latest(creditGroups().map(groupDate))),
     ...creditGroups().map(g => entry(`/about/photo-credits/${g.key}/`, groupDate(g))),
+    entry('/updates/', updates()[0]?.date ?? CONTENT_DATES.home),
+    ...updates().map(u => entry(updatePath(u), u.date)),
     entry('/election-day/', CONTENT_DATES['election-day']),
     entry('/corrections/', CONTENT_DATES.corrections),
     entry('/results/', CONTENT_DATES.results),

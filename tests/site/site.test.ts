@@ -285,6 +285,8 @@ describe('every page', () => {
       // only links (a href) and the canonical address may point off-site; nothing the page loads may
       for (const m of s.matchAll(/<(?:link|img|script|iframe|source)\b[^>]*\b(?:href|src)="([^"]+)"/g)) {
         if (m[0].startsWith('<link rel="canonical"')) continue
+        // the Updates feed's alternate link names our own address in full; a browser does not load it
+        if (m[0].startsWith('<link rel="alternate" type="application/rss+xml"') && m[1] === 'https://whosonmyballot.ng/updates/feed.xml') continue
         expect(m[1].startsWith('/'), `${f}: ${m[1]}`).toBe(true)
       }
       expect(s).not.toMatch(/\sstyle="/)
@@ -541,5 +543,44 @@ describe('"Share on" WhatsApp, X, Facebook and Instagram (owner, 14 Nov 2026)', 
       const b64 = fs.readFileSync(path.join('src/assets/brand', dir, name)).toString('base64')
       expect(css, name).toContain(`data:image/${type};base64,${b64}`)
     }
+  })
+})
+
+describe('updates (owner, 15 Nov 2026)', () => {
+  const entries = JSON.parse(fs.readFileSync(path.resolve('data/overrides/updates.json'), 'utf8')) as { slug: string, date: string, headline: string, body: string[] }[]
+  it('a list page, one indexable page per entry with its date, source and links, and a feed', () => {
+    expect(entries.length).toBeGreaterThanOrEqual(2)
+    const list = html('updates')
+    expect(list).toContain('<h1>Updates</h1>')
+    expect(list).toMatch(/<link rel="alternate" type="application\/rss\+xml"[^>]*href="(https:\/\/whosonmyballot\.ng)?\/updates\/feed\.xml"/)
+    for (const u of entries) {
+      expect(list, u.slug).toContain(`href="/updates/${u.slug}/"`)
+      const page = html(`updates/${u.slug}`)
+      expect(page, u.slug).toContain(`<link rel="canonical" href="https://whosonmyballot.ng/updates/${u.slug}/"`)
+      expect(page, u.slug).toContain(`<time dateTime="${u.date}">`)
+      expect(page, u.slug).toMatch(/<p class="cite"><a href="[^"]+">Source: /)
+      expect(page, u.slug).toContain('"@type":"NewsArticle"')
+      expect(u.body.length >= 2 && u.body.length <= 5, u.slug).toBe(true)
+      expect([u.headline, ...u.body].join(' '), u.slug).not.toMatch(/[–—]/)
+    }
+    const feed = fs.readFileSync(path.join(OUT, 'updates', 'feed.xml'), 'utf8')
+    expect(feed.startsWith('<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"')).toBe(true)
+    expect(feed.match(/<item>/g)?.length).toBe(entries.length)
+    for (const u of entries) expect(feed, u.slug).toContain(`<link>https://whosonmyballot.ng/updates/${u.slug}/</link>`)
+  })
+  it('the home page has one card with the latest two entries and a button to the list; no header or footer link', () => {
+    const home = html('')
+    const card = /<section aria-labelledby="updates" class="panel updates-card">([\s\S]*?)<\/section>/.exec(home)![1]
+    expect(card.match(/href="\/updates\/[a-z0-9-]+\/"/g)?.length).toBe(2)
+    expect(card).toContain('<a class="btn" href="/updates/">All updates</a>')
+    for (const page of [home, html('about'), html('updates')]) {
+      const header = /<header[\s\S]*?<\/header>/.exec(page)![0]
+      const footer = /<footer[\s\S]*?<\/footer>/.exec(page)![0]
+      expect(header).not.toContain('/updates/')
+      expect(footer).not.toContain('/updates/')
+    }
+    const sitemap = fs.readFileSync(path.join(OUT, 'sitemap.xml'), 'utf8')
+    expect(sitemap).toContain('<loc>https://whosonmyballot.ng/updates/</loc>')
+    for (const u of entries) expect(sitemap, u.slug).toContain(`<loc>https://whosonmyballot.ng/updates/${u.slug}/</loc>`)
   })
 })
