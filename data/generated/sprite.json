@@ -232,14 +232,15 @@
    }
   },
   "feb-2027-governor-kwara": {
-   "file": "logos/sheet-e657756c55.webp",
+   "file": "logos/sheet-06e6d6fe75.webp",
    "width": 2112,
    "height": 224,
-   "bytes": 40332,
-   "sha256": "e657756c55d495bdcc2f8f84c105ec443ce46ae0339e9a1c04579c96d040b825",
+   "bytes": 44588,
+   "sha256": "06e6d6fe75d040ac35ceb56d1b084ef82057d9b2a1fc04ae025bcb6096f1a824",
    "photos": {
-    "feb-2027-governor-kwara-apc": 0,
-    "feb-2027-governor-kwara-pdp": 1
+    "feb-2027-governor-kwara-adc": 0,
+    "feb-2027-governor-kwara-apc": 1,
+    "feb-2027-governor-kwara-pdp": 2
    }
   },
   "feb-2027-governor-lagos": {

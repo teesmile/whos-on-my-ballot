@@ -9736,3 +9736,272 @@ people:
     retrieved: '2026-11-15'
     crop: [478, 40, 420, 420]
     owner_approved: '2026-11-15'  # INEC M, 63, fits; Commons under the owner's standing rule (D-093): the Wikipedia article carrying the photo names his seat (night batch 5)
+  # Night batch 6 (15 Nov 2026): count lane (Shine Your Eye with looser names, sitting members moving office, news sitemaps); checked against INEC
+  - candidate_id: feb-2027-sha-anambra-ogbaru-ii-apga
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/udeze-somtochukwu-nkemakolam
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/5a9ecb46-ac80-4dd8-a20c-e2751ab82ccc/original.jpeg
+    sha256: e572a00df2f18e00e37e2bf92f7b0016033404fb30a69a32f95dcd095fad153f
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 7, 279, 279]
+    news_checked: '2026-11-15'  # INEC M, 53, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-ebonyi-afikpo-north-east-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/oluchukwu-ukie-ezeali
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/0b4db8dc-34cd-4d23-b5ce-b08a3f0f8e74/original.jpeg
+    sha256: 74d68b1e15c8c0df8459112c2aa4fc2a37873985171c08fe434a878ad5a4111c
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 19, 450, 450]
+    news_checked: '2026-11-15'  # INEC M, 47, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-ebonyi-ezza-north-east-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/ken-kelvin-okeh
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/80eaf914-0174-48d0-88f6-75f961655f00/original.jpeg
+    sha256: 3baef595a6ef393a823e77dc6c8f41aded8cd77d21b6fc7621abe7b2c58ef59c
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 13, 302, 302]
+    news_checked: '2026-11-15'  # INEC M, 57, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-enugu-oji-river-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/osita-eze-oji
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/b2b3ff5a-54fe-4dd9-8fd9-159c9c2edcf3/original.jpeg
+    sha256: e8cc04788416e6c7d16c343cc1e1f1a4d498261542d0f9b94bb35c3ed3a9f20d
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 14, 388, 388]
+    news_checked: '2026-11-15'  # INEC M, 56, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-cross-river-akamkpa-i-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/okon-nyong-uwana
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/383ceedd-b596-439e-8e00-88b27e172ad6/original.jpeg
+    sha256: ca0442c7dbcd2d74a451dca31dce9f5093fb97aaaf725cb6359d545dc2e79c70
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 11, 264, 264]
+    news_checked: '2026-11-15'  # INEC M, 56, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-benue-gboko-iii-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/becky-orpin-torwase
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/d59d7ce7-760e-47fb-af8a-6f10a7266607/original.jpeg
+    sha256: efe1f6ce87136af18043031b54f6509ab197e432d9416f8e7565e6ff6ae70972
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 7, 376, 376]
+    news_checked: '2026-11-15'  # INEC F, 61, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-benue-gwer-west-pdp
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/gyila-solomonterlumun
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/fa83bd3d-299e-4d14-beea-85f211db6231/original.jpeg
+    sha256: b4a312c7586ddec26cadbeac7e0964b013713f2fe1595cc9ccec3703817e0f12
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 13, 416, 416]
+    news_checked: '2026-11-15'  # INEC M, 40, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-benue-oju-ii-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/cril-ikong-ijebe
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/ce01a1be-1868-4577-8e57-49cf804b0057/original.jpeg
+    sha256: 9edea44a23a4e9427990a240b869ec366a69869826231cb4c2c2ff9342148736
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 9, 304, 304]
+    news_checked: '2026-11-15'  # INEC M, 36, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-bayelsa-nembe-i-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/otiegbanyo-braah
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/65abad63-c3b1-4cc9-a6f7-917173cfb574/original.jpeg
+    sha256: 06734d13df09d1b4fde5322d63abb6e833481ffbf5cb54b508d49267d919aedf
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 6, 253, 253]
+    news_checked: '2026-11-15'  # INEC M, 55, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-delta-aniocha-south-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/anwuzia-isaac-ozor
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/ab0403b1-45ce-4e00-b372-48d73b35014c/original.jpeg
+    sha256: ed5e447324693e9c9dff2ebda0125795a39d66dbcb303985fd00cf5d2a96dcde
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 13, 307, 307]
+    news_checked: '2026-11-15'  # INEC M, 64, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-edo-etsako-west-ii-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/akokhia-abdulganiyu
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/c70da4db-43b2-4065-983f-384f241b97d3/original.jpeg
+    sha256: 84322da50707e6e73ca87e5e11c8b404df6cbb554bbc5ef38fc7e63948c8f256
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 9, 285, 285]
+    news_checked: '2026-11-15'  # INEC M, 37, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-kebbi-sakaba-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/salihu-maikasuwa-dangoje
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/99b57edb-6c2f-4a54-806c-007b5300fc73/original.jpeg
+    sha256: 6f27082e8529503b01d250a9768902abd617601851b00b6fe5d806144cd2c29a
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [150, 95, 340, 340]
+    news_checked: '2026-11-15'  # INEC M, 47, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-nasarawa-karu-gitata-pdp
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/john-dizaho-ali
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/08088666-ae64-4ee5-928d-e686a17ddce3/original.jpeg
+    sha256: a6071c3b99c5b8400668b6c4dac2a63d8d7427ec0ac47ee25ed4be6b96ee4cb1
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 8, 246, 246]
+    news_checked: '2026-11-15'  # INEC M, 52, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-sokoto-gudu-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/yahyah-amadu
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/a20b3113-f8f9-4084-adbb-4ce74bc40ce3/original.jpeg
+    sha256: 6d54015d5b99386cc8a5ce02979e6d75eae4a479ebfdbcf53aca24914eacd496
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 7, 310, 310]
+    news_checked: '2026-11-15'  # INEC M, 45, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-sokoto-tangaza-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/aliyu-lumu-usman
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/e0ed59c3-931d-4011-804b-18551b2c6164/original.jpeg
+    sha256: a695b167b4f819e208669c268aba1834ff30bfaa0ff9ad69b000d3f7be082f7c
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 4, 222, 222]
+    news_checked: '2026-11-15'  # INEC M, 67, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-zamfara-maru-south-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/ika-ilu-kabir-dangulbi
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/aedc5e31-30c8-4fe4-a785-af215f39df23/original.jpeg
+    sha256: 9d8629fb7220e9d6ff983d732ab57f559e4b017fffb39a28d5d865ad28963bb3
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 10, 264, 264]
+    news_checked: '2026-11-15'  # INEC M, 48, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-kaduna-kakangi-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/musa-yahaya
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/04885b8e-ea13-427b-a7e8-091857ecf3d0/original.jpeg
+    sha256: dd068793a812ed7eaf5186cf94f4764f1805ec909ff70c6a97df17d04dcdde78
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 17, 507, 507]
+    news_checked: '2026-11-15'  # INEC M, 58, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-kaduna-tudun-wada-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/nasiru-usman
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/93d9bccc-6ebb-4652-a3d2-27ec097d3733/original.jpeg
+    sha256: 3c78fc5c8439faed02a1b194550d6f7d7c5af96b30cd2992268ee2ba19b35b04
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 4, 319, 319]
+    news_checked: '2026-11-15'  # INEC M, 47, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-rivers-tai-pdp
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/ngar-bernard-baridamue
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/beb558bf-b812-47b1-bc54-55ab4a99d6d0/original.jpeg
+    sha256: b76956e11e2cc5a4d20bd29a84da8ce6f0aed6ccc496554debe09bddb1b63acf
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 9, 249, 249]
+    news_checked: '2026-11-15'  # INEC M, 50, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: jan-2027-house-rivers-okrika-ogu-bolo-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/somiari-stewart-linda
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/a1476451-740f-46b2-9aa3-5180c1600a1b/original.jpeg
+    sha256: 43c712db765b59ef3a6ec2f4c2cf0d9d4987b5d5514539c18aff3cfbb5556ada
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 21, 311, 311]
+    news_checked: '2026-11-15'  # INEC F, 61, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: jan-2027-senate-katsina-katsina-north-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/yahaya-nasir
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/f071ab66-e317-4f97-8d80-1482c28388ab/original.jpeg
+    sha256: 3ac7697368de4102f6f2d9d6110dfa70e53f7c3a1bcf691e838e5394a25f3cad
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 6, 209, 209]
+    news_checked: '2026-11-15'  # INEC M, 50, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-sha-delta-okpe-apc
+    source: "Shine Your Eye (shineyoureye.org)"
+    file_page: https://www.shineyoureye.org/person/augoye-james
+    file_url: https://theyworkforyou.github.io/shineyoureye-images/Honorables/d572a5c9-0dd1-4d51-afa7-c8c1ec91b629/original.jpeg
+    sha256: abe42792a2ad8dd8f7531fca1d6e2fe955504d9bb031bdbbc4a579b4a93dee3b
+    credit: "none shown"
+    retrieved: '2026-11-16'
+    crop: [0, 8, 189, 189]
+    news_checked: '2026-11-15'  # INEC M, 61, fits; Shine Your Eye civic data names them with the seat, or the state and office (night batch 6)
+  - candidate_id: feb-2027-governor-kwara-adc
+    source: "Arise News (arise.tv)"
+    file_page: https://www.arise.tv/adc-picks-zakari-mohammed-as-consensus-governorship-candidate-in-kwara/
+    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/05/ADC-Picks-Zakari-Mohammed-As-Consensus-Governorship-Candidate-In-Kwara.jpg
+    sha256: 36d3cdcb07bd117995c0c794a122781c0dd8f3eae597da1da72debd9d4e5235e
+    credit: "none shown"
+    taken: '2026-05-25'
+    retrieved: '2026-11-16'
+    crop: [380, 30, 300, 300]
+    news_checked: '2026-11-15'  # INEC M, 56, fits; the article names them with party and seat or race (night batch 6)
+  - candidate_id: feb-2027-governor-abia-pdp
+    source: "Arise News (arise.tv)"
+    file_page: https://www.arise.tv/kelechi-anosike-abia-is-not-poor-i-will-pay-%e2%82%a690000-minimum-wage/
+    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/06/Kelechi-Anosike.jpg
+    sha256: e81b2bc626e11a4ee7557df1ff3e0bbe9ac7332c6483a784d27542c807283846
+    credit: "none shown"
+    taken: '2026-06-08'
+    retrieved: '2026-11-16'
+    crop: [260, 0, 270, 270]
+    news_checked: '2026-11-15'  # INEC M, 52, fits; the article names them with party and seat or race (night batch 6)
+  - candidate_id: feb-2027-governor-oyo-aac
+    source: "Arise News (arise.tv)"
+    file_page: https://www.arise.tv/saheed-oladele-oyo-governor-has-performed-far-below-expectations-in-education/
+    file_url: https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/10/Saheed-Oladele.jpg
+    sha256: d92babad393aa5ebcd41c52a5c95ed18dfbd13827d82ed74165fa31a1b57ab3b
+    credit: "none shown"
+    taken: '2026-10-25'
+    retrieved: '2026-11-16'
+    crop: [740, 60, 620, 620]
+    news_checked: '2026-11-15'  # INEC M, 44, fits; the article names them with party and seat or race (night batch 6)
+  - candidate_id: feb-2027-sha-abia-isiala-ngwa-north-pdp
+    source: "Peoples Daily (peoplesdaily.ng)"
+    file_page: https://peoplesdaily.ng/pdp-candidate-princewill-onwumere-unveils-10-point-agenda-to-transform-isiala-ngwa-north-constituency/
+    file_url: https://peoplesdaily.ng/wp-content/uploads/2026/09/IMG-20260911-WA0077.jpg
+    sha256: bc90b6332a7d73889886353046e4ba3fc36026cd4de4e72bb14d40498778bc71
+    credit: "none shown"
+    taken: '2026-09-11'
+    retrieved: '2026-11-16'
+    crop: [170, 90, 260, 260]
+    news_checked: '2026-11-15'  # INEC M, 50, fits; the article names them with party and seat or race (night batch 6)
+  - candidate_id: feb-2027-governor-bauchi-apm
+    source: "The ICIR (icirnigeria.org)"
+    file_page: https://www.icirnigeria.org/bauchi-guber-candidate-yakubu-adamu-holds-a-phd-from-a-university-that-says-it-awards-none/
+    file_url: https://www.icirnigeria.org/wp-content/uploads/2026/06/Picture-1.jpg
+    sha256: 10acfeaed7ed48a95b697f12b02d4c37956c59722435bb97fcc1ad3416668daf
+    credit: "none shown"
+    taken: '2026-06-13'
+    retrieved: '2026-11-16'
+    crop: [30, 65, 290, 290]
+    news_checked: '2026-11-15'  # INEC M, 46, fits; the article names them with party and seat or race (night batch 6)
+  - candidate_id: jan-2027-senate-oyo-oyo-north-apm
+    source: "TVC News (tvcnews.tv)"
+    file_page: https://www.tvcnews.tv/shina-peller-declares-bid-for-oyo-north-senate-seat-in-2027/
+    file_url: https://tvcnews.tv/wp-content/uploads/2026/08/IMG_4984.jpeg
+    sha256: 7c265b1e9dfd1f76c508da59528ec4c0b9b88899bf33524fb5422abd9f5b5015
+    credit: "none shown"
+    taken: '2026-08-20'
+    retrieved: '2026-11-16'
+    crop: [95, 15, 270, 270]
+    news_checked: '2026-11-15'  # INEC M, 50, fits; the article names them with party and seat or race (night batch 6)
+  - candidate_id: feb-2027-sha-abia-obingwa-east-zlp
+    source: "Daybreak (daybreak.ng)"
+    file_page: https://daybreak.ng/jostling-for-obingwa-east-constituency-intensifies-as-george-ubani-joins-race/
+    file_url: https://daybreak.ng/wp-content/uploads/2026/10/IMG-20261012-WA00711.jpg
+    sha256: f78bd86a2eb20e51db5758c6114cdbc09a9425529df2a2dcee321451cdc7a065
+    credit: "none shown"
+    taken: '2026-10-13'
+    retrieved: '2026-11-16'
+    crop: [285, 120, 340, 340]
+    news_checked: '2026-11-15'  # INEC M, 44, fits; the article names them with party and seat or race (night batch 6)
