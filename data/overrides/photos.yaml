@@ -10736,3 +10736,233 @@ people:
     retrieved: '2026-11-16'
     crop: [118, 10, 420, 420]
     news_checked: '2026-11-16'  # INEC M, 38, fits; named with the seat, or the state and office (batch 10)
+  - candidate_id: feb-2027-sha-ekiti-ikole-i-adc
+    source: "New Telegraph (newtelegraphng.com)"
+    file_page: https://newtelegraphng.com/ex-ekiti-speaker-aribisogan-proffers-solution-to-youth-unemployment-in-nigeria/
+    file_url: https://newtelegraphng.com/wp-content/uploads/2021/12/Aribisogan.png
+    sha256: f932bfb9e0ca6663a3dfb11647f7df7bef83f1949e1da145b3428fc87968a2d2
+    credit: "none shown"
+    taken: '2023-07-17'
+    retrieved: '2026-11-16'
+    crop: [150, 5, 330, 330]
+    news_checked: '2026-11-17'  # INEC M, 61, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-enugu-igbo-eze-south-ndc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/enugu-lawmaker-urges-voters-to-replicate-osun-feat-in-2027/
+    file_url: https://thewhistler.ng/wp-content/uploads/2024/04/IMG_4050.jpeg
+    sha256: 3b179317d1a0dc3417397221f57c409dc4f3be73b7c6a9a6fab914aab616dbe7
+    credit: "none shown"
+    taken: '2026-08-17'
+    retrieved: '2026-11-16'
+    crop: [230, 0, 540, 540]
+    news_checked: '2026-11-17'  # INEC M, 59, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-kano-tudun-wada-pdp
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/kano-assembly-lawmaker-quits-apc-for-pdp/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/08/771909361_2487899168372894_6034477499920344468_n.jpg
+    sha256: 17134e442578866a400d668ff51bba4cfb445a543d9eb9bd08f386aa77063df4
+    credit: "none shown"
+    taken: '2026-08-11'
+    retrieved: '2026-11-16'
+    crop: [245, 95, 230, 230]
+    news_checked: '2026-11-17'  # INEC M, 62, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-kogi-kabba-bunu-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/court-of-appeal-judgment-pdp-leaders-must-close-ranks-now-to-save-the-party-and-protect-its-future/
+    file_url: https://kogireports.com/wp-content/uploads/2026/03/Eseyin-Kayode-Emmanuel-3.jpeg
+    sha256: aeba5c155eb9d238748030c6076321cbc015d71a0451b9e060c77510848dee34
+    credit: "none shown"
+    taken: '2026-03-12'
+    retrieved: '2026-11-16'
+    crop: [130, 0, 340, 340]
+    news_checked: '2026-11-17'  # INEC M, 42, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-abia-bende-south-apc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/abia-state-lawmaker-dumps-pdp/
+    file_url: https://thewhistler.ng/wp-content/uploads/2025/06/Emmanuel-Chinedu-Ndubuisi.jpg
+    sha256: 0b84029360376cf790aa297dc09c3e1ae8017f366de3d279dca64d266a76a446
+    credit: "none shown"
+    taken: '2025-06-24'
+    retrieved: '2026-11-17'
+    crop: [270, 40, 450, 450]
+    news_checked: '2026-11-17'  # INEC M, 57, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-adamawa-hong-hong-ii-apc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/adamawa-speaker-15-other-lawmakers-quit-pdp/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/02/Rt.-Hon.-Bathiya-Wesley.jpeg
+    sha256: aa29e23745e24bd3f6cff44b63482d28dc60148ddf4d13e3f0d8f00563c685ce
+    credit: "none shown"
+    taken: '2026-02-26'
+    retrieved: '2026-11-17'
+    crop: [330, 20, 460, 460]
+    news_checked: '2026-11-17'  # INEC M, 43, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-akwa-ibom-ibiono-ibom-apc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/akwa-ibom-lawmaker-raises-alarm-over-rising-child-malnutrition/
+    file_url: https://thewhistler.ng/wp-content/uploads/2025/01/Member-of-the-Akwa-Ibom-State-House-of-Assembly-Moses-Essien.jpg
+    sha256: d2c70076c7f3e52e7c103cf948ae3cf13876255aacb220c0ad3a6b07ebba1835
+    credit: "none shown"
+    taken: '2025-01-21'
+    retrieved: '2026-11-17'
+    crop: [315, 0, 320, 320]
+    news_checked: '2026-11-17'  # INEC M, 50, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-benue-ado-apc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/breaking-court-dismisses-time-wasting-appeal-against-benue-deputy-speakers-election/
+    file_url: https://thewhistler.ng/wp-content/uploads/2023/11/Mrs.-Danladi-Lami-e1695314493300.jpg
+    sha256: 39a82e7d6c2972c435e49720bce20e2023b6d13329a9109701626ca7fb07706d
+    credit: "none shown"
+    taken: '2023-11-14'
+    retrieved: '2026-11-17'
+    crop: [272, 20, 480, 480]
+    news_checked: '2026-11-17'  # INEC F, 41, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-delta-warri-south-west-ii-apc
+    source: "Ndokwa Reporters (ndokwareporters.com)"
+    file_page: https://www.ndokwareporters.com/2027-apc-presents-party-flag-to-andrew-igban-as-campaign-begins-in-warri-south-west-ii/
+    file_url: https://www.ndokwareporters.com/wp-content/uploads/2026/11/Igba-Campaign-Flag-off.jpg
+    sha256: f0b397e00085ef729fc11f7a3b493284326f59f5b8e574af5123aa42ce53d42a
+    credit: "none shown"
+    taken: '2026-11-11'
+    retrieved: '2026-11-17'
+    crop: [915, 160, 270, 270]
+    news_checked: '2026-11-17'  # INEC M, 49, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-kogi-ofu-apc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/isah-umaru-emeje-a-symbol-of-hope/
+    file_url: https://kogireports.com/wp-content/uploads/2026/05/Emeje-Isah-Umaru-Ofu-2.jpeg
+    sha256: fdda11d6357059b7cf66b903152819137f6bf5ded63c9b3caf084ca1c2b7e601
+    credit: "none shown"
+    taken: '2026-05-24'
+    retrieved: '2026-11-17'
+    crop: [140, 0, 330, 330]
+    news_checked: '2026-11-17'  # INEC M, 39, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-kogi-okene-town-apc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/okene-youths-knock-hon-sas-kogi-house-assembly-majority-leader/
+    file_url: https://kogireports.com/wp-content/uploads/2026/04/SAS-Suleiman-AbdulRazak-Okene-I.jpeg
+    sha256: f552a812730a41d9036d5aa2e33dede29ae21033dee31e08f2e5c602b97e5a5c
+    credit: "none shown"
+    taken: '2026-04-23'
+    retrieved: '2026-11-17'
+    crop: [120, 10, 340, 340]
+    news_checked: '2026-11-17'  # INEC M, 38, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-lagos-surulere-ii-apc
+    source: "Newstrends (newstrends.ng)"
+    file_page: https://newstrends.ng/youths-lokan-movement-grows-as-kwam1s-daughter-joins-lagos-assembly-race/
+    file_url: https://newstrends.ng/wp-content/uploads/2026/05/Damilola-Ayomide-Ayinde-Marshal-and-Fuji-music-star-King-Wasiu-Ayinde-Marshal-KWAM1.jpg
+    sha256: 9dd40b0df35b7067dc259266f742a7ba6d345a45951e44e23e148c777b6c41f5
+    credit: "none shown"
+    taken: '2026-05-12'
+    retrieved: '2026-11-17'
+    crop: [0, 30, 400, 400]
+    news_checked: '2026-11-17'  # INEC F, 35, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-kogi-yagba-west-apc
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/group-backs-kogi-assembly-members-second-term-bid-for-yagba-west-i-constituency/
+    file_url: https://kogireports.com/wp-content/uploads/2026/09/Kuli-Ibikunle-Simon-Idowu-1.jpg
+    sha256: b7defdc90f270ae5fd694e1d2759ff8e7be6a333ed17c1599a9579b8eb2480aa
+    credit: "none shown"
+    taken: '2026-09-30'
+    retrieved: '2026-11-17'
+    crop: [215, 10, 300, 300]
+    news_checked: '2026-11-17'  # INEC M, 60, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-oyo-saki-east-and-atisbo-apc
+    source: "Inside Oyo (insideoyo.com)"
+    file_page: https://insideoyo.com/saki-east-atisbo-apc-oyha-candidate-celebrated-for-human-capital-education-agric-impact-on-birthday/
+    file_url: https://insideoyo.com/wp-content/uploads/2026/09/FB_IMG_1788338065184.jpg
+    sha256: 832ddba4fb5e75d3e322fcea0272c7cf1fcae55b1af82deafd14c0c67a56f0db
+    credit: "none shown"
+    taken: '2026-09-02'
+    retrieved: '2026-11-17'
+    crop: [115, 130, 560, 560]
+    news_checked: '2026-11-17'  # INEC M, 63, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-plateau-langtang-south-apc
+    source: "Daybreak (daybreak.ng)"
+    file_page: https://daybreak.ng/my-purported-suspension-by-langtang-south-apc-laughable-says-plateau-lawmaker-bendal-domfa/
+    file_url: https://daybreak.ng/wp-content/uploads/2024/10/IMG-20241026-WA0001.jpg
+    sha256: a71fe3171f2401e7442e80cb49efd97d04434cae1ba73d12a210d1286be7bdbc
+    credit: "Fred Photography (signature on the image)"
+    taken: '2024-10-26'
+    retrieved: '2026-11-17'
+    crop: [128, 95, 450, 450]
+    news_checked: '2026-11-17'  # INEC M, 62, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-yobe-gulani-apc
+    source: "Daily Trust (dailytrust.com)"
+    file_page: https://dailytrust.com/2027-coalition-urges-zanna-dujima-to-contest-gulani-assembly-seat/
+    file_url: https://dailytrust.com/wp-content/uploads/2026/04/Gulani.jpg
+    sha256: 2ea27de56a640d05590f1a86fb3ba858e436924faae5ce9fefcc8042bd0bf356
+    credit: "none shown"
+    taken: '2026-04-05'
+    retrieved: '2026-11-17'
+    crop: [225, 90, 340, 340]
+    news_checked: '2026-11-17'  # INEC M, 42, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-abia-isuikwuato-lp
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/another-pdp-lawmaker-joins-labour-party-in-abia/
+    file_url: https://thewhistler.ng/wp-content/uploads/2025/03/Hon.-Lucky-Udoka-Nweke-Johnson_20250325_122547_0000.jpg
+    sha256: 1b596791ebb3c249e921c3d0d39b0f97e64eaa6913f198c2169812a5175d8517
+    credit: "none shown"
+    taken: '2025-03-25'
+    retrieved: '2026-11-17'
+    crop: [262, 0, 400, 400]
+    news_checked: '2026-11-17'  # INEC M, 50, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-abia-obingwa-west-lp
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/otti-appoints-lp-state-assembly-candidate-whose-billboard-was-destroyed-by-abssaa-to-head-same-agency/
+    file_url: https://thewhistler.ng/wp-content/uploads/2024/03/Former-Labour-party-House-of-Assembly-candidate-for-Obingwa-West-Mrs.-Victoria-Onwubiko.jpg
+    sha256: 507f36cbb5134dec9952db0d36da0c700ba0e3f9192ae56d88c90a80d6784bce
+    credit: "none shown"
+    taken: '2024-03-20'
+    retrieved: '2026-11-17'
+    crop: [585, 0, 380, 380]
+    news_checked: '2026-11-17'  # INEC F, 58, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-anambra-onitsha-north-i-apga
+    source: "Anambra People (anambrapeople.com.ng)"
+    file_page: https://anambrapeople.com.ng/2026/04/05/anambra-lawmaker-rolls-out-empowerment-programme-set-to-train-50-youths/
+    file_url: https://anambrapeople.com.ng/wp-content/uploads/2026/04/19881095_fbimg1775291489930_jpegd8e1067b399c027dc12e2460fc40cbb4.jpeg
+    sha256: 188a678684bc1ae551e48d6096bac2023c8aa58085e3016e9a2973bb13af2743
+    credit: "none shown"
+    taken: '2026-04-05'
+    retrieved: '2026-11-17'
+    crop: [220, 120, 500, 500]
+    news_checked: '2026-11-17'  # INEC F, 41, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: feb-2027-sha-abia-osisioma-north-lp
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/abia-lawmaker-distributes-gifts-to-constituents-promises-better-days/
+    file_url: https://thewhistler.ng/wp-content/uploads/2024/05/Hon.-Nwogu-Iheanacho.jpg
+    sha256: ddd22e9683fb3ed9e7e47acda0b14ab6304cbbef526f260b15c36c9b2a6bebf9
+    credit: "none shown"
+    taken: '2024-12-31'
+    retrieved: '2026-11-17'
+    crop: [15, 20, 400, 400]
+    news_checked: '2026-11-17'  # INEC M, 52, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: jan-2027-house-kogi-ajaokuta-pdp
+    source: "Kogi Reports (kogireports.com)"
+    file_page: https://kogireports.com/my-mandate-remain-unshakeable-hon-lawal-reacts-to-apc-suit-calling-for-his-removal-from-house-of-reps/
+    file_url: https://kogireports.com/wp-content/uploads/2022/05/Lawal-idirisu-House-of-Reps-member-for-Ajaokuta.jpg
+    sha256: 183860ef3b910e449485c5b97f251e6640a90db4ce03b9747311bd8c83284725
+    credit: "none shown"
+    taken: '2023-01-12'
+    retrieved: '2026-11-17'
+    crop: [110, 40, 360, 360]
+    news_checked: '2026-11-17'  # INEC M, 64, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: jan-2027-house-lagos-ikeja-ndc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/lagos-ndc-candidate-denies-claims-party-snubbed-new-national-anthem/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/11/Nigeria-Democratic-Congress-NDC-candidate-for-Ikeja-Federal-Constituency-Joseph-Orukpe.jpeg
+    sha256: 48cea6a5eac2c9f86767016ec538b9be4b0861e2084165f7938f4a845bc7c5b7
+    credit: "none shown"
+    taken: '2026-11-14'
+    retrieved: '2026-11-17'
+    crop: [290, 0, 300, 300]
+    news_checked: '2026-11-17'  # INEC M, 45, fits; named with the seat, or the state and office (batch 11)
+  - candidate_id: jan-2027-house-adamawa-yola-north-yola-south-girei-adc
+    source: "The Whistler (thewhistler.ng)"
+    file_page: https://thewhistler.ng/adc-aspirant-rejects-alleged-name-substitution-in-adamawa-reps-primary/
+    file_url: https://thewhistler.ng/wp-content/uploads/2026/06/Untitled-design-11.jpg
+    sha256: a50433bdd6354be71fa0acdf9259c4706cf4dff9b82b393ca2d13f19386e4504
+    credit: "none shown"
+    taken: '2026-06-03'
+    retrieved: '2026-11-17'
+    crop: [295, 0, 440, 440]
+    news_checked: '2026-11-17'  # INEC M, age not printed, fits; named with the seat, or the state and office (batch 11)
