@@ -1,34 +1,198 @@
 name: INEC watch
-# Daily check that INEC's published lists still match the hashes in data/generated/sources.json.
-# Opens an issue on any change. It never edits data or deploys.
+# Every 3 hours (owner, 25 Nov 2026, D-102): check the INEC pages and documents our candidate data comes from.
+# - Nothing changed: nothing happens, no message.
+# - Something changed: download it, rebuild, and compare with our data race by race (added, removed, changed).
+#   Small and clean (fewer than 25 candidates changed, every race still has candidates, totals within 5%, every check
+#   passes): commit to the branch production is built from and deploy. Anything else: a pull request that waits for the
+#   owner. Either way, a short Telegram message (secrets TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID; never printed).
+# Requests to INEC go through the pipeline's own polite client (an honest User-Agent, rate-limited, cached).
 on:
   schedule:
-    - cron: "0 6 * * *"   # 07:00 WAT daily; raise to every 6 h from 2 Jan 2027
+    - cron: "17 */3 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: read
-  issues: write
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: inec-watch
+  cancel-in-progress: false
+
+env:
+  PUBLISH_BRANCH: phase-5-february
+  VERCEL_ORG_ID: team_dmC0q7zMiJBPONBvHw2FAaPS
+  VERCEL_PROJECT_ID: prj_IdmOT8MDuQF3CMJk1q7MZcEXuKHK
 
 jobs:
   watch:
     runs-on: ubuntu-latest
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.PUBLISH_BRANCH }}
+          lfs: false
       - uses: astral-sh/setup-uv@v5
+
       - name: Check INEC
         id: watch
         working-directory: pipeline
-        # Call the CLI directly: through make, exit status 3 ("changed") would arrive as make's own 2.
         run: |
           set +e
           uv run ballot-pipeline watch
           echo "code=$?" >> "$GITHUB_OUTPUT"
-      - name: Open issue on change
+
+      # Everything below runs only when INEC changed something (exit 3) or the check itself failed.
+      # INEC's site often times out (a 504 on 25 Nov 2026). A failed check is retried by the next run; the owner hears about
+      # it once a day (the 06:17 UTC run), not every 3 hours.
+      - name: Tell the owner the watcher failed
+        if: steps.watch.outputs.code != '0' && steps.watch.outputs.code != '3'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          printf 'INEC watcher could not finish its check (exit %s); INEC may be down. It tries again in 3 hours. Run: %s\n' "${{ steps.watch.outputs.code }}" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" > msg.txt
+          if [ "$(date -u +%H)" = "06" ] || [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then bash scripts/telegram.sh msg.txt; fi
+          exit 1
+
+      - name: Restore INEC raw caches (polling-unit crawl, IReV, pages)
         if: steps.watch.outputs.code == '3'
+        uses: actions/cache@v4
+        with:
+          path: |
+            pipeline/raw/pu
+            pipeline/raw/irev
+            pipeline/raw/pages
+            pipeline/raw/logos
+            pipeline/raw/extracted
+          key: inec-raw-v1-${{ github.run_id }}
+          restore-keys: inec-raw-v1-
+
+      - name: Install poppler-utils
+        if: steps.watch.outputs.code == '3'
+        run: sudo apt-get -q -o Acquire::Retries=3 update && sudo apt-get -q -o Acquire::Retries=3 install -y poppler-utils
+
+      - name: Fetch, rebuild and compare
+        id: rebuild
+        if: steps.watch.outputs.code == '3'
+        working-directory: pipeline
+        run: |
+          set +e
+          mkdir -p ../.inec-old && cp ../data/generated/races/*.json ../.inec-old/
+          ok=1; why=""
+          uv run ballot-pipeline fetch || { ok=0; why="fetch failed"; }
+          # The polling-unit crawl is cached between runs; only an empty cache needs the slow, polite crawl (about 2 h).
+          if [ "$ok" = 1 ] && [ -z "$(ls -A raw/pu 2>/dev/null)" ]; then uv run ballot-pipeline crawl-pu && uv run ballot-pipeline crawl-irev || { ok=0; why="crawl failed"; }; fi
+          if [ "$ok" = 1 ]; then uv run ballot-pipeline build || { ok=0; why="the rebuild failed"; }; fi
+          if [ "$ok" = 1 ]; then uv run ballot-pipeline inec-diff --old ../.inec-old --out ../inec-diff.json || { ok=0; why="the comparison failed"; }; fi
+          # A document INEC added that we have never parsed always waits for the owner: it needs reading first.
+          if grep -qE "new document|New statutory publication|no longer linked|withdrawn" watch-summary.md; then why="${why:+$why; }INEC published or withdrew a document we don't parse yet"; ok=0; fi
+          echo "ok=$ok" >> "$GITHUB_OUTPUT"
+          echo "why=$why" >> "$GITHUB_OUTPUT"
+
+      - name: Re-pin the 16 January data and run every data check
+        id: checks
+        if: steps.watch.outputs.code == '3' && steps.rebuild.outputs.ok == '1'
+        working-directory: pipeline
+        run: |
+          set +e
+          new=$(sha256sum ../data/generated/races/jan-2027.json | cut -d' ' -f1)
+          if ! grep -q "jan_2027_sha256: $new" sources.yaml; then
+            sed -i -E "s/^jan_2027_sha256: [0-9a-f]{64}.*/jan_2027_sha256: $new   # re-pinned $(date -u +%F) by the INEC watcher after INEC changed its 16 January list (D-102)/" sources.yaml
+          fi
+          uv run ballot-pipeline verify > ../verify-data.log 2>&1; echo "data=$?" >> "$GITHUB_OUTPUT"
+
+      - uses: pnpm/action-setup@v4
+        if: steps.watch.outputs.code == '3' && steps.rebuild.outputs.ok == '1'
+      - uses: actions/setup-node@v4
+        if: steps.watch.outputs.code == '3' && steps.rebuild.outputs.ok == '1'
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Build the site and run its checks
+        id: site
+        if: steps.watch.outputs.code == '3' && steps.rebuild.outputs.ok == '1'
+        run: |
+          set +e
+          pnpm install --frozen-lockfile && BUILD_CPUS=2 pnpm build && pnpm test && pnpm test:site && pnpm size
+          echo "site=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Decide
+        id: decide
+        if: steps.watch.outputs.code == '3'
+        run: |
+          publish=$(python3 -c "import json,sys; print(json.load(open('inec-diff.json'))['publish'])" 2>/dev/null || echo False)
+          why="${{ steps.rebuild.outputs.why }}"
+          [ "${{ steps.checks.outputs.data }}" != "0" ] && why="${why:+$why; }a data check failed"
+          [ "${{ steps.site.outputs.site }}" != "0" ] && why="${why:+$why; }a site check failed"
+          [ "$publish" != "True" ] && why="${why:+$why; }$(python3 -c "import json; print('; '.join(json.load(open('inec-diff.json'))['reasons']))" 2>/dev/null)"
+          if [ "${{ steps.rebuild.outputs.ok }}" = "1" ] && [ "$publish" = "True" ] && [ "${{ steps.checks.outputs.data }}" = "0" ] && [ "${{ steps.site.outputs.site }}" = "0" ]; then
+            echo "action=publish" >> "$GITHUB_OUTPUT"
+          else
+            echo "action=wait" >> "$GITHUB_OUTPUT"
+          fi
+          echo "why=$why" >> "$GITHUB_OUTPUT"
+
+      - name: Publish
+        id: publish
+        if: steps.decide.outputs.action == 'publish'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -e
+          git config user.name "inec-watch"
+          git config user.email "inec-watch@users.noreply.github.com"
+          git add data/generated pipeline/sources.yaml
+          if git diff --cached --quiet; then echo "result=nothing" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -q -m "INEC update $(date -u +%F): $(python3 -c "import json; print(json.load(open('inec-diff.json'))['changed'])") candidates changed (published by the INEC watcher, D-102)"
+          git push -q origin "HEAD:$PUBLISH_BRANCH"
+          npm i -g vercel@65.12.1 >/dev/null
+          set +e
+          vercel deploy --prod --yes --token "$VERCEL_TOKEN" > deploy.log 2>&1; code=$?
+          if grep -qiE "storage|quota|limit exceeded" deploy.log; then echo "result=storage" >> "$GITHUB_OUTPUT"; exit 0; fi
+          [ $code -ne 0 ] && { echo "result=deploy-failed" >> "$GITHUB_OUTPUT"; exit 0; }
+          node scripts/vercel-prune.mjs > prune.log 2>&1 || echo "prune failed" >> prune.log
+          echo "result=live" >> "$GITHUB_OUTPUT"
+
+      - name: Open a pull request for the owner
+        id: pr
+        if: steps.decide.outputs.action == 'wait'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue create --title "INEC sources changed ($(date -u +%F))" --body-file pipeline/watch-summary.md --label inec-watch || gh issue create --title "INEC sources changed ($(date -u +%F))" --body-file pipeline/watch-summary.md
-      - name: Fail on watcher error
-        if: steps.watch.outputs.code != '0' && steps.watch.outputs.code != '3'
-        run: exit 1
+        run: |
+          set -e
+          branch="inec-update-$(date -u +%Y%m%d-%H%M)"
+          git config user.name "inec-watch"
+          git config user.email "inec-watch@users.noreply.github.com"
+          git checkout -q -b "$branch"
+          git add data/generated pipeline/sources.yaml 2>/dev/null || true
+          git commit -q --allow-empty -m "INEC changed its sources: waiting for the owner (D-102)"
+          git push -q origin "$branch"
+          {
+            echo "INEC changed something the site's data comes from. This waits for the owner because: ${{ steps.decide.outputs.why }}"
+            echo; echo '```'; cat pipeline/watch-summary.md; echo '```'
+            echo; echo '```'; python3 -c "import json; print(json.load(open('inec-diff.json'))['summary'])" 2>/dev/null || echo "no comparison"; echo '```'
+          } > pr.md
+          url=$(gh pr create --base "$PUBLISH_BRANCH" --head "$branch" --title "INEC update $(date -u +%F): waiting for review" --body-file pr.md)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+      - name: Tell the owner
+        if: always() && steps.watch.outputs.code == '3'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          {
+            echo "INEC changed something on $(date -u +'%d %b %H:%M') UTC."
+            python3 -c "import json; print(json.load(open('inec-diff.json'))['summary'][:1500])" 2>/dev/null || head -c 1200 pipeline/watch-summary.md
+            case "${{ steps.publish.outputs.result }}" in
+              live) echo "Published: checks passed and the site is updated." ;;
+              storage) echo "NOT published: Vercel refused the deploy for storage. Nothing was retried." ;;
+              deploy-failed) echo "NOT published: the deploy failed. The data is committed; deploy by hand." ;;
+              nothing) echo "No change to our data." ;;
+              *) echo "Waiting for you: ${{ steps.decide.outputs.why }}"; echo "${{ steps.pr.outputs.url }}" ;;
+            esac
+          } > msg.txt
+          bash scripts/telegram.sh msg.txt

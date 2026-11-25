@@ -17,8 +17,11 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-quotes", help="re-fetch every background citation and confirm its quote is on the page (network)")
     sub.add_parser("logos", help="download each party's logo from INEC's /parties page and write the optimised files (network)")
     sub.add_parser("photos", help="download the candidate photos listed in data/overrides/photos.yaml and check their hashes (network)")
-    sub.add_parser("assets", help="build the logo sprite, share-picture copies and photo crops from stored originals (offline)")
+    sub.add_parser("assets", help="build the logo sprite and photo crops from stored originals (offline)")
     sub.add_parser("watch", help="re-read INEC index pages; exit 3 if any document list or hash changed")
+    d = sub.add_parser("inec-diff", help="compare a previous copy of data/generated/races with the current one; write the summary and decision (offline)")
+    d.add_argument("--old", required=True, help="folder holding the previous jan-2027.json and feb-2027.json")
+    d.add_argument("--out", default="inec-diff.json", help="where to write {publish, reasons, summary}")
     args = parser.parse_args(argv)
 
     if args.cmd == "fetch":
@@ -84,6 +87,19 @@ def main(argv: list[str] | None = None) -> int:
         fetch()
     elif args.cmd == "assets":
         _assets()
+    elif args.cmd == "inec-diff":
+        import json
+        from pathlib import Path
+
+        from .inec_diff import compare
+        from .paths import GENERATED_DIR
+
+        diff = compare(Path(args.old), GENERATED_DIR / "races")
+        reasons = diff.reasons_to_wait()
+        result = {"publish": not reasons, "reasons": reasons, "changed": diff.changed_candidates, "summary": diff.summary()}
+        Path(args.out).write_text(json.dumps(result, indent=1) + "\n")
+        print(diff.summary())
+        print("decision: " + ("publish" if not reasons else "wait for the owner: " + "; ".join(reasons)))
     elif args.cmd == "watch":
         from .watch import watch
 
