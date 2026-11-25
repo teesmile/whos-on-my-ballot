@@ -6,25 +6,13 @@ import { mateLabel, raceTitle, TICKET_OFFICES } from '@/components/RaceSection'
 import { Share } from '@/components/Share'
 import { allCandidates, type Candidate as CandidateT, candidate, type Person as PersonT, photo, presidentialRace, sharePhoto, source } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
+import { candidateMetaDescription, candidateMetaTitle } from '@/lib/titles'
 import { ELECTION_DAY, noCandidateText, picture } from '@/lib/share'
 import { candidatePath, cardAlt, cardPath, correctionHref, racePath, SITE_URL } from '@/lib/site'
 import { JsonLd } from '@/components/JsonLd'
 
-/** The same title pattern for every candidate (the working rules §1; D-032): name as INEC printed it, party, office. */
-const OFFICE_SHORT = { president: 'President', senate: 'Senate', house: 'House of Reps', governor: 'Governor', state_assembly: 'State Assembly' } as const
-const baseTitle = (race: { office: keyof typeof OFFICE_SHORT }, c: { party: string, candidate: { name: string } }) =>
-  `${c.candidate.name || NOT_PROVIDED} (${c.party}), ${OFFICE_SHORT[race.office]}`
-let shared: Set<string> | null = null
-/** When two candidates' pages would share a title (same name, party and office), both add their constituency: one rule for all. */
-function candidateTitle(race: { office: keyof typeof OFFICE_SHORT, name: string }, c: { party: string, candidate: { name: string } }) {
-  if (!shared) {
-    const counts = new Map<string, number>()
-    for (const x of allCandidates()) counts.set(baseTitle(x.race, x.c), (counts.get(baseTitle(x.race, x.c)) ?? 0) + 1)
-    shared = new Set([...counts].filter(([, n]) => n > 1).map(([k]) => k))
-  }
-  const base = baseTitle(race, c)
-  return shared.has(base) ? `${base}: ${race.name}` : base
-}
+/** The same title and description pattern for every candidate (D-100): name as INEC printed it, party, place and office. */
+const candidateTitle = candidateMetaTitle
 
 export const dynamicParams = false
 export function generateStaticParams() {
@@ -37,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { race, c } = await of(params)
   return pageMeta({
     title: candidateTitle(race, c), path: candidatePath(c.id),
-    description: `${c.candidate.name || NOT_PROVIDED} (${c.party}): ${raceTitle(race)}, ${race.election === 'feb-2027' ? '6 February' : '16 January'} 2027, as listed by INEC.`,
+    description: candidateMetaDescription(race, c),
     image: { url: cardPath(race.id), alt: cardAlt(race) },
   })
 }

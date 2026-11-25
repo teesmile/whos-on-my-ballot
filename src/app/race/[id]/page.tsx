@@ -5,6 +5,7 @@ import { RaceSection } from '@/components/RaceSection'
 import { allRaces, race } from '@/lib/data'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { ELECTION_DAY, raceTitle } from '@/lib/share'
+import { raceMetaDescription, raceMetaTitle } from '@/lib/titles'
 import { cardAlt, cardPath, racePath } from '@/lib/site'
 
 /**
@@ -16,19 +17,14 @@ export function generateStaticParams() {
   return allRaces().map(r => ({ id: r.id }))
 }
 
-/** A race's page title: the same short office names as candidate pages' titles, the race as INEC names it, and its state. */
-const OFFICE_SHORT = { president: 'President', senate: 'Senate', house: 'House of Reps', governor: 'Governor', state_assembly: 'State Assembly' } as const
-function title(r: ReturnType<typeof race>) {
-  if (r.office === 'president') return 'President of Nigeria 2027: every candidate'
-  if (r.office === 'governor') return `Governor 2027: ${r.name}: every candidate`
-  return `${OFFICE_SHORT[r.office]} 2027: ${r.name}, ${r.state}`
-}
+/** A race's page title and description: the owner's search patterns (D-100), in src/lib/titles.ts. */
+const title = raceMetaTitle
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const r = race((await params).id)
   return pageMeta({
     title: title(r), path: racePath(r.id),
-    description: `Every candidate for ${raceTitle(r)}${r.state && r.state !== r.name ? `, ${r.state}` : ''}, ${ELECTION_DAY[r.election]}, as listed by INEC.`,
+    description: raceMetaDescription(r),
     image: { url: cardPath(r.id), alt: cardAlt(r) },
   })
 }
