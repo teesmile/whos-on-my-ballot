@@ -1,11 +1,11 @@
 import { allPhotos, generatedBytes } from '@/lib/data'
 
-// Approved candidate photos (D-048, D-071): the page copy, the larger copy the share picture loads only when someone shares, and
+// Approved candidate photos (D-048, D-071, D-098): the page copy, which the share picture also draws, and
 // for Senate, House and State Assembly the card's small copy, loaded only when its race is shown.
 export const dynamic = 'force-static'
 export const dynamicParams = false
 
-const files = () => Object.values(allPhotos()).flatMap(p => [p.page, p.share, ...(p.card ? [p.card] : [])])
+const files = () => Object.values(allPhotos()).flatMap(p => [p.page, ...(p.card ? [p.card] : [])])
 
 export function generateStaticParams() {
   // A static export needs at least one path; with no approved photos this placeholder is removed after the build.
@@ -17,5 +17,5 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
   const { file } = await params
   const rel = files().find(f => f === `photos/${file}`)
   if (!rel) return new Response('', { status: 404 })
-  return new Response(new Uint8Array(generatedBytes(rel)), { headers: { 'Content-Type': rel.endsWith('.jpg') ? 'image/jpeg' : 'image/webp' } })
+  return new Response(new Uint8Array(generatedBytes(rel)), { headers: { 'Content-Type': 'image/webp' } })
 }

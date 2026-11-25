@@ -20,7 +20,7 @@ function check(u: Update): Update {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(u.date)) throw new Error(`${where}: date must be YYYY-MM-DD`)
   if (u.body.length < 2 || u.body.length > 5) throw new Error(`${where}: two to five sentences`)
   const text = [u.headline, ...u.body, u.source.label, ...u.links.map(l => l.label)].join(' ')
-  if (/[–—]/.test(text)) throw new Error(`${where}: plain hyphens only`)
+  if (/[\u2013\u2014]/.test(text)) throw new Error(`${where}: plain hyphens only`)
   if (!u.source.inec && !u.source.href) throw new Error(`${where}: every entry needs a source`)
   if (u.source.inec) source(u.source.inec) // throws if INEC's source is unknown
   if (u.source.href && !u.source.href.startsWith('/')) throw new Error(`${where}: the site's own source must be one of its pages`)

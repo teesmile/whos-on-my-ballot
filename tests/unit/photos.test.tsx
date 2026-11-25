@@ -11,7 +11,7 @@ vi.mock('@/lib/data', async (importOriginal) => {
   return {
     ...real,
     photo: (id: string) => id === fake.id
-      ? { page: 'photos/x.webp', page_size: 320, share: 'photos/x-share.jpg', share_size: 720, source: 'Wikimedia Commons', file_page: 'https://commons.wikimedia.org/', retrieved: '2026-11-14', approved: '2026-11-14', card: `photos/${id}-card.webp`, card_bytes: 3000 }
+      ? { page: 'photos/x.webp', page_size: 320, source: 'Wikimedia Commons', file_page: 'https://commons.wikimedia.org/', retrieved: '2026-11-14', approved: '2026-11-14', card: `photos/${id}-card.webp`, card_bytes: 3000 }
       : real.photo(id),
   }
 })

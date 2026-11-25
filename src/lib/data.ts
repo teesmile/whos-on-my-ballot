@@ -8,9 +8,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import { ballotPath, febBallotPath, slug, type StateSearchData } from './core'
+import { plainDashes } from './plain'
 
 const DIR = path.join(process.cwd(), 'data', 'generated')
-const read = <T,>(rel: string): T => JSON.parse(fs.readFileSync(path.join(DIR, rel), 'utf8')) as T
+// Every read for display: INEC's long dashes become plain hyphens (the files keep INEC's text).
+const read = <T,>(rel: string): T => JSON.parse(plainDashes(fs.readFileSync(path.join(DIR, rel), 'utf8'))) as T
 
 export interface BackgroundCitation {
   url: string
@@ -204,8 +206,6 @@ export function sheetFor(r: Pick<Race, 'office' | 'state'>): Sheet {
 export interface Photo {
   page: string
   page_size: number
-  share: string
-  share_size: number
   /** "Official X account of Bola Tinubu (@officialABAT)", "Wikimedia Commons", ... */
   source: string
   file_page: string
@@ -225,8 +225,8 @@ const photosFile = () => (photos ??= read<NonNullable<typeof photos>>('photos.js
 export const allPhotos = (): Record<string, Photo> => photosFile().people
 /** The candidate's photo, or null (the neutral placeholder): every approved face, for every party (D-065, D-071, D-090). */
 export const photo = (candidateId: string): Photo | null => allPhotos()[candidateId] ?? null
-/** For the share picture: the photo's larger copy (loaded only when someone shares), or '' for no photo. */
-export const sharePhoto = (c: Candidate): string => { const p = photo(c.id); return p ? `/${p.share}` : '' }
+/** For the share picture and the link cards: the photo's page copy (D-098), or '' for no photo. */
+export const sharePhoto = (c: Candidate): string => { const p = photo(c.id); return p ? `/${p.page}` : '' }
 
 /** The 16 January races. */
 export const races = () => load().races

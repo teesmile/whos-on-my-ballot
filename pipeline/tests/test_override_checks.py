@@ -3,10 +3,10 @@ from ballot_pipeline.override_checks import check_sha_overrides
 from ballot_pipeline.state_constituencies import SC
 
 HASHED = {"inec-constituencies-workbook", "sha-2026-10-10"}
-UNITS = [SC("SC/120/BA", "BAUCHI", "HARDAWA", "Ward 02 & 09 – 12", 229)]
+UNITS = [SC("SC/120/BA", "BAUCHI", "HARDAWA", "Ward 02 & 09 \u2013 12", 229)]
 WARDS = {"05/14/07": ("BAUCHI", "MISAU"), "05/16/04": ("BAUCHI", "SHIRA")}
 PRINTED = {("KOGI", "IGALA OGWA"): {(399, 262)}}
-GOOD_SC = {"source_id": "inec-constituencies-workbook", "row": 229, "wards": ["05/14/07"], "workbook_text": "Ward 02 & 09 – 12",
+GOOD_SC = {"source_id": "inec-constituencies-workbook", "row": 229, "wards": ["05/14/07"], "workbook_text": "Ward 02 & 09 \u2013 12",
            "lgas": ["MISAU"], "reading": "Misau is the only Bauchi LGA with a ward named HARDAWA."}
 GOOD_LGA = {"source_id": "sha-2026-10-10", "page": 399, "sn": 262, "lgas": ["IDAH"], "reading": "r"}
 

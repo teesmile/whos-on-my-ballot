@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import { formatDate } from '@/components/Candidate'
 import { JsonLd } from '@/components/JsonLd'
 import { PhotoInvite } from '@/components/PhotoInvite'
+import { plainDashes } from '@/lib/plain'
 import { pageGraph, pageMeta } from '@/lib/seo'
 import { CORRECTIONS_EMAIL } from '@/lib/site'
 
@@ -17,7 +18,7 @@ export const metadata: Metadata = pageMeta({
 interface Correction { date: string, page: string, field: string, was: string, now: string, source_title: string, source_url: string }
 
 export default function Corrections() {
-  const log = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'corrections.json'), 'utf8')) as Correction[]
+  const log = JSON.parse(plainDashes(fs.readFileSync(path.join(process.cwd(), 'data', 'corrections.json'), 'utf8'))) as Correction[]
   return (
     <>
       <JsonLd data={pageGraph('/corrections/', 'Corrections log', [['Home', '/'], ['Corrections', '/corrections/']])} />

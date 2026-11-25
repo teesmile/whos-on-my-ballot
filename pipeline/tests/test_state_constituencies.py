@@ -16,8 +16,8 @@ def sc(comp, name="X", code="SC/1/AB", state="ABIA", row=1):
     ("The entire LGA", "entire", [], None),
     ("Part of the LGA", "part", [], None),
     ("10 RAS OF OGBOMOSO SOUTH", "count", [], 10),
-    ("Ward 01 – 05 & 12 - 14", "nums", [1, 2, 3, 4, 5, 12, 13, 14], None),
-    ("Ward 01, 07 & 10 – 11", "nums", [1, 7, 10, 11], None),
+    ("Ward 01 \u2013 05 & 12 - 14", "nums", [1, 2, 3, 4, 5, 12, 13, 14], None),
+    ("Ward 01, 07 & 10 \u2013 11", "nums", [1, 7, 10, 11], None),
     ("AFARA, IGBO I, IGBO II", "names", [], None),
 ])
 def test_composition_kinds(comp, kind, nums, count):
@@ -120,7 +120,7 @@ HEAD = [["1.0", "2.0", "3.0", "4.0"], ["S/N", "NAME OF STATE CONSTITUENCY", "COD
 
 
 def test_read_sheet_reads_codes_printed_without_the_second_slash(monkeypatch):
-    rows = HEAD + [["376.0", "BILLIRI WEST", "SC/076GM", "Ward 01, 02 & 07 – 10"], ["377.0", "BILLIRI EAST", "SC/377/GM", "The entire LGA"]]
+    rows = HEAD + [["376.0", "BILLIRI WEST", "SC/076GM", "Ward 01, 02 & 07 \u2013 10"], ["377.0", "BILLIRI EAST", "SC/377/GM", "The entire LGA"]]
     assert [s.code for s in _read(monkeypatch, rows)] == ["SC/076/GM", "SC/377/GM"]
 
 

@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/postbuild.mjs",
+    "build": "next build && node scripts/postbuild.mjs && node scripts/no-long-dash.mjs",
+    "dashes": "node scripts/no-long-dash.mjs",
     "start": "node scripts/serve-out.mjs",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",

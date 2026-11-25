@@ -47,7 +47,7 @@ ON_DEMAND = ("senate", "house", "sha")  # races a ballot page doesn't show first
 def office_of(candidate_id: str) -> str:
     """'jan-2027-senate-lagos-lagos-central-apc' -> 'senate' (the third part of every race and candidate ID)."""
     return candidate_id.split("-")[2]
-SHARE = 720  # drawn into the 1080 x 1920 share picture
+# No separate share copy (owner, D-098): the share picture and the link cards draw the PAGE copy.
 FLAT = ["-background", "white", "-flatten"]  # a cut-out with a transparent background sits on white, never black
 FIELDS = ("candidate_id", "source", "file_page", "file_url", "sha256", "retrieved", "crop")
 OPTIONAL = ("author", "licence", "licence_url", "taken")
@@ -201,10 +201,8 @@ def build_photos(log=print) -> dict[str, Path]:
         crop = _crop_args(raw, x, y, w, h)
         cid = p["candidate_id"]
         page = PHOTO_DIR / f"{cid}.webp"
-        share = PHOTO_DIR / f"{cid}-share.jpg"
         cell = PHOTO_DIR / f"_{cid}.png"
         subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-resize", f"{PAGE}x{PAGE}!", "-strip", "-quality", "78", f"webp:{page}"], check=True)
-        subprocess.run(["gm", "convert", str(raw), *FLAT, *crop, "-resize", f"{SHARE}x{SHARE}!", "-strip", "-quality", "92", f"jpeg:{share}"], check=True)
         extra = {}
         if office_of(cid) in ON_DEMAND or cid in rest:
             card = PHOTO_DIR / f"{cid}-card.webp"
@@ -217,11 +215,10 @@ def build_photos(log=print) -> dict[str, Path]:
         people[cid] = {
             **extra,
             "page": f"photos/{page.name}", "page_sha256": _sha256(page.read_bytes()), "page_size": PAGE,
-            "share": f"photos/{share.name}", "share_sha256": _sha256(share.read_bytes()), "share_size": SHARE,
             **{k: p[k] for k in ("source", "file_page", "retrieved")}, "approved": approval_date(p),
             **{k: p[k] for k in OPTIONAL if p.get(k)},
         }
-        log(f"photo {cid}: {page.stat().st_size} + {share.stat().st_size} bytes")
+        log(f"photo {cid}: {page.stat().st_size} bytes")
     log(f"photos: {len(people)} shown (D-090: every cleared photo)")
     PHOTOS_JSON.write_text(json.dumps({"people": people}, indent=1, ensure_ascii=False) + "\n")
     return cells
@@ -253,7 +250,7 @@ def check_photos(offices: dict[str, str], groups: dict[str, Group]) -> list[str]
         errors.append(f"photos (D-090): {len(shown)} cleared photos, photos.json has {len(people)}; run `ballot-pipeline assets`"
                       f" (extra: {sorted(set(people) - shown)[:5]}, missing: {sorted(shown - set(people))[:5]})")
     for cid, m in people.items():
-        for key in ("page", "share", *(("card",) if "card" in m else ())):
+        for key in ("page", *(("card",) if "card" in m else ())):
             f = GENERATED_DIR / m[key]
             if not f.exists() or _sha256(f.read_bytes()) != m[f"{key}_sha256"]:
                 errors.append(f"photo file {m[key]} is missing or changed since it was built")

@@ -243,11 +243,11 @@ state_constituency_overrides:
   SC/03/AB: {source_id: inec-constituencies-workbook, row: 9, workbook_text: "Part of the LGA", lgas: [ABA NORTH, ABA SOUTH],
              reading: "Aba Central's neighbours Aba North and Aba South are also 'Part of the LGA'; INEC names neither the LGA nor the wards, so the wards of both LGAs list all three Aba constituencies (OI-6)."}
   SC/107/BA: {source_id: inec-constituencies-workbook, row: 216, wards: [05/01/11], workbook_text: "Ward 06 – 10", lgas: [ALKALERI],
-              reading: "Alkaleri is the LGA with a ward named GWANA / MANSUR; the sheet's previous constituency, PALI (wards 01 – 05), is also in Alkaleri."}
+              reading: "Alkaleri is the LGA with a ward named GWANA / MANSUR; the sheet's previous constituency, PALI (wards 01 - 05), is also in Alkaleri."}
   SC/120/BA: {source_id: inec-constituencies-workbook, row: 229, wards: [05/14/07], workbook_text: "Ward 02 & 09 – 12", lgas: [MISAU], reading: "Misau is the only Bauchi LGA with a ward named HARDAWA."}
   SC/130/BA: {source_id: inec-constituencies-workbook, row: 239, wards: [05/16/04], workbook_text: "Ward 01, 07 & 10 – 13", lgas: [SHIRA], reading: "Shira is the only Bauchi LGA with a ward named DISINA."}
   SC/135/BA: {source_id: inec-constituencies-workbook, row: 244, wards: [05/07/07], workbook_text: "Ward 01 – 04", lgas: [GAMAWA], kind: part,
-              reading: "Gamawa is the only Bauchi LGA with a ward named UDUBO. The 2011 numbers are not used: today the ward named UDUBO is ward 07, outside 'Ward 01 – 04' (review 6), so Gamawa's wards are not split."}
+              reading: "Gamawa is the only Bauchi LGA with a ward named UDUBO. The 2011 numbers are not used: today the ward named UDUBO is ward 07, outside wards 01 - 04 (review 6), so Gamawa's wards are not split."}
   SC/476/KD: {source_id: inec-constituencies-workbook, row: 842, wards: [18/19/04], workbook_text: "4 RAS OF BASAWA", lgas: [SABON GARI], reading: "Sabon Gari is the only Kaduna LGA with a ward named BASAWA."}
   SC/466/KD: {source_id: inec-constituencies-workbook, row: 846, wards: [18/09/05, 18/09/06], workbook_text: "SHABA GAJI UNG LIMAN, MAIBURI,GABASAWA, KABALA, UNG SARKI", lgas: [KADUNA NORTH],
               reading: "Two of the listed wards, GABASAWA and KABALA (KABALA COSTAIN/ DOKI), are Kaduna North wards; no other LGA has either."}

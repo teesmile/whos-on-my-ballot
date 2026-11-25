@@ -37,7 +37,7 @@ const PHOTO_LINE = '#c4c4c4'
 // The site's plain placeholder: a grey head-and-shoulders outline, the same drawing as the share picture's.
 const PLACEHOLDER = `data:image/svg+xml;base64,${Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#f4f4f4"/><circle cx="32" cy="25" r="11" fill="#cfcfcf"/><path d="M10 64C10 51 20 41 32 41S54 51 54 64Z" fill="#cfcfcf"/></svg>').toString('base64')}`
 /** The photo the race's share picture uses (already through the photo rule), embedded; '' for none. */
-const photoDataUrl = (slot: string) => (slot ? `data:image/${slot.endsWith('.png') ? 'png' : 'jpeg'};base64,${generatedBytes(slot.replace(/^\//, '')).toString('base64')}` : '')
+const photoDataUrl = (slot: string) => (slot ? `data:image/${slot.endsWith('.png') ? 'png' : slot.endsWith('.webp') ? 'webp' : 'jpeg'};base64,${generatedBytes(slot.replace(/^\//, '')).toString('base64')}` : '')
 
 export async function GET(_req: Request, { params }: { params: Promise<{ file: string }> }) {
   const { file } = await params

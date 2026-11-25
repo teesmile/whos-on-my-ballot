@@ -2,7 +2,7 @@
 
 The sheet gives no LGA column. Each constituency's composition is one of:
   "The entire LGA" / "The entire area of X LGA"   every ward of an LGA
-  "Ward 01 – 05 & 12 - 17"                        ward numbers within an LGA (INEC's registration-area codes)
+  "Ward 01 - 05 & 12 - 17"                        ward numbers within an LGA (INEC's registration-area codes)
   "OGBA/OKE-IRA, OLD IFAKO/KARAOLE, ..."          ward names
   "7 RAS OF ADO EKITI I"                          only a count of wards
   "Part of the LGA"                               no ward detail
@@ -85,7 +85,7 @@ def parse_composition(sc: SC) -> None:
         nums: set[int] = set()
         for part in re.split(r",|&|\band\b", re.sub(r"^\s*wards?\s*", "", c, flags=re.I)):
             part = part.strip()
-            if rm := re.match(r"^(\d+)\s*[–\-]\s*(\d+)$", part):
+            if rm := re.match(r"^(\d+)\s*[\u2013\-]\s*(\d+)$", part):
                 nums |= set(range(int(rm.group(1)), int(rm.group(2)) + 1))
             elif part.isdigit():
                 nums.add(int(part))

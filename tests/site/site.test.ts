@@ -561,7 +561,7 @@ describe('updates (owner, 15 Nov 2026)', () => {
       expect(page, u.slug).toMatch(/<p class="cite"><a href="[^"]+">Source: /)
       expect(page, u.slug).toContain('"@type":"NewsArticle"')
       expect(u.body.length >= 2 && u.body.length <= 5, u.slug).toBe(true)
-      expect([u.headline, ...u.body].join(' '), u.slug).not.toMatch(/[–—]/)
+      expect([u.headline, ...u.body].join(' '), u.slug).not.toMatch(/[\u2013\u2014]/)
     }
     const feed = fs.readFileSync(path.join(OUT, 'updates', 'feed.xml'), 'utf8')
     expect(feed.startsWith('<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"')).toBe(true)

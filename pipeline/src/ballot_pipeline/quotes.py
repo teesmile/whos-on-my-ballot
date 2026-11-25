@@ -18,7 +18,7 @@ _TAGS = re.compile(r"<(script|style|noscript)\b.*?</\1>|<[^>]+>", re.S | re.I)
 
 def normalise(text: str) -> str:
     text = unicodedata.normalize("NFKC", html.unescape(text))
-    text = text.translate(str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " "}))
+    text = text.translate(str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "\u2013": "-", "\u2014": "-", " ": " "}))
     return re.sub(r"\s+", " ", text).strip().lower()
 
 

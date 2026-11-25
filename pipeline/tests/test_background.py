@@ -47,7 +47,7 @@ def test_absent_file_means_none(tmp_path, monkeypatch):
 
 
 def test_valid_records(write):
-    write([person("candidate", "DOE JOHN", offices=["Governor of X State, 1999–2007"]), person("running_mate", "ROE JANE")])
+    write([person("candidate", "DOE JOHN", offices=["Governor of X State, 1999-2007"]), person("running_mate", "ROE JANE")])
     out, errors = background.load(PEOPLE)
     assert errors == [] and len(out) == 2
 
@@ -119,13 +119,13 @@ def test_source_tied_to_the_ticket_rejected(write):
 
 
 def test_unconfirmed_quote_rejected(write):
-    write([person("candidate", "DOE JOHN", offices=["Governor of X State, 1999–2007"]), person("running_mate", "ROE JANE")],
+    write([person("candidate", "DOE JOHN", offices=["Governor of X State, 1999-2007"]), person("running_mate", "ROE JANE")],
           confirmed=False)
     assert any("not confirmed on the live page" in e for e in background.load(PEOPLE)[1])
 
 
 def test_valid_citations_get_their_source_id(write):
-    write([person("candidate", "DOE JOHN", offices=["Governor of X State, 1999–2007"]), person("running_mate", "ROE JANE")])
+    write([person("candidate", "DOE JOHN", offices=["Governor of X State, 1999-2007"]), person("running_mate", "ROE JANE")])
     out, errors = background.load(PEOPLE)
     assert errors == []
     assert out[("jan-2027-president-x", "candidate")].public_offices[0].citations[0].source_id == "premiumtimes"
