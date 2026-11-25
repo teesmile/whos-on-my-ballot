@@ -68,7 +68,7 @@ export function StateMap({ names }: { names: { code: string, name: string }[] })
   return (
     <ul className="state-map" aria-label="States: reported or awaiting">
       {names.map((s) => {
-        const key = s.name === 'FEDERAL CAPITAL TERRITORY' ? 'FCT' : s.name
+        const key = s.name.toUpperCase() === 'FEDERAL CAPITAL TERRITORY' ? 'FCT' : s.name.toUpperCase()
         const [col, row, abbr] = STATE_GRID[key]
         return (
           <li key={s.code} className={`sm-c${col} sm-r${row}`} data-state={s.code} data-status="awaiting">

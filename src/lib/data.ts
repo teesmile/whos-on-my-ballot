@@ -8,6 +8,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import { ballotPath, febBallotPath, slug, type StateSearchData } from './core'
+import { placeName } from './names'
 import { plainDashes } from './plain'
 
 const DIR = path.join(process.cwd(), 'data', 'generated')
@@ -125,11 +126,17 @@ let cache: {
 
 function load() {
   if (cache) return cache
-  const races = read<Race[]>('races/jan-2027.json')
-  const febRaces = read<Race[]>('races/feb-2027.json')
+  // Place names in title case for display, once, here (D-100): races' states, constituencies and districts, states and
+  // LGAs. Ward and polling-unit names and candidate names stay as INEC prints them.
+  const place = (r: Race): Race => ({ ...r, state: r.state && placeName(r.state), name: placeName(r.name), placement_notes: r.placement_notes.map(n => ({ ...n, lga: placeName(n.lga) })) })
+  const races = read<Race[]>('races/jan-2027.json').map(place)
+  const febRaces = read<Race[]>('races/feb-2027.json').map(place)
   const sources = new Map(read<Source[]>('sources.json').map(s => [s.source_id, s]))
-  const states = read<StateRef[]>('geo/states.json')
-  const geo = new Map(states.map(s => [s.code, read<StateGeo>(`geo/${s.code}.json`)]))
+  const states = read<StateRef[]>('geo/states.json').map(s => ({ ...s, name: placeName(s.name) }))
+  const geo = new Map(states.map(s => {
+    const g = read<StateGeo>(`geo/${s.code}.json`)
+    return [s.code, { ...g, name: placeName(g.name), lgas: g.lgas.map(l => ({ ...l, name: placeName(l.name) })) }]
+  }))
   cache = { races, febRaces, raceById: new Map([...races, ...febRaces].map(r => [r.id, r])), sources, states, geo }
   return cache
 }
@@ -155,7 +162,14 @@ export interface StateGroup {
   source: { title: string, url: string, retrieved: string, declared_by: string }
 }
 /** The five parties shown first in every race, and the published measure that picks them (D-042). */
-export const firstGroup = (): FirstGroup => read<FirstGroup>('first-group.json')
+let fgMemo: FirstGroup | null = null
+export const firstGroup = (): FirstGroup => {
+  if (fgMemo) return fgMemo
+  const fg = read<FirstGroup>('first-group.json')
+  // Keyed by state name as races show it (placeName, D-100).
+  fgMemo = { ...fg, states: Object.fromEntries(Object.entries(fg.states).map(([k, v]) => [placeName(k), { ...v, state_name: placeName(v.state_name) }])) }
+  return fgMemo
+}
 /** A race's own first group: its state's (D-070) where the state's last governorship winner joins, else the national five. */
 export function groupOf(r: Pick<Race, 'office' | 'state'>): { label: string, parties: string[], state: StateGroup | null } {
   const fg = firstGroup()

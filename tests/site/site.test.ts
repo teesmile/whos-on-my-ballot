@@ -169,13 +169,13 @@ describe('ballot pages', () => {
     expect(unresolved.map(b => b.path)).toContain('/ballot/adamawa/gombi-hong--adamawa-central-or-adamawa-north-or-adamawa-south/')
   })
 
-  it('inferred and unconfirmed placements are labelled with INEC’s text', () => {
+  it('inferred and unconfirmed placements are labelled, with the LGA name in title case (D-100)', () => {
     const want: [string, string][] = [
-      ['jan-2027-house-edo-esan-central-esan-south-igueben', 'Inferred placement: ESAN WEST LGA.'],
-      ['jan-2027-house-jigawa-hadejia-kafin-hausa-auyo', 'Inferred placement: AUYO LGA.'],
-      ['jan-2027-senate-niger-niger-south', 'Inferred placement: GBAKO LGA.'],
-      ['jan-2027-senate-kaduna-kaduna-south', 'Inferred placement: KAURU LGA.'],
-      ['jan-2027-senate-adamawa-adamawa-central', 'Unconfirmed placement: HONG LGA.'],
+      ['jan-2027-house-edo-esan-central-esan-south-igueben', 'Inferred placement: Esan West LGA.'],
+      ['jan-2027-house-jigawa-hadejia-kafin-hausa-auyo', 'Inferred placement: Auyo LGA.'],
+      ['jan-2027-senate-niger-niger-south', 'Inferred placement: Gbako LGA.'],
+      ['jan-2027-senate-kaduna-kaduna-south', 'Inferred placement: Kauru LGA.'],
+      ['jan-2027-senate-adamawa-adamawa-central', 'Unconfirmed placement: Hong LGA.'],
     ]
     for (const [raceId, label] of want) {
       const b = all.find(x => x.house.includes(raceId) || x.senate.includes(raceId))!
@@ -200,7 +200,7 @@ describe('ballot pages', () => {
   it('Niger’s House races carry the 12 September note, and no other state’s do', () => {
     for (const b of all) {
       const page = html(b.path.slice(1))
-      expect(page.includes('Latest INEC list for this state: 12 September 2026'), b.path).toBe(b.state.name === 'NIGER')
+      expect(page.includes('Latest INEC list for this state: 12 September 2026'), b.path).toBe(b.state.name === 'Niger')
     }
   })
 })

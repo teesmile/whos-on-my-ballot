@@ -423,6 +423,8 @@ main :is(p, li) > a:not(.btn, .ref, .src-link, .link-list a, .pu-list a, .result
 .share-buttons > * { flex: 1 1 10rem; min-height: 52px; }
 .share-status { margin: 0.5rem 0 0; font-weight: 650; min-height: 1.4em; white-space: pre-line; }
 .share-status:empty { min-height: 0; margin: 0; }
+.share-note { margin: 0.7rem 0 0; }
+.share-note a { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
 /* "Save picture" (owner, 14 Nov 2026): the one square picture as a file (D-087); the script reveals it. */
 .share-save { display: block; margin-top: 0.7rem; }
 

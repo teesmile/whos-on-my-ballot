@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import { ImageResponse } from 'next/og'
+import sharp from 'sharp'
 
 import { allRaces, generatedBytes, logoPngDataUrl, race, sharePhoto } from '@/lib/data'
 import { picture } from '@/lib/share'
@@ -36,14 +37,20 @@ const TILE_LINE = '#bdbdbd'
 const PHOTO_LINE = '#c4c4c4'
 // The site's plain placeholder: a grey head-and-shoulders outline, the same drawing as the share picture's.
 const PLACEHOLDER = `data:image/svg+xml;base64,${Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#f4f4f4"/><circle cx="32" cy="25" r="11" fill="#cfcfcf"/><path d="M10 64C10 51 20 41 32 41S54 51 54 64Z" fill="#cfcfcf"/></svg>').toString('base64')}`
-/** The photo the race's share picture uses (already through the photo rule), embedded; '' for none. */
-const photoDataUrl = (slot: string) => (slot ? `data:image/${slot.endsWith('.png') ? 'png' : slot.endsWith('.webp') ? 'webp' : 'jpeg'};base64,${generatedBytes(slot.replace(/^\//, '')).toString('base64')}` : '')
+/** The photo the race's share picture uses (already through the photo rule), embedded; '' for none. It is the 320 px WebP
+ *  page copy (D-098); the card renderer can't read WebP, so it is turned into a PNG here, at build time. */
+const photoDataUrl = async (slot: string) => {
+  if (!slot) return ''
+  const png = await sharp(generatedBytes(slot.replace(/^\//, ''))).png().toBuffer()
+  return `data:image/png;base64,${png.toString('base64')}`
+}
 
 export async function GET(_req: Request, { params }: { params: Promise<{ file: string }> }) {
   const { file } = await params
   if (file === 'site.png') return siteCard()
   const r = race(file.replace(/\.png$/, ''))
   const p = picture(r, sharePhoto)
+  const photos = new Map(await Promise.all(p.tiles.map(async ([, , , slot]) => [slot, await photoDataUrl(slot)] as const)))
   const n = p.tiles.length + (p.more ? 1 : 0)
   const titleSize = p.title.length > 70 ? 28 : p.title.length > 48 ? 34 : 42
   const longest = Math.max(...p.tiles.map(([, name]) => name.length))
@@ -88,7 +95,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ file: s
                 </div>
                 <div style={{ display: 'flex', width: h, height: h, borderRadius: 12, border: `2px solid ${PHOTO_LINE}`, overflow: 'hidden' }}>
                   {/* eslint-disable-next-line @next/next/no-img-element -- rendered into a PNG at build time */}
-                  <img src={photoDataUrl(slot) || PLACEHOLDER} width={h - 4} height={h - 4} alt="" />
+                  <img src={photos.get(slot) || PLACEHOLDER} width={h - 4} height={h - 4} alt="" />
                 </div>
               </div>
               <div style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center', textAlign: 'center', fontSize: nameSize, fontWeight: 700, lineHeight: 1.16 }}>{name}</div>

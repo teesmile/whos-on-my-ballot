@@ -88,7 +88,7 @@ describe('the state rule (D-070)', () => {
   const all = allRaces()
 
   it('changes exactly Abia, Anambra, Kano and Osun, each with its winner in and one of the five out', () => {
-    expect(Object.keys(fg.states).sort()).toEqual(['ABIA', 'ANAMBRA', 'KANO', 'OSUN'])
+    expect(Object.keys(fg.states).sort()).toEqual(['Abia', 'Anambra', 'Kano', 'Osun'])
     for (const st of Object.values(fg.states)) {
       expect(fg.parties).not.toContain(st.joins)
       expect(fg.parties).toContain(st.replaces)

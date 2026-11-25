@@ -11,7 +11,7 @@ import { candidatePath, SITE_URL } from '@/lib/site'
 const OUT = path.resolve('out')
 const html = (p: string) => fs.readFileSync(path.join(OUT, p, 'index.html'), 'utf8')
 const ids = (s: string, attr: string) => [...s.matchAll(new RegExp(`${attr}="([^"]+)"`, 'g'))].map(m => m[1])
-const OFF_CYCLE = ['ANAMBRA', 'BAYELSA', 'EDO', 'EKITI', 'IMO', 'KOGI', 'ONDO', 'OSUN']
+const OFF_CYCLE = ['Anambra', 'Bayelsa', 'Edo', 'Ekiti', 'Imo', 'Kogi', 'Ondo', 'Osun']
 
 function* walk(dir: string): Generator<string> {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -95,13 +95,13 @@ describe('6 February ballot pages', () => {
   })
 
   it('Borno says INEC’s list has no State Assembly candidates for it; the FCT has no State Assembly section', () => {
-    const borno = all.filter(b => b.state.name === 'BORNO')
+    const borno = all.filter(b => b.state.name === 'Borno')
     expect(borno.map(b => b.path)).toEqual(['/ballot-feb/borno/'])
     expect(html('ballot-feb/borno')).toContain('INEC has not published a list of State House of Assembly candidates for Borno.')
     expect(html('ballot-feb/borno')).toContain('data-source="sha-2026-10-10"')
     expect(all.filter(b => b.state.name === 'FCT').map(b => b.path)).toEqual(['/ballot-feb/fct/'])
     expect(html('ballot-feb/fct')).not.toContain('State House of Assembly</h2>')
-    for (const b of all.filter(x => x.state.name !== 'BORNO')) expect(html(b.path.slice(1))).not.toContain('data-no-sha')
+    for (const b of all.filter(x => x.state.name !== 'Borno')) expect(html(b.path.slice(1))).not.toContain('data-no-sha')
   })
 
   it('unresolved ballots show every possible State Assembly race, the plain note and INEC’s tools', () => {

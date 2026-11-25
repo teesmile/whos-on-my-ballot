@@ -15,6 +15,13 @@ const BODY = [
 /** The mail link for a candidate's photo: the corrections address, with the subject and a short template filled in. */
 export const photoMailto = `mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(BODY)}`
 
+/** The same mail link from a candidate's own page, with their name as INEC lists it and the race already filled in. It
+ *  goes to the same review as every other photo: nothing sent appears by itself. */
+export const candidatePhotoMailto = (name: string, race: string, page: string) => {
+  const body = BODY.replace('as INEC lists it:\n', `as INEC lists it: ${name}\n`).replace('state):\n', `state): ${race}\n`) + `Page: ${page}\n`
+  return `mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent(`${SUBJECT}: ${name}`)}&body=${encodeURIComponent(body)}`
+}
+
 /** How a candidate or campaign sends an official photo (by email, no form), on the About and corrections pages. */
 export function PhotoInvite() {
   return (

@@ -46,8 +46,8 @@ test.describe('without JavaScript', () => {
   test('state → LGA → ward → polling unit → ballot works with plain links', async ({ page }) => {
     await page.goto('/')
     await expect(page.getByRole('button', { name: 'Find my polling unit' })).toBeHidden()
-    await page.getByRole('link', { name: 'LAGOS', exact: true }).click()
-    await page.getByRole('link', { name: 'SURULERE', exact: true }).click()
+    await page.getByRole('link', { name: 'Lagos', exact: true }).click()
+    await page.getByRole('link', { name: 'Surulere', exact: true }).click()
     await expect(page.getByRole('heading', { name: 'Choose your ward' })).toBeVisible()
     await page.locator('main ul.link-list li a').first().click()
     await expect(page.getByRole('heading', { name: 'Is this your polling unit?' })).toBeVisible()

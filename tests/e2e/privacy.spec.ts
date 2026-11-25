@@ -54,7 +54,7 @@ test('unknown code says not found instead of guessing', async ({ page }) => {
 test('search: what is typed never leaves the browser', async ({ page }) => {
   const requests = recordRequests(page)
   await page.goto('/state/01/')
-  await page.getByLabel('Your LGA', { exact: true }).selectOption({ label: 'ABA NORTH' })
+  await page.getByLabel('Your LGA', { exact: true }).selectOption({ label: 'Aba North' })
   await page.getByLabel(/Landmark or polling unit name/).fill('eziama high shool')
   await page.getByRole('button', { name: 'Search' }).click()
   await expect(page.getByRole('link', { name: /EZIAMA HIGH SCHOOL/ }).first()).toBeVisible()

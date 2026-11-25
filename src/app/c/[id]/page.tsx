@@ -153,7 +153,8 @@ export default async function CandidatePage({ params }: { params: Promise<{ id: 
         </>
       )}
 
-      <Share label="Share" url={url} picture={picture(race, sharePhoto)} />
+      <Share label="Share" url={url} picture={picture(race, sharePhoto)}
+        candidate={c.candidate.name ? { name: c.candidate.name, race: `${raceTitle(race)}${race.state && race.state !== race.name ? `, ${race.state}` : ''}`, page: url } : undefined} />
 
       <section aria-labelledby="correct" className="correct">
         <h2 id="correct">Report a correction</h2>

@@ -1,6 +1,7 @@
+import { candidatePhotoMailto } from '@/components/PhotoInvite'
 import type { Picture } from '@/lib/share'
 import { caption } from '@/lib/share'
-import { appLinks, appMessage, racePath, shareLinks, SITE_URL } from '@/lib/site'
+import { appLinks, appMessage, CORRECTIONS_EMAIL, racePath, shareLinks, SITE_URL } from '@/lib/site'
 
 /** WhatsApp's official glyph, unaltered (src/assets/brand/whatsapp): white on green, or green on white. Decorative. */
 export function WhatsAppGlyph({ on = 'green' }: { on?: 'green' | 'white' }) {
@@ -21,7 +22,7 @@ export function WhatsAppGlyph({ on = 'green' }: { on?: 'green' | 'white' }) {
  * visitor's place); the page script adds the picture (see lookup.ts). Then "Save picture", the same picture. No script from
  * any of these companies.
  */
-export function Share({ url, copyUrl = url, label, picture, level = 2 }: { url: string, copyUrl?: string, label: string, picture: Picture, level?: 2 | 3 | 4 }) {
+export function Share({ url, copyUrl = url, label, picture, level = 2, candidate }: { url: string, copyUrl?: string, label: string, picture: Picture, level?: 2 | 3 | 4, candidate?: { name: string, race: string, page: string } }) {
   const text = caption()
   const l = shareLinks(text, url)
   const H = `h${level}` as 'h2' | 'h3' | 'h4'
@@ -40,6 +41,15 @@ export function Share({ url, copyUrl = url, label, picture, level = 2 }: { url: 
       <AppRow picture={picture} />
       <button type="button" className="btn-quiet share-save" data-save hidden>Save picture</button>
       <p className="share-status" role="status" data-share-status />
+      {candidate && (
+        // On every candidate page, the same words for everyone (owner, 25 Nov 2026, D-101). A photo sent this way goes to the
+        // same review as every other photo, never straight onto the site.
+        <p className="share-note">
+          {'Is this you? Share your ballot card with your supporters. Photo missing or wrong? Send one to '}
+          <a href={candidatePhotoMailto(candidate.name, candidate.race, candidate.page)}>{CORRECTIONS_EMAIL}</a>
+          .
+        </p>
+      )}
     </section>
   )
 }

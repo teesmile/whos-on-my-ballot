@@ -40,7 +40,7 @@ describe('candidate pages', () => {
   it('every candidate page has a pre-filled correction link and the corrections log link', () => {
     for (const { c } of all) {
       const html = page(candidatePath(c.id))
-      const m = /href="(mailto:[^"]+)"/.exec(html)
+      const m = /href="(mailto:[^"]+subject=Correction[^"]*)"/.exec(html)
       expect(m, c.id).not.toBeNull()
       const mail = new URL(m![1].replaceAll('&amp;', '&'))
       expect(mail.pathname).toBe(CORRECTIONS_EMAIL)

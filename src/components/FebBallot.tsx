@@ -34,7 +34,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
     panels.push({
       key: 'assembly', label: 'Assembly', title: 'State House of Assembly',
       ...(sha.length ? badgeFor(sha) : { badge: '0', badgeLong: 'candidates: no list published' }),
-      content: st === 'BORNO'
+      content: st === 'Borno'
         ? (
             <section className="race" aria-labelledby="no-sha">
               <h2 id="no-sha" className="band">State House of Assembly</h2>
@@ -85,7 +85,7 @@ export function FebBallot({ b }: { b: FebBallotSpec }) {
           </>
         )}
         {!gov && <SourceLine id="governor-abia" what="States with a governorship election on 6 February" />}
-        {st === 'BORNO' && <SourceLine id="sha-2026-10-10" what="State House of Assembly candidates" />}
+        {st === 'Borno' && <SourceLine id="sha-2026-10-10" what="State House of Assembly candidates" />}
       </BallotSources>
     </>
   )

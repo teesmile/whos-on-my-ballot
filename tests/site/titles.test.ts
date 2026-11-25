@@ -53,3 +53,19 @@ describe('race and candidate titles', () => {
     expect(raceMetaTitle(jg)).toBe('Jigawa South-West senatorial district candidates 2027 - Jigawa')
   })
 })
+
+// The line for candidates under the share buttons (owner, 25 Nov 2026, D-101).
+describe('candidate page line for candidates', () => {
+  test('every named candidate page has it once, with a prefilled photo email to the corrections address', async () => {
+    const fs = await import('node:fs')
+    const { CORRECTIONS_EMAIL } = await import('@/lib/site')
+    const ids = ['jan-2027-president-ndc', 'feb-2027-governor-taraba-apc', 'jan-2027-house-lagos-ikeja-ndc', 'feb-2027-sha-ekiti-ikole-i-adc']
+    for (const id of ids) {
+      const html = fs.readFileSync(`out/c/${id}/index.html`, 'utf8')
+      const line = html.match(/<p class="share-note">(.*?)<\/p>/s)?.[1] ?? ''
+      expect(line.replace(/<[^>]+>|<!-- -->/g, ''), id).toBe(`Is this you? Share your ballot card with your supporters. Photo missing or wrong? Send one to ${CORRECTIONS_EMAIL}.`)
+      expect(line, id).toContain(`href="mailto:${CORRECTIONS_EMAIL}?subject=Candidate%20photo%3A%20`)
+      expect(html.match(/class="share-note"/g)?.length, id).toBe(1)
+    }
+  })
+})

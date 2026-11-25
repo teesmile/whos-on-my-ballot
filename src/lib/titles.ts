@@ -6,39 +6,21 @@
  * that INEC prints in capitals, are shown in title case here; the data keeps INEC's text.
  */
 import { allCandidates, allRaces, type Candidate, type Race } from './data'
+import { placeCase, placeName } from './names'
 import { ELECTION_DAY, namedCount } from './share'
+
+export { placeCase }
 
 /** Not provided in INEC's list: the same words as the candidate card. */
 const NOT_PROVIDED = 'Not provided in INEC\'s list'
-const ROMAN = /^(I|II|III|IV|V|VI|VII|VIII|IX|X)$/
-const KEEP = new Set(['FCT', 'LGA', 'AMAC'])
-const SMALL = new Set(['and', 'of', 'the'])
 /** Titles stay under this length where they can (owner: "under about 65 characters where possible"). */
 export const TITLE_MAX = 65
-
-/** 'SAKI EAST AND ATISBO' -> 'Saki East and Atisbo', 'IKOLE I' -> 'Ikole I', 'FUFORE/SONG' -> 'Fufore/Song'. Text INEC
- *  already prints in mixed case is left as it is. */
-export function placeCase(s: string): string {
-  if (!s || s !== s.toUpperCase()) return s
-  let first = true
-  return s.replace(/[A-Za-z][A-Za-z']*/g, w => {
-    const lower = w.toLowerCase()
-    const out = ROMAN.test(w) || KEEP.has(w) ? w
-      : !first && SMALL.has(lower) ? lower
-        : /^o'[a-z]/.test(lower) ? `O'${lower[2].toUpperCase()}${lower.slice(3)}`
-          : lower[0].toUpperCase() + lower.slice(1)
-    first = false
-    return out
-  })
-}
 
 /** 'AKWA IBOM' -> 'Akwa Ibom'; 'FCT' stays 'FCT'. */
 export const stateCase = (s: string | null) => placeCase(s ?? '')
 /** In running text: 'Abia State', 'the FCT'. */
 const stateWords = (s: string | null) => (s === 'FCT' ? 'the FCT' : `${stateCase(s)} State`)
-/** The race's place in title case, INEC's uneven spacing closed up for search results: 'North /South' -> 'North/South',
- *  'SOUTH - WEST' -> 'South-West', 'IKPOBA - OKHA' -> 'Ikpoba-Okha' (a hyphen inside a name, not between phrases). */
-const area = (r: Race) => placeCase(r.name).replace(/\s*([/-])\s*/g, '$1')
+const area = (r: Race) => placeName(r.name)
 
 /** A race's title in the owner's patterns, longest first: the shorter form drops the " - {State}" ending. */
 function raceForms(r: Race): string[] {
